@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "agilex_5_lib")(type "KiCad")(uri "${KIPRJMOD}/agilex_5_lib/agilex_5_lib.kicad_sym")(options "")(descr ""))
+)

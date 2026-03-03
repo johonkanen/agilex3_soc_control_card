@@ -11198,6 +11198,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Remember separate oscillators for fpga/HPS/LPDDR"
+		(exclude_from_sim no)
+		(at 178.308 257.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4cdde706-7eee-4b41-b73b-22db3ea3551d")
+	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
 		(at 208.28 91.44 0)
