@@ -13238,7 +13238,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "e3048211-3a22-4ca2-880d-a02e0bb6b448")
-		(property "Sheetname" "Untitled Sheet"
+		(property "Sheetname" "Agilex SoC"
 			(at 298.45 179.6284 0)
 			(effects
 				(font
