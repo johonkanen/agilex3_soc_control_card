@@ -32,6 +32,7 @@
       "vias",
       "footprint_text",
       "footprint_anchors",
+      "ratsnest",
       "footprints_front",
       "footprints_back",
       "footprint_values",
@@ -98,6 +99,8 @@
       91,
       91,
       71,
+      91,
+      91,
       91,
       91
     ],
