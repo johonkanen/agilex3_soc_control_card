@@ -18067,6 +18067,69 @@
 		(color 0 0 0 0)
 		(uuid "ffee820a-2c9d-41f7-9450-f575ab17f769")
 	)
+	(bus_entry
+		(at -163.83 -81.28)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "024655b5-edc1-4b21-9696-cb8aa555f0f7")
+	)
+	(bus_entry
+		(at -163.83 -73.66)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17e03b45-e888-428e-871b-5a818f4926f7")
+	)
+	(bus_entry
+		(at -163.83 -71.12)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "221de6aa-37be-4b66-9c19-2bccf1719565")
+	)
+	(bus_entry
+		(at -163.83 -76.2)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "773e93aa-9dc2-47b1-b8f7-7be701b04d41")
+	)
+	(bus_entry
+		(at -163.83 -66.04)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4b52e7a-682d-4e21-8b7b-92dc7527448d")
+	)
+	(bus_entry
+		(at -163.83 -68.58)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c537b3de-a17e-4674-b025-aae4968002ed")
+	)
+	(bus_entry
+		(at -163.83 -78.74)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff77ff45-430d-445b-9ad6-e1c914adb891")
+	)
 	(wire
 		(pts
 			(xy 609.6 113.03) (xy 609.6 115.57)
@@ -18837,6 +18900,16 @@
 		)
 		(uuid "45baae9b-fd3a-49a9-8fb5-386654cd7cb4")
 	)
+	(bus
+		(pts
+			(xy -161.29 -76.2) (xy -161.29 -73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46615ede-476d-4403-902e-ea6c479d4e43")
+	)
 	(wire
 		(pts
 			(xy 609.6 100.33) (xy 609.6 102.87)
@@ -18946,6 +19019,16 @@
 			(type default)
 		)
 		(uuid "4ef58866-e72f-418a-b5dd-d0db88737fb2")
+	)
+	(wire
+		(pts
+			(xy -179.07 -68.58) (xy -163.83 -68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f52f032-5ebe-4dcb-9905-31a56d8ccff7")
 	)
 	(wire
 		(pts
@@ -19127,6 +19210,16 @@
 		)
 		(uuid "5ee6b066-5795-487a-955c-4dd766445611")
 	)
+	(bus
+		(pts
+			(xy -161.29 -78.74) (xy -161.29 -76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f0231b9-f6f8-4944-a4e9-6f79375fa965")
+	)
 	(wire
 		(pts
 			(xy 647.7 138.43) (xy 647.7 140.97)
@@ -19216,6 +19309,26 @@
 			(type default)
 		)
 		(uuid "64549f52-4b13-432b-a03e-0ec0054d42bd")
+	)
+	(wire
+		(pts
+			(xy -179.07 -66.04) (xy -163.83 -66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "655ad396-d78f-4888-918f-a8ed4b63cbaa")
+	)
+	(wire
+		(pts
+			(xy -179.07 -78.74) (xy -163.83 -78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66f5f26c-c0d6-4109-919c-e770f52c6e93")
 	)
 	(wire
 		(pts
@@ -19589,6 +19702,16 @@
 	)
 	(wire
 		(pts
+			(xy -179.07 -71.12) (xy -163.83 -71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82ca3feb-5ae4-4383-a84d-35e55cb512ec")
+	)
+	(wire
+		(pts
 			(xy 20.32 -78.74) (xy 26.67 -78.74)
 		)
 		(stroke
@@ -19709,6 +19832,16 @@
 	)
 	(wire
 		(pts
+			(xy -179.07 -81.28) (xy -163.83 -81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8aea8a93-77d5-4e57-8359-cf2b4f71dd06")
+	)
+	(wire
+		(pts
 			(xy 459.74 195.58) (xy 459.74 198.12)
 		)
 		(stroke
@@ -19746,6 +19879,16 @@
 			(type default)
 		)
 		(uuid "8d28b1b8-7c47-424b-afaa-37e91b974804")
+	)
+	(bus
+		(pts
+			(xy -161.29 -71.12) (xy -161.29 -68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d3ec262-88d3-4034-a345-cd4a6317c361")
 	)
 	(wire
 		(pts
@@ -19989,6 +20132,16 @@
 	)
 	(wire
 		(pts
+			(xy -179.07 -73.66) (xy -163.83 -73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a257fd87-4739-431f-8683-973ae1b728e6")
+	)
+	(wire
+		(pts
 			(xy 20.32 -93.98) (xy 26.67 -93.98)
 		)
 		(stroke
@@ -20006,6 +20159,16 @@
 			(type default)
 		)
 		(uuid "a32fd4c6-ea48-4cc0-a2d0-11a267c23672")
+	)
+	(bus
+		(pts
+			(xy -161.29 -73.66) (xy -161.29 -71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3432869-1852-4ca2-a3f1-1a9fc2e70e15")
 	)
 	(wire
 		(pts
@@ -20417,6 +20580,16 @@
 		)
 		(uuid "b8b05357-4be1-4339-b590-fcb28dc0dfee")
 	)
+	(bus
+		(pts
+			(xy -161.29 -66.04) (xy -161.29 -63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8b597f2-9373-46d5-ad79-859611647f51")
+	)
 	(wire
 		(pts
 			(xy 407.67 48.26) (xy 407.67 50.8)
@@ -20529,6 +20702,16 @@
 	)
 	(wire
 		(pts
+			(xy -179.07 -76.2) (xy -163.83 -76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf5a9f26-833b-4974-9edf-9d7c0812fd4a")
+	)
+	(wire
+		(pts
 			(xy 647.7 97.79) (xy 647.7 100.33)
 		)
 		(stroke
@@ -20636,6 +20819,16 @@
 			(type default)
 		)
 		(uuid "c94122c3-1090-4a65-ba29-06cfbc81c401")
+	)
+	(bus
+		(pts
+			(xy -161.29 -68.58) (xy -161.29 -66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9760ccc-e002-4277-82c0-d798afd181ce")
 	)
 	(wire
 		(pts
@@ -21127,6 +21320,16 @@
 		)
 		(uuid "f5d00a09-9f44-4332-88ee-311213115407")
 	)
+	(bus
+		(pts
+			(xy -161.29 -63.5) (xy -161.29 -57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6152faf-dc2c-42bb-90f7-da47a6ee6371")
+	)
 	(wire
 		(pts
 			(xy 407.67 78.74) (xy 407.67 81.28)
@@ -21266,6 +21469,76 @@
 			(type default)
 		)
 		(uuid "ff578e43-4bdd-4526-803e-28fe9183cc56")
+	)
+	(label "t5"
+		(at -173.99 -71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "097842a9-54bf-4258-a840-1357e1ed98df")
+	)
+	(label "t3"
+		(at -173.99 -76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "186ea1f0-553b-434a-b720-67a048f888db")
+	)
+	(label "t1"
+		(at -173.99 -81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "261b6710-ee13-457e-94b7-7f12c0bad623")
+	)
+	(label "t7"
+		(at -173.99 -66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29dff902-d728-4cc1-9d80-a5c3235bb005")
+	)
+	(label "t4"
+		(at -173.99 -73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96dec850-a196-45ac-b0aa-7b9bc1ceffc4")
+	)
+	(label "t6"
+		(at -173.99 -68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a534fbc9-abca-40b9-86e1-d399334c8a5c")
+	)
+	(label "t2"
+		(at -173.99 -78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7d14e56-b78d-45c7-80ad-7e3a0ef9e05d")
 	)
 	(global_label "LPDDR4_DQ27"
 		(shape input)
@@ -22631,6 +22904,17 @@
 			)
 		)
 	)
+	(hierarchical_label "p1"
+		(shape input)
+		(at -161.29 -57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5a977484-8d2e-41d7-bd78-91b6d2aa78bc")
+	)
 	(symbol
 		(lib_id "agilex_5_lib:Agilex3_SoC")
 		(at 138.43 62.23 0)
@@ -22658,7 +22942,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 138.43 62.23 0)
 			(effects
 				(font
@@ -25408,7 +25692,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 274.32 331.47 0)
 			(effects
 				(font
@@ -28158,7 +28442,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 434.34 120.65 0)
 			(effects
 				(font
@@ -30908,7 +31192,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at -55.88 -137.16 0)
 			(effects
 				(font
@@ -33726,7 +34010,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 455.93 -110.49 0)
 			(effects
 				(font
@@ -36476,7 +36760,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 425.45 332.74 0)
 			(effects
 				(font
@@ -39358,7 +39642,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at -153.67 -111.252 90)
 			(effects
 				(font
@@ -39492,7 +39776,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at -231.14 86.36 0)
 			(effects
 				(font
@@ -42242,7 +42526,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 76.2 346.71 0)
 			(effects
 				(font
@@ -44992,7 +45276,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at -245.11 -135.89 0)
 			(effects
 				(font
@@ -47810,7 +48094,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 184.15 -137.16 0)
 			(effects
 				(font
@@ -50692,7 +50976,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 715.01 -11.43 0)
 			(effects
 				(font
@@ -53442,7 +53726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at 628.65 116.84 0)
 			(effects
 				(font
@@ -56192,7 +56476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:BGA-900_30x30_16.0x16.0mm"
+		(property "Footprint" "agilex_lib:M16A"
 			(at -203.2 271.78 0)
 			(effects
 				(font

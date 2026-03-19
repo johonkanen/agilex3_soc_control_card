@@ -1,4 +1,4 @@
-(footprint "BGA-900_30x30_16.0x16.0mm"
+(footprint "M16A"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")

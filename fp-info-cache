@@ -1,4 +1,4 @@
-26708535966450592
+26713863043355531
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -75404,13 +75404,6 @@ VFBGA-100
 100
 100
 Package_BGA
-VFBGA_b23b
-
-
-0
-900
-898
-Package_BGA
 WLP-4_0.83x0.83mm_P0.4mm
 WLP-4_0.83x0.83mm_P0.4mm https://pdfserv.maximintegrated.com/package_dwgs/21-100107.PDF, https://www.maximintegrated.com/en/app-notes/index.mvp/id/1891
 WLP-4
@@ -75753,6 +75746,13 @@ BGA 64 0.5
 0
 64
 64
+Package_BGA
+old_VFBGA_b23b
+
+
+0
+900
+875
 Package_BGA
 ucBGA-64_4x4mm_Layout8x8_P0.4mm
 ucBGA-64, 4x4mm, 64 Ball, 8x8 Layout, 0.4mm Pitch, generated with kicad-footprint-generator ipc_bga_generator.py, https://www.latticesemi.com/view_document?document_id=213
@@ -105888,3 +105888,24 @@ BGA-900_30x30_16.0x16.0mm
 0
 896
 896
+agilex_lib
+Untitled
+
+
+0
+0
+0
+agilex_lib
+VFBGA_b23b
+
+
+0
+796
+795
+agilex_lib
+VFBGA_b23b_mirror
+
+
+0
+796
+795
