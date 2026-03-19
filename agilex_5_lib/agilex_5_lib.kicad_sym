@@ -16361,7 +16361,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at -68.834 25.4 0)
+			(at -32.766 42.926 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16432,8 +16432,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 49.53 0)
-				(length 5.08)
+				(at -30.48 49.53 0)
+				(length 2.54)
 				(name "TDO"
 					(effects
 						(font
@@ -16450,8 +16450,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 46.99 0)
-				(length 5.08)
+				(at -30.48 46.99 0)
+				(length 2.54)
 				(name "TMS"
 					(effects
 						(font
@@ -16468,8 +16468,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 44.45 0)
-				(length 5.08)
+				(at -30.48 44.45 0)
+				(length 2.54)
 				(name "TCK"
 					(effects
 						(font
@@ -16486,8 +16486,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 41.91 0)
-				(length 5.08)
+				(at -30.48 41.91 0)
+				(length 2.54)
 				(name "TDI"
 					(effects
 						(font
@@ -16504,8 +16504,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 38.1 0)
-				(length 5.08)
+				(at -30.48 38.1 0)
+				(length 2.54)
 				(name "NCONFIG"
 					(effects
 						(font
@@ -16522,8 +16522,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 34.29 0)
-				(length 5.08)
+				(at -30.48 34.29 0)
+				(length 2.54)
 				(name "NSTATUS"
 					(effects
 						(font
@@ -16540,8 +16540,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 30.48 0)
-				(length 5.08)
+				(at -30.48 30.48 0)
+				(length 2.54)
 				(name "OSC_CLK_1"
 					(effects
 						(font
@@ -16558,8 +16558,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 24.13 0)
-				(length 5.08)
+				(at -30.48 24.13 0)
+				(length 2.54)
 				(name "SDM_IO0/PWRMGT_SCL,PWRMGT_ALERT"
 					(effects
 						(font
@@ -16576,8 +16576,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 19.05 0)
-				(length 5.08)
+				(at -30.48 19.05 0)
+				(length 2.54)
 				(name "SDM_IO1/AVSTX8_DATA2,AS_DATA1"
 					(effects
 						(font
@@ -16594,8 +16594,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 16.51 0)
-				(length 5.08)
+				(at -30.48 16.51 0)
+				(length 2.54)
 				(name "SDM_IO2/AVSTX8_DATA0,AS_CL"
 					(effects
 						(font
@@ -16612,8 +16612,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 13.97 0)
-				(length 5.08)
+				(at -30.48 13.97 0)
+				(length 2.54)
 				(name "SDM_IO3/AVSTX8_DATA3,AS_DATA2"
 					(effects
 						(font
@@ -16630,8 +16630,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 11.43 0)
-				(length 5.08)
+				(at -30.48 11.43 0)
+				(length 2.54)
 				(name "SDM_IO4/AVSTX8_DATA1,AS_DATA0"
 					(effects
 						(font
@@ -16648,8 +16648,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 8.89 0)
-				(length 5.08)
+				(at -30.48 8.89 0)
+				(length 2.54)
 				(name "SDM_IO5/AS_NCSO0,MSEL0"
 					(effects
 						(font
@@ -16666,8 +16666,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 6.35 0)
-				(length 5.08)
+				(at -30.48 6.35 0)
+				(length 2.54)
 				(name "SDM_IO6/AVSTX8_DATA4,AS_DATA3"
 					(effects
 						(font
@@ -16684,8 +16684,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 3.81 0)
-				(length 5.08)
+				(at -30.48 3.81 0)
+				(length 2.54)
 				(name "SDM_IO7/AS_NCSO2,MSEL1"
 					(effects
 						(font
@@ -16702,8 +16702,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 1.27 0)
-				(length 5.08)
+				(at -30.48 1.27 0)
+				(length 2.54)
 				(name "SDM_IO8/AVSTX8_READY,AS_NCSO3"
 					(effects
 						(font
@@ -16720,8 +16720,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -1.27 0)
-				(length 5.08)
+				(at -30.48 -1.27 0)
+				(length 2.54)
 				(name "SDM_IO9/AS_NCSO1,MSEL2,PWRMGT_ALERT"
 					(effects
 						(font
@@ -16738,8 +16738,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -3.81 0)
-				(length 5.08)
+				(at -30.48 -3.81 0)
+				(length 2.54)
 				(name "SDM_IO10/AVSTX8_DATA7"
 					(effects
 						(font
@@ -16756,8 +16756,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -6.35 0)
-				(length 5.08)
+				(at -30.48 -6.35 0)
+				(length 2.54)
 				(name "SDM_IO11/AVSTX8_VALID,PWRMGT_SDA"
 					(effects
 						(font
@@ -16774,8 +16774,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -8.89 0)
-				(length 5.08)
+				(at -30.48 -8.89 0)
+				(length 2.54)
 				(name "SDM_IO12/PWRMGT_SDA,PWRMGT_ALERT"
 					(effects
 						(font
@@ -16792,8 +16792,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -11.43 0)
-				(length 5.08)
+				(at -30.48 -11.43 0)
+				(length 2.54)
 				(name "SDM_IO13/AVSTX8_DATA5"
 					(effects
 						(font
@@ -16810,8 +16810,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -13.97 0)
-				(length 5.08)
+				(at -30.48 -13.97 0)
+				(length 2.54)
 				(name "SDM_IO14/AVSTX8_CLK,PWRMGT_SCL"
 					(effects
 						(font
@@ -16828,8 +16828,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -16.51 0)
-				(length 5.08)
+				(at -30.48 -16.51 0)
+				(length 2.54)
 				(name "SDM_IO15/AVSTX8_DATA6,AS_NRST"
 					(effects
 						(font
@@ -16846,8 +16846,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -19.05 0)
-				(length 5.08)
+				(at -30.48 -19.05 0)
+				(length 2.54)
 				(name "SDM_IO16/PWRMGT_SDA"
 					(effects
 						(font
@@ -16864,8 +16864,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -26.67 0)
-				(length 5.08)
+				(at -30.48 -26.67 0)
+				(length 2.54)
 				(name "TEMPDIODE0AN"
 					(effects
 						(font
@@ -16882,8 +16882,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -29.21 0)
-				(length 5.08)
+				(at -30.48 -29.21 0)
+				(length 2.54)
 				(name "TEMPDIODE0AP"
 					(effects
 						(font
@@ -16900,8 +16900,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -34.29 0)
-				(length 5.08)
+				(at -30.48 -34.29 0)
+				(length 2.54)
 				(name "RREF_SDM"
 					(effects
 						(font
@@ -16918,8 +16918,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -41.91 0)
-				(length 5.08)
+				(at -30.48 -41.91 0)
+				(length 2.54)
 				(name "VREFP_ADC"
 					(effects
 						(font
@@ -16936,8 +16936,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -44.45 0)
-				(length 5.08)
+				(at -30.48 -44.45 0)
+				(length 2.54)
 				(name "VREFN_ADC"
 					(effects
 						(font
@@ -16954,8 +16954,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -48.26 0)
-				(length 5.08)
+				(at -30.48 -48.26 0)
+				(length 2.54)
 				(name "VSIGP_0"
 					(effects
 						(font
@@ -16972,8 +16972,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -50.8 0)
-				(length 5.08)
+				(at -30.48 -50.8 0)
+				(length 2.54)
 				(name "VSIGN_0"
 					(effects
 						(font
@@ -16990,8 +16990,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -53.34 0)
-				(length 5.08)
+				(at -30.48 -53.34 0)
+				(length 2.54)
 				(name "VSIGP_1"
 					(effects
 						(font
@@ -17008,8 +17008,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -33.02 -55.88 0)
-				(length 5.08)
+				(at -30.48 -55.88 0)
+				(length 2.54)
 				(name "VSIGN_1"
 					(effects
 						(font
@@ -17047,8 +17047,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 62.23 0)
-				(length 5.08)
+				(at -71.12 62.23 0)
+				(length 2.54)
 				(name "HPS_IOA_1/GPIO0_IO0,SPIM0_SS1_N,SPIS0_CLK,UART0_CTS_N,NAND_ADQ0,SDMMC_DATA0,USB0_CLK,EMAC0_PPS0,TRACE_D10/HPS_IOA_1"
 					(effects
 						(font
@@ -17065,8 +17065,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 59.69 0)
-				(length 5.08)
+				(at -71.12 59.69 0)
+				(length 2.54)
 				(name "HPS_IOA_2/GPIO0_IO1,SPIM1_SS1_N,SPIS0_MOSI,UART0_RTS_N,NAND_ADQ1,SDMMC_DATA1,USB0_STP,EMAC0_PPSTRIG0,TRACE_D9/HPS_IOA_2"
 					(effects
 						(font
@@ -17083,8 +17083,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 57.15 0)
-				(length 5.08)
+				(at -71.12 57.15 0)
+				(length 2.54)
 				(name "HPS_IOA_3/GPIO0_IO2,SPIS0_SS0_N,UART0_TX,I2C1_SDA,NAND_WE_N,SDMMC_CLK,USB0_DIR,EMAC1_PPS1,TRACE_D8/HPS_IOA_3"
 					(effects
 						(font
@@ -17101,8 +17101,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 54.61 0)
-				(length 5.08)
+				(at -71.12 54.61 0)
+				(length 2.54)
 				(name "HPS_IOA_4/GPIO0_IO3,SPIS0_MISO,UART0_RX,I2C1_SCL,NAND_RE_N,USB0_DATA0,EMAC1_PPSTRIG1,TRACE_D7/HPS_IOA_4"
 					(effects
 						(font
@@ -17119,8 +17119,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 52.07 0)
-				(length 5.08)
+				(at -71.12 52.07 0)
+				(length 2.54)
 				(name "HPS_IOA_5/GPIO0_IO4,SPIM0_CLK,UART1_CTS_N,I2C0_SDA,NAND_WP_N,SDMMC_WRITE_PROTECT,USB0_DATA1,EMAC2_PPS2,TRACE_D6/HPS_IOA_5"
 					(effects
 						(font
@@ -17137,8 +17137,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 49.53 0)
-				(length 5.08)
+				(at -71.12 49.53 0)
+				(length 2.54)
 				(name "HPS_IOA_6/GPIO0_IO5,SPIM0_MOSI,UART1_RTS_N,I2C0_SCL,NAND_ADQ2,SDMMC_DATA2,USB0_NXT,EMAC2_PPSTRIG2,TRACE_D5/HPS_IOA_6"
 					(effects
 						(font
@@ -17155,8 +17155,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 46.99 0)
-				(length 5.08)
+				(at -71.12 46.99 0)
+				(length 2.54)
 				(name "HPS_IOA_7/GPIO0_IO6,SPIM0_MISO,MDIO2_MDIO,UART1_TX,I2C_EMAC2_SDA,NAND_ADQ3,SDMMC_DATA3,USB0_DATA2,TRACE_D4/HPS_IOA_7"
 					(effects
 						(font
@@ -17173,8 +17173,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 44.45 0)
-				(length 5.08)
+				(at -71.12 44.45 0)
+				(length 2.54)
 				(name "HPS_IOA_8/GPIO0_IO7,SPIM0_SS0_N,MDIO2_MDC,UART1_RX,I2C_EMAC2_SCL,NAND_CLE,SDMMC_CMD,USB0_DATA3,TRACE_D15/HPS_IOA_8"
 					(effects
 						(font
@@ -17191,8 +17191,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 41.91 0)
-				(length 5.08)
+				(at -71.12 41.91 0)
+				(length 2.54)
 				(name "HPS_IOA_9/GPIO0_IO8,SPIM1_CLK,SPIS1_CLK,MDIO1_MDIO,I2C_EMAC1_SDA,NAND_ADQ4,SDMMC_DATA4,USB0_DATA4,I3C1_SDA,TRACE_D14/HPS_IOA_9"
 					(effects
 						(font
@@ -17209,8 +17209,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 39.37 0)
-				(length 5.08)
+				(at -71.12 39.37 0)
+				(length 2.54)
 				(name "HPS_IOA_10/GPIO0_IO9,SPIM1_MOSI,SPIS1_MOSI,MDIO1_MDC,I2C_EMAC1_SCL,NAND_ADQ5,SDMMC_DATA5,USB0_DATA5,I3C1_SCL,TRACE_D13/HPS_IOA_10"
 					(effects
 						(font
@@ -17227,8 +17227,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 36.83 0)
-				(length 5.08)
+				(at -71.12 36.83 0)
+				(length 2.54)
 				(name "HPS_IOA_11/GPIO0_IO10,SPIM1_MISO,SPIS1_SS0_N,MDIO0_MDIO,I2C_EMAC0_SDA,NAND_ADQ6,SDMMC_DATA6,USB0_DATA6,I3C0_SDA,TRACE_D12/HPS_IOA_11"
 					(effects
 						(font
@@ -17245,8 +17245,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 34.29 0)
-				(length 5.08)
+				(at -71.12 34.29 0)
+				(length 2.54)
 				(name "HPS_IOA_12/GPIO0_IO11,SPIM1_SS0_N,SPIS1_MISO,MDIO0_MDC,I2C_EMAC0_SCL,NAND_ADQ7,SDMMC_DATA7,USB0_DATA7,I3C0_SCL,TRACE_D11/HPS_IOA_12"
 					(effects
 						(font
@@ -17263,8 +17263,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 31.75 0)
-				(length 5.08)
+				(at -71.12 31.75 0)
+				(length 2.54)
 				(name "HPS_IOA_13/GPIO0_IO12,NAND_ALE,SDMMC_PU_PD_DATA2,USB1_CLK,EMAC0_TX_CLK,TRACE_D10/HPS_IOA_13"
 					(effects
 						(font
@@ -17281,8 +17281,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 29.21 0)
-				(length 5.08)
+				(at -71.12 29.21 0)
+				(length 2.54)
 				(name "HPS_IOA_14/GPIO0_IO13,NAND_RB_N,SDMMC_PWR_ENA,USB1_STP,EMAC0_TX_CTL,TRACE_D9/HPS_IOA_14"
 					(effects
 						(font
@@ -17299,8 +17299,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 26.67 0)
-				(length 5.08)
+				(at -71.12 26.67 0)
+				(length 2.54)
 				(name "HPS_IOA_15/GPIO0_IO14,NAND_CE_N,USB1_DIR,EMAC0_RX_CLK,TRACE_D8/HPS_IOA_15"
 					(effects
 						(font
@@ -17317,8 +17317,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 24.13 0)
-				(length 5.08)
+				(at -71.12 24.13 0)
+				(length 2.54)
 				(name "HPS_IOA_16/GPIO0_IO15,NAND_DQS,SDMMC_DATA_STROBE,USB1_DATA0,EMAC0_RX_CTL,TRACE_D7/HPS_IOA_16"
 					(effects
 						(font
@@ -17335,8 +17335,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 21.59 0)
-				(length 5.08)
+				(at -71.12 21.59 0)
+				(length 2.54)
 				(name "HPS_IOA_17/GPIO0_IO16,I3C1_SDA,NAND_ADQ8,USB1_DATA1,EMAC0_TXD0,TRACE_D6/HPS_IOA_17"
 					(effects
 						(font
@@ -17353,8 +17353,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 19.05 0)
-				(length 5.08)
+				(at -71.12 19.05 0)
+				(length 2.54)
 				(name "HPS_IOA_18/GPIO0_IO17,I3C1_SCL,NAND_ADQ9,USB1_NXT,EMAC0_TXD1,TRACE_D5/HPS_IOA_18"
 					(effects
 						(font
@@ -17371,8 +17371,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 16.51 0)
-				(length 5.08)
+				(at -71.12 16.51 0)
+				(length 2.54)
 				(name "HPS_IOA_19/GPIO0_IO18,I3C0_SDA,NAND_ADQ10,USB1_DATA2,EMAC0_RXD0,TRACE_D4/HPS_IOA_19"
 					(effects
 						(font
@@ -17389,8 +17389,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 13.97 0)
-				(length 5.08)
+				(at -71.12 13.97 0)
+				(length 2.54)
 				(name "HPS_IOA_20/GPIO0_IO19,SPIM1_SS1_N,I3C0_SCL,NAND_ADQ11,USB1_DATA3,EMAC0_RXD1,TRACE_CLK/HPS_IOA_20"
 					(effects
 						(font
@@ -17407,8 +17407,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 11.43 0)
-				(length 5.08)
+				(at -71.12 11.43 0)
+				(length 2.54)
 				(name "HPS_IOA_21/GPIO0_IO20,SPIM1_CLK,SPIS0_CLK,UART0_CTS_N,I2C1_SDA,NAND_ADQ12,USB1_DATA4,EMAC0_TXD2,TRACE_D0/HPS_IOA_21"
 					(effects
 						(font
@@ -17425,8 +17425,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 8.89 0)
-				(length 5.08)
+				(at -71.12 8.89 0)
+				(length 2.54)
 				(name "HPS_IOA_22/GPIO0_IO21,SPIM1_MOSI,SPIS0_MOSI,UART0_RTS_N,I2C1_SCL,NAND_ADQ13,USB1_DATA5,EMAC0_TXD3,TRACE_D1/HPS_IOA_22"
 					(effects
 						(font
@@ -17443,8 +17443,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 6.35 0)
-				(length 5.08)
+				(at -71.12 6.35 0)
+				(length 2.54)
 				(name "HPS_IOA_23/GPIO0_IO22,SPIM1_MISO,SPIS0_SS0_N,UART0_TX,I2C0_SDA,NAND_ADQ14,USB1_DATA6,EMAC0_RXD2,TRACE_D2/HPS_IOA_23"
 					(effects
 						(font
@@ -17461,8 +17461,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 3.81 0)
-				(length 5.08)
+				(at -71.12 3.81 0)
+				(length 2.54)
 				(name "HPS_IOA_24/GPIO0_IO23,SPIM1_SS0_N,SPIS0_MISO,UART0_RX,I2C0_SCL,NAND_ADQ15,USB1_DATA7,EMAC0_RXD3,TRACE_D3/HPS_IOA_24"
 					(effects
 						(font
@@ -17479,8 +17479,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -2.54 0)
-				(length 5.08)
+				(at -71.12 -2.54 0)
+				(length 2.54)
 				(name "HPS_IOB_1/GPIO1_IO0,SPIM1_CLK,UART0_CTS_N,EMAC0_PPS0,NAND_ADQ0,SDMMC_DATA0,EMAC1_TX_CLK,TRACE_D10/HPS_IOB_1"
 					(effects
 						(font
@@ -17497,8 +17497,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -5.08 0)
-				(length 5.08)
+				(at -71.12 -5.08 0)
+				(length 2.54)
 				(name "HPS_IOB_2/GPIO1_IO1,SPIM1_MOSI,UART0_RTS_N,EMAC0_PPSTRIG0,NAND_ADQ1,SDMMC_DATA1,EMAC1_TX_CTL,TRACE_D9/HPS_IOB_2"
 					(effects
 						(font
@@ -17515,8 +17515,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -7.62 0)
-				(length 5.08)
+				(at -71.12 -7.62 0)
+				(length 2.54)
 				(name "HPS_IOB_3/GPIO1_IO2,SPIM1_MISO,UART0_TX,I2C0_SDA,NAND_WE_N,SDMMC_CLK,EMAC1_RX_CLK,TRACE_D8/HPS_IOB_3"
 					(effects
 						(font
@@ -17533,8 +17533,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -10.16 0)
-				(length 5.08)
+				(at -71.12 -10.16 0)
+				(length 2.54)
 				(name "HPS_IOB_4/GPIO1_IO3,SPIM1_SS0_N,UART0_RX,I2C0_SCL,NAND_RE_N,EMAC1_RX_CTL,TRACE_D7/HPS_IOB_4"
 					(effects
 						(font
@@ -17551,8 +17551,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -12.7 0)
-				(length 5.08)
+				(at -71.12 -12.7 0)
+				(length 2.54)
 				(name "HPS_IOB_5/GPIO1_IO4,SPIM1_SS1_N,SPIS1_CLK,UART1_CTS_N,EMAC2_PPS2,NAND_WP_N,SDMMC_WRITE_PROTECT,I3C1_SDA,EMAC1_TXD0,TRACE_D6/HPS_IOB_5"
 					(effects
 						(font
@@ -17569,8 +17569,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -15.24 0)
-				(length 5.08)
+				(at -71.12 -15.24 0)
+				(length 2.54)
 				(name "HPS_IOB_6/GPIO1_IO5,SPIS1_MOSI,UART1_RTS_N,EMAC2_PPSTRIG2,NAND_ADQ2,SDMMC_DATA2,I3C1_SCL,EMAC1_TXD1,TRACE_D5/HPS_IOB_6"
 					(effects
 						(font
@@ -17587,8 +17587,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -17.78 0)
-				(length 5.08)
+				(at -71.12 -17.78 0)
+				(length 2.54)
 				(name "HPS_IOB_7/GPIO1_IO6,SPIS1_SS0_N,UART1_TX,I2C1_SDA,NAND_ADQ3,SDMMC_DATA3,I3C0_SDA,EMAC1_RXD0,TRACE_D4/HPS_IOB_7"
 					(effects
 						(font
@@ -17605,8 +17605,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -20.32 0)
-				(length 5.08)
+				(at -71.12 -20.32 0)
+				(length 2.54)
 				(name "HPS_IOB_8/GPIO1_IO7,SPIS1_MISO,UART1_RX,I2C1_SCL,NAND_CLE,SDMMC_CMD,I3C0_SCL,EMAC1_RXD1,TRACE_D15/HPS_IOB_8"
 					(effects
 						(font
@@ -17623,8 +17623,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -22.86 0)
-				(length 5.08)
+				(at -71.12 -22.86 0)
+				(length 2.54)
 				(name "HPS_IOB_9/GPIO1_IO8,JTAG_TCK,SPIS0_CLK,MDIO2_MDIO,I2C_EMAC2_SDA,NAND_ADQ4,SDMMC_DATA4,EMAC1_TXD2,TRACE_D14/HPS_IOB_9"
 					(effects
 						(font
@@ -17641,8 +17641,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -25.4 0)
-				(length 5.08)
+				(at -71.12 -25.4 0)
+				(length 2.54)
 				(name "HPS_IOB_10/GPIO1_IO9,JTAG_TMS,SPIS0_MOSI,MDIO2_MDC,I2C_EMAC2_SCL,NAND_ADQ5,SDMMC_DATA5,EMAC1_TXD3,TRACE_D13/HPS_IOB_10"
 					(effects
 						(font
@@ -17659,8 +17659,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -27.94 0)
-				(length 5.08)
+				(at -71.12 -27.94 0)
+				(length 2.54)
 				(name "HPS_IOB_11/GPIO1_IO10,JTAG_TDO,SPIS0_SS0_N,MDIO0_MDIO,I2C_EMAC0_SDA,NAND_ADQ6,SDMMC_DATA6,EMAC1_RXD2,TRACE_D12/HPS_IOB_11"
 					(effects
 						(font
@@ -17677,8 +17677,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -30.48 0)
-				(length 5.08)
+				(at -71.12 -30.48 0)
+				(length 2.54)
 				(name "HPS_IOB_12/GPIO1_IO11,JTAG_TDI,SPIS0_MISO,MDIO0_MDC,I2C_EMAC0_SCL,NAND_ADQ7,SDMMC_DATA7,EMAC1_RXD3,TRACE_D11/HPS_IOB_12"
 					(effects
 						(font
@@ -17695,8 +17695,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -33.02 0)
-				(length 5.08)
+				(at -71.12 -33.02 0)
+				(length 2.54)
 				(name "HPS_IOB_13/GPIO1_IO12,I2C1_SDA,NAND_ALE,SDMMC_PU_PD_DATA2,EMAC2_TX_CLK,TRACE_D10/HPS_IOB_13"
 					(effects
 						(font
@@ -17713,8 +17713,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -35.56 0)
-				(length 5.08)
+				(at -71.12 -35.56 0)
+				(length 2.54)
 				(name "HPS_IOB_14/GPIO1_IO13,I2C1_SCL,NAND_RB_N,SDMMC_PWR_ENA,EMAC2_TX_CTL,TRACE_D9/HPS_IOB_14"
 					(effects
 						(font
@@ -17731,8 +17731,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -38.1 0)
-				(length 5.08)
+				(at -71.12 -38.1 0)
+				(length 2.54)
 				(name "HPS_IOB_15/GPIO1_IO14,UART1_TX,NAND_CE_N,I3C1_SDA,EMAC2_RX_CLK,TRACE_D8/HPS_IOB_15"
 					(effects
 						(font
@@ -17749,8 +17749,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -40.64 0)
-				(length 5.08)
+				(at -71.12 -40.64 0)
+				(length 2.54)
 				(name "HPS_IOB_16/GPIO1_IO15,UART1_RX,NAND_DQS,SDMMC_DATA_STROBE,I3C1_SCL,EMAC2_RX_CTL,TRACE_D7/HPS_IOB_16"
 					(effects
 						(font
@@ -17767,8 +17767,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -43.18 0)
-				(length 5.08)
+				(at -71.12 -43.18 0)
+				(length 2.54)
 				(name "HPS_IOB_17/GPIO1_IO16,UART1_CTS_N,NAND_ADQ8,I3C0_SDA,EMAC2_TXD0,TRACE_D6/HPS_IOB_17"
 					(effects
 						(font
@@ -17785,8 +17785,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -45.72 0)
-				(length 5.08)
+				(at -71.12 -45.72 0)
+				(length 2.54)
 				(name "HPS_IOB_18/GPIO1_IO17,SPIM0_SS1_N,UART1_RTS_N,NAND_ADQ9,I3C0_SCL,EMAC2_TXD1,TRACE_D5/HPS_IOB_18"
 					(effects
 						(font
@@ -17803,8 +17803,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -48.26 0)
-				(length 5.08)
+				(at -71.12 -48.26 0)
+				(length 2.54)
 				(name "HPS_IOB_19/GPIO1_IO18,SPIM0_MISO,MDIO1_MDIO,I2C_EMAC1_SDA,NAND_ADQ10,EMAC2_RXD0,TRACE_D4/HPS_IOB_19"
 					(effects
 						(font
@@ -17821,8 +17821,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -50.8 0)
-				(length 5.08)
+				(at -71.12 -50.8 0)
+				(length 2.54)
 				(name "HPS_IOB_20/GPIO1_IO19,SPIM0_SS0_N,MDIO1_MDC,I2C_EMAC1_SCL,NAND_ADQ11,EMAC2_RXD1,TRACE_CLK/HPS_IOB_20"
 					(effects
 						(font
@@ -17839,8 +17839,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -53.34 0)
-				(length 5.08)
+				(at -71.12 -53.34 0)
+				(length 2.54)
 				(name "HPS_IOB_21/GPIO1_IO20,SPIM0_CLK,SPIS1_CLK,I2C_EMAC2_SDA,NAND_ADQ12,EMAC2_TXD2,TRACE_D0/HPS_IOB_21"
 					(effects
 						(font
@@ -17857,8 +17857,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -55.88 0)
-				(length 5.08)
+				(at -71.12 -55.88 0)
+				(length 2.54)
 				(name "HPS_IOB_22/GPIO1_IO21,SPIM0_MOSI,SPIS1_MOSI,I2C_EMAC2_SCL,NAND_ADQ13,EMAC2_TXD3,TRACE_D1/HPS_IOB_22"
 					(effects
 						(font
@@ -17875,8 +17875,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -58.42 0)
-				(length 5.08)
+				(at -71.12 -58.42 0)
+				(length 2.54)
 				(name "HPS_IOB_23/GPIO1_IO22,SPIM0_MISO,SPIS1_SS0_N,MDIO0_MDIO,I2C_EMAC0_SDA,NAND_ADQ14,EMAC2_RXD2,TRACE_D2/HPS_IOB_23"
 					(effects
 						(font
@@ -17893,8 +17893,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -60.96 0)
-				(length 5.08)
+				(at -71.12 -60.96 0)
+				(length 2.54)
 				(name "HPS_IOB_24/GPIO1_IO23,SPIM0_SS0_N,SPIS1_MISO,MDIO0_MDC,I2C_EMAC0_SCL,NAND_ADQ15,EMAC2_RXD3,TRACE_D3/HPS_IOB_24"
 					(effects
 						(font
@@ -17924,8 +17924,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 59.69 0)
-				(length 5.08)
+				(at -72.39 59.69 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T1N/DQ0/95"
 					(effects
 						(font
@@ -17942,8 +17942,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 57.15 0)
-				(length 5.08)
+				(at -72.39 57.15 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T1P/DQ0/94"
 					(effects
 						(font
@@ -17960,8 +17960,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 54.61 0)
-				(length 5.08)
+				(at -72.39 54.61 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T2N/DQ0/93"
 					(effects
 						(font
@@ -17978,8 +17978,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 52.07 0)
-				(length 5.08)
+				(at -72.39 52.07 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T2P/DQ0/92"
 					(effects
 						(font
@@ -17996,8 +17996,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 49.53 0)
-				(length 5.08)
+				(at -72.39 49.53 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T3N/DQ0/91"
 					(effects
 						(font
@@ -18014,8 +18014,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 46.99 0)
-				(length 5.08)
+				(at -72.39 46.99 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T3P/DQ0/90"
 					(effects
 						(font
@@ -18032,8 +18032,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 44.45 0)
-				(length 5.08)
+				(at -72.39 44.45 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T4N/DQSN0/CQN0/89"
 					(effects
 						(font
@@ -18050,8 +18050,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 41.91 0)
-				(length 5.08)
+				(at -72.39 41.91 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T4P/DQS0/CQ0/88"
 					(effects
 						(font
@@ -18068,8 +18068,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 39.37 0)
-				(length 5.08)
+				(at -72.39 39.37 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T5N/DQ0/87"
 					(effects
 						(font
@@ -18086,8 +18086,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 36.83 0)
-				(length 5.08)
+				(at -72.39 36.83 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T5P/DQ0/86"
 					(effects
 						(font
@@ -18104,8 +18104,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 34.29 0)
-				(length 5.08)
+				(at -72.39 34.29 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T6N/DQ0/85"
 					(effects
 						(font
@@ -18122,8 +18122,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 30.48 0)
-				(length 5.08)
+				(at -72.39 30.48 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T6P/DQ0/84"
 					(effects
 						(font
@@ -18140,8 +18140,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 27.94 0)
-				(length 5.08)
+				(at -72.39 27.94 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T7N/DQ1/83"
 					(effects
 						(font
@@ -18158,8 +18158,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 25.4 0)
-				(length 5.08)
+				(at -72.39 25.4 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T7P/DQ1/82"
 					(effects
 						(font
@@ -18176,8 +18176,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 22.86 0)
-				(length 5.08)
+				(at -72.39 22.86 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T8N/DQ1/81"
 					(effects
 						(font
@@ -18194,8 +18194,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 20.32 0)
-				(length 5.08)
+				(at -72.39 20.32 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T8P/DQ1/80"
 					(effects
 						(font
@@ -18212,8 +18212,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 17.78 0)
-				(length 5.08)
+				(at -72.39 17.78 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T9N/DQ1/79"
 					(effects
 						(font
@@ -18230,8 +18230,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 15.24 0)
-				(length 5.08)
+				(at -72.39 15.24 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T9P/DQ1/78"
 					(effects
 						(font
@@ -18248,8 +18248,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 12.7 0)
-				(length 5.08)
+				(at -72.39 12.7 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T10N/DQSN1/CQN1/77"
 					(effects
 						(font
@@ -18266,8 +18266,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 10.16 0)
-				(length 5.08)
+				(at -72.39 10.16 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T10P/DQS1/CQ1/76"
 					(effects
 						(font
@@ -18284,8 +18284,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 7.62 0)
-				(length 5.08)
+				(at -72.39 7.62 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T11N/DQ1/75"
 					(effects
 						(font
@@ -18302,8 +18302,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 5.08 0)
-				(length 5.08)
+				(at -72.39 5.08 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T11P/DQ1/74"
 					(effects
 						(font
@@ -18320,8 +18320,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 2.54 0)
-				(length 5.08)
+				(at -72.39 2.54 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T12N/DQ1/73"
 					(effects
 						(font
@@ -18338,8 +18338,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 0 0)
-				(length 5.08)
+				(at -72.39 0 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T12P/DQ1/72"
 					(effects
 						(font
@@ -18356,8 +18356,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -3.81 0)
-				(length 5.08)
+				(at -72.39 -3.81 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T13N/DQ2/71"
 					(effects
 						(font
@@ -18374,8 +18374,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -6.35 0)
-				(length 5.08)
+				(at -72.39 -6.35 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T13P/DQ2/70"
 					(effects
 						(font
@@ -18392,8 +18392,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -8.89 0)
-				(length 5.08)
+				(at -72.39 -8.89 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T14N/DQ2/69"
 					(effects
 						(font
@@ -18410,8 +18410,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -11.43 0)
-				(length 5.08)
+				(at -72.39 -11.43 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T14P/DQ2/68"
 					(effects
 						(font
@@ -18428,8 +18428,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -13.97 0)
-				(length 5.08)
+				(at -72.39 -13.97 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T15N/DQ2/67"
 					(effects
 						(font
@@ -18446,8 +18446,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -16.51 0)
-				(length 5.08)
+				(at -72.39 -16.51 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T15P/DQ2/66"
 					(effects
 						(font
@@ -18464,8 +18464,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -19.05 0)
-				(length 5.08)
+				(at -72.39 -19.05 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,PLL_2A_T_CLKOUT1N/DIFF_IO_2A_T16N/DQSN2/CQN2/65"
 					(effects
 						(font
@@ -18482,8 +18482,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -21.59 0)
-				(length 5.08)
+				(at -72.39 -21.59 0)
+				(length 2.54)
 				(name "IO_2A_T/PLL_2A_T_CLKOUT1P,PLL_2A_T_CLKOUT1,PLL_2A_T_FB1/DIFF_IO_2A_T16P/DQS2/64"
 					(effects
 						(font
@@ -18500,8 +18500,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -24.13 0)
-				(length 5.08)
+				(at -72.39 -24.13 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T17N/DQ2/63"
 					(effects
 						(font
@@ -18518,8 +18518,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -26.67 0)
-				(length 5.08)
+				(at -72.39 -26.67 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,RZQ_T_2A/DIFF_IO_2A_T17P/DQ2/62"
 					(effects
 						(font
@@ -18536,8 +18536,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -29.21 0)
-				(length 5.08)
+				(at -72.39 -29.21 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,CLK_T_2A_1N/DIFF_IO_2A_T18N/DQ2/61"
 					(effects
 						(font
@@ -18554,8 +18554,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -31.75 0)
-				(length 5.08)
+				(at -72.39 -31.75 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,CLK_T_2A_1P/DIFF_IO_2A_T18P/DQ2/60"
 					(effects
 						(font
@@ -18572,8 +18572,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -35.56 0)
-				(length 5.08)
+				(at -72.39 -35.56 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,CLK_T_2A_0N/DIFF_IO_2A_T19N/DQ3/59"
 					(effects
 						(font
@@ -18590,8 +18590,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -38.1 0)
-				(length 5.08)
+				(at -72.39 -38.1 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,CLK_T_2A_0P/DIFF_IO_2A_T19P/DQ3/58"
 					(effects
 						(font
@@ -18608,8 +18608,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -40.64 0)
-				(length 5.08)
+				(at -72.39 -40.64 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T20N/DQ3/57"
 					(effects
 						(font
@@ -18626,8 +18626,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -43.18 0)
-				(length 5.08)
+				(at -72.39 -43.18 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T20P/DQ3/56"
 					(effects
 						(font
@@ -18644,8 +18644,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -45.72 0)
-				(length 5.08)
+				(at -72.39 -45.72 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB,PLL_2A_T_CLKOUT0N/DIFF_IO_2A_T21N/DQ3/55"
 					(effects
 						(font
@@ -18662,8 +18662,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -48.26 0)
-				(length 5.08)
+				(at -72.39 -48.26 0)
+				(length 2.54)
 				(name "IO_2A_T/PLL_2A_T_CLKOUT0P,PLL_2A_T_CLKOUT0,PLL_2A_T_FB0/DIFF_IO_2A_T21P/DQ3/54"
 					(effects
 						(font
@@ -18680,8 +18680,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -50.8 0)
-				(length 5.08)
+				(at -72.39 -50.8 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T22N/DQSN3/CQN3/53"
 					(effects
 						(font
@@ -18698,8 +18698,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -53.34 0)
-				(length 5.08)
+				(at -72.39 -53.34 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T22P/DQS3/CQ3/52"
 					(effects
 						(font
@@ -18716,8 +18716,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -55.88 0)
-				(length 5.08)
+				(at -72.39 -55.88 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T23N/DQ3/51"
 					(effects
 						(font
@@ -18734,8 +18734,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -58.42 0)
-				(length 5.08)
+				(at -72.39 -58.42 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T23P/DQ3/50"
 					(effects
 						(font
@@ -18752,8 +18752,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -60.96 0)
-				(length 5.08)
+				(at -72.39 -60.96 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T24N/DQ3/49"
 					(effects
 						(font
@@ -18770,8 +18770,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -63.5 0)
-				(length 5.08)
+				(at -72.39 -63.5 0)
+				(length 2.54)
 				(name "IO_2A_T/IOB/DIFF_IO_2A_T24P/DQ3/48"
 					(effects
 						(font
@@ -18788,8 +18788,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 59.69 180)
-				(length 5.08)
+				(at 78.74 59.69 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B1N/DQ4/47"
 					(effects
 						(font
@@ -18806,8 +18806,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 57.15 180)
-				(length 5.08)
+				(at 78.74 57.15 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B1P/DQ4/46"
 					(effects
 						(font
@@ -18824,8 +18824,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 54.61 180)
-				(length 5.08)
+				(at 78.74 54.61 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B2N/DQ4/45"
 					(effects
 						(font
@@ -18842,8 +18842,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 52.07 180)
-				(length 5.08)
+				(at 78.74 52.07 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B2P/DQ4/44"
 					(effects
 						(font
@@ -18860,8 +18860,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 49.53 180)
-				(length 5.08)
+				(at 78.74 49.53 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B3N/DQ4/43"
 					(effects
 						(font
@@ -18878,8 +18878,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 46.99 180)
-				(length 5.08)
+				(at 78.74 46.99 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B3P/DQ4/42"
 					(effects
 						(font
@@ -18896,8 +18896,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 44.45 180)
-				(length 5.08)
+				(at 78.74 44.45 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,PLL_2A_B_CLKOUT1N/DIFF_IO_2A_B4N/DQSN4/CQN4/41"
 					(effects
 						(font
@@ -18914,8 +18914,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 41.91 180)
-				(length 5.08)
+				(at 78.74 41.91 180)
+				(length 2.54)
 				(name "IO_2A_B/PLL_2A_B_CLKOUT1P,PLL_2A_B_CLKOUT1,PLL_2A_B_FB1/DIFF_IO_2A_B4P/DQS4/40"
 					(effects
 						(font
@@ -18932,8 +18932,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 39.37 180)
-				(length 5.08)
+				(at 78.74 39.37 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B5N/DQ4/39"
 					(effects
 						(font
@@ -18950,8 +18950,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 36.83 180)
-				(length 5.08)
+				(at 78.74 36.83 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,RZQ_B_2A/DIFF_IO_2A_B5P/DQ4/38"
 					(effects
 						(font
@@ -18968,8 +18968,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 34.29 180)
-				(length 5.08)
+				(at 78.74 34.29 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,CLK_B_2A_1N/DIFF_IO_2A_B6N/DQ4/37"
 					(effects
 						(font
@@ -18986,8 +18986,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 30.48 180)
-				(length 5.08)
+				(at 78.74 30.48 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,CLK_B_2A_1P/DIFF_IO_2A_B6P/DQ4/36"
 					(effects
 						(font
@@ -19004,8 +19004,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 27.94 180)
-				(length 5.08)
+				(at 78.74 27.94 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,CLK_B_2A_0N/DIFF_IO_2A_B7N/DQ5/35"
 					(effects
 						(font
@@ -19022,8 +19022,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 25.4 180)
-				(length 5.08)
+				(at 78.74 25.4 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,CLK_B_2A_0P/DIFF_IO_2A_B7P/DQ5/34"
 					(effects
 						(font
@@ -19040,8 +19040,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 22.86 180)
-				(length 5.08)
+				(at 78.74 22.86 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B8N/DQ5/33"
 					(effects
 						(font
@@ -19058,8 +19058,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 20.32 180)
-				(length 5.08)
+				(at 78.74 20.32 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B8P/DQ5/32"
 					(effects
 						(font
@@ -19076,8 +19076,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 17.78 180)
-				(length 5.08)
+				(at 78.74 17.78 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB,PLL_2A_B_CLKOUT0N/DIFF_IO_2A_B9N/DQ5/31"
 					(effects
 						(font
@@ -19094,8 +19094,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 15.24 180)
-				(length 5.08)
+				(at 78.74 15.24 180)
+				(length 2.54)
 				(name "IO_2A_B/PLL_2A_B_CLKOUT0P,PLL_2A_B_CLKOUT0,PLL_2A_B_FB0/DIFF_IO_2A_B9P/DQ5/30"
 					(effects
 						(font
@@ -19112,8 +19112,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 12.7 180)
-				(length 5.08)
+				(at 78.74 12.7 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B10N/DQSN5/CQN5/29"
 					(effects
 						(font
@@ -19130,8 +19130,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 10.16 180)
-				(length 5.08)
+				(at 78.74 10.16 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B10P/DQS5/CQ5/28"
 					(effects
 						(font
@@ -19148,8 +19148,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 7.62 180)
-				(length 5.08)
+				(at 78.74 7.62 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B11N/DQ5/27"
 					(effects
 						(font
@@ -19166,8 +19166,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 5.08 180)
-				(length 5.08)
+				(at 78.74 5.08 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B11P/DQ5/26"
 					(effects
 						(font
@@ -19184,8 +19184,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 2.54 180)
-				(length 5.08)
+				(at 78.74 2.54 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B12N/DQ5/25"
 					(effects
 						(font
@@ -19202,8 +19202,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 0 180)
-				(length 5.08)
+				(at 78.74 0 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B12P/DQ5/24"
 					(effects
 						(font
@@ -19220,8 +19220,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -3.81 180)
-				(length 5.08)
+				(at 78.74 -3.81 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B13N/DQ6/23"
 					(effects
 						(font
@@ -19238,8 +19238,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -6.35 180)
-				(length 5.08)
+				(at 78.74 -6.35 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B13P/DQ6/22"
 					(effects
 						(font
@@ -19256,8 +19256,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -8.89 180)
-				(length 5.08)
+				(at 78.74 -8.89 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B14N/DQ6/21"
 					(effects
 						(font
@@ -19274,8 +19274,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -11.43 180)
-				(length 5.08)
+				(at 78.74 -11.43 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B14P/DQ6/20"
 					(effects
 						(font
@@ -19292,8 +19292,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -13.97 180)
-				(length 5.08)
+				(at 78.74 -13.97 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B15N/DQ6/19"
 					(effects
 						(font
@@ -19310,8 +19310,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -16.51 180)
-				(length 5.08)
+				(at 78.74 -16.51 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B15P/DQ6/18"
 					(effects
 						(font
@@ -19328,8 +19328,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -19.05 180)
-				(length 5.08)
+				(at 78.74 -19.05 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B16N/DQSN6/CQN6/17"
 					(effects
 						(font
@@ -19346,8 +19346,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -21.59 180)
-				(length 5.08)
+				(at 78.74 -21.59 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B16P/DQS6/CQ6/16"
 					(effects
 						(font
@@ -19364,8 +19364,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -24.13 180)
-				(length 5.08)
+				(at 78.74 -24.13 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B17N/DQ6/15"
 					(effects
 						(font
@@ -19382,8 +19382,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -26.67 180)
-				(length 5.08)
+				(at 78.74 -26.67 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B17P/DQ6/14"
 					(effects
 						(font
@@ -19400,8 +19400,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -29.21 180)
-				(length 5.08)
+				(at 78.74 -29.21 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B18N/DQ6/13"
 					(effects
 						(font
@@ -19418,8 +19418,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -31.75 180)
-				(length 5.08)
+				(at 78.74 -31.75 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B18P/DQ6/12"
 					(effects
 						(font
@@ -19436,8 +19436,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -35.56 180)
-				(length 5.08)
+				(at 78.74 -35.56 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B19N/DQ7/11"
 					(effects
 						(font
@@ -19454,8 +19454,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -38.1 180)
-				(length 5.08)
+				(at 78.74 -38.1 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B19P/DQ7/10"
 					(effects
 						(font
@@ -19472,8 +19472,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -40.64 180)
-				(length 5.08)
+				(at 78.74 -40.64 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B20N/DQ7/9"
 					(effects
 						(font
@@ -19490,8 +19490,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -43.18 180)
-				(length 5.08)
+				(at 78.74 -43.18 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B20P/DQ7/8"
 					(effects
 						(font
@@ -19508,8 +19508,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -45.72 180)
-				(length 5.08)
+				(at 78.74 -45.72 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B21N/DQ7/7"
 					(effects
 						(font
@@ -19526,8 +19526,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -48.26 180)
-				(length 5.08)
+				(at 78.74 -48.26 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B21P/DQ7/6"
 					(effects
 						(font
@@ -19544,8 +19544,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -50.8 180)
-				(length 5.08)
+				(at 78.74 -50.8 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B22N/DQSN7/CQN7/5"
 					(effects
 						(font
@@ -19562,8 +19562,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -53.34 180)
-				(length 5.08)
+				(at 78.74 -53.34 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B22P/DQS7/CQ7/4"
 					(effects
 						(font
@@ -19580,8 +19580,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -55.88 180)
-				(length 5.08)
+				(at 78.74 -55.88 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B23N/DQ7/3"
 					(effects
 						(font
@@ -19598,8 +19598,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -58.42 180)
-				(length 5.08)
+				(at 78.74 -58.42 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B23P/DQ7/2"
 					(effects
 						(font
@@ -19616,8 +19616,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -60.96 180)
-				(length 5.08)
+				(at 78.74 -60.96 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B24N/DQ7/1"
 					(effects
 						(font
@@ -19634,8 +19634,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 81.28 -63.5 180)
-				(length 5.08)
+				(at 78.74 -63.5 180)
+				(length 2.54)
 				(name "IO_2A_B/IOB/DIFF_IO_2A_B24P/DQ7/0"
 					(effects
 						(font
@@ -19665,8 +19665,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 62.23 0)
-				(length 5.08)
+				(at -86.36 62.23 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T1N/DQ8/95"
 					(effects
 						(font
@@ -19683,8 +19683,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 59.69 0)
-				(length 5.08)
+				(at -86.36 59.69 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T1P/DQ8/94"
 					(effects
 						(font
@@ -19701,8 +19701,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 57.15 0)
-				(length 5.08)
+				(at -86.36 57.15 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T2N/DQ8/93"
 					(effects
 						(font
@@ -19719,8 +19719,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 54.61 0)
-				(length 5.08)
+				(at -86.36 54.61 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T2P/DQ8/92"
 					(effects
 						(font
@@ -19737,8 +19737,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 52.07 0)
-				(length 5.08)
+				(at -86.36 52.07 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T3N/DQ8/91"
 					(effects
 						(font
@@ -19755,8 +19755,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 49.53 0)
-				(length 5.08)
+				(at -86.36 49.53 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_READY/HPS_DDR/DIFF_IO_3A_T3P/DQ8/90"
 					(effects
 						(font
@@ -19773,8 +19773,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 46.99 0)
-				(length 5.08)
+				(at -86.36 46.99 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T4N/DQSN8/CQN8/89"
 					(effects
 						(font
@@ -19791,8 +19791,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 44.45 0)
-				(length 5.08)
+				(at -86.36 44.45 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T4P/DQS8/CQ8/88"
 					(effects
 						(font
@@ -19809,8 +19809,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 41.91 0)
-				(length 5.08)
+				(at -86.36 41.91 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T5N/DQ8/87"
 					(effects
 						(font
@@ -19827,8 +19827,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 39.37 0)
-				(length 5.08)
+				(at -86.36 39.37 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T5P/DQ8/86"
 					(effects
 						(font
@@ -19845,8 +19845,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 36.83 0)
-				(length 5.08)
+				(at -86.36 36.83 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T6N/DQ8/85"
 					(effects
 						(font
@@ -19863,8 +19863,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 34.29 0)
-				(length 5.08)
+				(at -86.36 34.29 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T6P/DQ8/84"
 					(effects
 						(font
@@ -19881,8 +19881,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 30.48 0)
-				(length 5.08)
+				(at -86.36 30.48 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA10/HPS_DDR/DIFF_IO_3A_T7N/DQ9/83"
 					(effects
 						(font
@@ -19899,8 +19899,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 27.94 0)
-				(length 5.08)
+				(at -86.36 27.94 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA9/HPS_DDR/DIFF_IO_3A_T7P/DQ9/82"
 					(effects
 						(font
@@ -19917,8 +19917,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 25.4 0)
-				(length 5.08)
+				(at -86.36 25.4 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA8/HPS_DDR/DIFF_IO_3A_T8N/DQ9/81"
 					(effects
 						(font
@@ -19935,8 +19935,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 22.86 0)
-				(length 5.08)
+				(at -86.36 22.86 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_VALID/HPS_DDR/DIFF_IO_3A_T8P/DQ9/80"
 					(effects
 						(font
@@ -19953,8 +19953,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 20.32 0)
-				(length 5.08)
+				(at -86.36 20.32 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA7/HPS_DDR/DIFF_IO_3A_T9N/DQ9/79"
 					(effects
 						(font
@@ -19971,8 +19971,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 17.78 0)
-				(length 5.08)
+				(at -86.36 17.78 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA6/HPS_DDR/DIFF_IO_3A_T9P/DQ9/78"
 					(effects
 						(font
@@ -19989,8 +19989,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 15.24 0)
-				(length 5.08)
+				(at -86.36 15.24 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA5/HPS_DDR/DIFF_IO_3A_T10N/DQSN9/CQN9/77"
 					(effects
 						(font
@@ -20007,8 +20007,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 12.7 0)
-				(length 5.08)
+				(at -86.36 12.7 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA4/HPS_DDR/DIFF_IO_3A_T10P/DQS9/CQ9/76"
 					(effects
 						(font
@@ -20025,8 +20025,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 10.16 0)
-				(length 5.08)
+				(at -86.36 10.16 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA3/HPS_DDR/DIFF_IO_3A_T11N/DQ9/75"
 					(effects
 						(font
@@ -20043,8 +20043,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 7.62 0)
-				(length 5.08)
+				(at -86.36 7.62 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA2/HPS_DDR/DIFF_IO_3A_T11P/DQ9/74"
 					(effects
 						(font
@@ -20061,8 +20061,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 5.08 0)
-				(length 5.08)
+				(at -86.36 5.08 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA1/HPS_DDR/DIFF_IO_3A_T12N/DQ9/73"
 					(effects
 						(font
@@ -20079,8 +20079,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 2.54 0)
-				(length 5.08)
+				(at -86.36 2.54 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA0/HPS_DDR/DIFF_IO_3A_T12P/DQ9/72"
 					(effects
 						(font
@@ -20097,8 +20097,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -1.27 0)
-				(length 5.08)
+				(at -86.36 -1.27 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T13N/DQ10/71"
 					(effects
 						(font
@@ -20115,8 +20115,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -3.81 0)
-				(length 5.08)
+				(at -86.36 -3.81 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T13P/DQ10/70"
 					(effects
 						(font
@@ -20133,8 +20133,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -6.35 0)
-				(length 5.08)
+				(at -86.36 -6.35 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T14N/DQ10/69"
 					(effects
 						(font
@@ -20151,8 +20151,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -8.89 0)
-				(length 5.08)
+				(at -86.36 -8.89 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T14P/DQ10/68"
 					(effects
 						(font
@@ -20169,8 +20169,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -11.43 0)
-				(length 5.08)
+				(at -86.36 -11.43 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T15N/DQ10/67"
 					(effects
 						(font
@@ -20187,8 +20187,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -13.97 0)
-				(length 5.08)
+				(at -86.36 -13.97 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T15P/DQ10/66"
 					(effects
 						(font
@@ -20205,8 +20205,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -16.51 0)
-				(length 5.08)
+				(at -86.36 -16.51 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,PLL_3A_T_CLKOUT1N/HPS_DDR/DIFF_IO_3A_T16N/DQSN10/CQN10/65"
 					(effects
 						(font
@@ -20223,8 +20223,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -19.05 0)
-				(length 5.08)
+				(at -86.36 -19.05 0)
+				(length 2.54)
 				(name "IO_3A_T/PLL_3A_T_CLKOUT1P,PLL_3A_T_CLKOUT1,PLL_3A_T_FB1/HPS_DDR/DIFF_IO_3A_T16P/DQS10/64"
 					(effects
 						(font
@@ -20241,8 +20241,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -21.59 0)
-				(length 5.08)
+				(at -86.36 -21.59 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T17N/DQ10/63"
 					(effects
 						(font
@@ -20259,8 +20259,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -24.13 0)
-				(length 5.08)
+				(at -86.36 -24.13 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,RZQ_T_3A/HPS_DDR/DIFF_IO_3A_T17P/DQ10/62"
 					(effects
 						(font
@@ -20277,8 +20277,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -26.67 0)
-				(length 5.08)
+				(at -86.36 -26.67 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,CLK_T_3A_1N/HPS_DDR/DIFF_IO_3A_T18N/DQ10/61"
 					(effects
 						(font
@@ -20295,8 +20295,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -29.21 0)
-				(length 5.08)
+				(at -86.36 -29.21 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,CLK_T_3A_1P/HPS_DDR/DIFF_IO_3A_T18P/DQ10/60"
 					(effects
 						(font
@@ -20313,8 +20313,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -33.02 0)
-				(length 5.08)
+				(at -86.36 -33.02 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,CLK_T_3A_0N/HPS_DDR/DIFF_IO_3A_T19N/DQ11/59"
 					(effects
 						(font
@@ -20331,8 +20331,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -35.56 0)
-				(length 5.08)
+				(at -86.36 -35.56 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,CLK_T_3A_0P/HPS_DDR/DIFF_IO_3A_T19P/DQ11/58"
 					(effects
 						(font
@@ -20349,8 +20349,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -38.1 0)
-				(length 5.08)
+				(at -86.36 -38.1 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T20N/DQ11/57"
 					(effects
 						(font
@@ -20367,8 +20367,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -40.64 0)
-				(length 5.08)
+				(at -86.36 -40.64 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/HPS_DDR/DIFF_IO_3A_T20P/DQ11/56"
 					(effects
 						(font
@@ -20385,8 +20385,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -43.18 0)
-				(length 5.08)
+				(at -86.36 -43.18 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB,PLL_3A_T_CLKOUT0N/HPS_DDR/DIFF_IO_3A_T21N/DQ11/55"
 					(effects
 						(font
@@ -20403,8 +20403,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -45.72 0)
-				(length 5.08)
+				(at -86.36 -45.72 0)
+				(length 2.54)
 				(name "IO_3A_T/PLL_3A_T_CLKOUT0P,PLL_3A_T_CLKOUT0,PLL_3A_T_FB0/HPS_DDR/DIFF_IO_3A_T21P/DQ11/54"
 					(effects
 						(font
@@ -20421,8 +20421,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -48.26 0)
-				(length 5.08)
+				(at -86.36 -48.26 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_CLK/HPS_DDR/DIFF_IO_3A_T22N/DQSN11/CQN11/53"
 					(effects
 						(font
@@ -20439,8 +20439,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -50.8 0)
-				(length 5.08)
+				(at -86.36 -50.8 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA15/HPS_DDR/DIFF_IO_3A_T22P/DQS11/CQ11/52"
 					(effects
 						(font
@@ -20457,8 +20457,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -53.34 0)
-				(length 5.08)
+				(at -86.36 -53.34 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA14/HPS_DDR/DIFF_IO_3A_T23N/DQ11/51"
 					(effects
 						(font
@@ -20475,8 +20475,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -55.88 0)
-				(length 5.08)
+				(at -86.36 -55.88 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA13/HPS_DDR/DIFF_IO_3A_T23P/DQ11/50"
 					(effects
 						(font
@@ -20493,8 +20493,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -58.42 0)
-				(length 5.08)
+				(at -86.36 -58.42 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA12/HPS_DDR/DIFF_IO_3A_T24N/DQ11/49"
 					(effects
 						(font
@@ -20511,8 +20511,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -88.9 -60.96 0)
-				(length 5.08)
+				(at -86.36 -60.96 0)
+				(length 2.54)
 				(name "IO_3A_T/IOB/AVST_DATA11/HPS_DDR/DIFF_IO_3A_T24P/DQ11/48"
 					(effects
 						(font
@@ -20529,8 +20529,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 62.23 180)
-				(length 5.08)
+				(at 92.71 62.23 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B1N/DQ12/47"
 					(effects
 						(font
@@ -20547,8 +20547,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 59.69 180)
-				(length 5.08)
+				(at 92.71 59.69 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B1P/DQ12/46"
 					(effects
 						(font
@@ -20565,8 +20565,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 57.15 180)
-				(length 5.08)
+				(at 92.71 57.15 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B2N/DQ12/45"
 					(effects
 						(font
@@ -20583,8 +20583,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 54.61 180)
-				(length 5.08)
+				(at 92.71 54.61 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B2P/DQ12/44"
 					(effects
 						(font
@@ -20601,8 +20601,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 52.07 180)
-				(length 5.08)
+				(at 92.71 52.07 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B3N/DQ12/43"
 					(effects
 						(font
@@ -20619,8 +20619,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 49.53 180)
-				(length 5.08)
+				(at 92.71 49.53 180)
+				(length 2.54)
 				(name "O_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B3P/DQ12/42"
 					(effects
 						(font
@@ -20637,8 +20637,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 46.99 180)
-				(length 5.08)
+				(at 92.71 46.99 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,PLL_3A_B_CLKOUT1N/HPS_DDR/DIFF_IO_3A_B4N/DQSN12/CQN12/41"
 					(effects
 						(font
@@ -20655,8 +20655,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 44.45 180)
-				(length 5.08)
+				(at 92.71 44.45 180)
+				(length 2.54)
 				(name "IO_3A_B/PLL_3A_B_CLKOUT1P,PLL_3A_B_CLKOUT1,PLL_3A_B_FB1/HPS_DDR/DIFF_IO_3A_B4P/DQS12/40"
 					(effects
 						(font
@@ -20673,8 +20673,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 41.91 180)
-				(length 5.08)
+				(at 92.71 41.91 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B5N/DQ12/39"
 					(effects
 						(font
@@ -20691,8 +20691,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 39.37 180)
-				(length 5.08)
+				(at 92.71 39.37 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,RZQ_B_3A/HPS_DDR/DIFF_IO_3A_B5P/DQ12/38"
 					(effects
 						(font
@@ -20709,8 +20709,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 36.83 180)
-				(length 5.08)
+				(at 92.71 36.83 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,CLK_B_3A_1N/HPS_DDR/DIFF_IO_3A_B6N/DQ12/37"
 					(effects
 						(font
@@ -20727,8 +20727,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 34.29 180)
-				(length 5.08)
+				(at 92.71 34.29 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,CLK_B_3A_1P/HPS_DDR/DIFF_IO_3A_B6P/DQ12/36"
 					(effects
 						(font
@@ -20745,8 +20745,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 30.48 180)
-				(length 5.08)
+				(at 92.71 30.48 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,CLK_B_3A_0N/HPS_DDR/DIFF_IO_3A_B7N/DQ13/35"
 					(effects
 						(font
@@ -20763,8 +20763,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 27.94 180)
-				(length 5.08)
+				(at 92.71 27.94 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,CLK_B_3A_0P/HPS_DDR/DIFF_IO_3A_B7P/DQ13/34"
 					(effects
 						(font
@@ -20781,8 +20781,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 25.4 180)
-				(length 5.08)
+				(at 92.71 25.4 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B8N/DQ13/33"
 					(effects
 						(font
@@ -20799,8 +20799,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 22.86 180)
-				(length 5.08)
+				(at 92.71 22.86 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B8P/DQ13/32"
 					(effects
 						(font
@@ -20817,8 +20817,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 20.32 180)
-				(length 5.08)
+				(at 92.71 20.32 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB,PLL_3A_B_CLKOUT0N/HPS_DDR/DIFF_IO_3A_B9N/DQ13/31"
 					(effects
 						(font
@@ -20835,8 +20835,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 17.78 180)
-				(length 5.08)
+				(at 92.71 17.78 180)
+				(length 2.54)
 				(name "IO_3A_B/PLL_3A_B_CLKOUT0P,PLL_3A_B_CLKOUT0,PLL_3A_B_FB0/HPS_DDR/DIFF_IO_3A_B9P/DQ13/30"
 					(effects
 						(font
@@ -20853,8 +20853,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 15.24 180)
-				(length 5.08)
+				(at 92.71 15.24 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B10N/DQSN13/CQN13/29"
 					(effects
 						(font
@@ -20871,8 +20871,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 12.7 180)
-				(length 5.08)
+				(at 92.71 12.7 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B10P/DQS13/CQ13/28"
 					(effects
 						(font
@@ -20889,8 +20889,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 10.16 180)
-				(length 5.08)
+				(at 92.71 10.16 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B11N/DQ13/27"
 					(effects
 						(font
@@ -20907,8 +20907,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 7.62 180)
-				(length 5.08)
+				(at 92.71 7.62 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B11P/DQ13/26"
 					(effects
 						(font
@@ -20925,8 +20925,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 5.08 180)
-				(length 5.08)
+				(at 92.71 5.08 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B12N/DQ13/25"
 					(effects
 						(font
@@ -20943,8 +20943,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 2.54 180)
-				(length 5.08)
+				(at 92.71 2.54 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B12P/DQ13/24"
 					(effects
 						(font
@@ -20961,8 +20961,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -2.54 180)
-				(length 5.08)
+				(at 92.71 -2.54 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B13N/DQ14/23"
 					(effects
 						(font
@@ -20979,8 +20979,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -5.08 180)
-				(length 5.08)
+				(at 92.71 -5.08 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B13P/DQ14/22"
 					(effects
 						(font
@@ -20997,8 +20997,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -7.62 180)
-				(length 5.08)
+				(at 92.71 -7.62 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B14N/DQ14/21"
 					(effects
 						(font
@@ -21015,8 +21015,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -10.16 180)
-				(length 5.08)
+				(at 92.71 -10.16 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B14P/DQ14/20"
 					(effects
 						(font
@@ -21033,8 +21033,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -12.7 180)
-				(length 5.08)
+				(at 92.71 -12.7 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B15N/DQ14/19"
 					(effects
 						(font
@@ -21051,8 +21051,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -15.24 180)
-				(length 5.08)
+				(at 92.71 -15.24 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B15P/DQ14/18"
 					(effects
 						(font
@@ -21069,8 +21069,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -17.78 180)
-				(length 5.08)
+				(at 92.71 -17.78 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B16N/DQSN14/CQN14/17"
 					(effects
 						(font
@@ -21087,8 +21087,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -20.32 180)
-				(length 5.08)
+				(at 92.71 -20.32 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B16P/DQS14/CQ14/16"
 					(effects
 						(font
@@ -21105,8 +21105,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -22.86 180)
-				(length 5.08)
+				(at 92.71 -22.86 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B17N/DQ14/15"
 					(effects
 						(font
@@ -21123,8 +21123,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -25.4 180)
-				(length 5.08)
+				(at 92.71 -25.4 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B17P/DQ14/14"
 					(effects
 						(font
@@ -21141,8 +21141,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -27.94 180)
-				(length 5.08)
+				(at 92.71 -27.94 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B18N/DQ14/13"
 					(effects
 						(font
@@ -21159,8 +21159,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -30.48 180)
-				(length 5.08)
+				(at 92.71 -30.48 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B18P/DQ14/12"
 					(effects
 						(font
@@ -21177,8 +21177,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -33.02 180)
-				(length 5.08)
+				(at 92.71 -33.02 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B19N/DQ15/11"
 					(effects
 						(font
@@ -21195,8 +21195,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -36.83 180)
-				(length 5.08)
+				(at 92.71 -36.83 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B19P/DQ15/10"
 					(effects
 						(font
@@ -21213,8 +21213,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -39.37 180)
-				(length 5.08)
+				(at 92.71 -39.37 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B20N/DQ15/9"
 					(effects
 						(font
@@ -21231,8 +21231,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -41.91 180)
-				(length 5.08)
+				(at 92.71 -41.91 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B20P/DQ15/8"
 					(effects
 						(font
@@ -21249,8 +21249,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -44.45 180)
-				(length 5.08)
+				(at 92.71 -44.45 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B21N/DQ15/7"
 					(effects
 						(font
@@ -21267,8 +21267,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -46.99 180)
-				(length 5.08)
+				(at 92.71 -46.99 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B21P/DQ15/6"
 					(effects
 						(font
@@ -21285,8 +21285,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -49.53 180)
-				(length 5.08)
+				(at 92.71 -49.53 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B22N/DQSN15/CQN15/5"
 					(effects
 						(font
@@ -21303,8 +21303,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -52.07 180)
-				(length 5.08)
+				(at 92.71 -52.07 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B22P/DQS15/CQ15/4"
 					(effects
 						(font
@@ -21321,8 +21321,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -54.61 180)
-				(length 5.08)
+				(at 92.71 -54.61 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B23N/DQ15/3"
 					(effects
 						(font
@@ -21339,8 +21339,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -57.15 180)
-				(length 5.08)
+				(at 92.71 -57.15 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B23P/DQ15/2"
 					(effects
 						(font
@@ -21357,8 +21357,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -59.69 180)
-				(length 5.08)
+				(at 92.71 -59.69 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B24N/DQ15/1"
 					(effects
 						(font
@@ -21375,8 +21375,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 95.25 -62.23 180)
-				(length 5.08)
+				(at 92.71 -62.23 180)
+				(length 2.54)
 				(name "IO_3A_B/IOB/HPS_DDR/DIFF_IO_3A_B24P/DQ15/0"
 					(effects
 						(font
@@ -21406,8 +21406,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 26.67 0)
-				(length 5.08)
+				(at -72.39 26.67 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -21424,8 +21424,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 24.13 0)
-				(length 5.08)
+				(at -72.39 24.13 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -21442,8 +21442,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 21.59 0)
-				(length 5.08)
+				(at -72.39 21.59 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -21460,8 +21460,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 19.05 0)
-				(length 5.08)
+				(at -72.39 19.05 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -21478,8 +21478,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 16.51 0)
-				(length 5.08)
+				(at -72.39 16.51 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -21496,8 +21496,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 13.97 0)
-				(length 5.08)
+				(at -72.39 13.97 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -21514,8 +21514,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 11.43 0)
-				(length 5.08)
+				(at -72.39 11.43 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -21532,8 +21532,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 8.89 0)
-				(length 5.08)
+				(at -72.39 8.89 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -21550,8 +21550,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 6.35 0)
-				(length 5.08)
+				(at -72.39 6.35 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -21568,8 +21568,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 3.81 0)
-				(length 5.08)
+				(at -72.39 3.81 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -21586,8 +21586,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 1.27 0)
-				(length 5.08)
+				(at -72.39 1.27 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -21604,8 +21604,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -1.27 0)
-				(length 5.08)
+				(at -72.39 -1.27 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -21622,8 +21622,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -3.81 0)
-				(length 5.08)
+				(at -72.39 -3.81 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -21640,8 +21640,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -6.35 0)
-				(length 5.08)
+				(at -72.39 -6.35 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -21658,8 +21658,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -8.89 0)
-				(length 5.08)
+				(at -72.39 -8.89 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -21676,8 +21676,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -11.43 0)
-				(length 5.08)
+				(at -72.39 -11.43 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -21694,8 +21694,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -13.97 0)
-				(length 5.08)
+				(at -72.39 -13.97 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -21712,8 +21712,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -16.51 0)
-				(length 5.08)
+				(at -72.39 -16.51 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -21730,8 +21730,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -19.05 0)
-				(length 5.08)
+				(at -72.39 -19.05 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -21748,8 +21748,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -21.59 0)
-				(length 5.08)
+				(at -72.39 -21.59 0)
+				(length 2.54)
 				(name "IO_6A/HVIO_6A_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -21766,8 +21766,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 26.67 180)
-				(length 5.08)
+				(at 72.39 26.67 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -21784,8 +21784,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 24.13 180)
-				(length 5.08)
+				(at 72.39 24.13 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -21802,8 +21802,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 21.59 180)
-				(length 5.08)
+				(at 72.39 21.59 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -21820,8 +21820,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 19.05 180)
-				(length 5.08)
+				(at 72.39 19.05 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -21838,8 +21838,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 16.51 180)
-				(length 5.08)
+				(at 72.39 16.51 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -21856,8 +21856,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 13.97 180)
-				(length 5.08)
+				(at 72.39 13.97 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -21874,8 +21874,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 11.43 180)
-				(length 5.08)
+				(at 72.39 11.43 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -21892,8 +21892,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 8.89 180)
-				(length 5.08)
+				(at 72.39 8.89 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -21910,8 +21910,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 6.35 180)
-				(length 5.08)
+				(at 72.39 6.35 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -21928,8 +21928,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 3.81 180)
-				(length 5.08)
+				(at 72.39 3.81 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -21946,8 +21946,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 1.27 180)
-				(length 5.08)
+				(at 72.39 1.27 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -21964,8 +21964,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -1.27 180)
-				(length 5.08)
+				(at 72.39 -1.27 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -21982,8 +21982,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -3.81 180)
-				(length 5.08)
+				(at 72.39 -3.81 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -22000,8 +22000,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -6.35 180)
-				(length 5.08)
+				(at 72.39 -6.35 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -22018,8 +22018,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -8.89 180)
-				(length 5.08)
+				(at 72.39 -8.89 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -22036,8 +22036,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -11.43 180)
-				(length 5.08)
+				(at 72.39 -11.43 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -22054,8 +22054,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -13.97 180)
-				(length 5.08)
+				(at 72.39 -13.97 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -22072,8 +22072,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -16.51 180)
-				(length 5.08)
+				(at 72.39 -16.51 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -22090,8 +22090,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -19.05 180)
-				(length 5.08)
+				(at 72.39 -19.05 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -22108,8 +22108,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -21.59 180)
-				(length 5.08)
+				(at 72.39 -21.59 180)
+				(length 2.54)
 				(name "IO_6B/HVIO_6B_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -22139,8 +22139,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 22.86 0)
-				(length 5.08)
+				(at -72.39 22.86 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -22157,8 +22157,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 20.32 0)
-				(length 5.08)
+				(at -72.39 20.32 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -22175,8 +22175,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 17.78 0)
-				(length 5.08)
+				(at -72.39 17.78 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -22193,8 +22193,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 15.24 0)
-				(length 5.08)
+				(at -72.39 15.24 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -22211,8 +22211,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 12.7 0)
-				(length 5.08)
+				(at -72.39 12.7 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -22229,8 +22229,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 10.16 0)
-				(length 5.08)
+				(at -72.39 10.16 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -22247,8 +22247,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 7.62 0)
-				(length 5.08)
+				(at -72.39 7.62 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -22265,8 +22265,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 5.08 0)
-				(length 5.08)
+				(at -72.39 5.08 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -22283,8 +22283,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 2.54 0)
-				(length 5.08)
+				(at -72.39 2.54 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -22301,8 +22301,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 0 0)
-				(length 5.08)
+				(at -72.39 0 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -22319,8 +22319,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -2.54 0)
-				(length 5.08)
+				(at -72.39 -2.54 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -22337,8 +22337,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -5.08 0)
-				(length 5.08)
+				(at -72.39 -5.08 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -22355,8 +22355,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -7.62 0)
-				(length 5.08)
+				(at -72.39 -7.62 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -22373,8 +22373,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -10.16 0)
-				(length 5.08)
+				(at -72.39 -10.16 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -22391,8 +22391,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -12.7 0)
-				(length 5.08)
+				(at -72.39 -12.7 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -22409,8 +22409,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -15.24 0)
-				(length 5.08)
+				(at -72.39 -15.24 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -22427,8 +22427,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -17.78 0)
-				(length 5.08)
+				(at -72.39 -17.78 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -22445,8 +22445,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -20.32 0)
-				(length 5.08)
+				(at -72.39 -20.32 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -22463,8 +22463,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -22.86 0)
-				(length 5.08)
+				(at -72.39 -22.86 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -22481,8 +22481,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -25.4 0)
-				(length 5.08)
+				(at -72.39 -25.4 0)
+				(length 2.54)
 				(name "IO_6C/HVIO_6C_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -22499,8 +22499,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 22.86 180)
-				(length 5.08)
+				(at 72.39 22.86 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -22517,8 +22517,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 20.32 180)
-				(length 5.08)
+				(at 72.39 20.32 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -22535,8 +22535,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 17.78 180)
-				(length 5.08)
+				(at 72.39 17.78 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -22553,8 +22553,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 15.24 180)
-				(length 5.08)
+				(at 72.39 15.24 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -22571,8 +22571,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 12.7 180)
-				(length 5.08)
+				(at 72.39 12.7 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -22589,8 +22589,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 10.16 180)
-				(length 5.08)
+				(at 72.39 10.16 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -22607,8 +22607,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 7.62 180)
-				(length 5.08)
+				(at 72.39 7.62 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -22625,8 +22625,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 5.08 180)
-				(length 5.08)
+				(at 72.39 5.08 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -22643,8 +22643,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 2.54 180)
-				(length 5.08)
+				(at 72.39 2.54 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -22661,8 +22661,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 0 180)
-				(length 5.08)
+				(at 72.39 0 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -22679,8 +22679,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -2.54 180)
-				(length 5.08)
+				(at 72.39 -2.54 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -22697,8 +22697,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -5.08 180)
-				(length 5.08)
+				(at 72.39 -5.08 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -22715,8 +22715,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -7.62 180)
-				(length 5.08)
+				(at 72.39 -7.62 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -22733,8 +22733,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -10.16 180)
-				(length 5.08)
+				(at 72.39 -10.16 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -22751,8 +22751,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -12.7 180)
-				(length 5.08)
+				(at 72.39 -12.7 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -22769,8 +22769,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -15.24 180)
-				(length 5.08)
+				(at 72.39 -15.24 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -22787,8 +22787,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -17.78 180)
-				(length 5.08)
+				(at 72.39 -17.78 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -22805,8 +22805,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -20.32 180)
-				(length 5.08)
+				(at 72.39 -20.32 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -22823,8 +22823,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -22.86 180)
-				(length 5.08)
+				(at 72.39 -22.86 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -22841,8 +22841,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -25.4 180)
-				(length 5.08)
+				(at 72.39 -25.4 180)
+				(length 2.54)
 				(name "IO_6D/HVIO_6D_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -22872,8 +22872,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 22.86 0)
-				(length 5.08)
+				(at -71.12 22.86 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -22890,8 +22890,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 20.32 0)
-				(length 5.08)
+				(at -71.12 20.32 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -22908,8 +22908,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 17.78 0)
-				(length 5.08)
+				(at -71.12 17.78 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -22926,8 +22926,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 15.24 0)
-				(length 5.08)
+				(at -71.12 15.24 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -22944,8 +22944,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 12.7 0)
-				(length 5.08)
+				(at -71.12 12.7 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -22962,8 +22962,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 10.16 0)
-				(length 5.08)
+				(at -71.12 10.16 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -22980,8 +22980,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 7.62 0)
-				(length 5.08)
+				(at -71.12 7.62 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -22998,8 +22998,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 5.08 0)
-				(length 5.08)
+				(at -71.12 5.08 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -23016,8 +23016,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 2.54 0)
-				(length 5.08)
+				(at -71.12 2.54 0)
+				(length 2.54)
 				(name "O_6E/HVIO_6E_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -23034,8 +23034,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 0 0)
-				(length 5.08)
+				(at -71.12 0 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -23052,8 +23052,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -2.54 0)
-				(length 5.08)
+				(at -71.12 -2.54 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -23070,8 +23070,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -5.08 0)
-				(length 5.08)
+				(at -71.12 -5.08 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -23088,8 +23088,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -7.62 0)
-				(length 5.08)
+				(at -71.12 -7.62 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -23106,8 +23106,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -10.16 0)
-				(length 5.08)
+				(at -71.12 -10.16 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -23124,8 +23124,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -12.7 0)
-				(length 5.08)
+				(at -71.12 -12.7 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -23142,8 +23142,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -15.24 0)
-				(length 5.08)
+				(at -71.12 -15.24 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -23160,8 +23160,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -17.78 0)
-				(length 5.08)
+				(at -71.12 -17.78 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -23178,8 +23178,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -20.32 0)
-				(length 5.08)
+				(at -71.12 -20.32 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -23196,8 +23196,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -22.86 0)
-				(length 5.08)
+				(at -71.12 -22.86 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -23214,8 +23214,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -73.66 -25.4 0)
-				(length 5.08)
+				(at -71.12 -25.4 0)
+				(length 2.54)
 				(name "IO_6E/HVIO_6E_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -23232,8 +23232,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 22.86 180)
-				(length 5.08)
+				(at 73.66 22.86 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -23250,8 +23250,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 20.32 180)
-				(length 5.08)
+				(at 73.66 20.32 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -23268,8 +23268,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 17.78 180)
-				(length 5.08)
+				(at 73.66 17.78 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -23286,8 +23286,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 15.24 180)
-				(length 5.08)
+				(at 73.66 15.24 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -23304,8 +23304,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 12.7 180)
-				(length 5.08)
+				(at 73.66 12.7 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -23322,8 +23322,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 10.16 180)
-				(length 5.08)
+				(at 73.66 10.16 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -23340,8 +23340,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 7.62 180)
-				(length 5.08)
+				(at 73.66 7.62 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -23358,8 +23358,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 5.08 180)
-				(length 5.08)
+				(at 73.66 5.08 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -23376,8 +23376,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 2.54 180)
-				(length 5.08)
+				(at 73.66 2.54 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -23394,8 +23394,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 0 180)
-				(length 5.08)
+				(at 73.66 0 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -23412,8 +23412,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -2.54 180)
-				(length 5.08)
+				(at 73.66 -2.54 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -23430,8 +23430,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -5.08 180)
-				(length 5.08)
+				(at 73.66 -5.08 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -23448,8 +23448,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -7.62 180)
-				(length 5.08)
+				(at 73.66 -7.62 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -23466,8 +23466,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -10.16 180)
-				(length 5.08)
+				(at 73.66 -10.16 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -23484,8 +23484,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -12.7 180)
-				(length 5.08)
+				(at 73.66 -12.7 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -23502,8 +23502,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -15.24 180)
-				(length 5.08)
+				(at 73.66 -15.24 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -23520,8 +23520,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -17.78 180)
-				(length 5.08)
+				(at 73.66 -17.78 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -23538,8 +23538,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -20.32 180)
-				(length 5.08)
+				(at 73.66 -20.32 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -23556,8 +23556,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -22.86 180)
-				(length 5.08)
+				(at 73.66 -22.86 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -23574,8 +23574,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 76.2 -25.4 180)
-				(length 5.08)
+				(at 73.66 -25.4 180)
+				(length 2.54)
 				(name "IO_6F/HVIO_6F_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -23605,8 +23605,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 21.59 0)
-				(length 5.08)
+				(at -72.39 21.59 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -23623,8 +23623,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 19.05 0)
-				(length 5.08)
+				(at -72.39 19.05 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -23641,8 +23641,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 16.51 0)
-				(length 5.08)
+				(at -72.39 16.51 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -23659,8 +23659,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 13.97 0)
-				(length 5.08)
+				(at -72.39 13.97 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -23677,8 +23677,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 11.43 0)
-				(length 5.08)
+				(at -72.39 11.43 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -23695,8 +23695,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 8.89 0)
-				(length 5.08)
+				(at -72.39 8.89 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -23713,8 +23713,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 6.35 0)
-				(length 5.08)
+				(at -72.39 6.35 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -23731,8 +23731,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 3.81 0)
-				(length 5.08)
+				(at -72.39 3.81 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -23749,8 +23749,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 1.27 0)
-				(length 5.08)
+				(at -72.39 1.27 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -23767,8 +23767,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -1.27 0)
-				(length 5.08)
+				(at -72.39 -1.27 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -23785,8 +23785,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -3.81 0)
-				(length 5.08)
+				(at -72.39 -3.81 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -23803,8 +23803,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -6.35 0)
-				(length 5.08)
+				(at -72.39 -6.35 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -23821,8 +23821,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -8.89 0)
-				(length 5.08)
+				(at -72.39 -8.89 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -23839,8 +23839,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -11.43 0)
-				(length 5.08)
+				(at -72.39 -11.43 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -23857,8 +23857,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -13.97 0)
-				(length 5.08)
+				(at -72.39 -13.97 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -23875,8 +23875,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -16.51 0)
-				(length 5.08)
+				(at -72.39 -16.51 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -23893,8 +23893,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -19.05 0)
-				(length 5.08)
+				(at -72.39 -19.05 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -23911,8 +23911,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -21.59 0)
-				(length 5.08)
+				(at -72.39 -21.59 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -23929,8 +23929,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -24.13 0)
-				(length 5.08)
+				(at -72.39 -24.13 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -23947,8 +23947,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at -74.93 -26.67 0)
-				(length 5.08)
+				(at -72.39 -26.67 0)
+				(length 2.54)
 				(name "IO_6G/HVIO_6G_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -23965,8 +23965,1448 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 21.59 180)
-				(length 5.08)
+				(at -36.83 133.35 0)
+				(length 2.54)
+				(name "GND121"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CA34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 130.81 0)
+				(length 2.54)
+				(name "GND120"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CA44"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 128.27 0)
+				(length 2.54)
+				(name "GND119"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CA52"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 125.73 0)
+				(length 2.54)
+				(name "GND118"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CA60"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 123.19 0)
+				(length 2.54)
+				(name "GND117"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CB1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 120.65 0)
+				(length 2.54)
+				(name "GND116"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CB75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 118.11 0)
+				(length 2.54)
+				(name "GND115"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CC69"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 115.57 0)
+				(length 2.54)
+				(name "GND114"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CD31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 113.03 0)
+				(length 2.54)
+				(name "GND113"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CD40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 110.49 0)
+				(length 2.54)
+				(name "GND112"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CD49"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 107.95 0)
+				(length 2.54)
+				(name "GND111"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CD57"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 105.41 0)
+				(length 2.54)
+				(name "GND110"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CE16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 102.87 0)
+				(length 2.54)
+				(name "GND109"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CE4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 100.33 0)
+				(length 2.54)
+				(name "GND108"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CG29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 97.79 0)
+				(length 2.54)
+				(name "GND107"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CG37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 95.25 0)
+				(length 2.54)
+				(name "GND106"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CG46"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 92.71 0)
+				(length 2.54)
+				(name "GND105"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CG54"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 90.17 0)
+				(length 2.54)
+				(name "GND104"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CH8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 87.63 0)
+				(length 2.54)
+				(name "GND103"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CK64"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 85.09 0)
+				(length 2.54)
+				(name "GND102"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CK72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 82.55 0)
+				(length 2.54)
+				(name "GND101"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 80.01 0)
+				(length 2.54)
+				(name "GND100"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 77.47 0)
+				(length 2.54)
+				(name "GND99"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 74.93 0)
+				(length 2.54)
+				(name "GND98"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL44"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 72.39 0)
+				(length 2.54)
+				(name "GND97"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL52"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 69.85 0)
+				(length 2.54)
+				(name "GND96"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CL60"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 67.31 0)
+				(length 2.54)
+				(name "GND95"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CM2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 64.77 0)
+				(length 2.54)
+				(name "GND94"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CM74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 62.23 0)
+				(length 2.54)
+				(name "GND93"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CN69"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 59.69 0)
+				(length 2.54)
+				(name "GND92"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CR16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 57.15 0)
+				(length 2.54)
+				(name "GND91"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CR4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 54.61 0)
+				(length 2.54)
+				(name "GND90"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CT31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 52.07 0)
+				(length 2.54)
+				(name "GND89"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CT40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 49.53 0)
+				(length 2.54)
+				(name "GND88"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CT49"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 46.99 0)
+				(length 2.54)
+				(name "GND87"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CT57"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 44.45 0)
+				(length 2.54)
+				(name "GND86"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CU1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 41.91 0)
+				(length 2.54)
+				(name "GND85"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CU75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 39.37 0)
+				(length 2.54)
+				(name "GND84"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CV8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 36.83 0)
+				(length 2.54)
+				(name "GND83"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CW29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 34.29 0)
+				(length 2.54)
+				(name "GND82"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CW37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 31.75 0)
+				(length 2.54)
+				(name "GND81"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CW46"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 29.21 0)
+				(length 2.54)
+				(name "GND80"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CW54"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 26.67 0)
+				(length 2.54)
+				(name "GND79"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CY64"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 24.13 0)
+				(length 2.54)
+				(name "GND78"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CY72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 21.59 0)
+				(length 2.54)
+				(name "GND77"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "D72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 19.05 0)
+				(length 2.54)
+				(name "GND76"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DE2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 16.51 0)
+				(length 2.54)
+				(name "GND75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DE74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 13.97 0)
+				(length 2.54)
+				(name "GND74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 11.43 0)
+				(length 2.54)
+				(name "GND73"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 8.89 0)
+				(length 2.54)
+				(name "GND72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 6.35 0)
+				(length 2.54)
+				(name "GND71"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 3.81 0)
+				(length 2.54)
+				(name "GND70"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF48"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 1.27 0)
+				(length 2.54)
+				(name "GND69"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF56"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -1.27 0)
+				(length 2.54)
+				(name "GND68"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF62"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -3.81 0)
+				(length 2.54)
+				(name "GND67"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DF9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -6.35 0)
+				(length 2.54)
+				(name "GND66"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DG72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -8.89 0)
+				(length 2.54)
+				(name "GND65"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -11.43 0)
+				(length 2.54)
+				(name "GND64"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -13.97 0)
+				(length 2.54)
+				(name "GND63"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -16.51 0)
+				(length 2.54)
+				(name "GND62"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -19.05 0)
+				(length 2.54)
+				(name "GND61"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -21.59 0)
+				(length 2.54)
+				(name "GND60"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -24.13 0)
+				(length 2.54)
+				(name "GND59"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK51"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -26.67 0)
+				(length 2.54)
+				(name "GND58"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK59"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -29.21 0)
+				(length 2.54)
+				(name "GND57"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DK65"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -31.75 0)
+				(length 2.54)
+				(name "GND56"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DL72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -34.29 0)
+				(length 2.54)
+				(name "GND55"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DM1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -36.83 0)
+				(length 2.54)
+				(name "GND54"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DM74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -39.37 0)
+				(length 2.54)
+				(name "GND53"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DM75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -41.91 0)
+				(length 2.54)
+				(name "GND52"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -44.45 0)
+				(length 2.54)
+				(name "GND51"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -46.99 0)
+				(length 2.54)
+				(name "GND50"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -49.53 0)
+				(length 2.54)
+				(name "GND49"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN36"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -52.07 0)
+				(length 2.54)
+				(name "GND48"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN47"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -54.61 0)
+				(length 2.54)
+				(name "GND47"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN60"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -57.15 0)
+				(length 2.54)
+				(name "GND46"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN70"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -59.69 0)
+				(length 2.54)
+				(name "GND45"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DN75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -62.23 0)
+				(length 2.54)
+				(name "GND44"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -64.77 0)
+				(length 2.54)
+				(name "GND43"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -67.31 0)
+				(length 2.54)
+				(name "GND42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 72.39 21.59 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_1,TXCLK1,DATA_CTRL1"
 					(effects
 						(font
@@ -23983,8 +25423,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 19.05 180)
-				(length 5.08)
+				(at 72.39 19.05 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_2,TXCLK2,DATA_CTRL2"
 					(effects
 						(font
@@ -24001,8 +25441,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 16.51 180)
-				(length 5.08)
+				(at 72.39 16.51 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_3,TXCLK3,DATA_CTRL3"
 					(effects
 						(font
@@ -24019,8 +25459,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 13.97 180)
-				(length 5.08)
+				(at 72.39 13.97 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_4,TXCLK4,DATA_CTRL4"
 					(effects
 						(font
@@ -24037,8 +25477,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 11.43 180)
-				(length 5.08)
+				(at 72.39 11.43 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_5,TXCLK5,DATA_CTRL5"
 					(effects
 						(font
@@ -24055,8 +25495,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 8.89 180)
-				(length 5.08)
+				(at 72.39 8.89 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_6,TXCLK6,DATA_CTRL6"
 					(effects
 						(font
@@ -24073,8 +25513,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 6.35 180)
-				(length 5.08)
+				(at 72.39 6.35 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_7,TXCLK7,DATA_CTRL7"
 					(effects
 						(font
@@ -24091,8 +25531,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 3.81 180)
-				(length 5.08)
+				(at 72.39 3.81 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_8,TXCLK8,DATA_CTRL8"
 					(effects
 						(font
@@ -24109,8 +25549,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 1.27 180)
-				(length 5.08)
+				(at 72.39 1.27 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_9,PLLREFCLK1,TXCLK9,RXCLK1,DATA_CTRL9"
 					(effects
 						(font
@@ -24127,8 +25567,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -1.27 180)
-				(length 5.08)
+				(at 72.39 -1.27 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_10,PLLREFCLK2,TXCLK10,RXCLK2,DATA_CTRL10"
 					(effects
 						(font
@@ -24145,8 +25585,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -3.81 180)
-				(length 5.08)
+				(at 72.39 -3.81 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_11,SOURCE_SYNC_CLK1,TXCLK11,RXCLK3,DATA_CTRL11"
 					(effects
 						(font
@@ -24163,8 +25603,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -6.35 180)
-				(length 5.08)
+				(at 72.39 -6.35 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_12,SOURCE_SYNC_CLK2,TXCLK12,RXCLK4,DATA_CTRL12"
 					(effects
 						(font
@@ -24181,8 +25621,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -8.89 180)
-				(length 5.08)
+				(at 72.39 -8.89 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_13,TXCLK13,DATA_CTRL13"
 					(effects
 						(font
@@ -24199,8 +25639,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -11.43 180)
-				(length 5.08)
+				(at 72.39 -11.43 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_14,TXCLK14,DATA_CTRL14"
 					(effects
 						(font
@@ -24217,8 +25657,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -13.97 180)
-				(length 5.08)
+				(at 72.39 -13.97 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_15,TXCLK15,DATA_CTRL15"
 					(effects
 						(font
@@ -24235,8 +25675,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -16.51 180)
-				(length 5.08)
+				(at 72.39 -16.51 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_16,TXCLK16,DATA_CTRL16"
 					(effects
 						(font
@@ -24253,8 +25693,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -19.05 180)
-				(length 5.08)
+				(at 72.39 -19.05 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_17,TXCLK17,DATA_CTRL17"
 					(effects
 						(font
@@ -24271,8 +25711,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -21.59 180)
-				(length 5.08)
+				(at 72.39 -21.59 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_18,TXCLK18,DATA_CTRL18"
 					(effects
 						(font
@@ -24289,8 +25729,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -24.13 180)
-				(length 5.08)
+				(at 72.39 -24.13 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_19,TXCLK19,DATA_CTRL19"
 					(effects
 						(font
@@ -24307,8 +25747,8 @@
 				)
 			)
 			(pin bidirectional line
-				(at 74.93 -26.67 180)
-				(length 5.08)
+				(at 72.39 -26.67 180)
+				(length 2.54)
 				(name "IO_6H/HVIO_6H_20,TXCLK20,DATA_CTRL20"
 					(effects
 						(font
@@ -24317,6 +25757,757 @@
 					)
 				)
 				(number "AC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Agilex_5_SoC_9_1"
+			(rectangle
+				(start 22.86 41.91)
+				(end -34.29 -69.85)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 36.83 0)
+				(length 2.54)
+				(name "GND1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "CU74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 34.29 0)
+				(length 2.54)
+				(name "GND2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "BM67"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 31.75 0)
+				(length 2.54)
+				(name "GND3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "BM64"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 29.21 0)
+				(length 2.54)
+				(name "GND4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "AL54"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 26.67 0)
+				(length 2.54)
+				(name "GND5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "AL52"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 24.13 0)
+				(length 2.54)
+				(name "GND6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "AW57"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 21.59 0)
+				(length 2.54)
+				(name "GND7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "AR57"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 19.05 0)
+				(length 2.54)
+				(name "GND8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W65"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 16.51 0)
+				(length 2.54)
+				(name "GND9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W59"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 13.97 0)
+				(length 2.54)
+				(name "GND10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W51"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 11.43 0)
+				(length 2.54)
+				(name "GND11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 8.89 0)
+				(length 2.54)
+				(name "GND12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 6.35 0)
+				(length 2.54)
+				(name "GND13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "W27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 3.81 0)
+				(length 2.54)
+				(name "GND14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "V8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 1.27 0)
+				(length 2.54)
+				(name "GND15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "U75"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -1.27 0)
+				(length 2.54)
+				(name "GND16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "U1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -3.81 0)
+				(length 2.54)
+				(name "GND17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "R4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -6.35 0)
+				(length 2.54)
+				(name "GND18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "R16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -8.89 0)
+				(length 2.54)
+				(name "GND19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "L74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -11.43 0)
+				(length 2.54)
+				(name "GND20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "L2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -13.97 0)
+				(length 2.54)
+				(name "GND21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "K72"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -16.51 0)
+				(length 2.54)
+				(name "GND22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J62"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -19.05 0)
+				(length 2.54)
+				(name "GND23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J56"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -21.59 0)
+				(length 2.54)
+				(name "GND24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J48"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -24.13 0)
+				(length 2.54)
+				(name "GND25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -26.67 0)
+				(length 2.54)
+				(name "GND26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -29.21 0)
+				(length 2.54)
+				(name "GND27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "J24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -31.75 0)
+				(length 2.54)
+				(name "GND28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "H8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -34.29 0)
+				(length 2.54)
+				(name "GND29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "F1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -36.83 0)
+				(length 2.54)
+				(name "GND30"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E65"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -39.37 0)
+				(length 2.54)
+				(name "GND31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E59"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -41.91 0)
+				(length 2.54)
+				(name "GND32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E51"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -44.45 0)
+				(length 2.54)
+				(name "GND33"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -46.99 0)
+				(length 2.54)
+				(name "GND34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -49.53 0)
+				(length 2.54)
+				(name "GND35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "E27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -52.07 0)
+				(length 2.54)
+				(name "GND36"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP74"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -54.61 0)
+				(length 2.54)
+				(name "GND37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP73"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -57.15 0)
+				(length 2.54)
+				(name "GND38"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP63"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -59.69 0)
+				(length 2.54)
+				(name "GND39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP53"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -62.23 0)
+				(length 2.54)
+				(name "GND40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP41"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at -36.83 -64.77 0)
+				(length 2.54)
+				(name "GND41"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "DP3"
 					(effects
 						(font
 							(size 1.27 1.27)
