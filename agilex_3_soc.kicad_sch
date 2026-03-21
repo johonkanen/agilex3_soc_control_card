@@ -1713,372 +1713,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Micro_SD_Card"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at -16.51 15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Micro_SD_Card"
-				(at 16.51 15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Footprint" ""
-				(at 29.21 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/693072010801.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Micro SD Card Socket"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector SD microsd"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "microSD*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Micro_SD_Card_0_1"
-				(polyline
-					(pts
-						(xy -8.89 -11.43) (xy -8.89 8.89) (xy -1.27 8.89) (xy 2.54 12.7) (xy 3.81 12.7) (xy 3.81 11.43)
-						(xy 6.35 11.43) (xy 7.62 12.7) (xy 20.32 12.7) (xy 20.32 -11.43) (xy -8.89 -11.43)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -7.62 8.255)
-					(end -5.08 6.985)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 5.715)
-					(end -5.08 4.445)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 3.175)
-					(end -5.08 1.905)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 0.635)
-					(end -5.08 -0.635)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -1.905)
-					(end -5.08 -3.175)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -4.445)
-					(end -5.08 -5.715)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -6.985)
-					(end -5.08 -8.255)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -9.525)
-					(end -5.08 -10.795)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 16.51 12.7) (xy 16.51 13.97) (xy -19.05 13.97) (xy -19.05 -16.51) (xy 16.51 -16.51) (xy 16.51 -11.43)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Micro_SD_Card_1_1"
-				(pin bidirectional line
-					(at -22.86 7.62 0)
-					(length 3.81)
-					(name "DAT2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 5.08 0)
-					(length 3.81)
-					(name "DAT3/CD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -22.86 2.54 0)
-					(length 3.81)
-					(name "CMD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -22.86 0 0)
-					(length 3.81)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -22.86 -2.54 0)
-					(length 3.81)
-					(name "CLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -22.86 -5.08 0)
-					(length 3.81)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 -7.62 0)
-					(length 3.81)
-					(name "DAT0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -22.86 -10.16 0)
-					(length 3.81)
-					(name "DAT1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -15.24 180)
-					(length 3.81)
-					(name "SHIELD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
@@ -8973,16 +8607,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 160.02) (xy 132.08 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "337faf42-28bd-4ce3-a52f-211a67e470ed")
-	)
-	(wire
-		(pts
 			(xy 184.15 57.15) (xy 193.04 57.15)
 		)
 		(stroke
@@ -9060,16 +8684,6 @@
 			(type default)
 		)
 		(uuid "3896fade-7dfa-43b0-9325-290355d4881e")
-	)
-	(wire
-		(pts
-			(xy 128.27 154.94) (xy 132.08 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3967edee-c502-4efc-a006-0f04c8fd45ab")
 	)
 	(wire
 		(pts
@@ -9333,16 +8947,6 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 142.24) (xy 132.08 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60c4b666-d995-4c40-9c26-06ea224deb8c")
-	)
-	(wire
-		(pts
 			(xy -330.2 138.43) (xy -314.96 138.43)
 		)
 		(stroke
@@ -9581,16 +9185,6 @@
 		)
 		(uuid "81303eff-116d-41b0-b019-81534f9951ff")
 	)
-	(wire
-		(pts
-			(xy 128.27 149.86) (xy 132.08 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "832ec201-20c2-4fd1-ab36-ee6d34344b25")
-	)
 	(bus
 		(pts
 			(xy -325.12 133.35) (xy -314.96 133.35)
@@ -9700,16 +9294,6 @@
 			(type default)
 		)
 		(uuid "99c0ff2e-26db-4301-b32f-a980e7aff764")
-	)
-	(wire
-		(pts
-			(xy 128.27 147.32) (xy 132.08 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c76f370-ab75-4ed2-ac24-2c7d84c4cadd")
 	)
 	(wire
 		(pts
@@ -9831,16 +9415,6 @@
 		)
 		(uuid "a89b60d9-5528-4818-93c6-b6ee7d6c1c1f")
 	)
-	(wire
-		(pts
-			(xy 128.27 152.4) (xy 132.08 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8c5ef24-6cfb-4ba5-8944-fef8e59d4482")
-	)
 	(bus
 		(pts
 			(xy -284.48 179.07) (xy -233.68 179.07)
@@ -9950,16 +9524,6 @@
 			(type default)
 		)
 		(uuid "b468f64e-5d02-4644-b429-42a3856d2a4f")
-	)
-	(wire
-		(pts
-			(xy 128.27 144.78) (xy 132.08 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5c217ae-caaf-4b2e-943f-a29ed3bbdaf6")
 	)
 	(wire
 		(pts
@@ -10280,16 +9844,6 @@
 			(type default)
 		)
 		(uuid "e7a198dc-f0ca-46be-a761-163301101263")
-	)
-	(wire
-		(pts
-			(xy 128.27 157.48) (xy 132.08 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7bb4c0e-8124-4e13-a5c7-c79525313fd2")
 	)
 	(wire
 		(pts
@@ -10951,30 +10505,6 @@
 			)
 		)
 	)
-	(global_label "CLK"
-		(shape input)
-		(at 128.27 152.4 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1b4ad36c-77b7-4a70-88a5-cdc1f3dfe75e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.7167 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "LPDDR4_DQ28"
 		(shape input)
 		(at 237.49 90.17 0)
@@ -11020,30 +10550,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "VSS"
-		(shape input)
-		(at 128.27 154.94 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "223714ae-0c7f-412e-93c5-96c7d852d292")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.7772 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -11263,30 +10769,6 @@
 			)
 		)
 	)
-	(global_label "DAT0"
-		(shape input)
-		(at 128.27 157.48 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "510e064a-d055-431c-9054-420eb222fa4d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.7491 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "LPDDR4_DQS_P0"
 		(shape input)
 		(at 73.66 73.66 180)
@@ -11396,30 +10878,6 @@
 		(uuid "6042b3d6-3932-44ab-a39c-62a3aa65308b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 57.5515 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "CMD"
-		(shape input)
-		(at 128.27 147.32 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "619b6548-4245-43df-a90b-eaa422b06786")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.2934 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11572,30 +11030,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "DAT2"
-		(shape input)
-		(at 128.27 142.24 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "73d2baf9-c975-4804-bf04-88ba46c4ddc9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.7491 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -11788,30 +11222,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "DAT1"
-		(shape input)
-		(at 128.27 160.02 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "99496e68-83c1-4b13-b47d-dd4e6625edc1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.7491 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -12103,30 +11513,6 @@
 			)
 		)
 	)
-	(global_label "DAT3"
-		(shape input)
-		(at 128.27 144.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cd9b4a92-b052-4647-9fcf-690f925c63a6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.7491 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "LPDDR4_DQ30"
 		(shape input)
 		(at 237.49 95.25 0)
@@ -12316,30 +11702,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "VDD"
-		(shape input)
-		(at 128.27 149.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e231d446-e373-454b-97ce-d8922dfeeef3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.6562 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -12891,107 +12253,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Micro_SD_Card")
-		(at 154.94 149.86 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "556d4ef0-a9be-4435-aa7b-fdca9278fbfd")
-		(property "Reference" "J6"
-			(at 155.575 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Micro_SD_Card"
-			(at 155.575 133.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5"
-			(at 184.15 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/693072010801.pdf"
-			(at 154.94 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Micro SD Card Socket"
-			(at 154.94 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "7"
-			(uuid "c7bb5d76-25ee-4ea2-9859-0d4b8ce5e42f")
-		)
-		(pin "6"
-			(uuid "d803852b-59be-43b6-a76d-f6618fe346e4")
-		)
-		(pin "9"
-			(uuid "1ecdda93-b577-49c4-962a-1ab9aa2a9647")
-		)
-		(pin "1"
-			(uuid "e23b7090-1620-4c59-b773-05a3988d181f")
-		)
-		(pin "2"
-			(uuid "55a47a97-fae5-4a12-bbd0-aac1de80d682")
-		)
-		(pin "4"
-			(uuid "a5607de1-4cbc-4057-b21b-471968b2bb16")
-		)
-		(pin "5"
-			(uuid "9edb5bb8-cc56-4e74-9662-aa789629af47")
-		)
-		(pin "3"
-			(uuid "dbdb095a-897b-42df-965c-bbdcd92c6d2c")
-		)
-		(pin "8"
-			(uuid "fc3666f4-0d79-4822-89c7-bd8b7cb2fdec")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 213.36 111.76 0)
 		(unit 1)
@@ -13153,7 +12414,7 @@
 	)
 	(symbol
 		(lib_id "Analog_ADC:ADS7886xxDBV")
-		(at 316.23 153.67 0)
+		(at 189.23 245.11 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13164,7 +12425,7 @@
 		(fields_autoplaced yes)
 		(uuid "63ae83a3-4182-405a-85ff-3dc5b8264e51")
 		(property "Reference" "U2"
-			(at 318.3733 143.51 0)
+			(at 191.3733 234.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13175,7 +12436,7 @@
 			)
 		)
 		(property "Value" "ADS7886xxDBV"
-			(at 318.3733 146.05 0)
+			(at 191.3733 237.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13186,7 +12447,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 316.23 154.94 0)
+			(at 189.23 246.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13197,7 +12458,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads7886.pdf"
-			(at 317.5 147.32 0)
+			(at 190.5 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13208,7 +12469,7 @@
 			)
 		)
 		(property "Description" "Single Channel 12-bit ADC, 1Msps, SPI, micro-power, SOT-23-6"
-			(at 316.23 153.67 0)
+			(at 189.23 245.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13219,7 +12480,7 @@
 			)
 		)
 		(property private "KLC_S4.4" "VIN is the analog signal input pin"
-			(at 316.23 153.67 0)
+			(at 189.23 245.11 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -13344,7 +12605,7 @@
 	)
 	(symbol
 		(lib_id "Analog_Switch:CD4051B")
-		(at 274.32 151.13 180)
+		(at 143.51 236.22 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13355,7 +12616,7 @@
 		(fields_autoplaced yes)
 		(uuid "7151aa0c-3839-4b4e-8325-1e61b1b9fbe4")
 		(property "Reference" "U3"
-			(at 274.8981 168.91 0)
+			(at 144.0881 254 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13366,7 +12627,7 @@
 			)
 		)
 		(property "Value" "CD4051B"
-			(at 274.8981 171.45 0)
+			(at 144.0881 256.54 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13377,7 +12638,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
-			(at 270.51 132.08 0)
+			(at 139.7 217.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13389,7 +12650,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/cd4052b.pdf"
-			(at 274.828 153.67 0)
+			(at 144.018 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13400,7 +12661,7 @@
 			)
 		)
 		(property "Description" "CMOS single 8-channel analog multiplexer demultiplexer, TSSOP-16/DIP-16/SOIC-16"
-			(at 274.32 151.13 0)
+			(at 143.51 236.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
