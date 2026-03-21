@@ -1,4 +1,4 @@
-26713863043355531
+26713863197463265
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -105882,19 +105882,19 @@ Varistor VF
 2
 2
 agilex_lib
-BGA-900_30x30_16.0x16.0mm
+B18A
 
 
 0
-896
-896
+144
+144
 agilex_lib
-Untitled
+M16A
 
 
 0
-0
-0
+896
+896
 agilex_lib
 VFBGA_b23b
 

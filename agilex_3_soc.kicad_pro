@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -77,6 +79,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -94,6 +97,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -113,9 +117,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -224,17 +231,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -424,11 +442,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -451,6 +472,7 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -483,13 +505,14 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.08,
+        "tuning_profile": "",
         "via_diameter": 0.254,
         "via_drill": 0.1,
         "wire_width": 6
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -511,6 +534,10 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -582,6 +609,140 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {
+      "hps_eth": [
+        "eth_gtx_clk",
+        "eth_tx_en",
+        "eth_rx_clk",
+        "eth_rx_dv",
+        "eth_txd[3..0]",
+        "eth_rxd[3..0]",
+        "eth_mdc",
+        "eth_mdio",
+        "~{eth_int}"
+      ],
+      "hps_i2c": [
+        "i2c_sda",
+        "i2c_scl"
+      ],
+      "hps_io": [
+        "hps_ioA1",
+        "hps_ioA2",
+        "hps_ioA5",
+        "hps_ioA6",
+        "hps_ioA9",
+        "hps_ioA10",
+        "hps_ioA11",
+        "hps_ioB4",
+        "hps_ioB5"
+      ],
+      "hps_jtag": [
+        "hps_tdo",
+        "hps_tdi",
+        "hps_tck",
+        "hps_tms"
+      ],
+      "hps_sdmmc": [
+        "sd_d[7..0]",
+        "sd_clk",
+        "sd_cmd"
+      ],
+      "hps_usb": [
+        "usb_clk",
+        "usb_stp",
+        "usb_dir",
+        "usb_d[7..0]",
+        "usb_nxt"
+      ],
+      "hyperbus": [
+        "hbd[7..0]",
+        "hbrwds",
+        "hbcs0n",
+        "hbclkp",
+        "hbclkn",
+        "hbcs1n",
+        "hbrstn"
+      ],
+      "iob6a": [
+        "iob6a[19..0]"
+      ],
+      "iob6b": [
+        "iob6b[19..0]"
+      ],
+      "iob6c": [
+        "iob6c[19..0]"
+      ],
+      "iob6d": [
+        "iob6d[19..0]"
+      ],
+      "iob6e": [
+        "iob6e[19..0]"
+      ],
+      "iob6f": [
+        "iob6f[19..0]"
+      ],
+      "iobank_2aB": [
+        "iob_2aB[47..0]"
+      ],
+      "iobank_2aT": [
+        "iob_2aT[95..48]"
+      ],
+      "jtag": [
+        "tms",
+        "tdi",
+        "tdo",
+        "tck"
+      ],
+      "lpddr4": [
+        "dq[31..0]",
+        "dm[3..0]",
+        "~{cs}",
+        "ck_P",
+        "ck_N",
+        "cke",
+        "ca[5..0]",
+        "~{rst}",
+        "dqs3_N",
+        "dqs2_N",
+        "dqs1_N",
+        "dqs0_N",
+        "dqs3_P",
+        "dqs2_P",
+        "dqs1_P",
+        "dqs0_P"
+      ],
+      "phy": [
+        "txrxd_N",
+        "txrxd_P",
+        "txrxc_N",
+        "txrxc_P",
+        "txrxb_N",
+        "txrxb_P",
+        "txrxa_N",
+        "txrxa_P",
+        "phy_led1",
+        "phy_led2"
+      ],
+      "sdm_jtag": [
+        "sdm_tdi",
+        "sdm_tdo",
+        "sdm_tck",
+        "sdm_tms"
+      ],
+      "sdm_qspi": [
+        "qspi_D{3..0]",
+        "qspi_CLK",
+        "~{qspi_CS}",
+        "~{qspi_rst_n}"
+      ],
+      "usb_phy": [
+        "usb_phy_dp",
+        "usb_phy_dm",
+        "usb_phy_cpen",
+        "usb_phy_id",
+        "usb_phy_vbus"
+      ]
+    },
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -589,6 +750,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
+      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -612,6 +774,7 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -620,17 +783,104 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "agilex_3_soc.kicad_sch",
+        "name": "agilex_3_soc",
+        "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
+      }
+    ],
+    "used_designators": "",
+    "variants": []
   },
   "sheets": [
     [
       "a5b98d95-6877-4284-904f-d04e32723ae0",
-      "Root"
+      "agilex_3_soc"
     ],
     [
       "e3048211-3a22-4ca2-880d-a02e0bb6b448",
       "Agilex SoC"
+    ],
+    [
+      "8aaf6c2b-ae6e-4499-806d-67948f95803c",
+      "SDM"
+    ],
+    [
+      "1bba180f-a717-40d4-b2d6-e5a7b998021f",
+      "HPS"
+    ],
+    [
+      "d035372b-a014-4c13-aa37-0253306826b4",
+      "IOBANK 3"
+    ],
+    [
+      "75d90890-a51c-4e7c-a03e-f25381d85068",
+      "IOBANK 2"
+    ],
+    [
+      "03ab2536-81c4-4b58-8998-1457d6fb7a1b",
+      "clock"
+    ],
+    [
+      "cf2987d8-8050-440f-9afe-54dd4a6786f5",
+      "Ethernet Phy"
+    ],
+    [
+      "441b8b06-7331-4f52-9ed6-a8466553125b",
+      "usb"
+    ],
+    [
+      "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
+      "lpddr4 memory"
+    ],
+    [
+      "a8f2fee3-4477-4348-8890-5a8bd0c95ceb",
+      "hybperbus"
+    ],
+    [
+      "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66",
+      "Connectors"
+    ],
+    [
+      "f9220582-8ed5-4e58-b084-fa5be2c4151f",
+      "IOBANK6ab"
+    ],
+    [
+      "cefbe413-d289-4fed-be9b-fe48bc098f16",
+      "IOBANK6cd"
+    ],
+    [
+      "3662c9ea-dfc7-48dc-ab83-4f2a05e3ee91",
+      "IOBANK6ef"
+    ],
+    [
+      "daebef0d-cd15-4e03-815a-780dc10d7764",
+      "IOBANK6gh"
+    ],
+    [
+      "0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2",
+      "FPGA power"
+    ],
+    [
+      "7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa",
+      "FPGA gnd"
+    ],
+    [
+      "46009ab7-a4ba-489d-b29c-5828bb20621d",
+      "power supply"
+    ],
+    [
+      "f641c4ca-6983-42f3-9cca-4494b20f9dfc",
+      "power supply1"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {},
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
+  }
 }
