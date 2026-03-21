@@ -791,7 +791,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "J6",
+    "used_designators": "R10,J6-7,#PWR4-5,#PWR11-12,U2-3,U5-6,C1",
     "variants": []
   },
   "sheets": [
@@ -802,6 +802,10 @@
     [
       "e3048211-3a22-4ca2-880d-a02e0bb6b448",
       "Agilex SoC"
+    ],
+    [
+      "871a81f2-62c4-47fa-98d5-872580aa51c3",
+      "ad subsystem"
     ],
     [
       "8aaf6c2b-ae6e-4499-806d-67948f95803c",
