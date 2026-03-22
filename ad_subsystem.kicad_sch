@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "45a38a1f-5ccd-4a90-b94d-c599ea04014a")
+	(uuid "633cf018-f220-4655-ab24-6f45beef63af")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Amplifier_Operational:AD8603"
@@ -2246,7 +2246,7 @@
 		(uuid "fbacebf0-51cf-4622-a019-1ecd97adf9f7")
 	)
 	(hierarchical_label "{ad_ch}"
-		(shape input)
+		(shape bidirectional)
 		(at 72.39 59.69 0)
 		(effects
 			(font
@@ -2257,7 +2257,7 @@
 		(uuid "269ecd39-3685-4212-bb57-3cd5a39ef64d")
 	)
 	(hierarchical_label "adc_IO"
-		(shape input)
+		(shape bidirectional)
 		(at 196.85 132.08 0)
 		(effects
 			(font
