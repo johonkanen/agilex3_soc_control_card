@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "c90b7c5e-03a9-49e9-ba11-c2cc2fe79e3f")
+	(uuid "45a38a1f-5ccd-4a90-b94d-c599ea04014a")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Amplifier_Operational:AD8603"
@@ -1865,6 +1865,16 @@
 		)
 		(uuid "53f8bca6-81b5-48cb-904e-618dc77dd17c")
 	)
+	(bus
+		(pts
+			(xy 57.15 59.69) (xy 72.39 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a61c19b-2422-4d28-976e-5db79faf82e0")
+	)
 	(wire
 		(pts
 			(xy 59.69 88.9) (xy 78.74 88.9)
@@ -1967,13 +1977,13 @@
 	)
 	(bus
 		(pts
-			(xy 58.42 59.69) (xy 57.15 59.69)
+			(xy 57.15 88.9) (xy 57.15 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "af0619b5-cfee-40a1-8d18-b0b60acd7982")
+		(uuid "988dc871-7b74-4e78-afa2-d2c6e4a7a695")
 	)
 	(wire
 		(pts
@@ -2084,6 +2094,16 @@
 			(type default)
 		)
 		(uuid "fa1005bc-4987-4a80-a761-b339080cc37f")
+	)
+	(label "{ad_ch}"
+		(at 59.69 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f12df84-f8d3-4388-b0f3-6bdab2658971")
 	)
 	(label "ad_ch1"
 		(at 64.77 88.9 0)
@@ -2225,9 +2245,9 @@
 		)
 		(uuid "fbacebf0-51cf-4622-a019-1ecd97adf9f7")
 	)
-	(hierarchical_label "admux_CH"
+	(hierarchical_label "{ad_ch}"
 		(shape input)
-		(at 58.42 59.69 0)
+		(at 72.39 59.69 0)
 		(effects
 			(font
 				(size 1.27 1.27)
