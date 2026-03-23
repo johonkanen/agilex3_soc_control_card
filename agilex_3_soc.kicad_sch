@@ -2600,6 +2600,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+1V1"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+1V1"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+1V1\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+1V1_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+1V1_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -2839,6 +2978,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 260.35) (xy 91.44 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "033a9f61-3828-4296-ba1b-1c75371a755b")
+	)
+	(wire
+		(pts
 			(xy 256.54 231.14) (xy 256.54 233.68)
 		)
 		(stroke
@@ -2886,6 +3035,16 @@
 			(type default)
 		)
 		(uuid "0c65dc7c-e775-4ee9-8a2b-4c759459dc2d")
+	)
+	(wire
+		(pts
+			(xy 102.87 266.7) (xy 102.87 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d248fe5-6cbf-4b82-aad0-b75a8cc49867")
 	)
 	(wire
 		(pts
@@ -3607,6 +3766,16 @@
 		)
 		(uuid "f0f831e8-c4e7-492b-9ee8-91ff5378cea8")
 	)
+	(wire
+		(pts
+			(xy 102.87 262.89) (xy 85.09 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f642ac50-ab8b-40db-8e66-1cee00a91d3c")
+	)
 	(bus
 		(pts
 			(xy 85.09 274.32) (xy 168.91 274.32)
@@ -4129,6 +4298,162 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 102.87 266.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19cf3403-e61e-48f5-af32-38eea912a97f")
+		(property "Reference" "#PWR012"
+			(at 102.87 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.87 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 102.87 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e27411f-0870-41f8-961b-57a5d67370a9")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 91.44 260.35 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "63e46148-e04f-4d27-bd94-335b62401f8a")
+		(property "Reference" "#PWR01214"
+			(at 87.63 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3V3_analog"
+			(at 95.25 260.3501 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 91.44 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7c33bf4c-a122-436f-991e-b26321bb5886")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(reference "#PWR01214")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
 		(at 236.22 229.87 0)
 		(unit 1)
@@ -4340,7 +4665,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 147.32 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -6135,7 +6460,7 @@
 			)
 		)
 		(pin "adc_IO" bidirectional
-			(at 85.09 265.43 0)
+			(at 85.09 270.51 0)
 			(uuid "3919823b-82aa-4437-9946-21aec1615dc2")
 			(effects
 				(font
@@ -6147,6 +6472,26 @@
 		(pin "{ad_ch}" bidirectional
 			(at 85.09 274.32 0)
 			(uuid "33b25e04-73e5-4632-a56a-7f75c647e520")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AGND" bidirectional
+			(at 85.09 262.89 0)
+			(uuid "a58bafd0-cd01-4617-ae89-08b3f018160f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AVDD" bidirectional
+			(at 85.09 260.35 0)
+			(uuid "d4b3ae73-f63b-4313-937d-34a918fa9e51")
 			(effects
 				(font
 					(size 1.27 1.27)
