@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "633cf018-f220-4655-ab24-6f45beef63af")
+	(uuid "de683952-c1d8-4e82-b790-be68697d82ee")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Amplifier_Operational:AD8603"
@@ -189,229 +189,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Analog_ADC:ADS7886xxDBV"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 1.27 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "ADS7886xxDBV"
-				(at 1.27 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-				(at 0 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads7886.pdf"
-				(at 1.27 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Single Channel 12-bit ADC, 1Msps, SPI, micro-power, SOT-23-6"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property private "KLC_S4.4" "VIN is the analog signal input pin"
-				(at 0 0 0)
-				(show_name yes)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Texas-Instruments ADS7886SDBV ADS7886SBDBV"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "ADS7886xxDBV_0_1"
-				(polyline
-					(pts
-						(xy -2.54 5.08) (xy 7.62 5.08) (xy 7.62 -5.08) (xy -2.54 -5.08) (xy -7.62 0) (xy -2.54 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "ADS7886xxDBV_1_1"
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "V_{DD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin tri_state line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "SDO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1515,6 +1292,227 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "agilex_5_lib:ADS7056"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.588 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ADS7056_0_1"
+				(polyline
+					(pts
+						(xy -12.7 0) (xy -6.35 6.35) (xy 12.7 6.35) (xy 12.7 -6.35) (xy -6.35 -6.35) (xy -12.7 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ADS7056_1_1"
+				(pin input line
+					(at 16.51 -2.54 180)
+					(length 3.81)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 16.51 2.54 180)
+					(length 3.81)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at 16.51 0 180)
+					(length 3.81)
+					(name "SCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 10.16 270)
+					(length 3.81)
+					(name "DVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 -10.16 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 10.16 270)
+					(length 3.81)
+					(name "AVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -13.97 2.54 0)
+					(length 3.81)
+					(name "AINP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -13.97 -2.54 0)
+					(length 3.81)
+					(name "AINM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -1631,11 +1629,45 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "does it need series termination?"
+		(exclude_from_sim no)
+		(at 208.026 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "31d8c5a8-1e91-4d4f-b783-4b90132add29")
+	)
+	(junction
+		(at 92.71 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "033419fa-7409-467a-9084-9a2afe6df7f8")
+	)
+	(junction
+		(at 182.88 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1de5bbff-893d-468d-a533-9ad8fef51fb3")
+	)
+	(junction
+		(at 181.61 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40a45da4-94e9-4704-98e7-a4912a327a06")
+	)
 	(junction
 		(at 140.97 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "554e6cfd-2d3b-49b6-8f3f-9e242210a3db")
+	)
+	(junction
+		(at 154.94 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5958c7e1-f40c-405f-ac9f-b5440f89bbd1")
 	)
 	(junction
 		(at 138.43 91.44)
@@ -1644,10 +1676,46 @@
 		(uuid "8d721433-fcd3-4413-8610-e65cc9298b29")
 	)
 	(junction
+		(at 182.88 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa87d21e-cdbb-41a6-b84b-25104ce4cb39")
+	)
+	(junction
+		(at 170.18 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0d07e6b-0fc5-42e3-a09d-aafc21bd5387")
+	)
+	(junction
+		(at 154.94 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2872217-c421-487e-b65d-f8bcd2749f69")
+	)
+	(junction
+		(at 154.94 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3c3c9bc-7d08-4950-a53d-7fd313c2508e")
+	)
+	(junction
+		(at 213.36 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8a841f2-9a01-4c0c-a123-650e22f1f30c")
+	)
+	(junction
 		(at 160.02 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "df673196-594b-4bf2-8f0c-55455a99b029")
+	)
+	(junction
+		(at 181.61 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e44a566e-aca4-4406-a284-2af833d23b87")
 	)
 	(bus_entry
 		(at 57.15 83.82)
@@ -1659,7 +1727,7 @@
 		(uuid "13a951ef-0752-499e-9756-e20ebd6bfce7")
 	)
 	(bus_entry
-		(at 194.31 91.44)
+		(at 210.82 93.98)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1695,7 +1763,7 @@
 		(uuid "8980c155-6d19-4669-b5ac-9936b5cc65ad")
 	)
 	(bus_entry
-		(at 194.31 93.98)
+		(at 210.82 96.52)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1704,7 +1772,7 @@
 		(uuid "9616c53d-aa0b-4ef8-be2e-83afd2b17512")
 	)
 	(bus_entry
-		(at 194.31 88.9)
+		(at 210.82 91.44)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1777,6 +1845,36 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 64.77) (xy 154.94 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a39b02c-5938-49c0-894f-683f3a67856c")
+	)
+	(bus
+		(pts
+			(xy 233.68 114.3) (xy 213.36 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11cb5000-dc61-46b5-a09d-27cfb4f4864c")
+	)
+	(wire
+		(pts
+			(xy 182.88 105.41) (xy 182.88 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1364e77f-ed2b-42b9-a6c3-05f0e75d48ae")
+	)
+	(wire
+		(pts
 			(xy 104.14 99.06) (xy 114.3 99.06)
 		)
 		(stroke
@@ -1785,9 +1883,19 @@
 		)
 		(uuid "1566558d-f53b-49fa-ab7d-8d17a6701733")
 	)
+	(wire
+		(pts
+			(xy 198.12 93.98) (xy 210.82 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17153880-f67c-4980-8d32-6d19dbfce680")
+	)
 	(bus
 		(pts
-			(xy 196.85 91.44) (xy 196.85 132.08)
+			(xy 213.36 93.98) (xy 213.36 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1817,6 +1925,36 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 64.77) (xy 154.94 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21882db3-40d2-42a0-98b9-9e0a66d8c9da")
+	)
+	(wire
+		(pts
+			(xy 182.88 104.14) (xy 182.88 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24a3e261-ec30-4328-8943-03868d64306c")
+	)
+	(wire
+		(pts
+			(xy 88.9 113.03) (xy 88.9 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30ec217f-2f4f-48b7-9156-b1064a8c283b")
+	)
+	(wire
+		(pts
 			(xy 153.67 91.44) (xy 160.02 91.44)
 		)
 		(stroke
@@ -1824,6 +1962,46 @@
 			(type default)
 		)
 		(uuid "3262b681-533a-4039-9960-a1b2a2a5db96")
+	)
+	(wire
+		(pts
+			(xy 181.61 38.1) (xy 189.23 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "344bab6b-59e2-4c7c-bc06-ec1ac44d1b4f")
+	)
+	(wire
+		(pts
+			(xy 167.64 105.41) (xy 182.88 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36a5eecc-a57a-47fb-86ab-dc8ba96ae44a")
+	)
+	(wire
+		(pts
+			(xy 154.94 129.54) (xy 182.88 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f5a9105-c135-44f1-9444-07ccb4bda9d9")
+	)
+	(wire
+		(pts
+			(xy 198.12 96.52) (xy 210.82 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "429ca803-929f-4bf9-baaa-0495bf60517a")
 	)
 	(wire
 		(pts
@@ -1847,13 +2025,13 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 88.9) (xy 194.31 88.9)
+			(xy 142.24 38.1) (xy 154.94 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "498e6244-2bdf-450c-b0e6-c38f75c24602")
+		(uuid "4be8a3c4-0c5d-4043-b036-ac1a89ccd6d1")
 	)
 	(wire
 		(pts
@@ -1865,6 +2043,56 @@
 		)
 		(uuid "53f8bca6-81b5-48cb-904e-618dc77dd17c")
 	)
+	(wire
+		(pts
+			(xy 181.61 80.01) (xy 180.34 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56ec2799-4193-48b2-aac5-f93c1387b046")
+	)
+	(wire
+		(pts
+			(xy 154.94 54.61) (xy 170.18 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58933e09-f6dd-4d98-8bd0-8d5082a0a960")
+	)
+	(wire
+		(pts
+			(xy 181.61 80.01) (xy 181.61 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5917fe2b-98e3-4d48-aaa3-f25f847f20d8")
+	)
+	(wire
+		(pts
+			(xy 142.24 44.45) (xy 142.24 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59222f54-517a-470e-b740-8f75b7035e3b")
+	)
+	(wire
+		(pts
+			(xy 182.88 83.82) (xy 182.88 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "599dcf36-4a48-48c5-bf57-27465c3ce74b")
+	)
 	(bus
 		(pts
 			(xy 57.15 59.69) (xy 72.39 59.69)
@@ -1874,6 +2102,16 @@
 			(type default)
 		)
 		(uuid "5a61c19b-2422-4d28-976e-5db79faf82e0")
+	)
+	(bus
+		(pts
+			(xy 213.36 99.06) (xy 213.36 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e5b17b3-cf47-472b-83fa-49cf9100ed53")
 	)
 	(wire
 		(pts
@@ -1887,13 +2125,33 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 91.44) (xy 165.1 91.44)
+			(xy 142.24 52.07) (xy 142.24 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "602015dd-41a7-4a2c-8e60-46829497d0ea")
+	)
+	(wire
+		(pts
+			(xy 160.02 91.44) (xy 167.64 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "62de6e8d-3edd-4b67-a61d-a261da3778b3")
+	)
+	(wire
+		(pts
+			(xy 88.9 113.03) (xy 99.06 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "692b9cb3-5c75-4554-9f47-f59d924ebb24")
 	)
 	(wire
 		(pts
@@ -1917,6 +2175,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 68.58) (xy 92.71 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7756d52d-a7f7-46cb-85c2-fc86fe88f313")
+	)
+	(wire
+		(pts
 			(xy 59.69 73.66) (xy 78.74 73.66)
 		)
 		(stroke
@@ -1935,6 +2203,16 @@
 		)
 		(uuid "7848bca6-8bc5-4138-a241-6af7ec601e0e")
 	)
+	(wire
+		(pts
+			(xy 170.18 38.1) (xy 170.18 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79c4ffd3-697b-4992-a08b-1a8a65c8adea")
+	)
 	(bus
 		(pts
 			(xy 116.84 96.52) (xy 116.84 114.3)
@@ -1944,6 +2222,26 @@
 			(type default)
 		)
 		(uuid "7a25af7d-45d8-488e-b5fb-ccfc134adaa2")
+	)
+	(wire
+		(pts
+			(xy 182.88 129.54) (xy 234.95 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "887b3077-80d9-4ff2-ab84-2aa254e07137")
+	)
+	(bus
+		(pts
+			(xy 213.36 96.52) (xy 213.36 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88dbb2a8-fb41-4797-b5a3-b7b919bc877e")
 	)
 	(wire
 		(pts
@@ -1957,13 +2255,33 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 93.98) (xy 194.31 93.98)
+			(xy 181.61 38.1) (xy 170.18 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "91e0e04d-3eed-489d-a9da-635afa2c3116")
+		(uuid "8c4ddf5c-78a6-431c-b243-662929d0f385")
+	)
+	(wire
+		(pts
+			(xy 92.71 64.77) (xy 92.71 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fe0938f-1033-4688-9595-e4e0a9dff300")
+	)
+	(wire
+		(pts
+			(xy 170.18 52.07) (xy 170.18 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "906b2a40-87cd-44e8-8113-c8861d204fd1")
 	)
 	(wire
 		(pts
@@ -1984,6 +2302,26 @@
 			(type default)
 		)
 		(uuid "988dc871-7b74-4e78-afa2-d2c6e4a7a695")
+	)
+	(wire
+		(pts
+			(xy 182.88 80.01) (xy 181.61 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e4ffc11-1b81-45c6-aea2-8f70447538bd")
+	)
+	(wire
+		(pts
+			(xy 198.12 91.44) (xy 210.82 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4ada11f-95a4-40e9-974d-f28d8649685f")
 	)
 	(wire
 		(pts
@@ -2017,6 +2355,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 52.07) (xy 154.94 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c059aa83-df96-4863-a490-cfd9a7ffef89")
+	)
+	(wire
+		(pts
 			(xy 104.14 96.52) (xy 114.3 96.52)
 		)
 		(stroke
@@ -2024,16 +2372,6 @@
 			(type default)
 		)
 		(uuid "c3d8ccde-ebee-4d20-9a9e-3b445339704d")
-	)
-	(wire
-		(pts
-			(xy 175.26 99.06) (xy 175.26 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8788908-0836-4da3-9370-ab5e19e4185e")
 	)
 	(wire
 		(pts
@@ -2047,6 +2385,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 54.61) (xy 154.94 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccd7b42b-e591-4ad1-856a-047d8fe91cc8")
+	)
+	(wire
+		(pts
 			(xy 140.97 106.68) (xy 140.97 91.44)
 		)
 		(stroke
@@ -2057,13 +2405,53 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 91.44) (xy 194.31 91.44)
+			(xy 180.34 83.82) (xy 180.34 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d672e1aa-716d-4499-a1ee-801d50451b48")
+		(uuid "d172c3f7-94a3-405d-a861-964539807dc9")
+	)
+	(wire
+		(pts
+			(xy 142.24 54.61) (xy 154.94 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d68f75e9-9380-4832-9830-f410d452fad6")
+	)
+	(wire
+		(pts
+			(xy 154.94 38.1) (xy 154.94 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dca986b6-9b9b-40da-95a4-ca8b6c93b306")
+	)
+	(wire
+		(pts
+			(xy 167.64 96.52) (xy 167.64 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df58185b-d3fe-405d-bcf6-75d2207c3bef")
+	)
+	(wire
+		(pts
+			(xy 154.94 38.1) (xy 170.18 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e134cc34-1734-4230-bfcf-0888e1a7a08e")
 	)
 	(wire
 		(pts
@@ -2085,9 +2473,19 @@
 		)
 		(uuid "ea6c63cb-20ec-4dea-a370-9affc0711f1c")
 	)
+	(wire
+		(pts
+			(xy 92.71 68.58) (xy 93.98 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5fd36c7-7ee0-400e-b9e5-b5b496ec6988")
+	)
 	(bus
 		(pts
-			(xy 116.84 114.3) (xy 196.85 114.3)
+			(xy 116.84 114.3) (xy 213.36 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2116,7 +2514,7 @@
 		(uuid "274c8af1-a3aa-44f6-8310-077b55503ac7")
 	)
 	(label "ad_CS"
-		(at 186.69 93.98 0)
+		(at 203.2 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2146,7 +2544,7 @@
 		(uuid "41d3c872-aeb4-43da-878c-1af12c0a7e71")
 	)
 	(label "ad_SCLK"
-		(at 186.69 91.44 0)
+		(at 203.2 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2166,7 +2564,7 @@
 		(uuid "68a03d20-8dc8-4327-bde0-c51ca6fad440")
 	)
 	(label "ad_SDO"
-		(at 186.69 88.9 0)
+		(at 203.2 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2245,6 +2643,17 @@
 		)
 		(uuid "fbacebf0-51cf-4622-a019-1ecd97adf9f7")
 	)
+	(hierarchical_label "AGND"
+		(shape bidirectional)
+		(at 234.95 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1fac35f3-b0e5-4f30-9d88-c0a57e0fddeb")
+	)
 	(hierarchical_label "{ad_ch}"
 		(shape bidirectional)
 		(at 72.39 59.69 0)
@@ -2258,7 +2667,7 @@
 	)
 	(hierarchical_label "adc_IO"
 		(shape bidirectional)
-		(at 196.85 132.08 0)
+		(at 233.68 114.3 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2267,83 +2676,27 @@
 		)
 		(uuid "6d3e3224-ee38-4390-97ee-cf637150e8fc")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 175.26 104.14 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "09bc39fa-2856-4055-a8a8-a3c7e5b254b9")
-		(property "Reference" "#PWR012"
-			(at 175.26 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(hierarchical_label "AVDD"
+		(shape bidirectional)
+		(at 189.23 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Value" "GND"
-			(at 175.26 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(uuid "a4671b6f-0cb2-48fc-b0f2-8a34432917e9")
+	)
+	(hierarchical_label "AVDD"
+		(shape bidirectional)
+		(at 99.06 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Footprint" ""
-			(at 175.26 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 175.26 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e2e1d336-060f-4bf8-8a82-1fe6c81335fd")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "fd6ec435-8da5-4d0c-aa85-d70e9694bff6")
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:AD8603")
@@ -2595,111 +2948,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Analog_ADC:ADS7886xxDBV")
-		(at 175.26 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ce8fc6b6-fb62-4886-a510-e779f125f0bb")
-		(property "Reference" "U2"
-			(at 177.4033 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ADS7886xxDBV"
-			(at 177.4033 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 175.26 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ads7886.pdf"
-			(at 176.53 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Channel 12-bit ADC, 1Msps, SPI, micro-power, SOT-23-6"
-			(at 175.26 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property private "KLC_S4.4" "VIN is the analog signal input pin"
-			(at 175.26 91.44 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "42407457-668c-40e8-b3c3-cacfdba7387e")
-		)
-		(pin "4"
-			(uuid "3fb293a2-839e-4384-873d-7ac3deecaa64")
-		)
-		(pin "6"
-			(uuid "87fa1c38-1d3c-4592-aad7-99451e95726e")
-		)
-		(pin "2"
-			(uuid "adc97bc4-fe0a-41c5-9563-6de6615ae2c2")
-		)
-		(pin "3"
-			(uuid "dcda3522-fe85-48b6-abee-ea650ee52bad")
-		)
-		(pin "1"
-			(uuid "b99a584a-04a1-4ff0-a403-cafb8fa70a93")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 149.86 91.44 90)
 		(unit 1)
@@ -2774,6 +3022,88 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 170.18 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d01e3fd3-c64f-4a52-87a7-0d42b78f3625")
+		(property "Reference" "C4"
+			(at 173.99 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 173.99 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 171.1452 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 170.18 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0b68a9cb-6f4c-4cb2-bc4b-7752a8b1cc5e")
+		)
+		(pin "2"
+			(uuid "22aca992-f1e2-41cc-85cf-6a28d6e0fa28")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -2899,6 +3229,269 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d33c725d-9043-437b-8b4b-f9ff4a475c7e")
+		(property "Reference" "C2"
+			(at 146.05 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 146.05 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 143.2052 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 142.24 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4589d262-800b-4095-b8c1-09a761cc7b66")
+		)
+		(pin "2"
+			(uuid "438e2962-7a29-44af-b34d-b7fe7afabf9f")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "agilex_5_lib:ADS7056")
+		(at 181.61 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7413201-3355-40ec-92e1-5c8591e1879f")
+		(property "Reference" "U12"
+			(at 185.0233 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 181.61 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "agilex_lib:ads7056"
+			(at 181.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 181.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "4c61bc83-5d13-491f-b1e4-9b3e864416c8")
+		)
+		(pin "7"
+			(uuid "2d047599-0ae9-403e-975e-f56a0ffa320a")
+		)
+		(pin "6"
+			(uuid "a076cb84-6adf-4594-8974-068e832d4f70")
+		)
+		(pin "4"
+			(uuid "27cf7333-4bca-47e0-af2e-a27a3a063153")
+		)
+		(pin "2"
+			(uuid "5683c805-5fc3-4fe0-96c6-622d769b425e")
+		)
+		(pin "8"
+			(uuid "f71a1f87-3c1a-4fa4-83d7-8e20f7042f78")
+		)
+		(pin "5"
+			(uuid "f4b536d3-327b-48e7-9201-3a05a7760d22")
+		)
+		(pin "1"
+			(uuid "49e086f0-bab8-40ef-b1b4-550452e8cd52")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fee75810-0e4d-493e-ae33-7c67f328ba68")
+		(property "Reference" "C3"
+			(at 158.75 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 158.75 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 155.9052 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 154.94 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "86adab8a-a4df-47f4-be1e-78c2e2b73ce7")
+		)
+		(pin "2"
+			(uuid "f9d86b0d-67da-438f-908f-c978368b057b")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/871a81f2-62c4-47fa-98d5-872580aa51c3"
+					(reference "C3")
 					(unit 1)
 				)
 			)
