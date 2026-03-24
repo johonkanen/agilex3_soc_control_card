@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.1,
-          "height": 0.254,
-          "width": 0.254
+          "drill": 0.0,
+          "height": 0.4,
+          "width": 0.4
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -493,7 +493,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.08,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -504,7 +504,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.08,
+        "track_width": 0.1,
         "tuning_profile": "",
         "via_diameter": 0.254,
         "via_drill": 0.1,
@@ -610,6 +610,24 @@
       "sort_field": "Reference"
     },
     "bus_aliases": {
+      "ad_ch": [
+        "ad_ch0",
+        "ad_ch1",
+        "ad_ch2",
+        "ad_ch3",
+        "ad_ch4",
+        "ad_ch5",
+        "ad_ch6",
+        "ad_ch7"
+      ],
+      "adc_IO": [
+        "ad_SDO",
+        "ad_SCLK",
+        "ad_CS",
+        "admux_2",
+        "admux_1",
+        "admux_0"
+      ],
       "hps_eth": [
         "eth_gtx_clk",
         "eth_tx_en",
