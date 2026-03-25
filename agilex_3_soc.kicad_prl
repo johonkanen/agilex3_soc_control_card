@@ -17,17 +17,17 @@
     },
     "prototype_zone_fills": false,
     "selection_filter": {
-      "dimensions": true,
-      "footprints": true,
+      "dimensions": false,
+      "footprints": false,
       "graphics": true,
-      "keepouts": true,
+      "keepouts": false,
       "lockedItems": false,
-      "otherItems": true,
-      "pads": true,
-      "text": true,
-      "tracks": true,
-      "vias": true,
-      "zones": true
+      "otherItems": false,
+      "pads": false,
+      "text": false,
+      "tracks": false,
+      "vias": false,
+      "zones": false
     },
     "visible_items": [
       "vias",
@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "00000000_00000000_00000000_00000555",
+    "visible_layers": "00000000_00000000_00000000_00000004",
     "zone_display_mode": 0
   },
   "git": {
@@ -105,6 +105,8 @@
       91,
       91,
       71,
+      91,
+      91,
       91,
       91,
       91,
