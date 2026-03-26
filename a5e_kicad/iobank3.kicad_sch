@@ -15981,16 +15981,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 53.34) (xy 228.6 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cfd5c0a-a908-4462-85e7-a8bd6cd2848a")
-	)
-	(wire
-		(pts
 			(xy 55.88 137.16) (xy 78.74 137.16)
 		)
 		(stroke
@@ -16368,6 +16358,16 @@
 			(type default)
 		)
 		(uuid "5a88a0c9-1090-4789-a79a-cdf8e03c69bf")
+	)
+	(wire
+		(pts
+			(xy 203.2 53.34) (xy 228.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5aa43c9c-3fa0-4404-a5ba-4a85a7999e23")
 	)
 	(bus
 		(pts
@@ -16849,16 +16849,6 @@
 		)
 		(uuid "a8ebe9d7-0428-4634-8df6-aff63b914f78")
 	)
-	(wire
-		(pts
-			(xy 203.2 50.8) (xy 228.6 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a92ef2d4-dbba-4a9f-97aa-08c9f2bab484")
-	)
 	(bus
 		(pts
 			(xy 53.34 157.48) (xy 53.34 154.94)
@@ -17008,6 +16998,16 @@
 			(type default)
 		)
 		(uuid "ca4a4dd8-a178-40a5-a58a-6e05253bd592")
+	)
+	(wire
+		(pts
+			(xy 203.2 50.8) (xy 228.6 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccc4fb41-8dda-4795-bf24-e6fb6d75c77c")
 	)
 	(wire
 		(pts
@@ -17329,16 +17329,6 @@
 		)
 		(uuid "13b44adb-ffd3-4d15-a49a-c2532d277b9c")
 	)
-	(label "ck_N"
-		(at 208.28 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1f7a98c2-9e1f-498b-b6a4-6726cead360c")
-	)
 	(label "ca0"
 		(at 208.28 99.06 0)
 		(effects
@@ -17418,6 +17408,16 @@
 			(justify left bottom)
 		)
 		(uuid "43ae4649-3223-4cbc-b91c-f075121cba84")
+	)
+	(label "ck_P"
+		(at 209.55 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4ff3cc5b-90b1-4581-8548-55d84e0fb64d")
 	)
 	(label "ca2"
 		(at 208.28 93.98 0)
@@ -17689,16 +17689,6 @@
 		)
 		(uuid "a46f773c-e225-4995-aa18-23bbdc8750e2")
 	)
-	(label "ck_P"
-		(at 208.28 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a5feceea-2fd6-452a-ba78-f62286588d05")
-	)
 	(label "hbd6"
 		(at 66.04 137.16 0)
 		(effects
@@ -17838,6 +17828,16 @@
 			(justify left bottom)
 		)
 		(uuid "c49ef986-d20b-438d-a9a2-2d965e900a87")
+	)
+	(label "ck_N"
+		(at 209.55 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4a2453e-3a85-4e14-a65d-910f1d3e8193")
 	)
 	(label "dq1"
 		(at 66.04 63.5 0)
@@ -18054,7 +18054,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70b5b3ce-641b-406e-8b86-793ffced9ee9")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 134.62 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20415,7 +20415,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
-					(reference "U1")
+					(reference "U7")
 					(unit 5)
 				)
 			)
@@ -20433,7 +20433,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b7dffda8-cabc-4485-920d-6b9eb4ff0d0d")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 149.86 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22792,7 +22792,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
-					(reference "U1")
+					(reference "U7")
 					(unit 6)
 				)
 			)
@@ -22809,7 +22809,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce95c7d8-600a-4082-a3f7-c31b4530f7a8")
-		(property "Reference" "R401"
+		(property "Reference" "R23"
 			(at 238.76 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22879,7 +22879,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
-					(reference "R401")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -22896,7 +22896,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d2fb7da3-38c8-4084-9f85-b181e7c1d27c")
-		(property "Reference" "#PWR0401"
+		(property "Reference" "#PWR049"
 			(at 254 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -22963,7 +22963,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
-					(reference "#PWR0401")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)

@@ -4837,7 +4837,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "01676b6f-beef-4c31-82c1-e5f81c514c80")
-		(property "Reference" "#PWR01323"
+		(property "Reference" "#PWR0230"
 			(at 52.07 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4904,7 +4904,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01323")
+					(reference "#PWR0230")
 					(unit 1)
 				)
 			)
@@ -4921,7 +4921,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "087b0b06-b2a5-460a-b280-036d98420e5a")
-		(property "Reference" "C1244"
+		(property "Reference" "C152"
 			(at 261.62 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4991,7 +4991,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1244")
+					(reference "C152")
 					(unit 1)
 				)
 			)
@@ -5008,7 +5008,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0995a384-516e-48a2-a91a-e987068cf84a")
-		(property "Reference" "C1223"
+		(property "Reference" "C131"
 			(at 182.88 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5078,7 +5078,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1223")
+					(reference "C131")
 					(unit 1)
 				)
 			)
@@ -5096,7 +5096,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1191fa66-3df3-477f-ab0b-ad19d8d545e8")
-		(property "Reference" "#PWR01219"
+		(property "Reference" "#PWR0238"
 			(at 171.45 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -5163,7 +5163,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01219")
+					(reference "#PWR0238")
 					(unit 1)
 				)
 			)
@@ -5180,7 +5180,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "155d4b9f-6eb3-4f67-be10-06a2e133b787")
-		(property "Reference" "C1246"
+		(property "Reference" "C154"
 			(at 269.24 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5250,7 +5250,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1246")
+					(reference "C154")
 					(unit 1)
 				)
 			)
@@ -5267,7 +5267,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17b6e3a6-1506-4004-8da0-bc5a993a796a")
-		(property "Reference" "R1207"
+		(property "Reference" "R61"
 			(at 60.96 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5337,7 +5337,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1207")
+					(reference "R61")
 					(unit 1)
 				)
 			)
@@ -5354,7 +5354,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "192c6c43-89fb-4445-8829-a9c3604d60f7")
-		(property "Reference" "R1206"
+		(property "Reference" "R60"
 			(at 60.96 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5424,7 +5424,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1206")
+					(reference "R60")
 					(unit 1)
 				)
 			)
@@ -5441,7 +5441,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "1a4dbcad-f37c-4270-98a1-031ce749e35e")
-		(property "Reference" "R1306"
+		(property "Reference" "R58"
 			(at 50.8 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5511,7 +5511,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1306")
+					(reference "R58")
 					(unit 1)
 				)
 			)
@@ -5529,7 +5529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ca02b54-4026-4272-810c-ad234d3675f3")
-		(property "Reference" "#PWR01202"
+		(property "Reference" "#PWR0234"
 			(at 152.4 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -5595,7 +5595,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01202")
+					(reference "#PWR0234")
 					(unit 1)
 				)
 			)
@@ -5612,7 +5612,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ea882ee-e3ac-486b-b9b8-cc6be015b93f")
-		(property "Reference" "C1218"
+		(property "Reference" "C125"
 			(at 152.4 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5682,7 +5682,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1218")
+					(reference "C125")
 					(unit 1)
 				)
 			)
@@ -5699,7 +5699,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25d44154-4f2d-4364-87cd-bdbb58933ac6")
-		(property "Reference" "R1205"
+		(property "Reference" "R56"
 			(at 50.8 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5769,7 +5769,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1205")
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -5786,7 +5786,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "274ae2ff-02af-494b-b108-5cd94d1ce856")
-		(property "Reference" "C1248"
+		(property "Reference" "C156"
 			(at 276.86 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5856,7 +5856,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1248")
+					(reference "C156")
 					(unit 1)
 				)
 			)
@@ -5873,7 +5873,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2fabe438-b736-4878-a5dc-c66f32cc8e82")
-		(property "Reference" "C1232"
+		(property "Reference" "C140"
 			(at 215.9 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5943,7 +5943,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1232")
+					(reference "C140")
 					(unit 1)
 				)
 			)
@@ -5960,7 +5960,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "356ea4ef-6288-434b-a643-716794753433")
-		(property "Reference" "#PWR01322"
+		(property "Reference" "#PWR0240"
 			(at 184.15 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -6027,7 +6027,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01322")
+					(reference "#PWR0240")
 					(unit 1)
 				)
 			)
@@ -6044,7 +6044,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3df7693d-27a7-414a-b52c-0910fc4f7e89")
-		(property "Reference" "#PWR01205"
+		(property "Reference" "#PWR0232"
 			(at 60.96 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -6110,7 +6110,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01205")
+					(reference "#PWR0232")
 					(unit 1)
 				)
 			)
@@ -6127,7 +6127,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3e40d45c-ff70-438a-a4d3-9a4ab07705f6")
-		(property "Reference" "C1228"
+		(property "Reference" "C136"
 			(at 200.66 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6197,7 +6197,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1228")
+					(reference "C136")
 					(unit 1)
 				)
 			)
@@ -6214,7 +6214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "417bc29e-35fa-43d1-911a-2bde3a869f13")
-		(property "Reference" "C1241"
+		(property "Reference" "C149"
 			(at 254 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6284,7 +6284,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1241")
+					(reference "C149")
 					(unit 1)
 				)
 			)
@@ -6301,7 +6301,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4571616c-8e7e-49c1-86e2-191db6784bc8")
-		(property "Reference" "C1247"
+		(property "Reference" "C155"
 			(at 276.86 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6371,7 +6371,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1247")
+					(reference "C155")
 					(unit 1)
 				)
 			)
@@ -6388,7 +6388,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "481f12b8-4809-46d8-a59f-f6652e0ea76d")
-		(property "Reference" "C1220"
+		(property "Reference" "C128"
 			(at 167.64 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6458,7 +6458,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1220")
+					(reference "C128")
 					(unit 1)
 				)
 			)
@@ -6475,7 +6475,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4af09e28-a5e2-4e9f-a7aa-ed2d28bceb57")
-		(property "Reference" "R1217"
+		(property "Reference" "R54"
 			(at 43.18 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6545,7 +6545,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1217")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -6563,7 +6563,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4eb53542-2baa-409f-9557-b8cf2b2093f5")
-		(property "Reference" "U1302"
+		(property "Reference" "U15"
 			(at 120.65 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6725,7 +6725,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "U1302")
+					(reference "U15")
 					(unit 2)
 				)
 			)
@@ -6742,7 +6742,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "558ac84c-5657-4d2b-8d9a-962b2b64951d")
-		(property "Reference" "C1217"
+		(property "Reference" "C123"
 			(at 144.78 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6812,7 +6812,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1217")
+					(reference "C123")
 					(unit 1)
 				)
 			)
@@ -6829,7 +6829,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5603133b-f00f-4a9d-b3c7-a8f83e7f007b")
-		(property "Reference" "C1239"
+		(property "Reference" "C147"
 			(at 246.38 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6899,7 +6899,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1239")
+					(reference "C147")
 					(unit 1)
 				)
 			)
@@ -6916,7 +6916,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "58f3c248-a7e5-408f-8263-8a3c026af56d")
-		(property "Reference" "C1357"
+		(property "Reference" "C126"
 			(at 160.02 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6986,7 +6986,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1357")
+					(reference "C126")
 					(unit 1)
 				)
 			)
@@ -7003,7 +7003,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "59d26ce3-0e95-467b-a513-912ae744204b")
-		(property "Reference" "U1302"
+		(property "Reference" "U15"
 			(at 120.65 140.9699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7165,7 +7165,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "U1302")
+					(reference "U15")
 					(unit 1)
 				)
 			)
@@ -7182,7 +7182,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e9c5304-72c8-44ee-b847-0c2d6c912230")
-		(property "Reference" "C1236"
+		(property "Reference" "C144"
 			(at 231.14 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7252,7 +7252,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1236")
+					(reference "C144")
 					(unit 1)
 				)
 			)
@@ -7269,7 +7269,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7165d47f-6fcb-4399-a776-1820711f6988")
-		(property "Reference" "C1238"
+		(property "Reference" "C146"
 			(at 238.76 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7339,7 +7339,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1238")
+					(reference "C146")
 					(unit 1)
 				)
 			)
@@ -7356,7 +7356,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72608f0a-0c9f-40ab-a498-c29f4682f2f7")
-		(property "Reference" "C1222"
+		(property "Reference" "C130"
 			(at 172.72 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7426,7 +7426,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1222")
+					(reference "C130")
 					(unit 1)
 				)
 			)
@@ -7443,7 +7443,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8817032b-78f8-4edd-9a45-7b6cbff26fb4")
-		(property "Reference" "R1201"
+		(property "Reference" "R57"
 			(at 50.8 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7513,7 +7513,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1201")
+					(reference "R57")
 					(unit 1)
 				)
 			)
@@ -7531,7 +7531,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88a222c9-3a1d-4864-b7dc-1d14c1530d28")
-		(property "Reference" "#PWR01220"
+		(property "Reference" "#PWR0239"
 			(at 171.45 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7598,7 +7598,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01220")
+					(reference "#PWR0239")
 					(unit 1)
 				)
 			)
@@ -7615,7 +7615,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bdeacc5-4b0a-4c4b-82f5-094fa8c1c35b")
-		(property "Reference" "C1231"
+		(property "Reference" "C139"
 			(at 215.9 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7685,7 +7685,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1231")
+					(reference "C139")
 					(unit 1)
 				)
 			)
@@ -7702,7 +7702,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8df24268-570a-4d78-8f09-f863316b3424")
-		(property "Reference" "C1233"
+		(property "Reference" "C141"
 			(at 223.52 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7772,7 +7772,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1233")
+					(reference "C141")
 					(unit 1)
 				)
 			)
@@ -7790,7 +7790,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f9e528a-a7a6-4de2-ad07-80a494f05fad")
-		(property "Reference" "#PWR01218"
+		(property "Reference" "#PWR0237"
 			(at 171.45 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -7857,7 +7857,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01218")
+					(reference "#PWR0237")
 					(unit 1)
 				)
 			)
@@ -7874,7 +7874,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "94db1577-2aca-4013-8306-2bf2e219bd3c")
-		(property "Reference" "C1240"
+		(property "Reference" "C148"
 			(at 246.38 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7944,7 +7944,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1240")
+					(reference "C148")
 					(unit 1)
 				)
 			)
@@ -7961,7 +7961,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "95236510-4022-4990-843b-19df137a6649")
-		(property "Reference" "C1225"
+		(property "Reference" "C133"
 			(at 193.04 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8031,7 +8031,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1225")
+					(reference "C133")
 					(unit 1)
 				)
 			)
@@ -8048,7 +8048,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e28ceb6-1cde-48f8-aa4c-9eafa1cf8577")
-		(property "Reference" "C1235"
+		(property "Reference" "C143"
 			(at 231.14 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8118,7 +8118,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1235")
+					(reference "C143")
 					(unit 1)
 				)
 			)
@@ -8135,7 +8135,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e3c8791-4581-4e85-bb27-6543e1940fb7")
-		(property "Reference" "C1229"
+		(property "Reference" "C137"
 			(at 208.28 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8205,7 +8205,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1229")
+					(reference "C137")
 					(unit 1)
 				)
 			)
@@ -8222,7 +8222,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a1c3a24a-8f8b-4584-9381-5a04babc9cd7")
-		(property "Reference" "R1203"
+		(property "Reference" "R63"
 			(at 71.12 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8292,7 +8292,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1203")
+					(reference "R63")
 					(unit 1)
 				)
 			)
@@ -8309,7 +8309,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a80cda50-e706-44ce-833f-31290169eba1")
-		(property "Reference" "C1205"
+		(property "Reference" "C121"
 			(at 62.23 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8379,7 +8379,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1205")
+					(reference "C121")
 					(unit 1)
 				)
 			)
@@ -8396,7 +8396,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a9ab0037-f148-497e-b08a-c011945a2b95")
-		(property "Reference" "C1219"
+		(property "Reference" "C127"
 			(at 160.02 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8466,7 +8466,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1219")
+					(reference "C127")
 					(unit 1)
 				)
 			)
@@ -8484,7 +8484,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad427f2d-d4d5-4a33-ba33-c0332354997f")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR0233"
 			(at 78.74 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -8550,7 +8550,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR0101")
+					(reference "#PWR0233")
 					(unit 1)
 				)
 			)
@@ -8567,7 +8567,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "af1fe56f-d9a2-4831-a709-c6b60d2ca373")
-		(property "Reference" "C1202"
+		(property "Reference" "C124"
 			(at 152.4 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8637,7 +8637,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1202")
+					(reference "C124")
 					(unit 1)
 				)
 			)
@@ -8654,7 +8654,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b1a30d4d-3e4d-45ab-ba0e-ec9cbd225d48")
-		(property "Reference" "C1237"
+		(property "Reference" "C145"
 			(at 238.76 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8724,7 +8724,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1237")
+					(reference "C145")
 					(unit 1)
 				)
 			)
@@ -8741,7 +8741,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2e89740-82f3-4534-828f-2af6a5e8a910")
-		(property "Reference" "C1358"
+		(property "Reference" "C117"
 			(at 43.18 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8811,7 +8811,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1358")
+					(reference "C117")
 					(unit 1)
 				)
 			)
@@ -8828,7 +8828,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b51ca754-8a22-42d0-88c2-9233df09c10c")
-		(property "Reference" "C1206"
+		(property "Reference" "C118"
 			(at 46.99 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8898,7 +8898,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1206")
+					(reference "C118")
 					(unit 1)
 				)
 			)
@@ -8915,7 +8915,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b5df6214-7d86-49dd-b834-8b8336cff761")
-		(property "Reference" "C1242"
+		(property "Reference" "C150"
 			(at 254 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8985,7 +8985,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1242")
+					(reference "C150")
 					(unit 1)
 				)
 			)
@@ -9002,7 +9002,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b6e0d5c0-14b2-40ca-9c35-b8fd0d3d8b5f")
-		(property "Reference" "C1243"
+		(property "Reference" "C151"
 			(at 261.62 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9072,7 +9072,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1243")
+					(reference "C151")
 					(unit 1)
 				)
 			)
@@ -9089,7 +9089,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b7ba15ec-a523-4197-ac25-71fcef85faa9")
-		(property "Reference" "C1227"
+		(property "Reference" "C135"
 			(at 200.66 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9159,7 +9159,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1227")
+					(reference "C135")
 					(unit 1)
 				)
 			)
@@ -9177,7 +9177,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "baf66420-0c77-4bcd-82bc-d7939ed651dc")
-		(property "Reference" "#PWR01216"
+		(property "Reference" "#PWR0235"
 			(at 152.4 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9243,7 +9243,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01216")
+					(reference "#PWR0235")
 					(unit 1)
 				)
 			)
@@ -9260,7 +9260,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bcbc9012-dac1-43ff-b1bd-37d2db33e733")
-		(property "Reference" "C1207"
+		(property "Reference" "C119"
 			(at 48.26 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9330,7 +9330,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1207")
+					(reference "C119")
 					(unit 1)
 				)
 			)
@@ -9347,7 +9347,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bdb3f108-4236-4442-b4d7-98ec21b310eb")
-		(property "Reference" "C1234"
+		(property "Reference" "C142"
 			(at 223.52 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9417,7 +9417,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1234")
+					(reference "C142")
 					(unit 1)
 				)
 			)
@@ -9434,7 +9434,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf52f543-974d-41c9-9f80-cbab2c91413e")
-		(property "Reference" "C1221"
+		(property "Reference" "C129"
 			(at 172.72 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9504,7 +9504,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1221")
+					(reference "C129")
 					(unit 1)
 				)
 			)
@@ -9521,7 +9521,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb4d0cd7-542f-462f-937b-6cde7d19c3b8")
-		(property "Reference" "R1202"
+		(property "Reference" "R62"
 			(at 71.12 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9591,7 +9591,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1202")
+					(reference "R62")
 					(unit 1)
 				)
 			)
@@ -9608,7 +9608,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc697691-fb10-4531-952b-b9ba7944696f")
-		(property "Reference" "C1226"
+		(property "Reference" "C134"
 			(at 193.04 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9678,7 +9678,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1226")
+					(reference "C134")
 					(unit 1)
 				)
 			)
@@ -9696,7 +9696,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d567877a-7a9b-4a7c-9169-88d7d9c8a797")
-		(property "Reference" "#PWR01217"
+		(property "Reference" "#PWR0236"
 			(at 171.45 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -9763,7 +9763,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01217")
+					(reference "#PWR0236")
 					(unit 1)
 				)
 			)
@@ -9780,7 +9780,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d9623f11-0771-464e-ac1c-a8a06b20a4eb")
-		(property "Reference" "C1201"
+		(property "Reference" "C116"
 			(at 35.56 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9850,7 +9850,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1201")
+					(reference "C116")
 					(unit 1)
 				)
 			)
@@ -9867,7 +9867,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db56f8f7-4dd3-4268-ae1c-e80377b45c9d")
-		(property "Reference" "R1204"
+		(property "Reference" "R59"
 			(at 63.5 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9937,7 +9937,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1204")
+					(reference "R59")
 					(unit 1)
 				)
 			)
@@ -9954,7 +9954,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "de34f1d1-1a85-4826-97e6-dc1b65411a0c")
-		(property "Reference" "C1204"
+		(property "Reference" "C122"
 			(at 144.78 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10024,7 +10024,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1204")
+					(reference "C122")
 					(unit 1)
 				)
 			)
@@ -10042,7 +10042,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de6ba376-7fb2-40f8-af15-508a3e479475")
-		(property "Reference" "#PWR01321"
+		(property "Reference" "#PWR0231"
 			(at 50.8 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -10108,7 +10108,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01321")
+					(reference "#PWR0231")
 					(unit 1)
 				)
 			)
@@ -10125,7 +10125,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "e403f13d-2641-4754-a8ab-9b877fb95e82")
-		(property "Reference" "R1305"
+		(property "Reference" "R55"
 			(at 50.8 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10195,7 +10195,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "R1305")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -10212,7 +10212,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e4c23c0e-9587-40dc-85e9-6f28b048b765")
-		(property "Reference" "C1230"
+		(property "Reference" "C138"
 			(at 208.28 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10282,7 +10282,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1230")
+					(reference "C138")
 					(unit 1)
 				)
 			)
@@ -10299,7 +10299,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e6fdae67-6f14-487b-a6e0-a34bef672a0b")
-		(property "Reference" "C1203"
+		(property "Reference" "C120"
 			(at 50.8 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10369,7 +10369,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1203")
+					(reference "C120")
 					(unit 1)
 				)
 			)
@@ -10386,7 +10386,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7a5a317-5d64-4ee4-91cf-7f13896f6841")
-		(property "Reference" "C1245"
+		(property "Reference" "C153"
 			(at 269.24 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10456,7 +10456,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1245")
+					(reference "C153")
 					(unit 1)
 				)
 			)
@@ -10473,7 +10473,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea555f3e-ac2c-4273-ac9f-92f575efa0db")
-		(property "Reference" "C1224"
+		(property "Reference" "C132"
 			(at 182.88 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10543,7 +10543,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "C1224")
+					(reference "C132")
 					(unit 1)
 				)
 			)
@@ -10560,7 +10560,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fdf66881-8268-4543-9417-887a940fa661")
-		(property "Reference" "#PWR01203"
+		(property "Reference" "#PWR0229"
 			(at 26.67 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -10626,7 +10626,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/46009ab7-a4ba-489d-b29c-5828bb20621d"
-					(reference "#PWR01203")
+					(reference "#PWR0229")
 					(unit 1)
 				)
 			)

@@ -20817,7 +20817,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2d254aee-25a1-45c6-96b0-bd6be3f6a4bf")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 228.6 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23174,7 +23174,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "U1")
+					(reference "U7")
 					(unit 17)
 				)
 			)
@@ -23193,7 +23193,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "401d429d-b966-4c88-9677-7e45da25093d")
-		(property "Reference" "#PWR0904"
+		(property "Reference" "#PWR0225"
 			(at 83.82 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23259,7 +23259,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "#PWR0904")
+					(reference "#PWR0225")
 					(unit 1)
 				)
 			)
@@ -23277,7 +23277,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "acffe975-c535-4c5a-969e-f4ea3aad9498")
-		(property "Reference" "#PWR0902"
+		(property "Reference" "#PWR0226"
 			(at 101.6 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23343,7 +23343,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "#PWR0902")
+					(reference "#PWR0226")
 					(unit 1)
 				)
 			)
@@ -23361,7 +23361,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b0844942-a8ca-439b-a254-a110187565b9")
-		(property "Reference" "#PWR0901"
+		(property "Reference" "#PWR0224"
 			(at 27.94 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23427,7 +23427,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "#PWR0901")
+					(reference "#PWR0224")
 					(unit 1)
 				)
 			)
@@ -23444,7 +23444,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bf842716-ce91-4651-827e-8d16f9c52d45")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 72.39 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25801,7 +25801,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "U1")
+					(reference "U7")
 					(unit 15)
 				)
 			)
@@ -25819,7 +25819,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c272661b-131d-4725-baea-dd1e7be50404")
-		(property "Reference" "#PWR0905"
+		(property "Reference" "#PWR0228"
 			(at 185.42 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -25885,7 +25885,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "#PWR0905")
+					(reference "#PWR0228")
 					(unit 1)
 				)
 			)
@@ -25904,7 +25904,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d523b9b2-c1c3-48ec-ac72-c2b9c380f0cb")
-		(property "Reference" "#PWR0903"
+		(property "Reference" "#PWR0227"
 			(at 157.48 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -25970,7 +25970,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "#PWR0903")
+					(reference "#PWR0227")
 					(unit 1)
 				)
 			)
@@ -25987,7 +25987,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f8e19dd4-5b26-4806-aa37-56796b46e5a7")
-		(property "Reference" "U1"
+		(property "Reference" "U7"
 			(at 146.05 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28344,7 +28344,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa"
-					(reference "U1")
+					(reference "U7")
 					(unit 16)
 				)
 			)

@@ -134,7 +134,7 @@
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.3,
+        "min_hole_clearance": 0.1,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -145,7 +145,7 @@
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_diameter": 0.25,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -809,7 +809,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "R3-8,R10,J1-8,L1-4,#PWR3-5,#PWR10-20,#PWR102-104,#PWR1203-1204,#PWR1213-1214,U2-3,U5-12,C1-19,C1205",
+    "used_designators": "D1-2,#PWR1-264,C1-197,FB1-10,R1-79,J1-7,IC1-4,P1-2,U1-17,Y1-2",
     "variants": []
   },
   "sheets": [
