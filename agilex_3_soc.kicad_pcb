@@ -254077,6 +254077,19 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "lpddr is a quick sketch to test if it is even routable"
+		(at 134.31684 80.75915 0)
+		(layer "Cmts.User")
+		(uuid "51519965-4bc6-4f58-952e-7126d2d1a586")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "heatsink mounting holes are just a sketch, check real hole placement"
 		(at 175.34184 160.33415 0)
 		(layer "Cmts.User")
