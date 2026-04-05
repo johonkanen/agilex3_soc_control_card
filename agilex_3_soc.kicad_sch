@@ -2995,6 +2995,15 @@
 		(uuid "2eaa2257-5390-4e03-bda6-2b5b0267e31c")
 	)
 	(bus_entry
+		(at 123.19 251.46)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31653c9d-d93f-4e67-b6e8-c1c9d04f372e")
+	)
+	(bus_entry
 		(at 88.9 255.27)
 		(size 2.54 2.54)
 		(stroke
@@ -3020,6 +3029,15 @@
 			(type default)
 		)
 		(uuid "523bdbfc-84ea-4089-8497-66bcb67a0715")
+	)
+	(bus_entry
+		(at 123.19 247.65)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c6a46b9-9095-41e2-b46a-5bebfa1d318a")
 	)
 	(bus_entry
 		(at 132.08 212.09)
@@ -3065,6 +3083,15 @@
 			(type default)
 		)
 		(uuid "7cd07a73-4e2c-433e-87f9-149d4270e9ba")
+	)
+	(bus_entry
+		(at 123.19 255.27)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8214b2d2-675f-434f-868e-bb9e0b8a421c")
 	)
 	(bus_entry
 		(at 132.08 217.17)
@@ -3603,7 +3630,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 257.81) (xy 93.98 257.81)
+			(xy 91.44 257.81) (xy 120.65 257.81)
 		)
 		(stroke
 			(width 0)
@@ -3643,7 +3670,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 250.19) (xy 93.98 250.19)
+			(xy 91.44 250.19) (xy 120.65 250.19)
 		)
 		(stroke
 			(width 0)
@@ -4003,7 +4030,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 254) (xy 93.98 254)
+			(xy 91.44 254) (xy 120.65 254)
 		)
 		(stroke
 			(width 0)
@@ -4401,6 +4428,16 @@
 		)
 		(uuid "818345ee-4a8e-4d83-955b-8573ecafc781")
 	)
+	(label "iob6b10"
+		(at 107.95 257.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "865a4ea9-3ee6-47bc-a625-e8afd42622e7")
+	)
 	(label "admux_2"
 		(at 93.98 257.81 0)
 		(effects
@@ -4420,6 +4457,16 @@
 			(justify left bottom)
 		)
 		(uuid "8a45c10f-9f80-4564-bb8d-41fb998213e1")
+	)
+	(label "iob6b0"
+		(at 107.95 254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a208d36d-c4a3-45cf-9df2-987614ab7dd9")
 	)
 	(label "usb_clk24"
 		(at 114.3 100.33 0)
@@ -4540,6 +4587,16 @@
 			(justify left bottom)
 		)
 		(uuid "db6ca03e-1ec8-4dfd-868f-7447dd8a4d4b")
+	)
+	(label "iob6b12"
+		(at 111.76 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e152adc9-96e7-4659-91d2-96d67d4f46a0")
 	)
 	(label "iob6b7"
 		(at 111.76 238.76 0)
