@@ -1646,6 +1646,12 @@
 		(uuid "033419fa-7409-467a-9084-9a2afe6df7f8")
 	)
 	(junction
+		(at 154.94 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ec9fd69-f4c7-4ffe-ac2a-0296eb70f530")
+	)
+	(junction
 		(at 182.88 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1686,6 +1692,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c0d07e6b-0fc5-42e3-a09d-aafc21bd5387")
+	)
+	(junction
+		(at 142.24 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c58485a5-686e-4188-9859-907a60230b3a")
 	)
 	(junction
 		(at 154.94 54.61)
@@ -1865,7 +1877,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 64.77) (xy 154.94 129.54)
+			(xy 154.94 64.77) (xy 154.94 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2125,6 +2137,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 128.27) (xy 154.94 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ec37e66-b63c-47ef-a752-835df1a2dff3")
+	)
+	(wire
+		(pts
 			(xy 142.24 52.07) (xy 142.24 54.61)
 		)
 		(stroke
@@ -2132,6 +2154,16 @@
 			(type default)
 		)
 		(uuid "602015dd-41a7-4a2c-8e60-46829497d0ea")
+	)
+	(wire
+		(pts
+			(xy 154.94 128.27) (xy 154.94 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6245c8bb-bd42-4d6a-baeb-33057f7bd1f7")
 	)
 	(wire
 		(pts
@@ -2315,6 +2347,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 83.82) (xy 128.27 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b66800ac-2f18-4306-9bc4-767d79af1319")
+	)
+	(wire
+		(pts
 			(xy 123.19 106.68) (xy 140.97 106.68)
 		)
 		(stroke
@@ -2352,6 +2394,16 @@
 			(type default)
 		)
 		(uuid "c059aa83-df96-4863-a490-cfd9a7ffef89")
+	)
+	(wire
+		(pts
+			(xy 128.27 38.1) (xy 142.24 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6507916-a4db-4b1e-9ebe-f50a06e5200d")
 	)
 	(wire
 		(pts
@@ -2402,6 +2454,16 @@
 			(type default)
 		)
 		(uuid "d68f75e9-9380-4832-9830-f410d452fad6")
+	)
+	(wire
+		(pts
+			(xy 128.27 99.06) (xy 128.27 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da32c22b-d5db-4990-9042-963392449cb2")
 	)
 	(wire
 		(pts
