@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 0.4,
-          "width": 0.4
+          "drill": 0.65,
+          "height": 0.9,
+          "width": 0.9
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -703,6 +703,9 @@
       ],
       "iob6f": [
         "iob6f[19..0]"
+      ],
+      "iob6g": [
+        "iob6g[19..0]"
       ],
       "iob6h": [
         "iob6h[19..0]"
