@@ -820,17 +820,13 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "J8-9,U8,U15,U18-19,#PWR266,L1",
+    "used_designators": "R1-2,J8-9,U8,U15,U18-19,#PWR248,#PWR251-252,#PWR266-269,L1-4,C198-200,C68n1",
     "variants": []
   },
   "sheets": [
     [
       "a5b98d95-6877-4284-904f-d04e32723ae0",
       "agilex_3_soc"
-    ],
-    [
-      "e3048211-3a22-4ca2-880d-a02e0bb6b448",
-      "Agilex SoC"
     ],
     [
       "871a81f2-62c4-47fa-98d5-872580aa51c3",

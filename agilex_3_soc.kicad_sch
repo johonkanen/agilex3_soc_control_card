@@ -3022,6 +3022,12 @@
 		(uuid "e9681ff3-510c-4022-93c4-bb1209d33c51")
 	)
 	(junction
+		(at 262.89 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef700839-8932-4a29-9e43-bd4b8ce2870b")
+	)
+	(junction
 		(at 271.78 229.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4134,6 +4140,16 @@
 		)
 		(uuid "4bc4052f-1d85-478d-924d-dfdfa2068247")
 	)
+	(wire
+		(pts
+			(xy 262.89 215.9) (xy 271.78 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4c7635-1adc-4ca5-b9eb-14f39c12f7aa")
+	)
 	(bus
 		(pts
 			(xy 88.9 234.95) (xy 88.9 270.51)
@@ -4263,6 +4279,16 @@
 			(type default)
 		)
 		(uuid "57fcc778-83a0-41f6-a698-0ea8fb56c0c6")
+	)
+	(wire
+		(pts
+			(xy 262.89 175.26) (xy 262.89 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58227074-0e7a-49dc-af85-6a1453674e33")
 	)
 	(wire
 		(pts
@@ -4916,7 +4942,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 140.97) (xy 264.16 140.97)
+			(xy 269.24 140.97) (xy 256.54 140.97)
 		)
 		(stroke
 			(width 0)
@@ -4996,7 +5022,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 140.97) (xy 264.16 158.75)
+			(xy 256.54 140.97) (xy 256.54 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5023,6 +5049,16 @@
 			(type default)
 		)
 		(uuid "c830e7b5-9035-4627-a749-552d60aec30f")
+	)
+	(wire
+		(pts
+			(xy 262.89 128.27) (xy 262.89 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c832491a-fa67-4d6e-8dd0-0dcfab3ae53b")
 	)
 	(wire
 		(pts
@@ -5146,7 +5182,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 158.75) (xy 269.24 158.75)
+			(xy 256.54 158.75) (xy 269.24 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5266,6 +5302,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 175.26) (xy 262.89 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e34615aa-dbf1-45ab-8e5e-06304767908c")
+	)
+	(wire
+		(pts
 			(xy 190.5 250.19) (xy 224.79 250.19)
 		)
 		(stroke
@@ -5276,6 +5322,16 @@
 	)
 	(wire
 		(pts
+			(xy 271.78 215.9) (xy 271.78 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6ab614f-0069-4f74-8404-d8af8fde882f")
+	)
+	(wire
+		(pts
 			(xy 96.52 209.55) (xy 111.76 209.55)
 		)
 		(stroke
@@ -5283,6 +5339,16 @@
 			(type default)
 		)
 		(uuid "e7a198dc-f0ca-46be-a761-163301101263")
+	)
+	(wire
+		(pts
+			(xy 269.24 128.27) (xy 262.89 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8554c04-0d86-4139-9cc2-16a352a5ae2a")
 	)
 	(bus
 		(pts
@@ -8730,6 +8796,16 @@
 				(justify left)
 			)
 		)
+		(pin "5V" input
+			(at 269.24 128.27 180)
+			(uuid "fe5bd64d-374a-4184-98e1-7f367897002b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
@@ -9479,64 +9555,8 @@
 		)
 	)
 	(sheet
-		(at 316.23 189.23)
-		(size 88.9 60.96)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "e3048211-3a22-4ca2-880d-a02e0bb6b448")
-		(property "Sheetname" "Agilex SoC"
-			(at 316.23 188.5184 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "untitled.kicad_sch"
-			(at 316.23 250.7746 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "p1" input
-			(at 316.23 205.74 180)
-			(uuid "eb83df13-d8d7-43a6-a1a2-0b5508f2b03c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 269.24 153.67)
-		(size 38.1 17.78)
+		(at 269.24 149.86)
+		(size 38.1 30.48)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -9551,7 +9571,7 @@
 		)
 		(uuid "f641c4ca-6983-42f3-9cca-4494b20f9dfc")
 		(property "Sheetname" "power supply1"
-			(at 269.24 152.9584 0)
+			(at 269.24 149.1484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9562,7 +9582,7 @@
 			)
 		)
 		(property "Sheetfile" "a5e_kicad/ps1.kicad_sch"
-			(at 269.24 172.0346 0)
+			(at 269.24 180.9246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9605,6 +9625,16 @@
 		(pin "PG" output
 			(at 269.24 163.83 180)
 			(uuid "34ddb344-bb2d-415f-be5f-c77a0e59cda0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V" input
+			(at 269.24 175.26 180)
+			(uuid "a91ac942-1d27-4765-a1ec-f83066445ccd")
 			(effects
 				(font
 					(size 1.27 1.27)
