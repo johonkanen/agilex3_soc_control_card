@@ -820,7 +820,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "R1-2,J8-9,U8,U15,U18-19,#PWR248,#PWR251-252,#PWR266-269,L1-4,C198-200,C68n1",
+    "used_designators": "R1-2,R55-58,J8-9,U8,U15,U18-19,#PWR248,#PWR251-252,#PWR266-270,L1-4,C198-202,C68n1",
     "variants": []
   },
   "sheets": [
