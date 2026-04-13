@@ -1,0 +1,4 @@
+(version 1)
+(rule "LPDDR DQ match"
+    (constraint length (min 25mm) (max 25.01mm)
+    (condition "A.netClass == 'lpddr_dq'"))
