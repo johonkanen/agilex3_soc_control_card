@@ -208,13 +208,13 @@
           "max_amplitude": 1.0,
           "min_amplitude": 0.2,
           "single_sided": false,
-          "spacing": 1.0
+          "spacing": 0.5
         },
         "diff_pair_skew_defaults": {
           "corner_radius_percentage": 80,
           "corner_style": 1,
           "max_amplitude": 1.0,
-          "min_amplitude": 0.2,
+          "min_amplitude": 0.1,
           "single_sided": false,
           "spacing": 0.6
         },
@@ -222,7 +222,7 @@
           "corner_radius_percentage": 80,
           "corner_style": 1,
           "max_amplitude": 1.0,
-          "min_amplitude": 0.2,
+          "min_amplitude": 0.07,
           "single_sided": false,
           "spacing": 0.6
         }
@@ -499,9 +499,9 @@
       {
         "bus_width": 12,
         "clearance": 0.1,
-        "diff_pair_gap": 0.25,
+        "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.1,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -517,8 +517,8 @@
       },
       {
         "clearance": 0.1,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "lpddr_dq",
@@ -539,7 +539,7 @@
     "netclass_patterns": [
       {
         "netclass": "lpddr_dq",
-        "pattern": "*dq*"
+        "pattern": ".*dq([0-9]|[12][0-9]|3[01])$"
       }
     ]
   },
