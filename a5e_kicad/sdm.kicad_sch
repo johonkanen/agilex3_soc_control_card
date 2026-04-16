@@ -8,252 +8,6 @@
 		(rev "0.1")
 	)
 	(lib_symbols
-		(symbol "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "IC"
-				(at 29.21 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "74AVC1T45GM-Q100H"
-				(at 29.21 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "PESD3V3L5UF115"
-				(at 29.21 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-				(at 29.21 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "0.5"
-				(at 29.21 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" ""
-				(at 29.21 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" ""
-				(at 29.21 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Nexperia"
-				(at 29.21 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-				(at 29.21 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "74AVC1T45GM-Q100H_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 27.94 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "VCC(A)"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 -5.08 180)
-					(length 5.08)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 -2.54 180)
-					(length 5.08)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 0 180)
-					(length 5.08)
-					(name "VCC(B)"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -15978,7 +15732,7 @@
 		(uuid "9cff6f7f-8e16-423c-b036-2279b0d8f5c9")
 	)
 	(junction
-		(at 109.22 182.88)
+		(at 120.65 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1e77fae8-2316-4205-967c-349170f73181")
@@ -15990,7 +15744,7 @@
 		(uuid "22cc6e84-8287-4054-b66a-09dc3e7df5a1")
 	)
 	(junction
-		(at 111.76 162.56)
+		(at 123.19 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2dad76df-e7e8-4dd3-963d-c1d95553c111")
@@ -16401,7 +16155,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 180.34) (xy 111.76 162.56)
+			(xy 123.19 175.26) (xy 123.19 157.48)
 		)
 		(stroke
 			(width 0)
@@ -16491,7 +16245,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 167.64) (xy 95.25 167.64)
+			(xy 104.14 162.56) (xy 106.68 162.56)
 		)
 		(stroke
 			(width 0)
@@ -16661,7 +16415,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 182.88) (xy 114.3 182.88)
+			(xy 120.65 177.8) (xy 125.73 177.8)
 		)
 		(stroke
 			(width 0)
@@ -16741,7 +16495,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 165.1) (xy 109.22 182.88)
+			(xy 120.65 160.02) (xy 120.65 177.8)
 		)
 		(stroke
 			(width 0)
@@ -16761,7 +16515,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 167.64) (xy 85.09 167.64)
+			(xy 95.25 162.56) (xy 96.52 162.56)
 		)
 		(stroke
 			(width 0)
@@ -16811,7 +16565,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 162.56) (xy 111.76 160.02)
+			(xy 123.19 157.48) (xy 123.19 154.94)
 		)
 		(stroke
 			(width 0)
@@ -16881,7 +16635,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 185.42) (xy 85.09 185.42)
+			(xy 95.25 180.34) (xy 96.52 180.34)
 		)
 		(stroke
 			(width 0)
@@ -16991,7 +16745,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 185.42) (xy 114.3 185.42)
+			(xy 114.3 180.34) (xy 125.73 180.34)
 		)
 		(stroke
 			(width 0)
@@ -17211,7 +16965,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 165.1) (xy 109.22 165.1)
+			(xy 125.73 160.02) (xy 120.65 160.02)
 		)
 		(stroke
 			(width 0)
@@ -17281,7 +17035,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 167.64) (xy 114.3 167.64)
+			(xy 114.3 162.56) (xy 125.73 162.56)
 		)
 		(stroke
 			(width 0)
@@ -17331,7 +17085,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 182.88) (xy 109.22 190.5)
+			(xy 120.65 177.8) (xy 120.65 185.42)
 		)
 		(stroke
 			(width 0)
@@ -17371,7 +17125,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 185.42) (xy 95.25 185.42)
+			(xy 104.14 180.34) (xy 106.68 180.34)
 		)
 		(stroke
 			(width 0)
@@ -17471,7 +17225,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 162.56) (xy 114.3 162.56)
+			(xy 123.19 157.48) (xy 125.73 157.48)
 		)
 		(stroke
 			(width 0)
@@ -17751,7 +17505,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 180.34) (xy 111.76 180.34)
+			(xy 125.73 175.26) (xy 123.19 175.26)
 		)
 		(stroke
 			(width 0)
@@ -18863,7 +18617,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 111.76 160.02 0)
+		(at 123.19 154.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18874,7 +18628,7 @@
 		(fields_autoplaced yes)
 		(uuid "0ce3172e-116f-44f1-bd7e-143d27729cf6")
 		(property "Reference" "#PWR034"
-			(at 111.76 163.83 0)
+			(at 123.19 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18885,7 +18639,7 @@
 			)
 		)
 		(property "Value" "3V3"
-			(at 111.76 154.94 0)
+			(at 123.19 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18895,7 +18649,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 160.02 0)
+			(at 123.19 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18906,7 +18660,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 160.02 0)
+			(at 123.19 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18917,7 +18671,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 111.76 160.02 0)
+			(at 123.19 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19550,7 +19304,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 88.9 167.64 0)
+		(at 100.33 162.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19560,7 +19314,7 @@
 		(dnp no)
 		(uuid "3903bb1e-9676-4837-9945-fa39793ba468")
 		(property "Reference" "D1"
-			(at 88.9 162.56 0)
+			(at 100.33 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19570,7 +19324,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 87.3125 163.83 0)
+			(at 98.7425 158.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19580,7 +19334,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 88.9 167.64 0)
+			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19591,7 +19345,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 167.64 0)
+			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19602,7 +19356,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 88.9 167.64 0)
+			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19613,7 +19367,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 88.9 167.64 0)
+			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22791,7 +22545,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 99.06 167.64 90)
+		(at 110.49 162.56 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22801,7 +22555,7 @@
 		(dnp no)
 		(uuid "610fee1a-c733-49bf-afb4-dc15689a14bb")
 		(property "Reference" "R16"
-			(at 96.52 165.1 90)
+			(at 107.95 160.02 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22812,7 +22566,7 @@
 			)
 		)
 		(property "Value" "240R"
-			(at 101.6 167.64 90)
+			(at 113.03 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22823,7 +22577,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 99.06 169.418 90)
+			(at 110.49 164.338 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22834,7 +22588,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 167.64 0)
+			(at 110.49 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22845,7 +22599,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 99.06 167.64 0)
+			(at 110.49 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22965,7 +22719,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 185.42 270)
+		(at 95.25 180.34 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22976,7 +22730,7 @@
 		(fields_autoplaced yes)
 		(uuid "67382c31-bdb9-40e2-876f-9607b7e69f9c")
 		(property "Reference" "#PWR029"
-			(at 77.47 185.42 0)
+			(at 88.9 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22987,7 +22741,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 80.01 185.4199 90)
+			(at 91.44 180.3399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22998,7 +22752,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 185.42 0)
+			(at 95.25 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23009,7 +22763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 185.42 0)
+			(at 95.25 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23020,7 +22774,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 185.42 0)
+			(at 95.25 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23049,168 +22803,8 @@
 		)
 	)
 	(symbol
-		(lib_id "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H")
-		(at 114.3 162.56 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "72ed175f-b331-4097-9981-d3e376c3f939")
-		(property "Reference" "IC1"
-			(at 130.81 154.94 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74AVC1T45GM-Q100H"
-			(at 130.81 157.48 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.51 257.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-			(at 143.51 357.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-			(at 114.3 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.5"
-			(at 143.51 557.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 143.51 657.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 143.51 757.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Nexperia"
-			(at 143.51 857.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-			(at 143.51 957.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "6"
-			(uuid "eecf7fef-6400-43dc-892e-d9278d6904e2")
-		)
-		(pin "2"
-			(uuid "d32f9114-8fb3-47d5-8ca9-5ae26744029d")
-		)
-		(pin "3"
-			(uuid "79ff0135-dd90-4da5-985d-9f4a5aaec96f")
-		)
-		(pin "5"
-			(uuid "3113d123-4b2a-4d77-9230-978bfb50d5b6")
-		)
-		(pin "1"
-			(uuid "1fdf8a3b-253a-467c-87b6-aabd572e559a")
-		)
-		(pin "4"
-			(uuid "334fad86-11d2-456c-a84f-3032f372e8cc")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "IC202")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "IC1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 99.06 185.42 90)
+		(at 110.49 180.34 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23220,7 +22814,7 @@
 		(dnp no)
 		(uuid "81154d1b-fb64-4140-804a-e9dfcd768764")
 		(property "Reference" "R17"
-			(at 96.52 182.88 90)
+			(at 107.95 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23231,7 +22825,7 @@
 			)
 		)
 		(property "Value" "240R"
-			(at 101.6 185.42 90)
+			(at 113.03 180.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23242,7 +22836,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 99.06 187.198 90)
+			(at 110.49 182.118 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23253,7 +22847,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 185.42 0)
+			(at 110.49 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23264,7 +22858,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 99.06 185.42 0)
+			(at 110.49 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23720,7 +23314,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 109.22 190.5 0)
+		(at 120.65 185.42 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23731,7 +23325,7 @@
 		(fields_autoplaced yes)
 		(uuid "abe71aec-820c-42e8-b46d-f295fb4003d5")
 		(property "Reference" "#PWR033"
-			(at 109.22 196.85 0)
+			(at 120.65 191.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23742,7 +23336,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 109.22 195.58 0)
+			(at 120.65 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23752,7 +23346,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 109.22 190.5 0)
+			(at 120.65 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23763,7 +23357,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 109.22 190.5 0)
+			(at 120.65 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23774,7 +23368,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 109.22 190.5 0)
+			(at 120.65 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23803,168 +23397,8 @@
 		)
 	)
 	(symbol
-		(lib_id "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H")
-		(at 114.3 180.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b3a100e2-d793-43ce-acba-d767e0158872")
-		(property "Reference" "IC2"
-			(at 130.81 172.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74AVC1T45GM-Q100H"
-			(at 130.81 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.51 275.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-			(at 143.51 375.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-			(at 114.3 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.5"
-			(at 143.51 575.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 143.51 675.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 143.51 775.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Nexperia"
-			(at 143.51 875.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-			(at 143.51 975.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "6"
-			(uuid "7231b681-7686-4a68-a4ff-7de7816329ff")
-		)
-		(pin "2"
-			(uuid "d8f783ec-108f-4e41-b2ed-51d35fb5d8a8")
-		)
-		(pin "3"
-			(uuid "90dde9a3-8677-4f0f-8852-547c8dcf80e8")
-		)
-		(pin "5"
-			(uuid "b7a69948-54b8-413c-bf36-91bd8302c3ee")
-		)
-		(pin "1"
-			(uuid "d7f1bf3d-a068-40bf-806a-4127c451720d")
-		)
-		(pin "4"
-			(uuid "fd413641-6a42-4815-9a29-5952a26a4746")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "IC201")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "IC2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
-		(at 88.9 185.42 0)
+		(at 100.33 180.34 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23975,7 +23409,7 @@
 		(fields_autoplaced yes)
 		(uuid "b6cff177-865c-4de1-b29f-fb8d2e8f63aa")
 		(property "Reference" "D2"
-			(at 87.3125 179.07 0)
+			(at 98.7425 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23985,7 +23419,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 87.3125 181.61 0)
+			(at 98.7425 176.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23995,7 +23429,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 88.9 185.42 0)
+			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24006,7 +23440,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 88.9 185.42 0)
+			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24017,7 +23451,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 88.9 185.42 0)
+			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24028,7 +23462,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 88.9 185.42 0)
+			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24574,7 +24008,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 167.64 270)
+		(at 95.25 162.56 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24585,7 +24019,7 @@
 		(fields_autoplaced yes)
 		(uuid "da60cdc3-c41b-4a35-946d-6d73f85dd4fd")
 		(property "Reference" "#PWR028"
-			(at 77.47 167.64 0)
+			(at 88.9 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24596,7 +24030,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 80.01 167.6399 90)
+			(at 91.44 162.5599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24607,7 +24041,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 167.64 0)
+			(at 95.25 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24618,7 +24052,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 167.64 0)
+			(at 95.25 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24629,7 +24063,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 167.64 0)
+			(at 95.25 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
