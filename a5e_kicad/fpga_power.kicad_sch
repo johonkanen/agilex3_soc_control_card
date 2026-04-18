@@ -15525,12 +15525,6 @@
 		(uuid "27db630b-c838-4bde-86f5-55e83a7ae623")
 	)
 	(junction
-		(at 121.92 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "281eee35-ed5d-43e6-b9ad-58a01c16475e")
-	)
-	(junction
 		(at 63.5 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15603,12 +15597,6 @@
 		(uuid "50053d5e-2778-4058-9a67-f1ce41765064")
 	)
 	(junction
-		(at 121.92 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "515bfa64-c964-4f9c-ab29-81cc794138a0")
-	)
-	(junction
 		(at 162.56 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15631,6 +15619,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5de2e524-56f1-439f-a830-e3dd62110b04")
+	)
+	(junction
+		(at 121.92 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f1c9b05-fb68-4dd6-a6c3-273606ff6f25")
 	)
 	(junction
 		(at 63.5 99.06)
@@ -15879,6 +15873,12 @@
 		(uuid "c5b12b46-a825-41cf-aacf-95e9a30c64e3")
 	)
 	(junction
+		(at 121.92 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c6bd6337-ff59-482a-89bd-3b35ae2a3419")
+	)
+	(junction
 		(at 63.5 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15889,6 +15889,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c77b9e59-4abe-4932-a176-4000bc3550ee")
+	)
+	(junction
+		(at 132.08 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c94b8ade-afdd-4703-88b8-7c6504410c40")
 	)
 	(junction
 		(at 160.02 172.72)
@@ -16650,6 +16656,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 160.02) (xy 170.18 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "408dab11-0a5f-410b-8395-4c4d22cad120")
+	)
+	(wire
+		(pts
 			(xy 63.5 83.82) (xy 63.5 86.36)
 		)
 		(stroke
@@ -16900,7 +16916,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 167.64) (xy 53.34 172.72)
+			(xy 53.34 160.02) (xy 53.34 172.72)
 		)
 		(stroke
 			(width 0)
@@ -17700,16 +17716,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 167.64) (xy 170.18 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "978b150b-354c-439b-99a9-d2d16167adb7")
-	)
-	(wire
-		(pts
 			(xy 149.86 83.82) (xy 162.56 83.82)
 		)
 		(stroke
@@ -17850,7 +17856,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 167.64) (xy 81.28 172.72)
+			(xy 81.28 160.02) (xy 81.28 172.72)
 		)
 		(stroke
 			(width 0)
@@ -18500,6 +18506,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 22.86) (xy 132.08 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec703786-7c71-4e78-bc28-9a7c09cc6b31")
+	)
+	(wire
+		(pts
 			(xy 162.56 76.2) (xy 165.1 76.2)
 		)
 		(stroke
@@ -18841,93 +18857,6 @@
 		(uuid "5a0d3e8f-cf02-4420-ba40-81f69189e6ec")
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 81.28 163.83 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "055472f1-4268-4314-8a8c-551088443b9e")
-		(property "Reference" "R50"
-			(at 78.74 165.1 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R"
-			(at 78.74 157.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 83.058 163.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 81.28 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "02e1f8e8-0e7b-4894-9ee4-61e1af040a1d")
-		)
-		(pin "1"
-			(uuid "dbb76cd1-3af3-4261-9cf6-5f1e14148ffc")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1003")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 254 31.75 0)
 		(unit 1)
@@ -19099,6 +19028,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V1")
+		(at 53.34 147.32 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1967ce46-a27c-4f53-90ef-8121db3ee811")
+		(property "Reference" "#PWR0232"
+			(at 57.15 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3v3"
+			(at 49.53 147.3199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 53.34 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d439ac81-c90d-4e89-95be-eb8ea63081e8")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0232")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 63.5 180.34 0)
 		(unit 1)
@@ -19180,93 +19188,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "C104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 53.34 163.83 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1ef48a84-a896-4541-b4a2-74b9f59c1fb4")
-		(property "Reference" "R48"
-			(at 50.8 165.1 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R"
-			(at 50.8 157.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 55.118 163.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 53.34 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "374df998-4303-44dc-a8ed-3f2685bc3b2a")
-		)
-		(pin "1"
-			(uuid "a917e89d-f5d1-4b9c-b1ee-b8f78103c8a8")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1002")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -19691,6 +19612,85 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "R47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 53.34 132.08 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f385f9c-87f2-4690-bef8-70b71f7fdda4")
+		(property "Reference" "#PWR0230"
+			(at 57.15 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3v3"
+			(at 49.53 132.0799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e620159e-f4ce-496b-a2af-0e4ef27f728c")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0230")
 					(unit 1)
 				)
 			)
@@ -25733,6 +25733,163 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
+		(at 121.92 50.8 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cf0e91d-3ffd-458a-89c7-668e3e30d7ff")
+		(property "Reference" "#PWR0233"
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3v3"
+			(at 125.73 50.7999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 121.92 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "11602a82-bca6-444b-a9be-d8c3ef577133")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0233")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 121.92 66.04 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7d210643-6311-4ec4-bc32-6835b7022057")
+		(property "Reference" "#PWR0252"
+			(at 118.11 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V2"
+			(at 125.73 66.0399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 121.92 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c8d034db-98cc-4471-8b99-f80e4ae57a81")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0252")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
 		(at 53.34 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -25985,93 +26142,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 170.18 163.83 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8b080621-a39f-45bd-a200-07f06e46773f")
-		(property "Reference" "R52"
-			(at 167.64 165.1 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0R"
-			(at 167.64 157.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 171.958 163.83 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 170.18 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c1200975-8b8c-47c6-b362-37fa0139adb2")
-		)
-		(pin "1"
-			(uuid "d18fa9d0-6006-4ade-bb1c-89ce6dde10bc")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1005")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R52")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+1V1")
 		(at 243.84 67.31 90)
 		(mirror x)
@@ -26243,91 +26313,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 121.92 50.8 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "959bdd58-35b0-4b37-a80d-ab574aca4d4f")
-		(property "Reference" "#PWR0197"
-			(at 118.11 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 125.73 50.7999 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 121.92 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "091c9e71-acd1-4eb7-8e9d-e45bab5e6cb8")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR01012")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0197")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 254 77.47 0)
 		(unit 1)
@@ -26406,91 +26391,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0222")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
-		(at 121.92 66.04 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "98e77630-1dc5-4366-818c-802bf6982058")
-		(property "Reference" "#PWR0198"
-			(at 118.11 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V3"
-			(at 125.73 66.0399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 121.92 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2dcc50af-c5e6-4f90-bfac-17e0f833dd98")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR01001")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0198")
 					(unit 1)
 				)
 			)
@@ -26745,6 +26645,85 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0212")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 132.08 27.94 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f83cf1b-3356-42c8-bb0f-bcfaf04d917f")
+		(property "Reference" "#PWR0229"
+			(at 128.27 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3v3"
+			(at 135.89 27.9399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 132.08 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ffb5705-0acd-43a2-9890-ddba26c86f44")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0229")
 					(unit 1)
 				)
 			)
@@ -28029,6 +28008,85 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0194")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 53.34 139.7 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf48a54d-2755-4980-98c4-b8ff6de68a77")
+		(property "Reference" "#PWR0231"
+			(at 57.15 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3v3"
+			(at 49.53 139.6999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 53.34 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09d34e3a-0ea2-454f-8b2a-91c226aa2a08")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0231")
 					(unit 1)
 				)
 			)

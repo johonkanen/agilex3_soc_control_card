@@ -7448,7 +7448,7 @@
 	)
 	(symbol
 		(lib_id "Oscillator:ASDMB-xxxMHz")
-		(at 29.21 38.1 0)
+		(at 44.45 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7459,7 +7459,7 @@
 		(fields_autoplaced yes)
 		(uuid "6f128e4a-030c-44d4-a864-438b143f6427")
 		(property "Reference" "Y1"
-			(at 45.72 31.6798 0)
+			(at 60.96 78.6698 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7469,7 +7469,7 @@
 			)
 		)
 		(property "Value" "ASDMB-25MHz"
-			(at 45.72 34.2198 0)
+			(at 60.96 81.2098 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7479,7 +7479,7 @@
 			)
 		)
 		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm"
-			(at 29.21 38.1 0)
+			(at 44.45 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7490,7 +7490,7 @@
 			)
 		)
 		(property "Datasheet" "https://abracon.com/Oscillators/ASDMB.pdf"
-			(at 36.83 26.67 0)
+			(at 52.07 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7501,7 +7501,7 @@
 			)
 		)
 		(property "Description" "1.8-3.3V SMD Ultra Miniature Crystal Clock Oscillator, Abracon"
-			(at 29.21 38.1 0)
+			(at 44.45 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
