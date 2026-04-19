@@ -15195,45 +15195,36 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "RR_LIB_DBM_A5E:MT25QU256ABB8E12-0SIT"
+		(symbol "Memory_Flash:W25X20CLZP"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -10.16 10.16 0)
+				(at -7.62 10.795 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Value" "MT25QU256ABB8E12-0SIT"
-				(at 8.89 11.43 0)
+			(property "Value" "W25X20CLZP"
+				(at 2.54 10.795 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Footprint" "Hyperram:BGA25C100P5X5_800X600X120N"
-				(at 20.32 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://media-www.micron.com/-/media/client/global/documents/products/data-sheet/nor-flash/serial-nor/mt25q/die-rev-a/mt25q_qljs_u_256_aba_0.pdf"
-				(at 0 17.78 0)
+			(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm"
+				(at 0 22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -15243,7 +15234,18 @@
 					)
 				)
 			)
-			(property "Description" "Micron 256M, 1.8V Multiple I/O Serial NOR Flash Memory, BGA25"
+			(property "Datasheet" "https://www.winbond.com/resource-files/w25x20cl_revf%2020150806.pdf"
+				(at 2.54 25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "2Mbit / 256KiB Serial Flash memory, Standard/Dual I/O SPI, 2.3-3.6V, WSON-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -15254,7 +15256,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "Flash SPI DSPI QSPI 256Mbit 1.8V"
+			(property "ki_keywords" "Memory Flash SPI"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -15265,7 +15267,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "*DFN*6x5mm*P1.27mm*EP3x3mm*"
+			(property "ki_fp_filters" "WSON*8*1EP*6x5mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -15276,10 +15278,10 @@
 					)
 				)
 			)
-			(symbol "MT25QU256ABB8E12-0SIT_0_1"
+			(symbol "W25X20CLZP_0_1"
 				(rectangle
 					(start -7.62 10.16)
-					(end 7.62 -12.7)
+					(end 7.62 -10.16)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -15289,18 +15291,18 @@
 					)
 				)
 			)
-			(symbol "MT25QU256ABB8E12-0SIT_1_1"
+			(symbol "W25X20CLZP_1_1"
 				(pin input line
-					(at -12.7 -7.62 0)
-					(length 5.08)
-					(name "~{RESET}"
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "~{CS}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15308,17 +15310,35 @@
 						)
 					)
 				)
-				(pin input line
-					(at -12.7 5.08 0)
-					(length 5.08)
-					(name "C"
+				(pin bidirectional line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "DO/IO_{1}"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B2"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "~{WP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15327,16 +15347,70 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -17.78 90)
-					(length 5.08)
-					(name "VSS"
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B3"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "DI/IO_{0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "~{HOLD}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15345,8 +15419,8 @@
 					)
 				)
 				(pin power_in line
-					(at 0 15.24 270)
-					(length 5.08)
+					(at 0 12.7 270)
+					(length 2.54)
 					(name "VCC"
 						(effects
 							(font
@@ -15354,7 +15428,7 @@
 							)
 						)
 					)
-					(number "B4"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15362,89 +15436,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -12.7 7.62 0)
-					(length 5.08)
-					(name "~{S}"
+				(pin passive line
+					(at 2.54 -12.7 90)
+					(length 2.54)
+					(name "EP"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "C2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -2.54 0)
-					(length 5.08)
-					(name "~{W}/DQ2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "C4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 0 0)
-					(length 5.08)
-					(name "DQ1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 2.54 0)
-					(length 5.08)
-					(name "DQ0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -5.08 0)
-					(length 5.08)
-					(name "DQ3/~{HOLD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D4"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -15744,6 +15746,12 @@
 		(uuid "22cc6e84-8287-4054-b66a-09dc3e7df5a1")
 	)
 	(junction
+		(at 58.42 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28916108-2057-426a-9a92-7f13cdaed644")
+	)
+	(junction
 		(at 123.19 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15754,6 +15762,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2ec24ed7-74bb-44ee-9e90-a97a9b83d72b")
+	)
+	(junction
+		(at 86.36 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31f36149-c6c7-47b4-b357-5ed256fdf719")
 	)
 	(junction
 		(at 205.74 124.46)
@@ -15792,12 +15806,6 @@
 		(uuid "477531bc-3c1f-44b0-a94d-211c95b7a62f")
 	)
 	(junction
-		(at 86.36 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ce17957-32b5-4091-93a2-d266e704cd66")
-	)
-	(junction
 		(at 66.04 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15822,12 +15830,6 @@
 		(uuid "7d3397a9-9e00-4bd5-9fbf-0c0db3e37f09")
 	)
 	(junction
-		(at 88.9 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9eabd724-c190-4591-8d6d-72540cb2ee4b")
-	)
-	(junction
 		(at 53.34 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15838,6 +15840,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b6320d29-7604-4f73-a26c-dc3567881dcd")
+	)
+	(junction
+		(at 88.9 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9cf24bd-1bc5-4a10-8d41-0b5af7a16a7d")
 	)
 	(junction
 		(at 71.12 99.06)
@@ -15861,7 +15869,7 @@
 		(at 83.82 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e89edbdc-726a-40c1-ae12-363bc6347ce7")
+		(uuid "e2028d70-6972-48b1-b6e1-1690edc4a9ce")
 	)
 	(junction
 		(at 73.66 99.06)
@@ -16455,6 +16463,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 76.2) (xy 58.42 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cd14247-131f-4041-9bfa-2ace9b459c72")
+	)
+	(wire
+		(pts
 			(xy 226.06 20.32) (xy 226.06 22.86)
 		)
 		(stroke
@@ -16585,7 +16603,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 55.88) (xy 101.6 55.88)
+			(xy 68.58 55.88) (xy 101.6 55.88)
 		)
 		(stroke
 			(width 0)
@@ -16645,7 +16663,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 58.42) (xy 86.36 58.42)
+			(xy 68.58 58.42) (xy 86.36 58.42)
 		)
 		(stroke
 			(width 0)
@@ -16675,7 +16693,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 66.04) (xy 83.82 66.04)
+			(xy 68.58 66.04) (xy 83.82 66.04)
 		)
 		(stroke
 			(width 0)
@@ -16695,7 +16713,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 68.58) (xy 88.9 68.58)
+			(xy 68.58 68.58) (xy 88.9 68.58)
 		)
 		(stroke
 			(width 0)
@@ -16722,16 +16740,6 @@
 			(type default)
 		)
 		(uuid "65fdc960-6d3d-423c-9b2c-f993c3c055a4")
-	)
-	(wire
-		(pts
-			(xy 71.12 63.5) (xy 101.6 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "690fd096-5517-4f15-81b9-fbde7ae02d6a")
 	)
 	(wire
 		(pts
@@ -16842,6 +16850,16 @@
 			(type default)
 		)
 		(uuid "88fdb0c2-f2c0-43b9-b147-21eddd31a657")
+	)
+	(wire
+		(pts
+			(xy 58.42 76.2) (xy 58.42 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8939d5c0-14a4-401a-b616-e20247fcff54")
 	)
 	(wire
 		(pts
@@ -17133,6 +17151,16 @@
 		)
 		(uuid "b17f1a08-f715-4efc-89e3-09b37c5fb068")
 	)
+	(wire
+		(pts
+			(xy 58.42 48.26) (xy 58.42 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1bbd75f-0fbd-4817-b412-5d49e8839059")
+	)
 	(bus
 		(pts
 			(xy 104.14 68.58) (xy 104.14 71.12)
@@ -17285,6 +17313,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 63.5) (xy 101.6 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb431b26-7e44-4bc5-a987-dff64fe8ad5f")
+	)
+	(wire
+		(pts
 			(xy 53.34 99.06) (xy 58.42 99.06)
 		)
 		(stroke
@@ -17295,7 +17333,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 60.96) (xy 101.6 60.96)
+			(xy 68.58 60.96) (xy 101.6 60.96)
 		)
 		(stroke
 			(width 0)
@@ -17952,7 +17990,7 @@
 		(uuid "7135f44a-5824-437b-a279-80cd6071eeba")
 	)
 	(label "qspi_D1"
-		(at 71.12 63.5 0)
+		(at 68.58 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18012,7 +18050,7 @@
 		(uuid "9fe2a2de-6db8-4a54-87cd-da745bea042e")
 	)
 	(label "~{qspi_CS}"
-		(at 71.12 55.88 0)
+		(at 68.58 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18052,7 +18090,7 @@
 		(uuid "a8fe275c-84d6-439a-ad28-d7c536c890fe")
 	)
 	(label "qspi_D2"
-		(at 71.12 66.04 0)
+		(at 68.58 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18112,7 +18150,7 @@
 		(uuid "d4aaff3d-ae83-463e-b411-7fdf5cb9ba4b")
 	)
 	(label "qspi_D0"
-		(at 71.12 60.96 0)
+		(at 68.58 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18162,7 +18200,7 @@
 		(uuid "df7fe4f0-bab6-42e6-ba2c-793845ebc6d4")
 	)
 	(label "qspi_CLK"
-		(at 71.12 58.42 0)
+		(at 68.58 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18192,7 +18230,7 @@
 		(uuid "fc5fd42c-ae03-4dc8-af95-0f82a373f56f")
 	)
 	(label "qspi_D3"
-		(at 71.12 68.58 0)
+		(at 68.58 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18414,115 +18452,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RR_LIB_DBM_A5E:MT25QU256ABB8E12-0SIT")
-		(at 58.42 63.5 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "04c95f0f-cb95-40fd-bd22-f0c43cdadfde")
-		(property "Reference" "U6"
-			(at 55.88 50.8 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MT25QU256ABB8E12-0SIT"
-			(at 55.88 48.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Hyperram:BGA25C100P5X5_800X600X120N"
-			(at 38.1 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://media-www.micron.com/-/media/client/global/documents/products/data-sheet/nor-flash/serial-nor/mt25q/die-rev-a/mt25q_qljs_u_256_aba_0.pdf"
-			(at 58.42 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Micron 256M, 1.8V Multiple I/O Serial NOR Flash Memory, BGA25"
-			(at 58.42 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "B4"
-			(uuid "116ff6dc-6a51-4d0c-b2f2-9e8d082b8c12")
-		)
-		(pin "D3"
-			(uuid "68172091-5282-4ae7-840a-d9d2b37370f1")
-		)
-		(pin "D4"
-			(uuid "60068172-baa0-4c9b-8f8e-8a79687f0ef9")
-		)
-		(pin "A4"
-			(uuid "579a8cb9-12c4-4335-bbd9-602acff6b078")
-		)
-		(pin "C2"
-			(uuid "1c35b1c6-478d-4fdb-b4ea-4852d375de3f")
-		)
-		(pin "B2"
-			(uuid "22bc0d11-bf67-48ed-8ee9-eb47c5964199")
-		)
-		(pin "C4"
-			(uuid "1376ea20-1113-4877-8112-821f5661947c")
-		)
-		(pin "D2"
-			(uuid "60a803a5-a15e-4044-a6c9-9906441a7997")
-		)
-		(pin "B3"
-			(uuid "69d07c19-1275-4a49-a261-2dd8fe8f27b0")
-		)
-		(instances
-			(project ""
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "U201")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -22207,7 +22136,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "581b5366-8fb7-4769-ac1e-8d386ccb9b54")
 		(property "Reference" "#PWR023"
 			(at 58.42 87.63 0)
@@ -23749,6 +23677,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Memory_Flash:W25X20CLZP")
+		(at 58.42 63.5 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9db165f-5851-44e6-834a-0b93e1b49b0f")
+		(property "Reference" "U2"
+			(at 49.53 62.2299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "W25X20CLZP"
+			(at 49.53 64.7699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm"
+			(at 58.42 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.winbond.com/resource-files/w25x20cl_revf%2020150806.pdf"
+			(at 55.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2Mbit / 256KiB Serial Flash memory, Standard/Dual I/O SPI, 2.3-3.6V, WSON-8"
+			(at 58.42 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "6"
+			(uuid "07383e9d-a5ab-4a35-ad72-7ae54d2234ca")
+		)
+		(pin "4"
+			(uuid "3dc12fbc-b98c-4e41-acd3-11dcaf1496c2")
+		)
+		(pin "8"
+			(uuid "1f46efb6-f9c8-4209-8ed8-947e81a29efd")
+		)
+		(pin "1"
+			(uuid "6aaff61c-c1dd-4eb5-b1b8-109bd77681e9")
+		)
+		(pin "9"
+			(uuid "42049559-ff8f-4854-9b9b-c638d95a003e")
+		)
+		(pin "2"
+			(uuid "bc106cb7-1a70-4d16-bc29-04ca944fcc57")
+		)
+		(pin "5"
+			(uuid "0abc671e-4070-4ae8-9a1d-1cd9d58b7f53")
+		)
+		(pin "3"
+			(uuid "7dc33e4e-e055-4656-aa43-a90174112a26")
+		)
+		(pin "7"
+			(uuid "59a76192-47ac-42ff-b1f4-42a32b88a1e1")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 58.42 48.26 0)
 		(unit 1)
@@ -23758,7 +23790,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cb3222d5-d634-4ece-b5f4-18677176c142")
 		(property "Reference" "#PWR022"
 			(at 58.42 52.07 0)
