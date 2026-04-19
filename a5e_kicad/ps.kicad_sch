@@ -7829,7 +7829,6 @@
 		)
 		(property "Footprint" "agilex_lib:TDA38812"
 			(at 153.67 90.17 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
