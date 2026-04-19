@@ -4115,7 +4115,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "827b57aa-6301-4837-a2bc-3e67a9365442")
 		(property "Reference" "U9"
 			(at 157.48 33.02 0)
