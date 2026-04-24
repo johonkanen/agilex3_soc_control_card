@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.15
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -840,7 +840,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "#PWR14-17,#PWR229-233,#PWR252,#PWR260,#PWR276-281,C120-121,U2,U6,Y3",
+    "used_designators": "C203-205",
     "variants": []
   },
   "sheets": [
