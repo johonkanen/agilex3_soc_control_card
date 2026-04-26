@@ -840,7 +840,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "C203-205",
+    "used_designators": "C203-205,R5,R47-48,#PWR282",
     "variants": []
   },
   "sheets": [
