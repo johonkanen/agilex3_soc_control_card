@@ -511,7 +511,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "tuning_profile": "",
-        "via_diameter": 0.0,
+        "via_diameter": 0.3,
         "via_drill": 0.1,
         "wire_width": 6
       },
@@ -527,7 +527,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "tuning_profile": "",
-        "via_diameter": 0.0,
+        "via_diameter": 0.3,
         "via_drill": 0.1
       }
     ],
@@ -883,10 +883,6 @@
     [
       "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
       "lpddr4 memory"
-    ],
-    [
-      "a8f2fee3-4477-4348-8890-5a8bd0c95ceb",
-      "hybperbus"
     ],
     [
       "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66",
