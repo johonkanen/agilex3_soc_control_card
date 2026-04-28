@@ -163,146 +163,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "FPGA_Altera_Agilex_5E:A5EB013B-B23B"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -15520,22 +15380,10 @@
 		(uuid "8050015d-6936-435e-be26-ac97f0658d0c")
 	)
 	(junction
-		(at 35.56 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82d7e28b-a858-4e06-be84-e863e9666483")
-	)
-	(junction
 		(at 63.5 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8832eb35-32de-4e9c-9f08-8e413e5b869d")
-	)
-	(junction
-		(at 170.18 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8ae6709c-25fb-410b-a79c-12b83769b74e")
 	)
 	(junction
 		(at 63.5 109.22)
@@ -15736,12 +15584,6 @@
 		(uuid "c976d02b-d417-4920-a9f2-1be0737e58ca")
 	)
 	(junction
-		(at 53.34 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d32d616c-01dc-415b-9403-f8700cbbf12c")
-	)
-	(junction
 		(at 162.56 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15758,12 +15600,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d9d49c94-2350-426b-945c-98ca587d6e05")
-	)
-	(junction
-		(at 81.28 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dc1e6cbe-be72-45e2-b36e-ab6ae8f33eb4")
 	)
 	(junction
 		(at 121.92 88.9)
@@ -15788,12 +15624,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "df17f358-6e0c-4e8a-bde1-5d02658e38e8")
-	)
-	(junction
-		(at 63.5 172.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ecf6d7b4-263b-476d-8a17-212d6979673e")
 	)
 	(junction
 		(at 63.5 96.52)
@@ -16349,16 +16179,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 185.42) (xy 53.34 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c1f869f-d8fb-476b-9f9c-b275056992a9")
-	)
-	(wire
-		(pts
 			(xy 130.81 172.72) (xy 130.81 176.53)
 		)
 		(stroke
@@ -16606,16 +16426,6 @@
 			(type default)
 		)
 		(uuid "48f690dd-a4ae-4616-af2e-add220ab61f1")
-	)
-	(wire
-		(pts
-			(xy 33.02 172.72) (xy 35.56 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a7db537-417b-484b-bd80-313dc5a3079d")
 	)
 	(wire
 		(pts
@@ -16876,16 +16686,6 @@
 			(type default)
 		)
 		(uuid "5d3e35a4-195b-4af7-b570-42a840600604")
-	)
-	(wire
-		(pts
-			(xy 81.28 172.72) (xy 81.28 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e1a70ef-8b6a-42e2-a2b4-dde5fb9d8e12")
 	)
 	(wire
 		(pts
@@ -17729,16 +17529,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 172.72) (xy 170.18 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b295987f-ee66-47b1-a8d4-edc8e62db4c4")
-	)
-	(wire
-		(pts
 			(xy 35.56 172.72) (xy 35.56 176.53)
 		)
 		(stroke
@@ -17929,16 +17719,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 184.785) (xy 81.28 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "caf07248-8c43-4a0b-995f-6a88b93df76b")
-	)
-	(wire
-		(pts
 			(xy 165.1 58.42) (xy 162.56 58.42)
 		)
 		(stroke
@@ -18026,16 +17806,6 @@
 			(type default)
 		)
 		(uuid "d1ca757d-ddfc-4a42-abdd-d9bc5fcd4145")
-	)
-	(wire
-		(pts
-			(xy 170.18 187.96) (xy 170.18 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d220510c-16f3-4b21-be17-38f23a0a9146")
 	)
 	(wire
 		(pts
@@ -18156,16 +17926,6 @@
 			(type default)
 		)
 		(uuid "dd083668-e2fb-4beb-9e2d-e8e388d450f0")
-	)
-	(wire
-		(pts
-			(xy 53.34 172.72) (xy 53.34 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd113310-82ff-4877-8d2d-efaa19b9446d")
 	)
 	(wire
 		(pts
@@ -18376,16 +18136,6 @@
 			(type default)
 		)
 		(uuid "ef848585-88e9-4a48-ba5e-de7d02dca59c")
-	)
-	(wire
-		(pts
-			(xy 60.96 172.72) (xy 63.5 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f00210ec-2d4d-42b5-8956-a38ffc39a291")
 	)
 	(wire
 		(pts
@@ -19231,90 +18981,6 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
-		(at 170.18 187.96 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3e05cf72-3b68-45ca-996e-07237c787bfb")
-		(property "Reference" "#PWR0215"
-			(at 170.18 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 170.1801 191.77 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 187.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 187.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 170.18 187.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a22014f8-473c-4ad2-9142-3b6551d7bc62")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR01015")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0215")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
 		(at 53.34 132.08 90)
 		(unit 1)
 		(body_style 1)
@@ -19559,93 +19225,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0213")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 53.34 180.34 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "503b8851-ccb9-4a7b-b626-c379e209eb9d")
-		(property "Reference" "R49"
-			(at 50.8 181.61 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "--"
-			(at 50.8 173.99 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 55.118 180.34 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 53.34 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ba8892e3-8b28-4e39-b089-17c8dfa9ad48")
-		)
-		(pin "1"
-			(uuid "de83588b-563e-4ec9-b0b4-fb4c7264edd5")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1001")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -22113,180 +21692,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 81.28 180.34 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "6306416a-021c-4d5e-a373-bf76b2a11fc2")
-		(property "Reference" "R51"
-			(at 78.74 181.61 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "--"
-			(at 78.74 173.99 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 83.058 180.34 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 81.28 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "84b30535-b056-487d-9cbe-c0fcfb3ccdd4")
-		)
-		(pin "1"
-			(uuid "15f05b38-4b1f-405a-b2e2-b37950153b00")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1004")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R51")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 170.18 180.34 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "671e8caf-67c1-480c-83fc-58e455b3dabe")
-		(property "Reference" "R53"
-			(at 167.64 181.61 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "--"
-			(at 167.64 173.99 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 171.958 180.34 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 170.18 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "806e9739-9086-4cc5-86e4-878add70ba59")
-		)
-		(pin "1"
-			(uuid "59dada11-303f-4b41-a97e-51b28d1ad66b")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R1006")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "R53")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 152.4 180.34 0)
 		(unit 1)
@@ -22623,90 +22028,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "C102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
-		(at 81.28 184.785 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "746e414e-4d6c-4537-9e5d-94a94cf91cfb")
-		(property "Reference" "#PWR0196"
-			(at 81.28 180.975 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 81.2801 188.595 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 81.28 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0c9e8b24-a97b-45d8-812f-7f104fee14d8")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR01011")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0196")
 					(unit 1)
 				)
 			)
@@ -27951,90 +27272,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
-		(at 53.34 185.42 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e2a1d4f9-bf09-4d7a-b9a8-2b4cf0cb8a64")
-		(property "Reference" "#PWR0189"
-			(at 53.34 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 53.3401 189.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 53.34 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "de6f1ffc-771d-4efa-b4cb-26d44882b332")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR01003")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0189")
 					(unit 1)
 				)
 			)
