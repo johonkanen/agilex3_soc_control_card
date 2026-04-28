@@ -5793,16 +5793,6 @@
 		)
 		(uuid "a5efc128-f77d-425c-8028-7282d8db98a3")
 	)
-	(bus
-		(pts
-			(xy 109.22 143.51) (xy 124.46 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5fd39f3-63f7-46b2-b849-8979a3064d0c")
-	)
 	(wire
 		(pts
 			(xy 190.5 229.87) (xy 224.79 229.87)
@@ -11604,62 +11594,6 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 124.46 140.97)
-		(size 17.78 7.62)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "a8f2fee3-4477-4348-8890-5a8bd0c95ceb")
-		(property "Sheetname" "hybperbus"
-			(at 124.46 140.2584 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "a5e_kicad/hyperbus.kicad_sch"
-			(at 124.46 149.1746 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "{hyperbus}" input
-			(at 124.46 143.51 180)
-			(uuid "a0c2944c-2010-462d-bcca-dab4109f0ced")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
-					(page "19")
 				)
 			)
 		)
