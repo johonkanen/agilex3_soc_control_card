@@ -15830,12 +15830,6 @@
 		(uuid "7d3397a9-9e00-4bd5-9fbf-0c0db3e37f09")
 	)
 	(junction
-		(at 53.34 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a7960b9b-ad81-4377-9822-61531cbb9361")
-	)
-	(junction
 		(at 53.34 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -16280,16 +16274,6 @@
 			(type default)
 		)
 		(uuid "1a18ef96-2946-43b5-a737-43f6ad155ad0")
-	)
-	(wire
-		(pts
-			(xy 53.34 109.22) (xy 53.34 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b203717-2be7-4ab0-8da0-b11c7260ce87")
 	)
 	(bus
 		(pts
@@ -18458,93 +18442,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 53.34 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "092c8897-65c3-4402-92f6-ff6e7ec82f3c")
-		(property "Reference" "R6"
-			(at 53.34 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4K7"
-			(at 53.34 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 51.562 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 53.34 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "dc9b18b7-b885-45db-a829-1fe5edfa700f")
-		)
-		(pin "1"
-			(uuid "643e62bd-32e6-4b74-87ac-d83aa9f758ca")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R204")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 123.19 154.94 0)
 		(unit 1)
@@ -18794,93 +18691,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 58.42 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1fa71859-8375-4963-aa7b-20bee70de881")
-		(property "Reference" "R7"
-			(at 58.42 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4K7"
-			(at 58.42 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 56.642 105.41 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 58.42 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "68f0919c-4927-4cc5-9c02-26fcfe6eedf5")
-		)
-		(pin "1"
-			(uuid "e5b95a01-4d56-4921-a1c2-3ffacb8f3588")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R205")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -22732,6 +22542,87 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 58.42 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7cfb4d5a-17ff-4088-921d-464148281046")
+		(property "Reference" "R7"
+			(at 58.42 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 58.42 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 56.642 105.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 58.42 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fef605b1-53a2-450e-93c1-d62cdcfd3119")
+		)
+		(pin "1"
+			(uuid "6e41fd55-be22-4847-abe7-99e1c17a4d53")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 110.49 180.34 90)
 		(unit 1)
 		(body_style 1)
@@ -23073,6 +22964,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 53.34 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "92980935-63a6-44ee-93cf-af986aeeb149")
+		(property "Reference" "R45"
+			(at 53.34 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 53.34 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 51.562 144.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 53.34 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "44d66fc3-841e-47cf-85b4-6898c73b2e9d")
+		)
+		(pin "1"
+			(uuid "d5bd7b05-321b-44a8-893a-7505718569b1")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 71.12 99.06 0)
 		(unit 1)
@@ -23319,6 +23291,87 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 48.26 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b2efb7e1-17ec-4b14-9a61-dd2a37149e5a")
+		(property "Reference" "R4"
+			(at 48.26 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 48.26 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 46.482 144.78 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 48.26 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "71e37107-de54-4511-ab26-14176f93b22a")
+		)
+		(pin "1"
+			(uuid "d89931f3-813b-4c98-a029-582e34368bc3")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -23945,93 +23998,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "R15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 48.26 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d22eeb1d-92a5-437c-bc8f-2ac5bea03ce8")
-		(property "Reference" "R4"
-			(at 48.26 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4K7"
-			(at 48.26 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 46.482 144.78 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 48.26 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "bab7f746-28f8-4701-9cb1-d993bfa4893f")
-		)
-		(pin "1"
-			(uuid "a0e92464-a7c3-4b35-a30e-a6b28691e40a")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R202")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R4")
 					(unit 1)
 				)
 			)
