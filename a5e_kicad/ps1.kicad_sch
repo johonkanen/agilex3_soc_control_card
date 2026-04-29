@@ -1122,12 +1122,6 @@
 		(uuid "2a62e502-94bd-46fa-b495-13e2529eba65")
 	)
 	(junction
-		(at 218.44 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2a84bbea-5ae4-409c-ab83-1046550e28f0")
-	)
-	(junction
 		(at 205.74 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1390,12 +1384,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b1ecb56-e842-4702-9e56-5b7010608410")
-	)
-	(junction
-		(at 218.44 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "852a0b15-0473-42ff-b3f3-3f397d93e053")
 	)
 	(junction
 		(at 74.93 92.71)
@@ -2623,16 +2611,6 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 101.6) (xy 226.06 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f7b4dea-e64b-4f2a-bff0-294faed6f37e")
-	)
-	(wire
-		(pts
 			(xy 123.19 185.42) (xy 123.19 189.23)
 		)
 		(stroke
@@ -2740,16 +2718,6 @@
 			(type default)
 		)
 		(uuid "6e39dc00-b003-4945-b041-b5a2fdd00da8")
-	)
-	(wire
-		(pts
-			(xy 218.44 109.22) (xy 226.06 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e4d1032-f1bb-4ad4-82ce-0576234bfc04")
 	)
 	(wire
 		(pts
@@ -12929,87 +12897,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
 					(reference "#PWR0257")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 226.06 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ecdeec27-7498-44eb-bcf6-06a006c44ba5")
-		(property "Reference" "C222"
-			(at 226.06 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100N"
-			(at 226.06 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 227.0252 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 226.06 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 226.06 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2b1a58c1-abdd-4b21-a6a9-edb909eb12ac")
-		)
-		(pin "2"
-			(uuid "f0db04e5-8bf6-4acf-8d29-0550cd060bea")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
-					(reference "C222")
 					(unit 1)
 				)
 			)
