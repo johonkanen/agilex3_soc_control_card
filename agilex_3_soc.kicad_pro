@@ -840,7 +840,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "C194,C196,C203-227,R4-5,R7,R45,R47-48,R65,#PWR261-264,#PWR282",
+    "used_designators": "U9,#PWR17-18,#PWR281,#PWR283,Y2,R49-50,C222-223",
     "variants": []
   },
   "sheets": [
