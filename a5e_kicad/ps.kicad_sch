@@ -1046,6 +1046,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "not relevant for this power"
+		(exclude_from_sim no)
+		(at 234.95 138.938 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "622eefaa-14dc-4afa-ab0c-912c63cf950c")
+	)
 	(text "Iout = 12A, FSW = 1500Khz, VIN = 5V"
 		(exclude_from_sim no)
 		(at 160.02 17.78 0)
