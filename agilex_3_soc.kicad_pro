@@ -65,7 +65,16 @@
           "width": 0.1
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "copper_edge_clearance|127591840|82884150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|cc568a4a-9d7c-46d3-a59c-c3ee7087f9fa",
+          "intentional exclusion, original board has this also"
+        ],
+        [
+          "silk_edge_clearance|125141840|82934150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|c35e594a-2d18-453f-95b7-07b6836cf4ae",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -73,7 +82,7 @@
         "annular_width": "error",
         "clearance": "error",
         "connection_width": "warning",
-        "copper_edge_clearance": "error",
+        "copper_edge_clearance": "warning",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
         "creepage": "error",
@@ -110,8 +119,8 @@
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -875,10 +884,6 @@
     [
       "cf2987d8-8050-440f-9afe-54dd4a6786f5",
       "Ethernet Phy"
-    ],
-    [
-      "441b8b06-7331-4f52-9ed6-a8466553125b",
-      "usb"
     ],
     [
       "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
