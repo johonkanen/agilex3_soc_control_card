@@ -1206,12 +1206,6 @@
 		(uuid "3e5f7dbf-633e-452d-9a53-788919fd9ad3")
 	)
 	(junction
-		(at 248.92 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3ee1a5d1-5a2b-4345-a3fc-da3358163c23")
-	)
-	(junction
 		(at 256.54 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1282,12 +1276,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61364996-7b98-4d63-8376-c1432d0a84d8")
-	)
-	(junction
-		(at 233.68 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "615196a4-b404-45d5-bd62-2956b43d05e6")
 	)
 	(junction
 		(at 210.82 125.73)
@@ -1410,12 +1398,6 @@
 		(uuid "8c50124a-9e55-44cd-bdd0-43054fe49e59")
 	)
 	(junction
-		(at 175.26 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d88aa9f-e6be-4534-889d-a7ca4ef76e07")
-	)
-	(junction
 		(at 35.56 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1456,18 +1438,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "96cdaaeb-8973-41e5-ba2d-251fe1ccc9bb")
-	)
-	(junction
-		(at 175.26 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "971587e2-ddef-4b00-b9fc-02fb96e97f60")
-	)
-	(junction
-		(at 248.92 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9c31df85-de81-477c-a018-0e34fd3b0095")
 	)
 	(junction
 		(at 236.22 153.67)
@@ -1548,12 +1518,6 @@
 		(uuid "c0187c50-bf7e-4d7d-bef5-7fbc0e4845ca")
 	)
 	(junction
-		(at 241.3 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c0c5b88a-3db3-43dd-967a-aae54cb5d7db")
-	)
-	(junction
 		(at 266.7 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1588,12 +1552,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cec282f2-2ca6-405e-b96e-7104d32b57bd")
-	)
-	(junction
-		(at 241.3 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d078032d-1b17-4cac-8b16-f833728de64c")
 	)
 	(junction
 		(at 190.5 161.29)
@@ -1636,12 +1594,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da2f34be-b729-4981-989c-c025c381168a")
-	)
-	(junction
-		(at 233.68 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "db01e163-f41e-4c09-afae-34e060fd68e7")
 	)
 	(junction
 		(at 251.46 153.67)
@@ -1974,16 +1926,6 @@
 			(type default)
 		)
 		(uuid "113bb2f6-9a1d-4e63-8e90-4a46b1bd9fc6")
-	)
-	(wire
-		(pts
-			(xy 233.68 125.73) (xy 241.3 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1669a735-3c9e-4e39-afa1-e5a50134f998")
 	)
 	(wire
 		(pts
@@ -2477,16 +2419,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 118.11) (xy 185.42 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53cdcdff-40c1-4f98-8f28-fa80692ea289")
-	)
-	(wire
-		(pts
 			(xy 165.1 147.32) (xy 170.18 147.32)
 		)
 		(stroke
@@ -2617,7 +2549,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 125.73) (xy 233.68 125.73)
+			(xy 226.06 125.73) (xy 256.54 125.73)
 		)
 		(stroke
 			(width 0)
@@ -2657,7 +2589,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 118.11) (xy 233.68 118.11)
+			(xy 226.06 118.11) (xy 256.54 118.11)
 		)
 		(stroke
 			(width 0)
@@ -2837,16 +2769,6 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 118.11) (xy 256.54 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78c25f7b-b9e9-4c3f-b61b-06bbe3feb79e")
-	)
-	(wire
-		(pts
 			(xy 134.62 26.67) (xy 138.43 26.67)
 		)
 		(stroke
@@ -2984,16 +2906,6 @@
 			(type default)
 		)
 		(uuid "82a74659-de6b-4ea6-b0d0-0fa71d3aa09e")
-	)
-	(wire
-		(pts
-			(xy 233.68 118.11) (xy 241.3 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8340a964-61e0-47e9-9f91-949eecb8bc8b")
 	)
 	(wire
 		(pts
@@ -3367,16 +3279,6 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 125.73) (xy 256.54 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aaaa533e-e337-4213-ad97-39edb40c9a8b")
-	)
-	(wire
-		(pts
 			(xy 220.98 147.32) (xy 228.6 147.32)
 		)
 		(stroke
@@ -3444,16 +3346,6 @@
 			(type default)
 		)
 		(uuid "b2ca8c1d-6113-4537-8926-253476378b93")
-	)
-	(wire
-		(pts
-			(xy 170.18 125.73) (xy 175.26 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4dbef68-11fe-4f72-b919-958f151f8524")
 	)
 	(wire
 		(pts
@@ -3557,7 +3449,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 125.73) (xy 185.42 125.73)
+			(xy 170.18 125.73) (xy 185.42 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3577,7 +3469,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 118.11) (xy 175.26 118.11)
+			(xy 170.18 118.11) (xy 185.42 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3734,16 +3626,6 @@
 			(type default)
 		)
 		(uuid "d29cc788-8c4a-4ece-af5c-27820e7eac9c")
-	)
-	(wire
-		(pts
-			(xy 241.3 125.73) (xy 248.92 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d31034ff-297a-4b81-9a23-5378a292c242")
 	)
 	(wire
 		(pts
@@ -4074,16 +3956,6 @@
 			(type default)
 		)
 		(uuid "fa4e6102-1693-4655-9f36-5d26b473b0d7")
-	)
-	(wire
-		(pts
-			(xy 241.3 118.11) (xy 248.92 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbd4f4df-8e3b-478e-805a-d1f8560daf3b")
 	)
 	(wire
 		(pts
@@ -4663,87 +4535,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
 					(reference "C177")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 175.26 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "15211c9e-b2a3-485f-a337-86f460da34a2")
-		(property "Reference" "C194"
-			(at 175.26 119.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22U 6V3"
-			(at 175.26 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 176.2252 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 175.26 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3ae36887-582f-4582-99a1-04aef3f3f99e")
-		)
-		(pin "2"
-			(uuid "591c8212-7e25-49a8-8da8-2a041ae6c431")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
-					(reference "C194")
 					(unit 1)
 				)
 			)
@@ -10431,87 +10222,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 241.3 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a8f6ce97-23d8-442a-88c9-aa89dd214c25")
-		(property "Reference" "C212"
-			(at 241.3 119.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100N"
-			(at 241.3 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 242.2652 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 241.3 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 241.3 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e9a41e29-3481-4d4d-8735-d8aee1bf2969")
-		)
-		(pin "2"
-			(uuid "83436404-02d5-49b0-bfbe-3c80353effeb")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
-					(reference "C212")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:L")
 		(at 116.84 90.17 90)
 		(unit 1)
@@ -11490,87 +11200,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
 					(reference "#PWR0261")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 233.68 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c5879c8a-0fc9-4616-ab23-47421f3c3bb0")
-		(property "Reference" "C211"
-			(at 233.68 119.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100N"
-			(at 233.68 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 234.6452 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 233.68 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f538a62c-2e7b-4d2f-94c3-7da0f02e0092")
-		)
-		(pin "2"
-			(uuid "e38ca3a8-ad0c-403c-b99a-4e3fe8ddf84c")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
-					(reference "C211")
 					(unit 1)
 				)
 			)
@@ -12582,87 +12211,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
 					(reference "C169")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 248.92 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e0cb72a4-b80c-4a29-88cc-dce25c215b39")
-		(property "Reference" "C213"
-			(at 248.92 119.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100N"
-			(at 248.92 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 249.8852 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 248.92 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 248.92 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "42b6a1aa-4c18-4cac-80bc-b38d38aa3a48")
-		)
-		(pin "2"
-			(uuid "3913e422-b84c-4795-b222-b4874d0bfd59")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
-					(reference "C213")
 					(unit 1)
 				)
 			)
