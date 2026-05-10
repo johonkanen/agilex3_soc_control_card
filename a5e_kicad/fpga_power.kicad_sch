@@ -15152,12 +15152,6 @@
 		(uuid "0fc2a3a6-2213-4cc4-a89a-b7cc8d7f4636")
 	)
 	(junction
-		(at 261.62 21.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "141ec348-60a6-4528-ab11-92ce68a500c6")
-	)
-	(junction
 		(at 63.5 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15228,12 +15222,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3006a773-6d0a-48dc-aefb-822a5da4365d")
-	)
-	(junction
-		(at 261.62 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3db0343f-3f5a-45c9-99bc-84c8656c29a5")
 	)
 	(junction
 		(at 162.56 30.48)
@@ -15578,12 +15566,6 @@
 		(uuid "f9cd55fb-0de4-4000-a72f-2502f5c89097")
 	)
 	(junction
-		(at 254 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fae60c3b-1785-4a94-b1b2-7d3661458172")
-	)
-	(junction
 		(at 63.5 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15598,6 +15580,16 @@
 			(type default)
 		)
 		(uuid "00b9ca13-fbea-48bb-a253-25f62b060ab4")
+	)
+	(wire
+		(pts
+			(xy 43.18 113.03) (xy 43.18 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "021f6d5c-d220-4d76-bf9b-bbcd40d85d25")
 	)
 	(wire
 		(pts
@@ -15718,16 +15710,6 @@
 			(type default)
 		)
 		(uuid "0fa4fb55-1879-4b95-91a3-b0d403907c64")
-	)
-	(wire
-		(pts
-			(xy 243.84 67.31) (xy 261.62 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "109e2996-6ed0-4ba9-a2e1-300df90b9218")
 	)
 	(wire
 		(pts
@@ -15868,16 +15850,6 @@
 			(type default)
 		)
 		(uuid "1ec7b382-d057-4e43-9adc-aa1853b7f831")
-	)
-	(wire
-		(pts
-			(xy 243.84 21.59) (xy 261.62 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ece2ce2-8431-40f1-a1eb-ec71c5e35724")
 	)
 	(wire
 		(pts
@@ -16041,7 +16013,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 21.59) (xy 269.24 21.59)
+			(xy 243.84 21.59) (xy 269.24 21.59)
 		)
 		(stroke
 			(width 0)
@@ -16068,6 +16040,16 @@
 			(type default)
 		)
 		(uuid "37056fbe-4035-4fa0-9720-c397b76adc37")
+	)
+	(wire
+		(pts
+			(xy 157.48 109.22) (xy 165.1 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3774c210-803e-45df-a77a-1b32bb11d951")
 	)
 	(wire
 		(pts
@@ -16311,7 +16293,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 67.31) (xy 269.24 67.31)
+			(xy 243.84 67.31) (xy 269.24 67.31)
 		)
 		(stroke
 			(width 0)
@@ -16491,7 +16473,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 92.71) (xy 269.24 92.71)
+			(xy 243.84 92.71) (xy 269.24 92.71)
 		)
 		(stroke
 			(width 0)
@@ -16528,16 +16510,6 @@
 			(type default)
 		)
 		(uuid "6ca938a8-33d0-4081-afc7-61cf36f2a44b")
-	)
-	(wire
-		(pts
-			(xy 149.86 109.22) (xy 165.1 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cdb1c2d-aa25-4fc4-ba0f-8e60db2d28b4")
 	)
 	(wire
 		(pts
@@ -17221,16 +17193,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 92.71) (xy 254 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c19a8e15-9e47-4e6e-a58f-45786cd007bf")
-	)
-	(wire
-		(pts
 			(xy 157.48 50.8) (xy 162.56 50.8)
 		)
 		(stroke
@@ -17508,6 +17470,16 @@
 			(type default)
 		)
 		(uuid "dfba46de-4c93-4b6f-abc4-7334d34cbd49")
+	)
+	(wire
+		(pts
+			(xy 31.75 113.03) (xy 43.18 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0258632-e226-4ea8-abb1-9110cf5e7fd8")
 	)
 	(wire
 		(pts
@@ -17799,16 +17771,6 @@
 		)
 		(uuid "ada3feba-fab7-4e4a-a627-9cd07f928880")
 	)
-	(label "vccadc"
-		(at 157.48 109.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b3a12aca-e70d-40b9-bbb9-5f179c5ddb39")
-	)
 	(label "vccio_6x"
 		(at 55.88 132.08 0)
 		(effects
@@ -17960,93 +17922,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0220")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 261.62 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0f835344-a9d0-49be-a2b7-be30ca88d174")
-		(property "Reference" "C115"
-			(at 261.62 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22U 6V3"
-			(at 261.62 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 262.5852 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 261.62 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "32dcb50f-35f8-4d3d-985e-4eb6597f3548")
-		)
-		(pin "2"
-			(uuid "a59c002c-4796-483c-b892-093ff55c73ac")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C606")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C115")
 					(unit 1)
 				)
 			)
@@ -18301,6 +18176,85 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
+		(at 31.75 113.03 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e9fd2ef-c8aa-486a-aaa1-1f8331acf61e")
+		(property "Reference" "#PWR0215"
+			(at 35.56 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 27.94 113.0299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 31.75 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80ba7b61-3a83-4a17-b5b4-f10a2b1bb2b4")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0215")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
 		(at 243.84 43.18 90)
 		(mirror x)
 		(unit 1)
@@ -18458,93 +18412,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0230")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 261.62 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "41c92739-5682-4175-9440-bcf7f6c32266")
-		(property "Reference" "C114"
-			(at 261.62 45.72 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22U 6V3"
-			(at 261.62 52.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 262.5852 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 261.62 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1e8e651b-038a-4c31-97c6-152c70735d7e")
-		)
-		(pin "2"
-			(uuid "61ccee8e-ef59-4ae0-869a-172afb5dd662")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C604")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C114")
 					(unit 1)
 				)
 			)
@@ -23727,6 +23594,85 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
+		(at 157.48 109.22 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "785f392c-c334-4d93-a93c-8731564d69c9")
+		(property "Reference" "#PWR0214"
+			(at 161.29 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 153.67 109.2199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 157.48 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "47bcb4ba-fd29-42bd-894c-ec80041eac23")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR0214")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
 		(at 124.46 96.52 270)
 		(unit 1)
 		(body_style 1)
@@ -24724,93 +24670,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 254 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "afc073af-fbc4-43ea-ba43-1530a31a2eab")
-		(property "Reference" "C112"
-			(at 254 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22U 6V3"
-			(at 254 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 254.9652 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 254 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ffe2c488-a47c-4070-9585-5d6cb3fbdebb")
-		)
-		(pin "2"
-			(uuid "2300bb1e-cf81-496b-acc6-05fd9fb4c863")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C607")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+1V1")
 		(at 157.48 22.86 90)
 		(mirror x)
@@ -25143,93 +25002,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0223")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 261.62 25.4 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c4d11a8e-c45c-4bb4-b946-9aa4772a183c")
-		(property "Reference" "C113"
-			(at 261.62 22.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22U 6V3"
-			(at 261.62 29.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 262.5852 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 261.62 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e4a49349-81ee-4231-9781-8787db32687b")
-		)
-		(pin "2"
-			(uuid "2faa28f2-71bb-4979-a5bd-ed2175b32da7")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C602")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "C113")
 					(unit 1)
 				)
 			)
