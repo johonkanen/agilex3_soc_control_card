@@ -1296,7 +1296,7 @@
 		(uuid "65c87154-f319-4cb1-878f-d1dba5d24546")
 	)
 	(junction
-		(at 27.94 48.26)
+		(at 27.94 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6974b513-b245-48b6-929a-a2df55a89513")
@@ -1396,6 +1396,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8c50124a-9e55-44cd-bdd0-43054fe49e59")
+	)
+	(junction
+		(at 35.56 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e7df273-e5d4-4d85-9952-de4bb9d5e093")
 	)
 	(junction
 		(at 35.56 91.44)
@@ -1779,7 +1785,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 48.26) (xy 35.56 81.28)
+			(xy 35.56 74.93) (xy 35.56 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2429,7 +2435,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 48.26) (xy 27.94 81.28)
+			(xy 27.94 74.93) (xy 27.94 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3279,6 +3285,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 74.93) (xy 50.8 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad431ebb-04d7-4f39-875f-de260c9dca66")
+	)
+	(wire
+		(pts
 			(xy 220.98 147.32) (xy 228.6 147.32)
 		)
 		(stroke
@@ -3479,6 +3495,16 @@
 	)
 	(wire
 		(pts
+			(xy 35.56 74.93) (xy 50.8 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c37e16c2-2ddf-4c77-b4b3-c55fb5d6ffd0")
+	)
+	(wire
+		(pts
 			(xy 39.37 168.91) (xy 39.37 179.07)
 		)
 		(stroke
@@ -3619,7 +3645,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 48.26) (xy 35.56 48.26)
+			(xy 27.94 74.93) (xy 35.56 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3959,7 +3985,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 48.26) (xy 27.94 48.26)
+			(xy 22.86 74.93) (xy 27.94 74.93)
 		)
 		(stroke
 			(width 0)
@@ -9563,6 +9589,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 50.8 85.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8b5f2d8d-bb0c-4659-bf1f-8e284460cabb")
+		(property "Reference" "C161"
+			(at 50.8 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22U 6V3"
+			(at 50.8 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 51.7652 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 50.8 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "919b0cc4-432d-474a-9b44-57ae022cd9f4")
+		)
+		(pin "2"
+			(uuid "2d15e55e-eaf4-4893-9ed9-5e4c9d99694a")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
+					(reference "C161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+1V1")
 		(at 170.18 109.22 90)
 		(mirror x)
@@ -10806,7 +10913,7 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
-		(at 22.86 48.26 90)
+		(at 22.86 74.93 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10817,7 +10924,7 @@
 		(fields_autoplaced yes)
 		(uuid "bc76f1e7-24ce-4444-b952-88731c1f39cf")
 		(property "Reference" "#PWR0242"
-			(at 26.67 48.26 0)
+			(at 26.67 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10828,7 +10935,7 @@
 			)
 		)
 		(property "Value" "5V0"
-			(at 19.05 48.2599 90)
+			(at 19.05 74.9299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10839,7 +10946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 48.26 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10850,7 +10957,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 48.26 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10861,7 +10968,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 22.86 48.26 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
