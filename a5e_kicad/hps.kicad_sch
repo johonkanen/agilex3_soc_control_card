@@ -8,252 +8,6 @@
 		(rev "0.1")
 	)
 	(lib_symbols
-		(symbol "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "IC"
-				(at 29.21 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "74AVC1T45GM-Q100H"
-				(at 29.21 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "PESD3V3L5UF115"
-				(at 29.21 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-				(at 29.21 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "0.5"
-				(at 29.21 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" ""
-				(at 29.21 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" ""
-				(at 29.21 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Nexperia"
-				(at 29.21 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-				(at 29.21 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "74AVC1T45GM-Q100H_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 27.94 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "VCC(A)"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 -5.08 180)
-					(length 5.08)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 -2.54 180)
-					(length 5.08)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 0 180)
-					(length 5.08)
-					(name "VCC(B)"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:Micro_SD_Card"
 			(pin_names
 				(offset 1.016)
@@ -15964,30 +15718,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(junction
-		(at 87.63 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02052e17-e9e7-4b09-9b04-27bd68164538")
-	)
-	(junction
-		(at 46.99 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "31fda15e-388f-4e7d-9ea9-20689e954006")
-	)
-	(junction
-		(at 49.53 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9dae8ed7-71e6-4156-93fd-4f144e162e45")
-	)
-	(junction
-		(at 87.63 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c2640f09-1af8-4cff-a0c2-2372bc90bead")
-	)
 	(no_connect
 		(at 182.88 146.05)
 		(uuid "155913f6-f351-4a1f-a06a-99f7492f8962")
@@ -16581,16 +16311,6 @@
 		)
 		(uuid "0537373d-fc90-4c8f-9c7d-40d0ad6157b1")
 	)
-	(wire
-		(pts
-			(xy 87.63 135.89) (xy 87.63 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "070535f5-3142-4da6-8cad-2e20a46508ef")
-	)
 	(bus
 		(pts
 			(xy 142.24 120.65) (xy 142.24 123.19)
@@ -16610,16 +16330,6 @@
 			(type default)
 		)
 		(uuid "09d659a0-3390-4905-9bc9-cf68ae813134")
-	)
-	(wire
-		(pts
-			(xy 85.09 158.75) (xy 87.63 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ab56dc2-4145-4bf9-bd6e-580c553411e6")
 	)
 	(wire
 		(pts
@@ -16670,16 +16380,6 @@
 			(type default)
 		)
 		(uuid "1047247f-ce80-418e-805a-adb00a15aeae")
-	)
-	(wire
-		(pts
-			(xy 90.17 140.97) (xy 90.17 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13f8963d-169f-4d34-b71c-c95fa4c0d1cb")
 	)
 	(bus
 		(pts
@@ -16803,16 +16503,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 138.43) (xy 49.53 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26203e3c-f9d4-40fe-ba5f-495430880707")
-	)
-	(wire
-		(pts
 			(xy 144.78 125.73) (xy 182.88 125.73)
 		)
 		(stroke
@@ -16840,16 +16530,6 @@
 			(type default)
 		)
 		(uuid "2cadb850-d400-4586-b24c-d90f055ba063")
-	)
-	(wire
-		(pts
-			(xy 49.53 138.43) (xy 49.53 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d4ef118-4352-40ce-9108-da113ce62829")
 	)
 	(wire
 		(pts
@@ -16910,16 +16590,6 @@
 			(type default)
 		)
 		(uuid "3bc34620-dace-48ed-97fb-df2c084b996b")
-	)
-	(wire
-		(pts
-			(xy 100.33 128.27) (xy 100.33 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c5357eb-7f90-40e9-9cd4-aff3afa1128b")
 	)
 	(bus
 		(pts
@@ -17263,16 +16933,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 161.29) (xy 52.07 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fc26c24-297d-471b-ba65-ca31262f9b5f")
-	)
-	(wire
-		(pts
 			(xy 15.24 69.85) (xy 27.94 69.85)
 		)
 		(stroke
@@ -17353,16 +17013,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 140.97) (xy 90.17 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "77f73ea9-93ba-4d64-b0ec-54aea397ee5f")
-	)
-	(wire
-		(pts
 			(xy 152.4 41.91) (xy 182.88 41.91)
 		)
 		(stroke
@@ -17403,16 +17053,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 158.75) (xy 87.63 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f0ed1f6-9ce7-494f-bba2-4ada435f2773")
-	)
-	(wire
-		(pts
 			(xy 147.32 151.13) (xy 182.88 151.13)
 		)
 		(stroke
@@ -17433,26 +17073,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 140.97) (xy 46.99 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8082a8bf-82fe-492b-b892-7d6c94412efc")
-	)
-	(wire
-		(pts
-			(xy 85.09 138.43) (xy 87.63 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80b7d1f2-76e4-4d58-ba4a-548bbe7824d5")
-	)
-	(wire
-		(pts
 			(xy 134.62 78.74) (xy 132.08 78.74)
 		)
 		(stroke
@@ -17460,16 +17080,6 @@
 			(type default)
 		)
 		(uuid "827638f5-d61c-4483-a200-1e74b4613bd5")
-	)
-	(wire
-		(pts
-			(xy 52.07 140.97) (xy 46.99 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87925750-1da2-42bb-b49e-f6ddd163bf73")
 	)
 	(wire
 		(pts
@@ -17671,16 +17281,6 @@
 		)
 		(uuid "a3cae45a-ab25-496e-b456-d12c3b29e458")
 	)
-	(wire
-		(pts
-			(xy 39.37 143.51) (xy 52.07 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a593efb5-2816-42ee-8bcd-9db91de46a46")
-	)
 	(bus
 		(pts
 			(xy 149.86 39.37) (xy 149.86 41.91)
@@ -17743,16 +17343,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 130.81) (xy 97.79 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b78b4af9-dedc-4fc7-ba8e-052218190a50")
-	)
-	(wire
-		(pts
 			(xy 147.32 67.31) (xy 182.88 67.31)
 		)
 		(stroke
@@ -17780,16 +17370,6 @@
 			(type default)
 		)
 		(uuid "b9e36ff9-17a1-4393-98dd-2de76004693f")
-	)
-	(wire
-		(pts
-			(xy 46.99 158.75) (xy 46.99 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba5348e1-e40e-43a7-9ca0-a03a00a47e6c")
 	)
 	(wire
 		(pts
@@ -17851,16 +17431,6 @@
 		)
 		(uuid "c0cf82ee-8318-439c-b9a4-3014bf62afaf")
 	)
-	(wire
-		(pts
-			(xy 52.07 156.21) (xy 49.53 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0d1e8d6-6d5e-4a7f-8348-c18dc88485ac")
-	)
 	(bus
 		(pts
 			(xy 144.78 77.47) (xy 144.78 80.01)
@@ -17891,16 +17461,6 @@
 		)
 		(uuid "c3024a64-28c4-4eac-8c9d-26f98b38b171")
 	)
-	(wire
-		(pts
-			(xy 46.99 158.75) (xy 52.07 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3778692-4f68-47f6-818f-07f552519029")
-	)
 	(bus
 		(pts
 			(xy 144.78 82.55) (xy 144.78 85.09)
@@ -17930,36 +17490,6 @@
 			(type default)
 		)
 		(uuid "c81d8f0b-90bc-482e-a66a-95c6e6bad6c8")
-	)
-	(wire
-		(pts
-			(xy 97.79 143.51) (xy 85.09 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8369fcd-5c66-4a2d-8204-ddf885b0744d")
-	)
-	(wire
-		(pts
-			(xy 52.07 138.43) (xy 49.53 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9ba0531-e57d-4e4c-8105-1e4f87f5d810")
-	)
-	(wire
-		(pts
-			(xy 85.09 156.21) (xy 87.63 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca614f8f-dbac-425c-8e21-fcb3fcc5b36d")
 	)
 	(bus
 		(pts
@@ -18010,16 +17540,6 @@
 			(type default)
 		)
 		(uuid "cdf06150-091e-4f27-83bd-bd9556d61a1a")
-	)
-	(wire
-		(pts
-			(xy 87.63 138.43) (xy 87.63 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cfd1f37f-78f2-4761-9d56-8576477adb46")
 	)
 	(bus
 		(pts
@@ -18090,16 +17610,6 @@
 			(type default)
 		)
 		(uuid "dac58119-43fb-4093-aa38-154c9dbaed95")
-	)
-	(wire
-		(pts
-			(xy 100.33 161.29) (xy 85.09 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db486a5f-c943-4657-a54e-721b72fe89b3")
 	)
 	(bus
 		(pts
@@ -18936,17 +18446,6 @@
 		)
 		(uuid "300c833c-a2a3-41cd-a1a4-14b43eac717f")
 	)
-	(hierarchical_label "hps_uart_rx"
-		(shape input)
-		(at 39.37 143.51 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "396ebc4f-bf63-4598-bcfe-cb56561e347d")
-	)
 	(hierarchical_label "{hps_i2c}"
 		(shape bidirectional)
 		(at 97.79 26.67 180)
@@ -18979,17 +18478,6 @@
 			(justify right)
 		)
 		(uuid "ba3953a5-1f4d-4316-854b-9d4a28412cd6")
-	)
-	(hierarchical_label "hps_uart_tx"
-		(shape output)
-		(at 39.37 161.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f7e7acf0-d78e-4dc3-a410-cba0522ad97e")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -19070,250 +18558,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
 					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H")
-		(at 52.07 138.43 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14d083d4-9ad6-4691-8a1e-997fee5d896d")
-		(property "Reference" "IC3"
-			(at 68.58 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74AVC1T45GM-Q100H"
-			(at 68.58 133.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 233.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-			(at 81.28 333.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-			(at 52.07 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.5"
-			(at 81.28 533.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 81.28 633.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 81.28 733.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Nexperia"
-			(at 81.28 833.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-			(at 81.28 933.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "6"
-			(uuid "e07d5982-0df3-4c14-a767-7ba6607728af")
-		)
-		(pin "2"
-			(uuid "a9bc99a6-acce-4cde-9b07-cd34b6977bcf")
-		)
-		(pin "3"
-			(uuid "e72aca4b-73e3-4859-8802-159f7b474a18")
-		)
-		(pin "5"
-			(uuid "64a6a19f-c712-4852-a9de-5a8902a32917")
-		)
-		(pin "1"
-			(uuid "77f95335-7272-4b41-a828-ca5bf3be6f04")
-		)
-		(pin "4"
-			(uuid "11945028-93e3-406f-8c1e-c82f6287ac2f")
-		)
-		(instances
-			(project ""
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "IC301")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "IC3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 46.99 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3bee633d-7bb7-404c-b842-1fc4042d8ffe")
-		(property "Reference" "#PWR044"
-			(at 46.99 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 46.99 171.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 46.99 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 46.99 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 46.99 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "96dfafe4-d355-40cc-8b4b-bd6d9ffe0d84")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR0308")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -19476,249 +18720,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
 					(reference "#PWR042")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 87.63 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "568af13f-122a-4410-a64b-1d52b50d6eb0")
-		(property "Reference" "#PWR047"
-			(at 87.63 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 87.63 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 87.63 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "72102aa7-98d9-4fca-85f2-586c692259d7")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR0306")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR047")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74AVC1T45GM-Q100H:74AVC1T45GM-Q100H")
-		(at 52.07 156.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6aca2f33-7bde-48b1-b30f-994422592fe5")
-		(property "Reference" "IC4"
-			(at 68.58 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "74AVC1T45GM-Q100H"
-			(at 68.58 151.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 251.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74AVC1T45_Q100.pdf"
-			(at 81.28 351.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "74AVC1T45-Q100 - Dual-supply voltage level translator/transceiver; 3-state@en-us"
-			(at 52.07 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "0.5"
-			(at 81.28 551.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" ""
-			(at 81.28 651.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 81.28 751.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Nexperia"
-			(at 81.28 851.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "74AVC1T45GM-Q100H"
-			(at 81.28 951.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "1"
-			(uuid "18614b4a-4dc7-411c-82ad-348b96f80712")
-		)
-		(pin "6"
-			(uuid "2483c786-c922-49bb-896a-af68524618ff")
-		)
-		(pin "4"
-			(uuid "dd38f01f-201c-4cdd-b57a-c29a967e02dc")
-		)
-		(pin "3"
-			(uuid "55ccf5cf-2f2c-497c-9bdf-d92f0ff124b6")
-		)
-		(pin "2"
-			(uuid "c24f8fcd-f6ef-4188-800e-23f2fb0f70cb")
-		)
-		(pin "5"
-			(uuid "f0ac00c5-e1ef-4733-8429-1acd11d073c7")
-		)
-		(instances
-			(project ""
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "IC302")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "IC4")
 					(unit 1)
 				)
 			)
@@ -19960,90 +18961,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 166.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e5b71e5-a990-40af-a68a-46c7089b6c48")
-		(property "Reference" "#PWR048"
-			(at 90.17 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 171.45 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "25d0a787-c9cf-4153-ad58-3ea13a6989af")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR0309")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR048")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 53.34 121.92 0)
 		(unit 1)
 		(body_style 1)
@@ -20115,90 +19032,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
 					(reference "#PWR058")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 49.53 135.89 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d96f034a-ca66-4a8e-9dcb-4ea4dbfcf4dd")
-		(property "Reference" "#PWR046"
-			(at 49.53 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3V3"
-			(at 49.53 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 49.53 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d812b46e-191f-4765-a6f4-189cbc906baf")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR0307")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
-					(reference "#PWR046")
 					(unit 1)
 				)
 			)
