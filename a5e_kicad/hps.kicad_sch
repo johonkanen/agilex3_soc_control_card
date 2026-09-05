@@ -18642,6 +18642,135 @@
 		)
 	)
 	(symbol
+		(lib_id "agilex_5_lib:TXS0206A")
+		(at 62.23 158.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d2835ee-359b-43a7-9d8c-310d0020a113")
+		(property "Reference" "U13"
+			(at 71.9933 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 62.23 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_BGA:Texas_YFP0020_DSBGA-20_1.588x1.988mm_Layout4x5_P0.4mm"
+			(at 62.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 62.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "A3"
+			(uuid "ed5a0e7d-6459-4da5-a782-c61042a786e7")
+		)
+		(pin "A2"
+			(uuid "60511479-0d5a-48dc-873d-db37128dbd98")
+		)
+		(pin "A1"
+			(uuid "016dbd5c-972e-4313-96db-22c0568b0daa")
+		)
+		(pin "B4"
+			(uuid "d6f30af3-ffd2-463e-8367-6a066247d5ac")
+		)
+		(pin "C4"
+			(uuid "1662ff32-fbe2-4c09-8689-716a031e4d4b")
+		)
+		(pin "C3"
+			(uuid "670c7b8c-e33d-49b3-a3d8-6ceba8a7b9f5")
+		)
+		(pin "D1"
+			(uuid "4ef9a35c-23dc-40a0-8370-cb5dd5e7f25b")
+		)
+		(pin "D3"
+			(uuid "48809bf6-477e-40b2-beaa-b8582ffec1a1")
+		)
+		(pin "E1"
+			(uuid "00510f17-a1f8-46d3-a768-e5d496a24fe4")
+		)
+		(pin "E2"
+			(uuid "35504a88-df16-4397-81b7-a20af199f72f")
+		)
+		(pin "A4"
+			(uuid "4ffa2a6b-99c6-4eae-b1ea-557e5892666d")
+		)
+		(pin "B3"
+			(uuid "1040363a-92fe-4296-ba70-ace95bf0f7a4")
+		)
+		(pin "B1"
+			(uuid "d33c7100-45a0-4ff3-9c4c-530a20a7df0a")
+		)
+		(pin "C1"
+			(uuid "271cd8a4-ff46-4abe-bc94-5897fbd3f815")
+		)
+		(pin "D4"
+			(uuid "72e1685d-4341-4838-8168-1fc9a30dbdd5")
+		)
+		(pin "D2"
+			(uuid "8ac211e7-29f1-432b-ae49-eb6b07516de1")
+		)
+		(pin "C2"
+			(uuid "fdbf2577-f316-45c4-8b34-90605fcf9da3")
+		)
+		(pin "E4"
+			(uuid "4a15c4cb-2487-408d-beb9-81768b345abf")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/1bba180f-a717-40d4-b2d6-e5a7b998021f"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 87.63 48.26 0)
 		(unit 1)
