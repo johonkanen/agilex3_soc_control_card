@@ -2426,7 +2426,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Oscillator:ASV-xxxMHz")
+		(lib_id "agilex_5_lib:SIT8924BA-73-18N-25.000000")
 		(at 107.95 109.22 0)
 		(unit 1)
 		(body_style 1)
@@ -2447,7 +2447,7 @@
 				)
 			)
 		)
-		(property "Value" "ASV-xxxMHz"
+		(property "Value" "SIT8924BA-73-18N-25.000000"
 			(at 120.65 105.3398 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2457,33 +2457,33 @@
 				)
 			)
 		)
-		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm"
+		(property "Footprint" "agilex_lib:SIT8924_2520_4Pin_2.5x2.0mm"
 			(at 125.73 118.11 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Datasheet" "http://www.abracon.com/Oscillators/ASV.pdf"
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/371/SiT8924-datasheet-1839508.pdf"
 			(at 105.41 109.22 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" "3.3V HCMOS SMD Crystal Clock Oscillator, Abracon"
+		(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, NC pin1 (always enabled)"
 			(at 107.95 109.22 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2491,16 +2491,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "77398b57-9462-42ac-8bf2-6a0f4d594d37")
-		)
-		(pin "3"
-			(uuid "779f0038-ebc5-4bb4-a618-eecc75cd4ff1")
-		)
-		(pin "4"
-			(uuid "4d7ee999-a50d-4e12-b48a-2e320cdf266b")
+			(uuid "cee87871-55aa-4e0d-8afd-6f8086b50b84")
 		)
 		(pin "2"
-			(uuid "83bb2500-0b93-40c6-8337-784e5ba32154")
+			(uuid "6faad17c-b487-49f0-b567-c39f4375b391")
+		)
+		(pin "3"
+			(uuid "f09d4541-40d6-406e-b791-f911f13d5877")
+		)
+		(pin "4"
+			(uuid "b594e226-e538-498c-b7b7-f1aeb0c919c4")
 		)
 		(instances
 			(project "agilex_3_soc"
@@ -2511,6 +2511,7 @@
 			)
 		)
 	)
+
 	(symbol
 		(lib_id "Device:R")
 		(at 120.65 54.61 90)
@@ -2592,7 +2593,7 @@
 		)
 	)
 	(symbol
-		(lib_id "agilex_5_lib:XLL7")
+		(lib_id "agilex_5_lib:AX3HAF1-100.0000")
 		(at 95.25 57.15 0)
 		(unit 1)
 		(body_style 1)
@@ -2611,10 +2612,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "AX3HAF1-100.0000"
 			(at 95.25 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2624,56 +2624,56 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:XL7"
+		(property "Footprint" "agilex_lib:AX3_3225_6Pin_3.2x2.5mm"
 			(at 95.25 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://abracon.com/datasheets/AX3.pdf"
 			(at 95.25 57.15 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100MHz HCSL differential XO, 3.3V, Abracon ClearClock AX3"
 			(at 95.25 57.15 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "4"
-			(uuid "a3fe9850-7293-4d10-9198-6d292b2a05ac")
-		)
-		(pin "5"
-			(uuid "9f7db578-287a-4d99-925c-dacfe42d9497")
-		)
-		(pin "6"
-			(uuid "49215e32-2594-4b46-9085-4826378026b4")
-		)
-		(pin "2"
-			(uuid "23f2635c-51f9-4a0f-bc6a-90775310f7e9")
-		)
-		(pin "3"
-			(uuid "bc536280-978e-4eca-9bc3-3ce2a600458b")
 		)
 		(pin "1"
-			(uuid "442ffcde-9e86-4b79-9370-4fd7eaee6044")
+			(uuid "5a049845-ee3c-4d3f-9e76-c8cc38838ec2")
+		)
+		(pin "2"
+			(uuid "86aca3a1-5a9d-4305-bf82-4944fa6a86dd")
+		)
+		(pin "3"
+			(uuid "414bfd42-d4a5-48dd-a6a3-f6ce10088ba9")
+		)
+		(pin "4"
+			(uuid "3e11cdc5-6963-4508-b1d7-ad1602853594")
+		)
+		(pin "5"
+			(uuid "45015ce0-754d-4852-8f3f-cf5d5a548cc3")
+		)
+		(pin "6"
+			(uuid "07722899-7f23-4dba-9abd-995488c6c10b")
 		)
 		(instances
 			(project "agilex_3_soc"
@@ -2684,6 +2684,7 @@
 			)
 		)
 	)
+
 	(symbol
 		(lib_id "power:GND")
 		(at 95.25 72.39 0)
@@ -2842,5 +2843,31 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 83.82 59.69) (xy 83.82 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91d033d1-cb12-469b-9aa7-45b06f67a423")
+	)
+	(wire
+		(pts
+			(xy 83.82 48.26) (xy 95.25 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "218767a4-c75a-4802-83e4-8bbfd51edfe0")
+	)
+	(junction
+		(at 95.25 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab2bcf87-1c1a-4e49-9da5-3143a17b7c3f")
 	)
 )

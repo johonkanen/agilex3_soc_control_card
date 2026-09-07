@@ -15463,6 +15463,370 @@
 			)
 			(embedded_fonts no)
 		)
+(symbol "agilex_5_lib:NXS0506GU"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NXS0506GUX"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "agilex_lib:NXS0506GU_XQFN16_1.8x2.6mm_P0.4mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NXS0506.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "SD 3.0 auto-direction 6-channel dual-supply level translator (CLK+CMD+DAT0-3), XQFN16 - no CD/WP passthrough (card detect must be handled separately)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "agilex_5_lib:NXS0506GU_0_1"
+				(rectangle
+					(start -12.7 10.16)
+					(end 12.7 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "agilex_5_lib:NXS0506GU_1_1"
+				(pin input line
+					(at -15.24 7.62 0)
+					(length 2.54)
+					(name "CLKA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "CMDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "DAT0A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 0 0)
+					(length 2.54)
+					(name "DAT1A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -2.54 0)
+					(length 2.54)
+					(name "DAT2A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -5.08 0)
+					(length 2.54)
+					(name "DAT3A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "CLKB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "CMDB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "DAT0B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "DAT1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "DAT2B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(name "DAT3B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 12.7 270)
+					(length 2.54)
+					(name "VCCA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 3.81 12.7 270)
+					(length 2.54)
+					(name "VCCB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at 3.81 -12.7 90)
+					(length 2.54)
+					(name "CLKFB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power global)
 			(pin_numbers
@@ -18642,7 +19006,7 @@
 		)
 	)
 	(symbol
-		(lib_id "agilex_5_lib:TXS0206A")
+		(lib_id "agilex_5_lib:NXS0506GU")
 		(at 62.23 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -18661,11 +19025,10 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" ""
-			(at 62.23 158.75 0)
+		(property "Value" "NXS0506GUX"
+			(at 62.23 175 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18674,18 +19037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_BGA:Texas_YFP0020_DSBGA-20_1.588x1.988mm_Layout4x5_P0.4mm"
-			(at 62.23 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
+		(property "Footprint" "agilex_lib:NXS0506GU_XQFN16_1.8x2.6mm_P0.4mm"
 			(at 62.23 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -18696,7 +19048,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/NXS0506.pdf"
 			(at 62.23 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -18707,59 +19059,64 @@
 				)
 			)
 		)
-		(pin "A3"
-			(uuid "ed5a0e7d-6459-4da5-a782-c61042a786e7")
+		(property "Description" "SD 3.0 auto-direction 6-channel dual-supply level translator (CLK+CMD+DAT0-3), XQFN16 - no CD/WP passthrough"
+			(at 62.23 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "A2"
-			(uuid "60511479-0d5a-48dc-873d-db37128dbd98")
+		(pin "1"
+			(uuid "50054de6-0823-4483-97b3-a590edecbc82")
 		)
-		(pin "A1"
-			(uuid "016dbd5c-972e-4313-96db-22c0568b0daa")
+		(pin "2"
+			(uuid "784e3536-3f0f-4cb7-a2ee-3b482d141096")
 		)
-		(pin "B4"
-			(uuid "d6f30af3-ffd2-463e-8367-6a066247d5ac")
+		(pin "3"
+			(uuid "f2a7238c-52b2-4eb0-b5fd-89ff0327375b")
 		)
-		(pin "C4"
-			(uuid "1662ff32-fbe2-4c09-8689-716a031e4d4b")
+		(pin "4"
+			(uuid "6ad2f50d-b1d3-4dbb-87d3-deb6c026cda2")
 		)
-		(pin "C3"
-			(uuid "670c7b8c-e33d-49b3-a3d8-6ceba8a7b9f5")
+		(pin "5"
+			(uuid "617a8804-f117-4a74-a214-71e8250b0767")
 		)
-		(pin "D1"
-			(uuid "4ef9a35c-23dc-40a0-8370-cb5dd5e7f25b")
+		(pin "6"
+			(uuid "3d4620cf-4bf4-460d-bbfb-2326f0fce093")
 		)
-		(pin "D3"
-			(uuid "48809bf6-477e-40b2-beaa-b8582ffec1a1")
+		(pin "7"
+			(uuid "572ebc99-923c-4770-9d3e-45ef0ffe639d")
 		)
-		(pin "E1"
-			(uuid "00510f17-a1f8-46d3-a768-e5d496a24fe4")
+		(pin "8"
+			(uuid "51365c2b-d4dd-48f1-9e8c-aff775858847")
 		)
-		(pin "E2"
-			(uuid "35504a88-df16-4397-81b7-a20af199f72f")
+		(pin "9"
+			(uuid "7e4b60be-1aa2-4866-9536-88f871bc05b8")
 		)
-		(pin "A4"
-			(uuid "4ffa2a6b-99c6-4eae-b1ea-557e5892666d")
+		(pin "10"
+			(uuid "a34e1cd6-1ab4-4de1-bdb2-2c6958e33a60")
 		)
-		(pin "B3"
-			(uuid "1040363a-92fe-4296-ba70-ace95bf0f7a4")
+		(pin "11"
+			(uuid "c5f364f5-53a6-4ecd-a8cf-a71980d5bd89")
 		)
-		(pin "B1"
-			(uuid "d33c7100-45a0-4ff3-9c4c-530a20a7df0a")
+		(pin "12"
+			(uuid "d136526d-4c7e-4f98-96d1-729c07e51229")
 		)
-		(pin "C1"
-			(uuid "271cd8a4-ff46-4abe-bc94-5897fbd3f815")
+		(pin "13"
+			(uuid "f9f8dd58-8365-440e-937b-9edc889dc621")
 		)
-		(pin "D4"
-			(uuid "72e1685d-4341-4838-8168-1fc9a30dbdd5")
+		(pin "14"
+			(uuid "4e679036-cf0a-490d-9f52-68119b27260c")
 		)
-		(pin "D2"
-			(uuid "8ac211e7-29f1-432b-ae49-eb6b07516de1")
+		(pin "15"
+			(uuid "590a6059-630a-4d76-a84b-047b69bdcc20")
 		)
-		(pin "C2"
-			(uuid "fdbf2577-f316-45c4-8b34-90605fcf9da3")
-		)
-		(pin "E4"
-			(uuid "4a15c4cb-2487-408d-beb9-81768b345abf")
+		(pin "16"
+			(uuid "6a7fc930-ac07-4613-b060-b7b30f27e2fc")
 		)
 		(instances
 			(project "agilex_3_soc"
@@ -18770,6 +19127,7 @@
 			)
 		)
 	)
+
 	(symbol
 		(lib_id "power:+3V3")
 		(at 87.63 48.26 0)
