@@ -45694,7 +45694,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "agilex_lib:SIT8924_2520_4Pin_2.5x2.0mm"
+			(property "Footprint" "Oscillator:Oscillator_SMD_SiT_PQFN-4Pin_2.0x1.6mm"
 				(at 17.78 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -45855,7 +45855,7 @@
 					)
 				)
 			)
-			(property "Footprint" "agilex_lib:AX3_3225_6Pin_3.2x2.5mm"
+			(property "Footprint" "Oscillator:Oscillator_SMD_SiTime_SiT9121-6Pin_3.2x2.5mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
