@@ -1006,7 +1006,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:SIT8924BA-73-18N-25.000000_0_1"
+			(symbol "SIT8924BA-73-18N-25.000000_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -1032,7 +1032,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:SIT8924BA-73-18N-25.000000_1_1"
+			(symbol "SIT8924BA-73-18N-25.000000_1_1"
 				(pin no_connect line
 					(at -7.62 0 0)
 					(length 2.54)
@@ -1052,7 +1052,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 7.62 270)
+					(at 0 -7.62 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1088,7 +1088,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -7.62 90)
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "VDD"
 						(effects
@@ -1167,7 +1167,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:AX3HAF1-100.0000_0_1"
+			(symbol "AX3HAF1-100.0000_0_1"
 				(rectangle
 					(start -8.89 6.35)
 					(end 8.89 -6.35)
@@ -1193,7 +1193,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:AX3HAF1-100.0000_1_1"
+			(symbol "AX3HAF1-100.0000_1_1"
 				(pin input line
 					(at -11.43 2.54 0)
 					(length 2.54)
@@ -1231,7 +1231,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 8.89 270)
+					(at 0 -8.89 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1285,7 +1285,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -8.89 90)
+					(at 0 8.89 270)
 					(length 2.54)
 					(name "VDD"
 						(effects
@@ -3209,7 +3209,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 59.69) (xy 83.82 48.26)
+			(xy 83.82 54.61) (xy 83.82 48.26)
 		)
 		(stroke
 			(width 0)
