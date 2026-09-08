@@ -15354,7 +15354,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:MX25U25645G_0_1"
+			(symbol "MX25U25645G_0_1"
 				(rectangle
 					(start -20.32 5.08)
 					(end 20.32 -5.08)
@@ -15367,7 +15367,7 @@
 					)
 				)
 			)
-			(symbol "agilex_5_lib:MX25U25645G_1_1"
+			(symbol "MX25U25645G_1_1"
 				(pin power_in line
 					(at 0 7.62 270)
 					(length 2.54)
@@ -23995,7 +23995,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 125 32.62 0)
+		(at 125 17.38 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24005,7 +24005,7 @@
 		(dnp no)
 		(uuid "cd6cf3bd-8e06-45b8-bcd6-5a1a8062ee20")
 		(property "Reference" "#PWR022"
-			(at 128 32.62 0)
+			(at 128 17.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24016,7 +24016,7 @@
 			)
 		)
 		(property "Value" "1V8"
-			(at 125 36 0)
+			(at 125 20.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24026,7 +24026,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125 32.62 0)
+			(at 125 17.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24037,7 +24037,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125 32.62 0)
+			(at 125 17.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24048,7 +24048,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 125 32.62 0)
+			(at 125 17.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24072,7 +24072,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 105.95 17.38 0)
+		(at 105.95 32.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24082,7 +24082,7 @@
 		(dnp no)
 		(uuid "ce3bee07-9d43-4d69-b8d0-fbd80b4b06b3")
 		(property "Reference" "#PWR023"
-			(at 109 17.38 0)
+			(at 109 32.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24093,7 +24093,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 105.95 14 0)
+			(at 105.95 29.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24103,7 +24103,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 105.95 17.38 0)
+			(at 105.95 32.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24114,7 +24114,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.95 17.38 0)
+			(at 105.95 32.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24125,7 +24125,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.95 17.38 0)
+			(at 105.95 32.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24147,7 +24147,7 @@
 			)
 		)
 	)
-	(label "~{qspi_rst_n}"
+	(label "qspi_D2"
 		(at 102.14 28.81 0)
 		(effects
 			(font
@@ -24157,7 +24157,7 @@
 		)
 		(uuid "6c2d9fe3-9db5-48f5-afd5-be7781adbecc")
 	)
-	(label "qspi_CLK"
+	(label "~{qspi_CS}"
 		(at 102.14 26.27 0)
 		(effects
 			(font
@@ -24167,7 +24167,7 @@
 		)
 		(uuid "57c924ef-4894-453a-b77e-4bd67cd2bd00")
 	)
-	(label "~{qspi_CS}"
+	(label "qspi_CLK"
 		(at 102.14 23.73 0)
 		(effects
 			(font
@@ -24177,7 +24177,7 @@
 		)
 		(uuid "c0e1dc29-96c9-4ab9-a601-4267315d7c1a")
 	)
-	(label "qspi_D2"
+	(label "~{qspi_rst_n}"
 		(at 102.14 21.19 0)
 		(effects
 			(font
@@ -24187,7 +24187,7 @@
 		)
 		(uuid "87533051-2ebd-41b1-a002-bf83e20217da")
 	)
-	(label "qspi_D1"
+	(label "qspi_D3"
 		(at 147.86 27.54 0)
 		(effects
 			(font
@@ -24207,7 +24207,7 @@
 		)
 		(uuid "902c476b-9cef-44df-8e7c-c9d1078d4c90")
 	)
-	(label "qspi_D3"
+	(label "qspi_D1"
 		(at 147.86 22.46 0)
 		(effects
 			(font
