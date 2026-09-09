@@ -110,6 +110,39 @@ Card power gating is not optional. It is the specification's mandated
 recovery path when a card fails to release the bus after CMD11, and it
 appears in the NXP reference circuit (AN13031, figure 1).
 
+### Parts
+
+| Part | Function | Package | KiCad footprint |
+|------|----------|---------|-----------------|
+| TI TPS2116DRLR | 2:1 mux, `3V3` / `1V8` -> `VDD_SD_IO` | SOT-583 | `Package_TO_SOT_SMD:SOT-583-8` |
+| TI TPS22918 | load switch on card VDD | SOT-23-6 | `Package_TO_SOT_SMD:SOT-23-6` |
+
+**TPS2116.** Input range 1.6-5.5 V, covering both rails. Pull MODE high for
+manual mode; PR1 then selects the input, high = VIN1, low = VIN2. PR1
+switches around VREF (0.92-1.08 V), so an 1.8 V GPIO has ample margin.
+Reverse current blocking (when VOUT > VINx, 2 us) and break-before-make are
+both internal, which satisfies the first two constraints below with no
+external parts.
+
+**TPS22918.** 1-5.5 V, 2 A, ON threshold 1 V minimum and specified for use
+with 1 V or higher GPIOs. Quick output discharge is roughly 25 ohm at 3.3 V.
+The discharge matters: for a power-cycle recovery to reset the card, its VDD
+has to reach near zero rather than float on its own decoupling.
+
+Availability as of September 2026: TPS2116DRLR, 66k at DigiKey and 2.4k at
+Mouser, around $0.50. TPS22918 is stocked as TPS22918TDBVTQ1, the Q1
+automotive grade, around 5.9k at DigiKey; the plain TPS22918DBVT was not
+stocked.
+
+Confirm before ordering:
+
+- The stocked load switch is the `T` variant (TPS22918TDBVTQ1). Check its
+  rise time and QOD behaviour against the base TPS22918 datasheet cited here.
+- KiCad's `SOT-583-8` footprint carries a description referencing the
+  TPS62933, not the TPS2116. It is the same JEDEC package and the land
+  pattern measures 2.15 x 1.80 mm at 0.5 mm pitch, but cross-check it
+  against TI's TPS2116 land pattern before fabrication.
+
 ### Design notes
 
 - **Reverse blocking on the 1.8 V leg.** A plain P-FET or a load switch
@@ -118,6 +151,7 @@ appears in the NXP reference circuit (AN13031, figure 1).
   FETs or a switch that blocks reverse current. The 3.3 V leg is inherently
   safe because 3.3 V > 1.8 V keeps its body diode reverse biased.
 - **Break before make.** `3V3` and `1V8` must never be connected together.
+  Handled internally by the TPS2116; only relevant if built from discretes.
 - **Default state at reset.** HPS GPIOs are high impedance during reset, so
   pull both control lines to the safe state: card powered, 3.3 V signalling.
   The part also requires VCCB >= VCCA, which an undefined VCCB would violate
