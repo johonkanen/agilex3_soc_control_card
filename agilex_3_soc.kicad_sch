@@ -3246,6 +3246,24 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -21.59 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
@@ -11169,7 +11187,7 @@
 		(fields_autoplaced yes)
 		(uuid "ba5550b0-7bf8-4c2d-a36a-2d0d44031b98")
 		(property "Reference" "U1"
-			(at 343.535 100.33 0)
+			(at 346.71 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11178,7 +11196,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "SN74AXC4T774PWR"
 			(at 342.9 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11265,6 +11283,9 @@
 		)
 		(pin "13"
 			(uuid "bf7b7608-5115-4fd6-bb89-ddb3aa21115b")
+		)
+		(pin "10"
+			(uuid "76e397aa-fba1-4978-a9ca-a69fcbf84865")
 		)
 		(instances
 			(project "agilex_3_soc"
@@ -13431,4 +13452,91 @@
 		)
 	)
 	(embedded_fonts no)
+	(wire
+		(pts
+			(xy 342.9 100.33) (xy 342.9 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce6743d5-71bf-4cea-88ec-6fe09b074561")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 342.9 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "75db53cd-9b00-46fc-b4c3-be2551c39d5e")
+		(property "Reference" "#PWR360"
+			(at 342.9 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 342.9 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 342.9 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 342.9 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 342.9 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "da83d940-f0de-440f-916b-c772375c63c3")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(reference "#PWR360")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
