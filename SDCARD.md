@@ -16,6 +16,19 @@ is therefore mandatory, not optional.
 |------|----------|
 | U11  | Nexperia NXS0506GUX, SD 3.0 level translator, XQFN16 (SOT1161-1) |
 | J8   | microSD socket, Wuerth 693072010801 |
+| U40  | TI TPS2116DRLR, 2:1 supply mux, `3V3` / `1V8` -> `VDD_SD_IO` (U11 VCCB) |
+| U41  | TI TPS22918DBVR, load switch, `3V3` -> `VDD_SD_CARD` (J8 pin 4) |
+| R241 | 100k, `sd_vsel` pull-up to `1V8` (default: 3.3 V signalling) |
+| R242 | 100k, U40 MODE pull-up to `1V8` (manual mode) |
+| R243 | 100k, `sd_pwr_en` pull-up to `1V8` (default: card powered) |
+| C240, C241 | 1u at U40 VIN1 / VIN2 |
+| C242, C243 | 4u7 + 100n on `VDD_SD_IO` at U11 pin 14 |
+| C244, C245 | 4u7 + 100n on `1V8` at U11 pin 15 |
+| C246 | 10u at U41 VIN |
+| C247, C248 | 10u + 100n on `VDD_SD_CARD` at J8 pin 4 |
+
+The decoupling capacitors are drawn as a row on the schematic; on the PCB
+they belong at the pins named above.
 
 Signal path, verified pin by pin:
 
@@ -32,12 +45,25 @@ Supplies:
 
 | Net | Feeds |
 |-----|-------|
-| `1V8` | U11 pin 15 (VCCA), host side |
-| `3V3` | U11 pin 14 (VCCB), card side, and J8 pin 4 (card VDD) |
-| `GND` | U11 pin 7, J8 pin 6 and shield |
+| `1V8` | U11 pin 15 (VCCA), host side; U40 VIN2 |
+| `3V3` | U40 VIN1, U41 VIN |
+| `VDD_SD_IO` | U11 pin 14 (VCCB), card-side signalling rail, 3.3 V or 1.8 V |
+| `VDD_SD_CARD` | J8 pin 4 (card VDD), switched 3.3 V |
+| `GND` | U11 pin 7, J8 pin 6 and shield, U40, U41, decoupling |
 
-Pin 6 (CLKFB) is unconnected. The datasheet permits this; connecting it to
-the clock improves read timing at higher rates.
+Control, both on HPS GPIO1 (IOB, 1.8 V bank):
+
+| Signal | HPS pin | Drives | Idle (HPS in reset) |
+|--------|---------|--------|---------------------|
+| `sd_vsel` | F75, GPIO1_IO16 | U40 PR1: high = 3.3 V, low = 1.8 V | pulled high, 3.3 V |
+| `sd_pwr_en` | AD71, GPIO1_IO17 | U41 ON: high = card powered | pulled high, on |
+
+U40 ST (open-drain status) and U41 CT (slew) are left unconnected; U41 QOD
+is tied to VOUT so the internal ~25 ohm discharge empties the card rail
+when `sd_pwr_en` goes low.
+
+Pin 6 (CLKFB) is tied to `sd_clk` together with CLKA, as the datasheet
+recommends for higher clock rates.
 
 No external pull-ups are fitted, and none are needed: the NXS0506GU has
 integrated 70 kOhm (42-100 kOhm) pull-ups to VCCA on every host-side pin
@@ -45,12 +71,11 @@ except CLKA.
 
 ## Open items before fabrication
 
-- [ ] **Decoupling on U11 is absent.** Nothing within 6 mm of the part. Add
-      100 nF + 4.7 uF at VCCA (pin 15) and at VCCB (pin 14). The 4.7 uF
-      figure comes from the Nexperia application circuit.
-- [ ] **No capacitance at J8.** Nothing within 8 mm; the card's VDD pin has
-      no local decoupling. Add 10 uF + 100 nF at J8 pin 4. SD cards draw
-      large current transients, particularly during initialisation.
+- [x] Decoupling on U11 (C242-C245) and at J8 (C247, C248) is in the
+      schematic. Place them at the pins when the area is rerouted.
+- [ ] **Update PCB from schematic.** U40, U41, R241-R243 and C240-C248
+      exist only in the schematic until Tools -> Update PCB from Schematic
+      is run, then need placing near U11 / J8.
 - [ ] **No card detect.** J8's pin 2 is DAT3/CD and passes through the
       translator as an ordinary data line. This connector variant has no
       detect switch contact. Either detect in software from DAT3, or change
@@ -60,17 +85,15 @@ except CLKA.
       so the existing traces no longer reach the pads. They were left in
       place deliberately rather than deleted.
 
-## Speed limitation as currently built
+## UHS-I support
 
-The card-side signalling rail (U11 VCCB) is tied permanently to 3.3 V, so
-the interface is limited to default speed and high speed, roughly 50 MHz.
-UHS-I modes (SDR50, DDR50, SDR104) require the bus to switch to 1.8 V
-signalling after the card accepts the request, which fixed 3.3 V cannot do.
-
-## Adding UHS-I support
-
-The NXS0506GU itself supports UHS-I; the missing pieces are on the board.
-Nexperia AN90037 covers this use of the part.
+Without the rail switching below, the card-side signalling rail would sit at
+a fixed 3.3 V and the interface would be limited to default speed and high
+speed, roughly 50 MHz. UHS-I modes (SDR50, DDR50, SDR104) require the bus
+to switch to 1.8 V signalling after the card accepts the request. The
+NXS0506GU itself supports UHS-I; Nexperia AN90037 covers this use of the
+part. The circuit described in this section is what is now drawn in
+`hps.kicad_sch`.
 
 ### Sequence
 
@@ -84,9 +107,9 @@ Nexperia AN90037 covers this use of the part.
 
 Only the signalling rail changes. Card VDD stays at 3.3 V throughout.
 
-### Required changes
+### Rails
 
-Split the two present uses of `3V3`:
+The two former uses of `3V3` are split:
 
 | Net | Feeds | Behaviour |
 |-----|-------|-----------|
@@ -97,14 +120,14 @@ Split the two present uses of `3V3`:
 Both `3V3` and `1V8` already exist on the board, so no additional regulator
 is needed. The signalling rail can be a 2:1 supply mux between them.
 
-Two control signals are needed. Six HPS GPIOs are free, all on IOB / GPIO1,
-the same 1.8 V bank as the SD signals: GPIO1_IO16 (F75), IO17 (AD71),
-IO18 (K71), IO19 (AK71), IO20 (F74), IO21 (AA71).
+Two control signals are used, on the first two of the six free HPS GPIOs
+(all on IOB / GPIO1, the same 1.8 V bank as the SD signals; IO18 (K71),
+IO19 (AK71), IO20 (F74) and IO21 (AA71) remain free).
 
-| Signal | Controls | Linux binding |
-|--------|----------|---------------|
-| rail select | `VDD_SD_IO` 3.3 V / 1.8 V | `vqmmc-supply` |
-| card power | J8 pin 4 on/off | `vmmc-supply` |
+| Signal | HPS pin | Controls | Linux binding |
+|--------|---------|----------|---------------|
+| `sd_vsel` | GPIO1_IO16, F75 | `VDD_SD_IO` 3.3 V / 1.8 V | `vqmmc-supply` (gpio-regulator) |
+| `sd_pwr_en` | GPIO1_IO17, AD71 | J8 pin 4 on/off | `vmmc-supply` (regulator-fixed with enable GPIO) |
 
 Card power gating is not optional. It is the specification's mandated
 recovery path when a card fails to release the bus after CMD11, and it
@@ -112,14 +135,20 @@ appears in the NXP reference circuit (AN13031, figure 1).
 
 ### Parts
 
-| Part | Function | Package | KiCad footprint |
-|------|----------|---------|-----------------|
-| TI TPS2116DRLR | 2:1 mux, `3V3` / `1V8` -> `VDD_SD_IO` | SOT-583 | `Package_TO_SOT_SMD:SOT-583-8` |
-| TI TPS22918 | load switch on card VDD | SOT-23-6 | `Package_TO_SOT_SMD:SOT-23-6` |
+| Ref | Part | Function | Package | KiCad footprint |
+|-----|------|----------|---------|-----------------|
+| U40 | TI TPS2116DRLR | 2:1 mux, `3V3` / `1V8` -> `VDD_SD_IO` | SOT-583 | `Package_TO_SOT_SMD:SOT-583-8` |
+| U41 | TI TPS22918 | load switch on card VDD | SOT-23-6 | `Package_TO_SOT_SMD:SOT-23-6` |
 
-**TPS2116.** Input range 1.6-5.5 V, covering both rails. Pull MODE high for
-manual mode; PR1 then selects the input, high = VIN1, low = VIN2. PR1
-switches around VREF (0.92-1.08 V), so an 1.8 V GPIO has ample margin.
+Symbols `TPS2116DRL` and `TPS22918DBV` are in `agilex_5_lib`. Pin numbers
+were taken from the TI pin-function tables (TPS2116: 1 GND, 2/7 VOUT,
+3 VIN1, 4 PR1, 5 MODE, 6 VIN2, 8 ST; TPS22918: 1 VIN, 2 GND, 3 ON, 4 CT,
+5 QOD, 6 VOUT).
+
+**TPS2116.** Input range 1.6-5.5 V, covering both rails. MODE is pulled
+to `1V8` (R242) for manual mode; it must not be tied to VIN1, which selects
+priority mode instead. PR1 then selects the input, high = VIN1, low = VIN2.
+PR1 switches around VREF (0.92-1.08 V), so an 1.8 V GPIO has ample margin.
 Reverse current blocking (when VOUT > VINx, 2 us) and break-before-make are
 both internal, which satisfies the first two constraints below with no
 external parts.
@@ -153,9 +182,10 @@ Confirm before ordering:
 - **Break before make.** `3V3` and `1V8` must never be connected together.
   Handled internally by the TPS2116; only relevant if built from discretes.
 - **Default state at reset.** HPS GPIOs are high impedance during reset, so
-  pull both control lines to the safe state: card powered, 3.3 V signalling.
-  The part also requires VCCB >= VCCA, which an undefined VCCB would violate
-  while VCCA is at 1.8 V.
+  both control lines are pulled (R241, R243) to the safe state: card
+  powered, 3.3 V signalling. The translator also requires VCCB >= VCCA,
+  which an undefined VCCB would violate while VCCA is at 1.8 V. The
+  TPS22918 ON pin has no internal pull and must not float.
 - **Falling transition.** Switching to the 1.8 V rail discharges the VCCB
   capacitance into `1V8` through the closed switch, roughly 7 uC for 4.7 uF,
   which is negligible against the board's 1.8 V bulk. Note that an LDO with

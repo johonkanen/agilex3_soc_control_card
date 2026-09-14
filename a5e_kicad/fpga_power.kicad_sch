@@ -18440,7 +18440,7 @@
 				)
 			)
 		)
-		(property "Value" "1V8"
+		(property "Value" "VCORE"
 			(at 153.67 121.9199 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23693,7 +23693,7 @@
 				)
 			)
 		)
-		(property "Value" "1V8"
+		(property "Value" "1V2"
 			(at 128.27 96.5199 90)
 			(show_name no)
 			(do_not_autoplace no)

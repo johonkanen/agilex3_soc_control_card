@@ -7080,7 +7080,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "4d4392f6-5644-49b7-935b-bea68e2faa9e")
 		(property "Reference" "R84"
 			(at 115.57 95.25 0)
@@ -7093,7 +7093,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "DNP"
 			(at 115.57 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7342,7 +7342,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "2k2"
 			(at 107.95 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7678,7 +7678,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "12k"
 			(at 107.95 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10498,7 +10498,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "b1bf7001-9d48-4e13-a0ac-54ab28e16609")
 		(property "Reference" "R90"
 			(at 115.57 127 0)
@@ -10511,7 +10511,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "DNP"
 			(at 115.57 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11406,7 +11406,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c833f632-07a4-4e8a-b6ff-dfe83c9637ba")
 		(property "Reference" "R87"
 			(at 116.84 31.75 0)
@@ -11419,7 +11419,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "DNP"
 			(at 116.84 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
