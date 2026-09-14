@@ -4173,6 +4173,159 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "agilex_5_lib:Crystal_3225"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Y"
+				(at -2.54 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "25MHz"
+				(at -2.54 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Crystal, 4-pin 3.2x2.5mm, pins 2/4 = case GND"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Crystal_3225_0_1"
+				(rectangle
+					(start -2.54 2.54)
+					(end 2.54 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Crystal_3225_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+1V1"
 			(power global)
 			(pin_numbers
@@ -4428,6 +4581,34 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "25 MHz +/-50 ppm crystal (KSZ9031). C251/C252 = 2*(CL - Cstray): 27p for CL=18pF; adjust to the crystal chosen."
+		(exclude_from_sim no)
+		(at 190.5 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0a320eb4-7918-4019-93ad-d0e258218552")
+	)
+	(text "RESET_N driven by HPS GPIO1_IO18 (K71); pull-up keeps PHY in reset-released state when HPS is in reset"
+		(exclude_from_sim no)
+		(at 35.56 131.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e6727ed0-16b0-4481-9a26-dd389278b25f")
+	)
+	(junction
+		(at 198.12 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "005f05bd-2afc-4c28-8410-9b6fcd279a3e")
+	)
 	(junction
 		(at 82.55 22.86)
 		(diameter 0)
@@ -4591,6 +4772,12 @@
 		(uuid "9b77d700-cec4-4464-987b-458b81ac27e1")
 	)
 	(junction
+		(at 200.66 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a19e28b3-684c-43b3-9bfd-69f1bad37f54")
+	)
+	(junction
 		(at 60.96 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4627,6 +4814,12 @@
 		(uuid "af523def-1402-417c-b9b1-3f580bc1939e")
 	)
 	(junction
+		(at 203.2 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b179b066-8a8a-42a8-ab7d-2683b50b577a")
+	)
+	(junction
 		(at 204.47 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4637,6 +4830,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bccdd924-7c98-4f98-be36-3d76c4cd0d5a")
+	)
+	(junction
+		(at 109.22 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c527acf9-f6ce-428e-bf16-0ab88258f6ad")
 	)
 	(junction
 		(at 162.56 53.34)
@@ -4727,10 +4926,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff4600d1-8df0-4d8a-8a36-944c630c7839")
-	)
-	(no_connect
-		(at 190.5 127)
-		(uuid "797fdd23-f5cb-40ac-a5d4-48b7d4593473")
 	)
 	(no_connect
 		(at 190.5 76.2)
@@ -5322,6 +5517,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 151.13) (xy 205.74 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "236e69ec-e087-42a6-ab8e-2fa01f0320d2")
+	)
+	(wire
+		(pts
 			(xy 154.94 55.88) (xy 154.94 53.34)
 		)
 		(stroke
@@ -5382,16 +5587,6 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 124.46) (xy 190.5 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2eb4478a-7014-4d83-83ce-4fe9d1ed78b1")
-	)
-	(wire
-		(pts
 			(xy 91.44 116.84) (xy 124.46 116.84)
 		)
 		(stroke
@@ -5429,16 +5624,6 @@
 			(type default)
 		)
 		(uuid "30b1354c-e1d7-4a0d-836b-905ade78d7d6")
-	)
-	(wire
-		(pts
-			(xy 195.58 157.48) (xy 195.58 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "333cef0e-12fc-41cc-aaef-e3617878f8e8")
 	)
 	(wire
 		(pts
@@ -5709,6 +5894,16 @@
 			(type default)
 		)
 		(uuid "4d7d6b81-fa2d-46e6-964e-0ed2a3078765")
+	)
+	(wire
+		(pts
+			(xy 190.5 124.46) (xy 198.12 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eeb9fa2-753d-47aa-93e1-81080b13c91a")
 	)
 	(wire
 		(pts
@@ -6032,6 +6227,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 152.4) (xy 205.74 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73cfe23f-e2a1-4bac-af4e-196f6773238b")
+	)
+	(wire
+		(pts
 			(xy 60.96 114.3) (xy 60.96 130.81)
 		)
 		(stroke
@@ -6059,6 +6264,16 @@
 			(type default)
 		)
 		(uuid "756d9d1e-afd5-4bab-821e-3b48aeb8a504")
+	)
+	(wire
+		(pts
+			(xy 208.28 158.75) (xy 208.28 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7570db2b-e89b-407d-8894-7552db7b1c5a")
 	)
 	(bus
 		(pts
@@ -6129,6 +6344,16 @@
 			(type default)
 		)
 		(uuid "7f4026b6-2af8-4d91-8e6c-d477307fa93c")
+	)
+	(wire
+		(pts
+			(xy 198.12 124.46) (xy 198.12 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "808f0e15-323a-4c66-9dd3-a5ca3d7f81c4")
 	)
 	(wire
 		(pts
@@ -6222,6 +6447,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 158.75) (xy 208.28 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "906f4a57-1ba9-49c4-b84f-7d22851b33bb")
+	)
+	(wire
+		(pts
 			(xy 64.77 25.4) (xy 64.77 22.86)
 		)
 		(stroke
@@ -6239,6 +6474,16 @@
 			(type default)
 		)
 		(uuid "97d5ea0c-5db1-4dcb-9c36-89afe25b55a4")
+	)
+	(wire
+		(pts
+			(xy 205.74 133.35) (xy 205.74 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98ffd15c-558d-42ac-a698-b813c0a790c5")
 	)
 	(wire
 		(pts
@@ -6602,6 +6847,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 127) (xy 193.04 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf5e8b2d-60a0-4033-98e9-085fa09d921b")
+	)
+	(wire
+		(pts
 			(xy 213.36 25.4) (xy 213.36 22.86)
 		)
 		(stroke
@@ -6639,6 +6894,16 @@
 			(type default)
 		)
 		(uuid "c217a7d5-17f2-4866-98c1-c41f5324d948")
+	)
+	(wire
+		(pts
+			(xy 193.04 127) (xy 193.04 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c343acde-df10-4c87-9c70-f1567a7ca4ab")
 	)
 	(wire
 		(pts
@@ -6872,6 +7137,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 151.13) (xy 200.66 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e395a899-766a-49d1-99ed-18205da1d2ea")
+	)
+	(wire
+		(pts
 			(xy 142.24 53.34) (xy 139.7 53.34)
 		)
 		(stroke
@@ -6919,16 +7194,6 @@
 			(type default)
 		)
 		(uuid "e85cdb27-c65a-48f8-a716-546259369b78")
-	)
-	(wire
-		(pts
-			(xy 35.56 157.48) (xy 195.58 157.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e948c0e4-cfa4-44c0-95d0-a296f398547e")
 	)
 	(wire
 		(pts
@@ -8008,6 +8273,28 @@
 		)
 		(uuid "fc296f08-81aa-4259-b7b3-3e595e466a35")
 	)
+	(global_label "eth_rst_n"
+		(shape input)
+		(at 35.56 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "148c8461-22c0-41db-bf12-1cfa1b4b90a8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35.56 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(hierarchical_label "{hps_eth}"
 		(shape bidirectional)
 		(at 35.56 53.34 180)
@@ -8019,17 +8306,6 @@
 		)
 		(uuid "341f41f7-0770-4f51-a2be-868ea7fb3f58")
 	)
-	(hierarchical_label "PG"
-		(shape bidirectional)
-		(at 35.56 127 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "500e77cc-7f4f-4a1f-b6d2-7b4cd36aef13")
-	)
 	(hierarchical_label "{phy}"
 		(shape bidirectional)
 		(at 220.98 54.61 0)
@@ -8040,17 +8316,6 @@
 			(justify left)
 		)
 		(uuid "f99ebeb5-f1a5-4aba-9a6f-c01179ea1275")
-	)
-	(hierarchical_label "eth_clk25"
-		(shape input)
-		(at 35.56 157.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ff406715-1014-467f-8ac0-2fc38d80340a")
 	)
 	(symbol
 		(lib_id "power:+1V1")
@@ -8301,6 +8566,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0765d452-b611-46ed-8b70-39aa3340f134")
+		(property "Reference" "#PWR363"
+			(at 205.74 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 205.74 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7db2d46e-04c6-4f90-9e10-ffcf751557eb")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR363")
 					(unit 1)
 				)
 			)
@@ -8637,6 +8979,87 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "#PWR077")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 200.66 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "161abce7-3d78-496e-9c54-cf2fc91c8b5d")
+		(property "Reference" "C252"
+			(at 203.2 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "27p"
+			(at 203.2 163.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 200.66 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 200.66 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 200.66 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "445b912a-eb62-4783-9c31-0aa235c1c5be")
+		)
+		(pin "2"
+			(uuid "83edce20-39d6-4d48-8d64-b7642c3f6695")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "C252")
 					(unit 1)
 				)
 			)
@@ -11090,6 +11513,93 @@
 		)
 	)
 	(symbol
+		(lib_id "agilex_5_lib:Crystal_3225")
+		(at 203.2 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "90321731-4e5c-4e3b-8cce-f068ebbd7423")
+		(property "Reference" "Y3"
+			(at 207.01 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "25MHz"
+			(at 207.01 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+			(at 203.2 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Crystal, 4-pin 3.2x2.5mm, pins 2/4 = case GND"
+			(at 203.2 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0351d915-6c2e-43d9-ad85-f0f6838835b5")
+		)
+		(pin "2"
+			(uuid "3b136ae5-94c3-4487-8573-5feb92a27f86")
+		)
+		(pin "3"
+			(uuid "c599804a-7131-47b4-b9bf-01ce91bdfcc3")
+		)
+		(pin "4"
+			(uuid "225c2572-1928-4912-a56b-c4dc1aefb8c2")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "Y3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 153.67 29.21 0)
 		(unit 1)
@@ -12153,6 +12663,241 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 203.2 152.4 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c2390271-b5b6-47be-8d29-e4234583b2a4")
+		(property "Reference" "#PWR362"
+			(at 203.2 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.2 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 203.2 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a83558f4-8c84-4f42-8cf5-c44f3709386d")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR362")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 201.93 133.35 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c2afef7f-6492-4b44-9b65-d43b075886ed")
+		(property "Reference" "C251"
+			(at 204.47 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "27p"
+			(at 204.47 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 201.93 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 201.93 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c0b61ae-f7c4-49ec-a2da-2f0a27b4f0d8")
+		)
+		(pin "2"
+			(uuid "b64b3887-40f7-4cee-b78b-eada6e85715b")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "C251")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 109.22 134.62 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7b8923e-2039-414f-9792-1982f3450b04")
+		(property "Reference" "#PWR365"
+			(at 109.22 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 109.22 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 109.22 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "81405d3a-4b20-404a-80e3-9bfdb0dd4b6c")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR365")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 82.55 29.21 0)
 		(unit 1)
@@ -12321,6 +13066,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 200.66 166.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cd210b56-8125-4f84-b8b5-2bfa01be8788")
+		(property "Reference" "#PWR364"
+			(at 200.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 200.66 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "522c0074-ef3f-4feb-9396-be8948d1c8a2")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR364")
 					(unit 1)
 				)
 			)
@@ -12749,6 +13571,87 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 109.22 130.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eebc81fb-b67a-4cb1-9022-0a775ea2f602")
+		(property "Reference" "R247"
+			(at 111.76 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 111.76 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 109.22 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 109.22 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ab23872b-dbf5-4c39-a185-f28d5bcaf227")
+		)
+		(pin "2"
+			(uuid "2ace8f20-7992-4816-9a40-35c1e8f48afe")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "R247")
 					(unit 1)
 				)
 			)

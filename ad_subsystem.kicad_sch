@@ -3382,7 +3382,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "ADS7056IRUGR"
 			(at 181.61 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)

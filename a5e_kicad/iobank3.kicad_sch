@@ -15161,10 +15161,6 @@
 		(uuid "b7855833-b53d-4b60-a348-8578df107ba3")
 	)
 	(no_connect
-		(at 78.74 124.46)
-		(uuid "bbb19fe1-a611-4a76-961c-81db23414ddc")
-	)
-	(no_connect
 		(at 203.2 45.72)
 		(uuid "ce6d060c-a593-4ede-b643-930bb12430ee")
 	)
@@ -16048,6 +16044,16 @@
 			(type default)
 		)
 		(uuid "2c62295f-5948-4b82-a64f-7569606041ed")
+	)
+	(wire
+		(pts
+			(xy 49.53 124.46) (xy 78.74 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "310a5a90-15a4-4850-ab3e-21bd5ab2b1e5")
 	)
 	(wire
 		(pts
@@ -17449,6 +17455,16 @@
 		)
 		(uuid "52bad3a2-f636-4b37-951e-4e335af6d487")
 	)
+	(label "rzq_t_3a"
+		(at 68.58 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "530f6263-fefa-4d1a-9042-aae97b25e5c2")
+	)
 	(label "hbclkn"
 		(at 66.04 116.84 0)
 		(effects
@@ -18042,6 +18058,83 @@
 			(justify right)
 		)
 		(uuid "f86799d4-1d15-49d0-a3b0-43cc17769534")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 41.91 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6154a6fc-de08-4a22-9978-2f6e62f7b14a")
+		(property "Reference" "#PWR366"
+			(at 41.91 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 41.91 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8dd9fbb6-6923-4ed1-9178-abc01ecafe1b")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
+					(reference "#PWR366")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "FPGA_Altera_Agilex_5E:A5EB013B-B23B")
@@ -22964,6 +23057,87 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
 					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 45.72 124.46 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dab6b803-754f-40b9-af0e-e4acc4c7d553")
+		(property "Reference" "R248"
+			(at 44.958 121.158 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "240R"
+			(at 46.99 120.904 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 45.72 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 45.72 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "765eaa80-4fba-4781-ad6c-107053a34133")
+		)
+		(pin "2"
+			(uuid "21328cca-de1f-426b-94af-091157774aae")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/d035372b-a014-4c13-aa37-0253306826b4"
+					(reference "R248")
 					(unit 1)
 				)
 			)
