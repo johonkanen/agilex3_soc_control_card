@@ -8069,7 +8069,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "TDA38812XUMA1"
 			(at 153.67 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)

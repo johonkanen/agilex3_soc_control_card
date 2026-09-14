@@ -15109,6 +15109,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "6A bank at 1.8 V: 25 MHz refclk on CE19"
+		(exclude_from_sim no)
+		(at 30.48 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "444d5734-0f23-4b1a-91e3-b670ff767407")
+	)
 	(junction
 		(at 119.38 30.48)
 		(diameter 0)
@@ -17413,16 +17424,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 119.38) (xy 66.04 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd083668-e2fb-4beb-9e2d-e8e388d450f0")
-	)
-	(wire
-		(pts
 			(xy 162.56 38.1) (xy 165.1 38.1)
 		)
 		(stroke
@@ -17623,6 +17624,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 119.38) (xy 66.04 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edc00808-d973-4c3d-9492-e1d1c54e8d76")
+	)
+	(wire
+		(pts
 			(xy 116.84 73.66) (xy 121.92 73.66)
 		)
 		(stroke
@@ -17771,7 +17782,7 @@
 		)
 		(uuid "ada3feba-fab7-4e4a-a627-9cd07f928880")
 	)
-	(label "vccio_6x"
+	(label "vccio_6a"
 		(at 55.88 132.08 0)
 		(effects
 			(font
@@ -17922,6 +17933,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0220")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0f393d59-b668-459d-b47d-40d98ae9861c")
+		(property "Reference" "#PWR361"
+			(at 60.96 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.96 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 60.96 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e470c8b2-315f-4202-8775-a80f4da6b6ee")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR361")
 					(unit 1)
 				)
 			)
@@ -18361,7 +18449,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "1V8"
 			(at 49.53 132.0799 90)
 			(show_name no)
 			(do_not_autoplace no)

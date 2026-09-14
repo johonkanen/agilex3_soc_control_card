@@ -15840,16 +15840,6 @@
 		)
 		(uuid "0f178aab-ea6e-49a9-ac70-67cc3542a4ce")
 	)
-	(label "iob6a3"
-		(at 86.36 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "14db98a1-66ea-4e76-b3d0-1f1a9d06af3e")
-	)
 	(label "iob6a17"
 		(at 86.36 53.34 0)
 		(effects
@@ -16169,6 +16159,28 @@
 			(justify left bottom)
 		)
 		(uuid "f322e524-ea57-4724-b868-579064b24a52")
+	)
+	(global_label "sdm_clk25"
+		(shape input)
+		(at 86.36 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ba94f38-bdf0-4ac5-9274-5fd5372f3a5a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.36 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(hierarchical_label "{iob6a}"
 		(shape bidirectional)
