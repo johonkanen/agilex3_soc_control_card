@@ -943,6 +943,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "PG of 1V2 / 3V3 / 1V1 regulators (open drain) wired-AND, 1.8 V level -> U42 ch4 on root -> powergood 3.3 V + LED D1"
+		(exclude_from_sim no)
+		(at 20.32 131.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97ac1c5d-6eca-4369-92bc-aaea469fdac6")
+	)
 	(text "Check powerup sequence :\n0.78 -> 1.8 -> 3.3||1.1||1.2"
 		(exclude_from_sim no)
 		(at 185.42 17.526 0)
@@ -2815,6 +2826,16 @@
 	)
 	(wire
 		(pts
+			(xy 20.32 134.62) (xy 33.02 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bc0c3dc-09a3-4021-9445-60e92f7f3f15")
+	)
+	(wire
+		(pts
 			(xy 97.79 189.23) (xy 85.09 189.23)
 		)
 		(stroke
@@ -2942,6 +2963,16 @@
 			(type default)
 		)
 		(uuid "85806329-446f-4d33-8941-ae0eacb96368")
+	)
+	(wire
+		(pts
+			(xy 102.87 119.38) (xy 107.95 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "867289a9-18ea-450a-bd78-b551e85394c8")
 	)
 	(wire
 		(pts
@@ -3272,6 +3303,16 @@
 			(type default)
 		)
 		(uuid "a689d276-72ec-4637-89c2-913948062c12")
+	)
+	(wire
+		(pts
+			(xy 102.87 24.13) (xy 107.95 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a81dbc35-dcbd-42af-bb2d-ebf964f5996d")
 	)
 	(wire
 		(pts
@@ -3865,6 +3906,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 87.63) (xy 107.95 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebe029e4-a0ed-4dc5-882f-fbb5b5a5fae1")
+	)
+	(wire
+		(pts
 			(xy 132.08 38.1) (xy 134.62 38.1)
 		)
 		(stroke
@@ -4012,6 +4063,46 @@
 			(justify left bottom)
 		)
 		(uuid "6af33105-0174-4a25-af48-31a2cffe2efb")
+	)
+	(label "pg_all"
+		(at 104.14 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8f0c1dff-ce7b-4049-9cca-b9d7fb2d5c4c")
+	)
+	(label "pg_all"
+		(at 22.86 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c2416c18-0dd9-4b59-bcb7-e3962e6f5cfe")
+	)
+	(label "pg_all"
+		(at 104.14 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ddc20c19-4d2c-4716-9541-ab2ec845d7d3")
+	)
+	(label "pg_all"
+		(at 104.14 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea9cd2ce-0217-43c6-94b5-e5353dd0fb42")
 	)
 	(hierarchical_label "EN"
 		(shape input)
@@ -9074,6 +9165,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 33.02 130.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b7bffa2-58d7-4f84-9c8c-a7d45ad4a2f6")
+		(property "Reference" "R249"
+			(at 35.56 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 35.56 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 33.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 33.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc3c40ab-05e3-4fe1-ba0f-ebc92760575f")
+		)
+		(pin "2"
+			(uuid "aff40e20-5c27-4007-99c8-8f5573d61d02")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
+					(reference "R249")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 58.42 85.09 0)
 		(unit 1)
@@ -9908,6 +10080,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
 					(reference "R86")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 33.02 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "968bd1c2-1d12-4023-869b-8b7f1d4ac43b")
+		(property "Reference" "#PWR1543"
+			(at 33.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 33.02 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.02 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.02 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 33.02 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6c43d623-4b3a-483f-a561-845c6ccdbdc8")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
+					(reference "#PWR1543")
 					(unit 1)
 				)
 			)
