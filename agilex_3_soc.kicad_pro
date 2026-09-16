@@ -804,7 +804,7 @@
         "sdm_tms"
       ],
       "sdm_qspi": [
-        "qspi_D{3..0]",
+        "qspi_D[3..0]",
         "qspi_CLK",
         "~{qspi_CS}",
         "~{qspi_rst_n}"

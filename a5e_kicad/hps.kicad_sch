@@ -19682,16 +19682,6 @@
 		)
 		(uuid "b7e329b9-e1d6-4969-a357-64f5ea2ec69a")
 	)
-	(label "hps_uart0_tx"
-		(at 148.59 128.27 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b873726d-2614-4ce5-9f60-fbcfa1ce6352")
-	)
 	(label "{hps_i2c}"
 		(at 100.33 26.67 0)
 		(effects
@@ -19741,16 +19731,6 @@
 			(justify left bottom)
 		)
 		(uuid "c0b7cd94-4a75-4111-9684-22d9311a8da8")
-	)
-	(label "hps_uart0_rx"
-		(at 148.59 130.81 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c72e804f-4056-4a19-8be1-8c6e53dc09e5")
 	)
 	(label "usb_dir"
 		(at 162.56 36.83 0)
@@ -19934,6 +19914,50 @@
 		(uuid "69b2e213-85b4-4201-87b1-8b0d030d54e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 162.56 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "hps_uart0_tx"
+		(shape output)
+		(at 148.59 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a3a6c71c-745f-4b5b-88ff-e7cbf04bd679")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.59 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "hps_uart0_rx"
+		(shape input)
+		(at 148.59 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c9109f09-1eff-4c69-affc-8ad636aa0a37")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.59 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

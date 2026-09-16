@@ -14719,10 +14719,6 @@
 		(uuid "7768a526-9e0f-4127-a2c3-0acb99b24e6a")
 	)
 	(no_connect
-		(at 96.52 129.54)
-		(uuid "8321db4c-8ea5-4d10-9d2b-14ec7c0a49fe")
-	)
-	(no_connect
 		(at 96.52 132.08)
 		(uuid "f4d6ef22-723c-4a43-a7e5-2a7e56dfd047")
 	)
@@ -15129,6 +15125,16 @@
 			(type default)
 		)
 		(uuid "21fdd135-0de3-4aee-90f7-3518aeffbc2c")
+	)
+	(wire
+		(pts
+			(xy 86.36 129.54) (xy 96.52 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23844f5a-b549-472f-a5de-b4769a818352")
 	)
 	(bus
 		(pts
@@ -16159,6 +16165,28 @@
 			(justify left bottom)
 		)
 		(uuid "f322e524-ea57-4724-b868-579064b24a52")
+	)
+	(global_label "fpga_led"
+		(shape output)
+		(at 86.36 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "04680b9c-60f5-44b9-bc50-0eb37f28d6a9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.36 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(global_label "sdm_clk25"
 		(shape input)
