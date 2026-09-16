@@ -15814,6 +15814,17 @@
 		)
 		(uuid "034ed10c-7226-4078-b793-23666ac6ad39")
 	)
+	(text "SDM_IO13 unused"
+		(exclude_from_sim no)
+		(at 193.04 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a372c52-28e3-4c22-a75e-f19b30f87a4f")
+	)
 	(text "D2: user LED on FPGA IO CE6 (bank 6B, 3.3 V) - see IOBANK6ab"
 		(exclude_from_sim no)
 		(at 95.25 173.99 0)
@@ -15825,7 +15836,7 @@
 		)
 		(uuid "20714115-ac05-46d4-bc41-cf62f4185fec")
 	)
-	(text "D1: CONF_DONE (SDM_IO16, 1.8 V) level-shifted to 3.3 V by U42 ch4 on root sheet"
+	(text "D1: power good - regulator PGs wired-AND (ps1) -> U42 ch4 (root) -> 3.3 V pg_led"
 		(exclude_from_sim no)
 		(at 95.25 156.21 0)
 		(effects
@@ -15901,6 +15912,10 @@
 		(uuid "50c4e02a-f55c-4a10-a541-7be4e52b33f3")
 	)
 	(no_connect
+		(at 210.82 114.3)
+		(uuid "51d372b5-5a70-4b01-b476-0fd71a633672")
+	)
+	(no_connect
 		(at 210.82 99.06)
 		(uuid "6bb41b71-c41b-4071-be80-10ecf0408e9f")
 	)
@@ -15911,6 +15926,14 @@
 	(no_connect
 		(at 210.82 106.68)
 		(uuid "d9956026-1b04-4d27-8dad-d7f117db9a9a")
+	)
+	(no_connect
+		(at 210.82 111.76)
+		(uuid "e1add619-20e1-43a6-af38-043a26edaf49")
+	)
+	(no_connect
+		(at 210.82 88.9)
+		(uuid "e868a5c6-1176-4d8d-960a-f11d033c3940")
 	)
 	(bus_entry
 		(at 187.96 30.48)
@@ -17092,16 +17115,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 88.9) (xy 210.82 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d63d4620-305c-496a-b2f4-d97ea8a3b245")
-	)
-	(wire
-		(pts
 			(xy 190.5 35.56) (xy 220.98 35.56)
 		)
 		(stroke
@@ -17488,7 +17501,7 @@
 		)
 		(uuid "15da438d-7b7d-4675-8142-53c377bdf61b")
 	)
-	(label "sdm_clk100"
+	(label "sdm_clk25"
 		(at 198.12 58.42 0)
 		(effects
 			(font
@@ -17868,16 +17881,6 @@
 		)
 		(uuid "db90d562-9968-4bb0-8986-e1cdb054d340")
 	)
-	(label "load_factory_image"
-		(at 193.04 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "df7fe4f0-bab6-42e6-ba2c-793845ebc6d4")
-	)
 	(label "tck"
 		(at 198.12 53.34 0)
 		(effects
@@ -17920,29 +17923,7 @@
 			)
 		)
 	)
-	(global_label "sdm_conf_done"
-		(shape output)
-		(at 193.04 83.82 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "95eab3fa-d8f9-4222-b82f-1410e4dc82dc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 193.04 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "conf_done_led"
+	(global_label "pg_led"
 		(shape input)
 		(at 125.73 162.56 0)
 		(effects
@@ -17986,7 +17967,7 @@
 		)
 		(uuid "80e51464-a8d0-4646-b2a6-f8c6cceb9463")
 	)
-	(hierarchical_label "sdm_clk100"
+	(hierarchical_label "sdm_clk25"
 		(shape input)
 		(at 193.04 58.42 180)
 		(effects
