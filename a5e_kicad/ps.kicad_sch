@@ -8056,7 +8056,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e6bd2629-ece9-4630-95ce-17e73adeea5b")
 		(property "Reference" "U15"
 			(at 159.6233 54.61 0)
@@ -8070,7 +8069,7 @@
 			)
 		)
 		(property "Value" "TDA38812XUMA1"
-			(at 153.67 90.17 0)
+			(at 152.908 87.122 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

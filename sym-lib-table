@@ -1,5 +1,6 @@
 (sym_lib_table
   (version 7)
+  (lib (name "titanium_lib")(type "KiCad")(uri "${KIPRJMOD}/titanium_lib/titanium_lib.kicad_sym")(options "")(descr "Efinix Titanium FPGA symbols"))
   (lib (name "agilex_5_lib")(type "KiCad")(uri "${KIPRJMOD}/agilex_5_lib/agilex_5_lib.kicad_sym")(options "")(descr ""))
   (lib (name "FPGA_Altera_Agilex_5E")(type "KiCad")(uri "C:/Users/rolfrich/OneDrive - Altera/Documents/Datasheets/Kicad_Generator/local_work/Kicad_repro/kicad-library-utils/symbol-generators/FPGA_Altera/FPGA_Altera_Agilex_5E.kicad_sym")(options "")(descr ""))
   (lib (name "SiC931bed")(type "KiCad")(uri "C:/dev/a5e_kicad/SiC931bed.kicad_sym")(options "")(descr ""))

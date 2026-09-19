@@ -89,10 +89,6 @@
         [
           "silk_edge_clearance|200016840|85194150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|068b748a-5b71-41f5-afc1-fcc91e96f6b4",
           "intentional"
-        ],
-        [
-          "unconnected_items|189941840|85494150|F.Cu|4|8e79ee38-bc95-4a66-85ee-305a3d5cdd17|5bf72a9e-4490-4d05-9a00-10b63a6b24a6",
-          "shield connection"
         ]
       ],
       "meta": {
@@ -869,7 +865,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "U2,C188,C194",
+    "used_designators": "U2,U13-14,U17,U20-32,C188,C194",
     "variants": []
   },
   "sheets": [

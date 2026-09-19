@@ -15111,7 +15111,7 @@
 	)
 	(text "6A bank at 1.8 V: 25 MHz refclk on CE19"
 		(exclude_from_sim no)
-		(at 30.48 152.4 0)
+		(at 52.832 159.512 0)
 		(effects
 			(font
 				(size 1.27 1.27)

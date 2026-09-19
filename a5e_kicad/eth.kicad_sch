@@ -4592,6 +4592,28 @@
 		)
 		(uuid "0a320eb4-7918-4019-93ad-d0e258218552")
 	)
+	(text "SODIMM P1 not populated: {phy} bus to P1 is a leftover"
+		(exclude_from_sim no)
+		(at 213.36 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e607833-feda-490c-a5e5-b5ffe0d874d5")
+	)
+	(text "Green LED L3(+)/L4 <- PHY LED1 link/act via U42 ch3 (1.8->3.3 V). Yellow L1/L2 unused. Check +/- vs datasheet p.7"
+		(exclude_from_sim no)
+		(at 213.36 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d1cdce38-a7db-42e0-86a0-586ee80b7962")
+	)
 	(text "RESET_N driven by HPS GPIO1_IO18 (K71); pull-up keeps PHY in reset-released state when HPS is in reset"
 		(exclude_from_sim no)
 		(at 27.686 152.654 0)
@@ -4602,6 +4624,17 @@
 			(justify left)
 		)
 		(uuid "e6727ed0-16b0-4481-9a26-dd389278b25f")
+	)
+	(text "J9: CT = common PHY-side centre tap (all 4 pairs) -> 100n to GND. GND/SH -> GND."
+		(exclude_from_sim no)
+		(at 213.36 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f8b2d2ee-6f01-4dde-ac8d-070458384e13")
 	)
 	(junction
 		(at 198.12 133.35)
@@ -4740,6 +4773,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87029c3a-2ac0-4b6c-a714-4dde2bf1f775")
+	)
+	(junction
+		(at 246.38 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8995a88a-ee4c-435d-9402-3d4a4cc1ab61")
 	)
 	(junction
 		(at 190.5 35.56)
@@ -4926,6 +4965,14 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff4600d1-8df0-4d8a-8a36-944c630c7839")
+	)
+	(no_connect
+		(at 241.3 124.46)
+		(uuid "991dbfd6-0ccf-47ff-84d8-4d9b303201a4")
+	)
+	(no_connect
+		(at 238.76 124.46)
+		(uuid "a9511fa9-a133-4c5a-9f35-9f0dfc636b58")
 	)
 	(no_connect
 		(at 190.5 76.2)
@@ -5527,6 +5574,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 124.46) (xy 246.38 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24d6811f-5762-4385-9eea-a7095a95b5bc")
+	)
+	(wire
+		(pts
 			(xy 154.94 55.88) (xy 154.94 53.34)
 		)
 		(stroke
@@ -5717,6 +5774,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 81.28) (xy 241.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a819b7b-8e3b-410c-a5b4-d588d753fd17")
+	)
+	(wire
+		(pts
 			(xy 50.8 138.43) (xy 50.8 140.97)
 		)
 		(stroke
@@ -5764,6 +5831,16 @@
 			(type default)
 		)
 		(uuid "3d483afd-c6d5-4efe-901d-a61fe9f0368a")
+	)
+	(wire
+		(pts
+			(xy 246.38 81.28) (xy 246.38 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3daa87c8-e5b2-42f4-89ff-07fb8dfccddb")
 	)
 	(wire
 		(pts
@@ -6477,6 +6554,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 78.74) (xy 246.38 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90826fb5-382a-4b7f-a7fe-f3e381b09651")
+	)
+	(wire
+		(pts
 			(xy 64.77 25.4) (xy 64.77 22.86)
 		)
 		(stroke
@@ -6504,6 +6591,16 @@
 			(type default)
 		)
 		(uuid "98ffd15c-558d-42ac-a698-b813c0a790c5")
+	)
+	(wire
+		(pts
+			(xy 231.14 119.38) (xy 220.98 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ac7f887-ef06-4262-bac2-dcc24956ae62")
 	)
 	(wire
 		(pts
@@ -6614,6 +6711,16 @@
 			(type default)
 		)
 		(uuid "a5653c71-ae9a-4872-9c01-c3732b59c399")
+	)
+	(wire
+		(pts
+			(xy 243.84 134.62) (xy 231.14 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a69f19bf-cc10-41f4-af90-470a9a649444")
 	)
 	(wire
 		(pts
@@ -7174,6 +7281,16 @@
 			(type default)
 		)
 		(uuid "e395a899-766a-49d1-99ed-18205da1d2ea")
+	)
+	(wire
+		(pts
+			(xy 243.84 124.46) (xy 243.84 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e45cdb45-00c5-4eeb-8d15-93c4711ebee4")
 	)
 	(wire
 		(pts
@@ -8315,6 +8432,50 @@
 		(uuid "148c8461-22c0-41db-bf12-1cfa1b4b90a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.56 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "eth_led_g_n"
+		(shape input)
+		(at 231.14 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6674e1f1-276e-4805-8d82-20f3789dddd5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 231.14 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "eth_led1_n"
+		(shape output)
+		(at 93.98 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bba5ee87-b22e-4a68-816b-d0bc706b9e90")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9695,6 +9856,87 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 246.38 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "302805f4-4ffa-42af-9b5c-f0cde7407934")
+		(property "Reference" "R250"
+			(at 248.92 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330R"
+			(at 248.92 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 246.38 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18c285c2-c014-4375-a523-8fb66dce8e35")
+		)
+		(pin "2"
+			(uuid "4854d5f7-7dd2-45aa-bfdd-9834bd449dab")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "R250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 40.64 90.17 0)
 		(unit 1)
 		(body_style 1)
@@ -9858,6 +10100,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 246.38 76.2 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b851c2e-73bd-443b-90a4-7a0d4e34b4d9")
+		(property "Reference" "#PWR1546"
+			(at 246.38 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 246.38 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 246.38 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "56e68449-c164-4d94-9069-65a133672094")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1546")
 					(unit 1)
 				)
 			)
@@ -10452,6 +10771,164 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+1V1")
+		(at 246.38 137.16 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "61b32081-2218-4a79-a763-c4ca66087ba4")
+		(property "Reference" "#PWR1547"
+			(at 246.38 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3V3"
+			(at 246.38 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 246.38 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a5a81937-07d8-4187-81a5-21d80e11e521")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1547")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 220.98 123.19 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6268a97f-57f8-4051-9d69-5421364829d6")
+		(property "Reference" "C255"
+			(at 223.52 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 223.52 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 220.98 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5b79e8a7-d17e-4128-9eb4-ccf65b0f74cc")
+		)
+		(pin "2"
+			(uuid "91c267a0-f660-4162-ac7a-024a00fa3e03")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "C255")
 					(unit 1)
 				)
 			)
@@ -11114,6 +11591,83 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 220.98 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "75a3d59f-1ec4-436a-abba-01bdc2496b72")
+		(property "Reference" "#PWR1545"
+			(at 220.98 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 220.98 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 220.98 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8f59c8c3-fe86-4baa-b9c9-e4d6fac295fc")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1545")
 					(unit 1)
 				)
 			)
@@ -13853,537 +14407,5 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 231.14 119.38) (xy 220.98 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ac7f887-ef06-4262-bac2-dcc24956ae62")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 220.98 123.19 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6268a97f-57f8-4051-9d69-5421364829d6")
-		(property "Reference" "C255"
-			(at 223.52 121.92 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 223.52 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 220.98 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 220.98 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 220.98 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5b79e8a7-d17e-4128-9eb4-ccf65b0f74cc")
-		)
-		(pin "2"
-			(uuid "91c267a0-f660-4162-ac7a-024a00fa3e03")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "C255")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 220.98 127 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "75a3d59f-1ec4-436a-abba-01bdc2496b72")
-		(property "Reference" "#PWR1545"
-			(at 220.98 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 220.98 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 220.98 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 220.98 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
-			(at 220.98 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8f59c8c3-fe86-4baa-b9c9-e4d6fac295fc")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "#PWR1545")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 246.38 81.28) (xy 246.38 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3daa87c8-e5b2-42f4-89ff-07fb8dfccddb")
-	)
-	(wire
-		(pts
-			(xy 241.3 81.28) (xy 241.3 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a819b7b-8e3b-410c-a5b4-d588d753fd17")
-	)
-	(wire
-		(pts
-			(xy 241.3 78.74) (xy 246.38 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90826fb5-382a-4b7f-a7fe-f3e381b09651")
-	)
-	(junction
-		(at 246.38 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8995a88a-ee4c-435d-9402-3d4a4cc1ab61")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 246.38 76.2 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3b851c2e-73bd-443b-90a4-7a0d4e34b4d9")
-		(property "Reference" "#PWR1546"
-			(at 246.38 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 246.38 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "56e68449-c164-4d94-9069-65a133672094")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "#PWR1546")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 246.38 124.46) (xy 246.38 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24d6811f-5762-4385-9eea-a7095a95b5bc")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 246.38 133.35 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "302805f4-4ffa-42af-9b5c-f0cde7407934")
-		(property "Reference" "R250"
-			(at 248.92 132.08 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "330R"
-			(at 248.92 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 246.38 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 246.38 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 246.38 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "18c285c2-c014-4375-a523-8fb66dce8e35")
-		)
-		(pin "2"
-			(uuid "4854d5f7-7dd2-45aa-bfdd-9834bd449dab")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "R250")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V1")
-		(at 246.38 137.16 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "61b32081-2218-4a79-a763-c4ca66087ba4")
-		(property "Reference" "#PWR1547"
-			(at 246.38 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3V3"
-			(at 246.38 142.24 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 246.38 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 246.38 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a5a81937-07d8-4187-81a5-21d80e11e521")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "#PWR1547")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 243.84 124.46) (xy 243.84 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e45cdb45-00c5-4eeb-8d15-93c4711ebee4")
-	)
-	(wire
-		(pts
-			(xy 243.84 134.62) (xy 231.14 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a69f19bf-cc10-41f4-af90-470a9a649444")
-	)
-	(global_label "eth_led_g_n"
-		(shape input)
-		(at 231.14 134.62 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6674e1f1-276e-4805-8d82-20f3789dddd5")
-	)
-	(no_connect
-		(at 241.3 124.46)
-		(uuid "991dbfd6-0ccf-47ff-84d8-4d9b303201a4")
-	)
-	(no_connect
-		(at 238.76 124.46)
-		(uuid "a9511fa9-a133-4c5a-9f35-9f0dfc636b58")
-	)
-	(global_label "eth_led1_n"
-		(shape output)
-		(at 93.98 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bba5ee87-b22e-4a68-816b-d0bc706b9e90")
-	)
-	(text "J9: CT = common PHY-side centre tap (all 4 pairs) -> 100n to GND. GND/SH -> GND."
-		(exclude_from_sim no)
-		(at 213.36 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f8b2d2ee-6f01-4dde-ac8d-070458384e13")
-	)
-	(text "Green LED L3(+)/L4 <- PHY LED1 link/act via U42 ch3 (1.8->3.3 V). Yellow L1/L2 unused. Check +/- vs datasheet p.7"
-		(exclude_from_sim no)
-		(at 213.36 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d1cdce38-a7db-42e0-86a0-586ee80b7962")
-	)
-	(text "SODIMM P1 not populated: {phy} bus to P1 is a leftover"
-		(exclude_from_sim no)
-		(at 213.36 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5e607833-feda-490c-a5e5-b5ffe0d874d5")
 	)
 )
