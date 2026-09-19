@@ -3900,6 +3900,17 @@
 		)
 		(uuid "c9c67261-8bb4-4fb8-b03d-18373e0f79b1")
 	)
+	(text "pg_all: power-good wired-AND (ps1) -> PHY RESET_N pull-up (eth) and U42 ch4 -> D1"
+		(exclude_from_sim no)
+		(at 232.41 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9ba7e8a-cae5-47ec-985e-559bf773464c")
+	)
 	(text "J10: 1 = TX (3.3 V out), 2 = RX (3.3 V in). GND on J2.3 / J4"
 		(exclude_from_sim no)
 		(at 368.3 177.8 0)
@@ -8193,6 +8204,28 @@
 		(uuid "2a054150-befc-41b9-a18e-aef290df0ca4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 313.41 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "pg_all"
+		(shape output)
+		(at 254 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c3e1ef3-6cb4-46b8-8c8a-6bb5d5012287")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 254 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
