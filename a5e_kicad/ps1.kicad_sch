@@ -945,7 +945,7 @@
 	)
 	(text "PG of 1V2 / 3V3 / 1V1 regulators (open drain) wired-AND, 1.8 V level -> U42 ch4 on root -> powergood 3.3 V + LED D1"
 		(exclude_from_sim no)
-		(at 20.32 131.45 0)
+		(at 11.176 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
