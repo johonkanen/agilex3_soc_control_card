@@ -1,17 +1,65 @@
 (version 1)
 
-# LPDDR4 breakout: 0.1 mm neck-down is allowed only inside the Agilex (U7) and LPDDR4 (U12) courtyards.
-# Outside them the net classes give the 50 ohm widths (0.15 mm on F/B.Cu, 0.12 mm on inner layers)
-# and the 100 ohm pair geometry (0.13/0.25 mm outer, 0.11/0.25 mm inner) from the tuning profiles.
-(rule "lpddr_bga_neckdown"
-	(condition "(A.NetClass == 'lpddr_dq' || A.NetClass == 'lpddr_ca' || A.NetClass == 'lpddr_diff') && (A.insideCourtyard('U7') || A.insideCourtyard('U12'))")
-	(constraint track_width (min 0.09mm) (opt 0.1mm))
-	(constraint diff_pair_gap (min 0.09mm) (opt 0.2mm)))
+# ===================================================================================================
+# LPDDR4 rules (net classes lpddr_dq, lpddr_ca, lpddr_diff).  KiCad applies the LAST matching rule,
+# so the general rules come first and the BGA-courtyard exceptions (U7 Agilex, U12 LPDDR4) after them.
+# intersectsCourtyard() also catches segments that cross the courtyard edge (insideCourtyard() would not).
+# Stack-up: JLC08161H-3313.  50 ohm SE: 0.15 mm F/B.Cu, 0.12 mm inner.  100 ohm pair: 0.13/0.25 mm
+# F/B.Cu, 0.11/0.25 mm inner.  JLCPCB minimum trace/space is 0.09 mm; the 0.075 mm clearance used
+# between the 0.4 mm U7 pads is below that - see the note at the end.
+# ===================================================================================================
 
-# DQS / CK pairs: intra-pair skew and allowed uncoupled escape length
+# ---- single-ended DQ/DM/CA outside the BGAs -------------------------------------------------------
+(rule "lpddr_se_outer"
+	(condition "(A.NetClass == 'lpddr_dq' || A.NetClass == 'lpddr_ca') && (A.Layer == 'F.Cu' || A.Layer == 'B.Cu')")
+	(constraint track_width (min 0.13mm) (opt 0.15mm) (max 0.16mm)))
+(rule "lpddr_se_inner"
+	(condition "(A.NetClass == 'lpddr_dq' || A.NetClass == 'lpddr_ca') && A.Layer != 'F.Cu' && A.Layer != 'B.Cu'")
+	(constraint track_width (min 0.11mm) (opt 0.12mm) (max 0.13mm)))
+
+# ---- DQS / CK pairs outside the BGAs: 100 ohm geometry per layer -----------------------------------
+(rule "lpddr_diff_outer"
+	(condition "A.NetClass == 'lpddr_diff' && (A.Layer == 'F.Cu' || A.Layer == 'B.Cu')")
+	(constraint track_width (min 0.12mm) (opt 0.13mm) (max 0.14mm))
+	(constraint diff_pair_gap (min 0.2mm) (opt 0.25mm) (max 0.3mm)))
+(rule "lpddr_diff_inner"
+	(condition "A.NetClass == 'lpddr_diff' && A.Layer != 'F.Cu' && A.Layer != 'B.Cu'")
+	(constraint track_width (min 0.1mm) (opt 0.11mm) (max 0.12mm))
+	(constraint diff_pair_gap (min 0.2mm) (opt 0.25mm) (max 0.3mm)))
+
+# ---- pair integrity (whole net, all layers) --------------------------------------------------------
+# intra-pair skew, and the total length the two halves may run apart: escape through the U7 ball field
+# (~6 mm), the U12 escape (~2 mm) and the pad entries.
 (rule "lpddr_pair_skew"
 	(condition "A.NetClass == 'lpddr_diff'")
 	(constraint skew (max 2ps) (within_diff_pairs)))
 (rule "lpddr_pair_uncoupled"
 	(condition "A.NetClass == 'lpddr_diff'")
-	(constraint diff_pair_uncoupled (max 5mm)))
+	(constraint diff_pair_uncoupled (max 10mm)))
+
+# ---- crosstalk guard outside the BGAs (warning only) -----------------------------------------------
+# neighbouring LPDDR tracks at least 0.25 mm apart (about 2x the dielectric height on every layer).
+(rule "lpddr_xtalk_spacing"
+	(severity warning)
+	(condition "A.Type == 'Track' && B.Type == 'Track' && A.NetClass matches 'lpddr_.*' && B.NetClass matches 'lpddr_.*' && A.NetName != B.NetName && !A.inDiffPair('*') && !(A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12'))")
+	(constraint clearance (min 0.25mm)))
+
+# ---- inside the BGA courtyards: neck-down and single-channel escape ---------------------------------
+# One 0.1 mm trace per channel between the balls.  A pair may split into two channels here, so the
+# gap has no upper limit; it is counted as uncoupled length by the rule above.
+(rule "lpddr_bga_neckdown"
+	(condition "(A.NetClass == 'lpddr_dq' || A.NetClass == 'lpddr_ca' || A.NetClass == 'lpddr_diff') && (A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12'))")
+	(constraint track_width (min 0.09mm) (opt 0.1mm))
+	(constraint diff_pair_gap (min 0.1mm) (opt 0.2mm)))
+
+# Clearance between LPDDR tracks and the U7 pads / via-in-pad vias: the 0.4 mm pads on 0.65 mm pitch
+# leave 0.25 mm, i.e. 0.1 mm trace + 2 x 0.075 mm.  This matches the 0.075 mm pad overrides already on
+# the footprint and the board minimum clearance, but it is BELOW JLCPCB's 0.09 mm capability.  To be
+# within spec, reduce the U7 pads to 0.35 mm (0.3 mm channel -> 0.1 mm trace + 2 x 0.1 mm) and raise
+# this rule and the board minimum to 0.09 mm.
+(rule "lpddr_bga_clearance"
+	(condition "A.NetClass matches 'lpddr_.*' && A.Type == 'Track' && (B.Type == 'Pad' || B.Type == 'Via') && A.intersectsCourtyard('U7')")
+	(constraint clearance (min 0.075mm)))
+(rule "lpddr_bga_clearance_u12"
+	(condition "A.NetClass matches 'lpddr_.*' && A.Type == 'Track' && (B.Type == 'Pad' || B.Type == 'Via') && A.intersectsCourtyard('U12')")
+	(constraint clearance (min 0.1mm)))
