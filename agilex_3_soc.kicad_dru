@@ -29,13 +29,13 @@
 
 # ---- pair integrity (whole net, all layers) --------------------------------------------------------
 # intra-pair skew, and the total length the two halves may run apart: escape through the U7 ball field
-# (~6 mm), the U12 escape (~2 mm) and the pad entries.
+# (~6 mm), the U12 escape through its 0.65 mm channels (~8 mm) and the pad entries.
 (rule "lpddr_pair_skew"
 	(condition "A.NetClass == 'lpddr_diff'")
 	(constraint skew (max 2ps) (within_diff_pairs)))
 (rule "lpddr_pair_uncoupled"
 	(condition "A.NetClass == 'lpddr_diff'")
-	(constraint diff_pair_uncoupled (max 10mm)))
+	(constraint diff_pair_uncoupled (max 12mm)))
 
 # ---- crosstalk guard outside the BGAs (warning only) -----------------------------------------------
 # neighbouring LPDDR tracks at least 0.25 mm apart (about 2x the dielectric height on every layer).
