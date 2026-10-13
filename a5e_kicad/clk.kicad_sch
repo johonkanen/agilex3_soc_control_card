@@ -1338,17 +1338,6 @@
 		)
 		(uuid "8c48b01e-44f2-4dab-a920-b28ac898c524")
 	)
-	(text "USB - 24MHz 1.8V SE"
-		(exclude_from_sim no)
-		(at 208.28 46.228 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "92a4ec94-f262-432f-845e-11dc6b6276d4")
-	)
 	(text "SDM, FPGA - 100MHz 1.8V SE"
 		(exclude_from_sim no)
 		(at 208.28 53.34 0)
@@ -1744,16 +1733,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 45.72) (xy 198.12 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6add3a24-6e49-4cd7-99ff-939fbc516f5b")
-	)
-	(wire
-		(pts
 			(xy 175.26 71.12) (xy 198.12 71.12)
 		)
 		(stroke
@@ -1884,16 +1863,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 48.26) (xy 198.12 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d535f0fb-83b5-4920-900d-83ba89531001")
-	)
-	(wire
-		(pts
 			(xy 107.95 99.06) (xy 107.95 100.33)
 		)
 		(stroke
@@ -2002,28 +1971,6 @@
 			(justify left)
 		)
 		(uuid "055edabb-4fc8-4b41-b41b-44837189d2e9")
-	)
-	(hierarchical_label "clk4_P"
-		(shape output)
-		(at 198.12 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1758b855-013c-4a42-a5bc-ae7634b69027")
-	)
-	(hierarchical_label "clk4_N"
-		(shape output)
-		(at 198.12 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "250106fc-920e-45a4-9b98-025a42385434")
 	)
 	(hierarchical_label "clk2_N"
 		(shape output)

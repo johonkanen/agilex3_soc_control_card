@@ -6290,16 +6290,6 @@
 		)
 		(uuid "a80e6769-9883-40bb-b062-b384c5f08df6")
 	)
-	(wire
-		(pts
-			(xy 96.52 214.63) (xy 111.76 214.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a89b60d9-5528-4818-93c6-b6ee7d6c1c1f")
-	)
 	(bus
 		(pts
 			(xy 109.22 95.25) (xy 160.02 95.25)
@@ -7459,16 +7449,6 @@
 			(justify left bottom)
 		)
 		(uuid "5abed1db-1547-4d46-a4ed-8fc923bff025")
-	)
-	(label "usb_clk24"
-		(at 111.76 214.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5bd02747-2bd6-44be-8623-1ab7b904aa8b")
 	)
 	(label "ad_ch7"
 		(at 170.18 265.43 0)
@@ -13699,26 +13679,6 @@
 				(justify right)
 			)
 		)
-		(pin "clk4_P" output
-			(at 96.52 214.63 0)
-			(uuid "29cd5df5-57d5-4e10-9c16-a955c29d01e9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "clk4_N" output
-			(at 96.52 217.17 0)
-			(uuid "0b2ef767-93a5-4098-ac5c-d72fa6f6873e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "clk1_P" output
 			(at 96.52 191.77 0)
 			(uuid "5dc73538-ab3e-4f13-b26d-142af0ad3c51")
@@ -13891,16 +13851,6 @@
 				(justify right)
 			)
 		)
-		(pin "{hps_usb}" bidirectional
-			(at 109.22 105.41 0)
-			(uuid "48283741-83e5-41a5-9f9e-6049a5b6d535")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "{hps_i2c}" bidirectional
 			(at 109.22 95.25 0)
 			(uuid "e4d1f74a-36e5-4120-9e99-82dc78fc4bf5")
@@ -14036,16 +13986,6 @@
 		(pin "{jtag}" bidirectional
 			(at 160.02 62.23 180)
 			(uuid "2a4f540b-cc25-4412-a71f-0f125884204f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "{usb_phy}" bidirectional
-			(at 160.02 102.87 180)
-			(uuid "d06c2168-3ab7-43f6-8b19-85b904391f4a")
 			(effects
 				(font
 					(size 1.27 1.27)
