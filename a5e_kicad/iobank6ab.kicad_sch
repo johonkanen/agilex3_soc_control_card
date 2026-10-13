@@ -16266,7 +16266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "agilex_lib:VFBGA_b23b_mirror"
+		(property "Footprint" "agilex_lib:Altera_B23B"
 			(at 139.7 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18643,7 +18643,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "agilex_lib:VFBGA_b23b_mirror"
+		(property "Footprint" "agilex_lib:Altera_B23B"
 			(at 139.7 109.22 0)
 			(hide yes)
 			(show_name no)
