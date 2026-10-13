@@ -18038,7 +18038,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 49.53 147.3199 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23866,7 +23866,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 125.73 50.7999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24531,7 +24531,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 135.89 27.9399 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25118,7 +25118,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 49.53 139.6999 90)
 			(show_name no)
 			(do_not_autoplace no)

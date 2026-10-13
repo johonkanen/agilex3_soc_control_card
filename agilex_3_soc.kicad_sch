@@ -8849,7 +8849,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 345.44 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9316,7 +9316,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 328.93 199.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12554,7 +12554,7 @@
 				)
 			)
 		)
-		(property "Value" "1v8"
+		(property "Value" "1V8"
 			(at 350.52 198.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12710,7 +12710,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 349.25 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
