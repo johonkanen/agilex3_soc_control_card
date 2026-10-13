@@ -432,16 +432,6 @@
 	)
 	(bus
 		(pts
-			(xy 30.48 22.86) (xy 53.34 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f14e556-95d2-4383-ac5b-c1bcd2061891")
-	)
-	(bus
-		(pts
 			(xy 78.74 17.78) (xy 81.28 17.78)
 		)
 		(stroke
@@ -449,16 +439,6 @@
 			(type default)
 		)
 		(uuid "3fcd5a73-9807-4ef5-89b2-90c7f244489d")
-	)
-	(bus
-		(pts
-			(xy 53.34 22.86) (xy 58.42 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "404464d0-db43-4802-88e9-972fe4528f48")
 	)
 	(bus
 		(pts
@@ -519,16 +499,6 @@
 			(type default)
 		)
 		(uuid "55bc149d-5894-44d2-b6b3-21c0e9288144")
-	)
-	(bus
-		(pts
-			(xy 60.96 22.86) (xy 66.04 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58743fbb-77c4-45ee-8eb8-f8661e807a1d")
 	)
 	(bus
 		(pts
@@ -802,16 +772,6 @@
 	)
 	(bus
 		(pts
-			(xy 66.04 22.86) (xy 68.58 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add8a60f-ed2b-4547-b378-2ab6ef023a94")
-	)
-	(bus
-		(pts
 			(xy 266.7 129.54) (xy 269.24 129.54)
 		)
 		(stroke
@@ -879,16 +839,6 @@
 			(type default)
 		)
 		(uuid "d402f9f0-c5a8-4ec3-a52d-8401a3c8fd7f")
-	)
-	(bus
-		(pts
-			(xy 58.42 22.86) (xy 60.96 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbb653ae-5460-4fb7-97e8-294853a51da3")
 	)
 	(bus
 		(pts
@@ -1100,16 +1050,5 @@
 			(justify right)
 		)
 		(uuid "c11a7780-4710-46f1-ba81-dc047739c728")
-	)
-	(hierarchical_label "{usb_phy}"
-		(shape bidirectional)
-		(at 30.48 22.86 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f72e118a-a43f-44ba-9f25-a5d6ef7ce501")
 	)
 )
