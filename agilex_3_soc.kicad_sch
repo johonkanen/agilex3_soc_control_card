@@ -5052,16 +5052,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 59.69) (xy 160.02 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "28c37f41-f403-4e02-80e2-0ae1bcb88eec")
-	)
-	(wire
-		(pts
 			(xy 259.08 135.89) (xy 269.24 135.89)
 		)
 		(stroke
@@ -5309,16 +5299,6 @@
 			(type default)
 		)
 		(uuid "431f48a2-0c3c-49c3-bc9a-92cd8d5a710a")
-	)
-	(wire
-		(pts
-			(xy 147.32 57.15) (xy 160.02 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43bdd0e7-1e10-4ca7-898b-8f739ccc0976")
 	)
 	(wire
 		(pts
@@ -5802,16 +5782,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 90.17) (xy 160.02 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "752ae844-1bb6-4c2c-8fcf-f1fc65055a12")
-	)
-	(wire
-		(pts
 			(xy 313.41 182.88) (xy 321.03 182.88)
 		)
 		(stroke
@@ -6109,16 +6079,6 @@
 			(type default)
 		)
 		(uuid "9070cefe-8d71-4992-916a-9e755864d36e")
-	)
-	(wire
-		(pts
-			(xy 259.08 72.39) (xy 269.24 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "913226a5-bda1-4701-ab6a-23651cb72c6c")
 	)
 	(wire
 		(pts
@@ -6640,16 +6600,6 @@
 		)
 		(uuid "cece68e5-c9e7-4c1f-8e21-04f60d4814f1")
 	)
-	(wire
-		(pts
-			(xy 109.22 87.63) (xy 160.02 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0fd4e6d-dfd6-43cd-bdcc-f6666e889e52")
-	)
 	(bus
 		(pts
 			(xy 151.13 207.01) (xy 151.13 257.81)
@@ -6799,16 +6749,6 @@
 			(type default)
 		)
 		(uuid "db9cfb92-137b-4fc2-96de-a76a69d56ea0")
-	)
-	(wire
-		(pts
-			(xy 190.5 151.13) (xy 200.66 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc15be62-ac07-4253-b066-e8dd5364380b")
 	)
 	(wire
 		(pts
@@ -7152,16 +7092,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 148.59) (xy 160.02 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa5d249d-d754-47ec-a235-9d0d3a34975a")
-	)
-	(wire
-		(pts
 			(xy 353.34 167.64) (xy 353.34 165.1)
 		)
 		(stroke
@@ -7239,16 +7169,6 @@
 			(justify left bottom)
 		)
 		(uuid "06dae0e2-ae84-4eda-823e-55211994027f")
-	)
-	(label "vccbat"
-		(at 259.08 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0bd5bbba-24dd-4126-a9ac-d9f05dd3868e")
 	)
 	(label "pg_1v8"
 		(at 256.54 163.83 0)
@@ -7359,16 +7279,6 @@
 			(justify left bottom)
 		)
 		(uuid "329244c6-41ac-4d34-84bf-af66de6ad361")
-	)
-	(label "powergood"
-		(at 147.32 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "339aea4f-27c7-4813-a702-1f353447ced2")
 	)
 	(label "iob6d2"
 		(at 196.85 224.79 0)
@@ -7509,16 +7419,6 @@
 			(justify right bottom)
 		)
 		(uuid "55e4d262-2dfe-468f-bd72-165f01abf503")
-	)
-	(label "~{hpscold_rstn}"
-		(at 147.32 57.15 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "562348cf-a76e-40e8-8f84-c3623eac0543")
 	)
 	(label "osc_clk_25"
 		(at 63.5 85.09 0)
@@ -8000,16 +7900,6 @@
 		)
 		(uuid "d8b41301-0674-4351-930c-6ee8a4d98778")
 	)
-	(label "vccbat"
-		(at 190.5 151.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d95da6c7-17e0-493a-ba65-ec99c87c1c2d")
-	)
 	(label "ad_ch3"
 		(at 254 276.86 0)
 		(effects
@@ -8019,16 +7909,6 @@
 			(justify left bottom)
 		)
 		(uuid "dabd514d-aac2-4e01-af44-43243711c029")
-	)
-	(label "vccbat"
-		(at 149.86 148.59 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "db6ca03e-1ec8-4dfd-868f-7447dd8a4d4b")
 	)
 	(label "pg_1v8"
 		(at 313.41 190.5 0)
@@ -13935,16 +13815,6 @@
 				(justify left)
 			)
 		)
-		(pin "vccbat_1v8" output
-			(at 269.24 72.39 180)
-			(uuid "cf8e0737-023b-482f-b827-eb4b41a734c2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(instances
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
@@ -14024,26 +13894,6 @@
 		(pin "{hps_usb}" bidirectional
 			(at 109.22 105.41 0)
 			(uuid "48283741-83e5-41a5-9f9e-6049a5b6d535")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "hps_uart_rx" input
-			(at 109.22 90.17 0)
-			(uuid "f35cb176-a234-4219-ae0d-e32fb7b1e1cb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "hps_uart_tx" output
-			(at 109.22 87.63 0)
-			(uuid "3d6b3b2c-bee5-4080-b1dd-d3ee85fdb3e3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14183,36 +14033,6 @@
 				(justify left)
 			)
 		)
-		(pin "hps_uart_rx" input
-			(at 160.02 90.17 180)
-			(uuid "a44ce46e-f644-487c-8ceb-2319dfb75e0b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "hps_uart_tx" output
-			(at 160.02 87.63 180)
-			(uuid "fd139fad-e4ec-4697-9620-54639f67d0d3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "~{hps_cold_rstn}" output
-			(at 160.02 57.15 180)
-			(uuid "802e95db-5621-4d41-90c5-472d282e517c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "{jtag}" bidirectional
 			(at 160.02 62.23 180)
 			(uuid "2a4f540b-cc25-4412-a71f-0f125884204f")
@@ -14226,16 +14046,6 @@
 		(pin "{usb_phy}" bidirectional
 			(at 160.02 102.87 180)
 			(uuid "d06c2168-3ab7-43f6-8b19-85b904391f4a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vccbat_1v8" bidirectional
-			(at 160.02 148.59 180)
-			(uuid "78a947a6-55cf-41c4-94f7-5cf0f7832b39")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14331,16 +14141,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "PG" bidirectional
-			(at 160.02 59.69 180)
-			(uuid "5a4189f6-ad2b-4b73-9afe-86babda02864")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(instances
@@ -15036,16 +14836,6 @@
 		(pin "{iob6h}" bidirectional
 			(at 200.66 143.51 180)
 			(uuid "3049e909-57ff-48c9-a986-e29e1ee16697")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "vccbat_1v8" bidirectional
-			(at 200.66 151.13 180)
-			(uuid "02a568b0-4929-4549-b062-f4718745fb98")
 			(effects
 				(font
 					(size 1.27 1.27)
