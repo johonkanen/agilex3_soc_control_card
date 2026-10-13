@@ -159,8 +159,8 @@
 			(front no)
 			(back no)
 		)
-		(capping no)
-		(filling no)
+		(capping yes)
+		(filling yes)
 		(grid_origin 195.44184 142.23415)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
