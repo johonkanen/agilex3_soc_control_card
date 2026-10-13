@@ -1,0 +1,10 @@
+# KiCad files: always store and check out with LF so Windows and Linux saves don't churn the diff
+*.kicad_sch   text eol=lf
+*.kicad_pcb   text eol=lf
+*.kicad_pro   text eol=lf
+*.kicad_prl   text eol=lf
+*.kicad_sym   text eol=lf
+*.kicad_mod   text eol=lf
+*.kicad_dru   text eol=lf
+sym-lib-table text eol=lf
+fp-lib-table  text eol=lf
