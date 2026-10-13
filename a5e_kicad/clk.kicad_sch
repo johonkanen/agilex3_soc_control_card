@@ -2758,7 +2758,7 @@
 				)
 			)
 		)
-		(property "Value" "3v3"
+		(property "Value" "3V3"
 			(at 95.25 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
