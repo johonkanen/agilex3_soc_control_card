@@ -13725,6 +13725,11 @@
 					(page "16")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "7")
+				)
+			)
 		)
 	)
 	(sheet
@@ -13779,6 +13784,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "10")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "15")
 				)
 			)
 		)
@@ -13867,6 +13877,11 @@
 					(page "3")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "4")
+				)
+			)
 		)
 	)
 	(sheet
@@ -13931,6 +13946,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "8")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "13")
 				)
 			)
 		)
@@ -14089,6 +14109,11 @@
 					(page "18")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "10")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14175,6 +14200,11 @@
 					(page "12")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "17")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14229,6 +14259,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "14")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "9")
 				)
 			)
 		)
@@ -14287,6 +14322,11 @@
 					(page "5")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "6")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14341,6 +14381,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "11")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "16")
 				)
 			)
 		)
@@ -14505,6 +14550,11 @@
 					(page "2")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "2")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14571,6 +14621,11 @@
 					(page "7")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "12")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14635,6 +14690,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "15")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "8")
 				)
 			)
 		)
@@ -14721,6 +14781,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "4")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "5")
 				)
 			)
 		)
@@ -14819,6 +14884,11 @@
 					(page "9")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "14")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14915,6 +14985,11 @@
 					(page "13")
 				)
 			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "18")
+				)
+			)
 		)
 	)
 	(sheet
@@ -14979,6 +15054,11 @@
 			(project "DBM_A5E013"
 				(path "/267d02d2-570f-41a1-8015-b378cedbc665"
 					(page "6")
+				)
+			)
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "11")
 				)
 			)
 		)
