@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.6,
-          "height": 0.8,
-          "width": 0.8
+          "drill": 0.65,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.15
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.15,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -65,7 +81,32 @@
           "width": 0.1
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "copper_edge_clearance|125821840|83244150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|c7d96735-ddae-433b-8727-d74bce8a11a3",
+          "intentional"
+        ],
+        [
+          "copper_edge_clearance|127591840|82884150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|cc568a4a-9d7c-46d3-a59c-c3ee7087f9fa",
+          "intentional exclusion, original board has this also"
+        ],
+        [
+          "silk_edge_clearance|125141840|82934150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|c35e594a-2d18-453f-95b7-07b6836cf4ae",
+          ""
+        ],
+        [
+          "silk_edge_clearance|125141840|82934150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|cdb79ffb-51d3-4ec0-a53b-05d46521ccff",
+          "intentional"
+        ],
+        [
+          "silk_edge_clearance|200016840|101344150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|b27e1e1a-4108-4fe4-ae67-45f3d4faf404",
+          "intentional"
+        ],
+        [
+          "silk_edge_clearance|200016840|85194150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|068b748a-5b71-41f5-afc1-fcc91e96f6b4",
+          "intentional"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -135,7 +176,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.075,
+        "min_clearance": 0.09,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -144,9 +185,9 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.15,
         "min_track_width": 0.09,
         "min_via_annular_width": 0.05,
@@ -167,6 +208,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -178,6 +220,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -189,6 +232,7 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
+          "td_enabled": false,
           "td_height_ratio": 1.0,
           "td_length_ratio": 0.5,
           "td_maxheight": 2.0,
@@ -472,6 +516,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -521,42 +566,12 @@
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "lpddr_ca",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.12,
-        "tuning_profile": "LPDDR4 SE 50R JLC08161H-3313",
-        "via_diameter": 0.3,
-        "via_drill": 0.15
-      },
-      {
-        "clearance": 0.1,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.11,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "lpddr_diff",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.12,
-        "tuning_profile": "LPDDR4 DIFF 100R JLC08161H-3313",
-        "via_diameter": 0.3,
-        "via_drill": 0.15
-      },
-      {
-        "clearance": 0.1,
-        "diff_pair_gap": 0.2,
-        "diff_pair_width": 0.1,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
         "name": "lpddr_dq",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.12,
-        "tuning_profile": "LPDDR4 SE 50R JLC08161H-3313",
+        "track_width": 0.1,
+        "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.15
       }
@@ -564,24 +579,12 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": [
       {
         "netclass": "lpddr_dq",
         "pattern": ".*dq([0-9]|[12][0-9]|3[01])$"
-      },
-      {
-        "netclass": "lpddr_dq",
-        "pattern": ".*/dm[0-3]$"
-      },
-      {
-        "netclass": "lpddr_ca",
-        "pattern": ".*/(ca[0-5]|cke|~\\{cs\\}|~\\{rst\\})$"
-      },
-      {
-        "netclass": "lpddr_diff",
-        "pattern": ".*/(dqs[0-3]|ck)_[PN]$"
       }
     ]
   },
@@ -821,7 +824,7 @@
         "sdm_tms"
       ],
       "sdm_qspi": [
-        "qspi_D[3..0]",
+        "qspi_D{3..0]",
         "qspi_CLK",
         "~{qspi_CS}",
         "~{qspi_rst_n}"
@@ -882,7 +885,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "U2,U13-14,U17,U20-32,C188,C194",
+    "used_designators": "U2",
     "variants": []
   },
   "sheets": [
@@ -891,12 +894,12 @@
       "agilex_3_soc"
     ],
     [
-      "871a81f2-62c4-47fa-98d5-872580aa51c3",
-      "ad subsystem"
-    ],
-    [
       "8aaf6c2b-ae6e-4499-806d-67948f95803c",
       "SDM"
+    ],
+    [
+      "871a81f2-62c4-47fa-98d5-872580aa51c3",
+      "ad subsystem"
     ],
     [
       "1bba180f-a717-40d4-b2d6-e5a7b998021f",
@@ -964,155 +967,6 @@
     "meta": {
       "version": 0
     },
-    "tuning_profiles_impedance_geometric": [
-      {
-        "enable_time_domain_tuning": true,
-        "layer_entries": [
-          {
-            "bottom_reference_layer": "In1.Cu",
-            "delay": 6100000,
-            "diff_pair_gap": 0,
-            "signal_layer": "F.Cu",
-            "top_reference_layer": "UNDEFINED",
-            "width": 150000
-          },
-          {
-            "bottom_reference_layer": "In2.Cu",
-            "delay": 6970000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In1.Cu",
-            "top_reference_layer": "F.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "In3.Cu",
-            "delay": 7080000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In2.Cu",
-            "top_reference_layer": "In1.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "In4.Cu",
-            "delay": 7000000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In3.Cu",
-            "top_reference_layer": "In2.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "In5.Cu",
-            "delay": 7000000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In4.Cu",
-            "top_reference_layer": "In3.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "In6.Cu",
-            "delay": 7080000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In5.Cu",
-            "top_reference_layer": "In4.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "B.Cu",
-            "delay": 6970000,
-            "diff_pair_gap": 0,
-            "signal_layer": "In6.Cu",
-            "top_reference_layer": "In5.Cu",
-            "width": 120000
-          },
-          {
-            "bottom_reference_layer": "UNDEFINED",
-            "delay": 6100000,
-            "diff_pair_gap": 0,
-            "signal_layer": "B.Cu",
-            "top_reference_layer": "In6.Cu",
-            "width": 150000
-          }
-        ],
-        "profile_name": "LPDDR4 SE 50R JLC08161H-3313",
-        "target_impedance": 50.0,
-        "type": 0,
-        "via_overrides": [],
-        "via_prop_delay": 7200000
-      },
-      {
-        "enable_time_domain_tuning": true,
-        "layer_entries": [
-          {
-            "bottom_reference_layer": "In1.Cu",
-            "delay": 6100000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "F.Cu",
-            "top_reference_layer": "UNDEFINED",
-            "width": 130000
-          },
-          {
-            "bottom_reference_layer": "In2.Cu",
-            "delay": 6970000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In1.Cu",
-            "top_reference_layer": "F.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "In3.Cu",
-            "delay": 7080000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In2.Cu",
-            "top_reference_layer": "In1.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "In4.Cu",
-            "delay": 7000000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In3.Cu",
-            "top_reference_layer": "In2.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "In5.Cu",
-            "delay": 7000000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In4.Cu",
-            "top_reference_layer": "In3.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "In6.Cu",
-            "delay": 7080000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In5.Cu",
-            "top_reference_layer": "In4.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "B.Cu",
-            "delay": 6970000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "In6.Cu",
-            "top_reference_layer": "In5.Cu",
-            "width": 110000
-          },
-          {
-            "bottom_reference_layer": "UNDEFINED",
-            "delay": 6100000,
-            "diff_pair_gap": 250000,
-            "signal_layer": "B.Cu",
-            "top_reference_layer": "In6.Cu",
-            "width": 130000
-          }
-        ],
-        "profile_name": "LPDDR4 DIFF 100R JLC08161H-3313",
-        "target_impedance": 100.0,
-        "type": 1,
-        "via_overrides": [],
-        "via_prop_delay": 7200000
-      }
-    ]
+    "tuning_profiles_impedance_geometric": []
   }
 }
