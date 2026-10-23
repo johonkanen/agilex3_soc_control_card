@@ -1,18 +1,17 @@
 # agilex3_soc_control_card
-agilex 3 soc platform based control card for ac in/out lab power supply
-Original board used Agilex 3 FPGA and had a few bugs in pin connections so this is second revision with SoC instead of just FPGA
+Agilex 5 SoC based control card for an AC in/out lab power supply.
+The original board used an Agilex 3 FPGA and had a few bugs in the pin connections, so this second revision
+uses an SoC instead of just an FPGA. The target is a Linux-capable control board with an Ethernet connection.
 
-target is to create a Linux capable Control Board with ethernet connection using A3CW100BM16AE6S SoC
-Alternatively I could use Agilex 5 A5E(E/B)008B23BE6SCS
+Main features:
+- Agilex 5 E-Series SoC A5EB013B (quad-core HPS), B23B 795-ball package, -6S speed grade
+- 1 GB LPDDR4 (ISSI IS43LQ32256A, x32)
+- 1 Gb Ethernet (KSZ9031RNX RGMII PHY)
+- microSD
+- muxed ADC block (ADS7056)
 
-Main features :
-Agilex 5 SoC (A5EB008B23BE6SCS)
-1Gb ethernet
-microSD
-(1GB? 2GB? 4GB?) LPDDR4
-muxed adc block
-
-Controls power electronics so mostly does generic io for pwm and spi/sdm adc
+Controls power electronics, so it mostly does generic I/O for PWM and SPI/SDM ADCs.
+Built by JLCPCB (8-layer, JLC08161H-3313 stack-up).
 
 ## Credits
 
