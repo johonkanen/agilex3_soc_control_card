@@ -13,3 +13,12 @@ microSD
 muxed adc block
 
 Controls power electronics so mostly does generic io for pwm and spi/sdm adc
+
+## Credits
+
+The Agilex 5 schematic sheets in `a5e_kicad/` started from the DBM_A5E013 example KiCad project by
+Rolf (Altera), attached to his KiCad symbol library merge request
+[kicad-symbols !5361](https://gitlab.com/kicad/libraries/kicad-symbols/-/merge_requests/5361), and have
+since been heavily modified. The U7 symbol and the `Altera_B23B` footprint come from his Agilex symbol and
+footprint generators ([kicad-symbols !5565](https://gitlab.com/kicad/libraries/kicad-symbols/-/merge_requests/5565),
+[kicad-library-tools !2200](https://gitlab.com/kicad/libraries/kicad-library-tools/-/merge_requests/2200)).
