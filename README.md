@@ -13,6 +13,9 @@ Main features:
 Controls power electronics, so it mostly does generic I/O for PWM and SPI/SDM ADCs.
 Built by JLCPCB (8-layer, JLC08161H-3313 stack-up).
 
+LPDDR4, eMMC and QSPI flash are being changed to parts shared with the Agilex 3 card and the Efinix Ti135 board,
+see `SHARED_PARTS.md`.
+
 ## Credits
 
 The Agilex 5 schematic sheets in `a5e_kicad/` started from the DBM_A5E013 example KiCad project by
