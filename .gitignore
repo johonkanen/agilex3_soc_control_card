@@ -4,3 +4,9 @@
 .history/
 *.*bak
 
+
+# Altera documents and pinout files: copyrighted, "all rights reserved", not redistributable.
+# Download them locally from the links in docs/README.md.
+docs/*.pdf
+docs/*.xlsx
+agilex_pinout_files/
