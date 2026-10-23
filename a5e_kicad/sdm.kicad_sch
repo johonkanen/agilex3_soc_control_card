@@ -18022,6 +18022,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 80.772 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 82.55 93.98 0)
 			(hide yes)
@@ -18109,6 +18120,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 219.202 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 220.98 26.67 0)
 			(hide yes)
@@ -18186,6 +18208,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 70.612 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 70.612 93.98 90)
 			(hide yes)
 			(show_name no)
@@ -18367,6 +18400,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C11702"
+			(at 229.362 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 231.14 26.67 0)
 			(hide yes)
@@ -18454,6 +18498,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 75.692 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 77.47 93.98 0)
 			(hide yes)
@@ -18529,6 +18584,17 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 100.33 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3030991"
 			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -21181,6 +21247,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 87.122 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 88.9 46.99 0)
 			(hide yes)
@@ -21353,6 +21430,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C4109"
+			(at 188.722 123.19 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 190.5 123.19 0)
 			(hide yes)
@@ -21430,6 +21518,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 214.122 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 214.122 26.67 90)
 			(hide yes)
 			(show_name no)
@@ -21527,6 +21626,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25130"
+			(at 110.49 164.338 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 110.49 162.56 0)
 			(hide yes)
@@ -21604,6 +21714,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 82.042 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 82.042 46.99 90)
 			(hide yes)
 			(show_name no)
@@ -21786,6 +21907,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25900"
+			(at 60.452 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 62.23 93.98 0)
 			(hide yes)
@@ -21857,6 +21989,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 110.49 182.118 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25130"
 			(at 110.49 182.118 90)
 			(hide yes)
 			(show_name no)
@@ -22028,6 +22171,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 55.372 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
 			(at 55.372 133.35 90)
 			(hide yes)
 			(show_name no)
@@ -22287,6 +22441,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25900"
+			(at 50.292 133.35 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 52.07 133.35 0)
 			(hide yes)
@@ -22357,6 +22522,17 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 100.33 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3030991"
 			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -22455,6 +22631,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 224.282 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 224.282 26.67 90)
 			(hide yes)
 			(show_name no)
@@ -22790,6 +22977,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 92.202 46.99 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 93.98 46.99 0)
 			(hide yes)
@@ -22962,6 +23160,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 65.532 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 67.31 93.98 0)
 			(hide yes)
@@ -23038,6 +23247,17 @@
 			)
 		)
 		(property "Footprint" "agilex_lib:MX25U25645G_CSP24_6x8mm_P1.0mm"
+			(at 46.99 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2802880"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)

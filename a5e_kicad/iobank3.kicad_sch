@@ -22935,6 +22935,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25094"
+			(at 242.57 65.278 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 242.57 63.5 0)
 			(hide yes)
@@ -23096,6 +23107,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 45.72 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25094"
 			(at 45.72 124.46 90)
 			(hide yes)
 			(show_name no)

@@ -8423,6 +8423,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1849453"
+			(at 335 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74axc4t774.pdf"
 			(at 335 176.53 0)
 			(hide yes)
@@ -8547,6 +8558,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C2937625"
+			(at 358.14 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 358.14 148.59 0)
 			(hide yes)
@@ -8622,6 +8644,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 267.462 262.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
 			(at 267.462 262.89 90)
 			(hide yes)
 			(show_name no)
@@ -9416,6 +9449,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25076"
+			(at 132.842 262.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 134.62 262.89 0)
 			(hide yes)
@@ -9488,6 +9532,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 267.462 273.05 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
 			(at 267.462 273.05 90)
 			(hide yes)
 			(show_name no)
@@ -9658,6 +9713,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C15849"
+			(at 39.0652 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 38.1 237.49 0)
 			(hide yes)
@@ -9806,6 +9872,17 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical"
+			(at 280.67 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22438118"
 			(at 280.67 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -9986,6 +10063,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C603656"
+			(at 54.61 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/ncp163-d.pdf"
 			(at 54.61 226.06 0)
 			(hide yes)
@@ -10066,6 +10154,17 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 373.38 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C492401"
 			(at 373.38 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -10390,6 +10489,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C492404"
+			(at 383.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 383.54 90.17 0)
 			(hide yes)
@@ -10626,6 +10736,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 370.84 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
 			(at 370.84 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -10874,6 +10995,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C11702"
+			(at 276.352 262.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 278.13 262.89 0)
 			(hide yes)
@@ -10946,6 +11078,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 338.582 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 338.582 132.08 90)
 			(hide yes)
 			(show_name no)
@@ -11425,6 +11568,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C22465874"
+			(at 247.65 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 247.65 228.6 0)
 			(hide yes)
@@ -11888,6 +12042,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C11702"
+			(at 252.222 262.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 254 262.89 0)
 			(hide yes)
@@ -11960,6 +12125,17 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 309.88 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2937625"
 			(at 309.88 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -12134,6 +12310,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 350.012 132.08 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 351.79 132.08 0)
 			(hide yes)
@@ -12293,6 +12480,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 363.22 203.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" "~"
 			(at 363.22 203.2 0)
 			(hide yes)
@@ -12442,6 +12640,17 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
+			(at 342.9 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1849453"
 			(at 342.9 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -12878,6 +13087,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 285.242 262.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
 			(at 285.242 262.89 90)
 			(hide yes)
 			(show_name no)

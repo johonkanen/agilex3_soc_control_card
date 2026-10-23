@@ -4201,6 +4201,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1562"
+			(at 130.81 100.6348 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 127 101.6 0)
 			(hide yes)
@@ -4282,6 +4293,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 128.27 30.988 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 128.27 29.21 0)
 			(hide yes)
@@ -4353,6 +4375,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 221.9452 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 221.9452 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -4527,6 +4560,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 166.0652 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 165.1 157.48 0)
 			(hide yes)
@@ -4604,6 +4648,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 183.8452 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 183.8452 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -4701,6 +4756,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 127 94.488 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 127 92.71 0)
 			(hide yes)
@@ -4770,6 +4836,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 132.08 37.1348 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1562"
 			(at 132.08 37.1348 0)
 			(hide yes)
 			(show_name no)
@@ -4861,6 +4938,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 116.332 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 118.11 67.31 0)
 			(hide yes)
@@ -4932,6 +5020,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 98.7552 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 98.7552 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -5023,6 +5122,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 129.54 62.738 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 129.54 60.96 0)
 			(hide yes)
@@ -5094,6 +5204,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 127 126.238 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 127 126.238 90)
 			(hide yes)
 			(show_name no)
@@ -5253,6 +5374,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 36.5252 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 36.5252 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5514,6 +5646,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 229.5652 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 228.6 157.48 0)
 			(hide yes)
@@ -5680,6 +5823,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 206.7052 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 205.74 157.48 0)
 			(hide yes)
@@ -5757,6 +5911,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 221.9452 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 221.9452 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -6016,6 +6181,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C5188956"
+			(at 92.71 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" "https://www.diodes.com/datasheet/download/AP61200+AP61201+AP61202+AP61203.pdf"
 			(at 92.71 44.45 0)
 			(hide yes)
@@ -6179,6 +6355,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 52.3748 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
 			(at 52.3748 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -6438,6 +6625,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 176.2252 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 175.26 157.48 0)
 			(hide yes)
@@ -6525,6 +6723,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 206.7052 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 205.74 143.51 0)
 			(hide yes)
@@ -6601,6 +6810,17 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
+			(at 92.71 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5188956"
 			(at 92.71 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -6704,6 +6924,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 219.4052 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 218.44 121.92 0)
 			(hide yes)
@@ -6785,6 +7016,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 211.7852 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 210.82 105.41 0)
 			(hide yes)
@@ -6856,6 +7098,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 191.4652 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 191.4652 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -6953,6 +7206,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 111.4552 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 110.49 181.61 0)
 			(hide yes)
@@ -7024,6 +7288,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 181.3052 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 181.3052 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7287,6 +7562,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 28.9052 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 27.94 85.09 0)
 			(hide yes)
@@ -7364,6 +7650,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 211.7852 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 211.7852 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -7455,6 +7752,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25879"
+			(at 106.172 99.06 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 107.95 99.06 0)
 			(hide yes)
@@ -7536,6 +7844,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 124.1552 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 123.19 181.61 0)
 			(hide yes)
@@ -7607,6 +7926,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 199.0852 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 199.0852 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7704,6 +8034,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 237.1852 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 236.22 143.51 0)
 			(hide yes)
@@ -7781,6 +8122,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 106.172 130.81 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25752"
 			(at 106.172 130.81 90)
 			(hide yes)
 			(show_name no)
@@ -7872,6 +8224,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 219.4052 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 218.44 105.41 0)
 			(hide yes)
@@ -7941,6 +8304,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 133.35 68.8848 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1562"
 			(at 133.35 68.8848 0)
 			(hide yes)
 			(show_name no)
@@ -8112,6 +8486,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 78.4352 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 77.47 180.34 0)
 			(hide yes)
@@ -8188,6 +8573,17 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
+			(at 92.71 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5188956"
 			(at 92.71 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -8369,6 +8765,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 204.1652 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 203.2 105.41 0)
 			(hide yes)
@@ -8440,6 +8847,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 40.3352 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 40.3352 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -8537,6 +8955,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 199.0852 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 198.12 157.48 0)
 			(hide yes)
@@ -8614,6 +9043,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 237.1852 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 237.1852 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -8794,6 +9234,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1562"
+			(at 130.81 132.3848 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 127 133.35 0)
 			(hide yes)
@@ -8865,6 +9316,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 265.1252 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 265.1252 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -9121,6 +9583,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 244.8052 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 243.84 157.48 0)
 			(hide yes)
@@ -9198,6 +9671,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 33.02 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 33.02 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -9289,6 +9773,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 59.3852 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 58.42 85.09 0)
 			(hide yes)
@@ -9366,6 +9861,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 204.1652 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 204.1652 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -9530,6 +10036,17 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
+			(at 92.71 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5188956"
 			(at 92.71 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9717,6 +10234,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 214.3252 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 213.36 157.48 0)
 			(hide yes)
@@ -9794,6 +10322,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 51.7652 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 51.7652 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -10048,6 +10587,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 107.442 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 109.22 35.56 0)
 			(hide yes)
@@ -10284,6 +10834,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 176.2252 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 175.26 105.41 0)
 			(hide yes)
@@ -10355,6 +10916,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 252.4252 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 252.4252 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -10452,6 +11024,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 252.4252 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 251.46 143.51 0)
 			(hide yes)
@@ -10530,6 +11113,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 55.372 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25792"
 			(at 55.372 35.56 90)
 			(hide yes)
 			(show_name no)
@@ -10691,6 +11285,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 257.5052 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 257.5052 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10943,6 +11548,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 47.9552 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 46.99 182.88 0)
 			(hide yes)
@@ -11030,6 +11646,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 44.1452 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 43.18 85.09 0)
 			(hide yes)
@@ -11107,6 +11734,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 214.3252 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 214.3252 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -11279,6 +11917,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 227.0252 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 227.0252 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -11771,6 +12420,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 186.3852 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 185.42 105.41 0)
 			(hide yes)
@@ -11842,6 +12502,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 108.712 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 108.712 67.31 90)
 			(hide yes)
 			(show_name no)
@@ -11933,6 +12604,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 260.0452 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 259.08 157.48 0)
 			(hide yes)
@@ -12010,6 +12692,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 196.5452 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 196.5452 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -12181,6 +12874,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 44.7548 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 45.72 140.97 0)
 			(hide yes)
@@ -12258,6 +12962,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 229.5652 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 229.5652 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -12355,6 +13070,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 171.1452 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 170.18 143.51 0)
 			(hide yes)
@@ -12442,6 +13168,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 155.9052 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 154.94 157.48 0)
 			(hide yes)
@@ -12519,6 +13256,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 86.0552 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
 			(at 86.0552 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -12779,6 +13527,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 276.5552 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 275.59 157.48 0)
 			(hide yes)
@@ -12939,6 +13698,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C415703"
+			(at 186.3852 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 185.42 121.92 0)
 			(hide yes)
@@ -13010,6 +13780,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 196.5452 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 196.5452 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -13186,6 +13967,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C190183"
+			(at 191.4652 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 190.5 157.48 0)
 			(hide yes)
@@ -13263,6 +14055,17 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+			(at 260.0452 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C190183"
 			(at 260.0452 147.32 0)
 			(hide yes)
 			(show_name no)

@@ -2784,6 +2784,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C14937"
+			(at 130.81 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8603_8607_8609.pdf"
 			(at 130.81 86.36 0)
 			(hide yes)
@@ -2953,6 +2964,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1523"
+			(at 160.9852 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Datasheet" ""
 			(at 160.02 97.79 0)
 			(hide yes)
@@ -3023,6 +3045,17 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 149.86 93.218 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25077"
 			(at 149.86 93.218 90)
 			(hide yes)
 			(show_name no)
@@ -3196,6 +3229,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "LCSC" "C54587"
+			(at 87.63 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/cd4052b.pdf"
@@ -3393,6 +3437,17 @@
 			)
 		)
 		(property "Footprint" "agilex_lib:ads7056"
+			(at 181.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2669798"
 			(at 181.61 93.98 0)
 			(hide yes)
 			(show_name no)
