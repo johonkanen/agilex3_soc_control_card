@@ -4847,9 +4847,9 @@
 		)
 		(uuid "e3f017c0-efaf-4533-b34a-3eb5457ca9d6")
 	)
-	(text "RESET_N: 10k to pg_all (power-good wired-AND, ps1) + 1u = reset held until 1V2/3V3 are good; HPS GPIO1_IO18 (K71) can re-reset the PHY"
+	(text "RESET_N: 10k pull-down + 1u = PHY held in reset until software drives HPS GPIO1_IO18 (K71) high; drive low >= 10 ms to reset"
 		(exclude_from_sim no)
-		(at 27.686 152.654 0)
+		(at 27.686 160.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6840,16 +6840,6 @@
 			(type default)
 		)
 		(uuid "8ac3e968-facd-48a0-b011-1f81d53d794a")
-	)
-	(wire
-		(pts
-			(xy 109.22 140.97) (xy 104.14 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bef64f4-6343-4442-962d-1c3089b8626d")
 	)
 	(wire
 		(pts
@@ -8885,28 +8875,6 @@
 		(uuid "bba5ee87-b22e-4a68-816b-d0bc706b9e90")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 93.98 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "pg_all"
-		(shape input)
-		(at 104.14 140.97 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bef251bc-4195-4756-baf8-1142218d63c8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.14 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16899,6 +16867,84 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "FB1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9e8aaf16-ba46-4aae-a275-79e6115cafef")
+		(property "Reference" "#PWR1551"
+			(at 109.22 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 109.22 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8e0b1276-fdaf-47d4-803c-e943ff2f9e9f")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1551")
 					(unit 1)
 				)
 			)

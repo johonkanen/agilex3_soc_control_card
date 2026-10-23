@@ -20,7 +20,7 @@ Reviewed 2026-09-19 against the KSZ9031RNX datasheet (DS00002117) and the Agilex
 
 1. **DVDDH (pins 16/34/40) had no decoupling** – C256/C257 100n (empty slots on the 1V8 bus) + C258 22u 6V3 added.
 2. **Ferrite beads** FB1 (3V3 → PHY3V3 = AVDDH) and FB2 (1V2 → PHY1V2PLL = AVDDL_PLL), Murata BLM15PX121SN1 (0402, 120 Ω @ 100 MHz, 1.5 A). AVDDL (pins 4/9) left directly on 1V2; its PHY1V2 power symbols renamed 1V2.
-3. **RESET_N** – R247 10k now pulls up to `pg_all` (power-good wired-AND on ps1, new global label on the root sheet) instead of 1V8, plus C259 1u to GND: reset stays asserted until 1V2/3V3/1V1 are good (1V2 comes up after 1V8, so a 1V8 pull-up released the PHY before its core supply existed). The HPS GPIO can still drive it.
+3. **RESET_N** – R247 10k pulls down to GND, plus C259 1u to GND: the PHY stays in reset until software drives HPS GPIO1_IO18 (K71) high, so the processor has full control and the reset is released only after all rails are up (a 1V8 pull-up would release it before 1V2 exists). Software must hold it low >= 10 ms after power-up and drive it high to release (push-pull, not open-drain; Linux: `reset-gpios = <... 18 GPIO_ACTIVE_LOW>`), then wait >= 100 us before MDIO access. (Earlier revision: 10k to `pg_all`; changed 2026-10-23.)
 4. **NC flags** on pins 13 and 47 (not bonded).
 5. **22 Ω series resistors** R251–R256 (TX_EN, TXD0-3, GTX_CLK – place at the HPS end) and R257–R262 (RX_DV, RXD0-3, RX_CLK – place at U10). Optional at the ~10–20 mm PHY–HPS distance; fit 0R if not wanted.
 
