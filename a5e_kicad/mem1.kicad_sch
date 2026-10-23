@@ -329,7 +329,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_BGA:BGA-200_10x14.5mm_Layout12x22_P0.8x0.65mm"
+			(property "Footprint" "agilex_lib:BGA-200_10x15mm_Layout12x22_P0.8x0.65mm"
 				(at 1.27 -48.26 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -11010,7 +11010,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_BGA:BGA-200_10x14.5mm_Layout12x22_P0.8x0.65mm"
+		(property "Footprint" "agilex_lib:BGA-200_10x15mm_Layout12x22_P0.8x0.65mm"
 			(at 82.55 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -13609,7 +13609,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_BGA:BGA-200_10x14.5mm_Layout12x22_P0.8x0.65mm"
+		(property "Footprint" "agilex_lib:BGA-200_10x15mm_Layout12x22_P0.8x0.65mm"
 			(at 82.55 111.76 0)
 			(hide yes)
 			(show_name no)

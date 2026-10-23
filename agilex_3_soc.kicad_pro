@@ -927,7 +927,7 @@
         "uuid": "a5b98d95-6877-4284-904f-d04e32723ae0"
       }
     ],
-    "used_designators": "U2,U13-14,U17,U20-32,C188,C194",
+    "used_designators": "C188,C194,U2,U13-14,U17,U20-32",
     "variants": []
   },
   "sheets": [
