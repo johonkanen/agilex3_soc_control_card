@@ -23236,7 +23236,7 @@
 				)
 			)
 		)
-		(property "Value" "MX25U25645G"
+		(property "Value" "IS25WP128-RHLE"
 			(at 46.99 70.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23257,7 +23257,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2802880"
+		(property "LCSC" "C1349419"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -23268,7 +23268,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.macronix.com/Lists/Datasheet/Attachments/8738/MX25U25645G,%201.8V,%20256Mb,%20v1.4.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C1349419.pdf"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -23279,7 +23279,7 @@
 				)
 			)
 		)
-		(property "Description" "256Mb 1.8V QSPI NOR Flash, 24-ball CSP/BGA (5x5, A1 depopulated), SFDP + 1-1-1/1-4-4/4-4-4, dedicated RESET# - Agilex 5 SDM ASx4 boot compatible"
+		(property "Description" "128Mb 1.8V QSPI NOR flash, dedicated RESET# (A4), SFDP, 24-ball TFBGA 6x8 mm 5x5 array - Agilex 5 SDM ASx4 boot compatible"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)

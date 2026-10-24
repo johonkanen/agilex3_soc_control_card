@@ -10999,7 +10999,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IS43LQ32256A-062BLI"
+		(property "Value" "H9HCNNN8KUMLHR-NME"
 			(at 83.4233 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11021,7 +11021,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17416862"
+		(property "LCSC" "C2912103"
 			(at 82.55 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -11032,7 +11032,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.issi.com/WW/pdf/43-46LQ32256A-AL.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2912103.pdf"
 			(at 78.74 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -11043,7 +11043,7 @@
 				)
 			)
 		)
-		(property "Description" "256Mx32 bit Low Power Double Data Rate 4 (LPDDR4) SDRAM, 1600 MHz, Industrial, BGA-200"
+		(property "Description" "8Gb LPDDR4 SDRAM, 2 channels x16, 1 CS, 3733 Mbps, 1.8/1.1/1.1 V, FBGA-200 10x15 mm"
 			(at 81.28 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -13598,7 +13598,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IS43LQ32256A-062BLI"
+		(property "Value" "H9HCNNN8KUMLHR-NME"
 			(at 83.4233 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13620,7 +13620,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17416862"
+		(property "LCSC" "C2912103"
 			(at 82.55 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -13631,7 +13631,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.issi.com/WW/pdf/43-46LQ32256A-AL.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C2912103.pdf"
 			(at 78.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13642,7 +13642,7 @@
 				)
 			)
 		)
-		(property "Description" "256Mx32 bit Low Power Double Data Rate 4 (LPDDR4) SDRAM, 1600 MHz, Industrial, BGA-200"
+		(property "Description" "8Gb LPDDR4 SDRAM, 2 channels x16, 1 CS, 3733 Mbps, 1.8/1.1/1.1 V, FBGA-200 10x15 mm"
 			(at 81.28 63.5 0)
 			(hide yes)
 			(show_name no)

@@ -25,7 +25,8 @@ Checked against the SK hynix data sheet (H9HCNNN8KUMLHR Series Rev 1.1, from LCS
   - RESET_n on T11;
   - ODT_CA_A/B (G2/T2) tied to `1V1`;
   - CKE0/CS0 used, the CS1/CKE1 positions NC.
-- Quartus EMIF: LPDDR4, 1 channel × 32, 8 Gb, 1 rank.
+- Quartus EMIF: LPDDR4, 1 channel × 32, 1 rank. 8 Gb is the whole package: 4 Gb per channel (32,768 rows, 8 banks,
+  x16). Enter 4 Gb where the IP asks for density per channel or per die.
 
 The cheaper -NMO (C51891855) is **not** in the data sheet's ordering table, which lists only -NLE, -NME, -NLI and
 -NMI, so it is not used. Single-rank was chosen on purpose: it was not confirmed whether the Agilex 5 EMIF supports
@@ -41,8 +42,9 @@ Status on this board:
   at x = 174.29 mm. Move R43 about 0.25 mm in +X and fix its tracks.
 - [ ] Five `lpddr_xtalk_spacing` violations on dq24/dq25/dq28 dropped out of DRC only because those segments now lie
   inside U12's larger courtyard, where `lpddr_bga_neckdown` applies. They were not re-routed.
-- [ ] U12 Value / symbol still say IS43LQ32256A-062BLI. Change them to H9HCNNN8KUMLHR-NME, with the LCSC number
-  C2912103, for the BOM.
+- [x] U12 Value changed to H9HCNNN8KUMLHR-NME, LCSC C2912103 (schematic). The lib symbol is still the JEDEC-compatible
+  `Memory_RAM:IS43LQ32256A-062BLI`; all 68 signal balls were checked against the SK hynix ballout. The PCB picks up the
+  new value on the next "Update PCB from Schematic".
 
 ## eMMC: KIOXIA THGAMVG7T13BAIL
 
@@ -95,5 +97,6 @@ devices are unaffected.
 
 Status on this board:
 
-- [ ] Change U2 Value to IS25WP128-RHLE (LCSC C1349419). The symbol pin map is compatible.
+- [x] U2 Value changed to IS25WP128-RHLE, LCSC C1349419 (schematic). Order the **H** package code (5x5 array); -RGLE is
+  the 4x6 array and does not fit this footprint. The lib symbol is still `agilex_5_lib:MX25U25645G` (same ball map).
 - [ ] Update `AGILEX_POWER_CONFIG_CHECKLIST.md` §4/§5, which still name the MX25U25645G (256 Mbit).
