@@ -1523,12 +1523,6 @@
 		(uuid "efc6d125-3020-4b7a-9a2c-f80bf68fd66f")
 	)
 	(junction
-		(at 100.33 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f40a4e5c-4ec7-456f-9b6f-4235126af844")
-	)
-	(junction
 		(at 208.28 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1767,16 +1761,6 @@
 			(type default)
 		)
 		(uuid "1f4ff1e8-c402-4c1b-a00c-4c6e7feec654")
-	)
-	(wire
-		(pts
-			(xy 100.33 67.31) (xy 100.33 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23f147da-5173-4e67-a7fa-12239305e193")
 	)
 	(wire
 		(pts
@@ -7047,7 +7031,7 @@
 				)
 			)
 		)
-		(property "Value" "250n"
+		(property "Value" "220n"
 			(at 195.58 68.58 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7057,7 +7041,18 @@
 				)
 			)
 		)
-		(property "Footprint" "agilex_lib:CMLE051H"
+		(property "LCSC" "C357176"
+			(at 195.58 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "agilex_lib:L_TaiTech_TMPC0503H"
 			(at 195.58 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -7079,7 +7074,7 @@
 				)
 			)
 		)
-		(property "Description" "Inductor"
+		(property "Description" "Tai-Tech TMPC0503H-R22MG-D, 220 nH, Isat 21 A, Irms 15.5 A, 3.7 mOhm"
 			(at 195.58 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -9283,7 +9278,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.6k"
+		(property "Value" "10k"
 			(at 102.87 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9305,7 +9300,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25908"
+		(property "LCSC" "C25744"
 			(at 98.552 71.12 90)
 			(hide yes)
 			(show_name no)
@@ -9430,5 +9425,46 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 100.33 67.31) (xy 100.33 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7537c7c6-b856-4394-bcf3-ee306eec2385")
+	)
+	(label "tda_vcc"
+		(at 100.33 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e6b8759e-a9ed-439c-bd36-f9a9a3341e8b")
+	)
+	(label "tda_vcc"
+		(at 123.19 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9529bc3d-ddf1-4be8-aecf-35b3e38a1695")
+	)
+	(text "R58 PGOOD pull-up to the TDA38812 VCC LDO (3.0 V): PGOOD abs max is 4.0 V, so not 5V0.\nL1: Isat >= OCPmax + ripple = 12.4 A + 2.9 A (R55 5.6k, 1 MHz FCCM via R56||R57 = 60.6k)"
+		(exclude_from_sim no)
+		(at 60.96 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "de4f5533-0d46-4fec-a61e-b9d1c59662c9")
 	)
 )

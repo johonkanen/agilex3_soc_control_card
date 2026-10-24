@@ -20,7 +20,7 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 |---|---|---|---|---|
 | `5V0` / `5V` | J6 (2x3 header), also J4.3 | 5.0 V in | – | all regulators, U6 |
 | `VCORE` | U15 TDA38812XUMA1 buck, remote sense via `vcoresense_P/N` (VCCLSENSE BN46 / GNDSENSE BN44), FB divider R2 10k / R1 39k -> 0.6 V x (1 + 10/39) = **0.754 V** | 0.75 V | EN tied to 5V0 -> starts as soon as 5 V is present | all Group 1 pins (see §2) |
-| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
+| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 10k to the TDA38812 VCC LDO `tda_vcc` 3.0 V; was 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
 | `3V3` / `3v3` | U8 AP61202Z6, R85 200k / R83 44.2k -> 3.32 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
 | `1V2` | U19 AP61202Z6, R88 200k / R86 200k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
 | `1V1` | U16 AP61202Z6, R91 200k / R89 240k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
@@ -37,7 +37,16 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
   | 1.1 V | 0.43 A | FPGA side only; add the LPDDR4 VDD2/VDDQ current |
   | 3.3 V | < 0.01 A | before I/O loads |
 
-  The 2 A AP61202 rails have plenty of headroom. Check that the TDA38812 stage, including L1 (250 nH CMLE051H), is rated for ≥ 7 A plus ripple.
+  The 2 A AP61202 rails have plenty of headroom.
+- [x] **(2026-10-24) VCORE stage (TDA38812, data sheet V2.1):**
+  - **Rating:** 12 A part, 6–7 A worst-case load.
+  - **MODE:** R56 ‖ R57 = 60.6 kΩ selects 1 MHz FCCM (table 2: 60.4 kΩ).
+  - **Current limit:** R55 5.6k gives a valley OCP of 1.2 V / (20 µA/A × 5.6 kΩ) = 10.7 A typ, 12.4 A max.
+  - **Soft-start:** 2 × 68 nF = 2.2 ms, plus a 400 µs start delay.
+  - **Divider:** R2 10k / R1 39k -> 0.754 V, sensed differentially.
+  - **Output ripple:** about 2.9 A p-p at 1 MHz with 220 nH, into ~140 µF effective, so a few mV, well inside ±3 %.
+- [!] -> [x] **(2026-10-24)** PGOOD (U15 pin 9) has an absolute maximum of **4.0 V**, but R58 pulled it to 5V0. R58 is now 10k (data sheet: ≥ 10 kΩ) to the TDA38812's own VCC LDO (3.0 V). The AP61202 EN threshold is 0.91 V, so U18 still enables.
+- [!] -> [x] **(2026-10-24)** L1 must have Isat ≥ OCPmax + ripple = 12.4 + 2.9 ≈ 15.3 A. The old part (Cyntec CMLE051H, 250 nH) had no LCSC number and no known rating. It is now **Tai-Tech TMPC0503H-R22MG-D** (C357176): 220 nH, Isat 21 A, Irms 15.5 A, 3.7 mΩ, 5.7 × 5.2 mm. The new footprint `agilex_lib:L_TaiTech_TMPC0503H` follows the data sheet land pattern.
 - [x] **(2026-10-24)** L2–L5 = 1 µH Cenker CKCS201610 (C97002: 2.05 A rated, 3.85 A saturation, 70 mΩ), the same as on the Agilex 3 card. The AP61202 data sheet asks for 1.0–1.5 µH and ≥ 1.35 × load; every rail stays well under 1.5 A. The DCR is above the data sheet's 50 mΩ efficiency suggestion, which costs little at these currents.
 - [x] All AP61202 feedback dividers give the intended voltages (R81/R84/R87/R90 are DNP).
 - [x] **(2026-10-24)** The dividers now use the AP61202 data sheet values (table 1: 200k top). With these, the 33 pF feed-forward capacitors C116–C119 put the zero where the data sheet intends (about 24 kHz). With the old 10k top resistors it sat at about 480 kHz.
@@ -126,7 +135,7 @@ That is common practice, but those loads switch on the same regulator. Accept it
 5V0 applied
   |-- U6  3V3_analog LDO        (EN = VIN, immediately)
   |-- U15 VCORE 0.75 V          (EN = VIN, immediately)            ... Group 1
-        PGOOD (open drain, 5.6k to 5 V) ->
+        PGOOD (open drain, 10k to U15 VCC 3.0 V) ->
         U18 1V8                                                    ... Group 2A (+ VCCIO_HVIO_6A)
               PG (open drain, 47k to 5 V) ->
               U19 1V2  (VCCRCORE, VCCIO_PIO_SDM, 2A)   \
