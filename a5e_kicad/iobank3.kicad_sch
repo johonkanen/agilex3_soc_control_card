@@ -15065,7 +15065,7 @@
 		)
 		(uuid "dc9ef378-57bc-42c6-9c5a-3333eddb9148")
 	)
-	(text "LPDDR4 settings\n133.333MHz\nref clock = 111.111MHz"
+	(text "LPDDR4 settings (Quartus 26.1.1, emif_io96b_hps 5.0.0, tested):\n1600 MT/s (800 MHz), refclk 100 MHz from U9 (LVDS)\n2133 MT/s also allowed on -6S with the 100 MHz refclk"
 		(exclude_from_sim no)
 		(at 86.36 180.34 0)
 		(effects

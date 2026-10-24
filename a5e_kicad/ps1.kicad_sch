@@ -8384,7 +8384,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "1u"
 			(at 116.84 55.88 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8394,7 +8394,18 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "LCSC" "C97002"
+			(at 116.84 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS201610"
 			(at 116.84 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -9481,7 +9492,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "1u"
 			(at 115.57 24.13 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9491,7 +9502,18 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "LCSC" "C97002"
+			(at 115.57 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS201610"
 			(at 115.57 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -11193,7 +11215,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "1u"
 			(at 116.84 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11203,7 +11225,18 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "LCSC" "C97002"
+			(at 116.84 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS201610"
 			(at 116.84 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -11446,7 +11479,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "1u"
 			(at 116.84 119.38 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11456,7 +11489,18 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "LCSC" "C97002"
+			(at 116.84 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_Cenker_CKCS201610"
 			(at 116.84 121.92 0)
 			(hide yes)
 			(show_name no)

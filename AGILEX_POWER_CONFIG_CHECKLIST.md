@@ -27,6 +27,18 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 | `3V3_analog` | U6 NCP163 LDO from 5V0 | 3.3 V intended | EN tied to 5V0 | ADC subsystem |
 
 - [x] VCORE set point 0.754 V matches the -6S core voltage; remote sense goes to the device sense pins.
+- [x] **(2026-10-24)** FPGA load per rail, from the Quartus Power Analyzer on the EMIF test build (HPS at the DE25-Nano clocks, EMIF 1600 MT/s active, nearly empty fabric; Maximum characteristics, Tj 100 °C):
+
+  | Rail | Load | Note |
+  |---|---|---|
+  | 0.75 V | 4.75 A | about 3.9 A of it static; about 6–7 A with a full fabric design (EPE-style estimate) |
+  | 1.8 V | 0.21 A | |
+  | 1.2 V | 0.42 A | |
+  | 1.1 V | 0.43 A | FPGA side only; add the LPDDR4 VDD2/VDDQ current |
+  | 3.3 V | < 0.01 A | before I/O loads |
+
+  The 2 A AP61202 rails have plenty of headroom. Check that the TDA38812 stage, including L1 (250 nH CMLE051H), is rated for ≥ 7 A plus ripple.
+- [x] **(2026-10-24)** L2–L5 = 1 µH Cenker CKCS201610 (C97002: 2.05 A rated, 3.85 A saturation, 70 mΩ), the same as on the Agilex 3 card. The AP61202 data sheet asks for 1.0–1.5 µH and ≥ 1.35 × load; every rail stays well under 1.5 A. The DCR is above the data sheet's 50 mΩ efficiency suggestion, which costs little at these currents.
 - [x] All AP61202 feedback dividers give the intended voltages (R81/R84/R87/R90 are DNP).
 - [x] **(2026-10-24)** The dividers now use the AP61202 data sheet values (table 1: 200k top). With these, the 33 pF feed-forward capacitors C116–C119 put the zero where the data sheet intends (about 24 kHz). With the old 10k top resistors it sat at about 480 kHz.
 - [x] U6 is `NCP163ASN330T1G` (3.3 V fixed) — was wrongly the 1.5 V `...150T1G` variant.

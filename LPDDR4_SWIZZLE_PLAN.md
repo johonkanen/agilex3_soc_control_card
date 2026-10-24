@@ -97,9 +97,30 @@ The straight-line count is only a proxy, but it matches the routing geometry:
    - DRC, plus the length-tuning report;
    - Quartus fitter with the EMIF IP: the pin and swizzle settings must pass the IP's placement check.
 
-## Open points
+## Quartus check (2026-10-24)
 
-- The Agilex 5 docs only allow BL6↔BL7 as a byte swizzle. Confirm in the Quartus EMIF IP GUI that `BYTE_SWIZZLE_CH0`
-  accepts the swap for a 1×32 LPDDR4 interface before ripping up.
+The test project is in `~/dev/agilex5_emif_test` (not in this repo):
+- Quartus Pro 26.1.1, A5EB013BB23BE6S;
+- `emif_io96b_hps` 5.0.0, LPDDR4 1×32, 1 rank, 4 Gb per channel;
+- 1600 MT/s with a 100 MHz refclk.
+
+**Variant A, current board:** passes synthesis and the full fitter.
+- The pinout is ball-for-ball the DE25-Nano's, and so is its swizzle:
+  `PIN_SWIZZLE_CH0_DQS0=5 4 0 7 1 6 2 3;PIN_SWIZZLE_CH0_DQS1=15 8 14 9 12 13 11 10;PIN_SWIZZLE_CH0_DQS2=18 22 19 20 21 23 16 17;PIN_SWIZZLE_CH0_DQS3=27 29 28 26 24 25 31 30;`
+  - Each list is ordered by lane pins 0,1,2,3,8,9,10,11.
+  - Each value is the x32 DQ index (channel B = 16 + n).
+
+**Variant B, BL6↔BL7:** the IP accepts the byte swizzle, and synthesis and fit pass:
+  `BYTE_SWIZZLE_CH0=0 1 X X X X 3 2;PIN_SWIZZLE_CH0_DQS2=21 20 18 19 17 22 23 16;PIN_SWIZZLE_CH0_DQS3=26 29 27 28 25 24 30 31;` (DQS0/1 as in A).
+- In qsys-script, write the byte list with spaces. With commas it is mangled and generation fails.
+
+**Negative control:** variant B pins without the byte swizzle make the fitter fail (`Error 14566 … 2 BYTE(s)`), so the
+placement check is real.
+
+**Other results:**
+- **Refclk:** 100 MHz is legal at 800 MHz (1600 MT/s) and 1066.667 MHz (2133 MT/s), the only two rates the IP allows on -6S.
+- **Refresh timings:** set tRFCab 130 ns, tRFCpb 60 ns and tXSR 137.5 ns through the IP's JEDEC override table. Without
+  that, the IP keeps the DE25-Nano's 8 Gb-per-channel values.
+- **Reset Release IP:** add it in the real design (Critical Warning 20759).
 - Whole-channel swap (A↔B) isn't documented as legal, so the plan doesn't use it. It wouldn't help anyway: channel A is
   already on the right, next to BL0/BL1.
