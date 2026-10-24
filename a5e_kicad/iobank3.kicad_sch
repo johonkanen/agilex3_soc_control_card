@@ -17345,7 +17345,7 @@
 		)
 		(uuid "20612829-5c11-4e95-a885-f60f62f5aaae")
 	)
-	(label "dqs2_N"
+	(label "dqs1_N"
 		(at 208.28 116.84 0)
 		(effects
 			(font
@@ -17585,7 +17585,7 @@
 		)
 		(uuid "71a9e1e2-ab5f-4636-8a08-bbdcd33f3789")
 	)
-	(label "dqs1_P"
+	(label "dqs2_P"
 		(at 66.04 88.9 0)
 		(effects
 			(font
@@ -17595,7 +17595,7 @@
 		)
 		(uuid "721ec818-71f0-4d39-a9b5-27646c5a4598")
 	)
-	(label "dqs3_P"
+	(label "dqs0_P"
 		(at 208.28 149.86 0)
 		(effects
 			(font
@@ -17675,7 +17675,7 @@
 		)
 		(uuid "9b93cf92-ffb1-4ce6-b9db-4d12848bbc0b")
 	)
-	(label "dqs0_N"
+	(label "dqs3_N"
 		(at 66.04 55.88 0)
 		(effects
 			(font
@@ -17715,7 +17715,7 @@
 		)
 		(uuid "a6aa0af9-db71-47dd-bca7-0ed049aba0ab")
 	)
-	(label "dqs0_P"
+	(label "dqs3_P"
 		(at 66.04 58.42 0)
 		(effects
 			(font
@@ -17895,7 +17895,7 @@
 		)
 		(uuid "d5492862-a6fb-480b-81ab-ead758c26763")
 	)
-	(label "dqs1_N"
+	(label "dqs2_N"
 		(at 66.04 86.36 0)
 		(effects
 			(font
@@ -17935,7 +17935,7 @@
 		)
 		(uuid "db6249de-9c5e-4082-880d-eea821675935")
 	)
-	(label "dqs2_P"
+	(label "dqs1_P"
 		(at 208.28 119.38 0)
 		(effects
 			(font
@@ -17975,7 +17975,7 @@
 		)
 		(uuid "e4fa8575-2788-41c0-b136-2a594ed96cba")
 	)
-	(label "dqs3_N"
+	(label "dqs0_N"
 		(at 208.28 147.32 0)
 		(effects
 			(font
