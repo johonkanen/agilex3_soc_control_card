@@ -15002,15 +15002,6 @@
 		(uuid "9ba45c6a-0cc9-4c8a-b470-2e02caf1f54f")
 	)
 	(bus_entry
-		(at 66.04 48.26)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cfefd8a-619c-4925-9a5f-9d56b54b2628")
-	)
-	(bus_entry
 		(at 66.04 88.9)
 		(size 2.54 2.54)
 		(stroke
@@ -15425,16 +15416,6 @@
 			(type default)
 		)
 		(uuid "98383d33-74ff-4290-9c47-a185bca461fc")
-	)
-	(wire
-		(pts
-			(xy 68.58 50.8) (xy 96.52 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9923bc87-481f-46f3-9d84-7f6f4a1431ca")
 	)
 	(bus
 		(pts
@@ -16178,28 +16159,6 @@
 		(uuid "04680b9c-60f5-44b9-bc50-0eb37f28d6a9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 86.36 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "sdm_clk25"
-		(shape input)
-		(at 86.36 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0ba94f38-bdf0-4ac5-9274-5fd5372f3a5a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 86.36 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20985,5 +20944,9 @@
 				)
 			)
 		)
+	)
+	(no_connect
+		(at 96.52 50.8)
+		(uuid "49a41c36-8193-493b-aee7-8f7ae3e5e9f7")
 	)
 )

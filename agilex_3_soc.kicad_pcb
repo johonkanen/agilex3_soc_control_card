@@ -134075,6 +134075,19 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "RECOMMENDED (not fitted yet): ferrite + 4.7u||100n isolation filters on the Agilex PLL/ADC rails (PCG 813266 table 32):\n1V8: VCCPLL1_HPS, VCCPLL2_HPS, VCCADC, VCCPLL_SDM;  VCORE: VCCPLLDIG1_HPS, VCCPLLDIG2_HPS, VCCPLLDIG_SDM"
+		(at 112.09184 156.06415 0)
+		(layer "Cmts.User")
+		(uuid "b19c8e8f-c6a9-43ce-9e95-ae4665a8e238")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "use unused adc channels to measure power supplies"
 		(at 112.09184 150.98415 0)
 		(layer "Cmts.User")

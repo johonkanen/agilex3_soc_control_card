@@ -14245,7 +14245,7 @@
 				(justify right)
 			)
 		)
-		(pin "clk2_N" output
+		(pin "clk100" output
 			(at 96.52 201.93 0)
 			(uuid "485983b6-77bc-4bf2-a748-8a279315d0ad")
 			(effects

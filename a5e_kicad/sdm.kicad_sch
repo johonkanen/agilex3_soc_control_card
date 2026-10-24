@@ -15884,12 +15884,6 @@
 		(uuid "643a1011-3768-41ed-b979-223982b34f41")
 	)
 	(junction
-		(at 57.15 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b6320d29-7604-4f73-a26c-dc3567881dcd")
-	)
-	(junction
 		(at 74.93 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -16482,16 +16476,6 @@
 			(type default)
 		)
 		(uuid "42a8614b-98fd-4b05-bab2-e7b3063d095d")
-	)
-	(wire
-		(pts
-			(xy 57.15 139.7) (xy 52.07 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44dfb903-84e3-4397-8e5e-34ca9d41f5e5")
 	)
 	(wire
 		(pts
@@ -18183,7 +18167,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "16e78495-8dc4-4eee-8ec6-1f00709aa355")
 		(property "Reference" "R9"
 			(at 72.39 90.17 0)
@@ -18463,7 +18447,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "2d403e1f-bf7d-4583-a41a-02581590f330")
 		(property "Reference" "R10"
 			(at 77.47 90.17 0)
@@ -21119,9 +21103,10 @@
 			)
 		)
 	)
+
 	(symbol
-		(lib_id "power:GND")
-		(at 57.15 139.7 0)
+		(lib_id "power:+3V3")
+		(at 57.15 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21130,9 +21115,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "48f866ab-d18d-48d1-b3bc-e93f7211e356")
+		(uuid "2a3e45d2-7a81-4b8c-b622-e960122d28e9")
 		(property "Reference" "#PWR021"
-			(at 57.15 146.05 0)
+			(at 57.15 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21142,8 +21127,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 57.15 144.78 0)
+		(property "Value" "1V8"
+			(at 57.15 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21174,7 +21159,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
 			(at 57.15 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -21186,15 +21171,9 @@
 			)
 		)
 		(pin "1"
-			(uuid "b0f52186-480b-4bab-bae4-7fd0f512989f")
+			(uuid "9cb15553-736c-4485-a102-09c9d3040007")
 		)
 		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "#PWR0202")
-					(unit 1)
-				)
-			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "#PWR021")
@@ -23538,4 +23517,231 @@
 			)
 		)
 	)
-)
+	(wire
+		(pts
+			(xy 82.55 87.63) (xy 87.63 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19ddafdc-16eb-4cfb-9186-594603c00965")
+	)
+	(junction
+		(at 82.55 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "034f162f-d78f-4083-8249-1ef58d8c7758")
+	)
+	(wire
+		(pts
+			(xy 87.63 87.63) (xy 87.63 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "febbc6d4-50d0-4055-a04f-de5886fed17f")
+	)
+
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5ff2be18-5ecf-48f7-a54c-2f361158d472")
+		(property "Reference" "R264"
+			(at 87.63 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 87.63 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 85.852 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 85.852 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 87.63 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6ca4a3e4-9114-4714-8494-b5127b934523")
+		)
+		(pin "1"
+			(uuid "b14735df-ec23-49e7-8f94-bc86882fb639")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R264")
+					(unit 1)
+				)
+			)
+		)
+	)	(wire
+		(pts
+			(xy 87.63 97.79) (xy 87.63 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94b0a142-b562-439d-a7c1-1a319deb4fdf")
+	)
+	(label "~{hps_cold_rstn}"
+		(at 87.63 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "80691cff-b62b-4b5a-a973-be8f8626a7a8")
+	)
+	(text "R264: HPS_COLD_nRESET pull-up, 1-10k to VCCIO_SDM (PCG 813266).\nMSEL = 011 (AS normal): R45 to 1V8. R9/R10 DNP: SDM_IO0/IO16 have internal pull-downs."
+		(exclude_from_sim no)
+		(at 52.07 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e476e50f-f115-4f23-bf97-46f0f4161fdf")
+	)
+
+	(symbol
+		(lib_id "power:GND")
+		(at 52.07 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0a5f15b-4cc7-4ac7-8013-15d35ae03018")
+		(property "Reference" "#PWR1562"
+			(at 52.07 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.07 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4e62a6a3-6828-4188-b141-4df94f72f946")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "#PWR1562")
+					(unit 1)
+				)
+			)
+		)
+	))

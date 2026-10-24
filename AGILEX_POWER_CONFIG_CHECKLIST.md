@@ -2,6 +2,14 @@
 
 Generated from the schematic as of 2026-09-16 (root sheet, `fpga_power`, `fpga_gnd`, `sdm`, `ps`, `ps1`, `clk`, `hps`). Reference: Altera *Agilex 5 Power Management User Guide* (ID 813161, section 3.2 Power-Up Sequence Requirements, table 3) and the *Agilex 5 Pin Connection Guidelines* (ID 813266).
 
+**Rechecked 2026-10-24** against the schematic netlist and the local copies listed in `docs/README.md`:
+- Pin Connection Guidelines 813266 (2026.04.24): §1.5, table 32, power-supply sharing for -6S.
+- Power Management UG 813161 (2026.09.08).
+- Configuration UG 813773 (26.1.1): table 17 MSEL.
+- Data Sheet 813918 (2026.08.10): tRAMP, POR delay.
+
+The new findings are marked **(2026-10-24)**.
+
 Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your decision, `[!]` error to fix.
 
 ---
@@ -67,7 +75,7 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 | VCCIO_PIO_2A_T / 2A_B | 4 | 1V2 | [x] |
 | VCCIO_PIO_3A_T / 3A_B | 4 | 1V1 | [x] LPDDR4 (1.1 V) |
 | VCCIO_HVIO_6B .. 6H | 14 | 3v3 | [x] 3.3 V LVCMOS banks |
-| VCCIO_HVIO_6A | 2 (CL29, CT29) | **1V8** | [ ] see note below |
+| VCCIO_HVIO_6A | 2 (CL29, CT29) | 3v3 (was 1V8) | [x] (2026-10-24) see note below |
 
 ### Not sequenced
 
@@ -75,10 +83,29 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 |---|---|---|---|
 | VCCBAT | CG49 | GND | [x] allowed when the BBRAM key is not used (UG 813161, 10/2025) |
 
-**Note on VCCIO_HVIO_6A:** bank 6A was moved to 1.8 V so that the SDM 25 MHz clock can be fed to fabric PLL refclk pin CE19. VCCIO_HVIO is a Group 2B rail, but it now shares the 1V8 regulator with the Group 2A rails, so it reaches 90 % at the same moment as VCCPT instead of after it. This is the only deviation from the published group order. Options, in order of effort:
-1. Accept it (Altera's sharing table – which could not be retrieved while writing this – is the authority; if it allows a 1.8 V VCCIO to share the VCCPT regulator, nothing is needed).
-2. Feed bank 6A through a small load switch from 1V8, enable driven by U18 PG: e.g. a second TPS22918 (already in the BOM for the SD card) – its soft start gives a clean, later ramp.
-3. Move bank 6A back to 3.3 V and use another refclk pin (DP55 in bank 2A at 1.2 V, or BF23 / AE11 in 3.3 V banks).
+**Note on VCCIO_HVIO_6A `[!]` (2026-10-24):** bank 6A was moved to 1.8 V so that the SDM 25 MHz clock can be fed to fabric PLL refclk pin CE19.
+- **Order:** VCCIO_HVIO is a Group 2B rail. It now shares the 1V8 regulator with the Group 2A rails, so it ramps together with VCCPT instead of after it.
+- **Sharing (decides it):** in the sharing table for -4S/-5S/-6S/-6X (813266 table 32), VCCIO_HVIO is regulator group 5, "**Isolate** – connect to a dedicated 3.3-V, 2.5-V, 1.8-V power supply". So sharing the VCCPT regulator is outside the guidelines.
+- **Scope:** bank 6A carries nothing else. CE19 is its only connected pin; the `iob6a*` labels go nowhere.
+
+Fixes:
+1. Move VCCIO_HVIO_6A back to `3V3`, like banks 6B–6H, and disconnect `sdm_clk25` from CE19. The fabric then needs another reference clock: either a 3.3 V oscillator on AE11 (bank 6G, where the dangling `clk100` net already is, see §7) or the HPS h2f_user clocks. The HPS clocks only run once the HPS has booted, so they are not enough for PWM logic that has to run on its own.
+2. Keep 6A at 1.8 V, but from its own small LDO fed from `3V3`. That makes it dedicated and Group 2B (it ramps after 3V3, which follows the 1V8 PG). CE19 keeps the 25 MHz clock, and `clk100` can be deleted.
+
+The old option "a load switch from 1V8" no longer qualifies, because it is still the VCCPT regulator.
+
+**Isolation filters `[!]` (2026-10-24):** table 32 marks these as "Filter", i.e. on the shared plane but "with proper isolation filtering":
+- VCCPLL1_HPS, VCCPLL2_HPS, VCCADC and VCCPLL_SDM (on the VCCPT plane);
+- VCCPLLDIG1_HPS, VCCPLLDIG2_HPS and VCCPLLDIG_SDM (on the VCC plane).
+
+On this board all seven connect straight to `1V8` or `VCORE`. Add a ferrite bead plus local capacitor per pin or group, as on the PHY's FB1/FB2 (for example, BLM15PX121SN1 and 4.7 µF ‖ 100 nF).
+
+**VCCPT regulator sharing `[ ]` (2026-10-24):** table 32 says to connect VCCPT to a dedicated 1.8 V supply, shared with VCCPT_HVIO, VCCIO_SDM, VCCIO_HPS and VCCFUSEWR_SDM. On this board, `1V8` also feeds:
+- the QSPI flash and Y2;
+- the PHY DVDDH and the level shifters' B side;
+- the SD card mux and the pull-ups.
+
+That is common practice, but those loads switch on the same regulator. Accept it, or give the board's 1.8 V I/O its own regulator in a later revision.
 
 ## 3. Power-up order implemented by the enable chain
 
@@ -99,7 +126,13 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 - [x] All rails ramp monotonically (soft-start bucks, no pre-bias issues: every rail starts from 0 V because the previous rail's PG gates the next).
 - [x] POR-monitored rails (VCCL_SDM, VCCPT, VCCIO_SDM, VCCADC, VCC, VCCL_HPS, VCCIO_PIO_SDM, VCCRCORE, VCC_IO_SDM) are all present and in the right groups.
 - [x] The QSPI flash (1V8) and the 25 MHz oscillator Y2 (1V8) are up before the last Group 2B rail, so they are ready when the POR delay expires (AS fast mode, see §4).
-- [ ] The 10 ms total tRAMP limit only applies to CvP; not relevant here, but the total time from 5 V to the last PG is a few ms per stage – fine.
+- [x] **(2026-10-24)** Per-rail ramp: the data sheet tRAMP is 200 µs–100 ms for each supply.
+  - AP61202 soft-start is 0.5 ms; its PG rises at 95 % of the target, 55 µs later (AP61202 data sheet).
+  - The TDA38812 soft-start and on-delay are set by the MODE resistors R56/R57. Verify them against its data sheet; the window is wide.
+- [!] **(2026-10-24)** AS fast mode (MSEL 001) requires **all** supplies to be fully ramped within 10 ms (813773 table 17 note 7; data sheet note 42). Here the regulators start one after another, gated by PG: VCORE soft-start + delay, then 0.5 ms (1V8), then 0.5 ms (1V2/3V3/1V1).
+  - That is probably under 10 ms, but it depends on the TDA38812 settings, and nothing on the board guarantees it.
+  - AS normal mode (MSEL 011) only needs VCCIO_SDM to ramp within 10 ms, which the 0.5 ms 1V8 soft-start meets easily. The cost is a longer POR delay: 11.5–20.2 ms instead of 1.5–7.6 ms.
+  - Table 17 labels fast mode "for CvP", which this board does not use. **Recommendation: change to AS normal mode.** See §4.
 - [ ] Power-down: the UG only *recommends* the reverse order. Nothing on the board enforces it (all rails just decay when 5 V is removed). Acceptable for a lab board; if you want it, add a discharge/sequencer later.
 - [ ] While 1V8 is up and 3V3 is not yet up, U1/U42 (SN74AXC4T774) see VCCB = 1.8 V and VCCA = 0 V – the AXC family is designed for this (Ioff, partial-power-down), no issue. The KSZ9031 PHY and the SD card mux likewise have their own supplies sequenced from 1V8/3V3 only.
 - [ ] Reminder: during power-up no input pin may be driven above its bank's VCCIO. The 3.3 V UART header J10 and the JTAG header J1 are behind level shifters that are powered by the same rails, so this holds.
@@ -110,18 +143,18 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 |---|---|---|---|---|
 | nCONFIG | BK71 | `~{nconfig}`, R8 10k to 1V8, nothing else | 10 k pull-up to VCCIO_SDM; drive low to reconfigure | [x] (no push-button / test point – add one if you want to force reconfiguration from the bench) |
 | nSTATUS | BM71 | `~{nstatus}`, R11 10k to 1V8 | 10 k pull-up, open-drain output | [x] |
-| CONF_DONE | SDM_IO16 DA74 | `conf_done`, R10 10k to 1V8 (no LED; D1 is the power-good LED) | 10 k pull-up; assign SDM_IO16 = CONF_DONE in Quartus | [x] |
-| INIT_DONE | SDM_IO0 BK67 | `init_done`, R9 10k to 1V8 | 10 k pull-up; assign SDM_IO0 = INIT_DONE in Quartus | [x] |
+| CONF_DONE | SDM_IO16 DA74 | `conf_done`, R10 10k to 1V8 (no LED; D1 is the power-good LED) | Output only. SDM_IO16 has an internal weak pull-down that holds CONF_DONE low until configuration (813773 §CONF_DONE/INIT_DONE note). The AS x4 reference circuit (figure 18) shows it as "optional monitoring", with no pull-up. Assign SDM_IO16 = CONF_DONE in Quartus. | [!] **(2026-10-24)** R10 overrides the internal pull-down, so the pin sits at ~1.2 V before configuration. Harmless, but the signal is meaningless until configured. Make R10 DNP, or remove it. |
+| INIT_DONE | SDM_IO0 BK67 | `init_done`, R9 10k to 1V8 | Same as CONF_DONE: SDM_IO0's internal pull-down is "for the correct function of INIT_DONE during power up" (813266). Assign SDM_IO0 = INIT_DONE in Quartus. | [!] **(2026-10-24)** Make R9 DNP, or remove it. |
 | MSEL0 | SDM_IO5 BY71 | R7 4k7 to 1V8 (shared with AS_nCSO0 / flash CS#) | 4.7 k pull | [x] = 1 |
-| MSEL1 | SDM_IO7 CN67 | R45 4k7 to GND | 4.7 k pull | [x] = 0 |
+| MSEL1 | SDM_IO7 CN67 | R45 4k7 to GND | 4.7 k pull | [x] = 0 now; **= 1 for AS normal mode** (R45 to 1V8) |
 | MSEL2 | SDM_IO9 CN71 | R4 4k7 to GND | 4.7 k pull | [x] = 0 |
-| MSEL[2:0] | | **001 = Active Serial, fast mode** (011 would be AS normal mode, 111 JTAG only) | matches AS x4 flash on SDM_IO1..IO6 | [x] verify the value once against the Configuration UG (ID 813773) table – the docs site was down while this list was written |
+| MSEL[2:0] | | **001 = AS fast mode** (confirmed in 813773 table 17: AVST x16 101, AVST x8 110, AS fast 001 "for CvP", AS normal 011, JTAG only 111) | Fast mode needs all supplies fully ramped within 10 ms; normal mode only needs VCCIO_SDM within 10 ms (see §3). | [!] **(2026-10-24)** Change to **011** (AS normal): move R45 from GND to 1V8. |
 | AS_CLK | SDM_IO2 CY69 | `qspi_CLK` -> U2 SCLK | | [x] |
 | AS_DATA0..3 | SDM_IO4 / IO1 / IO3 / IO6 | `qspi_D0..D3` -> U2 SIO0..3; D2, D3 have 10 k pull-ups (R12, R14) | | [x] |
 | AS_nCSO0 | SDM_IO5 | `~{qspi_CS}` -> U2 CS#, 4k7 pull-up | | [x] |
 | AS_nRST | SDM_IO15 CY71 | `~{qspi_rst_n}` -> U2 RESET#, R15 10 k pull-up | | [x] |
 | AS_nCSO3 | SDM_IO8 DB71 | NC | unused, internal weak pull-up | [x] |
-| SDM_IO10 | CK69 | `~{hps_cold_rstn}` from the connectors sheet | HPS_COLD_nRESET must be assigned to this SDM_IO in Quartus; SDM_IO pins have internal weak pull-ups, so no external pull-up is required | [ ] check the assignment; check the driver on the connector side is open-drain/1.8 V |
+| SDM_IO10 | CK69 | `~{hpscold_rstn}`. In the netlist it connects only to U7: no pull-up, and nothing drives it. | 813266: SDM_IO10 is a valid HPS_COLD_nRESET pin for AS x4. "Connect this pin through a 1–10-kΩ pull up to the VCCIO_SDM supply." The pin is bidirectional: the SDM pulses it low on an internal cold reset. Any external driver must be open-drain and release the pin. | [!] **(2026-10-24)** Add a 10 k pull-up to 1V8. Optionally add a push-button to GND, or a test point, for an HPS cold reset from the bench. |
 | SDM_IO11, IO12, IO14 | DG71, BK69, BY69 | NC | unused | [x] |
 | SDM_IO13 | DA75 | NC | unused | [x] |
 | OSC_CLK_1 | DB72 | net `sdm_clk25` = 25 MHz from Y2 (SiT8924, 1.8 V) via R246 33 R | 25 / 100 / 125 MHz, 1.8 V CMOS, mandatory with EMIF | [x] |
@@ -133,14 +166,17 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 | JTAG TDO | BY67 | R20 10 k to 1V8 | optional | [x] |
 | JTAG header | J1 via U1 SN74AXC4T774 (1.8 V <-> 3.3 V) | | | [x] |
 | VCCBAT | CG49 | GND | | [x] |
-| QSPI flash | U2 MX25U25645G, VCC = 1V8 | 1.8 V flash required (SDM I/O are 1.8 V) | | [x] |
+| QSPI flash | U2 IS25WP128-RHLE (128 Mbit, dedicated RESET# on A4; was MX25U25645G), VCC = 1V8 | 1.8 V flash required (SDM I/O are 1.8 V); SFDP and a dedicated reset pin for the generic-flash rule | | [x] |
+| nCONFIG, nSTATUS | | R8, R11 10k to 1V8 | 813266: 10 kΩ to VCCIO_SDM (AS) | [x] (2026-10-24) |
+| TCK / TMS / TDI | | 1k down / 10k up / 10k up | 813266: TCK 1 kΩ to GND (10 k up instead if attestation or BKP is used); TMS, TDI 1–10 kΩ up | [x] (2026-10-24) |
+| RREF | | R18 2K0 | 2 kΩ ±1 %; check that the BOM part is 1 % | [x] (2026-10-24) |
 
 ## 5. Quartus / firmware settings implied by the schematic
 
-- [ ] Configuration scheme: AS x4, fast mode; flash MX25U25645G (256 Mbit).
+- [ ] Configuration scheme: AS x4, normal mode once MSEL = 011 (fast mode as long as R45 still pulls down). Flash IS25WP128-RHLE (128 Mbit, generic SFDP flash, not on Altera's tested list; check that the Programmer accepts it).
 - [ ] SDM I/O assignments: SDM_IO0 = INIT_DONE, SDM_IO16 = CONF_DONE, SDM_IO10 = HPS_COLD_nRESET, SDM_IO15 = AS_nRST (device-wide flash reset), others unused.
 - [ ] OSC_CLK_1 frequency = 25 MHz.
-- [ ] Bank 6A VCCIO = 1.8 V, CE19 = `sdm_clk25` 1.8 V LVCMOS refclk; banks 6B–6H = 3.3 V; 2A = 1.2 V; 3A = 1.1 V (LPDDR4); HPS = 1.8 V.
+- [ ] Banks 6A–6H = 3.3 V; fabric PLL refclk = AE11 `clk100` (100 MHz 3.3 V LVCMOS); CE19 unused; 2A = 1.2 V; 3A = 1.1 V (LPDDR4); HPS = 1.8 V.
 - [ ] HPS clock: `hps_osc_clk25` on GPIO1_IO3 (AN67), 25 MHz.
 - [ ] HPS GPIO1_IO14/IO15 = UART0 TX/RX (level-shifted by U42 to J10), GPIO1_IO18 = PHY reset.
 - [ ] User LED D2 on CE6 (bank 6B, 3.3 V, ~2 mA source); D1 = power good (hardware, no assignment needed).
@@ -149,8 +185,27 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 
 1. `[x]` U6 value changed to `NCP163ASN330T1G` (3.3 V).
 2. `[x]` NC flags added on SDM_TEMPDIODE0Ap / An (CK71, CN72).
-3. `[ ]` Decide how to handle VCCIO_HVIO_6A on the shared 1V8 (§2 note).
+3. `[x]` **(2026-10-24)** Fix 1 done: VCCIO_HVIO_6A on `3V3`, CE19 disconnected (no-connect flag), and Y4 (100 MHz 3.3 V CMOS, YXC OT3225100MJBA4SL, C4353707) drives `clk100` -> AE11 through R263 33 R.
 4. `[x]` AP61202 PG pins wired-AND -> `powergood` (3.3 V via U42) + LED D1.
 5. `[x]` `load_factory_image` label removed (SDM_IO13 NC); net renamed `sdm_clk25`.
-6. `[ ]` Confirm HPS_COLD_nRESET on SDM_IO10 and the MSEL = 001 (AS fast) entry against the Configuration UG.
+6. `[x]` HPS_COLD_nRESET on SDM_IO10 is allowed for AS x4; MSEL 001 = AS fast is confirmed.
 7. `[ ]` Optional: nCONFIG push-button / test point.
+8. `[x]` **(2026-10-24)** MSEL = 011 (AS normal): R45 now to 1V8; R4 has its own GND.
+9. `[x]` **(2026-10-24)** R264 10 k pull-up from `~{hpscold_rstn}` to 1V8 added.
+10. `[x]` **(2026-10-24)** R9 (INIT_DONE) and R10 (CONF_DONE) are DNP.
+11. `[ ]` **(2026-10-24)** Recommended, not fitted yet; a note is on the `fpga_power` sheet and on the PCB (Cmts.User): ferrite + capacitor isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM (1V8), and on VCCPLLDIG1/2_HPS and VCCPLLDIG_SDM (VCORE).
+12. `[x]` **(2026-10-24)** `clk100` (U7 AE11) is now driven by Y4 (§7).
+13. `[ ]` **(2026-10-24)** Buck inductors L2–L5 (3V3, 1V8, 1V2, 1V1 regulators) have no value yet; size them from the AP61202 data sheet.
+
+## 7. Fabric reference clocks (2026-10-24)
+
+| Clock | Source | Destination | |
+|---|---|---|---|
+| `osc_clk_25` 25 MHz, 1.8 V | Y2 SiT8924 | HPS_OSC_CLK (AN67, GPIO1_IO3) | [x] |
+| `sdm_clk25` | Y2 via R246 33 R | OSC_CLK_1 (DB72) only; CE19 is now unconnected | [x] OSC_CLK_1 needs 25/100/125 MHz when EMIF is used |
+| `iob3A_refclk_P/N` 100 MHz LVDS | U9 AX3HAF1 via R25/R26, AC-coupled, biased by `VICM_REFCLK` | bank 3A CLK_B_3A_0 (B55/A58) | [x] LPDDR4 / HPS EMIF reference clock |
+| `clk100` 100 MHz, 3.3 V CMOS | Y4 OT3225100MJBA4SL via R263 33 R (was: nothing) | AE11 (bank 6G PLLREFCLK1, 3.3 V) | [x] fabric PLL reference, independent of the HPS |
+
+`clk100` sits on the clock sheet's `clk2_N` pin on the root sheet. Inside the clock sheet, `clk2_N` is a bare hierarchical label with no driver. It looks like a leftover from when `clk2` was meant as a differential pair. As it stands, AE11 floats.
+- With fix 1 in §2, give it a real source: a 3.3 V CMOS oscillator (25 or 100 MHz) on AE11 becomes the fabric PLL reference, independent of the HPS. Remove the `clk2_N` sheet pin, and rename the net if the frequency changes.
+- With fix 2, delete the `clk100` labels and the `clk2_N` sheet pin, and put a no-connect flag on AE11. The fabric then uses CE19 (25 MHz) as its PLL reference.
