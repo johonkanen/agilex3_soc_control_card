@@ -12011,7 +12011,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x19_Odd_Even")
-		(at 182.88 245.11 0)
+		(at 185.42 245.11 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12019,8 +12019,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab161b25-1859-4252-9e84-3bfa01f52838")
+				(uuid "ab161b25-1859-4252-9e84-3bfa01f52838")
 		(property "Reference" "J3"
 			(at 184.15 215.9 0)
 			(show_name no)
@@ -12031,7 +12030,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x19_Odd_Even"
+		(property "Value" "2x19 1.27mm socket, bottom"
 			(at 184.15 218.44 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12041,7 +12040,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x19_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_1.27mm:PinSocket_2x19_P1.27mm_Vertical"
 			(at 182.88 245.11 0)
 			(hide yes)
 			(show_name no)
@@ -12063,7 +12062,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, double row, 02x19, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "2x19 1.27 mm female socket, mounted on the bottom side; pin n mates baseboard J11 pin n"
 			(at 182.88 245.11 0)
 			(hide yes)
 			(show_name no)
