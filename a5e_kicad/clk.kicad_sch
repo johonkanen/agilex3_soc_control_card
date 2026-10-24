@@ -3973,7 +3973,7 @@
 				)
 			)
 		)
-		(property "Value" "AX3HAF1-100.0000"
+		(property "Value" "AX3DAF1-100.0000T"
 			(at 82.804 70.612 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3994,7 +3994,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2003932"
+		(property "LCSC" "C2002827"
 			(at 95.25 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -4016,7 +4016,7 @@
 				)
 			)
 		)
-		(property "Description" "100MHz HCSL differential XO, 3.3V, Abracon ClearClock AX3"
+		(property "Description" "Abracon AX3 100 MHz LVDS XO, 3.3 V, 3225-6 (LVDS variant; the HCSL AX3HAF1 needs 50R to GND at its outputs)"
 			(at 95.25 57.15 0)
 			(hide yes)
 			(show_name no)

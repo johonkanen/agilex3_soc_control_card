@@ -20,14 +20,15 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 |---|---|---|---|---|
 | `5V0` / `5V` | J6 (2x3 header), also J4.3 | 5.0 V in | – | all regulators, U6 |
 | `VCORE` | U15 TDA38812XUMA1 buck, remote sense via `vcoresense_P/N` (VCCLSENSE BN46 / GNDSENSE BN44), FB divider R2 10k / R1 39k -> 0.6 V x (1 + 10/39) = **0.754 V** | 0.75 V | EN tied to 5V0 -> starts as soon as 5 V is present | all Group 1 pins (see §2) |
-| `1V8` | U18 AP61202Z6 buck, R82 10k / (R80 ‖ R81 = 5k) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
-| `3V3` / `3v3` | U8 AP61202Z6, R85 10k / R83 2k2 -> 3.33 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
-| `1V2` | U19 AP61202Z6, R88 10k / R86 10k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
-| `1V1` | U16 AP61202Z6, R91 10k / R89 12k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
+| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
+| `3V3` / `3v3` | U8 AP61202Z6, R85 200k / R83 44.2k -> 3.32 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
+| `1V2` | U19 AP61202Z6, R88 200k / R86 200k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
+| `1V1` | U16 AP61202Z6, R91 200k / R89 240k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
 | `3V3_analog` | U6 NCP163 LDO from 5V0 | 3.3 V intended | EN tied to 5V0 | ADC subsystem |
 
 - [x] VCORE set point 0.754 V matches the -6S core voltage; remote sense goes to the device sense pins.
-- [x] All AP61202 feedback dividers give the intended voltages (R84/R87/R90 are DNP).
+- [x] All AP61202 feedback dividers give the intended voltages (R81/R84/R87/R90 are DNP).
+- [x] **(2026-10-24)** The dividers now use the AP61202 data sheet values (table 1: 200k top). With these, the 33 pF feed-forward capacitors C116–C119 put the zero where the data sheet intends (about 24 kHz). With the old 10k top resistors it sat at about 480 kHz.
 - [x] U6 is `NCP163ASN330T1G` (3.3 V fixed) — was wrongly the 1.5 V `...150T1G` variant.
 - [x] U19 / U8 / U16 `PG` pins (open drain) are wired-AND on `pg_all` with R249 10 k to 1V8 -> hierarchical `PG` -> root `pg_1v8` -> U42 channel 4 (1.8 V -> 3.3 V) -> `powergood` (SODIMM P1 pin 12, push-pull 3.3 V) and `pg_led` -> R16 -> D1. High only when 1V2, 3V3 and 1V1 are all in regulation (which implies VCORE and 1V8 are up).
 
