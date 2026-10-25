@@ -311,6 +311,36 @@ skew):
   current net classes, so keep it by hand.
 - **Net classes:** `lpddr_dq`, `lpddr_ca` and `lpddr_diff` now use 0.18 mm, and the diff pair 0.18/0.1.
 
+### Package delays
+
+**Agilex 5 (U7).** These come from the "Package Delay" column of the clean Quartus build
+(`~/dev/agilex5_emif_test/varA_clean/output_files/emif_test.pin`, variant R2 pinout). Values are in ps. Each Quartus
+pin name matches the board net of the same name on that U7 ball. The skew limits above include these delays, so add
+them to the U7 end of each net before comparing with the limits.
+
+| Group | Reference | Ref (ps) | Spread vs reference (ps) | Net, ball, delay (ps) |
+|---|---|---|---|---|
+| Byte 0 | dqs0_P | 112 | -5 … +21 | dqs0_P G62 112, dqs0_N E62 111, dq0 J65 122, dq1 G65 121, dq2 M56 122, dq3 E56 107, dq4 G56 108, dq5 T56 122, dq6 M62 132, dq7 T62 133, dm0 J59 113 |
+| Byte 1 | dqs1_P | 116 | -27 … -2 | dqs1_P AB56 116, dqs1_N W56 117, dq8 AB62 106, dq9 T65 113, dq10 T51 97, dq11 M51 97, dq12 W48 98, dq13 AB48 98, dq14 M65 114, dq15 W62 105, dm1 T59 89 |
+| Byte 2 | dqs2_P | 96 | +1 … +38 | dqs2_P B28 96, dqs2_N A30 96, dq16 A20 115, dq17 A22 133, dq18 B30 117, dq19 B33 97, dq20 A36 99, dq21 A33 115, dq22 B22 115, dq23 A23 134, dm2 A25 121 |
+| Byte 3 | dqs3_P | 81 | +4 … +22 | dqs3_P G32 81, dqs3_N E32 81, dq24 G24 85, dq25 T24 101, dq26 M32 102, dq27 J35 91, dq28 G35 91, dq29 T32 103, dq30 M24 101, dq31 E24 85, dm3 J27 93 |
+| CA/CK | ck_P | 100 | CA +26 … +33; CKE +13; CS +5 | ck_P J42 100, ck_N G42 98, ca0 B66 131, ca1 A68 130, ca2 B68 133, ca3 A70 133, ca4 B63 126, ca5 A66 126, cke A61 113, ~{cs} B58 105, ~{rst} M48 116 |
+
+Notes:
+- **CA vs CK** is the critical one: the package alone uses +26…+33 ps of the ±34 ps budget. On the board, make CK about
+  30 ps longer than the CA lines (≈4 mm on In2) so that the total sits near zero.
+- **Byte 2:** dq17 and dq23 are +37/+38 ps late in the package against a +43 ps limit. Route them short relative to
+  dqs2.
+- **Byte 1:** dm1 is 27 ps early. **Byte 0:** dq6 and dq7 are 20/21 ps late.
+- **P/N within the package:** dqs0 1 ps, dqs1 1 ps, dqs2 0, dqs3 0, ck 2 ps. Add the 1–2 ps to the board-level pair
+  skew budget.
+- KiCad has no per-pad delay setting. Apply the offsets per net, in the length tuner target or as per-net skew
+  rules.
+
+**SK hynix H9HCNNN8KUMLHR (U12): not available.** The public datasheet has no per-ball package lengths. The source
+would be the IBIS model's `[Pin]` RLC section, from SK hynix or a distributor FAE. A 200-ball LPDDR4 package
+typically spreads 5–15 ps; until real data arrives, treat that as margin.
+
 ### Layer rules (stack-up JLC08161H-3313)
 
 From a 2D field solve by the Ti135 session, which uses the same stack-up:
