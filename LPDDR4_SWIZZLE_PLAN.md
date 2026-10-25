@@ -274,10 +274,47 @@ U12 sits above U7, rotated −90°.
 
 ## Reroute plan
 
+### Impedance, spacing and skew targets (Altera 821801 §6.3.2.2, Agilex 5 E-Series Group B)
+
+Our A5EB013B is an E-Series Group B device. Altera's LPDDR4 memory-down tables (8: stripline, 9: microstrip, 10:
+skew):
+
+- **Impedance:**
+  - Main segment Zse 40 Ω on stripline and 45 Ω on microstrip.
+  - Break-out/break-in at the BGAs may be 50 Ω, with widths "closer to the M-segment target" where possible.
+  - No differential impedance target for CK/DQS: keep them tightly coupled, 4 mil in-pair spacing.
+- **Widths (JLC08161H-3313, field solve from the Ti135 session):**
+  - 40 Ω on In2/In5 = **0.18 mm**.
+  - 45 Ω on F.Cu ≈ **0.20 mm**. This is interpolated between 0.15 mm (51 Ω) and 0.25 mm (40 Ω); verify with a field
+    solver.
+  - DQS/CK use the same width with a 0.1 mm gap.
+  - Inside the U7/U12 courtyards, neck down to 0.1 mm.
+- **Spacing** (h ≈ 0.1 mm on F.Cu/In2/In5):
+  - 2h = 0.2 mm within a group;
+  - 3h = 0.3 mm between groups: CMD/CLK to DQ/DQS, byte to byte (nibble), serpentines, and RESET to everything.
+- **Maximum length:** 4000 mil stripline / 3000 mil microstrip total. We're at 16–22 mm.
+- **Skew** (in ps, including the FPGA package delay):
+
+  | Pair | Limit |
+  |---|---|
+  | DQ–DQS per byte | −68 … +43 |
+  | DQ–DQ | < 43 |
+  | CLK–CA | ±34 |
+  | CLK–CS/CKE | ±85 |
+  | CA–CA, CS/CKE–CS/CKE | < 34 |
+  | CLK–DQS | −340 … +170 |
+  | DQS_P–N, CK_P–N | < 1 |
+  | T-branch segments | < 1 |
+
+- **In `agilex_3_soc.kicad_dru`:** widths 0.18 inner / 0.20 outer, pair gap 0.1, pair skew 1 ps, spacing warnings
+  0.2 mm (any two LPDDR nets) and 0.3 mm (CA to DQ/DQS, and RESET). Byte-to-byte 0.3 mm is not expressible with the
+  current net classes, so keep it by hand.
+- **Net classes:** `lpddr_dq`, `lpddr_ca` and `lpddr_diff` now use 0.18 mm, and the diff pair 0.18/0.1.
+
 ### Layer rules (stack-up JLC08161H-3313)
 
 From a 2D field solve by the Ti135 session, which uses the same stack-up:
-- 0.15 mm on F.Cu/B.Cu = 51 Ω; 0.12 mm on In2/In5 = 48.6 Ω.
+- 0.15 mm on F.Cu/B.Cu = 51 Ω; 0.12 mm on In2/In5 = 48.6 Ω (the old 50 Ω widths); 40 Ω = 0.18 mm on In2/In5.
 - These only hold over solid copper on the 0.1 mm neighbour layer: In1 for In2, In6 for In5.
 
 | Layer | Reference plane | Use for LPDDR4 |
