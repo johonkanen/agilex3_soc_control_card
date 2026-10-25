@@ -274,10 +274,27 @@ U12 sits above U7, rotated −90°.
 
 ## Reroute plan
 
+### Layer rules (stack-up JLC08161H-3313)
+
+From a 2D field solve by the Ti135 session, which uses the same stack-up:
+- 0.15 mm on F.Cu/B.Cu = 51 Ω; 0.12 mm on In2/In5 = 48.6 Ω.
+- These only hold over solid copper on the 0.1 mm neighbour layer: In1 for In2, In6 for In5.
+
+| Layer | Reference plane | Use for LPDDR4 |
+|---|---|---|
+| F.Cu / B.Cu | In1 / In6 (0.1 mm) | Edge escapes and short breakouts (e.g. BL7 around U12's left end, CA out of U7's edge rows). |
+| **In2** | **In1 = solid GND** | **The preferred stripline layer: DQ/DQS/CA go here first.** |
+| In5 | In6 = split into 3V3/1V8/1V2/1V1 islands | Only inside one In6 pour, ideally the 1V1 pour (VDDQ, covers bank 3A and U12) or GND. Never cross an In6 split: the return path breaks. |
+| In3 | no plane within 0.3 mm (~73 Ω) | Not for LPDDR4. |
+| In6 | power planes | Not for LPDDR4. |
+
+In1, In3, In4 and In6 are set to the KiCad layer type "power" (plane), so the interactive router stays off them. The
+type is only a label and doesn't change impedance. Existing tracks on In3/In6 stay where they are.
+
 1. **Channel B first.**
    - BL7 → B0 on F.Cu: leave U7's edge rows, run left/up around U12's left end, and enter B0 from the left. The
      leftmost U7 ball (A20) goes to the outermost ball (AA2).
-   - BL6 → B1 on one stripline layer (In2 or In5), straight up, entering B1 from below or the left with via-in-pad.
+   - BL6 → B1 on one stripline layer (In2, or In5 inside the In6 1V1 pour), straight up, entering B1 from below or the left with via-in-pad.
 2. **Channel A.**
    - BL0 → A0 and BL1 → A1 on the two stripline layers, one lane per layer (the interleave crossing is inherent).
    - Both go straight up (channel A is now directly above them), past CA, to U12's right end.
