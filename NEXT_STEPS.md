@@ -44,18 +44,14 @@ the sync it was 496 and 48.
      - Y4 + C260 + R263 near AE11 (bank 6G, fabric refclk);
      - R264 near the SDM pull-ups (HPS_COLD_nRESET).
    - Refill zones, then re-run DRC with schematic parity.
-1b. **ADC front end** (commit 66ab8f1, schematic only): update the PCB from the schematic again for:
-   - U3 (SN74LV4051A, same footprint) and U4 (OPA365, TSOT-23-5 -> SOT-23-5 footprint);
-   - C1 (now 0603);
-   - new parts R265–R267 (33R on the ADC SPI lines) and C261 (DVDD 1u);
-   - U3 pin 6 -> GND, U5 DVDD -> 3V3.
-   Place C1 4u7 right at U5 AVDD and C261 at DVDD.
-1c. **Ethernet PHY RTL8211FDI-CG** (replaces the KSZ9031, schematic only): update the PCB for:
-   - U10 (QFN-40 5x5 instead of QFN-48 7x7) and the new R268;
-   - the DNP straps;
-   - the PHY1V0/PHY_RG rails;
-   - U42 ch3 -> phy_rst_n.
-   Re-place and reroute the PHY area; the RGMII series resistors stay. See `ETH_PHY_REVIEW.md`.
+1b. **Synced 2026-10-25** (schematic parity 0): ADC front end, RTL8211FDI-CG with straps, Y2/R56/R57, L1–L5, and
+   the U12 1u caps C262–C265. The layout is NOT cleaned up yet (DRC 223, 196 unconnected).
+   - **PHY:** U10 is now QFN-40 5x5 at the old position. Re-place and reroute it: the old KSZ tracks dangle and short.
+     Old 1V2 copper is now on PHY1V0/PHY_RG nets (C27–C32, C256–C258); fix it.
+   - **New parts, parked right of the board (x ≈ 230+):** R268–R271 (PHY straps/LED), R265–R267 (ADC SPI 33R), C261
+     (ADC DVDD), C262–C265 (U12 1u, place under/near the U12 1V1 balls on B.Cu).
+   - **ADC:** U4 is now SOT-23-5 and C1 is 0603 (put C1 at U5 AVDD); U5's SPI goes through R265–R267; U3 pin 6 -> GND.
+   - **U42 ch3** is now eth_rst_n -> phy_rst_n; the old LED track to J9 must go.
 2. **Route all LPDDR4 signals from scratch** (merged from branch `lpddr4-reroute-explore`, 2026-10-25).
    - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
      fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged
