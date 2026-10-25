@@ -56,11 +56,12 @@ the sync it was 496 and 48.
    - the PHY1V0/PHY_RG rails;
    - U42 ch3 -> phy_rst_n.
    Re-place and reroute the PHY area; the RGMII series resistors stay. See `ETH_PHY_REVIEW.md`.
-2. **Route the 8 DQS nets** U7 <-> U12. They are unrouted since the label fix. dqs0 and dqs3 still have 2 leftover
-   segments each; delete them.
-   - Keep the current pinout (variant A, identical to the DE25-Nano), or do the BL6↔BL7 rework (variant B: fewer
-     crossings, but bytes 2/3 need rerouting). See `LPDDR4_SWIZZLE_PLAN.md`.
-   - Route each DQS on its own byte's layers. Fix the dqs2 P/N twist in the breakout (no polarity swap allowed).
+2. **Route all LPDDR4 signals from scratch** (merged from branch `lpddr4-reroute-explore`, 2026-10-25).
+   - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
+     fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged
+     down; zones refilled.
+   - Follow the "Reroute plan" in `LPDDR4_SWIZZLE_PLAN.md`. Route each DQS on its own byte's layers; no P/N polarity
+     swap is allowed.
 3. **Recommended, not fitted yet:** ferrite + 4.7µ‖100n isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM
    (1V8), and on VCCPLLDIG1/2_HPS and VCCPLLDIG_SDM (VCORE). There is a note on the `fpga_power` sheet and on the PCB
    Cmts.User layer.
