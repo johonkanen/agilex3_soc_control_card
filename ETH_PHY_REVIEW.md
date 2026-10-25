@@ -6,14 +6,20 @@ The KSZ9031RNX had only 16 orderable at JLCPCB (the KSZ9131 75, the DP83867 9). 
 (C692886, 8.5k free; QFN-40 5x5, industrial temperature range). Checked against the RTL8211F(I)/FD(I) data sheet,
 Rev 1.4.
 
-- **Configured over MDIO; only two straps.**
-  - CFG_LDO[1:0] = 10: R35 4K7 pull-down on LED1, R268 4K7 pull-up on LED2. This sets the internal RGMII/MDIO I/O LDO
-    to 1.8 V; the default 01 would be 2.5 V.
-  - Every other config pin keeps its internal default: PHY address 1 (it also answers broadcast address 0), RXDLY=1,
-    TXDLY=0, CFG_EXT=0 (internal LDO), PLLOFF=0.
-  - The KSZ strap resistors R29, R31–R34 and R37–R39 are DNP.
+- **Configured over MDIO; all nine CONFIG pins have external 4.7k pulls.** Data sheet section 7.8 says "an external
+  pull-high or pull-low via resistor is required" (pointed out by the Ti135 session).
+  - PHYAD[2:0] = 001: R32 up, R33 and R31 down.
+  - PLLOFF = 0: R269 down. TXDLY = 0: R270 down. RXDLY = 1: R39 up.
+  - The RX-line straps pull up to PHY_RG (DVDD_RG, as the data sheet says), so the board 1V8 doesn't back-feed an
+    unpowered PHY. The INTB pull-up R30 is now on PHY_RG too.
+  - CFG_EXT = 0: R271 down on LED0. CFG_LDO = 10: R35 down on LED1, R268 up to 3V3 on LED2. That gives the internal
+    1.8 V I/O LDO; the default 01 would be 2.5 V.
+  - R29, R34, R37 and R38 are DNP: they are left over from the KSZ9031, and R34/R37 pull the wrong way.
   - The pins were placed where the KSZ pins of the same function were, so the RGMII series resistors, MDI wiring,
     crystal and RSET (ex-ISET) stay as they were. The netlist was checked pin by pin.
+- **3V3 rise time:** must be >= 0.5 ms (data sheet table 53). U8's soft-start is 0.5 ms typical, which the data sheet
+  conditionally allows (0.1–0.5 ms) as long as 3V3 OCP doesn't trip. Before re-powering, 3V3 must be off >= 100 ms.
+- **LED2:** defaults to link at 1000 Mb/s only. Set LCR (page 0xd04, reg 0x10) for link/activity at all speeds.
 - **Supplies:**
   - DVDD33 on 3V3; AVDD33 on PHY3V3 via FB1.
   - The internal LDO_OUT (pin 30) makes the 1.0 V net PHY1V0, which feeds only AVDD10/DVDD10. Its caps are the old

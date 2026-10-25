@@ -12080,7 +12080,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "65233d7b-619b-453c-982a-5698923a5e26")
 		(property "Reference" "R32"
 			(at 55.88 86.36 0)
@@ -12640,7 +12640,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "75ad2f6d-f6e9-4fc0-aff8-22779affa612")
 		(property "Reference" "R39"
 			(at 71.12 86.36 0)
@@ -13801,7 +13801,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "9bf23d10-2487-4793-8025-5f05304ac49a")
 		(property "Reference" "R33"
 			(at 55.88 130.81 0)
@@ -13814,7 +13814,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K0"
+		(property "Value" "4K7"
 			(at 55.88 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13836,7 +13836,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C11702"
+		(property "LCSC" "C25900"
 			(at 54.102 134.62 90)
 			(hide yes)
 			(show_name no)
@@ -14005,7 +14005,7 @@
 				)
 			)
 		)
-		(property "Value" "1V8"
+		(property "Value" "PHY_RG"
 			(at 45.72 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15838,7 +15838,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "de47d2d1-55b6-41f1-b6e5-d7dbe80a82cf")
 		(property "Reference" "R31"
 			(at 50.8 130.81 0)
@@ -15851,7 +15851,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K0"
+		(property "Value" "4K7"
 			(at 50.8 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15873,7 +15873,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C11702"
+		(property "LCSC" "C25900"
 			(at 49.022 134.62 90)
 			(hide yes)
 			(show_name no)
@@ -17103,11 +17103,7 @@
 		(at 190.5 78.74)
 		(uuid "02244254-9f23-4ae8-9c0b-120d84bc82c6")
 	)
-	(no_connect
-		(at 190.5 81.28)
-		(uuid "70045c57-464d-4802-bd9d-0934c7de466f")
-	)
-	(text "U10 RTL8211FDI-CG (replaces KSZ9031RNX; JLC stock). Configured over MDIO, only two straps:\nCFG_LDO[1:0] = 10 -> internal RGMII/MDIO I/O LDO at 1.8 V: R35 4K7 pull-down on LED1, R268 4K7 pull-up on LED2.\nOther straps at internal defaults: PHY address 1 (also answers broadcast 0), RXDLY=1, TXDLY=0,\nCFG_EXT=0 (internal LDO), PLLOFF=0. Set RGMII delays in software (phy-mode rgmii-id).\nSupplies: DVDD33/AVDD33 3.3 V (AVDD33 via FB1), internal LDO_OUT 1.0 V -> PHY1V0 (AVDD10/DVDD10 only),\nDVDD_RG = internal 1.8 V LDO output -> PHY_RG (caps only). RSET 2K49 1%. MDIO pull-up 1K5 (data sheet).\nPHYRSTB is a 3.3 V input: driven by U42 ch3 (eth_rst_n 1.8 V -> phy_rst_n 3.3 V). Hold low >= 10 ms,\nwait >= 50 ms before MDIO access. LED2 (1000M link/act, active low) drives the J9 green LED directly."
+	(text "U10 RTL8211FDI-CG (replaces KSZ9031RNX; JLC stock). Configured over MDIO; all nine CONFIG pins have external 4K7\npulls as data sheet 7.8 requires (see the strap note below): PHY address 1, PLLOFF=0, TXDLY=0, RXDLY=1, CFG_EXT=0,\nCFG_LDO=10 -> internal RGMII/MDIO I/O LDO at 1.8 V. Set RGMII delays in software (phy-mode rgmii-id).\nSupplies: DVDD33/AVDD33 3.3 V (AVDD33 via FB1), internal LDO_OUT 1.0 V -> PHY1V0 (AVDD10/DVDD10 only),\nDVDD_RG = internal 1.8 V LDO output -> PHY_RG (caps, RX strap and INTB pull-ups). RSET 2K49 1%. MDIO pull-up 1K5.\nPHYRSTB is a 3.3 V input: driven by U42 ch3 (eth_rst_n 1.8 V -> phy_rst_n 3.3 V). Hold low >= 10 ms,\nwait >= 50 ms before MDIO access. LED2 (active low) drives the J9 green LED; set LCR (page 0xd04 reg 0x10) for link/act.\n3V3 rise time must be >= 0.5 ms (U8 AP61202 soft-start 0.5 ms typ: conditionally OK per data sheet table 53)."
 		(exclude_from_sim no)
 		(at 25.4 173.99 0)
 		(effects
@@ -17127,5 +17123,553 @@
 			(type default)
 		)
 		(uuid "b2ef7369-e353-4631-95e4-c0ce083e30e4")
+	)
+
+	(symbol
+		(lib_id "Device:R")
+		(at 78.74 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ac2b1d07-b612-4ba5-83ca-ea9ebf6dcd38")
+		(property "Reference" "R269"
+			(at 78.74 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 78.74 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 76.962 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 76.962 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 78.74 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0f9e8c59-58c8-479a-b96f-3ae1ee7a3079")
+		)
+		(pin "1"
+			(uuid "b4bc4b84-f97e-460b-bc03-96f5ecb5d526")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "R269")
+					(unit 1)
+				)
+			)
+		)
+	)	(label "eth_rxd2"
+		(at 78.74 132.08 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "625375b9-bd9c-4ab2-b2a6-0fbac29d0033")
+	)
+
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "156ed1f5-6c7c-4a1d-8b0e-53d205c6d24b")
+		(property "Reference" "#PWR1567"
+			(at 78.74 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 78.74 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1f7effa-cb70-4b23-9835-14b4660b6e4e")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1567")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6e0b30e9-29cb-4cde-9ca2-cad6aacff09c")
+		(property "Reference" "R270"
+			(at 86.36 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 86.36 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 84.582 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 84.582 135.89 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "78a553be-4b3c-4b39-93d7-6b305adfc2af")
+		)
+		(pin "1"
+			(uuid "a6f53a6a-bb24-4486-8217-4b0beb0e0dc8")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "R270")
+					(unit 1)
+				)
+			)
+		)
+	)	(label "eth_rxd1"
+		(at 86.36 132.08 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d271f41-c214-476a-a95a-ba36d3951fdb")
+	)
+
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0dcf57d1-8317-4ba9-ab1d-b0f0eae8fc9e")
+		(property "Reference" "#PWR1568"
+			(at 86.36 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 86.36 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3ef015d5-7210-4dd3-9771-ab64ff27f036")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1568")
+					(unit 1)
+				)
+			)
+		)
+	)	(wire
+		(pts
+			(xy 190.5 81.28) (xy 193.04 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ecc3e5b-49bd-43f6-8fad-ad55818e8794")
+	)
+
+	(symbol
+		(lib_id "Device:R")
+		(at 196.85 81.28 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "26263a27-2519-47f5-9bd7-661b68ae233b")
+		(property "Reference" "R271"
+			(at 196.85 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 196.85 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 195.072 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 195.072 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 196.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "85bcc651-3a9f-48a7-b978-e368fcd73e2f")
+		)
+		(pin "1"
+			(uuid "3b6c6f6c-9ec0-4e5d-ac91-d51e720438e1")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "R271")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 200.66 81.28 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1668c8ee-6e52-4066-984d-9c4d12329e14")
+		(property "Reference" "#PWR1569"
+			(at 200.66 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 200.66 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 200.66 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8dd6f4eb-8c8c-4a11-ab41-11618e67592d")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1569")
+					(unit 1)
+				)
+			)
+		)
+	)	(text "Config straps (data sheet 7.8: external pulls required), 4K7: PHYAD[2:0]=001 (R32 up / R33, R31 down),\nPLLOFF=0 (R269 down), TXDLY=0 (R270 down), RXDLY=1 (R39 up) - RX straps to PHY_RG;\nCFG_EXT=0 (R271 down on LED0), CFG_LDO=10 (R35 down on LED1, R268 up to 3V3 on LED2). R34/R37 DNP (wrong direction)."
+		(exclude_from_sim no)
+		(at 25.4 194.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e41a9d40-7f85-463c-a9e7-cb1692a3aa98")
 	)
 )
