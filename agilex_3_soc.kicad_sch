@@ -8409,7 +8409,7 @@
 			)
 		)
 	)
-	(global_label "eth_led1_n"
+	(global_label "eth_rst_n"
 		(shape input)
 		(at 313.41 187.96 180)
 		(effects
@@ -8569,7 +8569,7 @@
 			)
 		)
 	)
-	(global_label "eth_led_g_n"
+	(global_label "phy_rst_n"
 		(shape output)
 		(at 360.68 187.96 0)
 		(effects

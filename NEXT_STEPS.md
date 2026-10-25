@@ -50,6 +50,12 @@ the sync it was 496 and 48.
    - new parts R265–R267 (33R on the ADC SPI lines) and C261 (DVDD 1u);
    - U3 pin 6 -> GND, U5 DVDD -> 3V3.
    Place C1 4u7 right at U5 AVDD and C261 at DVDD.
+1c. **Ethernet PHY RTL8211FDI-CG** (replaces the KSZ9031, schematic only): update the PCB for:
+   - U10 (QFN-40 5x5 instead of QFN-48 7x7) and the new R268;
+   - the DNP straps;
+   - the PHY1V0/PHY_RG rails;
+   - U42 ch3 -> phy_rst_n.
+   Re-place and reroute the PHY area; the RGMII series resistors stay. See `ETH_PHY_REVIEW.md`.
 2. **Route the 8 DQS nets** U7 <-> U12. They are unrouted since the label fix. dqs0 and dqs3 still have 2 leftover
    segments each; delete them.
    - Keep the current pinout (variant A, identical to the DE25-Nano), or do the BL6↔BL7 rework (variant B: fewer
