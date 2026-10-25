@@ -3510,7 +3510,7 @@
 				)
 			)
 		)
-		(property "Value" "SIT8924BA-73-18N-25.000000"
+		(property "Value" "SIT8924BA-78-18E-25.000000"
 			(at 124.206 116.586 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3531,7 +3531,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17359088"
+		(property "LCSC" "C17247134"
 			(at 125.73 118.11 0)
 			(hide yes)
 			(show_name no)
