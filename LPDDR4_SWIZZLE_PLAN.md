@@ -386,8 +386,11 @@ placement check is real.
 
 **Other results:**
 - **Refclk:** 100 MHz is legal at 800 MHz (1600 MT/s) and 1066.667 MHz (2133 MT/s), the only two rates the IP allows on -6S.
-- **Refresh timings:** set tRFCab 130 ns, tRFCpb 60 ns and tXSR 137.5 ns through the IP's JEDEC override table. Without
-  that, the IP keeps the DE25-Nano's 8 Gb-per-channel values.
+- **Refresh timings:** use tRFCab 180 ns, tRFCpb 90 ns, tXSR 187.5 ns, the IP's default.
+  - The SK hynix table gives 130/60 ns for 4 Gb dies (2 Gb per channel) and 180/90 ns for 8 Gb dies (4 Gb per channel).
+  - This part is "8Gb, DDP, 2Ch 1CS" (4 Gb per channel), so the die split is ambiguous. 180/90/187.5 is safe in both
+    cases.
+  - An earlier note here said 130/60/137.5 ns. That was wrong for an 8 Gb die and would violate refresh.
 - **Reset Release IP:** add it in the real design (Critical Warning 20759).
 
 ## Reproducing

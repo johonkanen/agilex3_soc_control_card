@@ -74,7 +74,9 @@ the sync it was 496 and 48.
 ## For the FPGA/Quartus project later
 
 - **EMIF:** LPDDR4 1x32, 1 rank, 4 Gb/channel, 1600 MT/s, refclk 100 MHz.
-  - Set tRFCab 130 ns, tRFCpb 60 ns and tXSR 137.5 ns via the IP's JEDEC override table.
+  - Refresh timings: tRFCab 180 ns, tRFCpb 90 ns, tXSR 187.5 ns (the IP default). The H9HCNNN8KUMLHR is "8Gb, DDP, 2Ch 1CS"
+    with 4 Gb per channel, so the per-die density is ambiguous; 180/90/187.5 is correct for either case. Do NOT use
+    130/60/137.5, which is only valid for 4 Gb dies (2 Gb per channel).
   - Swizzle strings are in `LPDDR4_SWIZZLE_PLAN.md`.
 - **Add the Reset Release IP.**
 - **Configuration:** AS x4 normal mode; SDM_IO0 = INIT_DONE, SDM_IO16 = CONF_DONE, SDM_IO10 = HPS_COLD_nRESET,
