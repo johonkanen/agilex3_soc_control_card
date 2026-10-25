@@ -45,8 +45,9 @@ the sync it was 496 and 48.
      - R264 near the SDM pull-ups (HPS_COLD_nRESET).
    - Refill zones, then re-run DRC with schematic parity.
 2. **Branch `lpddr4-reroute-explore` (2026-10-25):** all LPDDR4 copper is removed, and the U7 pinout is changed to
-   "variant R": U12 stays at −90°, byte swizzle BL6↔BL7, new pin swizzle, Quartus-checked. Reroute everything from
-   scratch per `LPDDR4_SWIZZLE_PLAN.md` ("Reroute plan"). The item below applies to the old routing on main.
+   "variant R2": U12 moved 6 mm left (still −90°), with its decaps and fan-out. Byte swizzle BL6↔BL7, new pin
+   swizzle, refclk chain R25/R26/C8/C9 nudged down, zones refilled, Quartus-checked. Reroute everything from scratch
+   per `LPDDR4_SWIZZLE_PLAN.md` ("Reroute plan"). The item below applies to the old routing on main.
 
    **Route the 8 DQS nets** U7 <-> U12. They are unrouted since the label fix. dqs0 and dqs3 still have 2 leftover
    segments each; delete them.

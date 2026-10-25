@@ -1,13 +1,14 @@
 # LPDDR4 routing: byte and pin swizzle plan
 
-**Status (branch `lpddr4-reroute-explore`, 2026-10-25):** the chosen configuration ("variant R") is in the
-schematic and on the PCB, and all LPDDR4 copper has been removed for a clean reroute.
-- U12 stays where it was: F.Cu, −90°, at (165.792, 89.284).
-- Byte swizzle: BL6↔BL7. BL0/BL1 are unchanged.
-- New pin swizzle in all four lanes.
-- The U7-side labels on `a5e_kicad/iobank3.kicad_sch` are relabelled, and the U7 pad nets on the PCB match them
-  (schematic parity 0).
-- Quartus fitter: **pass**, with BYTE_SWIZZLE_CH0 and the new PIN_SWIZZLE strings (see "Quartus check").
+**Status (branch `lpddr4-reroute-explore`, 2026-10-25):** "variant R2" is in the schematic and on the PCB. It replaces
+the earlier variant R, which had U12 at its old position. All LPDDR4 copper is removed, ready for a clean reroute.
+- **U12 moved 6 mm left:** F.Cu, −90°, now at (159.792, 89.284), centred over bank 3A. Its decoupling block and power
+  fan-out moved with it, and the zones are refilled. See "Move to −6 mm".
+- **Byte swizzle:** BL6↔BL7. BL0/BL1 are unchanged.
+- **Pin swizzle:** re-optimised for the new position.
+- **Schematic/PCB sync:** the U7-side labels on `a5e_kicad/iobank3.kicad_sch` are relabelled, and the U7 pad nets on
+  the PCB match them (schematic parity 0).
+- **Quartus fitter:** **pass**, with the R2 strings (see "Quartus check").
 
 Earlier starting points: tag `pre-lpddr4-swizzle-reroute` (commit a2e793e) has the old fully routed DQ/DMI. Commit
 94e49d7 is the last one with the old routing.
@@ -62,10 +63,10 @@ What the public documents say, and how it applies here:
     - channel A is in rows A–K and channel B in rows P–AB;
     - in each channel, byte 0 is in columns 2–4 and byte 1 in columns 9–11;
     - CA/CK are in rows H/J (A) and P/R (B);
-    - columns 5–8 are depopulated.
+    - columns 6–7 and rows L–M are depopulated.
   - From that ballout, the rule follows: put the channel split (the long axis) **across** the FPGA side, so each
     channel faces its own pair of FPGA lanes. The data bytes then sit at the short ends, reachable from the sides and
-    from the empty middle band.
+    from the empty middle bands.
 
 Links:
 - Altera 821801 LPDDR4 interface guidelines: https://www.intel.com/content/www/us/en/docs/programmable/821801/current/lpddr4-interface-design-guidelines.html
@@ -81,7 +82,7 @@ Links:
 
 **Inputs:**
 - Real pad coordinates from pcbnew.
-- U12 at 0/90/180/−90°, at the current position and shifted 2/4/6/8 mm left. It can't move up (board edge) or
+- U12 at 0/90/180/−90°, at the original position and shifted 2/4/6/8 mm left. A finer 0.5 mm scan at −90° follows below. It can't move up (board edge) or
   down (U7).
 - For each case, all 4 legal byte swizzles. For each lane, the pin swizzle comes from a pairwise-swap search starting
   from the order-sorted matching, minimising wORD + wSL.
@@ -98,7 +99,7 @@ reset. CA nets go to the T-point of their two balls. P/N of the same pair are no
 - **interORD:** ORD between different bytes. These are the crossings that force layer changes.
 - **Weights (w…):** ×10 for a crossing between different bytes, ×3 for byte vs CA/CK, ×1 within a byte.
 
-Results at the current position (best pin swizzle for each case). Byte swizzle column: `-`/`A` = BL0/BL1 kept/swapped,
+Results at the original position (best pin swizzle for each case). Byte swizzle column: `-`/`A` = BL0/BL1 kept/swapped,
 `-`/`B` = BL6/BL7 kept/swapped.
 
 | U12 rotation | Fits? | Byte swizzle | SL | wSL | ORD | interORD | ORDs |
@@ -107,96 +108,164 @@ Results at the current position (best pin swizzle for each case). Byte swizzle c
 | 90° | yes, but channel A ends up on the left over BL6/BL7 | -- (best) | 864 | 5934 | 878 | 589 | 454 |
 | 180° | no: as 0° | -- (best SL) | 298 | 1137 | 577 | 322 | 335 |
 | 180° | no | -B (best ORDs) | 347 | 1846 | 621 | 347 | 167 |
-| −90° (current) | yes | -- (old variant A pinout, as routed) | 302 | 1714 | 268 | 105 | 89 |
+| −90° (original) | yes | -- (old variant A pinout, as routed) | 302 | 1714 | 268 | 105 | 89 |
 | −90° | yes | -- | 266 | 1629 | 238 | 105 | 59 |
-| **−90°** | **yes** | **-B (chosen)** | **213** | **910** | **229** | **80** | **75** |
+| **−90°** | **yes** | **-B (variant R)** | **213** | **910** | **229** | **80** | **75** |
 | −90° | yes | A- | 275 | 1698 | 282 | 141 | 103 |
 | −90° | yes | AB | 222 | 979 | 273 | 116 | 119 |
 
-Shifting U12 left at −90°:
-- ORD is unchanged, because the topology is the same.
-- With -B, SL is 213/204/207/204/206 and wSL 910/939/859/779/759 for 0/2/4/6/8 mm.
-- At −6 mm the weighted straight-line count is about 15 % lower. But the shift would mean re-fanning U12's
-  111 power/GND vias, and moving its ~40 B.Cu decoupling caps into U9, R25/R26 and C8/C9. **Not done.** It is the
-  user's call if the extra margin is wanted.
+**Shifting U12 left at −90°** (0.5 mm steps, 0 to −12 mm, byte swizzle -B with re-optimised pins):
+
+| Shift | 0 | −2 | −4 | −5 | **−6** | −6.5 | −7 | −8 | −9 | −10 | −12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| SL | 213 | 204 | 207 | 202 | **204** | 210 | 203 | 206 | 221 | 236 | 248 |
+| wSL | 910 | 939 | 859 | 819 | **779** | 748 | 733 | 759 | 769 | 844 | 867 |
+| ORD | 229 | 231 | 227 | 229 | **225** | 222 | 228 | 226 | 230 | 227 | 228 |
+| mean / max length (mm) | 21.2 / 27.2 | 19.3 / 25.2 | 17.8 / 24.5 | 17.1 / 23.0 | **16.4 / 22.0** | 16.1 / 21.4 | 15.8 / 21.4 | 15.7 / 22.4 | 16.1 / 23.4 | 16.9 / 24.4 | 18.8 / 26.4 |
+
+Notes on the table:
+- Lengths are Manhattan, U7 ball to U12 ball.
+- ORD (topology) is unchanged by a pure shift. The shift improves geometry: crossings go down, and the mean
+  connection length drops by a quarter.
+- −6 to −7 mm is best.
+  - **−6 mm was chosen.** At −7 mm the decaps at U12's left end (C63/C67/C71) would land on the 1V1 buck output caps
+    (C47, R46), and U9 would touch the ball field.
+  - The metric difference between −6 and −7 is under 3 %.
 
 The full table, with all positions, is reproducible with the scripts described at the end.
 
-## Chosen configuration ("variant R")
+## Chosen configuration ("variant R2")
 
 **Why this one:**
 - **−90° is the only orientation that matches the FPGA.** Channel B (rows P–AB) is on the left, over BL6/BL7. CA is in
-  the middle, and channel A is on the right, towards BL0/BL1. Every other rotation makes at least one byte cross the
-  other channel: 3× to 4× more inter-byte crossings in the order model. 0°/180° don't fit between the board edge and
-  U7 anyway.
-- **BL6↔BL7 byte swizzle:**
-  - BL7 (U7 edge rows, F.Cu) takes the far byte B0 around U12's left end.
-  - BL6 (inner rows) goes straight up to the near byte B1.
-  - The bundles nest, giving 25 fewer inter-byte crossings in the order model and fewer weighted straight-line
-    crossings than the best unswapped order (about 45 %). This matches the earlier analysis and the guideline: edge
-    pins on microstrip, inner pins on stripline.
-- **BL0/BL1 stay as they are.** Swapping them adds 36 inter-byte crossings.
-  - The 32 BL0×BL1 crossings that remain are inherent: the two lanes are interleaved in U7 (BL0 rows E–T, BL1 rows
-    M–AB, same x span).
-  - Resolve them by layer: BL0 on one stripline layer, BL1 on the other.
-- **Pin swizzle:** each lane's DQ are matched in escape order to the byte's balls (see the table below).
+  the middle, and channel A is on the right, over BL0/BL1. Every other rotation makes at least one byte cross the other
+  channel: 3× to 4× more inter-byte crossings in the order model. 0°/180° don't fit between the board edge and U7
+  anyway.
+- **6 mm left, centred over bank 3A:**
+  - channel B now sits directly over BL6/BL7, and channel A over BL0/BL1;
+  - weighted straight-line crossings −14 %;
+  - mean length 21.2 → 16.4 mm, max 27.2 → 22.0 mm.
+- **BL6↔BL7 byte swizzle** (results at −6 mm):
+
+  | Byte swizzle | SL | wSL | ORD | interORD | ORDs |
+  |---|---|---|---|---|---|
+  | -- | 223 | 978 | 244 | 105 | 65 |
+  | **-B (chosen)** | **204** | **779** | **225** | **80** | **71** |
+  | A- | 212 | 890 | 286 | 141 | 107 |
+  | AB | 193 | 691 | 267 | 116 | 113 |
+  | variant R pins, unchanged, at −6 mm | 250 | 1034 | 229 | 80 | 75 |
+
+  - BL7 (U7 edge rows, F.Cu) takes the far byte B0 around U12's left end. BL6 (inner rows) goes straight up to the
+    near byte B1, so the bundles nest.
+  - AB has slightly fewer straight-line crossings, but 36 more inter-byte crossings in the escape-order model.
+- **BL0/BL1 stay as they are.** The 32 BL0×BL1 crossings that remain are inherent: the two lanes are interleaved in U7
+  (BL0 rows E–T, BL1 rows M–AB, same x span). Resolve them by layer, BL0 and BL1 on different stripline layers.
+- **Pin swizzle:** each lane's DQ are matched in escape order to the byte's balls (see the table below). Compared with
+  variant R, 19 U7 pins changed.
 
 **Lane map** (lane pin: U7 ball → net (U12 ball)):
 
 | Lane | Byte | 0 | 1 | 2 | 3 | 4 DQS_T | 5 DQS_C | 6 DMI | 8 | 9 | 10 | 11 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| BL0 | A0 | J65 dq0 (B2) | G65 dq1 (C2) | T62 dq7 (B4) | M62 dq6 (C4) | G62 dqs0_P (D3) | E62 dqs0_N (E3) | J59 dm0 (C3) | T56 dq4 (F4) | M56 dq5 (E4) | G56 dq2 (E2) | E56 dq3 (F2) |
-| BL1 | A1 | AB62 dq8 (B11) | W62 dq9 (C11) | T65 dq15 (B9) | M65 dq14 (C9) | AB56 dqs1_P (D10) | W56 dqs1_N (E10) | T59 dm1 (C10) | AB48 dq13 (E9) | W48 dq11 (F11) | T51 dq10 (E11) | M51 dq12 (F9) |
-| BL6 | B1 | J35 dq28 (U9) | G35 dq29 (V9) | T32 dq30 (Y9) | M32 dq24 (AA11) | G32 dqs3_P (W10) | E32 dqs3_N (V10) | J27 dm3 (Y10) | T24 dq27 (U11) | M24 dq26 (V11) | G24 dq25 (Y11) | E24 dq31 (AA9) |
-| BL7 | B0 | B33 dq19 (U2) | A36 dq21 (V4) | B30 dq22 (Y4) | A33 dq20 (U4) | B28 dqs2_P (W3) | A30 dqs2_N (V3) | A25 dm2 (Y3) | A22 dq17 (Y2) | A23 dq18 (V2) | B22 dq23 (AA4) | A20 dq16 (AA2) |
+| BL0 | A0 | J65 dq0 (B2) | G65 dq1 (C2) | T62 dq7 (B4) | M62 dq6 (C4) | G62 dqs0_P (D3) | E62 dqs0_N (E3) | J59 dm0 (C3) | T56 dq5 (E4) | M56 dq2 (E2) | G56 dq4 (F4) | E56 dq3 (F2) |
+| BL1 | A1 | AB62 dq8 (B11) | W62 dq15 (B9) | T65 dq9 (C11) | M65 dq14 (C9) | AB56 dqs1_P (D10) | W56 dqs1_N (E10) | T59 dm1 (C10) | AB48 dq13 (E9) | W48 dq12 (F9) | T51 dq10 (E11) | M51 dq11 (F11) |
+| BL6 | B1 | J35 dq27 (U11) | G35 dq28 (U9) | T32 dq29 (V9) | M32 dq26 (V11) | G32 dqs3_P (W10) | E32 dqs3_N (V10) | J27 dm3 (Y10) | T24 dq25 (Y11) | M24 dq30 (Y9) | G24 dq24 (AA11) | E24 dq31 (AA9) |
+| BL7 | B0 | B33 dq19 (U2) | A36 dq20 (U4) | B30 dq18 (V2) | A33 dq21 (V4) | B28 dqs2_P (W3) | A30 dqs2_N (V3) | A25 dm2 (Y3) | A22 dq17 (Y2) | A23 dq23 (AA4) | B22 dq22 (Y4) | A20 dq16 (AA2) |
 
 **Quartus strings:** each list is ordered by lane pin 0,1,2,3,8,9,10,11, and each value is the x32 DQ index (channel B
 = 16 + n).
 
 ```
-BYTE_SWIZZLE_CH0=0 1 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 4 5 2 3;PIN_SWIZZLE_CH0_DQS1=8 9 15 14 13 11 10 12;PIN_SWIZZLE_CH0_DQS2=19 21 22 20 17 18 23 16;PIN_SWIZZLE_CH0_DQS3=28 29 30 24 27 26 25 31;
+BYTE_SWIZZLE_CH0=0 1 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 5 2 4 3;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=19 20 18 21 17 23 22 16;PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31;
 ```
 
-**Changed on the branch:**
-- `a5e_kicad/iobank3.kicad_sch`: 36 U7-side labels renamed, as a permutation of the existing names. `mem1` and the
-  U12 nets are untouched.
-  - Netlist diff: only the 36 U7 pins of these nets changed.
-  - ERC is identical: 326 before and after.
-- `agilex_3_soc.kicad_pcb`, edited as text with no SaveBoard reorder:
-  - all LPDDR4 copper removed: 2283 segments, 942 arcs, 97 vias, and the 41 LPDDR4 tuning patterns;
-  - the 44 U7 lane pads re-netted to match the schematic;
-  - U12 not moved.
-- **DRC with schematic parity:** 0 parity issues.
-  - 171 violations, down from 576. The 405 that went were all LPDDR4. The rest are the pre-existing power-corner,
-    courtyard and mask issues listed in `NEXT_STEPS.md`.
-  - 120 unconnected, up from 64. The new ones are the 64 now-unrouted LPDDR4 connections.
+## Move to −6 mm: what changed on the PCB
 
-## Geometry (unchanged placement)
+**Done by script (pcbnew), then the board was saved.** `SaveBoard` reorders the whole file; that is expected on this
+branch.
 
-U12 sits above U7, rotated −90°. The board edge is 0.4 mm above U12's courtyard.
+- **U12 block, moved by exactly −6.000 mm in x**, so every cap keeps its position relative to the balls:
+  - U12;
+  - all 33 B.Cu parts under it: 30× 100 nF 0201 between the balls, C48 22 µF (VDD1 1V8) at the top edge, C69, and the
+    reset pull-down R44 (1k);
+  - the 111 power/GND via-in-pad fan-out vias (1V1 46, GND 57, 1V8 8) and the 36 short fan-out tracks on F/B/In3.
+- **Decoupling, following JEDEC / 821801 practice:**
+  - The small 100 nF caps stay right under the balls of each supply group, on via-in-pad.
+  - VDD1 has C48 22 µF next to the package.
+  - VDD2/VDDQ (1V1) bulk is the 1V1 buck output bank (C47, C216, C217, C165, C164, 22 µF each). It is now 1–5 mm from
+    U12's left edge (it was ~7–11 mm).
+  - There are no 1 µF parts in the schematic, and none were added.
+- **ZQ resistor R43** (240R, F.Cu) moved −5.55 mm, together with its 1V1 via and the ZQ track. This also clears its old
+  courtyard overlap with U12.
+- **100 MHz refclk chain:**
+  - R25/R26 (33R) and C8/C9 (AC coupling) moved 1.1 mm down, clear of the moved decaps C82/C52 and R44.
+  - U9 → R → C and C8/C9 → U7 were re-routed on B.Cu as before, 0.1 mm wide, with P/N kept in order.
+  - refclk P/N from C8/C9 to B55/A58 is now 9.35/9.83 mm (was 10.09/9.71). U9, R27/R28, R244/R245 and C249/C250 did not
+    move.
+- **Bank 3A VCCIO_PIO (1V1):**
+  - checked; unchanged. The 4 U7 balls (AR37/AR40/AW34/AW40) have C218–C221 100 nF directly under them, on the In6
+    1V1 plane.
+  - The In6 plane still covers both U7 bank 3A and U12.
 
-**U12, channel A (right, x ≈ 169–172 mm):**
+**Planes** (checked with `board.Zones()`):
+
+| Layer | Zone | Role here | Change |
+|---|---|---|---|
+| In1, In4 | GND `gndflood` | reference for F.Cu/In2 and In5 | removed the 0.1 mm 1V8 track on In4 from under U7 to U12's VDD1 ball (156.3,108.1 → 162.2,93.7). It cut the In4 GND plane under the LPDDR4 escape, and it was redundant with In3. |
+| In3 | 1V8 `1v8_flood` | VDD1 supply; second reference for In2 | no outline change; it covers U12 (x ≥ 148.3) and the whole escape area |
+| In6 | 1V1 `lpddr1v1` | VDD2/VDDQ + VCCIO_PIO_3A; reference for In5/B.Cu | no outline change; it covers U12 and bank 3A |
+| In6 | 1V8 `1v8` (priority 2) | none | **deleted**. It sat under `lpddr1v1` (priority 4) and filled only 0.48 mm² of slivers. |
+| B.Cu | `1v1bottom`, `1v1gnd`, `5v0_flood` | buck output / 5 V | no change; U12's left-end decaps stay ≥ 0.35 mm from them |
+
+- **Refill:** all zones were refilled with `ZONE_FILLER`. This also cleared the stale fill left behind by the removed
+  LPDDR4 vias and the old In6 dq8/dq23 tracks.
+- **Result:** the GND planes on In1 and In4, In3 1V8 and In6 1V1 are solid under U12 and the U7→U12 corridor. The
+  only openings are the via antipads.
+
+**Checks:**
+- `iobank3`: 19 labels renamed relative to variant R, as a permutation.
+  - Netlist diff: only those 19 U7 pins changed.
+  - ERC is identical (326).
+- `kicad-cli pcb drc --schematic-parity`: **0 parity issues, 99 violations (was 171), 120 unconnected (was 120)**.
+  - The 74 violations that went away were stale zone fills, mostly J3 pads vs the GND planes.
+  - The 2 that look new are the same power-corner issues reported in a different form: L4/`pg_all` and L2/U8 mask.
+  - No new violations at U12, its caps or the refclk chain.
+  - The unconnected items are the 64 unrouted LPDDR4 connections plus the old 56 non-LPDDR ones. The pairs are
+    identical; KiCad only reports some of them from different endpoints.
+
+## Geometry (variant R2 placement)
+
+U12 sits above U7, rotated −90°.
+- Its courtyard is x 151.25–168.34, y 83.24–95.33. The board edge is 0.4 mm above it.
+- U7's courtyard starts at y 99.62.
+- F.Cu to the left of U12 (x 144–151) is free, which is the BL7 route around the left end.
+
+**U12, channel A (right, x ≈ 163.4–166.6 mm):**
 
 | Byte | Position | Balls |
 |---|---|---|
 | A0 | far, top, y ≈ 85.7–87.3 | B2…F4, DQS D3/E3 |
 | A1 | near, y ≈ 91.3–92.9 | B9…F11, DQS D10/E10 |
 
-**U12, channel B (left, x ≈ 159.6–162.2 mm):**
+**U12, channel B (left, x ≈ 153.0–156.2 mm):**
 
 | Byte | Position | Balls |
 |---|---|---|
 | B0 | far | AA2…U4, DQS W3/V3 |
 | B1 | near | AA9…U11, DQS W10/V10 |
 
-- **CA/CK:** in the middle, x ≈ 163.5–168.1. ca0/ca1/cs/cke are on the far side (columns 2/4); ca2–5 and CK on the near
-  side (columns 8–11).
-- **Middle band:** columns 5–8 are depopulated, which leaves a 4 mm horizontal band through the middle of U12. It is
-  open at both ends, and useful for the inner layers to reach the far bytes and ca0/ca1.
+- **CA/CK:** in the middle, x ≈ 157.5–162.1.
+  - ca0/ca1/cs/cke are on the far side (columns 2/4).
+  - ca2–5 and CK are on the near side (columns 8–11).
+- **Empty bands** (correcting the earlier text): columns 6–7 and rows L–M are depopulated.
+  - That leaves a 2.4 mm-pitch gap between columns 5 and 8 (y 88.1 → 90.5) across the whole package.
+  - It also leaves a 1.95 mm gap between rows N and K, down the middle between the channels.
+  - Both bands are mostly free; only a few GND stitching vias sit in them. They are useful for reaching the far bytes and
+    ca0/ca1 on inner layers.
 
 **U7 lanes** (U7's top edge faces U12):
 
-| Lane | U7 rows | Position | Carries (variant R) |
+| Lane | U7 rows | Position | Carries (variant R2) |
 |---|---|---|---|
 | BL7 | A/B | edge rows, x 150.9–155.5 | B0 (far), F.Cu around U12's left end |
 | BL6 | E–T | x 152.5–155.3 | B1 (near), stripline straight up |
@@ -211,10 +280,11 @@ U12 sits above U7, rotated −90°. The board edge is 0.4 mm above U12's courtya
    - BL6 → B1 on one stripline layer (In2 or In5), straight up, entering B1 from below or the left with via-in-pad.
 2. **Channel A.**
    - BL0 → A0 and BL1 → A1 on the two stripline layers, one lane per layer (the interleave crossing is inherent).
-   - Both go right and up, past CA, to U12's right end.
+   - Both go straight up (channel A is now directly above them), past CA, to U12's right end.
    - A0 (far) enters from the right end or from the middle band; A1 from below or the right.
 3. **CA/CK/CKE/CS:**
    - CA pins on U7's edge rows: F.Cu out, then B.Cu as before, with a short T to the H/J and P/R balls.
+     The refclk pair now runs on B.Cu at y 95.5–97.6 below U12, so cross it on F.Cu or the inner layers.
    - ck from G42/J42 as a stripline pair. The far-side ca0/ca1/cs/cke are reached through the middle band.
 4. **Each DQS on its byte's layer and vias.** No P/N swap. Length-match each byte to its DQS with the existing tuning
    profiles.
@@ -233,7 +303,13 @@ The test project is in `~/dev/agilex5_emif_test` (not in this repo):
 - `emif_io96b_hps` 5.0.0, LPDDR4 1×32, 1 rank, 4 Gb per channel;
 - 1600 MT/s with a 100 MHz refclk.
 
-**Variant R (this branch, 2026-10-25):** synthesis and the full fitter pass (0 errors). The 2 fitter warnings are
+**Variant R2 (this branch, current, 2026-10-25):** synthesis and the full fitter pass (0 errors, the same 2
+warnings).
+- The swizzle string is in the generated `emif_io96b_hps.ip`.
+- The pins agree with the exported KiCad netlist (44/44).
+  `BYTE_SWIZZLE_CH0=0 1 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 5 2 4 3;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=19 20 18 21 17 23 22 16;PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31;`
+
+**Variant R (superseded; U12 at its old position):** synthesis and the full fitter pass (0 errors). The 2 fitter warnings are
 the same as in variants A/B: the SDC refclk duplicate and ignored assignments.
 - The swizzle string is in the generated `emif_io96b_hps.ip`.
 - Fitter pin report: e.g. LPDDR4_DQ[24] on M32 in `gen_byte_conns[6]`, LPDDR4_DQS[2] on B28 in BL7.
@@ -263,11 +339,12 @@ placement check is real.
 ## Reproducing
 
 - **Exploration scripts:** pcbnew pad dump → `evalcfg.py` (the metrics above) → `apply.py` (label permutation,
-  copper strip, U7 pad re-net).
+  copper strip, U7 pad re-net) → `move.py` (block move, refclk chain, planes, refill, save).
   - These ran from a scratch directory and are not in the repo. The method is fully described above.
 - **Quartus:**
-  - `~/dev/agilex5_emif_test/src/u7_bank3_pins_reroute.csv` is the variant R pin table (net → U7 ball).
+  - `~/dev/agilex5_emif_test/src/u7_bank3_pins_reroute2.csv` is the variant R2 pin table (net → U7 ball).
+    `..._reroute.csv` is variant R.
   - `scripts/build_csv.sh` is a copy of `build.sh` that takes `CSV=`.
-  - Run: `CSV=$PWD/src/u7_bank3_pins_reroute.csv REFCLK=100.0 TAG=_reroute scripts/build_csv.sh A`. `gen_pins.py`
+  - Run: `CSV=$PWD/src/u7_bank3_pins_reroute2.csv REFCLK=100.0 TAG=_reroute2 scripts/build_csv.sh A`. `gen_pins.py`
     variant A takes the balls as given in the CSV and derives the byte/pin swizzle from them. Output goes to
-    `varA_reroute/`.
+    `varA_reroute2/`.
