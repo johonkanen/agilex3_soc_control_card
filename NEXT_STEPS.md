@@ -44,6 +44,12 @@ the sync it was 496 and 48.
      - Y4 + C260 + R263 near AE11 (bank 6G, fabric refclk);
      - R264 near the SDM pull-ups (HPS_COLD_nRESET).
    - Refill zones, then re-run DRC with schematic parity.
+1b. **ADC front end** (commit 66ab8f1, schematic only): update the PCB from the schematic again for:
+   - U3 (SN74LV4051A, same footprint) and U4 (OPA365, TSOT-23-5 -> SOT-23-5 footprint);
+   - C1 (now 0603);
+   - new parts R265–R267 (33R on the ADC SPI lines) and C261 (DVDD 1u);
+   - U3 pin 6 -> GND, U5 DVDD -> 3V3.
+   Place C1 4u7 right at U5 AVDD and C261 at DVDD.
 2. **Route the 8 DQS nets** U7 <-> U12. They are unrouted since the label fix. dqs0 and dqs3 still have 2 leftover
    segments each; delete them.
    - Keep the current pinout (variant A, identical to the DE25-Nano), or do the BL6↔BL7 rework (variant B: fewer
