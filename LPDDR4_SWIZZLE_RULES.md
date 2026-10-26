@@ -88,8 +88,8 @@ after:  PIN_SWIZZLE_CH0_DQS3=27 24 29 26 25 30 28 31
 - **Bit swap:** within each byte, the 8 DQ go to the 8 DQ pins of their FPGA lane in any order. DQS_P, DQS_N and DM
   keep their fixed lane pins.
 - **Each byte is a small patch, not a whole quarter.** A byte is 11 balls (3 balls wide, 4 rows deep, about
-  2.6 × 1.6 mm), at the outer end of each quarter: x 153.6–156.2 mm for bytes 2/3, x 163.4–166.0 mm for bytes 0/1,
-  y 85.7–87.3 mm (top) and 91.3–92.9 mm (bottom). The rest of each quarter is VDD, VSS and CA. The CA balls sit next to
+  2.6 × 1.6 mm), at the outer end of each quarter: x 151.7–154.3 mm for bytes 2/3, x 161.4–164.0 mm for bytes 0/1,
+  y 85.9–87.5 mm (top) and 91.5–93.1 mm (bottom), ball centres with U12 at (157.867, 89.484). The rest of each quarter is VDD, VSS and CA. The CA balls sit next to
   the centre gap and never move.
 
 ### Bit swaps: any order inside each group

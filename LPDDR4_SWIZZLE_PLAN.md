@@ -2,8 +2,10 @@
 
 **Status (branch `lpddr4-reroute-explore`, 2026-10-25):** "variant R2" is in the schematic and on the PCB. It replaces
 the earlier variant R, which had U12 at its old position. All LPDDR4 copper is removed, ready for a clean reroute.
-- **U12 moved 6 mm left:** F.Cu, −90°, now at (159.792, 89.284), centred over bank 3A. Its decoupling block and power
+- **U12 moved 6 mm left:** F.Cu, −90°, to (159.792, 89.284), centred over bank 3A. Its decoupling block and power
   fan-out moved with it, and the zones are refilled. See "Move to −6 mm".
+- **Moved again in the GUI (commit cb66bdc, 2026-10-26):** U12 and its block are now at (157.867, 89.484), i.e.
+  −1.925 mm in x and +0.2 mm in y. The coordinates under "Geometry" are updated to this position.
 - **Byte swizzle:** BL6↔BL7. BL0/BL1 are unchanged.
 - **Pin swizzle:** re-optimised for the new position.
 - **Schematic/PCB sync:** the U7-side labels on `a5e_kicad/iobank3.kicad_sch` are relabelled, and the U7 pad nets on
@@ -236,30 +238,30 @@ branch.
 ## Geometry (variant R2 placement)
 
 U12 sits above U7, rotated −90°.
-- Its courtyard is x 151.25–168.34, y 83.24–95.33. The board edge is 0.4 mm above it.
+- Its courtyard is x 149.32–166.41, y 83.44–95.53. The board edge (y 82.86) is 0.6 mm above it.
 - U7's courtyard starts at y 99.62.
-- F.Cu to the left of U12 (x 144–151) is free, which is the BL7 route around the left end.
+- F.Cu to the left of U12 (x 144–149.3) is free, which is the BL7 route around the left end.
 
-**U12, channel A (right, x ≈ 163.4–166.6 mm):**
+**U12, channel A (right, byte balls x 161.4–164.0 mm):**
 
 | Byte | Position | Balls |
 |---|---|---|
-| A0 | far, top, y ≈ 85.7–87.3 | B2…F4, DQS D3/E3 |
-| A1 | near, y ≈ 91.3–92.9 | B9…F11, DQS D10/E10 |
+| A0 | far, top, y 85.9–87.5 | B2…F4, DQS D3/E3 |
+| A1 | near, y 91.5–93.1 | B9…F11, DQS D10/E10 |
 
-**U12, channel B (left, x ≈ 153.0–156.2 mm):**
+**U12, channel B (left, byte balls x 151.7–154.3 mm):**
 
 | Byte | Position | Balls |
 |---|---|---|
 | B0 | far | AA2…U4, DQS W3/V3 |
 | B1 | near | AA9…U11, DQS W10/V10 |
 
-- **CA/CK:** in the middle, x ≈ 157.5–162.1.
+- **CA/CK:** in the middle, x 155.6–160.1.
   - ca0/ca1/cs/cke are on the far side (columns 2/4).
   - ca2–5 and CK are on the near side (columns 8–11).
 - **Empty bands** (correcting the earlier text): columns 6–7 and rows L–M are depopulated.
-  - That leaves a 2.4 mm-pitch gap between columns 5 and 8 (y 88.1 → 90.5) across the whole package.
-  - It also leaves a 1.95 mm gap between rows N and K, down the middle between the channels.
+  - That leaves a 2.4 mm-pitch gap between columns 5 and 8 (y 88.3 → 90.7) across the whole package.
+  - It also leaves a 1.95 mm gap between rows N and K (x 156.9 → 158.8), down the middle between the channels.
   - Both bands are mostly free; only a few GND stitching vias sit in them. They are useful for reaching the far bytes and
     ca0/ca1 on inner layers.
 
