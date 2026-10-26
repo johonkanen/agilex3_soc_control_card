@@ -6,7 +6,8 @@ the earlier variant R, which had U12 at its old position. All LPDDR4 copper is r
   fan-out moved with it, and the zones are refilled. See "Move to −6 mm".
 - **Moved again in the GUI (commit cb66bdc, 2026-10-26):** U12 and its block are now at (157.867, 89.484), i.e.
   −1.925 mm in x and +0.2 mm in y. The coordinates under "Geometry" are updated to this position.
-- **Byte swizzle:** BL6↔BL7. BL0/BL1 are unchanged.
+- **Byte swizzle:** BL6↔BL7, and since 2026-10-26 also BL0↔BL1 (byte A0 on BL1, A1 on BL0; same lane-pin order, so
+  the per-byte pin swizzle strings are unchanged). `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`.
 - **Pin swizzle:** re-optimised for the new position.
 - **Schematic/PCB sync:** the U7-side labels on `a5e_kicad/iobank3.kicad_sch` are relabelled, and the U7 pad nets on
   the PCB match them (schematic parity 0).
@@ -160,7 +161,7 @@ The full table, with all positions, is reproducible with the scripts described a
   - BL7 (U7 edge rows, F.Cu) takes the far byte B0 around U12's left end. BL6 (inner rows) goes straight up to the
     near byte B1, so the bundles nest.
   - AB has slightly fewer straight-line crossings, but 36 more inter-byte crossings in the escape-order model.
-- **BL0/BL1 stay as they are.** The 32 BL0×BL1 crossings that remain are inherent: the two lanes are interleaved in U7
+- **BL0/BL1 (as first planned; swapped on 2026-10-26, see the lane map).** The 32 BL0×BL1 crossings that remain are inherent: the two lanes are interleaved in U7
   (BL0 rows E–T, BL1 rows M–AB, same x span). Resolve them by layer, BL0 and BL1 on different stripline layers.
 - **Pin swizzle:** each lane's DQ are matched in escape order to the byte's balls (see the table below). Compared with
   variant R, 19 U7 pins changed.
@@ -169,8 +170,8 @@ The full table, with all positions, is reproducible with the scripts described a
 
 | Lane | Byte | 0 | 1 | 2 | 3 | 4 DQS_T | 5 DQS_C | 6 DMI | 8 | 9 | 10 | 11 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| BL0 | A0 | J65 dq0 (B2) | G65 dq1 (C2) | T62 dq7 (B4) | M62 dq6 (C4) | G62 dqs0_P (D3) | E62 dqs0_N (E3) | J59 dm0 (C3) | T56 dq5 (E4) | M56 dq2 (E2) | G56 dq4 (F4) | E56 dq3 (F2) |
-| BL1 | A1 | AB62 dq8 (B11) | W62 dq15 (B9) | T65 dq9 (C11) | M65 dq14 (C9) | AB56 dqs1_P (D10) | W56 dqs1_N (E10) | T59 dm1 (C10) | AB48 dq13 (E9) | W48 dq12 (F9) | T51 dq10 (E11) | M51 dq11 (F11) |
+| BL0 | A1 | J65 dq8 (B11) | G65 dq15 (B9) | T62 dq9 (C11) | M62 dq14 (C9) | G62 dqs1_P (D10) | E62 dqs1_N (E10) | J59 dm1 (C10) | T56 dq13 (E9) | M56 dq12 (F9) | G56 dq10 (E11) | E56 dq11 (F11) |
+| BL1 | A0 | AB62 dq0 (B2) | W62 dq1 (C2) | T65 dq7 (B4) | M65 dq6 (C4) | AB56 dqs0_P (D3) | W56 dqs0_N (E3) | T59 dm0 (C3) | AB48 dq5 (E4) | W48 dq2 (E2) | T51 dq4 (F4) | M51 dq3 (F2) |
 | BL6 | B1 | J35 dq27 (U11) | G35 dq28 (U9) | T32 dq29 (V9) | M32 dq26 (V11) | G32 dqs3_P (W10) | E32 dqs3_N (V10) | J27 dm3 (Y10) | T24 dq25 (Y11) | M24 dq30 (Y9) | G24 dq24 (AA11) | E24 dq31 (AA9) |
 | BL7 | B0 | B33 dq19 (U2) | A36 dq20 (U4) | B30 dq18 (V2) | A33 dq21 (V4) | B28 dqs2_P (W3) | A30 dqs2_N (V3) | A25 dm2 (Y3) | A22 dq17 (Y2) | A23 dq23 (AA4) | B22 dq22 (Y4) | A20 dq16 (AA2) |
 
@@ -271,8 +272,8 @@ U12 sits above U7, rotated −90°.
 |---|---|---|---|
 | BL7 | A/B | edge rows, x 150.9–155.5 | B0 (far), F.Cu around U12's left end |
 | BL6 | E–T | x 152.5–155.3 | B1 (near), stripline straight up |
-| BL0 | E–T | x 160.9–163.7 | A0 (far) |
-| BL1 | M–AB | x 158.8–163.7 | A1 (near); deepest, interleaved with BL0 |
+| BL0 | E–T | x 160.9–163.7 | A1 (near) (byte swap 2026-10-26) |
+| BL1 | M–AB | x 158.8–163.7 | A0 (far); deepest, interleaved with BL0 |
 
 ## Reroute plan
 
@@ -322,8 +323,8 @@ them to the U7 end of each net before comparing with the limits.
 
 | Group | Reference | Ref (ps) | Spread vs reference (ps) | Net, ball, delay (ps) |
 |---|---|---|---|---|
-| Byte 0 | dqs0_P | 112 | -5 … +21 | dqs0_P G62 112, dqs0_N E62 111, dq0 J65 122, dq1 G65 121, dq2 M56 122, dq3 E56 107, dq4 G56 108, dq5 T56 122, dq6 M62 132, dq7 T62 133, dm0 J59 113 |
-| Byte 1 | dqs1_P | 116 | -27 … -2 | dqs1_P AB56 116, dqs1_N W56 117, dq8 AB62 106, dq9 T65 113, dq10 T51 97, dq11 M51 97, dq12 W48 98, dq13 AB48 98, dq14 M65 114, dq15 W62 105, dm1 T59 89 |
+| Byte 0 (BL1) | dqs0_P | 116 | -27 … -2 | dqs0_P AB56 116, dqs0_N W56 117, dq0 AB62 106, dq1 W62 105, dq2 W48 98, dq3 M51 97, dq4 T51 97, dq5 AB48 98, dq6 M65 114, dq7 T65 113, dm0 T59 89 |
+| Byte 1 (BL0) | dqs1_P | 112 | -5 … +21 | dqs1_P G62 112, dqs1_N E62 111, dq8 J65 122, dq9 T62 133, dq10 G56 108, dq11 E56 107, dq12 M56 122, dq13 T56 122, dq14 M62 132, dq15 G65 121, dm1 J59 113 |
 | Byte 2 | dqs2_P | 96 | +1 … +38 | dqs2_P B28 96, dqs2_N A30 96, dq16 A20 115, dq17 A22 133, dq18 B30 117, dq19 B33 97, dq20 A36 99, dq21 A33 115, dq22 B22 115, dq23 A23 134, dm2 A25 121 |
 | Byte 3 | dqs3_P | 81 | +4 … +22 | dqs3_P G32 81, dqs3_N E32 81, dq24 G24 85, dq25 T24 101, dq26 M32 102, dq27 J35 91, dq28 G35 91, dq29 T32 103, dq30 M24 101, dq31 E24 85, dm3 J27 93 |
 | CA/CK | ck_P | 100 | CA +26 … +33; CKE +13; CS +5 | ck_P J42 100, ck_N G42 98, ca0 B66 131, ca1 A68 130, ca2 B68 133, ca3 A70 133, ca4 B63 126, ca5 A66 126, cke A61 113, ~{cs} B58 105, ~{rst} M48 116 |
@@ -333,7 +334,7 @@ Notes:
   30 ps longer than the CA lines (≈4 mm on In2) so that the total sits near zero.
 - **Byte 2:** dq17 and dq23 are +37/+38 ps late in the package against a +43 ps limit. Route them short relative to
   dqs2.
-- **Byte 1:** dm1 is 27 ps early. **Byte 0:** dq6 and dq7 are 20/21 ps late.
+- **Byte 0** (on BL1 since the byte swap): dm0 is 27 ps early. **Byte 1** (on BL0): dq9 and dq14 are 21/20 ps late.
 - **P/N within the package:** dqs0 1 ps, dqs1 1 ps, dqs2 0, dqs3 0, ck 2 ps. Add the 1–2 ps to the board-level pair
   skew budget.
 - KiCad has no per-pad delay setting. Apply the offsets per net, in the length tuner target or as per-net skew
@@ -365,7 +366,7 @@ type is only a label and doesn't change impedance. Existing tracks on In3/In6 st
      leftmost U7 ball (A20) goes to the outermost ball (AA2).
    - BL6 → B1 on one stripline layer (In2, or In5 inside the In6 1V1 pour), straight up, entering B1 from below or the left with via-in-pad.
 2. **Channel A.**
-   - BL0 → A0 and BL1 → A1 on the two stripline layers, one lane per layer (the interleave crossing is inherent).
+   - BL1 → A0 and BL0 → A1 (after the byte swap) on the two stripline layers, one lane per layer (the interleave crossing is inherent).
    - Both go straight up (channel A is now directly above them), past CA, to U12's right end.
    - A0 (far) enters from the right end or from the middle band; A1 from below or the right.
 3. **CA/CK/CKE/CS:**
@@ -389,7 +390,12 @@ The test project is in `~/dev/agilex5_emif_test` (not in this repo):
 - `emif_io96b_hps` 5.0.0, LPDDR4 1×32, 1 rank, 4 Gb per channel;
 - 1600 MT/s with a 100 MHz refclk.
 
-**Variant R2 (this branch, current, 2026-10-25):** synthesis and the full fitter pass (0 errors, the same 2
+**Variant R2 + byte swap BL0↔BL1 (current, 2026-10-26):** `src/u7_bank3_pins_bswap.csv`, `TAG=_bswap`
+(`varA_bswap/`). Synthesis, fitter (0 errors, 1 warning) and timing pass. The generated string:
+`BYTE_SWIZZLE_CH0=1 0 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 5 2 4 3;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=19 20 18 21 17 23 22 16;PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31;`
+All 22 byte 0/1 pins landed on the swapped balls. The package delays above are from this build.
+
+**Variant R2 (2026-10-25, before the byte 0/1 swap):** synthesis and the full fitter pass (0 errors, the same 2
 warnings).
 - The swizzle string is in the generated `emif_io96b_hps.ip`.
 - The pins agree with the exported KiCad netlist (44/44).

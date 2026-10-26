@@ -44,8 +44,9 @@ Rule of thumb from these numbers: **1 mm on L1/L8 ≈ 0.85 mm on L3/L6.** A 10 m
 
 Board Setup → Tuning Profiles (KiCad 10):
 
-- `LPDDR4 SE 50R JLC08161H-3313` – single-ended 50 Ω, time-domain tuning enabled, the per-layer delays above, widths 0.15 mm on F/B.Cu and 0.12 mm on the inner layers, via delay 7.2 ps/mm.
-- `LPDDR4 DIFF 100R JLC08161H-3313` – differential 100 Ω, same delays, 0.13 mm / 0.25 mm gap on F/B.Cu, 0.11 mm / 0.25 mm on the inner layers.
+- `LPDDR4 SE 40R-45R JLC08161H-3313` – single-ended, time-domain tuning enabled, the per-layer delays above, via delay 7.2 ps/mm. Widths (2026-10-26, Altera 821801 targets): 0.20 mm (≈45 Ω microstrip) on F/B.Cu and 0.18 mm (40 Ω stripline) on the inner layers. Target field 40 Ω.
+- `LPDDR4 DIFF 40R-45R JLC08161H-3313` – the same widths with a 0.10 mm gap, same delays. Altera gives no differential target; the 80 Ω target field is only a nominal label (not field-solved).
+- Earlier these were `LPDDR4 SE 50R …` (0.15/0.12 mm) and `LPDDR4 DIFF 100R …` (0.13/0.11 mm, 0.25 mm gap).
 
 Widths are JLCPCB's own calculator results for JLC08161H-3313 (50 Ω: L1 0.1509 mm, L3/L6 0.1207 mm; 100 Ω at 0.25 mm gap: L1 0.1278 mm, L3 0.1082 mm; at 0.20 mm gap L6 0.1011 mm).
 

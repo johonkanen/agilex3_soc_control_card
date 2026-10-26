@@ -63,6 +63,9 @@ the sync it was 496 and 48.
    - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
      fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged
      down; zones refilled.
+   - 2026-10-26: bytes 0/1 swapped (A0 on BL1, A1 on BL0; Quartus-checked, `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`). The
+     dqs0/dqs1 routes were trimmed at U7's courtyard and must be extended to their new balls. CA and CK T-junctions
+     under U12 are in.
    - Follow the "Reroute plan" in `LPDDR4_SWIZZLE_PLAN.md`. Route each DQS on its own byte's layers; no P/N polarity
      swap is allowed.
 3. **Recommended, not fitted yet:** ferrite + 4.7µ‖100n isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM
