@@ -52,6 +52,9 @@ the sync it was 496 and 48.
      (ADC DVDD), C262–C265 (U12 1u, place under/near the U12 1V1 balls on B.Cu).
    - **ADC:** U4 is now SOT-23-5 and C1 is 0603 (put C1 at U5 AVDD); U5's SPI goes through R265–R267; U3 pin 6 -> GND.
    - **U42 ch3** is now eth_rst_n -> phy_rst_n; the old LED track to J9 must go.
+1c. **eMMC replaces the microSD (schematic 2026-10-26, PCB not synced):** U11 is now the THGAMVG7T13BAIL (LFBGA-153).
+   J8, U40, U41, C240, C241, C247 and C248 are removed. New: R272–R279; R241–R243 and C242–C246 changed value/net.
+   Sync the PCB, delete the old SD copper, place U11 near the HPS SD/MMC pins. See `SHARED_PARTS.md`.
 2. **Route all LPDDR4 signals from scratch** (merged from branch `lpddr4-reroute-explore`, 2026-10-25).
    - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
      fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged

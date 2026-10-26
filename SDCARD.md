@@ -1,5 +1,8 @@
 # microSD interface
 
+> **Superseded (2026-10-26):** the microSD subsystem was replaced by a KIOXIA THGAMVG7T13BAIL eMMC at 1.8 V, with
+> no level translator. See the eMMC section of `SHARED_PARTS.md`. This file is kept as the record of the old design.
+
 Documents the microSD card interface: what is currently built, what is
 missing, and what would be required to run UHS-I speeds.
 

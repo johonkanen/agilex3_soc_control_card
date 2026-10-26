@@ -70,12 +70,23 @@ Circuit:
 RST_n is disabled by default (EXT_CSD[162] RST_n_FUNCTION = 0). Enable it from software if the HPS should be able to
 reset the eMMC.
 
-Status on this board: **not in the schematic yet**. The board still has the microSD subsystem described in `SDCARD.md`
-(J8, U11 NXS0506, U40, U41, R241–R243, C240–C248). Switching to eMMC would:
+Status on this board (2026-10-26): **in the schematic** (`a5e_kicad/hps.kicad_sch`). The microSD subsystem is removed:
+J8, U40, U41, C240, C241, C247 and C248 are gone. The eMMC reuses the ref **U11**, and some refs were reused for new
+parts:
 
-- remove all of those parts;
-- use the HPS SD/MMC pins directly at 1.8 V. `sd_d4`–`sd_d7` (U74, AK67, P75, P74) are already named on U7 for the 8-bit bus;
-- free GPIO1_IO16/IO17 (`sd_vsel`, `sd_pwr_en`).
+| Ref | Part | Net |
+|---|---|---|
+| U11 | THGAMVG7T13BAIL (C7599693), `Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm` | VCC `3V3`, VCCQ `1V8`, VSS/VSSQ `GND` |
+| R241, R272–R279 | 10k pull-ups to `1V8` | `sd_cmd`, `sd_d0`–`sd_d7` |
+| R243 | 10k pull-up to `1V8` | `emmc_rst_n` (U7 AD71, GPIO1_IO17, was `sd_pwr_en`) |
+| R242 | 10k pull-down | DS (HS400 strobe, unused) |
+| C242, C243 | 4u7 + 100n | VCCQ `1V8` |
+| C244, C245 | 4u7 + 220n (C16772) | VCC `3V3` |
+| C246 | 2u2 | VDDi |
+
+U7 F75 (GPIO1_IO16, was `sd_vsel`) is now unconnected. The PCB is **not** updated yet: run the sync, then place U11 and
+its parts. Only about 20 balls are used: DAT0–7 are in rows A/B (edge); the supply, CMD/CLK/DS/RST_n balls are inside
+the array and need via-in-pad at 0.5 mm pitch.
 
 `SDCARD.md` says eMMC was not stocked in small quantities in September 2026. That is no longer true at JLC.
 Also note the `SDCARD.md` remark that Agilex 5 engineering samples fail to boot from eMMC in HS200/HS400; production
