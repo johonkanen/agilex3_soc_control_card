@@ -10,6 +10,7 @@ IN, OUT = sys.argv[1:3]
 FM, mm = pcbnew.FromMM, pcbnew.ToMM
 IU_PER_PS = pcbnew.pcbIUScale.IU_PER_PS
 SHARED = ['ca0', 'ca1', 'ca2', 'ca3', 'ca4', 'ca5', 'cke', '~{cs}', 'ck_P', 'ck_N']
+if os.environ.get('PREP_NETS'): SHARED = os.environ['PREP_NETS'].split()   # e.g. PREP_NETS='ck_P ck_N'
 PFX = '/IOBANK 3/'
 PS = {'F.Cu': 6.1, 'B.Cu': 6.1, 'In2.Cu': 7.08, 'In5.Cu': 7.08}
 VIA_PS_MM = 7.2

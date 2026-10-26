@@ -26,3 +26,15 @@ $KICAD_APPRUN python3.11 tools/lpddr4_krt/merge.py $W/in.kicad_pcb $W/v15/out.ki
 Findings: connectivity is reliable (11/11 in ~35 s, needs F.Cu allowed for the pad escapes); time matching is not:
 the far-side nets detour 30–40 mm, KRT finds no straight runs for the meanders the short nets need, and its F.Cu
 delay is about 15 % low (no solder mask in its microstrip model). Results vary between runs.
+
+## CK as a coupled pair (`run_ck.sh`, 2026-10-26)
+
+```
+PREP_NETS='ck_P ck_N' $KICAD_APPRUN python3.11 tools/lpddr4_krt/prep.py $W/in.kicad_pcb $W/prep.kicad_pcb
+GAP=0.15 tools/lpddr4_krt/run_ck.sh $W c2          # route_diff.py; env GAP, WIDTH, LC
+```
+
+`PREP_NETS` limits prep to the given nets, so the CA trunks already on the board stay as obstacles. Result of four
+variants: the pair always connects, but as a "hybrid escape" (coupled middle only, 27–31 % of the length; via-in-pad
+balls give no fan-out stubs), P/N skew 14.7 ps after its own matcher, CK die→ball 219/234 ps against the ~333 ps the
+CA group needs, and ck_N mostly on F.Cu. Not usable; CK is routed by hand.
