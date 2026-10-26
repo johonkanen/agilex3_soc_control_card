@@ -66,6 +66,11 @@ the sync it was 496 and 48.
    - 2026-10-26: bytes 0/1 swapped (A0 on BL1, A1 on BL0; Quartus-checked, `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`). The
      dqs0/dqs1 routes were trimmed at U7's courtyard and must be extended to their new balls. CA and CK T-junctions
      under U12 are in.
+   - 2026-10-26: CA trunks (ca0–5, cke, ~{cs}) and ~{rst} routed with KiCadRoutingTools (trial v15: shortest routes, no
+     automatic matching) and merged; U7 pads carry the Quartus package delays as pad-to-die. Still to do: CK as a hand-routed
+     coupled pair (U7 G42/J42 → the two In2 T-vias), then tune with KiCad's time-domain tuner. With CK at about 333 ps
+     die→ball, ca2 needs about +28 ps, ca3 +21, ca4 +52, ca5 +63 (die→ball now: ca0 367, ca1 306, ca2 272, ca3 279,
+     ca4 247, ca5 237, cke 303, ~{cs} 388 ps; limits CA−CK ±34, CKE/CS−CK ±85).
    - Follow the "Reroute plan" in `LPDDR4_SWIZZLE_PLAN.md`. Route each DQS on its own byte's layers; no P/N polarity
      swap is allowed.
 3. **Recommended, not fitted yet:** ferrite + 4.7µ‖100n isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM
