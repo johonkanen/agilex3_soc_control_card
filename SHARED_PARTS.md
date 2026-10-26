@@ -78,13 +78,13 @@ parts:
 |---|---|---|
 | U11 | THGAMVG7T13BAIL (C7599693), `Package_BGA:LFBGA-153_11.5x13mm_Layout14x14_P0.5mm` | VCC `3V3`, VCCQ `1V8`, VSS/VSSQ `GND` |
 | R241, R272–R279 | 10k pull-ups to `1V8` | `sd_cmd`, `sd_d0`–`sd_d7` |
-| R243 | 10k pull-up to `1V8` | `emmc_rst_n` (U7 AD71, GPIO1_IO17, was `sd_pwr_en`) |
+| R243 | 10k pull-up to `1V8` | `emmc_rst_n` (U7 BP75, HPS_IOA_13 / GPIO0_IO12; see `HPS_PINMUX.md`) |
 | R242 | 10k pull-down | DS (HS400 strobe, unused) |
 | C242, C243 | 4u7 + 100n | VCCQ `1V8` |
 | C244, C245 | 4u7 + 220n (C16772) | VCC `3V3` |
 | C246 | 2u2 | VDDi |
 
-U7 F75 (GPIO1_IO16, was `sd_vsel`) is now unconnected. The PCB is **not** updated yet: run the sync, then place U11 and
+Since 2026-10-26 the SD/MMC bus is on HPS_IOA_1–12 (see `HPS_PINMUX.md`). The PCB is **not** updated yet: run the sync, then place U11 and
 its parts. Only about 20 balls are used: DAT0–7 are in rows A/B (edge); the supply, CMD/CLK/DS/RST_n balls are inside
 the array and need via-in-pad at 0.5 mm pitch.
 

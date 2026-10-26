@@ -55,6 +55,9 @@ the sync it was 496 and 48.
 1c. **eMMC replaces the microSD (schematic 2026-10-26, PCB not synced):** U11 is now the THGAMVG7T13BAIL (LFBGA-153).
    J8, U40, U41, C240, C241, C247 and C248 are removed. New: R272–R279; R241–R243 and C242–C246 changed value/net.
    Sync the PCB, delete the old SD copper, place U11 near the HPS SD/MMC pins. See `SHARED_PARTS.md`.
+1d. **HPS pin mux changed (2026-10-26, schematic only):** SD/MMC moved to HPS_IOA_1–12 and Ethernet to EMAC2 on
+   HPS_IOB_13–24, so they no longer cross. After syncing the PCB, the old SD/PHY copper at the U7 HPS balls must be
+   rerouted. See `HPS_PINMUX.md`.
 2. **Route all LPDDR4 signals from scratch** (merged from branch `lpddr4-reroute-explore`, 2026-10-25).
    - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
      fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged
@@ -75,6 +78,9 @@ the sync it was 496 and 48.
    then the JLCPCB DFM check (via hole-to-track 0.2 mm question; order epoxy-filled and capped vias).
 
 ## For the FPGA/Quartus project later
+
+- **HPS pin mux:** SD/MMC 8-bit on HPS_IOA_1–12, Ethernet on EMAC2 (HPS_IOB_13–24, MDIO2 on IOB_9/10), UART0 on
+  IOA_23/24, I2C1 on IOB_7/8. The full table and the `HPS_IO_Enable` string are in `HPS_PINMUX.md`.
 
 - **EMIF:** LPDDR4 1x32, 1 rank, 4 Gb/channel, 1600 MT/s, refclk 100 MHz.
   - Refresh timings: tRFCab 180 ns, tRFCpb 90 ns, tXSR 187.5 ns (the IP default). The H9HCNNN8KUMLHR is "8Gb, DDP, 2Ch 1CS"

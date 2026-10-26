@@ -49,8 +49,8 @@ Reviewed 2026-09-19 against the KSZ9031RNX datasheet (DS00002117) and the Agilex
 
 | Item | Finding |
 |---|---|
-| RGMII → HPS | EMAC0 dedicated IO: TX_CLK BP75 (IOA_13), TX_CTL BL74, TXD0-3 BG74/AP75/BD75/AM74, RX_CLK BL75, RX_CTL AP74, RXD0-3 BD74/AN71/AJ74/AJ75, MDIO C74 (IOB_23), MDC D71 (IOB_24). INT_N → Y75 (GPIO1_IO4), RESET_N → K71 (GPIO1_IO18). |
-| HPS IP settings | EMAC0 pin muxing = IO, EMAC0 mode = RGMII_with_MDIO, GPIO1:IO4 and GPIO1:IO18 enabled. |
+| RGMII → HPS | **Superseded 2026-10-26: EMAC2 on HPS_IOB_13–24, MDIO2 on IOB_9/10, reset on GPIO1_IO1 (AC75); see `HPS_PINMUX.md`.** Old: EMAC0 dedicated IO: TX_CLK BP75 (IOA_13), TX_CTL BL74, TXD0-3 BG74/AP75/BD75/AM74, RX_CLK BL75, RX_CTL AP74, RXD0-3 BD74/AN71/AJ74/AJ75, MDIO C74 (IOB_23), MDC D71 (IOB_24). INT_N → Y75 (GPIO1_IO4), RESET_N → K71 (GPIO1_IO18). |
+| HPS IP settings | **Now EMAC2 (see `HPS_PINMUX.md`).** Old: EMAC0 pin muxing = IO, EMAC0 mode = RGMII_with_MDIO, GPIO1:IO4 and GPIO1:IO18 enabled. |
 | Straps | MODE[3:0] = 1111 (RGMII, all speeds), CLK125_EN = 0, LED_MODE = 1 (single LED), PHYAD = 000; 4k7 up / 1k down. |
 | Pull-ups | MDIO, INT_N 4k7 to DVDDH (1.8 V) – datasheet range 1.0–4.7 kΩ. |
 | ISET | 12k1 1 % (R41). |
