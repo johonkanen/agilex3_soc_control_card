@@ -54,10 +54,11 @@ the sync it was 496 and 48.
    - **U42 ch3** is now eth_rst_n -> phy_rst_n; the old LED track to J9 must go.
 1c. **eMMC replaces the microSD (2026-10-26, PCB synced in cb66bdc):** U11 is now the THGAMVG7T13BAIL (LFBGA-153).
    J8, U40, U41, C240, C241, C247 and C248 are removed. New: R272–R279; R241–R243 and C242–C246 changed value/net.
-   Delete the old SD copper, then place and fan out U11 near the HPS SD/MMC pins (inner balls need via-in-pad). See `SHARED_PARTS.md`.
+   The old SD copper is deleted. Place and fan out U11 near the HPS SD/MMC pins (inner balls need via-in-pad), and route
+   `emmc_ds` to U7 AP74 (HPS_IOA_16, HS400 strobe). See `SHARED_PARTS.md`.
 1d. **HPS pin mux changed (2026-10-26, PCB synced in 1204a4d):** SD/MMC moved to HPS_IOA_1–12 and Ethernet to EMAC2 on
-   HPS_IOB_13–24, so they no longer cross. The old SD/PHY copper at the U7 HPS balls must be rerouted
-   (DRC after the sync: 331 violations, 304 unconnected, parity 0). See `HPS_PINMUX.md`.
+   HPS_IOB_13–24, so they no longer cross. The stale copper at the U7 HPS balls is deleted (all RGMII/MDIO, `eth_rst_n`,
+   `hps_uart0_tx/rx` and the old SD routing); route these nets again. DRC now: 261 violations, 312 unconnected, parity 0. See `HPS_PINMUX.md`.
 2. **Route all LPDDR4 signals from scratch** (merged from branch `lpddr4-reroute-explore`, 2026-10-25).
    - All LPDDR4 copper is removed. The pinout is "variant R2": U12 moved 6 mm left (still −90°) with its decaps and
      fan-out; byte swizzle BL6↔BL7 with a new pin swizzle (Quartus-checked); refclk chain R25/R26/C8/C9 nudged

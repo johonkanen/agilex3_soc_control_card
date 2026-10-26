@@ -25105,7 +25105,7 @@
 			)
 		)
 	)
-	(text "eMMC: U11 KIOXIA THGAMVG7T13BAIL, 16 GB eMMC 5.1 (C7599693)\nVCCQ is 1.8 V only and must be the same 1V8 as the HPS: no level translator.\nCMD/DAT pull-ups 10k to 1V8 (KIOXIA: CMD 4.7-100k, DAT 10-100k). DS pulled down: HS400 not used.\nRST_n is ignored until EXT_CSD[162] RST_n_FUNCTION is set; driven by HPS GPIO1_IO17 (emmc_rst_n).\nDecoupling: VCC 4u7 + 220n (C244, C245), VCCQ 4u7 + 100n (C242, C243), VDDi 2u2 (C246)."
+	(text "eMMC: U11 KIOXIA THGAMVG7T13BAIL, 16 GB eMMC 5.1 (C7599693)\nVCCQ is 1.8 V only and must be the same 1V8 as the HPS: no level translator.\nCMD/DAT pull-ups 10k to 1V8 (KIOXIA: CMD 4.7-100k, DAT 10-100k). DS to HPS_IOA_16 (SDMMC_DATA_STROBE) for HS400, 10k pull-down R242.\nRST_n is ignored until EXT_CSD[162] RST_n_FUNCTION is set; driven by HPS GPIO0_IO12 (emmc_rst_n).\nDecoupling: VCC 4u7 + 220n (C244, C245), VCCQ 4u7 + 100n (C242, C243), VDDi 2u2 (C246)."
 		(exclude_from_sim no)
 		(at 35.56 38.1 0)
 		(effects
@@ -25451,10 +25451,6 @@
 	(no_connect
 		(at 182.88 67.31)
 		(uuid "b04d0620-a86f-49eb-a384-f3a16d99c035")
-	)
-	(no_connect
-		(at 182.88 69.85)
-		(uuid "a46fccf8-dae4-43a3-a3ee-2d5646467ca9")
 	)
 	(no_connect
 		(at 182.88 72.39)
@@ -26041,5 +26037,25 @@
 			(justify left bottom)
 		)
 		(uuid "b47dfe8c-456d-40d9-a043-f2955f725ffe")
+	)
+	(wire
+		(pts
+			(xy 162.56 69.85) (xy 182.88 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4668e104-c513-4426-b95f-ccccf05d4b87")
+	)
+	(label "emmc_ds"
+		(at 162.56 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13909df6-2f69-4fde-9612-37317a4352ce")
 	)
 )
