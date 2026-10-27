@@ -430,6 +430,12 @@ placement check is real.
     cases.
   - An earlier note here said 130/60/137.5 ns. That was wrong for an 8 Gb die and would violate refresh.
 - **Reset Release IP:** add it in the real design (Critical Warning 20759).
+- **Changing drive strength, ODT or VREF in the EMIF IP (2026-10-27):** these "analog" parameters are silently
+  re-derived by the IP unless they are also listed in `ANALOG_PARAM_DERIVATION_PARAM_NAME`. That works like the JEDEC
+  timings, which need `JEDEC_OVERRIDE_TABLE_PARAM_NAME`. Setting only `MEM_ODT_DQ_X_RON` = 5 left it at 6 (40 Ω): the fit passed and the
+  qsys log showed the new value, but the generated `.ip` and the MR3 dump did not. Append to the existing list (the DE25
+  source lists `MEM_VREF_DQ_X_VALUE MEM_VREF_CA_X_CA_VALUE MEM_VREF_CA_X_CA_RANGE`), and verify in the generated
+  `ip/qsys_top/emif_io96b_hps.ip` or the MR register dump. Test-project hook: `EMIF_EXTRA` in `scripts/make_qsys_tcl.py`.
 
 ## Reproducing
 

@@ -1,4 +1,47 @@
-# Where we left off (2026-10-24)
+# Where we left off (2026-10-27)
+
+main = origin/main at `26cd28a` plus two uncommitted doc notes (this file and `LPDDR4_SWIZZLE_PLAN.md`). Board DRC:
+289 violations, 260 unconnected, schematic parity 0. Silkscreen checks are ignored: the boards are ordered without silk.
+
+## Done 2026-10-26/27 (pushed)
+
+- eMMC: DS strobe on HPS_IOA_16 (HS400 possible), 0201 decaps on the U11 via-in-pad, 0402 4u7 bulk next to the array.
+- HPS: stale SD/Ethernet copper at the U7 HPS balls deleted (rerouting still to do).
+- LPDDR4: bytes 0↔1 swapped (`BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`, Quartus-checked); CA and CK T-junctions under U12;
+  CA/CKE/CS/RST trunks routed with KiCadRoutingTools (`tools/lpddr4_krt/`); U7 package delays on the pads as
+  pad-to-die; tuning profiles and pre-defined widths for 40 Ω inner (0.18 mm) / ~44 Ω outer (0.20 mm, field-solved).
+- U7 heatsink: NPTH 3.2 mm push-pin holes H1/H2 with 6 mm keep-outs.
+
+## Open decision: 50 Ω LPDDR4 data routing (thinner traces)
+
+- Quartus accepts 48 Ω memory drive (`MEM_ODT_DQ_X_RON=5`, MR3 PDDS 5): `~/dev/agilex5_emif_test/varA_ron48/`, 0 errors,
+  timing identical to `varA_bswap`. With FPGA input termination 50 Ω and memory DQ ODT 48 Ω (both already set), reads
+  are matched to a 50 Ω line; FPGA drive stays 40 Ω (34/40 are the only options), a mild source mismatch.
+- Idea: route the data bytes and DQS at 50 Ω (0.12 mm inner / 0.15 mm outer); keep CA/CK as routed. Not applied: the
+  KiCad tuning profiles and widths are still 40 Ω. Altera's guideline (821801) only allows 50 Ω for break-outs.
+- **IBIS simulation before committing to 50 Ω** (or at least a calibration-margin test on the first boards):
+  - models: Agilex 5 IBIS (Altera, for the A5EB013B B23B package, LVSTL 1.1 V, 40 Ω output / 50 Ω ODT settings) and the
+    SK hynix H9HCNNN8KUMLHR IBIS (from SK hynix or a distributor FAE; it would also give the missing U12 package
+    delays);
+  - cases: one DQ byte write (FPGA 40 Ω → 50 Ω line → memory ODT 48 Ω) and read (memory 48 Ω → line → FPGA 50 Ω), and the
+    CA bus at the T (FPGA 40 Ω → trunk → two branches → memory CA ODT 80 Ω); 1600 MT/s, eye height/width vs LPDDR4
+    masks; compare 40 Ω and 50 Ω lines;
+  - tool options (to be checked): an IBIS-capable SPICE flow (e.g. ngspice/Qucs-S IBIS support, or an IBIS-to-SPICE
+    conversion for LTspice), or a commercial SI tool; also check what Altera provides for Agilex 5 EMIF board SI.
+
+## Continue next time, in order
+
+1. Decide 40 Ω vs 50 Ω for the data bytes (see above); if 50 Ω, switch the LPDDR4 profiles/widths and adopt
+   `MEM_ODT_DQ_X_RON=5` in the real Quartus project.
+2. Route CK by hand as a coupled pair (U7 G42/J42 → the two In2 T-vias), about 333 ps die→ball, then tune ca2–ca5 up
+   (+28/+21/+52/+63 ps) with KiCad's time-domain tuner.
+3. Route the data bytes from the U12 side and swizzle DQ within each lane; extend the dqs0 stubs to AB56/W56 and dqs1 to
+   G62/E62. Then relabel `iobank3`, sync, regenerate `PIN_SWIZZLE`, re-run Quartus (see `LPDDR4_SWIZZLE_RULES.md`).
+4. Route the eMMC (U11 signal vias are in, the traces are not) and the HPS SD/Ethernet/UART/eth_rst_n nets.
+5. Power corner (item 1 below): keep L1 ≥ 3 mm from H1's centre (now 0.31 mm inside its keep-out ring).
+6. Review the unmerged LPDDR4 escape-agent worktree (`.claude/worktrees/agent-a16b8e0ab24697630`) or drop it.
+
+# Earlier: where we left off (2026-10-24)
 
 The schematic is up to date, and the PCB was synced from it (schematic parity 0, commit "PCB: sync with schematic").
 The layout has **not** been cleaned up after that sync yet. DRC shows 576 violations and 64 unconnected items; before
