@@ -1,0 +1,9844 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "38d531f8-13ac-444b-9a1a-31544833a7bd")
+	(paper "A2")
+	(lib_symbols
+		(symbol "Simulation_SPICE:IBIS_DRIVER"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U?"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "IBIS_DRIVER"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://ibis.org"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Driver model for IBIS files."
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim_Name" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim_Library" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Ibis_Pin" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Ibis_Model" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "IBIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "IBISDRIVERDC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=1 2=2"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Simulation IBIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IBIS_DRIVER_0_1"
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "IBIS_DRIVER_1_1"
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "REF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Simulation_SPICE:TLINE"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board no)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "T"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLINE"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Lossless_Transmission_Lines"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Lossless transmission line, for simulation only"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "TLINE"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Params" "z0=50 td=10n"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "lossless transmission line characteristic impedance"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLINE_0_1"
+				(polyline
+					(pts
+						(xy -5.08 -1.27) (xy 3.81 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -3.81 1.27)
+					(end 3.81 -1.27)
+					(stroke
+						(width -0.0001)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 1.27) (xy 3.81 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 1.27)
+					(stroke
+						(width -0.0001)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.81 0)
+					(radius 1.27)
+					(stroke
+						(width -0.0001)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start 3.8776 1.27)
+					(mid 5.0818 0)
+					(end 3.8776 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -1.27) (xy 3.81 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TLINE_1_1"
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Simulation_SPICE:IBIS_DEVICE"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U?"
+				(at 6.35 0.635 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IBIS_DEVICE"
+				(at 6.35 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://ibis.org"
+				(at 1.27 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Device model for IBIS files. Pin 3 can be used to monitor the die potential"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Ibis_Pin" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Ibis_Model" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "IBIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "IBISDEVICE"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=1 2=2"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Simulation IBIS"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IBIS_DEVICE_0_1"
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "IBIS_DEVICE_1_1"
+				(pin power_in line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "REF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "LPDDR4 SI, generated by gen_sch.py: DQ line 40 ohm 20 mm (via long), CA trunk 40 ohm, corner typ. 1600 MT/s, PRBS."
+		(exclude_from_sim no)
+		(at 25.40 10.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e4088ce-5be3-4402-a8af-77754858dab0")
+	)
+	(text ".tran 1p 95.8n\n.options method=gear maxord=2 reltol=1e-4"
+		(exclude_from_sim no)
+		(at 25.40 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8fb92a6-ec15-4937-b3d4-139c6521a48e")
+	)
+	(text "dqw: DQ write, U7 40 ohm -> U12 ODT 48 ohm"
+		(exclude_from_sim no)
+		(at 25.40 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69757fa4-871d-48c0-9f7a-a5db47182faa")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b420410a-8f54-47f8-a8ff-ada9e9a614bf")
+		(property "Reference" "U1"
+			(at 25.40 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_io_s3r40c_doff"
+			(at 25.40 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "T62"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_io_s3r40c_doff"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ca2f8f9-a05d-4433-890d-29ff97c12dc9")
+		)
+		(pin "2"
+			(uuid "cd3720b3-03c0-492b-8d31-6ce00c4c86e1")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25da7da5-ddeb-471e-9151-52d8b243bf23")
+	)
+	(label "dqw_u7"
+		(at 33.02 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "733f20c6-e7f4-4b80-a390-9d3591ffc815")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1207f176-0318-4354-b7c9-1e082e1e5264")
+		(property "Reference" "C1"
+			(at 55.88 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75040e23-9a12-4089-ba3f-254dd5e114e5")
+		)
+		(pin "2"
+			(uuid "54348127-992c-4350-91a3-84ba130e554a")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_u7"
+		(at 55.88 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f19ea641-9132-41eb-8271-e1583b5fb8e3")
+	)
+	(label "GND"
+		(at 55.88 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a2504ce-572e-4f51-a902-fed7f123bcb7")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b0c1962-8e83-4c2d-aab5-800dd74776e3")
+		(property "Reference" "L1"
+			(at 86.36 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 86.36 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f347f2f6-9aeb-4cf4-b63d-d312417f2139")
+		)
+		(pin "2"
+			(uuid "010c81b8-e346-4d47-9e10-041f19429288")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_u7"
+		(at 86.36 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ab62572-7b87-4426-aa0c-5644e14cbfc7")
+	)
+	(label "dqw_n1"
+		(at 86.36 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bc351442-0cd8-4980-a480-2926c46a118f")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5600514-07cf-477e-b8b1-245a2d1af720")
+		(property "Reference" "C2"
+			(at 116.84 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "659674b1-6c6c-42b7-b237-aac63fc82edc")
+		)
+		(pin "2"
+			(uuid "e0925a13-229c-4ff1-b426-37c0f2a57262")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_n1"
+		(at 116.84 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "542772f1-a764-4008-a22d-2b5123c7a076")
+	)
+	(label "GND"
+		(at 116.84 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a62da14d-2b13-4a56-93c5-0b7c960e34e4")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd48ce10-ad91-4f30-a8df-31a6e518adf7")
+		(property "Reference" "TL1"
+			(at 147.32 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 147.32 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 147.32 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cadbea9d-602f-4f8e-b089-9a134408ce0c")
+		)
+		(pin "2"
+			(uuid "d18a9dba-bac9-4bdd-a36f-ab76b43fafd8")
+		)
+		(pin "3"
+			(uuid "17df8d9d-5cc6-4215-9713-523537cf22e0")
+		)
+		(pin "4"
+			(uuid "4406b6cf-552a-486d-920b-cb151563150e")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_n1"
+		(at 139.70 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3519d956-46d3-417d-8c0f-e3a4a3dfa662")
+	)
+	(label "GND"
+		(at 142.24 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50a8104b-5a22-49ee-9ce1-ea97ec3efbe9")
+	)
+	(label "dqw_l1"
+		(at 154.94 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "45a10b9f-d8f1-4e31-a1c0-7aaa59e9a280")
+	)
+	(label "GND"
+		(at 152.40 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b18b938-865c-42fb-b20f-82d7d4b865af")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 177.80 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d46b6a00-dde1-4073-a91e-bd3b2fd4b9ba")
+		(property "Reference" "TL2"
+			(at 177.80 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 119.3ps"
+			(at 177.80 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 177.80 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 177.80 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=119.3p"
+			(at 177.80 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c412d842-38fd-48d7-a550-97e90f82d577")
+		)
+		(pin "2"
+			(uuid "e0e9cd17-fd03-4544-826f-ffd0807d343d")
+		)
+		(pin "3"
+			(uuid "9088d19b-c165-4c9a-8a19-1b7dd8ed18d9")
+		)
+		(pin "4"
+			(uuid "96cac14c-113a-43c2-a4f6-432fb8d2dbe7")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_l1"
+		(at 170.18 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0585f32-2300-48e8-b806-e4eaee07e226")
+	)
+	(label "GND"
+		(at 172.72 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8cf14932-3739-441c-b5b9-02c83c9d71d8")
+	)
+	(label "dqw_l2"
+		(at 185.42 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6732c71-3c67-4ba4-bb8c-8ef74ef51310")
+	)
+	(label "GND"
+		(at 182.88 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1afda6c-9481-4140-a720-9a860d0468ad")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 208.28 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "695c0f42-967d-446e-8eed-aad47cf22289")
+		(property "Reference" "TL3"
+			(at 208.28 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 208.28 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 208.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 208.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 208.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7486bf26-139b-4a70-9394-3f27ebd649d7")
+		)
+		(pin "2"
+			(uuid "c4592b53-6d91-48a3-a2ec-f26fcae5ede4")
+		)
+		(pin "3"
+			(uuid "0fe7859f-4e12-4a2f-a96b-48954f4d9888")
+		)
+		(pin "4"
+			(uuid "39caedb7-d4ba-4b89-adc7-681e8e1c2fef")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_l2"
+		(at 200.66 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d82332b0-4c7f-4f0b-be74-5d2fc4807366")
+	)
+	(label "GND"
+		(at 203.20 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b15bf94-56de-418d-b437-6d39bb803f87")
+	)
+	(label "dqw_n2"
+		(at 215.90 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ccdb9f2-0588-4005-8b03-c93580c6e514")
+	)
+	(label "GND"
+		(at 213.36 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a498759f-52d3-4a55-980a-4ca8fcef1b16")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "348e1d0a-efb7-4a59-8376-949085cc0b50")
+		(property "Reference" "C3"
+			(at 238.76 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "80d0dbe4-7bd7-42fc-b322-8f0e3ce7a05f")
+		)
+		(pin "2"
+			(uuid "1311fedf-96a0-47af-9e48-2a8f34128d8d")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_n2"
+		(at 238.76 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7954775c-536b-4244-a4e6-910a2d4401d4")
+	)
+	(label "GND"
+		(at 238.76 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6844a15a-4597-4f03-991f-2bafd26ec544")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 269.24 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b29ba1be-9fc3-44ee-8adc-9c2fcc228bcf")
+		(property "Reference" "L2"
+			(at 269.24 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 269.24 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57681ee6-3cfb-420e-b958-cb1a460ac891")
+		)
+		(pin "2"
+			(uuid "7d3714a1-4333-4e4c-b435-fffda3c763e2")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_n2"
+		(at 269.24 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9276fe25-070b-47fc-9997-42ed01b91fe4")
+	)
+	(label "dqw_u12"
+		(at 269.24 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a74bedc4-450a-49bb-8af3-c180e1b915f8")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b787b302-0f63-4fa5-9e0c-312085e360cc")
+		(property "Reference" "C4"
+			(at 299.72 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f714385-8585-4868-a839-2a906da8d49d")
+		)
+		(pin "2"
+			(uuid "af6f4593-f206-43c8-8f60-a578f52062e2")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqw_u12"
+		(at 299.72 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "569d6d9f-3d41-42ec-8d09-2166787e6857")
+	)
+	(label "GND"
+		(at 299.72 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "faf88804-20d2-4b91-911b-7e2def6a2224")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 330.20 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7ec1fde8-93db-4095-a791-fb4e27709b30")
+		(property "Reference" "U2"
+			(at 330.20 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ODT_48"
+			(at 330.20 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "C11"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "ODT_48"
+			(at 330.20 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "641d2a9f-4d36-46a7-9293-7a5e72ad82c0")
+		)
+		(pin "2"
+			(uuid "4563a39f-da58-4432-ba97-e7387a4075a3")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 330.20 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e37ce8ce-4ab4-4454-844b-8901d3fb2d32")
+	)
+	(label "dqw_u12"
+		(at 322.58 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7bb88d05-5c2b-4199-b23a-a40d7ca6a3ad")
+	)
+	(text "dqr40: DQ read, U12 PD40_ODT80_VOH25 -> U7 50 ohm ODT"
+		(exclude_from_sim no)
+		(at 25.40 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe5447a1-b6e8-4d7c-b0db-25b0fc868e8f")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5706caef-1849-455d-8ead-c9633f3bb8d1")
+		(property "Reference" "U3"
+			(at 25.40 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PD40_ODT80_VOH25"
+			(at 25.40 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "C11"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "PD40_ODT80_VOH25"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a23b58f-dcbd-413f-8b3b-a3989d5f5f5d")
+		)
+		(pin "2"
+			(uuid "b88ed2c1-429b-4105-8793-7b79740a499f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c172d1e-39bc-4ef5-8dc3-880707d26f80")
+	)
+	(label "dqr40_u12"
+		(at 33.02 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ccef692-af4b-4628-939e-af25a26508c5")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7c628be5-75f0-43f9-98ff-dd1bea2601e7")
+		(property "Reference" "C5"
+			(at 55.88 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8019b15-d2e4-47cd-8652-e89154575532")
+		)
+		(pin "2"
+			(uuid "d4ec8f14-3bc1-4c98-bfc4-3858ce17e84b")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_u7"
+		(at 55.88 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69aa6f69-6c54-43e5-9281-4456062fdbbd")
+	)
+	(label "GND"
+		(at 55.88 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c637ad4-abc0-44f2-bbbc-c6033f5d93ea")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bd60cc5-e074-49f1-b3f4-319c598ce9b0")
+		(property "Reference" "L3"
+			(at 86.36 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e5b6f66-6645-43f0-9ddf-69cdbd910bdb")
+		)
+		(pin "2"
+			(uuid "38cc7444-8563-4fdb-97e6-f9396232daf4")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_u7"
+		(at 86.36 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "55ab39dc-1d72-4ecb-976e-92f0338b48ec")
+	)
+	(label "dqr40_n1"
+		(at 86.36 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6b0a099e-7532-46c5-92f0-709206b1d7b5")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3e168a83-948f-47f2-a224-689bea78bdab")
+		(property "Reference" "C6"
+			(at 116.84 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "91818ba0-8607-4d43-8731-34f39293d837")
+		)
+		(pin "2"
+			(uuid "9fbea8ae-1816-4a66-90a3-a20c15a3d626")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_n1"
+		(at 116.84 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "85762038-2306-4238-8a6e-fd645ff7eeaa")
+	)
+	(label "GND"
+		(at 116.84 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce20652c-2c34-4296-a6a1-1a19eaef13ea")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4204dfc2-882b-4267-8382-a30f23b695ad")
+		(property "Reference" "TL4"
+			(at 147.32 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 147.32 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "523b478d-97f0-4445-9a97-0742e0ea00b1")
+		)
+		(pin "2"
+			(uuid "1d3acda4-d75d-4fa4-bf99-5392f23df028")
+		)
+		(pin "3"
+			(uuid "9fbba110-f66c-4085-b8f4-09f7b8c7805d")
+		)
+		(pin "4"
+			(uuid "e18f2134-1e9a-4ec6-9a1c-cd255d853b97")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_n1"
+		(at 139.70 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3927bf6e-52d7-4600-974c-ad84d8bee823")
+	)
+	(label "GND"
+		(at 142.24 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd64f515-a843-4f89-8444-ed78dc21435a")
+	)
+	(label "dqr40_l1"
+		(at 154.94 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68f39db7-0835-42d1-917a-5054f4c94357")
+	)
+	(label "GND"
+		(at 152.40 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5f30903-6979-481d-be55-4800ae7aaa70")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 177.80 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d10718e-731d-4216-8596-1873fb9568ce")
+		(property "Reference" "TL5"
+			(at 177.80 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 119.3ps"
+			(at 177.80 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 177.80 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 177.80 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=119.3p"
+			(at 177.80 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cd7733b-daf8-4f76-ae49-01758f1edfa9")
+		)
+		(pin "2"
+			(uuid "e2ba10fb-c101-4beb-8cc4-b61d432760f0")
+		)
+		(pin "3"
+			(uuid "ccfd3c6c-8a03-495f-9674-d22b733a5b0f")
+		)
+		(pin "4"
+			(uuid "04819482-d4d1-46c5-be11-90ba008a0139")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_l1"
+		(at 170.18 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "357c898a-5616-4740-baa6-27e11e99010b")
+	)
+	(label "GND"
+		(at 172.72 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ec24a0a-a9bd-48ba-a833-e0f44dddf920")
+	)
+	(label "dqr40_l2"
+		(at 185.42 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "595b191f-4d4c-40a4-a712-9f1d3f2732f4")
+	)
+	(label "GND"
+		(at 182.88 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "61b33d47-6758-460b-9a40-006e07df8059")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 208.28 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3da1eea-2b4b-4f73-ad10-cd61ac2f0fad")
+		(property "Reference" "TL6"
+			(at 208.28 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 208.28 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 208.28 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 208.28 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 208.28 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ca9f702-d286-432f-99db-42f835777614")
+		)
+		(pin "2"
+			(uuid "bdebb6eb-ebc2-4f81-8eae-4a92c41ad371")
+		)
+		(pin "3"
+			(uuid "4f961c4b-9a76-4569-a2c4-9036f7e33008")
+		)
+		(pin "4"
+			(uuid "2aa55f9e-12bc-4060-95f1-c6c5936ebca6")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_l2"
+		(at 200.66 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8577dad0-7982-4386-b27c-7de9d6a15732")
+	)
+	(label "GND"
+		(at 203.20 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "36dcc144-cded-483f-9eb6-153413362bff")
+	)
+	(label "dqr40_n2"
+		(at 215.90 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fede9fed-062a-4b5f-b9cb-3c616adb8d1b")
+	)
+	(label "GND"
+		(at 213.36 88.90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "72d853a5-dbc0-478b-b1e6-bf6b684a7359")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d649ac0a-92a8-4fb1-8025-ca1a58012375")
+		(property "Reference" "C7"
+			(at 238.76 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff53d06f-759d-4e0b-ac4c-9d101b45acfd")
+		)
+		(pin "2"
+			(uuid "469c71e9-449e-4521-b0d8-3c875565004f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_n2"
+		(at 238.76 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "38a658a0-4ca8-4e78-8503-b5f69eceeb4e")
+	)
+	(label "GND"
+		(at 238.76 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "140e48fc-f21c-44a9-9354-043cd2bbb64f")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 269.24 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1862ad7a-7b43-4d4a-98e1-6142cedecf16")
+		(property "Reference" "L4"
+			(at 269.24 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 269.24 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f90c603-e508-46b8-9332-d7323ef8232a")
+		)
+		(pin "2"
+			(uuid "77e5846e-4c8c-4543-9d5f-93362a49d8b0")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_n2"
+		(at 269.24 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9d8dd66-504b-464b-b697-576f781d3a39")
+	)
+	(label "dqr40_u12"
+		(at 269.24 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba21ccb0-22da-49b8-b9f4-b1bec9793c29")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5615c8ca-81db-4487-a78b-4779baa6eba6")
+		(property "Reference" "C8"
+			(at 299.72 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "76753440-1816-47c3-9a1c-bef2dfb2bc61")
+		)
+		(pin "2"
+			(uuid "bfb7e7c8-37c8-4e8c-90c5-c78c21677021")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr40_u12"
+		(at 299.72 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e66c5b68-c043-40e2-945f-fffa6f55acae")
+	)
+	(label "GND"
+		(at 299.72 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aedc7f7a-d2a2-47e2-b8c9-7600dd87aaa8")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 330.20 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5f6113d-5c6a-4b36-bb61-f3b0c5921cae")
+		(property "Reference" "U4"
+			(at 330.20 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_in_e0g50c"
+			(at 330.20 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "T62"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_in_e0g50c"
+			(at 330.20 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62c81f6f-ee4e-4cbf-8c5d-4f068b3604e0")
+		)
+		(pin "2"
+			(uuid "955cc795-1fdf-43cb-9ea8-e33018af6f0c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 330.20 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5cb9c06d-29ea-46e6-9439-0b9f71512884")
+	)
+	(label "dqr40_u7"
+		(at 322.58 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eae26e17-33cf-4ee7-8539-f39bb27e547e")
+	)
+	(text "dqr48: DQ read, U12 PD48_ODT80_VOH25 -> U7 50 ohm ODT"
+		(exclude_from_sim no)
+		(at 25.40 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "30c11d63-5bc5-4ecc-bbc3-bddab7263688")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed278f62-cb7f-4be8-96a8-0a9ce1a2cb62")
+		(property "Reference" "U5"
+			(at 25.40 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PD48_ODT80_VOH25"
+			(at 25.40 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "C11"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "PD48_ODT80_VOH25"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7ee04889-01df-41e1-8f81-2b3271217f51")
+		)
+		(pin "2"
+			(uuid "c0197c6c-3772-41e9-92f1-b41cb9957fc2")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fa5ab70-0179-47ae-aafe-25255bdb4c3a")
+	)
+	(label "dqr48_u12"
+		(at 33.02 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2725babe-b9c3-4210-9ed2-3aa6ae703ab9")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ab29389-ba84-422c-ba51-bfab2cb24959")
+		(property "Reference" "C9"
+			(at 55.88 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6245e716-e6a9-4dde-bf8a-546484084b2b")
+		)
+		(pin "2"
+			(uuid "cb614dc7-f08c-43c2-9129-f93e48027c63")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_u7"
+		(at 55.88 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "206f6ae8-6e66-4624-8d3d-d7ee2946c06a")
+	)
+	(label "GND"
+		(at 55.88 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9aa0d538-0ea7-47c6-9a82-2918492b5ebf")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b224972a-352f-4c91-8ac5-ccbe97b8911f")
+		(property "Reference" "L5"
+			(at 86.36 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 86.36 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b68eab86-08e9-4797-9a5c-48bf75a382aa")
+		)
+		(pin "2"
+			(uuid "b8deb354-96fc-4cc3-8ba8-f0de9588cd47")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_u7"
+		(at 86.36 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ade39ccb-75c9-4da7-8827-f9f2c74fc791")
+	)
+	(label "dqr48_n1"
+		(at 86.36 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6526f0bd-4e8b-49dd-9ce1-2f8277fe9c83")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a73ee047-c63d-4202-b901-1c5557d57c7f")
+		(property "Reference" "C10"
+			(at 116.84 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33930f98-3127-494a-9e28-1fc6065e097e")
+		)
+		(pin "2"
+			(uuid "2bfa4eb1-57f6-4839-9b99-52e914bf5124")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_n1"
+		(at 116.84 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "567280b4-8ba5-4bdf-ac33-3315cb49c69e")
+	)
+	(label "GND"
+		(at 116.84 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29e3d762-dd79-4c55-aa8b-dd4587b77e63")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3765c69a-923f-4f50-829d-7b5e11659b6c")
+		(property "Reference" "TL7"
+			(at 147.32 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 147.32 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 147.32 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7659df67-9163-42de-a261-dc37166ceb1f")
+		)
+		(pin "2"
+			(uuid "f9aeedc8-90fa-41fd-b8f6-5166814b5dda")
+		)
+		(pin "3"
+			(uuid "01c1837e-5c60-4297-951c-723c3049bc52")
+		)
+		(pin "4"
+			(uuid "4aba3f0b-e2ba-460a-b604-6988c627da02")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_n1"
+		(at 139.70 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "652e478d-b1b1-49a3-873c-5aa2bd4c32da")
+	)
+	(label "GND"
+		(at 142.24 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e08357d0-6b74-4a54-8cfa-cd38a6ef05bd")
+	)
+	(label "dqr48_l1"
+		(at 154.94 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f5872386-33b9-461d-acf1-4736eacad187")
+	)
+	(label "GND"
+		(at 152.40 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1f4c68d-6b0e-4574-95c5-95eb10fece42")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 177.80 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bcda31be-a521-4e2f-9132-f3559b003884")
+		(property "Reference" "TL8"
+			(at 177.80 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 119.3ps"
+			(at 177.80 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 177.80 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 177.80 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=119.3p"
+			(at 177.80 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8207cdf-420b-422b-ae38-73aa147b4262")
+		)
+		(pin "2"
+			(uuid "3830b77c-a924-4751-a311-7d4ea9d57aa1")
+		)
+		(pin "3"
+			(uuid "49f48c62-83d5-44d2-beb3-5ef57f72019f")
+		)
+		(pin "4"
+			(uuid "814a96f9-ec29-4437-a8a3-184278bcb656")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_l1"
+		(at 170.18 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f58f70a7-dd6c-49ee-a381-d6d84251e045")
+	)
+	(label "GND"
+		(at 172.72 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6614891c-8672-417b-8175-09844b17c7cc")
+	)
+	(label "dqr48_l2"
+		(at 185.42 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "288f112f-41cb-4deb-a5e3-7059ff672d9b")
+	)
+	(label "GND"
+		(at 182.88 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9dad7e6d-8599-43cd-93f1-40c4f1770e68")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 208.28 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3234b642-a711-4f03-a50a-c0e3f4cbb389")
+		(property "Reference" "TL9"
+			(at 208.28 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 55R 10.5ps"
+			(at 208.28 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 208.28 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 208.28 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=55 td=10.53p"
+			(at 208.28 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f53d31d-6e88-41ca-a872-fa083e246b92")
+		)
+		(pin "2"
+			(uuid "9b92479c-90d1-4b40-93b2-962fe2fbe025")
+		)
+		(pin "3"
+			(uuid "5b82a365-fe08-49fe-8f06-ab2c9be1f1e2")
+		)
+		(pin "4"
+			(uuid "bd04a1e7-220f-4653-bd60-55ed8b7167a0")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_l2"
+		(at 200.66 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "279385ff-ca10-44bc-a0a8-4627b9fe182c")
+	)
+	(label "GND"
+		(at 203.20 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4de8987-5e89-4ecd-bcfe-1077e8ba082a")
+	)
+	(label "dqr48_n2"
+		(at 215.90 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92710203-ef8c-4c02-92a6-3906c04b9a8f")
+	)
+	(label "GND"
+		(at 213.36 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57108963-610f-4eb7-9b11-eab9d9a0b32d")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "11073a72-9951-4daf-87c6-ed2bf9561efe")
+		(property "Reference" "C11"
+			(at 238.76 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "398e2a92-9c66-453e-b5ef-6089301def52")
+		)
+		(pin "2"
+			(uuid "ab76542f-3feb-49b8-9796-e2477e0edde4")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_n2"
+		(at 238.76 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d9e92ad7-6cbc-48fd-a90b-eb10b5b60669")
+	)
+	(label "GND"
+		(at 238.76 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ff1e477-b26c-41de-acc1-d8597a32e493")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 269.24 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fdb7cc82-720c-4b5a-9db4-7545f072221e")
+		(property "Reference" "L6"
+			(at 269.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 269.24 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8909f323-5208-479b-bb4b-6cbcf0c4a700")
+		)
+		(pin "2"
+			(uuid "50813db2-2e95-46d3-bf2a-940e685de03c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_n2"
+		(at 269.24 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "42c90f06-a60e-45ae-a36b-86cc8ab43533")
+	)
+	(label "dqr48_u12"
+		(at 269.24 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f072647c-2dea-43cf-bf25-c7a8fe9cd328")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e99159f8-e14f-4176-b4e1-cce0ecf681b1")
+		(property "Reference" "C12"
+			(at 299.72 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dcf1e82d-09ca-47bc-a28a-349168c692b7")
+		)
+		(pin "2"
+			(uuid "601afb62-d779-4dcb-979c-aa35fa353efa")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "dqr48_u12"
+		(at 299.72 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29873496-c783-4f7b-ab55-d1710106a10d")
+	)
+	(label "GND"
+		(at 299.72 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d919aef0-4906-44a2-a7b0-9c89d3632f58")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 330.20 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ebbdc19e-8e57-4ea9-b396-89c5a9dcebab")
+		(property "Reference" "U6"
+			(at 330.20 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_in_e0g50c"
+			(at 330.20 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "T62"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_in_e0g50c"
+			(at 330.20 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7335143-9057-4856-8395-8923001c8946")
+		)
+		(pin "2"
+			(uuid "9781fa0b-1184-4612-852e-8ad179eb62ca")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 330.20 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecb36496-014f-4fbc-9269-62dbbc3a323a")
+	)
+	(label "dqr48_u7"
+		(at 322.58 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b77ed40-f8ba-4fc7-901a-32c3f6ed28f1")
+	)
+	(text "ca0_80: ca0 T, U7 40 ohm -> In2 trunk 27.99 mm -> T-via -> 2 x B.Cu 2.43 mm -> CA ODT 80"
+		(exclude_from_sim no)
+		(at 25.40 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0e83bbb-e601-42af-a6f2-593ee4485655")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3ff6b4a-c283-4059-931b-e92d6525c2ec")
+		(property "Reference" "U7"
+			(at 25.40 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_io_s3r40c_doff"
+			(at 25.40 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "B66"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_io_s3r40c_doff"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0225941-5a81-4830-8c1b-24f7061375be")
+		)
+		(pin "2"
+			(uuid "0c4f09a9-674e-4b5b-855b-ae72d58497f3")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 152.40 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d4d49e39-bcb2-4927-b28a-31baf0af0e89")
+	)
+	(label "ca0_80_u7"
+		(at 33.02 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7217350d-fcc4-4d5c-b5f3-42b735a8079a")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d65cc585-e897-4adb-bef3-8abf5176885d")
+		(property "Reference" "C13"
+			(at 55.88 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "adb55701-238c-476d-9ed8-6a3f0af15ee6")
+		)
+		(pin "2"
+			(uuid "f5fb82cb-90a3-4e79-9fa4-d67f9f6c8015")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_u7"
+		(at 55.88 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a92b1bab-b4b5-4a56-a34a-a13f59c7927b")
+	)
+	(label "GND"
+		(at 55.88 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7016324d-9e06-476e-b017-648871c13bf1")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7535aeea-0d0f-47e9-b15c-b357049bd1f2")
+		(property "Reference" "L7"
+			(at 86.36 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150p"
+			(at 86.36 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93d54580-3c41-4e1b-aa65-47528ec0a946")
+		)
+		(pin "2"
+			(uuid "f96a931c-caec-4b81-9585-ba032652b91c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_u7"
+		(at 86.36 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ca98cc0-bcd1-4ec9-8b23-c5178af51986")
+	)
+	(label "ca0_80_t0"
+		(at 86.36 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6242691b-06bc-4273-8c5d-f910172d76a2")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "810ce9f6-891b-41a2-bf79-c06e14669c66")
+		(property "Reference" "C14"
+			(at 116.84 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2cc2d605-797a-4e94-a496-13b9eb672535")
+		)
+		(pin "2"
+			(uuid "e28c15aa-facb-4eff-ae50-0250f2dc7c2f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_t0"
+		(at 116.84 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fef41b5-4071-4e52-9530-c6b52c843885")
+	)
+	(label "GND"
+		(at 116.84 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "831a1566-6754-4220-90a9-a46f2c7d2c23")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "151e51c5-5d11-49b8-bacf-b91e0fb24ab6")
+		(property "Reference" "TL10"
+			(at 147.32 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 196.5ps"
+			(at 147.32 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=196.5p"
+			(at 147.32 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a491d505-cc9c-4619-a6f7-adf61f187108")
+		)
+		(pin "2"
+			(uuid "e99d6adf-709d-4654-aac0-ea75b207bb3d")
+		)
+		(pin "3"
+			(uuid "1c422f57-7d54-47e8-bbde-a54e01f48003")
+		)
+		(pin "4"
+			(uuid "bc1c084a-ba36-40b9-8f84-4af181d20026")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_t0"
+		(at 139.70 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0558655d-e4df-4590-baba-b9d7610f7ec8")
+	)
+	(label "GND"
+		(at 142.24 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b711c2f8-ea35-4406-b6b9-381b1ca2d573")
+	)
+	(label "ca0_80_t1"
+		(at 154.94 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c973bf7e-2bcb-4c03-adcb-979e68b533de")
+	)
+	(label "GND"
+		(at 152.40 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "638e70f4-1e5f-4a1b-b72a-397defc82f2a")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 177.80 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "378fc5c6-617b-4b25-8e97-50975057e9b5")
+		(property "Reference" "C15"
+			(at 177.80 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 177.80 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5e680327-14f9-4180-bcc8-41d921467f43")
+		)
+		(pin "2"
+			(uuid "98193723-85b4-46df-8e41-6fecfa72f27f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_t1"
+		(at 177.80 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "af3190de-7dca-4c9f-8519-661990abe604")
+	)
+	(label "GND"
+		(at 177.80 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a2ad4322-d6eb-4c6d-814f-51523b76d797")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 208.28 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "284f6b01-983c-43bd-b415-73c38dc5d01f")
+		(property "Reference" "L8"
+			(at 208.28 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 208.28 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aaf79405-b41d-4ee1-8ac5-6b01dcb59900")
+		)
+		(pin "2"
+			(uuid "0adf0c28-ad5b-4100-81be-aa3ffd4fe55b")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_t1"
+		(at 208.28 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "966b5ef5-5833-4642-b954-8ff164b29930")
+	)
+	(label "ca0_80_tb"
+		(at 208.28 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd63adc9-e990-486d-a6c4-1c4dbd78b6ce")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64bc319a-5a1e-4bb1-81ed-f5474fcab228")
+		(property "Reference" "C16"
+			(at 238.76 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2186849e-8543-463d-8486-ec464870898a")
+		)
+		(pin "2"
+			(uuid "d3a4ac33-5b91-4e9c-95f0-a7d992421fea")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_tb"
+		(at 238.76 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6984d02c-0700-4e6f-939e-2be63eb50d91")
+	)
+	(label "GND"
+		(at 238.76 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0141b4dc-e450-497b-97bc-902bb0503d26")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 269.24 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bb73c469-36db-4e25-b49e-6ebb5c280d94")
+		(property "Reference" "TL11"
+			(at 269.24 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 15.0ps"
+			(at 269.24 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 269.24 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 269.24 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=14.97p"
+			(at 269.24 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d24f3acf-064c-4c99-abfc-60c65cab3f5a")
+		)
+		(pin "2"
+			(uuid "ac8c4a7b-7a68-42fa-9cea-2d490cc0f2a4")
+		)
+		(pin "3"
+			(uuid "b2110107-70b1-4a6f-9fe2-ccfc67693398")
+		)
+		(pin "4"
+			(uuid "af9f237d-9654-4d30-8033-3f19234f8609")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_tb"
+		(at 261.62 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6aedd8d-8ca4-4a1f-8164-d9cd1aa70270")
+	)
+	(label "GND"
+		(at 264.16 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c159701-27c7-4a82-bbc2-03d3477d5f5f")
+	)
+	(label "ca0_80_b0"
+		(at 276.86 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f0d5056-58e0-4049-8cca-b3229264de19")
+	)
+	(label "GND"
+		(at 274.32 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58ffeaa6-50b2-4aa3-b2ee-25d55404855a")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "04fb3d5a-8c4f-4add-b062-40653e1d6af6")
+		(property "Reference" "C17"
+			(at 299.72 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad119708-fbd1-44fe-9fab-3e6590e675a3")
+		)
+		(pin "2"
+			(uuid "38b1b983-71e4-42ff-9067-b351eac3e564")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_b0"
+		(at 299.72 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8c44cee-47c4-43e6-a054-061742853c5c")
+	)
+	(label "GND"
+		(at 299.72 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "42570ebf-86e7-4a5b-bb32-357deae4afaf")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 330.20 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "99dd3bfa-b647-4324-98e0-7a1d9f8e859f")
+		(property "Reference" "L9"
+			(at 330.20 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 330.20 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "366036c3-a86c-4ddb-8af6-3461b57ef073")
+		)
+		(pin "2"
+			(uuid "5f900eed-16ed-4bc4-80ae-da4eb679b805")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_b0"
+		(at 330.20 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7171d1c7-a479-4d62-88a2-c403736a6b12")
+	)
+	(label "ca0_80_u12a"
+		(at 330.20 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1688a95b-9e17-4217-9a62-46efa535a063")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 360.68 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "024c353f-6a60-40b0-bd0f-213a039e9fbd")
+		(property "Reference" "C18"
+			(at 360.68 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 360.68 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 360.68 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 360.68 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5748724d-50c1-4f6b-b6aa-f515fce3fb7d")
+		)
+		(pin "2"
+			(uuid "5dfb450c-ba15-4455-8c0b-027103a90af1")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_u12a"
+		(at 360.68 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c160c542-824c-417f-8a0b-5bb2d1987b60")
+	)
+	(label "GND"
+		(at 360.68 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8c70f14b-3e5e-4c57-83b8-90108ea03f98")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 391.16 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "25820596-5a46-4b9d-ac63-98ccdbfb6b0f")
+		(property "Reference" "U8"
+			(at 391.16 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_80"
+			(at 391.16 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "H2"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_80"
+			(at 391.16 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b29acff-e1f2-4ec3-99e6-a7c226125acb")
+		)
+		(pin "2"
+			(uuid "2a5200e0-9d7d-466c-ac86-8a390ee68829")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 391.16 152.40 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f342895-3ad2-4e0e-8f73-de91c4a52f1a")
+	)
+	(label "ca0_80_u12a"
+		(at 383.54 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0579c09-4715-4ea8-9eb3-f8a31b2b8412")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 421.64 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c693d40c-5c53-4712-bbaf-f4ff14e9e3b7")
+		(property "Reference" "TL12"
+			(at 421.64 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 15.0ps"
+			(at 421.64 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 421.64 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 421.64 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 421.64 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 421.64 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=14.97p"
+			(at 421.64 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7617e58-eb9a-4f73-94c9-39b5c7be9a8a")
+		)
+		(pin "2"
+			(uuid "907b2857-d69f-44cb-88c5-e664245e85a8")
+		)
+		(pin "3"
+			(uuid "787416dd-a090-4f1a-a171-0e1c588124ba")
+		)
+		(pin "4"
+			(uuid "4cbe38ef-82eb-42c6-87ef-8a7f2b629d6f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_tb"
+		(at 414.02 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3390f4f-6e35-4d34-8ccf-27687199a57b")
+	)
+	(label "GND"
+		(at 416.56 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7be01086-d1b9-4819-a7d9-dd563246fb34")
+	)
+	(label "ca0_80_b1"
+		(at 429.26 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c54e5d40-b4c0-47ea-a206-d81082ff8bd8")
+	)
+	(label "GND"
+		(at 426.72 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91bb13d0-a230-4f4b-b1fb-3509cdb9d505")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 452.12 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7a61c04-0727-4121-a9da-fb5c5b67e2be")
+		(property "Reference" "C19"
+			(at 452.12 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 452.12 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 452.12 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 452.12 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54448be7-cf9d-400b-adba-6b80c6e34e44")
+		)
+		(pin "2"
+			(uuid "49f6429f-6727-4e96-8dfe-2d27ff871d4c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_b1"
+		(at 452.12 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8354b4ff-f774-4d39-8ce3-21d8e0a62fc1")
+	)
+	(label "GND"
+		(at 452.12 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81a49294-23b9-47b6-83ab-f0e5cdcdf34d")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 482.60 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bbc5ac6c-f2cb-4002-a34f-e7d0267a804a")
+		(property "Reference" "L10"
+			(at 482.60 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 482.60 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 482.60 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 482.60 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c3d6934-6bb7-4b24-ab05-4116b1afc79e")
+		)
+		(pin "2"
+			(uuid "644144fd-3bc6-4a3a-a63d-5e4ac21df348")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_b1"
+		(at 482.60 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23915727-387e-4ab8-a97f-3c099eb1f93d")
+	)
+	(label "ca0_80_u12b"
+		(at 482.60 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "257c4552-de24-43a1-9516-78e28d4e99da")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 513.08 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36766a6c-d0ad-4b71-b8ef-9a780a69420f")
+		(property "Reference" "C20"
+			(at 513.08 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 513.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 513.08 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.08 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38b41958-b012-4b83-b618-3b2c78848e78")
+		)
+		(pin "2"
+			(uuid "8dfc2db9-bf40-4b68-b411-89cac3d15cd5")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_80_u12b"
+		(at 513.08 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10a17e77-5aa9-4b48-8271-aafba488a0d0")
+	)
+	(label "GND"
+		(at 513.08 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aefc76cc-1b6a-4d3c-9943-cd96c6b28377")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 543.56 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6472b49f-2f84-4b69-95ad-91f09428953b")
+		(property "Reference" "U9"
+			(at 543.56 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_80"
+			(at 543.56 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "R2"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_80"
+			(at 543.56 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42b61b51-006b-406c-b2fe-8c966c1ad800")
+		)
+		(pin "2"
+			(uuid "6f55a07c-8a4f-434f-b1b7-f4bbd181feee")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 543.56 152.40 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6bfafb86-219d-443c-a945-c3f0708df108")
+	)
+	(label "ca0_80_u12b"
+		(at 535.94 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d42b6ac9-73bf-4119-bcc2-cc5f78a6fd11")
+	)
+	(text "ca0_60: ca0 T, U7 40 ohm -> In2 trunk 27.99 mm -> T-via -> 2 x B.Cu 2.43 mm -> CA ODT 60"
+		(exclude_from_sim no)
+		(at 25.40 165.10 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9a2fba8-b439-4599-b3b1-c7a19e0561b4")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c6f2e6bf-3dd4-4400-b765-942fa14709c6")
+		(property "Reference" "U10"
+			(at 25.40 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_io_s3r40c_doff"
+			(at 25.40 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "B66"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_io_s3r40c_doff"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "485a4dfb-89b2-494f-9b5c-5a9adfa281d5")
+		)
+		(pin "2"
+			(uuid "8675de1a-0d24-427b-abfe-951dc5b214e6")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93df86ef-7672-4c3e-b2f1-db524df8cfad")
+	)
+	(label "ca0_60_u7"
+		(at 33.02 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e4c7c88-9c0c-4d67-bcf1-a2bb25132a97")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b495cc9a-dbdf-4703-a86e-acb520e3bdd1")
+		(property "Reference" "C21"
+			(at 55.88 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff719a4b-b44f-4e83-b970-066be655bd81")
+		)
+		(pin "2"
+			(uuid "08e8a6ec-8315-400f-8288-c1050c95dbbb")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_u7"
+		(at 55.88 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2aba8ad2-b0c9-4b4d-b79a-00807408a782")
+	)
+	(label "GND"
+		(at 55.88 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "70805155-fdc8-4f5e-89af-689213a86033")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2492b5a-f7fb-49b3-b44b-4fed859b5857")
+		(property "Reference" "L11"
+			(at 86.36 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150p"
+			(at 86.36 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d1dce7e0-5fac-46ec-86ee-95cbbd11efaf")
+		)
+		(pin "2"
+			(uuid "03b4cf4a-d905-4af8-8d8b-916e8fcdf501")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_u7"
+		(at 86.36 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2786495e-923d-4183-bc9e-9dc635886a78")
+	)
+	(label "ca0_60_t0"
+		(at 86.36 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0fa4464-42b2-4fb4-a286-1b11b58a9580")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2795fb1-1235-4fc7-bad9-da68ea3d7b39")
+		(property "Reference" "C22"
+			(at 116.84 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e3fea01-545d-4a26-b77a-9462fef4c87e")
+		)
+		(pin "2"
+			(uuid "314ddfc1-a16c-4604-8853-958b9c36ebec")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_t0"
+		(at 116.84 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0b94804-9b16-4b09-9b33-a17a095a43e6")
+	)
+	(label "GND"
+		(at 116.84 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "67935e2d-6082-4444-b0d7-0eb0c58e8baa")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "acd1c662-ff05-44d2-b4ff-97de1feb019f")
+		(property "Reference" "TL13"
+			(at 147.32 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 196.5ps"
+			(at 147.32 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=196.5p"
+			(at 147.32 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef8e2d5b-285f-4a3c-a503-5b06035af656")
+		)
+		(pin "2"
+			(uuid "b30489e0-d660-42e5-a9ca-f176efc25827")
+		)
+		(pin "3"
+			(uuid "8920f96c-4164-45df-9f9a-9fb86322b6fe")
+		)
+		(pin "4"
+			(uuid "4aef50e4-cee7-4074-87da-d0e79001185b")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_t0"
+		(at 139.70 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "329b1bda-aa12-4ded-b337-0dfb80de7fcb")
+	)
+	(label "GND"
+		(at 142.24 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "382aa70f-bdbf-4801-92eb-23d35606b7cb")
+	)
+	(label "ca0_60_t1"
+		(at 154.94 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b1ee5c4e-e6d9-444a-94d0-37aa655d5cf0")
+	)
+	(label "GND"
+		(at 152.40 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "80fb804c-eb78-4c58-af0b-6d1a4ea11a9a")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 177.80 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "618cc2d7-98d5-4f2d-b5d1-e02e701bb532")
+		(property "Reference" "C23"
+			(at 177.80 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 177.80 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20e0bd8b-6b2d-45cb-a20c-ac604b906d99")
+		)
+		(pin "2"
+			(uuid "ae3d542f-cb52-4f93-8068-8ad313c789f3")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_t1"
+		(at 177.80 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "94808531-e5ca-4d1c-86ae-7f1e2c26d242")
+	)
+	(label "GND"
+		(at 177.80 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "385454ae-646a-42a1-ac81-dd761c17933c")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 208.28 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e06a79d5-4768-46d0-9668-ffefcbef506e")
+		(property "Reference" "L12"
+			(at 208.28 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 208.28 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30c61f9f-3b9f-4429-a30e-bc949550db1e")
+		)
+		(pin "2"
+			(uuid "ee9dbc2d-f824-4cfe-84df-20ca622e990c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_t1"
+		(at 208.28 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c574d5d3-2a1b-49d9-ad01-cbadca00c251")
+	)
+	(label "ca0_60_tb"
+		(at 208.28 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd5f3a88-910f-4d6e-8232-98f676e15d1d")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "888af2e7-d622-4892-81cc-26a3349ab915")
+		(property "Reference" "C24"
+			(at 238.76 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55d60538-2265-456f-beba-cf6a3860ae39")
+		)
+		(pin "2"
+			(uuid "5ed1e2df-9ff2-4ba3-a4db-0c9b1496fee7")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_tb"
+		(at 238.76 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b2416d6-b988-4b48-88d6-b3d3513516e3")
+	)
+	(label "GND"
+		(at 238.76 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "62c80c58-e321-42fe-8910-13024a5073ad")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 269.24 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39826228-0aa0-4ad0-b505-a5c760d00777")
+		(property "Reference" "TL14"
+			(at 269.24 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 15.0ps"
+			(at 269.24 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 269.24 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 269.24 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=14.97p"
+			(at 269.24 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9e2b015-38b8-406a-8208-4ed04164fb9e")
+		)
+		(pin "2"
+			(uuid "d592ea44-6778-4d7c-aae3-232c3ae24da8")
+		)
+		(pin "3"
+			(uuid "aa0db4c3-8a69-42de-90c5-6653636c4270")
+		)
+		(pin "4"
+			(uuid "f8e9af3a-240a-4385-8971-dccdad310c17")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_tb"
+		(at 261.62 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e8b8fbd-069d-46c4-941a-f2ffe6745318")
+	)
+	(label "GND"
+		(at 264.16 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a8ecc3bf-82bb-49ff-85de-bdb779d95c6c")
+	)
+	(label "ca0_60_b0"
+		(at 276.86 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3990d2f-6fff-44ca-b541-a4cff11e253f")
+	)
+	(label "GND"
+		(at 274.32 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d610ed9-c0f0-4c7a-8d01-72f28d0548ce")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14b7accb-79b7-43b0-a20e-51d200a3127f")
+		(property "Reference" "C25"
+			(at 299.72 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3c24730-52d9-443b-b60b-5956c75d0579")
+		)
+		(pin "2"
+			(uuid "7f95b285-45db-49a4-8002-5cbe0e06c018")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_b0"
+		(at 299.72 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "515a07d1-2a75-4c3f-a7eb-36016d024958")
+	)
+	(label "GND"
+		(at 299.72 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d557b93d-3486-4cae-876b-36ac08a43fb2")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 330.20 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c19814e6-ded6-468b-b076-aa52df694b31")
+		(property "Reference" "L13"
+			(at 330.20 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 330.20 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e643ce48-dd0b-4949-9e36-1973cf1449d0")
+		)
+		(pin "2"
+			(uuid "7606d4ef-ad9f-4e19-ad59-4ffdbe6fcdbd")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_b0"
+		(at 330.20 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "878bda6e-57e6-424e-ad3c-d235805980a8")
+	)
+	(label "ca0_60_u12a"
+		(at 330.20 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "108e49a1-7a1d-4663-940d-258e89330c97")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 360.68 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cdf0b37b-7dda-47ca-a5c8-4b5dc5943e6e")
+		(property "Reference" "C26"
+			(at 360.68 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 360.68 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 360.68 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 360.68 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8850649-7d8e-4c34-90dc-04d1e0d8aa65")
+		)
+		(pin "2"
+			(uuid "94856ad3-1729-41ca-a5db-83c2b66b0eae")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_u12a"
+		(at 360.68 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "479df250-ae37-4359-8ef4-529df1e11f60")
+	)
+	(label "GND"
+		(at 360.68 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "95b97b0a-de2e-44fb-8f32-ddc66b69e1b9")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 391.16 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eaf4634e-5ffb-4e31-b888-bcf30a8b00f6")
+		(property "Reference" "U11"
+			(at 391.16 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_60"
+			(at 391.16 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "H2"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_60"
+			(at 391.16 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bcdecb24-2a6d-4845-a598-387112e1e047")
+		)
+		(pin "2"
+			(uuid "16bb32b8-243c-45f0-b47b-af1c860cd4ef")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 391.16 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ecf9c4d-ef57-4cb8-87b9-f82cb3607dd7")
+	)
+	(label "ca0_60_u12a"
+		(at 383.54 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10f42f8f-dcbb-4b9a-a328-f032abb799c9")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 421.64 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f328d0e-57c9-4b4b-aa2a-75620bebf908")
+		(property "Reference" "TL15"
+			(at 421.64 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 15.0ps"
+			(at 421.64 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 421.64 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 421.64 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 421.64 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 421.64 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=14.97p"
+			(at 421.64 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bebc25d5-53fb-4950-8705-15f06f33aff3")
+		)
+		(pin "2"
+			(uuid "18c3b909-2e85-46c8-b772-cd9bf929b80e")
+		)
+		(pin "3"
+			(uuid "297e4f38-9c84-48a0-8c18-c75e8a13281e")
+		)
+		(pin "4"
+			(uuid "35e6d2c1-ecee-4ab9-a350-ac9a6f28281d")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_tb"
+		(at 414.02 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4e63218-12fb-4466-be65-a6d06d31172d")
+	)
+	(label "GND"
+		(at 416.56 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5d9a8d0-6ef9-4bc0-8630-4cf1103a5ea8")
+	)
+	(label "ca0_60_b1"
+		(at 429.26 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad0a9401-bb78-47d9-83b5-39df18747d2a")
+	)
+	(label "GND"
+		(at 426.72 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1696124b-a04e-418b-ac3c-9926b1d5eb58")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 452.12 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77be9587-eb73-4fb8-a55c-a18b42d46017")
+		(property "Reference" "C27"
+			(at 452.12 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 452.12 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 452.12 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 452.12 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c1cb5a34-535c-4acc-8c45-bc863bac4ff2")
+		)
+		(pin "2"
+			(uuid "8fef926e-999e-492b-ad94-9442cf95b05f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_b1"
+		(at 452.12 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c64f8a5c-e779-47b9-98a5-bf2c58527d09")
+	)
+	(label "GND"
+		(at 452.12 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "131eb820-c616-47a1-96f0-d039edfb1ade")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 482.60 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ab8d92a-dd42-4422-8aa5-374f2d0cc73e")
+		(property "Reference" "L14"
+			(at 482.60 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 482.60 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 482.60 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 482.60 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a78cbc21-8341-4584-9f8c-cc39ec667023")
+		)
+		(pin "2"
+			(uuid "a53cae64-ca84-4572-9202-d20a21e905a9")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_b1"
+		(at 482.60 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58018896-984f-452c-a1e0-5a47f2e24eba")
+	)
+	(label "ca0_60_u12b"
+		(at 482.60 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eb2aa18b-9753-447e-b5e9-f94ec34735af")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 513.08 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "11d3bba0-2aa3-44b2-a96b-e51b429b5987")
+		(property "Reference" "C28"
+			(at 513.08 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 513.08 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 513.08 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.08 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8dc758c-34c3-4dda-ae68-526478d8c589")
+		)
+		(pin "2"
+			(uuid "2862a50a-649b-4d53-b642-4a9b7f71209f")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca0_60_u12b"
+		(at 513.08 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92478cd4-55d0-4ec1-a2da-42718b5db0ed")
+	)
+	(label "GND"
+		(at 513.08 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3585f66-e53f-45be-bd4f-1e9372a8954f")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 543.56 177.80 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2d749793-43e8-4025-9958-6980ad1637c1")
+		(property "Reference" "U12"
+			(at 543.56 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_60"
+			(at 543.56 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "R2"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_60"
+			(at 543.56 177.80 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb25142e-5c4a-4b32-a8f0-00e4dd9aa872")
+		)
+		(pin "2"
+			(uuid "9f91b175-fad8-49b1-9849-f3dc39df3607")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 543.56 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b07b5b3d-0aa2-4656-b26e-4bc4d14d6500")
+	)
+	(label "ca0_60_u12b"
+		(at 535.94 177.80 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "776082e6-1a4e-41be-a711-ff630bad1678")
+	)
+	(text "ca5_80: ca5 T, U7 40 ohm -> In2 trunk 10.77 mm -> T-via -> 2 x B.Cu 1.76 mm -> CA ODT 80"
+		(exclude_from_sim no)
+		(at 25.40 195.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "068f8b83-e25e-49a9-824e-aeee8674c6dc")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DRIVER")
+		(at 25.40 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1aced4e6-8981-4cc5-8666-edfe5b889677")
+		(property "Reference" "U13"
+			(at 25.40 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "lvstl11_io_s3r40c_doff"
+			(at 25.40 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "PRBSDRIVER"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/agilex5_lpddr4.ibs"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "Agilex5_A5EB013BB23BE6S"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "A66"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "lvstl11_io_s3r40c_doff"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "f0=1.6G n=150"
+			(at 25.40 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f71855a-2266-4dcd-b6f8-5807642d806d")
+		)
+		(pin "2"
+			(uuid "02347a11-406d-4c2b-a7d9-9db0f9ea2bef")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 25.40 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "84004304-e998-4e18-8177-70c24c7cfd8d")
+	)
+	(label "ca5_80_u7"
+		(at 33.02 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "72636f96-c17c-4340-930b-b28c378b87d9")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e83846e6-36c2-416e-82e6-9bf54d163d08")
+		(property "Reference" "C29"
+			(at 55.88 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 55.88 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18cfba7c-4064-4069-9168-13389b1044fa")
+		)
+		(pin "2"
+			(uuid "3ad77823-98f1-4034-b18d-1bfc97678121")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_u7"
+		(at 55.88 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6b07df6-b496-4f8b-9745-c96199ec140f")
+	)
+	(label "GND"
+		(at 55.88 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "65cf95c6-f78f-434a-ac9a-e3a873041dc9")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 86.36 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a29151a-c585-4ceb-9b11-17a20407e23a")
+		(property "Reference" "L15"
+			(at 86.36 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "150p"
+			(at 86.36 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a8ec0171-d67a-404f-922d-ac8ad0a616d7")
+		)
+		(pin "2"
+			(uuid "7fcf840f-4515-4168-a374-d1a2bc73101e")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_u7"
+		(at 86.36 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f04eb964-bca8-424b-a839-74caaf64184f")
+	)
+	(label "ca5_80_t0"
+		(at 86.36 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a81e9fb4-4128-4c09-ba10-e2af4b649d62")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 116.84 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "34b35465-6d43-4068-9f5a-ca13e009760f")
+		(property "Reference" "C30"
+			(at 116.84 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 116.84 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b9f37fe-1836-4c0c-9c44-9213c0351c6f")
+		)
+		(pin "2"
+			(uuid "2b69cd0c-610e-4d06-825f-f5e9a0a1f238")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_t0"
+		(at 116.84 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a0a65aa-5bc2-4555-8411-2183cdf8217a")
+	)
+	(label "GND"
+		(at 116.84 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "767c5738-f814-44a8-ac47-1cab2562a0f3")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 147.32 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "75e0a631-75c2-4466-91ed-c88ce160c2ba")
+		(property "Reference" "TL16"
+			(at 147.32 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 40R 75.6ps"
+			(at 147.32 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 147.32 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 147.32 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=40 td=75.61p"
+			(at 147.32 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47a1f8b4-b7e0-45f2-bb74-0f5a7d3aa20e")
+		)
+		(pin "2"
+			(uuid "bc61d9bf-49dc-4efc-b907-9b8b6fe84795")
+		)
+		(pin "3"
+			(uuid "355cda1f-14e3-4afe-8c5d-76f1075f11e1")
+		)
+		(pin "4"
+			(uuid "1380bf9e-e810-460e-a7b8-0ec196d59cad")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_t0"
+		(at 139.70 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "209014d0-57c3-4054-ae32-62bd7a28a123")
+	)
+	(label "GND"
+		(at 142.24 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "34976c88-0d99-4571-ab11-168c9551e5e0")
+	)
+	(label "ca5_80_t1"
+		(at 154.94 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "43b3a5b6-7249-49e4-aee4-d184d872b985")
+	)
+	(label "GND"
+		(at 152.40 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5bc68588-aadc-4e35-af3d-8733fe7cbe98")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 177.80 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83ed929a-05a9-40ac-8f15-339ee4323259")
+		(property "Reference" "C31"
+			(at 177.80 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 177.80 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.80 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.80 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6392170d-af0e-45c7-b646-1093eb69dea7")
+		)
+		(pin "2"
+			(uuid "7a0ce83a-11cd-42c5-83aa-636a81edf193")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_t1"
+		(at 177.80 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79720814-986b-4b42-b510-397cf9fbc604")
+	)
+	(label "GND"
+		(at 177.80 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "02fe410f-7509-4536-8fa9-ee56e665ed34")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 208.28 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de91ff34-5bcb-4540-96a6-d10c0490e510")
+		(property "Reference" "L16"
+			(at 208.28 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 208.28 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5d5e980-5c61-4a5a-9851-a00f3b770b86")
+		)
+		(pin "2"
+			(uuid "3e4f0814-2d2d-46d2-bba1-6f206de7198d")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_t1"
+		(at 208.28 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec3ab07f-24dd-4446-8877-e8e201c1499d")
+	)
+	(label "ca5_80_tb"
+		(at 208.28 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a526eaff-07c6-4afe-923d-e126bcfab464")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ec4ebcf-94e4-4e94-a4ee-9cfef870296d")
+		(property "Reference" "C32"
+			(at 238.76 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 238.76 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "840049f9-f1d5-4f58-bc60-8666bbd15048")
+		)
+		(pin "2"
+			(uuid "71cd10b2-0438-4c3f-aab9-c984f509b7f5")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_tb"
+		(at 238.76 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7e0404a-8b0c-45c2-8bf4-4f58bcdc16d7")
+	)
+	(label "GND"
+		(at 238.76 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a5050eb-a58f-4b68-8e52-20af9a49eca8")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 269.24 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7307ae13-8763-4fcb-899b-2464dd414f0c")
+		(property "Reference" "TL17"
+			(at 269.24 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 10.8ps"
+			(at 269.24 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 269.24 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 269.24 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=10.84p"
+			(at 269.24 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "040bdf6e-40a8-485f-a592-980aa48bf243")
+		)
+		(pin "2"
+			(uuid "3604228b-167e-49c5-b2ef-d68990bc0d40")
+		)
+		(pin "3"
+			(uuid "d72a7772-e94e-472f-b196-d83c23cb8c6f")
+		)
+		(pin "4"
+			(uuid "226cd44e-c2f6-4d8d-a035-0add52abd07c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_tb"
+		(at 261.62 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffae4c60-aa95-4478-bb4f-f47870fe5f3c")
+	)
+	(label "GND"
+		(at 264.16 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "746c64f4-49d5-43a0-ac4e-0472510d906d")
+	)
+	(label "ca5_80_b0"
+		(at 276.86 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6de92b7d-a891-4900-bc24-143fd448fb12")
+	)
+	(label "GND"
+		(at 274.32 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c06209a0-582b-413f-9339-6c328c9df92f")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 299.72 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45a3b932-415c-41da-ad70-5028c2212f2b")
+		(property "Reference" "C33"
+			(at 299.72 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 299.72 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 299.72 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 299.72 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d47e5e6-5161-4cc9-aa9a-8bdfe5af760a")
+		)
+		(pin "2"
+			(uuid "39dc7652-61d3-462c-a666-6b642482bed0")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_b0"
+		(at 299.72 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5deb08dd-836a-4920-b5d7-9f8a253a440d")
+	)
+	(label "GND"
+		(at 299.72 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca9e6fed-13bf-49ca-85b7-b412967d07c0")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 330.20 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "21f41cbf-0051-4070-a426-c4501b08c591")
+		(property "Reference" "L17"
+			(at 330.20 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 330.20 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.20 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.20 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "028d6371-0708-4f68-9784-3f7cc6413a63")
+		)
+		(pin "2"
+			(uuid "4b29da5c-0797-462e-bb8a-c31c08552407")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_b0"
+		(at 330.20 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5dd900d8-6605-41d4-b881-17345985eed4")
+	)
+	(label "ca5_80_u12a"
+		(at 330.20 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eaa40133-5dcc-4fb9-954d-b650077e1d42")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 360.68 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87803136-0bb9-4e01-a32f-69d2ff76a208")
+		(property "Reference" "C34"
+			(at 360.68 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 360.68 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 360.68 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 360.68 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42cdbfff-afaf-4702-a1a2-d58fed4a194d")
+		)
+		(pin "2"
+			(uuid "b3225e80-dc7c-467b-9c16-2a28bc53f9a3")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_u12a"
+		(at 360.68 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "989a997d-c4a7-4544-80a6-dd32a2e8b323")
+	)
+	(label "GND"
+		(at 360.68 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "920e616b-3727-4f4a-b3d9-80d1b05b6f2c")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 391.16 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13d0b6d7-1610-4664-a8d0-ed920cdd3578")
+		(property "Reference" "U14"
+			(at 391.16 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_80"
+			(at 391.16 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "J11"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_80"
+			(at 391.16 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1799fb73-8dfd-4ec1-b713-f5b97951f72d")
+		)
+		(pin "2"
+			(uuid "dc706384-d0af-44b4-bbbb-6b35c5b9efaf")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 391.16 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4bfac7f5-8d5a-4ddd-8eae-ff4703c56f1a")
+	)
+	(label "ca5_80_u12a"
+		(at 383.54 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd3917f8-cd87-4e53-a00c-0941eeebbd80")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:TLINE")
+		(at 421.64 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a411bd3e-8678-4a47-befb-a182d4c06a48")
+		(property "Reference" "TL18"
+			(at 421.64 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLINE 60R 10.8ps"
+			(at 421.64 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 421.64 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 421.64 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "TLINE"
+			(at 421.64 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1+ 2=1- 3=2+ 4=2-"
+			(at 421.64 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "z0=60 td=10.84p"
+			(at 421.64 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cf82138-c3a2-48c4-b252-588e97265c2f")
+		)
+		(pin "2"
+			(uuid "53fa825e-1acb-4e81-baf9-0cb68d83e504")
+		)
+		(pin "3"
+			(uuid "1c1ca7cd-a759-4363-9158-3e566d6c8e96")
+		)
+		(pin "4"
+			(uuid "8b82a4a2-0712-4649-9e91-a692d30acec8")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "TL18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_tb"
+		(at 414.02 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "233a2e6d-74ab-49d3-a035-bde337012372")
+	)
+	(label "GND"
+		(at 416.56 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0ef79e0-6bda-4e32-b779-70b0d551ba98")
+	)
+	(label "ca5_80_b1"
+		(at 429.26 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cef379c9-db29-4578-ae1c-3c5589aebf2c")
+	)
+	(label "GND"
+		(at 426.72 210.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9759e6d8-a480-4ccb-b645-e13d88341cbe")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 452.12 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67f57e52-b069-4add-8f45-e2a449ce3782")
+		(property "Reference" "C35"
+			(at 452.12 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 452.12 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 452.12 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 452.12 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53ff3085-b57a-4763-bf34-03d1a7598820")
+		)
+		(pin "2"
+			(uuid "b37aca55-8616-4fac-ae23-93dd5f46e98c")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_b1"
+		(at 452.12 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cafeba78-5dd3-4995-bdac-b1206a6e5bef")
+	)
+	(label "GND"
+		(at 452.12 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ccbc07bc-0648-4529-bb2a-73a5760ad507")
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 482.60 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7bc9dfae-af59-44b5-a7b3-7a46999f2c2e")
+		(property "Reference" "L18"
+			(at 482.60 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500p"
+			(at 482.60 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 482.60 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 482.60 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f59aa91-0289-4c84-bfbf-8913aabf5187")
+		)
+		(pin "2"
+			(uuid "3a4ff011-88cf-470f-b408-d208adca44f9")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "L18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_b1"
+		(at 482.60 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8f2a2816-407f-424e-a1be-6e7bca5e42bf")
+	)
+	(label "ca5_80_u12b"
+		(at 482.60 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4fd5d714-24f6-4b53-a8a0-3e45fc3b7a06")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 513.08 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2279efe8-ff00-4d55-a2f1-733f6c7ef04b")
+		(property "Reference" "C36"
+			(at 513.08 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "200f"
+			(at 513.08 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 513.08 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 513.08 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87fda938-34c1-4cfc-9bf8-ad74a7b98d13")
+		)
+		(pin "2"
+			(uuid "caec138a-b4cc-4905-9279-e94c6741525d")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ca5_80_u12b"
+		(at 513.08 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f3c0ef0-0f61-46f6-9332-954cf4079be8")
+	)
+	(label "GND"
+		(at 513.08 212.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9485c1b-5bca-44d7-a80d-a72d4d8fbf6f")
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:IBIS_DEVICE")
+		(at 543.56 208.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4beb1f21-f821-48c2-bfd0-ad9bb9ba14fe")
+		(property "Reference" "U15"
+			(at 543.56 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CA_ODT_80"
+			(at 543.56 215.90 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "IBIS"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "IBISDEVICE"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=GND 2=IN/OUT"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/w66_lpddr4.ibs"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "W66CL2NQUAFJ"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Pin" "P11"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Ibis.Model" "CA_ODT_80"
+			(at 543.56 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a922f50-ecd9-4b20-98ee-f7725cead32c")
+		)
+		(pin "2"
+			(uuid "9444bb43-58be-4d83-9ef4-e053b69f99b1")
+		)
+		(instances
+			(project "lpddr4_si"
+				(path "/38d531f8-13ac-444b-9a1a-31544833a7bd"
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "GND"
+		(at 543.56 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca4b2318-4706-44a6-8674-d1e346b097db")
+	)
+	(label "ca5_80_u12b"
+		(at 535.94 208.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "80816ab0-5ab1-431e-bfea-963b6edd051c")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

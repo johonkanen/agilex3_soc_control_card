@@ -10,3 +10,9 @@
 docs/*.pdf
 docs/*.xlsx
 agilex_pinout_files/
+
+# Vendor IBIS models (Altera, Winbond, SK hynix): copyrighted, keep local. See sim/lpddr4_si/README.md.
+sim/lpddr4_si/models/
+sim/lpddr4_si/work/
+sim/**/__pycache__/
+sim/**/*.kicad_prl
