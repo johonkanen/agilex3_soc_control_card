@@ -13,6 +13,7 @@ are in `NEXT_STEPS.md` (section "IBIS simulation results") and `results/`.
 | `prep_models.py` | builds the two IBIS files used, from the vendor originals (see Models) |
 | `run_si.py` | sweep: schematic per point → `kicad-cli sch export netlist --format spice` (this runs KiCad's IBIS-to-SPICE converter, KIBIS) → ngspice (the libngspice inside the KiCad AppImage) → eyes, Rx-mask margins, over/undershoot. `--validate` checks the converted drivers against the IBIS V-t tables. |
 | `report.py` | `results/results.csv` → `results/results.md` |
+| `zsolve.py` | 2D field solve: trace width → Z0 and ps/mm for In2/In5 and F.Cu/B.Cu |
 | `results/` | `results.csv` (every receiver, ball and die), `results.md`, `eye_*.png` (20 mm points, receiver die), `validate_drivers.png/.md` |
 | `models/`, `work/` | git-ignored: vendor models, generated netlists/waveforms |
 
@@ -112,3 +113,41 @@ LPDDR4): voltage margin = opening over the mask window minus the mask height (fo
 margin = eye width at the mask height minus the mask width. Bits come from the driver's own die waveform; the receiver
 is aligned by cross-correlation. The margins are SI only (reflections, ISI, package, buffer edges): jitter, crosstalk,
 SSO and the DRAM/FPGA timing budgets (tDQSQ, tDIVW, training resolution) still have to fit inside them.
+
+## How narrow can the data traces be (2026-10-27)
+
+`zsolve.py`: 2D finite-difference field solve of one trace in this stack-up (same numbers as the earlier solve
+within ~2 %: 0.18 mm In2 = 40.7 Ω vs 39.8, 0.12 mm = 49.7 vs 48.6, F.Cu 0.15 mm = 49.6 vs 51). The range is the
+lower plane under In2 being In3 or In4:
+
+| width | In2/In5 stripline | F.Cu/B.Cu microstrip (30 µm mask) |
+|---|---|---|
+| 0.18 mm | 40.7–42.1 Ω, 7.01 ps/mm | |
+| 0.15 mm | 44.7–46.2 Ω | 49.6 Ω, 6.16 ps/mm |
+| 0.12 mm | 49.7–51.2 Ω | 54.6 Ω |
+| 0.10 mm | 53.8–55.3 Ω, 7.00 ps/mm | 58.6 Ω, 6.14 ps/mm |
+| 0.09 mm | 56.2–57.7 Ω | 60.9 Ω |
+| 0.08 mm | 58.8–60.3 Ω | |
+
+`run_si.py --zsweep` (DQ line and neck-downs at 55/60/65/70 Ω, 20 mm, typ and min corner; `results/results_zsweep.csv`),
+worst of ball/die, compared with 40 Ω:
+
+| DQ line | write: EH, margin V / t, Vmax / Vmin | read 48 Ω: EH, margin V / t |
+|---|---|---|
+| 40 Ω | 626 mV, +482 mV / +424 ps, 672 / −27 mV | 344 mV, +205 mV / +271 ps |
+| 50 Ω | 627, +485 / +422, 702 / −49 | 344, +205 / +264 |
+| 55 Ω | 626, +485 / +418, 714 / −56 | 344, +205 / +262 |
+| 60 Ω | 625, +484 / +416, 721 / −61 | 344, +205 / +260 |
+| 70 Ω | 626, +482 / +413, 728 / −65 | 344, +205 / +256 |
+
+The min corner moves every row by the same ~−28 mV (write) / −8 mV (read). The channel is short (≈140 ps of line) and
+terminated at both ends close to the line impedance (40 Ω source, 48/50 Ω ODT), so a mismatched line costs only
+small reflections: ~10–15 ps of time margin and ~55 mV more write overshoot going from 40 to 70 Ω. SI does not set
+the width limit in the range JLC can make; manufacturing does (JLC: 0.09 mm minimum trace on multilayer boards).
+
+**Recommendation: route the data bytes (DQ/DM/DQS) at 0.10 mm on In2/In5 (≈54–55 Ω) and on F.Cu/B.Cu (≈59 Ω).** That
+is the width already used for the BGA neck-downs and the Default net class, so a byte becomes one width end to end, with
+no neck-down steps. Do not go below 0.10 mm for whole routes: 0.09 mm is JLC's floor and gains nothing in SI; keep it
+for local squeezes only. Delay per mm is unchanged (7.00 / 6.14 ps/mm), so the length/delay tuning stays valid.
+Not simulated: crosstalk (narrower traces at the same pitch leave more gap, so it should not get worse; the 2h/3h
+spacing rules still apply), DQS/CK as coupled pairs, and SSO.

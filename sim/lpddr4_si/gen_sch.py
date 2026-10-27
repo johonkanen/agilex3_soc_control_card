@@ -153,9 +153,10 @@ def build(a):
 
     def dq_channel(tag, near, far):   # near = U7 side net, far = U12 side net
         s.via(near, f'{tag}_n1', a.via_dq)
-        s.tl(f'{tag}_n1', f'{tag}_l1', Z_NECK_IN, tneck)
+        zn = max(Z_NECK_IN, a.zdq)   # a line narrower than the 0.10 mm neck-down needs no neck-down
+        s.tl(f'{tag}_n1', f'{tag}_l1', zn, tneck)
         s.tl(f'{tag}_l1', f'{tag}_l2', a.zdq, tdq)
-        s.tl(f'{tag}_l2', f'{tag}_n2', Z_NECK_IN, tneck)
+        s.tl(f'{tag}_l2', f'{tag}_n2', zn, tneck)
         s.via(f'{tag}_n2', far, a.via_dq)
 
     s.row('dqw: DQ write, U7 40 ohm -> U12 ODT 48 ohm')

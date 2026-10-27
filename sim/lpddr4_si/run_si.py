@@ -294,6 +294,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--quick', action='store_true', help='baseline 40/50 ohm, 20 mm only')
     ap.add_argument('--validate', action='store_true', help='only check the converted drivers against IBIS V-t tables')
+    ap.add_argument('--zsweep', action='store_true', help='DQ line 55-70 ohm (how narrow can the traces be)')
     ap.add_argument('-j', type=int, default=6)
     a = ap.parse_args()
     if not os.path.exists(LIBNG): sys.exit('set KICAD_APPRUN to the extracted KiCad 10 AppImage AppRun')
@@ -307,6 +308,10 @@ def main():
             pts.append((f'z{z}_l20_shortvia', ['--zdq', str(z), '--ldq', '20', '--zca', str(z), '--via-dq', 'short'], False))
             for c in ('min', 'max'):
                 pts.append((f'z{z}_l20_{c}', ['--zdq', str(z), '--ldq', '20', '--zca', str(z), '--corner', c], False))
+    if a.zsweep:   # narrow DQ lines (CA as routed, 40 ohm)
+        pts = [(f'zs{z}_l20' + ('' if c == 'typ' else f'_{c}'),
+                ['--zdq', str(z), '--ldq', '20', '--zca', '40', '--corner', c], c == 'typ' and z in (60, 70))
+               for z in (55, 60, 65, 70) for c in ('typ', 'min')]
     jobs = []
     for tag, args, plot in pts:          # kicad-cli export is sequential (shared IBIS cache dir); ngspice in parallel
         if os.environ.get('SI_REUSE') and os.path.exists(os.path.join(WORK, tag + '.dat')):
@@ -318,9 +323,9 @@ def main():
     with ProcessPoolExecutor(a.j) as ex:
         for r in ex.map(run_point, jobs): rows += r
     keys = list(rows[0])
-    with open(os.path.join(RES, 'results.csv'), 'w', newline='') as f:
+    with open(os.path.join(RES, 'results_zsweep.csv' if a.zsweep else 'results.csv'), 'w', newline='') as f:
         wr = csv.DictWriter(f, keys); wr.writeheader(); wr.writerows(rows)
-    print(f'{len(rows)} rows -> results/results.csv')
+    print(f"{len(rows)} rows -> results/{'results_zsweep' if a.zsweep else 'results'}.csv")
 
 
 if __name__ == '__main__':
