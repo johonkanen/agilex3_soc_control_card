@@ -80,9 +80,13 @@ parts:
 | R241, R272–R279 | 10k pull-ups to `1V8` | `sd_cmd`, `sd_d0`–`sd_d7` |
 | R243 | 10k pull-up to `1V8` | `emmc_rst_n` (U7 BP75, HPS_IOA_13 / GPIO0_IO12; see `HPS_PINMUX.md`) |
 | R242 | 10k pull-down | `emmc_ds` (HS400 strobe, to U7 AP74, HPS_IOA_16 / SDMMC_DATA_STROBE) |
-| C242, C243 | 4u7 + 100n | VCCQ `1V8` |
-| C244, C245 | 4u7 + 220n (C16772) | VCC `3V3` |
-| C246 | 2u2 | VDDi |
+| C242, C243 | 4u7 0402 (C23733) + 100n 0201 (C190183) | VCCQ `1V8` |
+| C244, C245 | 4u7 0402 (C23733) + 220n 0201 (C76932) | VCC `3V3` |
+| C246 | 2u2 0201 (C77762) | VDDi |
+
+Placed on B.Cu under U11 (2026-10-27): the 0201s sit directly on the ball via-in-pad (C243 on N4/N5, C245 on K9/K8,
+C246 bridging a new C2 via and C4); the 4u7s just outside the ball array with short traces (C242 to P5/P6, C244 to
+J10/H10).
 
 Since 2026-10-26 the SD/MMC bus is on HPS_IOA_1–12 and DS on HPS_IOA_16 (see `HPS_PINMUX.md`), so HS400 is possible.
 The PCB is synced; U11 and its parts still need placing and routing. Only about 20 balls are used: DAT0–7 are in rows A/B (edge); the supply, CMD/CLK/DS/RST_n balls are inside
