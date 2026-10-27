@@ -26,8 +26,28 @@ main = origin/main at `26cd28a` plus two uncommitted doc notes (this file and `L
   - cases: one DQ byte write (FPGA 40 Ω → 50 Ω line → memory ODT 48 Ω) and read (memory 48 Ω → line → FPGA 50 Ω), and the
     CA bus at the T (FPGA 40 Ω → trunk → two branches → memory CA ODT 80 Ω); 1600 MT/s, eye height/width vs LPDDR4
     masks; compare 40 Ω and 50 Ω lines;
-  - tool options (to be checked): an IBIS-capable SPICE flow (e.g. ngspice/Qucs-S IBIS support, or an IBIS-to-SPICE
-    conversion for LTspice), or a commercial SI tool; also check what Altera provides for Agilex 5 EMIF board SI.
+  - **Tool: KiCad's built-in IBIS support + ngspice** (KiCad 10, already installed). Eeschema takes IBIS driver/receiver
+    models (Simulation_SPICE library: IBIS driver, IBIS receiver, TLINE); the interconnect is drawn by hand as
+    transmission lines + R/L/C. Alternatives checked 2026-10-27: SignalIntegrity (Python, S-parameter channels and eyes;
+    useful for an openEMS via/breakout model), eispice (native IBIS, old project), PyBERT / PyIBIS-AMI (SerDes only,
+    not for LPDDR4).
+  - **Plan (a small simulation schematic in its own KiCad project, e.g. `sim/lpddr4_si/`):**
+    1. Models: generate the Agilex 5 IBIS file from the Quartus test build (`~/dev/agilex5_emif_test/varA_ron48`,
+       board-level / signal-integrity output), so it carries the real LVSTL 1.1 V buffers and OCT settings. Ask SK hynix
+       or a distributor FAE for the H9HCNNN8KUMLHR IBIS. First check that both parse and simulate in KiCad: some vendor
+       files with zero-valued table entries make ngspice converge to 0.
+    2. Interconnect per net from the board: TLINE segments with Z0 and delay from the field solve (In2/In5: 0.18 mm =
+       39.8 Ω, 7.02 ps/mm; 0.12 mm ≈ 50 Ω; F/B: 0.20 mm = 44.3 Ω, 6.16 ps/mm; 0.15 mm ≈ 51 Ω), lengths from the routed
+       copper (KiCad delay readout or `tools/lpddr4_krt/paths.py`), vias as small L/C, the 0.1 mm BGA neck-downs as
+       short high-Z segments, the package from the IBIS [Package] RLC.
+    3. Cases, each with 40 Ω and 50 Ω lines: DQ write (FPGA 40 Ω → line → memory DQ ODT 48 Ω); DQ read (memory drive
+       48 Ω, or 40 Ω for the baseline → line → FPGA 50 Ω termination); the CA T (FPGA 40 Ω → trunk → T-via → two
+       branches → memory CA ODT 80 Ω, also try 60 Ω); CK as a pair if the models allow.
+    4. Stimulus: PRBS at 1600 MT/s (625 ps UI), or the worst-case pattern by hand; overlay the bits into an eye.
+       Measure eye height and width at the receiver pad against the LPDDR4 Rx mask (JEDEC JESD209-4 VdIVW/TdIVW),
+       plus overshoot/undershoot and ringing.
+    5. Decide: if 50 Ω keeps a margin comparable to 40 Ω, switch the data-byte profiles/widths to 0.12/0.15 mm and set
+       `MEM_ODT_DQ_X_RON=5` in the real Quartus project; otherwise stay at 40 Ω.
 
 ## Continue next time, in order
 
