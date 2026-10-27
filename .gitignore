@@ -16,3 +16,7 @@ sim/lpddr4_si/models/
 sim/lpddr4_si/work/
 sim/**/__pycache__/
 sim/**/*.kicad_prl
+sim/lpddr4_si/results/eye_zl*.png
+sim/lpddr4_si/results/eye_zf*.png
+sim/lpddr4_si/results/eye_zc*.png
+sim/lpddr4_si/results/eye_r2133.33_z[slfc]*.png

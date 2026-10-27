@@ -1,13 +1,14 @@
-"""results/results.csv -> results/results.md (tables for NEXT_STEPS.md).  python3 report.py
+"""results/results.csv -> results/results.md (tables for NEXT_STEPS.md).  python3 report.py [results/other.csv]
 
 Per row: the worst of the receiver ball and die (and of both U12 dies for CA). Margins are against the Rx mask
 (run_si.py MASK): v_margin = eye opening inside the mask window minus the mask height, t_margin = eye width at the
 mask height minus the mask width.
 """
-import csv, os, collections
+import csv, os, sys, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-rows = list(csv.DictReader(open(os.path.join(HERE, 'results', 'results.csv'))))
+SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, 'results', 'results.csv')
+rows = list(csv.DictReader(open(SRC)))
 for r in rows:
     for k, v in r.items():
         try: r[k] = float(v)
@@ -47,5 +48,5 @@ for case, title, mask in CASES:
         if case.startswith('ca') and 'DQ via only' in s: continue
         out.append(f"| {title} | {z} | {s} | {w['eh']:.0f} | {w['ew']:.0f} | {w['vm']:+.0f} | {w['tm']:+.0f} | "
                    f"{w['vmax']:.0f} / {w['vmin']:.0f} | {'ok' if w['ok'] else '**over**'} |")
-open(os.path.join(HERE, 'results', 'results.md'), 'w').write('\n'.join(out) + '\n')
+open(os.path.splitext(SRC)[0] + '.md', 'w').write('\n'.join(out) + '\n')
 print('\n'.join(out))

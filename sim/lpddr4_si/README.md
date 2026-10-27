@@ -14,6 +14,8 @@ are in `NEXT_STEPS.md` (section "IBIS simulation results") and `results/`.
 | `run_si.py` | sweep: schematic per point → `kicad-cli sch export netlist --format spice` (this runs KiCad's IBIS-to-SPICE converter, KIBIS) → ngspice (the libngspice inside the KiCad AppImage) → eyes, Rx-mask margins, over/undershoot. `--validate` checks the converted drivers against the IBIS V-t tables. |
 | `report.py` | `results/results.csv` → `results/results.md` |
 | `zsolve.py` | 2D field solve: trace width → Z0 and ps/mm for In2/In5 and F.Cu/B.Cu |
+| `show_eye.py` | opens the worst eye (or a given CSV row) in an interactive matplotlib window |
+| `../../tools/kicad_ibis_simulation` | git submodule with the generic parts (`kicad_ibis`: schematic writer, kicad-cli/KIBIS export, ngspice runner, eye analysis); `git submodule update --init` after cloning |
 | `results/` | `results.csv` (every receiver, ball and die), `results.md`, `eye_*.png` (20 mm points, receiver die), `validate_drivers.png/.md` |
 | `models/`, `work/` | git-ignored: vendor models, generated netlists/waveforms |
 
@@ -30,7 +32,10 @@ python3 prep_models.py models/agilex5_varA_ron48_quartus.ibs models/w66cl2nquafj
 # 2. check the converted drivers, then the sweep (12 points, about 10 min on 16 cores), then the table
 python3 run_si.py --validate
 python3 run_si.py            # --quick: 40/50 Ω at 20 mm only
-python3 report.py
+python3 run_si.py --zsweep   # also --zlimit (80-150 Ω), --zfail (long mismatched lines), --casweep (all at 0.10 mm)
+SI_RATE=2133.333 python3 run_si.py   # any of the above at 2133 MT/s (the -6S maximum); files get an _2133.33 suffix
+python3 report.py [results/results_x.csv]
+python3 show_eye.py          # worst eye in a window; --all includes the deliberately bad sweeps
 ```
 
 Needs python3 with numpy and matplotlib. `kicad-cli` resolves the IBIS paths in the schematic relative to the current
@@ -151,3 +156,26 @@ no neck-down steps. Do not go below 0.10 mm for whole routes: 0.09 mm is JLC's f
 for local squeezes only. Delay per mm is unchanged (7.00 / 6.14 ps/mm), so the length/delay tuning stays valid.
 Not simulated: crosstalk (narrower traces at the same pitch leave more gap, so it should not get worse; the 2h/3h
 spacing rules still apply), DQS/CK as coupled pairs, and SSO.
+
+## Maximum data rate, the failure limit and the CA bus at 0.10 mm (2026-10-27)
+
+The -6S EMIF IP allows 1600 and 2133 MT/s only. At 2133 MT/s (UI 469 ps; masks kept at the 1600 values in UI,
+not checked against JEDEC's 2133 column) everything still passes. Worst of ball/die, typ, mask margin V / t:
+
+| DQ line | 1600: write | 1600: read 48 Ω | 2133: write | 2133: read 48 Ω |
+|---|---|---|---|---|
+| 40 Ω | +484 / +424 | +205 / +271 | +465 / +286 | +202 / +158 |
+| 55 Ω | +486 / +418 | +205 / +262 | +454 / +284 | +200 / +156 |
+| 70 Ω | +484 / +413 | +205 / +256 | +427 / +284 | +193 / +151 |
+| 100 Ω | +476 / +404 | +204 / +237 | +400 / +271 | +186 / +134 |
+| 150 Ω | +434 / +376 | +184 / +187 | +316 / +247 | +152 / +71 |
+
+On a 20 mm route impedance alone never closes the eye (the line is ~140 ps). `--zfail` shows the analysis does fail
+when it should: 150 Ω with 40-80 mm of line fails the read mask at both rates (e.g. 2133, 80 mm: −4 mV, no width).
+
+`--casweep` (DQ 55 Ω, CA trunk 55/60 Ω, typ/min/max): worst margins 1600 / 2133 MT/s: DQ write +457/+416,
++427/+282; DQ read +197/+260, +192/+153; CA0 ODT 80 +318/+302, +230/+196; all inside abs max. **0.10 mm is fine for
+DQ/DM/DQS and the CA trunk at the maximum data rate.** CK/DQS as coupled pairs are still not simulated.
+
+Bit labels: the eyes are labelled with the KIBIS PRBS7 itself (x^7+x^6+1, fixed rotation), aligned to the driver
+die waveform; sampling the driver die directly flipped bits on badly mismatched lines and gave false fails.
