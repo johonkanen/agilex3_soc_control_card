@@ -48,19 +48,26 @@ Every swap must be described in the EMIF IP's `PHY_SWIZZLE_MAP`.
   BL7 holds byte 2 (dq16–23).
 - **`PIN_SWIZZLE_CH0_DQSn`:** for byte n, the DQ index on lane pins 0, 1, 2, 3, 8, 9, 10, 11.
 
-**Example:** swap dq24 and dq28 in BL6. Right now dq28 is on G35 (lane pin 1) and dq24 on G24 (lane pin 10).
+**Example:** swap dq24 and dq28 in BL6. Right now (2026-10-28) dq28 is on M32 (lane pin 3) and dq24 on G24 (lane
+pin 10).
 
 ```
-before: PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31
-after:  PIN_SWIZZLE_CH0_DQS3=27 24 29 26 25 30 28 31
+before: PIN_SWIZZLE_CH0_DQS3=27 26 29 28 31 30 24 25
+after:  PIN_SWIZZLE_CH0_DQS3=27 26 29 24 31 30 28 25
 ```
+
+**The swizzle is still changing.** DQ are being swapped within their bytes while the board is routed (bytes 0, 2
+and 3 so far on 2026-10-28, more while the other channel is routed). The current strings, lane map and Quartus result
+are in `LPDDR4_SWIZZLE_PLAN.md`; regenerate them after every batch rather than copying an old string into Quartus.
 
 ## Checklist for each batch of swaps
 
 1. Relabel the U7-side labels in `a5e_kicad/iobank3.kicad_sch`. U12 keeps its JEDEC names.
 2. Update the PCB from the schematic, then check that schematic parity is 0.
 3. Update the `PIN_SWIZZLE` / `BYTE_SWIZZLE` strings and the lane map in `LPDDR4_SWIZZLE_PLAN.md`.
-4. Re-run the Quartus fit (`~/dev/agilex5_emif_test`, `scripts/build_csv.sh`) and confirm no errors.
+4. Re-run the Quartus fit (`~/dev/agilex5_emif_test`) and confirm no errors: export the netlist
+   (`kicad-cli sch export netlist --format kicadxml`), make the pin table with `scripts/sch_to_csv.py`, then
+   `CSV=... REFCLK=100.0 TAG=... scripts/build_csv.sh A`. `gen_pins.py` prints the new swizzle string.
 5. Re-check skew: package delays belong to the U7 ball, so a swapped net takes on its new ball's delay (see "Package
    delays" in the plan).
 

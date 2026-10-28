@@ -17375,7 +17375,7 @@
 		)
 		(uuid "2d2f2955-82de-4bfc-8986-6a080cf483d3")
 	)
-	(label "dq31"
+	(label "dq25"
 		(at 66.04 71.12 0)
 		(effects
 			(font
@@ -17395,7 +17395,7 @@
 		)
 		(uuid "3e60dee4-de52-458d-a10e-333fbeb7bafc")
 	)
-	(label "dq4"
+	(label "dq6"
 		(at 208.28 104.14 0)
 		(effects
 			(font
@@ -17445,7 +17445,7 @@
 		)
 		(uuid "50dc0d3d-5c51-48c3-8522-a5f97d717c02")
 	)
-	(label "dq21"
+	(label "dq18"
 		(at 66.04 60.96 0)
 		(effects
 			(font
@@ -17505,7 +17505,7 @@
 		)
 		(uuid "5f8451b2-e538-4a8d-8b0b-5e5ce5d4511c")
 	)
-	(label "dq5"
+	(label "dq3"
 		(at 208.28 109.22 0)
 		(effects
 			(font
@@ -17535,7 +17535,7 @@
 		)
 		(uuid "636f627c-0b4c-4eb7-a53b-e58888d7c591")
 	)
-	(label "dq3"
+	(label "dq4"
 		(at 208.28 101.6 0)
 		(effects
 			(font
@@ -17575,7 +17575,7 @@
 		)
 		(uuid "6fe26a69-5efa-4908-98fd-c0b1e8f342de")
 	)
-	(label "dq25"
+	(label "dq31"
 		(at 66.04 78.74 0)
 		(effects
 			(font
@@ -17645,7 +17645,7 @@
 		)
 		(uuid "90e209a8-a034-42b6-87b7-69d33d4f7d2b")
 	)
-	(label "dq20"
+	(label "dq19"
 		(at 66.04 66.04 0)
 		(effects
 			(font
@@ -17665,7 +17665,7 @@
 		)
 		(uuid "9b7756c9-248a-439c-93e5-c44e35f995fc")
 	)
-	(label "dq6"
+	(label "dq5"
 		(at 208.28 121.92 0)
 		(effects
 			(font
@@ -17685,7 +17685,7 @@
 		)
 		(uuid "a1ffe649-9863-43bd-8128-8408734317fb")
 	)
-	(label "dq22"
+	(label "dq23"
 		(at 66.04 43.18 0)
 		(effects
 			(font
@@ -17805,7 +17805,7 @@
 		)
 		(uuid "bbb9254c-231b-474a-a280-9aeeae5b23a4")
 	)
-	(label "dq28"
+	(label "dq26"
 		(at 66.04 96.52 0)
 		(effects
 			(font
@@ -17855,7 +17855,7 @@
 		)
 		(uuid "c4a2453e-3a85-4e14-a65d-910f1d3e8193")
 	)
-	(label "dq18"
+	(label "dq21"
 		(at 66.04 63.5 0)
 		(effects
 			(font
@@ -17865,7 +17865,7 @@
 		)
 		(uuid "c6a8005a-cd77-41e9-b439-163e97191edd")
 	)
-	(label "dq19"
+	(label "dq20"
 		(at 66.04 68.58 0)
 		(effects
 			(font
@@ -17885,7 +17885,7 @@
 		)
 		(uuid "ce1191bc-c486-4f3e-920f-362285c2a74a")
 	)
-	(label "dq26"
+	(label "dq28"
 		(at 66.04 91.44 0)
 		(effects
 			(font
@@ -17965,7 +17965,7 @@
 		)
 		(uuid "e465f03e-388c-4f09-8dba-923e198af746")
 	)
-	(label "dq23"
+	(label "dq17"
 		(at 66.04 45.72 0)
 		(effects
 			(font
@@ -17985,7 +17985,7 @@
 		)
 		(uuid "e6a18373-f129-4fb5-a474-f6afb8a781eb")
 	)
-	(label "dq17"
+	(label "dq22"
 		(at 66.04 48.26 0)
 		(effects
 			(font
@@ -22935,17 +22935,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25094"
-			(at 242.57 65.278 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 242.57 63.5 0)
 			(hide yes)
@@ -22959,6 +22948,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 242.57 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25094"
+			(at 242.57 65.278 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23117,17 +23117,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25094"
-			(at 45.72 124.46 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" "~"
 			(at 45.72 124.46 90)
 			(hide yes)
@@ -23140,6 +23129,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 45.72 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25094"
 			(at 45.72 124.46 90)
 			(hide yes)
 			(show_name no)

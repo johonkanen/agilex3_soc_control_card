@@ -14715,6 +14715,10 @@
 		(uuid "02a5c7c9-2162-4ee2-8817-8eba55668ebb")
 	)
 	(no_connect
+		(at 96.52 50.8)
+		(uuid "49a41c36-8193-493b-aee7-8f7ae3e5e9f7")
+	)
+	(no_connect
 		(at 96.52 116.84)
 		(uuid "7768a526-9e0f-4127-a2c3-0acb99b24e6a")
 	)
@@ -15059,16 +15063,6 @@
 	)
 	(bus
 		(pts
-			(xy 66.04 48.26) (xy 66.04 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fc5e124-91d0-4395-b43d-279582efb231")
-	)
-	(bus
-		(pts
 			(xy 50.8 22.86) (xy 66.04 22.86)
 		)
 		(stroke
@@ -15409,7 +15403,7 @@
 	)
 	(bus
 		(pts
-			(xy 66.04 45.72) (xy 66.04 48.26)
+			(xy 66.04 45.72) (xy 66.04 50.8)
 		)
 		(stroke
 			(width 0)
@@ -20944,9 +20938,5 @@
 				)
 			)
 		)
-	)
-	(no_connect
-		(at 96.52 50.8)
-		(uuid "49a41c36-8193-493b-aee7-8f7ae3e5e9f7")
 	)
 )

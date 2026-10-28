@@ -15847,6 +15847,23 @@
 		)
 		(uuid "435322df-9539-44ee-9070-c4b24cc41d01")
 	)
+	(text "R264: HPS_COLD_nRESET pull-up, 1-10k to VCCIO_SDM (PCG 813266).\nMSEL = 011 (AS normal): R45 to 1V8. R9/R10 DNP: SDM_IO0/IO16 have internal pull-downs."
+		(exclude_from_sim no)
+		(at 52.07 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e476e50f-f115-4f23-bf97-46f0f4161fdf")
+	)
+	(junction
+		(at 82.55 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "034f162f-d78f-4083-8249-1ef58d8c7758")
+	)
 	(junction
 		(at 205.74 124.46)
 		(diameter 0)
@@ -16266,6 +16283,16 @@
 			(type default)
 		)
 		(uuid "194d74fd-8f62-424e-b200-b41b62d7682f")
+	)
+	(wire
+		(pts
+			(xy 82.55 87.63) (xy 87.63 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19ddafdc-16eb-4cfb-9186-594603c00965")
 	)
 	(wire
 		(pts
@@ -16757,6 +16784,16 @@
 		)
 		(uuid "92f2b624-8126-4444-b292-497a13daff61")
 	)
+	(wire
+		(pts
+			(xy 87.63 97.79) (xy 87.63 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94b0a142-b562-439d-a7c1-1a319deb4fdf")
+	)
 	(bus
 		(pts
 			(xy 180.34 58.42) (xy 180.34 60.96)
@@ -17237,6 +17274,16 @@
 		)
 		(uuid "fe4c4018-f029-4470-b793-b5938ce4d493")
 	)
+	(wire
+		(pts
+			(xy 87.63 87.63) (xy 87.63 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "febbc6d4-50d0-4055-a04f-de5886fed17f")
+	)
 	(table
 		(column_count 4)
 		(border
@@ -17645,6 +17692,16 @@
 		)
 		(uuid "76e1d295-c3ce-43a1-88a3-8d8debd21c2d")
 	)
+	(label "~{hps_cold_rstn}"
+		(at 87.63 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "80691cff-b62b-4b5a-a973-be8f8626a7a8")
+	)
 	(label "qspi_D3"
 		(at 88.9 62.23 90)
 		(effects
@@ -18006,17 +18063,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 80.772 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 82.55 93.98 0)
 			(hide yes)
@@ -18030,6 +18076,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 82.55 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 80.772 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18104,17 +18161,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 219.202 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 220.98 26.67 0)
 			(hide yes)
@@ -18128,6 +18174,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 219.202 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18202,17 +18259,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 70.612 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 72.39 93.98 0)
 			(hide yes)
@@ -18226,6 +18272,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 72.39 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 70.612 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18341,6 +18398,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 57.15 139.7 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a3e45d2-7a81-4b8c-b622-e960122d28e9")
+		(property "Reference" "#PWR021"
+			(at 57.15 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 57.15 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 57.15 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9cb15553-736c-4485-a102-09c9d3040007")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 231.14 26.67 0)
 		(unit 1)
@@ -18384,17 +18519,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C11702"
-			(at 229.362 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 231.14 26.67 0)
 			(hide yes)
@@ -18408,6 +18532,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 231.14 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C11702"
+			(at 229.362 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18482,17 +18617,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 75.692 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 77.47 93.98 0)
 			(hide yes)
@@ -18506,6 +18630,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 77.47 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 75.692 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18578,17 +18713,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C3030991"
-			(at 100.33 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060RS75000.pdf"
 			(at 100.33 162.56 0)
 			(hide yes)
@@ -18601,6 +18725,17 @@
 			)
 		)
 		(property "Description" "LED red 0603 WL-SMCW 2.0 V 250 mcd"
+			(at 100.33 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3030991"
 			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -21103,85 +21238,6 @@
 			)
 		)
 	)
-
-	(symbol
-		(lib_id "power:+3V3")
-		(at 57.15 139.7 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2a3e45d2-7a81-4b8c-b622-e960122d28e9")
-		(property "Reference" "#PWR021"
-			(at 57.15 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 57.15 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 57.15 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 57.15 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 57.15 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9cb15553-736c-4485-a102-09c9d3040007")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:R")
 		(at 88.9 46.99 0)
@@ -21226,17 +21282,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 87.122 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 88.9 46.99 0)
 			(hide yes)
@@ -21250,6 +21295,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 88.9 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 87.122 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21409,17 +21465,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C4109"
-			(at 188.722 123.19 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 190.5 123.19 0)
 			(hide yes)
@@ -21433,6 +21478,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 190.5 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C4109"
+			(at 188.722 123.19 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21458,6 +21514,98 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5ff2be18-5ecf-48f7-a54c-2f361158d472")
+		(property "Reference" "R264"
+			(at 87.63 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 87.63 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 85.852 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 87.63 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 85.852 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6ca4a3e4-9114-4714-8494-b5127b934523")
+		)
+		(pin "1"
+			(uuid "b14735df-ec23-49e7-8f94-bc86882fb639")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R264")
 					(unit 1)
 				)
 			)
@@ -21507,17 +21655,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 214.122 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 215.9 26.67 0)
 			(hide yes)
@@ -21531,6 +21668,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 215.9 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 214.122 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21605,17 +21753,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25130"
-			(at 110.49 164.338 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 110.49 162.56 0)
 			(hide yes)
@@ -21629,6 +21766,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 110.49 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25130"
+			(at 110.49 164.338 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21703,17 +21851,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 82.042 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 83.82 46.99 0)
 			(hide yes)
@@ -21727,6 +21864,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 83.82 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 82.042 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21886,17 +22034,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25900"
-			(at 60.452 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 62.23 93.98 0)
 			(hide yes)
@@ -21910,6 +22047,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 62.23 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 60.452 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21978,17 +22126,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25130"
-			(at 110.49 182.118 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 110.49 180.34 0)
 			(hide yes)
@@ -22002,6 +22139,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 110.49 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25130"
+			(at 110.49 182.118 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22160,17 +22308,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25900"
-			(at 55.372 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 57.15 133.35 0)
 			(hide yes)
@@ -22184,6 +22321,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 55.372 133.35 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22420,17 +22568,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25900"
-			(at 50.292 133.35 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 52.07 133.35 0)
 			(hide yes)
@@ -22444,6 +22581,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 52.07 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 50.292 133.35 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22511,17 +22659,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C3030991"
-			(at 100.33 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060RS75000.pdf"
 			(at 100.33 180.34 0)
 			(hide yes)
@@ -22534,6 +22671,17 @@
 			)
 		)
 		(property "Description" "LED red 0603 WL-SMCW 2.0 V 250 mcd"
+			(at 100.33 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C3030991"
 			(at 100.33 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -22620,17 +22768,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 224.282 26.67 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 226.06 26.67 0)
 			(hide yes)
@@ -22644,6 +22781,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 226.06 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 224.282 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22956,17 +23104,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 92.202 46.99 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 93.98 46.99 0)
 			(hide yes)
@@ -22980,6 +23117,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 93.98 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 92.202 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23139,17 +23287,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
-			(at 65.532 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 67.31 93.98 0)
 			(hide yes)
@@ -23163,6 +23300,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 67.31 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25744"
+			(at 65.532 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23236,17 +23384,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C1349419"
-			(at 46.99 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C1349419.pdf"
 			(at 46.99 55.88 0)
 			(hide yes)
@@ -23259,6 +23396,17 @@
 			)
 		)
 		(property "Description" "128Mb 1.8V QSPI NOR flash, dedicated RESET# (A4), SFDP, 24-ball TFBGA 6x8 mm 5x5 array - Agilex 5 SDM ASx4 boot compatible"
+			(at 46.99 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1349419"
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -23434,6 +23582,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 52.07 139.7 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0a5f15b-4cc7-4ac7-8013-15d35ae03018")
+		(property "Reference" "#PWR1562"
+			(at 52.07 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.07 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 52.07 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4e62a6a3-6828-4188-b141-4df94f72f946")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "#PWR1562")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 220.98 20.32 0)
 		(unit 1)
@@ -23517,231 +23743,4 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 82.55 87.63) (xy 87.63 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19ddafdc-16eb-4cfb-9186-594603c00965")
-	)
-	(junction
-		(at 82.55 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "034f162f-d78f-4083-8249-1ef58d8c7758")
-	)
-	(wire
-		(pts
-			(xy 87.63 87.63) (xy 87.63 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "febbc6d4-50d0-4055-a04f-de5886fed17f")
-	)
-
-	(symbol
-		(lib_id "Device:R")
-		(at 87.63 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5ff2be18-5ecf-48f7-a54c-2f361158d472")
-		(property "Reference" "R264"
-			(at 87.63 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 87.63 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 85.852 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25744"
-			(at 85.852 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 87.63 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6ca4a3e4-9114-4714-8494-b5127b934523")
-		)
-		(pin "1"
-			(uuid "b14735df-ec23-49e7-8f94-bc86882fb639")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "R264")
-					(unit 1)
-				)
-			)
-		)
-	)	(wire
-		(pts
-			(xy 87.63 97.79) (xy 87.63 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94b0a142-b562-439d-a7c1-1a319deb4fdf")
-	)
-	(label "~{hps_cold_rstn}"
-		(at 87.63 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "80691cff-b62b-4b5a-a973-be8f8626a7a8")
-	)
-	(text "R264: HPS_COLD_nRESET pull-up, 1-10k to VCCIO_SDM (PCG 813266).\nMSEL = 011 (AS normal): R45 to 1V8. R9/R10 DNP: SDM_IO0/IO16 have internal pull-downs."
-		(exclude_from_sim no)
-		(at 52.07 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e476e50f-f115-4f23-bf97-46f0f4161fdf")
-	)
-
-	(symbol
-		(lib_id "power:GND")
-		(at 52.07 139.7 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0a5f15b-4cc7-4ac7-8013-15d35ae03018")
-		(property "Reference" "#PWR1562"
-			(at 52.07 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 52.07 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4e62a6a3-6828-4188-b141-4df94f72f946")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
-					(reference "#PWR1562")
-					(unit 1)
-				)
-			)
-		)
-	))
+)

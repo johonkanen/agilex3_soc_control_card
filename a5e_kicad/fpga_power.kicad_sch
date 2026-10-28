@@ -15109,6 +15109,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "RECOMMENDED (not fitted yet): isolation filters per PCG 813266 table 32 -\nferrite bead (e.g. BLM15PX121SN1) + 4.7u || 100n at each pin group:\n1V8: VCCPLL1_HPS, VCCPLL2_HPS, VCCADC, VCCPLL_SDM\nVCORE: VCCPLLDIG1_HPS, VCCPLLDIG2_HPS, VCCPLLDIG_SDM"
+		(exclude_from_sim no)
+		(at 52.832 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "18c190ac-c7d0-4726-89f0-412943104d4c")
+	)
 	(text "6A bank at 3.3 V like 6B-6H (VCCIO_HVIO needs a dedicated supply, PCG table 32);\nfabric PLL refclk = Y4 100 MHz on AE11 (bank 6G)"
 		(exclude_from_sim no)
 		(at 52.832 159.512 0)
@@ -21176,17 +21187,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C415703"
-			(at 44.1452 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 43.18 152.4 0)
 			(hide yes)
@@ -21200,6 +21200,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 43.18 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C415703"
+			(at 44.1452 156.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25692,16 +25703,5 @@
 				)
 			)
 		)
-	)
-	(text "RECOMMENDED (not fitted yet): isolation filters per PCG 813266 table 32 -\nferrite bead (e.g. BLM15PX121SN1) + 4.7u || 100n at each pin group:\n1V8: VCCPLL1_HPS, VCCPLL2_HPS, VCCADC, VCCPLL_SDM\nVCORE: VCCPLLDIG1_HPS, VCCPLLDIG2_HPS, VCCPLLDIG_SDM"
-		(exclude_from_sim no)
-		(at 52.832 172.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "18c190ac-c7d0-4726-89f0-412943104d4c")
 	)
 )

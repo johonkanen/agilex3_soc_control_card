@@ -21200,17 +21200,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C25094"
-			(at 234.95 52.578 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 234.95 50.8 0)
 			(hide yes)
@@ -21224,6 +21213,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 234.95 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25094"
+			(at 234.95 52.578 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

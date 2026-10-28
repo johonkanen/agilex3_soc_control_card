@@ -9,6 +9,11 @@ the earlier variant R, which had U12 at its old position. All LPDDR4 copper is r
 - **Byte swizzle:** BL6↔BL7, and since 2026-10-26 also BL0↔BL1 (byte A0 on BL1, A1 on BL0; same lane-pin order, so
   the per-byte pin swizzle strings are unchanged). `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`.
 - **Pin swizzle:** re-optimised for the new position.
+- **Pin swizzle changed again while routing (2026-10-28):** in-lane DQ swaps in byte 0 (BL1: dq3–dq6), byte 2
+  (BL7: dq17–dq23) and byte 3 (BL6: dq25/26/28/31); byte 1 and the byte swizzle are unchanged. The lane map, the
+  Quartus strings and the package delays below are updated, and Quartus passes (see "Quartus check").
+  **Work in progress:** the pin swizzle will change again while the other channel is routed. After each batch, follow
+  the checklist in `LPDDR4_SWIZZLE_RULES.md`; the strings here are only valid for the schematic they were made from.
 - **Schematic/PCB sync:** the U7-side labels on `a5e_kicad/iobank3.kicad_sch` are relabelled, and the U7 pad nets on
   the PCB match them (schematic parity 0).
 - **Quartus fitter:** **pass**, with the R2 strings (see "Quartus check").
@@ -166,20 +171,20 @@ The full table, with all positions, is reproducible with the scripts described a
 - **Pin swizzle:** each lane's DQ are matched in escape order to the byte's balls (see the table below). Compared with
   variant R, 19 U7 pins changed.
 
-**Lane map** (lane pin: U7 ball → net (U12 ball)):
+**Lane map** (2026-10-28, from the schematic; lane pin: U7 ball → net (U12 ball)):
 
 | Lane | Byte | 0 | 1 | 2 | 3 | 4 DQS_T | 5 DQS_C | 6 DMI | 8 | 9 | 10 | 11 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | BL0 | A1 | J65 dq8 (B11) | G65 dq15 (B9) | T62 dq9 (C11) | M62 dq14 (C9) | G62 dqs1_P (D10) | E62 dqs1_N (E10) | J59 dm1 (C10) | T56 dq13 (E9) | M56 dq12 (F9) | G56 dq10 (E11) | E56 dq11 (F11) |
-| BL1 | A0 | AB62 dq0 (B2) | W62 dq1 (C2) | T65 dq7 (B4) | M65 dq6 (C4) | AB56 dqs0_P (D3) | W56 dqs0_N (E3) | T59 dm0 (C3) | AB48 dq5 (E4) | W48 dq2 (E2) | T51 dq4 (F4) | M51 dq3 (F2) |
-| BL6 | B1 | J35 dq27 (U11) | G35 dq28 (U9) | T32 dq29 (V9) | M32 dq26 (V11) | G32 dqs3_P (W10) | E32 dqs3_N (V10) | J27 dm3 (Y10) | T24 dq25 (Y11) | M24 dq30 (Y9) | G24 dq24 (AA11) | E24 dq31 (AA9) |
-| BL7 | B0 | B33 dq19 (U2) | A36 dq20 (U4) | B30 dq18 (V2) | A33 dq21 (V4) | B28 dqs2_P (W3) | A30 dqs2_N (V3) | A25 dm2 (Y3) | A22 dq17 (Y2) | A23 dq23 (AA4) | B22 dq22 (Y4) | A20 dq16 (AA2) |
+| BL1 | A0 | AB62 dq0 (B2) | W62 dq1 (C2) | T65 dq7 (B4) | M65 dq5 (E4) | AB56 dqs0_P (D3) | W56 dqs0_N (E3) | T59 dm0 (C3) | AB48 dq3 (F2) | W48 dq2 (E2) | T51 dq6 (C4) | M51 dq4 (F4) |
+| BL6 | B1 | J35 dq27 (U11) | G35 dq26 (V11) | T32 dq29 (V9) | M32 dq28 (U9) | G32 dqs3_P (W10) | E32 dqs3_N (V10) | J27 dm3 (Y10) | T24 dq31 (AA9) | M24 dq30 (Y9) | G24 dq24 (AA11) | E24 dq25 (Y11) |
+| BL7 | B0 | B33 dq20 (U4) | A36 dq19 (U2) | B30 dq21 (V4) | A33 dq18 (V2) | B28 dqs2_P (W3) | A30 dqs2_N (V3) | A25 dm2 (Y3) | A22 dq22 (Y4) | A23 dq17 (Y2) | B22 dq23 (AA4) | A20 dq16 (AA2) |
 
 **Quartus strings:** each list is ordered by lane pin 0,1,2,3,8,9,10,11, and each value is the x32 DQ index (channel B
 = 16 + n).
 
 ```
-BYTE_SWIZZLE_CH0=0 1 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 5 2 4 3;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=19 20 18 21 17 23 22 16;PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31;
+BYTE_SWIZZLE_CH0=1 0 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 5 3 2 6 4;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=20 19 21 18 22 17 23 16;PIN_SWIZZLE_CH0_DQS3=27 26 29 28 31 30 24 25;
 ```
 
 ## Move to −6 mm: what changed on the PCB
@@ -317,22 +322,23 @@ skew):
 ### Package delays
 
 **Agilex 5 (U7).** These come from the "Package Delay" column of the clean Quartus build
-(`~/dev/agilex5_emif_test/varA_clean/output_files/emif_test.pin`, variant R2 pinout). Values are in ps. Each Quartus
+(`~/dev/agilex5_emif_test/varA_clean/output_files/emif_test.pin`; the ball delays are the same in
+`varA_sch1028/`, and the nets per ball below follow the 2026-10-28 swizzle). Values are in ps. Each Quartus
 pin name matches the board net of the same name on that U7 ball. The skew limits above include these delays, so add
 them to the U7 end of each net before comparing with the limits.
 
 | Group | Reference | Ref (ps) | Spread vs reference (ps) | Net, ball, delay (ps) |
 |---|---|---|---|---|
-| Byte 0 (BL1) | dqs0_P | 116 | -27 … -2 | dqs0_P AB56 116, dqs0_N W56 117, dq0 AB62 106, dq1 W62 105, dq2 W48 98, dq3 M51 97, dq4 T51 97, dq5 AB48 98, dq6 M65 114, dq7 T65 113, dm0 T59 89 |
+| Byte 0 (BL1) | dqs0_P | 116 | -27 … -2 | dqs0_P AB56 116, dqs0_N W56 117, dq0 AB62 106, dq1 W62 105, dq2 W48 98, dq3 AB48 98, dq4 M51 97, dq5 M65 114, dq6 T51 97, dq7 T65 113, dm0 T59 89 |
 | Byte 1 (BL0) | dqs1_P | 112 | -5 … +21 | dqs1_P G62 112, dqs1_N E62 111, dq8 J65 122, dq9 T62 133, dq10 G56 108, dq11 E56 107, dq12 M56 122, dq13 T56 122, dq14 M62 132, dq15 G65 121, dm1 J59 113 |
-| Byte 2 | dqs2_P | 96 | +1 … +38 | dqs2_P B28 96, dqs2_N A30 96, dq16 A20 115, dq17 A22 133, dq18 B30 117, dq19 B33 97, dq20 A36 99, dq21 A33 115, dq22 B22 115, dq23 A23 134, dm2 A25 121 |
-| Byte 3 | dqs3_P | 81 | +4 … +22 | dqs3_P G32 81, dqs3_N E32 81, dq24 G24 85, dq25 T24 101, dq26 M32 102, dq27 J35 91, dq28 G35 91, dq29 T32 103, dq30 M24 101, dq31 E24 85, dm3 J27 93 |
+| Byte 2 (BL7) | dqs2_P | 96 | +1 … +38 | dqs2_P B28 96, dqs2_N A30 96, dq16 A20 115, dq17 A23 134, dq18 A33 115, dq19 A36 99, dq20 B33 97, dq21 B30 117, dq22 A22 133, dq23 B22 115, dm2 A25 121 |
+| Byte 3 (BL6) | dqs3_P | 81 | +4 … +22 | dqs3_P G32 81, dqs3_N E32 81, dq24 G24 85, dq25 E24 85, dq26 G35 91, dq27 J35 91, dq28 M32 102, dq29 T32 103, dq30 M24 101, dq31 T24 101, dm3 J27 93 |
 | CA/CK | ck_P | 100 | CA +26 … +33; CKE +13; CS +5 | ck_P J42 100, ck_N G42 98, ca0 B66 131, ca1 A68 130, ca2 B68 133, ca3 A70 133, ca4 B63 126, ca5 A66 126, cke A61 113, ~{cs} B58 105, ~{rst} M48 116 |
 
 Notes:
 - **CA vs CK** is the critical one: the package alone uses +26…+33 ps of the ±34 ps budget. On the board, make CK about
   30 ps longer than the CA lines (≈4 mm on In2) so that the total sits near zero.
-- **Byte 2:** dq17 and dq23 are +37/+38 ps late in the package against a +43 ps limit. Route them short relative to
+- **Byte 2:** dq17 (A23) and dq22 (A22) are +38/+37 ps late in the package against a +43 ps limit. Route them short relative to
   dqs2.
 - **Byte 0** (on BL1 since the byte swap): dm0 is 27 ps early. **Byte 1** (on BL0): dq9 and dq14 are 21/20 ps late.
 - **P/N within the package:** dqs0 1 ps, dqs1 1 ps, dqs2 0, dqs3 0, ck 2 ps. Add the 1–2 ps to the board-level pair
@@ -390,7 +396,16 @@ The test project is in `~/dev/agilex5_emif_test` (not in this repo):
 - `emif_io96b_hps` 5.0.0, LPDDR4 1×32, 1 rank, 4 Gb per channel;
 - 1600 MT/s with a 100 MHz refclk.
 
-**Variant R2 + byte swap BL0↔BL1 (current, 2026-10-26):** `src/u7_bank3_pins_bswap.csv`, `TAG=_bswap`
+**Routing swizzle, current (2026-10-28):** the pin table is generated from the current schematic netlist
+(`kicad-cli sch export netlist`, U7 bank 3A and U12 balls per net) as `src/u7_bank3_pins_sch1028.csv`;
+`CSV=$PWD/src/u7_bank3_pins_sch1028.csv REFCLK=100.0 TAG=_sch1028 scripts/build_csv.sh A` (`varA_sch1028/`).
+Synthesis (0 warnings), fitter (0 errors, 1 warning: 171167, the unused HPS `h2f_reset`) and timing pass; all 57
+LPDDR4 pins are on their assigned balls in the fitter pin report, and the generated `emif_io96b_hps.ip` has:
+`BYTE_SWIZZLE_CH0=1 0 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 5 3 2 6 4;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=20 19 21 18 22 17 23 16;PIN_SWIZZLE_CH0_DQS3=27 26 29 28 31 30 24 25;`
+Before the build: every `dqN` net reaches U12's DQN ball, each byte is in one lane with DQS/DMI on lane pins
+4/5/6, and the U7/U12 pad nets on the PCB match the schematic (114 nets, 0 mismatches).
+
+**Variant R2 + byte swap BL0↔BL1 (superseded by the 2026-10-28 routing swizzle):** `src/u7_bank3_pins_bswap.csv`, `TAG=_bswap`
 (`varA_bswap/`). Synthesis, fitter (0 errors, 1 warning) and timing pass. The generated string:
 `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=0 1 7 6 5 2 4 3;PIN_SWIZZLE_CH0_DQS1=8 15 9 14 13 12 10 11;PIN_SWIZZLE_CH0_DQS2=19 20 18 21 17 23 22 16;PIN_SWIZZLE_CH0_DQS3=27 28 29 26 25 30 24 31;`
 All 22 byte 0/1 pins landed on the swapped balls. The package delays above are from this build.
