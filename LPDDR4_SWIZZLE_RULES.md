@@ -48,7 +48,7 @@ Every swap must be described in the EMIF IP's `PHY_SWIZZLE_MAP`.
   BL7 holds byte 2 (dq16–23).
 - **`PIN_SWIZZLE_CH0_DQSn`:** for byte n, the DQ index on lane pins 0, 1, 2, 3, 8, 9, 10, 11.
 
-**Example:** swap dq24 and dq28 in BL6. Right now (2026-10-28) dq28 is on M32 (lane pin 3) and dq24 on G24 (lane
+**Example:** swap dq24 and dq28 in BL6. As routed (2026-10-28) dq28 is on M32 (lane pin 3) and dq24 on G24 (lane
 pin 10).
 
 ```
@@ -56,9 +56,10 @@ before: PIN_SWIZZLE_CH0_DQS3=27 26 29 28 31 30 24 25
 after:  PIN_SWIZZLE_CH0_DQS3=27 26 29 24 31 30 28 25
 ```
 
-**The swizzle is still changing.** DQ are being swapped within their bytes while the board is routed (bytes 0, 2
-and 3 so far on 2026-10-28, more while the other channel is routed). The current strings, lane map and Quartus result
-are in `LPDDR4_SWIZZLE_PLAN.md`; regenerate them after every batch rather than copying an old string into Quartus.
+**Final, as routed (2026-10-28):** all four bytes are routed and Quartus accepts the result:
+`BYTE_SWIZZLE_CH0=1 0 X X X X 3 2;PIN_SWIZZLE_CH0_DQS0=5 6 7 0 3 2 1 4;PIN_SWIZZLE_CH0_DQS1=10 8 13 14 12 11 9 15;PIN_SWIZZLE_CH0_DQS2=20 19 21 18 22 17 23 16;PIN_SWIZZLE_CH0_DQS3=27 26 29 28 31 30 24 25;`
+The lane map and the Quartus result are in `LPDDR4_SWIZZLE_PLAN.md`. Any further swap needs the checklist below again;
+regenerate the string rather than editing it by hand.
 
 ## Checklist for each batch of swaps
 
