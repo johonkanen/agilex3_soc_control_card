@@ -57,24 +57,53 @@ Net classes (Board Setup → Net Classes) and their patterns:
 
 | Class | Pattern | Profile |
 |---|---|---|
-| `lpddr_dq` | `.*dq(0-31)$`, `.*/dm[0-3]$` | SE, width 0.12 |
-| `lpddr_ca` | `.*/(ca[0-5]|cke|~{cs}|~{rst})$` | SE, width 0.12 |
-| `lpddr_diff` | `.*/(dqs[0-3]|ck)_[PN]$` | DIFF, 0.11 / 0.25 |
+| `lpddr_dq` | `.*dq(0-31)$`, `.*/dm[0-3]$` | SE, 0.10 mm |
+| `lpddr_ca` | `.*/(ca[0-5]|cke|~{cs}|~{rst})$` | SE, 0.10 mm |
+| `lpddr_diff` | `.*/(dqs[0-3]|ck)_[PN]$` | DIFF, 0.10 / 0.10 mm |
 
-With a profile assigned, the length tuner (`7` / `8` / `9`) reports and targets **ps** instead of mm, and via transitions are included using the stack-up heights (`use_height_for_length_calcs` is on). Delay constraints can be written in the custom rules in time units, e.g.
+With a profile assigned, the length tuner (`7` / `8` / `9`), the Net Inspector and DRC work in **ps**, and via
+transitions are included using the stack-up heights.
+
+**Package delay is on the board.** Every LPDDR4 ball of U7 has its Agilex 5 package delay as the pad's `die_delay`
+(pad-to-die delay, from the Quartus `.pin` "Package Delay" column). KiCad adds it to every delay it shows, so all
+numbers are die → U12 ball. Checked 2026-10-28: the 58 values equal the routed Quartus build (`varA_routed`), and
+stripping them lowers each net's KiCad delay by exactly its value. U12 (SK hynix) has no package data; its 5–15 ps
+spread is margin.
+
+## 4. How to tune (2026-10-28)
+
+**Budgets** (Altera 821801, ps, FPGA package included): DQ–DQS −68 … +43 per byte, CA–CK ±34, CS/CKE–CK ±85,
+CK–DQS −340 … +170, P/N < 1, T-branches < 1.
+
+**Rules in `agilex_3_soc.kicad_dru`:**
+- `lpddr_pair_skew`: DQS and CK P/N within 1 ps.
+- `lpddr_byteN_skew`: DQ/DM of each byte within 10 ps. KiCad keeps only one skew rule per net and the pair rule
+  needs both halves, so DQS is not in these groups.
+- The generated block `delay_report targets`: one delay window per LPDDR4 net, which the length tuner uses as its
+  target. DQ/DM/DQS ±5 ps, CA/CK ±10 ps, CS/CKE ±30 ps. Do not edit it by hand.
+
+**Report and targets:** `tools/lpddr4_delay/delay_report.py` (needs `KICAD_APPRUN` or `KICAD_CLI`):
 
 ```
-(rule "byte0 skew"
-  (condition "A.NetClass == 'lpddr_dq' && A.Name matches '.*/(dq[0-7]|dm0)$'")
-  (constraint skew (max 5ps) (within_diff_pairs no)))
+python3 tools/lpddr4_delay/delay_report.py -o LPDDR4_DELAY_REPORT.md          # report only
+python3 tools/lpddr4_delay/delay_report.py --dru -o LPDDR4_DELAY_REPORT.md    # + rewrite the target block
 ```
 
-## 4. How to use
+- It reads KiCad's own delays from a DRC run with a probe rule, so the numbers are exactly what the tuner shows.
+- CA/CKE/CS/CK are T-nets, and KiCad sums trunk + both branches. The script computes the branches from the copper:
+  its own total reproduces KiCad's to < 1.2 ps. It reports die → ball per channel, and flags T-branches more than
+  1 ps apart.
+- **Targets are lengthen-only.** Each byte goes to its slowest net (DQS included). CA/CKE/CS/CK go to the slowest
+  die → ball delay, plus each net's own branch for KiCad's total. If shortening one long net is easier (e.g. dqs0 in
+  byte 0), reroute it and rerun with `--dru`: the targets follow.
 
-1. Route each byte lane; it does not matter any more which layers a DQ uses, as long as the DQS pair of that lane sees a comparable via count.
-2. Tune to the DQS of the lane in ps (Inspect → Net Inspector shows delay when a profile is assigned).
-3. Add the Agilex 5 package delays from Quartus (Fitter → *.pin file / "Package skew" report) to the FPGA end – they are tens of ps and differ per ball – before comparing against the EMIF skew budget.
-4. CA/CK: match CA and CKE to CK in ps; match DQS of every lane to CK within the EMIF guideline.
+**Order:**
+1. P/N of each DQS pair and of CK (≤ 1 ps).
+2. Each byte to its target (`8` single track, `9` skew).
+3. CK by hand as a coupled pair. At 2026-10-28 it needs about +136 ps (≈ 19 mm on In2) to meet the CA group. Then
+   ca1–ca5/cke/cs to their targets. Fix the `~{cs}` T: its branches are 40.7 / 11.1 ps, because the trunk joins near
+   R4.
+4. Rerun the report. Done when it says "all limits met" and DRC has no `skew_out_of_range` / `length_out_of_range`.
 
 ## 5. Impedance
 

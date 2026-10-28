@@ -347,8 +347,9 @@ Notes:
 - **Byte 0** (on BL1 since the byte swap): dm0 is 27 ps early. **Byte 1** (on BL0): dq13 (T62) and dq14 (M62) are 21/20 ps late.
 - **P/N within the package:** dqs0 1 ps, dqs1 1 ps, dqs2 0, dqs3 0, ck 2 ps. Add the 1–2 ps to the board-level pair
   skew budget.
-- KiCad has no per-pad delay setting. Apply the offsets per net, in the length tuner target or as per-net skew
-  rules.
+- KiCad 10 does have a per-pad delay: all 58 LPDDR4 balls of U7 carry these values as `die_delay` (pad-to-die
+  delay), checked equal to the routed Quartus build (`varA_routed`, 2026-10-28). KiCad's tuner, Net Inspector and
+  DRC include them. See `LPDDR4_DELAY_MATCHING.md` and `tools/lpddr4_delay/`.
 
 **SK hynix H9HCNNN8KUMLHR (U12): not available.** The public datasheet has no per-ball package lengths. The source
 would be the IBIS model's `[Pin]` RLC section, from SK hynix or a distributor FAE. A 200-ball LPDDR4 package
