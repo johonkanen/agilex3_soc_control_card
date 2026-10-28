@@ -20167,7 +20167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 81.28 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20200,7 +20200,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 81.28 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20259,7 +20259,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 40.64 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20292,7 +20292,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 40.64 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20351,7 +20351,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 121.92 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20384,7 +20384,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 121.92 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20597,7 +20597,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20630,7 +20630,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20920,7 +20920,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 111.76 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20953,7 +20953,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 111.76 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21489,7 +21489,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 60.96 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21522,7 +21522,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 60.96 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21673,7 +21673,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 71.12 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21706,7 +21706,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 71.12 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21842,7 +21842,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 91.44 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -21875,7 +21875,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 91.44 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -22165,7 +22165,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 50.8 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -22198,7 +22198,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 50.8 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -22426,7 +22426,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 30.48 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -22459,7 +22459,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 30.48 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -23426,7 +23426,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 101.6 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -23459,7 +23459,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C473048"
 			(at 101.6 152.4 0)
 			(hide yes)
 			(show_name no)
