@@ -602,23 +602,23 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.18,
-        "tuning_profile": "LPDDR4 SE 40R-45R JLC08161H-3313",
+        "track_width": 0.1,
+        "tuning_profile": "LPDDR4 SE 0.10mm 55R JLC08161H-3313",
         "via_diameter": 0.3,
         "via_drill": 0.15
       },
       {
         "clearance": 0.1,
         "diff_pair_gap": 0.1,
-        "diff_pair_width": 0.18,
+        "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "lpddr_diff",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.18,
-        "tuning_profile": "LPDDR4 DIFF 40R-45R JLC08161H-3313",
+        "track_width": 0.1,
+        "tuning_profile": "LPDDR4 DIFF 0.10-0.10mm 87R JLC08161H-3313",
         "via_diameter": 0.3,
         "via_drill": 0.15
       },
@@ -632,8 +632,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.18,
-        "tuning_profile": "LPDDR4 SE 40R-45R JLC08161H-3313",
+        "track_width": 0.1,
+        "tuning_profile": "LPDDR4 SE 0.10mm 55R JLC08161H-3313",
         "via_diameter": 0.3,
         "via_drill": 0.15
       }
@@ -1051,7 +1051,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "F.Cu",
             "top_reference_layer": "UNDEFINED",
-            "width": 200000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In2.Cu",
@@ -1059,7 +1059,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In1.Cu",
             "top_reference_layer": "F.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In3.Cu",
@@ -1067,7 +1067,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In2.Cu",
             "top_reference_layer": "In1.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In4.Cu",
@@ -1075,7 +1075,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In3.Cu",
             "top_reference_layer": "In2.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In5.Cu",
@@ -1083,7 +1083,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In4.Cu",
             "top_reference_layer": "In3.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In6.Cu",
@@ -1091,7 +1091,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In5.Cu",
             "top_reference_layer": "In4.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "B.Cu",
@@ -1099,7 +1099,7 @@
             "diff_pair_gap": 0,
             "signal_layer": "In6.Cu",
             "top_reference_layer": "In5.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "UNDEFINED",
@@ -1107,11 +1107,11 @@
             "diff_pair_gap": 0,
             "signal_layer": "B.Cu",
             "top_reference_layer": "In6.Cu",
-            "width": 200000
+            "width": 100000
           }
         ],
-        "profile_name": "LPDDR4 SE 40R-45R JLC08161H-3313",
-        "target_impedance": 40.0,
+        "profile_name": "LPDDR4 SE 0.10mm 55R JLC08161H-3313",
+        "target_impedance": 55.0,
         "type": 0,
         "via_overrides": [],
         "via_prop_delay": 7200000
@@ -1125,7 +1125,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "F.Cu",
             "top_reference_layer": "UNDEFINED",
-            "width": 200000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In2.Cu",
@@ -1133,7 +1133,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In1.Cu",
             "top_reference_layer": "F.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In3.Cu",
@@ -1141,7 +1141,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In2.Cu",
             "top_reference_layer": "In1.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In4.Cu",
@@ -1149,7 +1149,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In3.Cu",
             "top_reference_layer": "In2.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In5.Cu",
@@ -1157,7 +1157,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In4.Cu",
             "top_reference_layer": "In3.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "In6.Cu",
@@ -1165,7 +1165,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In5.Cu",
             "top_reference_layer": "In4.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "B.Cu",
@@ -1173,7 +1173,7 @@
             "diff_pair_gap": 100000,
             "signal_layer": "In6.Cu",
             "top_reference_layer": "In5.Cu",
-            "width": 180000
+            "width": 100000
           },
           {
             "bottom_reference_layer": "UNDEFINED",
@@ -1181,11 +1181,11 @@
             "diff_pair_gap": 100000,
             "signal_layer": "B.Cu",
             "top_reference_layer": "In6.Cu",
-            "width": 200000
+            "width": 100000
           }
         ],
-        "profile_name": "LPDDR4 DIFF 40R-45R JLC08161H-3313",
-        "target_impedance": 80.0,
+        "profile_name": "LPDDR4 DIFF 0.10-0.10mm 87R JLC08161H-3313",
+        "target_impedance": 87.0,
         "type": 1,
         "via_overrides": [],
         "via_prop_delay": 7200000

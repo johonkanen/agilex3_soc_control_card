@@ -4,34 +4,27 @@
 # LPDDR4 rules (net classes lpddr_dq, lpddr_ca, lpddr_diff).  KiCad applies the LAST matching rule,
 # so the general rules come first and the BGA-courtyard exceptions (U7 Agilex, U12 LPDDR4) after them.
 # intersectsCourtyard() also catches segments that cross the courtyard edge (insideCourtyard() would not).
-# Targets: Altera PCB Design Guidelines 821801, 6.3.2.2 (Agilex 5 E-Series Group B), Tables 8-10:
-#   main segment 40 ohm stripline / 45 ohm microstrip; break-out/break-in 50 ohm allowed; no differential
-#   target for CLK/DQS ("keep traces closely coupled", 4 mil in-pair spacing); spacing 2h within a group,
-#   3h between groups (CMD/CLK to DQ/DQS, nibble to nibble, serpentines, RESET); P/N skew < 1 ps.
-# Stack-up JLC08161H-3313 (field solve from the Ti135 session): 40 ohm = 0.18 mm on In2/In5, 50 ohm =
-#   0.15 mm on F/B, 40 ohm = 0.25 mm on F/B -> 45 ohm ~ 0.20 mm on F/B (interpolated, verify).  h ~ 0.1 mm
-#   on F.Cu/In2/In5, so 2h = 0.2 mm and 3h = 0.3 mm.  Route LPDDR4 on In2 (over In1 GND) first, In5 only
-#   inside one In6 pour, edge escapes on F.Cu; not on In3/In6 (see LPDDR4_SWIZZLE_PLAN.md).
+# Altera PCB Design Guidelines 821801, 6.3.2.2 (Agilex 5 E-Series Group B), Tables 8-10, recommend a
+#   40 ohm stripline / 45 ohm microstrip main segment, no differential target for CLK/DQS ("keep traces
+#   closely coupled", 4 mil in-pair spacing), spacing 2h within a group, 3h between groups (CMD/CLK to
+#   DQ/DQS, nibble to nibble, serpentines, RESET), P/N skew < 1 ps.
+# Widths: 0.10 mm everywhere instead (2026-10-28), from the IBIS simulation in sim/lpddr4_si (40-150 ohm
+#   lines, 1600 and 2133 MT/s, typ/min/max: margins move by only ~10-15 ps from 40 to 70 ohm). Stack-up
+#   JLC08161H-3313, field-solved (tools/kicad_ibis_simulation, zsolve.py): 0.10 mm = 54-55 ohm on In2/In5,
+#   59 ohm on F/B; pairs 0.10 / 0.10 mm gap = 44 ohm odd mode, 87-88 ohm differential. 0.09 mm (JLC
+#   minimum) only for local squeezes. h ~ 0.1 mm on F.Cu/In2/In5, so 2h = 0.2 mm and 3h = 0.3 mm.
+#   Route LPDDR4 on In2 (over In1 GND) first, In5 only inside one In6 pour, edge escapes on F.Cu; not on
+#   In3/In6 (see LPDDR4_SWIZZLE_PLAN.md).
 # JLCPCB minimum trace/space is 0.09 mm; the 0.075 mm clearance used between the 0.4 mm U7 pads is below
 # that - see the note at the end.
 # ===================================================================================================
 
-# ---- single-ended DQ/DM/CA outside the BGAs -------------------------------------------------------
-(rule "lpddr_se_outer"
-	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca')) && (A.Layer == 'F.Cu' || A.Layer == 'B.Cu')")
-	(constraint track_width (min 0.18mm) (opt 0.2mm) (max 0.22mm)))
-(rule "lpddr_se_inner"
-	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca')) && A.Layer != 'F.Cu' && A.Layer != 'B.Cu'")
-	(constraint track_width (min 0.16mm) (opt 0.18mm) (max 0.2mm)))
-
-# ---- DQS / CK pairs outside the BGAs: no differential target, same width as SE, 4 mil gap -----------
-(rule "lpddr_diff_outer"
-	(condition "A.hasNetclass('lpddr_diff') && (A.Layer == 'F.Cu' || A.Layer == 'B.Cu')")
-	(constraint track_width (min 0.18mm) (opt 0.2mm) (max 0.22mm))
-	(constraint diff_pair_gap (min 0.1mm) (opt 0.1mm) (max 0.15mm)))
-(rule "lpddr_diff_inner"
-	(condition "A.hasNetclass('lpddr_diff') && A.Layer != 'F.Cu' && A.Layer != 'B.Cu'")
-	(constraint track_width (min 0.16mm) (opt 0.18mm) (max 0.2mm))
+# ---- DQ/DM/CA and DQS/CK pairs: 0.10 mm on every layer, pairs with a 0.10 mm gap ------------------
+(rule "lpddr_width"
+	(condition "A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')")
+	(constraint track_width (min 0.09mm) (opt 0.1mm) (max 0.11mm)))
+(rule "lpddr_diff_gap"
+	(condition "A.hasNetclass('lpddr_diff')")
 	(constraint diff_pair_gap (min 0.1mm) (opt 0.1mm) (max 0.15mm)))
 
 # ---- pair integrity (whole net, all layers) --------------------------------------------------------
@@ -64,13 +57,13 @@
 	(condition "A.Type == 'Track' && (A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && (A.Layer == 'In1.Cu' || A.Layer == 'In3.Cu' || A.Layer == 'In4.Cu' || A.Layer == 'In6.Cu')")
 	(constraint disallow track))
 
-# ---- inside the BGA courtyards: neck-down and single-channel escape ---------------------------------
-# One 0.1 mm trace per channel between the balls.  A pair may split into two channels here, so the
+# ---- inside the BGA courtyards: single-channel escape --------------------------------------------
+# One 0.1 mm trace per channel between the balls (the same width as outside, so no neck-down).  A pair may split into two channels here, so the
 # gap has no real upper limit (5 mm; without a max KiCad applies 0.15 mm); it is counted as uncoupled
 # length by the rule above. The CA/CK T-branches under U12 rely on this.
 (rule "lpddr_bga_neckdown"
 	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && (A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12'))")
-	(constraint track_width (min 0.09mm) (opt 0.1mm))
+	(constraint track_width (min 0.09mm) (opt 0.1mm) (max 0.11mm))
 	(constraint diff_pair_gap (min 0.1mm) (opt 0.2mm) (max 5mm)))
 
 # Clearance between LPDDR tracks and the U7 pads / via-in-pad vias: the 0.4 mm pads on 0.65 mm pitch

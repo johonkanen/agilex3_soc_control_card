@@ -175,7 +175,13 @@ when it should: 150 Ω with 40-80 mm of line fails the read mask at both rates (
 
 `--casweep` (DQ 55 Ω, CA trunk 55/60 Ω, typ/min/max): worst margins 1600 / 2133 MT/s: DQ write +457/+416,
 +427/+282; DQ read +197/+260, +192/+153; CA0 ODT 80 +318/+302, +230/+196; all inside abs max. **0.10 mm is fine for
-DQ/DM/DQS and the CA trunk at the maximum data rate.** CK/DQS as coupled pairs are still not simulated.
+DQ/DM/DQS and the CA trunk at the maximum data rate.**
+
+DQS/CK pairs at 0.10 mm with a 0.10 mm gap (`zsolve --gap` in tools/kicad_ibis_simulation): 44 Ω odd mode, 87 Ω
+differential on In2/In5 (88 Ω on F/B.Cu); the old 0.18/0.10 mm pairs were 34 Ω / 68 Ω. Driven differentially, each
+leg sees Zodd, which is inside the simulated 40-70 Ω range, so the pairs are covered by the sweeps above by
+equivalence; P/N skew, mode conversion and crosstalk into the pair are not simulated (the skew/spacing rules cover
+them). The board rules were switched to 0.10 mm on 2026-10-28.
 
 Bit labels: the eyes are labelled with the KIBIS PRBS7 itself (x^7+x^6+1, fixed rotation), aligned to the driver
 die waveform; sampling the driver die directly flipped bits on badly mismatched lines and gave false fails.
