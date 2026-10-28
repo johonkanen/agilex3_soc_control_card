@@ -17395,7 +17395,7 @@
 		)
 		(uuid "3e60dee4-de52-458d-a10e-333fbeb7bafc")
 	)
-	(label "dq6"
+	(label "dq1"
 		(at 208.28 104.14 0)
 		(effects
 			(font
@@ -17435,7 +17435,7 @@
 		)
 		(uuid "5058916a-2415-49bd-a0ea-d96cae276b06")
 	)
-	(label "dq0"
+	(label "dq5"
 		(at 208.28 129.54 0)
 		(effects
 			(font
@@ -17665,7 +17665,7 @@
 		)
 		(uuid "9b7756c9-248a-439c-93e5-c44e35f995fc")
 	)
-	(label "dq5"
+	(label "dq0"
 		(at 208.28 121.92 0)
 		(effects
 			(font
@@ -17955,7 +17955,7 @@
 		)
 		(uuid "e141332c-968b-4f73-9217-964aeeef20b5")
 	)
-	(label "dq1"
+	(label "dq6"
 		(at 208.28 127 0)
 		(effects
 			(font
