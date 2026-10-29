@@ -21,3 +21,5 @@ sim/lpddr4_si/results/eye_zf*.png
 sim/lpddr4_si/results/eye_zc*.png
 sim/lpddr4_si/results/eye_r2133.33_z[slfc]*.png
 sim/refclk_si/work/
+sim/emmc_si/models/
+sim/emmc_si/work/
