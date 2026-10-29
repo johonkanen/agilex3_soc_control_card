@@ -131,7 +131,7 @@
 	(constraint length (min 284.1ps) (max 294.1ps)))
 (rule "dly_dm2"
 	(condition "A.NetName == '/IOBANK 3/dm2'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dm3"
 	(condition "A.NetName == '/IOBANK 3/dm3'")
 	(constraint length (min 223.7ps) (max 233.7ps)))
@@ -161,31 +161,31 @@
 	(constraint length (min 284.1ps) (max 294.1ps)))
 (rule "dly_dq16"
 	(condition "A.NetName == '/IOBANK 3/dq16'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq17"
 	(condition "A.NetName == '/IOBANK 3/dq17'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq18"
 	(condition "A.NetName == '/IOBANK 3/dq18'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq19"
 	(condition "A.NetName == '/IOBANK 3/dq19'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq2"
 	(condition "A.NetName == '/IOBANK 3/dq2'")
 	(constraint length (min 297.3ps) (max 307.3ps)))
 (rule "dly_dq20"
 	(condition "A.NetName == '/IOBANK 3/dq20'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq21"
 	(condition "A.NetName == '/IOBANK 3/dq21'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq22"
 	(condition "A.NetName == '/IOBANK 3/dq22'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq23"
 	(condition "A.NetName == '/IOBANK 3/dq23'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dq24"
 	(condition "A.NetName == '/IOBANK 3/dq24'")
 	(constraint length (min 223.7ps) (max 233.7ps)))
@@ -245,10 +245,10 @@
 	(constraint length (min 284.1ps) (max 294.1ps)))
 (rule "dly_dqs2_N"
 	(condition "A.NetName == '/IOBANK 3/dqs2_N'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dqs2_P"
 	(condition "A.NetName == '/IOBANK 3/dqs2_P'")
-	(constraint length (min 264.6ps) (max 274.6ps)))
+	(constraint length (min 265.5ps) (max 275.5ps)))
 (rule "dly_dqs3_N"
 	(condition "A.NetName == '/IOBANK 3/dqs3_N'")
 	(constraint length (min 223.7ps) (max 233.7ps)))
@@ -257,32 +257,32 @@
 	(constraint length (min 223.7ps) (max 233.7ps)))
 (rule "dly_ca0"
 	(condition "A.NetName == '/IOBANK 3/ca0'")
-	(constraint length (min 396.6ps) (max 416.6ps)))
+	(constraint length (min 417.0ps) (max 437.0ps)))
 (rule "dly_ca1"
 	(condition "A.NetName == '/IOBANK 3/ca1'")
-	(constraint length (min 392.7ps) (max 412.7ps)))
+	(constraint length (min 413.0ps) (max 433.0ps)))
 (rule "dly_ca2"
 	(condition "A.NetName == '/IOBANK 3/ca2'")
-	(constraint length (min 397.2ps) (max 417.2ps)))
+	(constraint length (min 417.6ps) (max 437.6ps)))
 (rule "dly_ca3"
 	(condition "A.NetName == '/IOBANK 3/ca3'")
-	(constraint length (min 396.6ps) (max 416.6ps)))
+	(constraint length (min 416.9ps) (max 436.9ps)))
 (rule "dly_ca4"
 	(condition "A.NetName == '/IOBANK 3/ca4'")
-	(constraint length (min 396.6ps) (max 416.6ps)))
+	(constraint length (min 417.0ps) (max 437.0ps)))
 (rule "dly_ca5"
 	(condition "A.NetName == '/IOBANK 3/ca5'")
-	(constraint length (min 392.5ps) (max 412.5ps)))
+	(constraint length (min 412.9ps) (max 432.9ps)))
 (rule "dly_ck_N"
 	(condition "A.NetName == '/IOBANK 3/ck_N'")
-	(constraint length (min 386.5ps) (max 406.5ps)))
+	(constraint length (min 406.9ps) (max 426.9ps)))
 (rule "dly_ck_P"
 	(condition "A.NetName == '/IOBANK 3/ck_P'")
-	(constraint length (min 386.5ps) (max 406.5ps)))
+	(constraint length (min 406.9ps) (max 426.9ps)))
 (rule "dly_cke"
 	(condition "A.NetName == '/IOBANK 3/cke'")
-	(constraint length (min 372.6ps) (max 432.6ps)))
+	(constraint length (min 393.0ps) (max 453.0ps)))
 (rule "dly_cs"
 	(condition "A.NetName == '/IOBANK 3/~{cs}'")
-	(constraint length (min 376.6ps) (max 436.6ps)))
+	(constraint length (min 396.9ps) (max 456.9ps)))
 # ---- END delay_report targets ----

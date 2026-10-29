@@ -48,6 +48,39 @@ main = origin/main at `26cd28a` plus two uncommitted doc notes (this file and `L
        plus overshoot/undershoot and ringing.
     5. Decide: if 50 Ω keeps a margin comparable to 40 Ω, switch the data-byte profiles/widths to 0.12/0.15 mm and set
        `MEM_ODT_DQ_X_RON=5` in the real Quartus project; otherwise stay at 40 Ω.
+  - **Agent prompt:** a ready-made prompt for an agent that runs this simulation is in `IBIS_SIM_AGENT_PROMPT.md`.
+- **IBIS simulation results (2026-10-27, `sim/lpddr4_si/`, details and rerun in its README):**
+  - Tool chain works headless: `gen_sch.py` writes a KiCad schematic (IBIS driver/receiver, TLINE, via L/C),
+    `kicad-cli sch export netlist --format spice` runs KiCad's IBIS converter, ngspice is the libngspice of the AppImage.
+    Needed workarounds for KiCad 10 bugs: case-sensitive `[Pin]` column names, `[R Series]` rejected, package matrices
+    ignored, Ku/Kd PWL too dense (sim did not finish) with solver spikes, corner values must be upper case.
+  - Models: Agilex 5 from Quartus (varA_ron48 build: `lvstl11_io_s3r40c_doff`) + `lvstl11_in_e0g50c` (50 Ω OCT) from the
+    Quartus EMIF IBIS library. **Memory: Winbond W66CL2NQUAFJ (public) as a stand-in**; the SK hynix model is not
+    public. Converted drivers match their IBIS V-t tables (levels 1 mV, edges 1–4 ps; Winbond PD48 fall 11 ps slow).
+  - Margins at receiver ball/die, worst of the two, vs JEDEC masks (DQ write 140 mV × 0.22 UI, CA 175 mV × 0.30 UI;
+    read: TI's SoC diamond 140 mV × 0.42 UI as a proxy), 20 mm DQ, typ / min / max corner:
+
+    | case | 40 Ω line: EH, margin V / t | 50 Ω line: EH, margin V / t |
+    |---|---|---|
+    | DQ write, FPGA 40 Ω → ODT 48 Ω | 626 mV, +482 mV / +424 ps (min corner +456 / +421) | 627 mV, +485 mV / +422 ps (min +457 / +417) |
+    | DQ read, DRAM 40 Ω → FPGA 50 Ω | 345 mV, +205 / +272 (min +195 / +269) | 345 mV, +205 / +267 (min +196 / +262) |
+    | DQ read, DRAM 48 Ω → FPGA 50 Ω | 344 mV, +205 / +271 (min +197 / +268) | 344 mV, +205 / +264 (min +197 / +262) |
+    | CA0 T, 28 mm trunk, CA ODT 80 Ω | 558 mV, +356 / +310 (min +339 / +310) | 558 mV, +355 / +310 |
+    | CA0 T, CA ODT 60 Ω | 465 mV, +288 / +318 | 464 mV, +283 / +312 |
+
+    16/22 mm and In2 (short) vias change these by < 15 mV / < 6 ps. Over/undershoot within limits everywhere:
+    write at the DRAM 672 / −27 mV (40 Ω) vs 702 / −49 mV (50 Ω); read at the FPGA ≤ 443 mV, ≥ −54 mV.
+  - **Recommendation: 50 Ω for the data bytes is fine from SI.** The 50 Ω margins are within 1–3 mV / 2–8 ps of 40 Ω in
+    every case and corner, far above the masks (eyes ~620 ps of the 625 ps UI); the only visible cost is ~30 mV more
+    write overshoot, still well inside abs max. Memory drive 48 Ω vs 40 Ω makes no difference here (both fine), so
+    `MEM_ODT_DQ_X_RON=5` is optional rather than required. CA ODT 80 Ω is better than 60 Ω (+70 mV); keep 80.
+  - Not covered, check before relying on it: crosstalk (thinner traces at the same pitch → more spacing, so likely no
+    worse, but not simulated), SSO/PDN noise, jitter, the real SK hynix buffers/package (re-run when the FAE model
+    arrives: swap `MEM` in `gen_sch.py`). Via L/C and the 0.10 mm neck-down impedances are estimates.
+  - **How narrow (same day, `sim/lpddr4_si/README.md` "How narrow can the data traces be"):** field solve
+    (`zsolve.py`): 0.10 mm = 54–55 Ω on In2/In5, 59 Ω on F.Cu/B.Cu; 0.09 mm ≈ 57 Ω. Sim with DQ lines up to 70 Ω: margins
+    drop only ~10–15 ps (write overshoot +55 mV, still inside limits). **Route DQ/DM/DQS at 0.10 mm everywhere** (one
+    width end to end, same as the neck-downs); 0.09 mm (JLC minimum) only for local squeezes. ps/mm unchanged.
 
 ## Continue next time, in order
 

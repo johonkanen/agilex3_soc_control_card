@@ -100,6 +100,23 @@ def profiles(pro):
     return out  # type 0 single-ended, 1 differential
 
 
+def arc_len(x1, y1, xm, ym, x2, y2):
+    """Length of the circular arc start -> mid -> end."""
+    ax, ay, bx, by, cx, cy = x1, y1, xm, ym, x2, y2
+    d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
+    if abs(d) < 1e-12:
+        return math.hypot(x2 - x1, y2 - y1)
+    ux = ((ax * ax + ay * ay) * (by - cy) + (bx * bx + by * by) * (cy - ay) + (cx * cx + cy * cy) * (ay - by)) / d
+    uy = ((ax * ax + ay * ay) * (cx - bx) + (bx * bx + by * by) * (ax - cx) + (cx * cx + cy * cy) * (bx - ax)) / d
+    r = math.hypot(ax - ux, ay - uy)
+    ang = lambda x, y: math.atan2(y - uy, x - ux)
+    a1, am, a2 = ang(ax, ay), ang(bx, by), ang(cx, cy)
+    sweep = (a2 - a1) % (2 * math.pi)
+    if (am - a1) % (2 * math.pi) > sweep:   # mid not on the ccw path: the arc runs the other way
+        sweep = 2 * math.pi - sweep
+    return r * sweep
+
+
 def branches(board, nets):
     """{net: {u12 ball: branch delay ps}} for the T-shaped CA/CK nets. A branch is the part of the copper that only
     leads to that ball. With path delays d(U7, A), d(U7, B) and d(A, B) through the copper of a tree-shaped net, the
@@ -128,6 +145,12 @@ def branches(board, nets):
     for m in re.finditer(r'\(segment\s+\(start ([\d.-]+) ([\d.-]+)\)\s+\(end ([\d.-]+) ([\d.-]+)\)\s+\(width [\d.]+\)\s+'
                          r'\(layer "([^"]+)"\)\s+\(net (?:\d+ )?"([^"]*)"', txt):
         segs[m.group(6)].append((float(m.group(1)), float(m.group(2)), float(m.group(3)), float(m.group(4)), m.group(5)))
+    for b in blocks(txt, 'arc'):   # tuning meanders and rounded corners
+        m = re.search(r'\(start ([\d.-]+) ([\d.-]+)\)\s+\(mid ([\d.-]+) ([\d.-]+)\)\s+\(end ([\d.-]+) ([\d.-]+)\).*?'
+                      r'\(layer "([^"]+)"\).*?\(net (?:\d+ )?"([^"]*)"', b, re.S)
+        if m:
+            x1, y1, xm, ym, x2, y2 = map(float, m.groups()[:6])
+            segs[m.group(8)].append((x1, y1, x2, y2, m.group(7), arc_len(x1, y1, xm, ym, x2, y2)))
     for b in blocks(txt, 'via'):
         a = re.search(r'\(at ([\d.-]+) ([\d.-]+)\)', b); n = re.search(r'\(net (?:\d+ )?"([^"]*)"', b)
         if n:
@@ -140,8 +163,8 @@ def branches(board, nets):
         g = collections.defaultdict(list)   # nodes: ((x, y), layer) and ('pad', ref, ball)
         def edge(a, b, w):
             g[a].append((b, w)); g[b].append((a, w))
-        for x1, y1, x2, y2, L in segs[net]:
-            edge((key(x1, y1), L), (key(x2, y2), L), math.hypot(x2 - x1, y2 - y1) * lay_ps[L])
+        for x1, y1, x2, y2, L, *arc in segs[net]:
+            edge((key(x1, y1), L), (key(x2, y2), L), (arc[0] if arc else math.hypot(x2 - x1, y2 - y1)) * lay_ps[L])
         pts = collections.defaultdict(set)
         for n in list(g):
             pts[n[0]].add(n[1])
