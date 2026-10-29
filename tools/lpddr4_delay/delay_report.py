@@ -220,7 +220,8 @@ def write_dru(path, targets):
         old = old[:old.index(BEGIN)].rstrip('\n') + '\n' + old[old.index(END) + len(END):].lstrip('\n')
     order = lambda n: (0 if n.startswith(('dq', 'dm')) else 1, n)
     blk = [BEGIN,
-           '# Lengthen-only targets: each byte tuned to its slowest net, CA/CKE/CS/CK to the slowest die->ball delay',
+           '# Lengthen-only targets: each byte tuned to its slowest net (floor: CK - 170 ps + window), CA/CKE/CS/CK to the',
+           '# slowest CA/CK die->ball delay',
            '# (KiCad totals: die_delay + copper; T-nets include both branches). Rerun the script after re-routing.']
     for n in sorted(targets, key=order):
         tg, tol = targets[n]
@@ -257,31 +258,6 @@ def main():
             p('| %s | missing | | | **FAIL** |' % pair); bad.append(pair + ' missing'); continue
         p('| %s | %.1f | %.1f | %+.1f | %s |' % (pair, P, N, P - N, chk(abs(P - N) < LIM['pn'], pair + ' P/N')))
 
-    p('\n## Data bytes (DQ/DM - DQS_P, limit %+d ... %+d ps; design target: group spread <= %d ps)\n'
-      % (LIM['dq'] + (TGT['byte'],)))
-    p('Lengthen-only tuning: every net of a byte (DQS_P/N included) is tuned to the slowest one, the **KiCad tuner '
-      'target** column; "add" is what each net needs. KiCad\'s delays already include the U7 package delay.\n')
-    p('| Byte | DQS_P (ps) | DQ/DM - DQS_P (ps) | Range | Spread | Limit | Target | KiCad tuner target | add (ps) |')
-    p('|---|---|---|---|---|---|---|---|---|')
-    for b, nets in BYTES.items():
-        ref = D.get('dqs%d_P' % b)
-        rel = {n: D[n] - ref for n in nets if n in D and ref is not None}
-        miss = [n for n in nets if n not in D]
-        if not rel:
-            p('| %d | missing | | | | **FAIL** | | | |' % b); bad.append('byte %d' % b); continue
-        lo, hi = min(rel.values()), max(rel.values())
-        allv = list(rel.values()) + [0.0]
-        grp = {n: D[n] for n in nets + ['dqs%d_P' % b, 'dqs%d_N' % b] if n in D}
-        top = max(grp.values())
-        for n in grp:
-            targets[n] = (top, TGT['byte'] / 2)
-        p('| %d | %.1f | %s | %+.1f ... %+.1f | %.1f | %s | %s | %.1f | %s |' % (
-            b, ref, ', '.join('%s %+.1f' % (n, v) for n, v in rel.items()), lo, hi, max(allv) - min(allv),
-            chk(LIM['dq'][0] <= lo and hi <= LIM['dq'][1] and not miss, 'byte %d limit' % b),
-            'OK' if max(allv) - min(allv) <= TGT['byte'] else 'over', top,
-            ', '.join('%s +%.0f' % (n, top - v) for n, v in grp.items() if top - v >= 1) or 'none'))
-
-    p('\n## Address/command (die -> U12 ball, T-branch removed)\n')
     ball = {}
     for s in CA + CSCKE + ['ck_P', 'ck_N']:   # own copper + die must reproduce KiCad's total
         br = T.get(s)
@@ -296,10 +272,44 @@ def main():
         ball[s] = {'A': (b1, D[s] - d2, d1), 'B': (b2, D[s] - d1, d2)}
     ok = {s: v for s, v in ball.items() if v}
     mean = lambda v: (v['A'][1] + v['B'][1]) / 2
-    ref = max(mean(v) for v in ok.values()) if ok else None   # lengthen-only: the slowest die->ball
+    # lengthen-only: the slowest CA/CK die->ball. CS/CKE (+-85 ps vs CK) do not set it; they are tuned to the same
+    # base, and their wide window usually absorbs a longer route.
+    base = [mean(v) for s, v in ok.items() if s in CA or s.startswith('ck_')]
+    caref = max(base) if base else None
+    # byte floor: after tuning CK is at the ball at caref, so DQS must stay above caref - CK-DQS max (plus the window)
+    floor = caref - LIM['ckdqs'][1] + TGT['byte'] / 2 if caref is not None else None
+    p('\n## Data bytes (DQ/DM - DQS_P, limit %+d ... %+d ps; design target: group spread <= %d ps)\n'
+      % (LIM['dq'] + (TGT['byte'],)))
+    p('Lengthen-only tuning: every net of a byte (DQS_P/N included) is tuned to the slowest one, the **KiCad tuner '
+      'target** column, but not below %s ps (CK at the ball after tuning - %d ps CK-DQS max + %g ps window), so CK-DQS '
+      'holds after tuning. "add" is what each net needs. KiCad\'s delays already include the U7 package delay.\n'
+      % ('%.1f' % floor if floor is not None else '?', LIM['ckdqs'][1], TGT['byte'] / 2))
+    p('| Byte | DQS_P (ps) | DQ/DM - DQS_P (ps) | Range | Spread | Limit | Target | KiCad tuner target | add (ps) |')
+    p('|---|---|---|---|---|---|---|---|---|')
+    for b, nets in BYTES.items():
+        ref = D.get('dqs%d_P' % b)
+        rel = {n: D[n] - ref for n in nets if n in D and ref is not None}
+        miss = [n for n in nets if n not in D]
+        if not rel:
+            p('| %d | missing | | | | **FAIL** | | | |' % b); bad.append('byte %d' % b); continue
+        lo, hi = min(rel.values()), max(rel.values())
+        allv = list(rel.values()) + [0.0]
+        grp = {n: D[n] for n in nets + ['dqs%d_P' % b, 'dqs%d_N' % b] if n in D}
+        top = max(grp.values())
+        if floor is not None and floor > top:
+            top = floor
+        for n in grp:
+            targets[n] = (top, TGT['byte'] / 2)
+        p('| %d | %.1f | %s | %+.1f ... %+.1f | %.1f | %s | %s | %.1f | %s |' % (
+            b, ref, ', '.join('%s %+.1f' % (n, v) for n, v in rel.items()), lo, hi, max(allv) - min(allv),
+            chk(LIM['dq'][0] <= lo and hi <= LIM['dq'][1] and not miss, 'byte %d limit' % b),
+            'OK' if max(allv) - min(allv) <= TGT['byte'] else 'over', top,
+            ', '.join('%s +%.0f' % (n, top - v) for n, v in grp.items() if top - v >= 1) or 'none'))
+
+    p('\n## Address/command (die -> U12 ball, T-branch removed)\n')
     p('KiCad shows the whole T (die + trunk + both branches). Lengthen-only tuning: every CA/CKE/CS/CK net is brought '
-      'to the slowest die->ball delay (%s ps); its **KiCad tuner target** is that plus its own branch (mean of A '
-      'and B). T-branches must match within 1 ps (A vs B).\n' % ('%.1f' % ref if ref else '?'))
+      'to the slowest CA/CK die->ball delay (%s ps; CS/CKE do not set it, their window is wide); its **KiCad tuner target** is that plus its own branch (mean of A '
+      'and B). T-branches must match within 1 ps (A vs B).\n' % ('%.1f' % caref if caref else '?'))
     p('| Net | KiCad total (ps) | branch A / B (ps) | die->ball A | die->ball B | - CK_P (A / B) | Limit | KiCad tuner target | add (ps) |')
     p('|---|---|---|---|---|---|---|---|---|')
     ckb = ball.get('ck_P')
@@ -317,22 +327,23 @@ def main():
         tbad = abs(v['A'][2] - v['B'][2]) >= 1.0
         if tbad:
             bad.append('%s T-branches %.1f/%.1f' % (s, v['A'][2], v['B'][2]))
-        tgt = ref + (v['A'][2] + v['B'][2]) / 2
+        tgt = caref + (v['A'][2] + v['B'][2]) / 2
         targets[s] = (tgt, TGT['ca'] / 2 if s in CA or s.startswith('ck_') else TGT['cscke'] / 2)
         p('| %s | %.1f | %.1f / %.1f%s | %.1f (%s) | %.1f (%s) | %s | %s | %.1f | %+.0f |' % (
             s, D[s], v['A'][2], v['B'][2], ' **FAIL**' if tbad else '', v['A'][1], v['A'][0], v['B'][1], v['B'][0],
             rel, verdict + (' (%+d ... %+d)' % lim if verdict else ''), tgt, tgt - D[s]))
     if ckb:
         p('\n## CK - DQS (limit %+d ... %+d ps)\n' % LIM['ckdqs'])
-        p('| Byte | channel | CK_P at ball (ps) | DQS_P (ps) | CK - DQS | |')
-        p('|---|---|---|---|---|---|')
+        p('| Byte | channel | CK_P at ball (ps) | DQS_P (ps) | CK - DQS | | after tuning (CK %.1f - DQS target) |' % caref)
+        p('|---|---|---|---|---|---|---|')
         for b in range(4):
             c = BYTE_CH[b]; q = D.get('dqs%d_P' % b)
             if q is None:
                 continue
             r = ckb[c][1] - q
-            p('| %d | %s | %.1f | %.1f | %+.1f | %s |' % (b, c, ckb[c][1], q, r,
-                                                         chk(LIM['ckdqs'][0] <= r <= LIM['ckdqs'][1], 'CK-DQS %d' % b)))
+            p('| %d | %s | %.1f | %.1f | %+.1f | %s | %+.1f |' % (b, c, ckb[c][1], q, r,
+                                                         chk(LIM['ckdqs'][0] <= r <= LIM['ckdqs'][1], 'CK-DQS %d' % b),
+                                                         caref - targets['dqs%d_P' % b][0]))
     rst = D.get('~{rst}')
     if rst is not None:
         p('\n~{rst}: %.1f ps total (no matching requirement).' % rst)
