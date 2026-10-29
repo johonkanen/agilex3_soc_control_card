@@ -19,14 +19,14 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 | Rail (net) | Source | Nominal | Enable | Loads |
 |---|---|---|---|---|
 | `5V0` / `5V` | J6 (2x3 header), also J4.3 | 5.0 V in | – | all regulators, U6 |
-| `VCORE` | U15 TDA38812XUMA1 buck, remote sense via `vcoresense_P/N` (VCCLSENSE BN46 / GNDSENSE BN44), FB divider R2 10k / R1 39k -> 0.6 V x (1 + 10/39) = **0.754 V** | 0.75 V | EN tied to 5V0 -> starts as soon as 5 V is present | all Group 1 pins (see §2) |
-| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 10k to the TDA38812 VCC LDO `tda_vcc` 3.0 V; was 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
+| `VCORE` | U15 TPS548A28RWWR buck (C5219375; was TDA38812, same land pattern), remote sense via `vcoresense_P/N` (VCCLSENSE BN46 / GNDSENSE BN44), FB divider R2 2.55k / R1 10k -> 0.6 V x (1 + 2.55/10) = **0.753 V** | 0.75 V | EN = `core_en`, divider R291 24.3k / R292 10k from 5V0 -> on at VIN 4.2 V | all Group 1 pins (see §2) |
+| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 10k to the U15 VCC LDO `tda_vcc` 3.0 V; was 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
 | `3V3` / `3v3` | U8 AP61202Z6, R85 200k / R83 44.2k -> 3.32 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
 | `1V2` | U19 AP61202Z6, R88 200k / R86 200k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
 | `1V1` | U16 AP61202Z6, R91 200k / R89 240k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
 | `3V3_analog` | U6 NCP163 LDO from 5V0 | 3.3 V intended | EN tied to 5V0 | ADC subsystem |
 
-- [x] VCORE set point 0.754 V matches the -6S core voltage; remote sense goes to the device sense pins.
+- [x] VCORE set point 0.753 V matches the -6S core voltage; remote sense goes to the device sense pins.
 - [x] **(2026-10-24)** FPGA load per rail, from the Quartus Power Analyzer on the EMIF test build (HPS at the DE25-Nano clocks, EMIF 1600 MT/s active, nearly empty fabric; Maximum characteristics, Tj 100 °C):
 
   | Rail | Load | Note |
@@ -38,14 +38,18 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
   | 3.3 V | < 0.01 A | before I/O loads |
 
   The 2 A AP61202 rails have plenty of headroom.
-- [x] **(2026-10-24) VCORE stage (TDA38812, data sheet V2.1):**
-  - **Rating:** 12 A part, 6–7 A worst-case load.
-  - **MODE:** R56 ‖ R57 = 60.6 kΩ selects 1 MHz FCCM (table 2: 60.4 kΩ).
-  - **Current limit:** R55 5.6k gives a valley OCP of 1.2 V / (20 µA/A × 5.6 kΩ) = 10.7 A typ, 12.4 A max.
-  - **Soft-start:** 2 × 68 nF = 2.2 ms, plus a 400 µs start delay.
-  - **Divider:** R2 10k / R1 39k -> 0.754 V, sensed differentially.
-  - **Output ripple:** about 2.9 A p-p at 1 MHz with 220 nH, into ~140 µF effective, so a few mV, well inside ±3 %.
-- [!] -> [x] **(2026-10-24)** PGOOD (U15 pin 9) has an absolute maximum of **4.0 V**, but R58 pulled it to 5V0. R58 is now 10k (data sheet: ≥ 10 kΩ) to the TDA38812's own VCC LDO (3.0 V). The AP61202 EN threshold is 0.91 V, so U18 still enables.
+- [x] **(2026-10-29) VCORE stage: U15 is now a TI TPS548A28RWWR (data sheet SNVSBB1D).** The TDA38812 is not available at JLC. The TPS548A28 has the same VQFN-HR-21 3 × 4 mm land pattern (pads compared one for one, the footprint `agilex_lib:TDA38812` is kept) and the same pin functions: CS -> TRIP, SS/VREF -> SS/REFIN, RGND -> VSNS–. The symbol is `agilex_5_lib:TPS548A28`.
+  - **Rating:** 15 A part, 6–7 A worst-case load. VIN 5 V is inside 3.0–16 V (internal VCC LDO).
+  - **MODE:** R57 60.4k to AGND = FCCM, 1 MHz (table 7-1). R56 stays DNP.
+  - **Current limit:** R55 5.6k, valley OCL = 60000 / 5.6k = 10.7 A (TRIP range 4.0–14.7k).
+  - **Soft-start:** C199 68n to VSNS– (the connection TI recommends) + C200 68n to GND: 136 nF × 0.6 V / 36 µA = 2.3 ms (internal minimum 1.5 ms).
+  - **Divider:** R2 2.55k (C95596) / R1 10k -> 0.753 V, sensed differentially. TI asks for 1–20 kΩ on the bottom resistor, so the old 10k / 39k was changed.
+  - **C198** (220 pF feed-forward across R2) is DNP: TI only suggests a feed-forward capacitor for Vout ≥ 2 V, and it feeds ripple into FB.
+  - **EN:** TI recommends EN ≤ 5.5 V and not tied to VIN. R291 24.3k (C26969) / R292 10k divide 5V0: EN = 1.46 V at 5 V, on at VIN 4.2 V (1.22 V threshold), off at 3.5 V.
+  - **Input capacitors:** TI requires a 1 µF 0402 X6S at each VIN pad (pins 10 and 21). C266 / C267 1 µF 16 V X6S (C393026) are added; place one at each pad. C224–C227 2.2 µF and the 22 µF bulk stay.
+  - **Output filter (D-CAP3):** 220 nH and 1 MHz need 103–1150 µF effective output capacitance (LC pole between fSW/100 and fSW/30). VCORE has about 170 µF effective (8 × 22 µF 0402, 47 µF 1210, 25 × 100 nF). On-time 151 ns > 85 ns minimum.
+  - **Output ripple:** about 2.9 A p-p at 1 MHz with 220 nH (29 % of 10 A, inside TI's 15–40 %), a few mV on VCORE, well inside ±3 %.
+- [x] **(2026-10-24, still valid)** R58 10k pulls PGOOD (U15 pin 9) up to U15's own VCC LDO (3.0 V; TPS548A28 PGOOD abs max 6 V). The AP61202 EN threshold is 0.91 V, so U18 still enables.
 - [!] -> [x] **(2026-10-24)** L1 must have Isat ≥ OCPmax + ripple = 12.4 + 2.9 ≈ 15.3 A. The old part (Cyntec CMLE051H, 250 nH) had no LCSC number and no known rating. It is now **Tai-Tech TMPC0503H-R22MG-D** (C357176): 220 nH, Isat 21 A, Irms 15.5 A, 3.7 mΩ, 5.7 × 5.2 mm. The new footprint `agilex_lib:L_TaiTech_TMPC0503H` follows the data sheet land pattern.
 - [x] **(2026-10-24)** L2–L5 = 1 µH Cenker CKCS201610 (C97002: 2.05 A rated, 3.85 A saturation, 70 mΩ), the same as on the Agilex 3 card. The AP61202 data sheet asks for 1.0–1.5 µH and ≥ 1.35 × load; every rail stays well under 1.5 A. The DCR is above the data sheet's 50 mΩ efficiency suggestion, which costs little at these currents.
 - [x] All AP61202 feedback dividers give the intended voltages (R81/R84/R87/R90 are DNP).
@@ -73,7 +77,7 @@ Rail groups are from table 3 of the Power Management UG. All pins of each group 
 | VCCL_HPS_CORE2/3 | 4 (AL52, AL54, AR57, AW57) | VCORE | [x] (013B quad-core; on 008B these balls are GND) |
 | VCCPLLDIG1_HPS / VCCPLLDIG2_HPS | 2 (BB54, BB52) | VCORE | [x] |
 | VCC_HSSI_L | 2 (BJ54, BN54) | VCORE | [x] |
-| VCCLSENSE / GNDSENSE | BN46 / BN44 | vcoresense_P / vcoresense_N | [x] Kelvin sense to U15 FB / RGND |
+| VCCLSENSE / GNDSENSE | BN46 / BN44 | vcoresense_P / vcoresense_N | [x] Kelvin sense to U15 FB / VSNS– |
 
 ### Group 2A – 1.8 V, after Group 1 reaches 90 % (all on `1V8`)
 
@@ -134,7 +138,7 @@ That is common practice, but those loads switch on the same regulator. Accept it
 ```
 5V0 applied
   |-- U6  3V3_analog LDO        (EN = VIN, immediately)
-  |-- U15 VCORE 0.75 V          (EN = VIN, immediately)            ... Group 1
+  |-- U15 VCORE 0.75 V          (EN = 5V0 / 3.43, on at VIN 4.2 V)  ... Group 1
         PGOOD (open drain, 10k to U15 VCC 3.0 V) ->
         U18 1V8                                                    ... Group 2A (+ VCCIO_HVIO_6A)
               PG (open drain, 47k to 5 V) ->
@@ -144,15 +148,15 @@ That is common practice, but those loads switch on the same regulator. Accept it
 ```
 
 - [x] Order is Group 1 -> 2A -> 2B as required (VCCIO_HVIO_6A excepted, see §2).
-- [x] Each stage is gated by a PGOOD, so the "90 % before the next group starts" rule is met by construction (TDA38812 and AP61202 PG assert at roughly 90–95 % of nominal).
+- [x] Each stage is gated by a PGOOD, so the "90 % before the next group starts" rule is met by construction (TPS548A28 and AP61202 PG assert at roughly 90–95 % of nominal).
 - [x] All rails ramp monotonically (soft-start bucks, no pre-bias issues: every rail starts from 0 V because the previous rail's PG gates the next).
 - [x] POR-monitored rails (VCCL_SDM, VCCPT, VCCIO_SDM, VCCADC, VCC, VCCL_HPS, VCCIO_PIO_SDM, VCCRCORE, VCC_IO_SDM) are all present and in the right groups.
 - [x] The QSPI flash (1V8) and the 25 MHz oscillator Y2 (1V8) are up before the last Group 2B rail, so they are ready when the POR delay expires (AS fast mode, see §4).
 - [x] **(2026-10-24)** Per-rail ramp: the data sheet tRAMP is 200 µs–100 ms for each supply.
   - AP61202 soft-start is 0.5 ms; its PG rises at 95 % of the target, 55 µs later (AP61202 data sheet).
-  - The TDA38812 soft-start and on-delay are set by the MODE resistors R56/R57. Verify them against its data sheet; the window is wide.
+  - TPS548A28: EN to first switching 0.93–2 ms, soft-start 2.3 ms (C199 + C200), PGOOD 1.06–1.4 ms after the output is in regulation.
 - [!] **(2026-10-24)** AS fast mode (MSEL 001) requires **all** supplies to be fully ramped within 10 ms (813773 table 17 note 7; data sheet note 42). Here the regulators start one after another, gated by PG: VCORE soft-start + delay, then 0.5 ms (1V8), then 0.5 ms (1V2/3V3/1V1).
-  - That is probably under 10 ms, but it depends on the TDA38812 settings, and nothing on the board guarantees it.
+  - With the TPS548A28: VCORE PG after about 4.3–5.7 ms, then 1V8 (0.5 ms + 55 µs), then 1V2/3V3/1V1 (0.5 ms): about 5.4–6.8 ms in total, under 10 ms but without much margin.
   - AS normal mode (MSEL 011) only needs VCCIO_SDM to ramp within 10 ms, which the 0.5 ms 1V8 soft-start meets easily. The cost is a longer POR delay: 11.5–20.2 ms instead of 1.5–7.6 ms.
   - Table 17 labels fast mode "for CvP", which this board does not use. **Recommendation: change to AS normal mode.** See §4.
 - [ ] Power-down: the UG only *recommends* the reverse order. Nothing on the board enforces it (all rails just decay when 5 V is removed). Acceptable for a lab board; if you want it, add a discharge/sequencer later.
