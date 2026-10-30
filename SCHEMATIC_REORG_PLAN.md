@@ -13,6 +13,7 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 1 Remove noise | **done** | ERC 315 -> 242; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0, DRC unchanged (297 / 174 unconnected) |
 | — PHY leftovers | done | R38/R29 removed from schematic and PCB (open question 12), NC flags on 6C C19/H16 (13) |
 | 2 Power symbols and flags | **done** | ERC 234 -> 224; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0 |
+| — PHY1V2PLL | done | FB2/C18/C19 + `PHY1V2PLL` removed from schematic and PCB (open question 15); ERC 223 |
 | 3-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
@@ -424,6 +425,6 @@ Doing 1–9 should bring ERC from 337 to roughly 220, almost all of the rest bei
     unconnected (pin 1 on `PHY_RG`). Delete both from schematic and PCB, or were they meant as straps?
 13. *(done: NC flags.)* **Bank 6C pins C19 and H16** have neither a net nor an NC flag (ERC `pin_not_connected`): NC flags in step 7?
 14. *(done: copied into agilex_5_lib with the project footprint.)* **U12 `lib_symbol_mismatch`**: the IS43LQ32256A symbol differs from agilex_5_lib; update from library in step 2 (check pins with netdiff).
-15. **`PHY1V2PLL`**: only FB2, C18, C19 (all DNP, "no PLL rail on the RTL8211F") and its power symbol remain. Delete FB2/C18/C19
+15. *(done 2026-10-30: FB2/C18/C19, the rail and their copper removed.)* **`PHY1V2PLL`**: only FB2, C18, C19 (all DNP, "no PLL rail on the RTL8211F") and its power symbol remain. Delete FB2/C18/C19
     and the rail from schematic and PCB, or keep the DNP footprints?
 
