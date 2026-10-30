@@ -220,13 +220,17 @@ def write_dru(path, targets):
         old = old[:old.index(BEGIN)].rstrip('\n') + '\n' + old[old.index(END) + len(END):].lstrip('\n')
     order = lambda n: (0 if n.startswith(('dq', 'dm')) else 1, n)
     blk = [BEGIN,
-           '# Lengthen-only targets: each byte tuned to its slowest net (floor: CK - 170 ps + window), CA/CKE/CS/CK to the',
-           '# slowest CA/CK die->ball delay',
-           '# (KiCad totals: die_delay + copper; T-nets include both branches). Rerun the script after re-routing.']
+           '# Lengthen-only. opt is the length tuner target, min ... max the DRC window:',
+           '# - bytes: opt = window middle, +-5 ps; min = slowest in-limit net - 10 ps (floor: CK - 170 ps + 5 ps);',
+           '#   DQS_P/N: opt = the tuned P delay, +-0.5 ps',
+           '# - CA/CKE/CS: opt = CK die->ball + 10 ps (the tuner measures die -> ball on a T), min = CK die->ball,',
+           '#   max = min + band + own branch (DRC checks the whole T); CK: opt = its die->ball',
+           '#   Rerun the script after re-routing.']
     for n in sorted(targets, key=order):
-        tg, tol = targets[n]
-        blk.append('(rule "dly_%s"\n\t(condition "A.NetName == \'%s%s\'")\n\t(constraint length (min %.1fps) (max %.1fps)))'
-                   % (re.sub(r'[^\w]', '', n), PFX, n, tg - tol, tg + tol))
+        mn, opt, mx = targets[n]
+        blk.append('(rule "dly_%s"\n\t(condition "A.NetName == \'%s%s\'")\n'
+                   '\t(constraint length (min %.1fps) (opt %.1fps) (max %.1fps)))'
+                   % (re.sub(r'[^\w]', '', n), PFX, n, mn, opt, mx))
     blk.append(END)
     open(path, 'w').write(old.rstrip('\n') + '\n\n' + '\n'.join(blk) + '\n')
 
@@ -239,7 +243,7 @@ def main():
                     help='write the per-net KiCad tuner targets as delay windows into the board .kicad_dru '
                          '(between the BEGIN/END delay_report markers)')
     a = ap.parse_args()
-    targets = {}   # net -> (target ps, tolerance ps)
+    targets = {}   # net -> (min, opt, max) ps for the .kicad_dru; opt is the tuner target
     D = kicad_delays(a.board)
     T = branches(a.board, CA + CSCKE + ['ck_P', 'ck_N'])
     L = []; bad = []
@@ -272,18 +276,21 @@ def main():
         ball[s] = {'A': (b1, D[s] - d2, d1), 'B': (b2, D[s] - d1, d2)}
     ok = {s: v for s, v in ball.items() if v}
     mean = lambda v: (v['A'][1] + v['B'][1]) / 2
-    # lengthen-only: the slowest CA/CK die->ball. CS/CKE (+-85 ps vs CK) do not set it; they are tuned to the same
-    # base, and their wide window usually absorbs a longer route.
-    base = [mean(v) for s, v in ok.items() if s in CA or s.startswith('ck_')]
+    # CA/CK base: CK die->ball. CK is the reference of every CA/CS/CKE check, so it stays put; the CA/CS/CKE nets go
+    # up to it (band above it: TGT). A CA net above the band is reported as "shorten".
+    base = [mean(v) for s, v in ok.items() if s.startswith('ck_')]
     caref = max(base) if base else None
-    # byte floor: after tuning CK is at the ball at caref, so DQS must stay above caref - CK-DQS max (plus the window)
+    # byte floor: CK is at the ball at caref, so DQS must stay above caref - CK-DQS max (plus 5 ps margin)
     floor = caref - LIM['ckdqs'][1] + TGT['byte'] / 2 if caref is not None else None
     p('\n## Data bytes (DQ/DM - DQS_P, limit %+d ... %+d ps; design target: group spread <= %d ps)\n'
       % (LIM['dq'] + (TGT['byte'],)))
-    p('Lengthen-only tuning: every net of a byte (DQS_P/N included) is tuned to the slowest one, the **KiCad tuner '
-      'target** column, but not below %s ps (CK at the ball after tuning - %d ps CK-DQS max + %g ps window), so CK-DQS '
-      'holds after tuning. "add" is what each net needs. KiCad\'s delays already include the U7 package delay.\n'
-      % ('%.1f' % floor if floor is not None else '?', LIM['ckdqs'][1], TGT['byte'] / 2))
+    p('Lengthen-only tuning. Each byte gets a window min ... min + %d ps (the spread target); the **KiCad tuner '
+      'target** is the middle (`opt` in the .kicad_dru). The min is as low as the slowest net allows (slowest '
+      '- %d ps; a net above the DQ-DQS limit is to be shortened and does not count), but not below %s ps (CK at the '
+      'ball - %d ps CK-DQS max + %g ps), so CK-DQS holds. DQS_P/N get opt = the P delay after tuning, +-0.5 ps. '
+      '"add" / "shorten" is the distance to opt (nets inside the window may stay). KiCad\'s delays already include the U7 package '
+      'delay.\n' % (TGT['byte'], TGT['byte'], '%.1f' % floor if floor is not None else '?', LIM['ckdqs'][1],
+                     TGT['byte'] / 2))
     p('| Byte | DQS_P (ps) | DQ/DM - DQS_P (ps) | Range | Spread | Limit | Target | KiCad tuner target | add (ps) |')
     p('|---|---|---|---|---|---|---|---|---|')
     for b, nets in BYTES.items():
@@ -295,21 +302,32 @@ def main():
         lo, hi = min(rel.values()), max(rel.values())
         allv = list(rel.values()) + [0.0]
         grp = {n: D[n] for n in nets + ['dqs%d_P' % b, 'dqs%d_N' % b] if n in D}
-        top = max(grp.values())
-        if floor is not None and floor > top:
-            top = floor
+        over = {n for n, v in rel.items() if v > LIM['dq'][1]}
+        top = max(v for n, v in grp.items() if n not in over)
+        # window min ... min + TGT: as low as the slowest (in-limit) net allows, not below the CK-DQS floor
+        mn = max(top - TGT['byte'] + 0.5, floor if floor is not None else -1e9)
         for n in grp:
-            targets[n] = (top, TGT['byte'] / 2)
+            targets[n] = (mn, mn + TGT['byte'] / 2, mn + TGT['byte'])
+        # DQS_P/N: a 1 ps window at the P delay after tuning, so the tuner also matches the pair
+        pf = max(grp.get('dqs%d_P' % b, mn), mn)
+        for n in ('dqs%d_P' % b, 'dqs%d_N' % b):
+            if n in grp:
+                targets[n] = (pf - 0.5, pf, pf + 0.5)
         p('| %d | %.1f | %s | %+.1f ... %+.1f | %.1f | %s | %s | %.1f | %s |' % (
             b, ref, ', '.join('%s %+.1f' % (n, v) for n, v in rel.items()), lo, hi, max(allv) - min(allv),
             chk(LIM['dq'][0] <= lo and hi <= LIM['dq'][1] and not miss, 'byte %d limit' % b),
-            'OK' if max(allv) - min(allv) <= TGT['byte'] else 'over', top,
-            ', '.join('%s +%.0f' % (n, top - v) for n, v in grp.items() if top - v >= 1) or 'none'))
+            'OK' if max(allv) - min(allv) <= TGT['byte'] else 'over', mn + TGT['byte'] / 2,
+            ', '.join(('%s %+.1f' % (n, targets[n][1] - v)) if v <= targets[n][2] else
+                      '%s **shorten %.1f**' % (n, v - targets[n][1]) for n, v in grp.items()
+                      if abs(targets[n][1] - v) >= 1) or 'none'))
 
     p('\n## Address/command (die -> U12 ball, T-branch removed)\n')
-    p('KiCad shows the whole T (die + trunk + both branches). Lengthen-only tuning: every CA/CKE/CS/CK net is brought '
-      'to the slowest CA/CK die->ball delay (%s ps; CS/CKE do not set it, their window is wide); its **KiCad tuner target** is that plus its own branch (mean of A '
-      'and B). T-branches must match within 1 ps (A vs B).\n' % ('%.1f' % caref if caref else '?'))
+    p('KiCad shows the whole T (die + trunk + both branches). The length tuner, on a T, measures die -> ball. '
+      'Lengthen-only tuning to CK (die->ball %s ps): the **KiCad tuner target** (`opt`, die->ball) is CK + %g ps for '
+      'CA/CS/CKE and CK itself for CK. The DRC window is CK ... CK + %d ps (CA) or + %d ps (CS/CKE), plus the own '
+      'branch, because DRC checks the whole T. "add" is die->ball to opt (mean of A and B); nets inside the window '
+      'may stay. T-branches must match within 1 ps (A vs B).\n'
+      % ('%.1f' % caref if caref else '?', TGT['ca'] / 2, TGT['ca'], TGT['cscke']))
     p('| Net | KiCad total (ps) | branch A / B (ps) | die->ball A | die->ball B | - CK_P (A / B) | Limit | KiCad tuner target | add (ps) |')
     p('|---|---|---|---|---|---|---|---|---|')
     ckb = ball.get('ck_P')
@@ -327,11 +345,14 @@ def main():
         tbad = abs(v['A'][2] - v['B'][2]) >= 1.0
         if tbad:
             bad.append('%s T-branches %.1f/%.1f' % (s, v['A'][2], v['B'][2]))
-        tgt = caref + (v['A'][2] + v['B'][2]) / 2
-        targets[s] = (tgt, TGT['ca'] / 2 if s in CA or s.startswith('ck_') else TGT['cscke'] / 2)
-        p('| %s | %.1f | %.1f / %.1f%s | %.1f (%s) | %.1f (%s) | %s | %s | %.1f | %+.0f |' % (
+        band = 0.0 if s.startswith('ck_') else TGT['ca'] if s in CA else TGT['cscke']
+        tgt = caref + (0.0 if s.startswith('ck_') else TGT['ca'] / 2)
+        targets[s] = (caref - 0.5, tgt, caref + band + max(v['A'][2], v['B'][2]) + 0.5)
+        m = mean(v)
+        add = ('**shorten %.1f**' % (m - tgt)) if m > caref + band + 0.5 else '%+.1f' % (tgt - m)
+        p('| %s | %.1f | %.1f / %.1f%s | %.1f (%s) | %.1f (%s) | %s | %s | %.1f | %s |' % (
             s, D[s], v['A'][2], v['B'][2], ' **FAIL**' if tbad else '', v['A'][1], v['A'][0], v['B'][1], v['B'][0],
-            rel, verdict + (' (%+d ... %+d)' % lim if verdict else ''), tgt, tgt - D[s]))
+            rel, verdict + (' (%+d ... %+d)' % lim if verdict else ''), tgt, add))
     if ckb:
         p('\n## CK - DQS (limit %+d ... %+d ps)\n' % LIM['ckdqs'])
         p('| Byte | channel | CK_P at ball (ps) | DQS_P (ps) | CK - DQS | | after tuning (CK %.1f - DQS target) |' % caref)
@@ -343,7 +364,7 @@ def main():
             r = ckb[c][1] - q
             p('| %d | %s | %.1f | %.1f | %+.1f | %s | %+.1f |' % (b, c, ckb[c][1], q, r,
                                                          chk(LIM['ckdqs'][0] <= r <= LIM['ckdqs'][1], 'CK-DQS %d' % b),
-                                                         caref - targets['dqs%d_P' % b][0]))
+                                                         caref - targets['dqs%d_P' % b][1]))
     rst = D.get('~{rst}')
     if rst is not None:
         p('\n~{rst}: %.1f ps total (no matching requirement).' % rst)
@@ -357,9 +378,10 @@ def main():
             '**Result: %s**' % ('all limits met' if not bad else '%d check(s) fail: %s' % (len(bad), ', '.join(bad))), '']
     if a.dru:
         write_dru(os.path.splitext(a.board)[0] + '.kicad_dru', targets)
-        head += ['Per-net delay windows written to the .kicad_dru (block `delay_report targets`): DQ/DM/DQS '
-                 '+-%g ps, CA/CK +-%g ps, CS/CKE +-%g ps around the tuner targets.' %
-                 (TGT['byte'] / 2, TGT['ca'] / 2, TGT['cscke'] / 2), '']
+        head += ['Per-net delay rules written to the .kicad_dru (block `delay_report targets`), `opt` = tuner target: '
+                 'DQ/DM opt +-%g ps, DQS_P/N opt +-0.5 ps; CA/CS/CKE opt = CK + %g ps (die->ball), DRC window CK ... '
+                 'CK + %g / %g ps + branch; CK opt = its die->ball.' % (TGT['byte'] / 2, TGT['ca'] / 2, TGT['ca'],
+                                                                         TGT['cscke']), '']
     text = '\n'.join(head + L) + '\n'
     print(text)
     if a.out:
