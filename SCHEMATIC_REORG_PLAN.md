@@ -20,7 +20,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 5b Headers | **done** | J3, J5, RN1-RN7 on the Connectors sheet; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 183 -> 180 |
 | 5c debug_status | **done** | new sheet (page 19): U1/J1, U42/J10/C253/C254, J2/R47/R48, D1/D2/R16/R17; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 180 -> 178 |
 | 5d Power input | **done** | J4/J6 on new sheet `pwr_input` (page 20), U6/C10 on ps1; 5V0 sheet pins removed; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 178 |
-| 5e-9 | open | |
+| 5e ADC one name | **done** | ADC sheet pins `adc_sdo`, `adc_sclk`, `adc_cs_n`, `adc_mux0..2` replace the `{adc_IO}` bus; 0 renamed / 0 connectivity diffs; ERC 178 -> 157 (multiple_net_names 8 -> 2, net_not_bus_member 3 -> 0) |
+| 5e root drawing, 6-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -435,6 +436,12 @@ Original list:
   hierarchical `5V0` labels in ps/ps1 and the two `5V0` global labels in ps are now 5V0 power symbols. `pwr_input`
   has no sheet pins (only 5V0/GND). The ps1 title names the 3V3_analog LDO.
 - 5e: root now holds only sheet symbols: redraw it as the block diagram of §2, add ref-range table and revision log.
+  **Done so far (2026-10-30):** the root holds only sheet symbols. The six ADC wires have one name each: the ADC sheet
+  exports `adc_sdo`, `adc_sclk`, `adc_cs_n`, `adc_mux0..2` as single sheet pins (no `{adc_IO}` bus, `adc_IO` alias
+  unused) and each root wire carries only its bank label (`iob6f3` …), so the net names no longer flip between edits.
+  The ADC wires used to enter the `{iob6b}` bus (bus entries at x 123.19), which is not their bus (ERC
+  `net_not_bus_member`); that branch is gone, they join their bank bus by label name. **Left for step 8:** the block
+  diagram layout, the sheet index and the page order, because step 8 renames the sheets and renumbers the pages anyway.
 - Verify each: netdiff (0 diffs), Update PCB (no "Add footprint", only link/path updates and renames), DRC parity 0, unconnected ≤ 14.
 
 **Step 6 – Split the power and HPS sheets** [moves] [net]
