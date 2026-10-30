@@ -1773,9 +1773,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "R265-R267: 33R series on SDO/SCLK/CS (SCLK up to 60 MHz), as on the Agilex 3 card.\nFront end per ADS7056 data sheet 9.2.1: OPA365 + 33R/680p C0G, AVDD (= reference) 4u7 at the pin, DVDD on digital 3V3."
+	(text "R265-R267: 33R series on SDO/SCLK/CS (SCLK up to 60 MHz), as on the Agilex 3 card.\nFront end per ADS7056 data sheet 9.2.1: OPA365 + 33R/680p C0G, AVDD (= reference) 4u7 at the pin,\nDVDD on digital 3V3."
 		(exclude_from_sim no)
-		(at 167.64 116.84 0)
+		(at 30.48 162.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)

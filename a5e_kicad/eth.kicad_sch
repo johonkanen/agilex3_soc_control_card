@@ -6388,7 +6388,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "25 MHz +/-50 ppm crystal (RTL8211FDI: +/-50 ppm incl. first-year aging and load caps). C251/C252 = 2*(CL - Cstray): 27p for CL=18pF; adjust to the crystal."
+	(text "25 MHz +/-50 ppm crystal (RTL8211FDI: +/-50 ppm incl. first-year aging and load caps).\nC251/C252 = 2*(CL - Cstray): 27p for CL=18pF; adjust to the crystal."
 		(exclude_from_sim no)
 		(at 190.5 172.72 0)
 		(effects
@@ -6399,9 +6399,9 @@
 		)
 		(uuid "0a320eb4-7918-4019-93ad-d0e258218552")
 	)
-	(text "DVDD_RG decoupling C256-C258: pin 28 = internal 1.8 V RGMII/MDIO I/O LDO output (CFG_LDO=10), caps only."
+	(text "DVDD_RG decoupling C256-C258: pin 28 =\ninternal 1.8 V RGMII/MDIO I/O LDO output\n(CFG_LDO=10), caps only."
 		(exclude_from_sim no)
-		(at 238.76 40.64 0)
+		(at 238.76 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6421,7 +6421,7 @@
 		)
 		(uuid "5c2cd329-2382-4619-b16b-f654eb110501")
 	)
-	(text "SODIMM P1 not populated: {phy} bus to P1 is a leftover"
+	(text "J9: CT = common PHY-side centre tap (all 4 pairs) -> 100n to GND.\nGND/SH -> GND.\nGreen LED L3(+)/L4 <- PHY LED2 (1000M link/act, active low, 3.3 V)\ndirectly; R268 is also the CFG_LDO1 strap. Yellow L1/L2 unused.\nSODIMM P1 not populated: {phy} bus to P1 is a leftover"
 		(exclude_from_sim no)
 		(at 213.36 71.12 0)
 		(effects
@@ -6464,17 +6464,6 @@
 			(justify left)
 		)
 		(uuid "d0f5cae5-cdb3-4d97-a74f-2b0b93c9b377")
-	)
-	(text "Green LED L3(+)/L4 <- PHY LED2 (1000M link/act, active low, 3.3 V) directly; R268 is also the CFG_LDO1 strap. Yellow L1/L2 unused."
-		(exclude_from_sim no)
-		(at 213.36 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d1cdce38-a7db-42e0-86a0-586ee80b7962")
 	)
 	(text "Optional at these lengths (<20 mm) - fit 0R if not wanted."
 		(exclude_from_sim no)
@@ -6519,17 +6508,6 @@
 			(justify left)
 		)
 		(uuid "e6727ed0-16b0-4481-9a26-dd389278b25f")
-	)
-	(text "J9: CT = common PHY-side centre tap (all 4 pairs) -> 100n to GND. GND/SH -> GND."
-		(exclude_from_sim no)
-		(at 213.36 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f8b2d2ee-6f01-4dde-ac8d-070458384e13")
 	)
 	(junction
 		(at 198.12 133.35)

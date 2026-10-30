@@ -1163,7 +1163,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "U15 TPS548A28 (was TDA38812, same land pattern): VIN = 5V0, FSW = 1 MHz FCCM (R57 60.4k), valley OCL 10.7 A (R55 5.6k), Vout = 0.6 V x (1 + 2.55k/10k) = 0.753 V"
+	(text "U15 TPS548A28 (was TDA38812, same land pattern): VIN = 5V0, FSW = 1 MHz FCCM (R57 60.4k), valley OCL 10.7 A (R55 5.6k),\nVout = 0.6 V x (1 + 2.55k/10k) = 0.753 V"
 		(exclude_from_sim no)
 		(at 160.02 17.78 0)
 		(effects
@@ -10071,7 +10071,7 @@
 			)
 		)
 	)
-	(text "PWR_FLAG: VCORE (U15 SW / L1 pins are passive)"
+	(text "PWR_FLAG: VCORE (L1 pins are passive)"
 		(exclude_from_sim no)
 		(at 243.84 129.54 0)
 		(effects

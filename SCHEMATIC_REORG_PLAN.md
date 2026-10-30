@@ -14,7 +14,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | — PHY leftovers | done | R38/R29 removed from schematic and PCB (open question 12), NC flags on 6C C19/H16 (13) |
 | 2 Power symbols and flags | **done** | ERC 234 -> 224; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0 |
 | — PHY1V2PLL | done | FB2/C18/C19 + `PHY1V2PLL` removed from schematic and PCB (open question 15); ERC 223 |
-| 3-9 | open | |
+| 3 Grid, U2, text | **done** | ERC 223 -> 199 (endpoint_off_grid 24 -> 0); netdiff 0 / 0; DRC parity 0 |
+| 4-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -351,7 +352,20 @@ Original list:
 - Add per-rail power symbols to agilex_5_lib and swap with Change Symbols (§3.3); swap the 11 arrow-GNDs for `power:GND`; add `PWR_FLAG`s; add `power` to `sym-lib-table`.
 - Verify: netdiff 0 renamed, 0 diffs. (If a swapped symbol's Value differs by one character, it shows as a rename – that is the check.)
 
-**Step 3 – Align to grid, fix U2 symbol** [cosmetic]
+**Step 3 – Align to grid, fix U2 symbol** [cosmetic] — **done 2026-10-30, ERC 223 → 199**
+
+Done: the root U42 cluster moved onto the 1.27 mm grid (U42, its wires, labels and power symbols +0.28 mm; the
+power symbols right of it −0.28 mm, so the 3.1 mm stubs became 2.54 mm); U2 (agilex_5_lib `MX25U25645G`) redrawn:
+CS#/SCLK/RESET# left, SIO0–3 right, VCC top, GND bottom, the 15 NC/DNU pins hidden inside the body; its labels and
+GND symbol moved to the new pin ends (left labels now point away from the body). Notes: every note wrapped to stay
+inside the frame (KiCad's 1.27 mm text is ~1.0 mm per character; multi-line text with `justify bottom` grows upward
+from its anchor); the root UART note rewritten (ch3 is the PHY reset `eth_rst_n -> phy_rst_n`, not an LED) and moved
+next to J2; the three eth notes at J9 merged into one block; clock notes and the ps1 PG note moved off R25 / U16; the
+ADC note moved off the wires. "check standby connection" (Y2) kept: Y2 is a SiT8924…-18E, pin 1 = OE with an internal
+pull-up, so leaving it open is fine — delete the note once confirmed. Left for later: the leftover `{phy}` bus still
+crosses the J9 note block on the eth sheet (step 5/7).
+
+Original list:
 - Align root U42 cluster and any other off-grid items; fix U2 pin layout in the library, update symbol, re-wire if a pin moved.
 - Verify: `endpoint_off_grid` = 0, netdiff 0 diffs, U2 pins still on `qspi_*` nets.
 

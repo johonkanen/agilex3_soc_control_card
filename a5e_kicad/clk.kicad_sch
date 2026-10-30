@@ -1776,7 +1776,7 @@
 	)
 	(text "25 MHz from Y2 also feeds SDM OSC_CLK_1 via clk2_P (R246 series)"
 		(exclude_from_sim no)
-		(at 120.65 51.44 0)
+		(at 120.65 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1841,7 +1841,7 @@
 	)
 	(text "clk3 polarity is inverted on purpose: U9 OUT -> clk3_N, nOUT -> clk3_P.\nReference clock only feeds a PLL, so polarity is irrelevant; keeps the pair uncrossed on the PCB."
 		(exclude_from_sim no)
-		(at 120.65 46.99 0)
+		(at 120.65 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)

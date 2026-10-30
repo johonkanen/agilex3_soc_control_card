@@ -15242,8 +15242,8 @@
 			)
 			(symbol "MX25U25645G_0_1"
 				(rectangle
-					(start -20.32 5.08)
-					(end 20.32 -5.08)
+					(start -10.16 5.08)
+					(end 10.16 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -15255,8 +15255,9 @@
 			)
 			(symbol "MX25U25645G_1_1"
 				(pin no_connect line
-					(at -16.51 -7.62 90)
-					(length 2.54)
+					(at -8.89 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15273,8 +15274,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -13.97 -7.62 90)
-					(length 2.54)
+					(at -7.62 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15291,7 +15293,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 3.81 0)
+					(at -12.7 -2.54 0)
 					(length 2.54)
 					(name "RESET#"
 						(effects
@@ -15309,8 +15311,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -11.43 -7.62 90)
-					(length 2.54)
+					(at -6.35 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "DNU"
 						(effects
 							(font
@@ -15327,8 +15330,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -8.89 -7.62 90)
-					(length 2.54)
+					(at -5.08 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15345,7 +15349,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 1.27 0)
+					(at -12.7 0 0)
 					(length 2.54)
 					(name "SCLK"
 						(effects
@@ -15363,7 +15367,7 @@
 					)
 				)
 				(pin power_in line
-					(at -19.05 -7.62 90)
+					(at 0 -10.16 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -15399,8 +15403,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -6.35 -7.62 90)
-					(length 2.54)
+					(at -3.81 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15417,8 +15422,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -3.81 -7.62 90)
-					(length 2.54)
+					(at -2.54 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15435,7 +15441,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 -1.27 0)
+					(at -12.7 2.54 0)
 					(length 2.54)
 					(name "CS#"
 						(effects
@@ -15453,8 +15459,9 @@
 					)
 				)
 				(pin no_connect line
-					(at -1.27 -7.62 90)
-					(length 2.54)
+					(at -1.27 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15471,7 +15478,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -22.86 -3.81 0)
+					(at 12.7 -2.54 180)
 					(length 2.54)
 					(name "WP#/SIO2"
 						(effects
@@ -15489,8 +15496,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 1.27 -7.62 90)
-					(length 2.54)
+					(at 0 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15507,8 +15515,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 3.81 -7.62 90)
-					(length 2.54)
+					(at 1.27 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15525,7 +15534,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 22.86 2.54 180)
+					(at 12.7 0 180)
 					(length 2.54)
 					(name "SO/SIO1"
 						(effects
@@ -15543,7 +15552,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 22.86 0 180)
+					(at 12.7 2.54 180)
 					(length 2.54)
 					(name "SI/SIO0"
 						(effects
@@ -15561,7 +15570,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 22.86 -2.54 180)
+					(at 12.7 -5.08 180)
 					(length 2.54)
 					(name "NC/SIO3"
 						(effects
@@ -15579,8 +15588,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 6.35 -7.62 90)
-					(length 2.54)
+					(at 2.54 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15597,8 +15607,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 8.89 -7.62 90)
-					(length 2.54)
+					(at 3.81 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15615,8 +15626,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 11.43 -7.62 90)
-					(length 2.54)
+					(at 5.08 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15633,8 +15645,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 13.97 -7.62 90)
-					(length 2.54)
+					(at 6.35 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15651,8 +15664,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 16.51 -7.62 90)
-					(length 2.54)
+					(at 7.62 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -15669,8 +15683,9 @@
 					)
 				)
 				(pin no_connect line
-					(at 19.05 -7.62 90)
-					(length 2.54)
+					(at 8.89 -6.35 90)
+					(length 0)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -17589,7 +17604,7 @@
 		(uuid "4e9f25aa-9419-4124-be43-ca49e368aaed")
 	)
 	(label "qspi_D1"
-		(at 69.85 53.34 0)
+		(at 59.69 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17599,12 +17614,12 @@
 		(uuid "4eaa015d-d031-4556-ad77-ee4108f993ab")
 	)
 	(label "~{qspi_CS}"
-		(at 24.13 57.15 0)
+		(at 34.29 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "57c924ef-4894-453a-b77e-4bd67cd2bd00")
 	)
@@ -17619,7 +17634,7 @@
 		(uuid "57f0aa59-0946-4bf5-a790-5c1fe118087e")
 	)
 	(label "qspi_D2"
-		(at 24.13 59.69 0)
+		(at 59.69 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17679,12 +17694,12 @@
 		(uuid "82c04e4b-b7ba-4971-9ad9-ab233155de57")
 	)
 	(label "~{qspi_rst_n}"
-		(at 24.13 52.07 0)
+		(at 34.29 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "87533051-2ebd-41b1-a002-bf83e20217da")
 	)
@@ -17699,7 +17714,7 @@
 		(uuid "8a6cec10-b651-4eea-b436-1a82d241e06b")
 	)
 	(label "qspi_D0"
-		(at 69.85 55.88 0)
+		(at 59.69 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17719,7 +17734,7 @@
 		(uuid "9411ffbb-47ec-47f1-bfcb-bc519c57b26a")
 	)
 	(label "qspi_D3"
-		(at 69.85 58.42 0)
+		(at 59.69 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17799,12 +17814,12 @@
 		(uuid "bb60d706-2d31-4537-9671-281a8a7e5802")
 	)
 	(label "qspi_CLK"
-		(at 24.13 54.61 0)
+		(at 34.29 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "c0e1dc29-96c9-4ab9-a601-4267315d7c1a")
 	)
@@ -22895,7 +22910,7 @@
 			)
 		)
 		(property "Value" "1V8"
-			(at 46.99 51.64 0)
+			(at 46.99 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22951,7 +22966,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 27.94 63.5 0)
+		(at 46.99 66.04 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22961,7 +22976,7 @@
 		(dnp no)
 		(uuid "ce3bee07-9d43-4d69-b8d0-fbd80b4b06b3")
 		(property "Reference" "#PWR023"
-			(at 30.99 63.5 0)
+			(at 50.04 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22972,7 +22987,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 27.94 60.12 0)
+			(at 46.99 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22982,7 +22997,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 63.5 0)
+			(at 46.99 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22993,7 +23008,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 63.5 0)
+			(at 46.99 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23320,7 +23335,7 @@
 		(fields_autoplaced yes)
 		(uuid "e6c0d885-88e8-46b2-933d-b2d1b02a6e04")
 		(property "Reference" "U2"
-			(at 46.99 45.88 0)
+			(at 36.83 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23330,7 +23345,7 @@
 			)
 		)
 		(property "Value" "IS25WP128-RHLE"
-			(at 46.99 70.88 0)
+			(at 46.99 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
