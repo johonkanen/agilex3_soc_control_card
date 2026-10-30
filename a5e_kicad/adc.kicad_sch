@@ -2968,16 +2968,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 91.44) (xy 135.89 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "beba3c45-1246-41c6-a4a4-2b785df13ff3")
-	)
-	(wire
-		(pts
 			(xy 154.94 52.07) (xy 154.94 54.61)
 		)
 		(stroke

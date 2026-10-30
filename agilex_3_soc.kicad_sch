@@ -5109,16 +5109,6 @@
 		)
 		(uuid "3ed58fa2-fa49-408d-ac6a-955ceceb81d0")
 	)
-	(bus
-		(pts
-			(xy 149.86 62.23) (xy 160.02 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48313b10-1bfe-47cc-a86e-0dcd89d14e9e")
-	)
 	(wire
 		(pts
 			(xy 269.24 90.17) (xy 259.08 90.17)
@@ -5158,16 +5148,6 @@
 			(type default)
 		)
 		(uuid "6319c86f-cbe6-456b-9b39-e59e356772dd")
-	)
-	(bus
-		(pts
-			(xy 185.42 57.15) (xy 200.66 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "633b858c-3bd5-4916-9eb1-f0715899ba3c")
 	)
 	(wire
 		(pts
@@ -5249,16 +5229,6 @@
 		)
 		(uuid "84244190-fa7e-476a-9c0c-5ff43c9abc52")
 	)
-	(bus
-		(pts
-			(xy 142.24 69.85) (xy 160.02 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86f56b4a-df64-4d41-b5a3-c562b5aff742")
-	)
 	(wire
 		(pts
 			(xy 96.52 199.39) (xy 111.76 199.39)
@@ -5279,16 +5249,6 @@
 		)
 		(uuid "99c0ff2e-26db-4301-b32f-a980e7aff764")
 	)
-	(bus
-		(pts
-			(xy 109.22 163.83) (xy 160.02 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d01b62e-a0ed-404c-a9e6-81f1e3c33b79")
-	)
 	(wire
 		(pts
 			(xy 259.08 90.17) (xy 259.08 135.89)
@@ -5298,16 +5258,6 @@
 			(type default)
 		)
 		(uuid "a37cf382-d979-4ba4-a8c0-c38d806b0b68")
-	)
-	(bus
-		(pts
-			(xy 185.42 85.09) (xy 200.66 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa0ab44a-fa65-452d-82e2-0c3057b17ca8")
 	)
 	(bus
 		(pts
@@ -5568,16 +5518,6 @@
 			(justify left bottom)
 		)
 		(uuid "865a4ea9-3ee6-47bc-a625-e8afd42622e7")
-	)
-	(label "{jtag}"
-		(at 149.86 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8a45c10f-9f80-4564-bb8d-41fb998213e1")
 	)
 	(label "iob6f9"
 		(at 88.9 254 0)
@@ -6328,36 +6268,6 @@
 				(justify left)
 			)
 		)
-		(pin "{phy}" bidirectional
-			(at 160.02 69.85 180)
-			(uuid "e36d235c-35da-4988-9d35-671a23fb0a1f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "{jtag}" bidirectional
-			(at 160.02 62.23 180)
-			(uuid "2a4f540b-cc25-4412-a71f-0f125884204f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "{iob6c}" bidirectional
-			(at 185.42 85.09 0)
-			(uuid "960473db-77ea-471e-aa48-10eb3100e6b3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "{iob6d}" bidirectional
 			(at 185.42 87.63 0)
 			(uuid "eabba917-941d-4789-a970-06168e40d679")
@@ -6388,16 +6298,6 @@
 				(justify right)
 			)
 		)
-		(pin "{iob6a}" bidirectional
-			(at 185.42 57.15 0)
-			(uuid "3f567d7c-b61b-445d-ba1d-c633ea66046e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "{iob6f}" bidirectional
 			(at 185.42 115.57 0)
 			(uuid "6b3280ae-3c5d-4fb6-bbd3-e3029a142d15")
@@ -6406,16 +6306,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "{iobank_2aB}" bidirectional
-			(at 160.02 163.83 180)
-			(uuid "7689546b-3446-4c91-b18a-7cbfff61d712")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "{iob6e}" bidirectional
@@ -6619,16 +6509,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "{iobank_2aB}" bidirectional
-			(at 109.22 163.83 0)
-			(uuid "d2c910ab-4c6f-4a74-a170-011b772e41fd")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(instances
@@ -6950,16 +6830,6 @@
 				(justify left top)
 			)
 		)
-		(pin "{iob6c}" bidirectional
-			(at 200.66 85.09 180)
-			(uuid "0b9cabd4-2615-43ac-b2b4-6a89e6a74aad")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "{iob6d}" bidirectional
 			(at 200.66 87.63 180)
 			(uuid "0c357221-a054-4c79-8115-49315b33608e")
@@ -7049,16 +6919,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(pin "{phy}" bidirectional
-			(at 142.24 69.85 0)
-			(uuid "e54bb9d7-3dfb-4908-b639-a38db3f1315c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(instances
@@ -7353,16 +7213,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "{iob6a}" bidirectional
-			(at 200.66 57.15 180)
-			(uuid "bb6fa504-7278-4676-9acb-6ea52f894fbb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "{iob6b}" bidirectional

@@ -25,7 +25,7 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 6b eMMC sheet | **done** | U11 + 27 passives on new sheet `hps_emmc` (page 21), one `{hps_sdmmc}` bus to HPS; 11 renames (`/HPS/sd_*`, `emmc_ds` -> `/hps_emmc/…`), 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 |
 | 7 Globals out, NC flags | **done** | 0 global labels; 118 unused U7 pins NC (labels, stubs, bus entries removed); HyperBus, HPS I2C and pwr_scl/pwr_sda removed (open questions 3, 4); 124 renames (6 to sheet-pin names, 118 to `unconnected-(U7…)`), 0 connectivity diffs; PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 -> 21 |
 | 8 Names, files, pages | **done** | 17 sheets renamed to the §2 names (`IOBANK 3`, `lpddr4 memory` kept), 15 files renamed (git mv; `ad_subsystem.kicad_sch` -> `a5e_kicad/adc.kicad_sch`), pages 1-21 in §2 order, sheet index on the root; 113 renames (0 LPDDR4), 0 connectivity diffs; PCB sheet fields + nets updated, DRC parity 0, DRC unchanged; ERC 21 |
-| 9 ERC to zero | open | |
+| 9 ERC to zero | **done** | ERC 21 -> **0** (no errors, no warnings, no exclusions); 0 renamed / 0 connectivity diffs since step 8; PCB unchanged, DRC parity 0 |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -494,6 +494,16 @@ power, debug) and moving every sheet symbol would mean re-drawing every root bus
 
 **Step 9 – ERC to zero** [cosmetic]
 - Fix or exclude (with a comment) whatever remains. Target: 0 errors, 0 warnings except documented exclusions. From then on ERC must stay clean before every commit.
+
+**Done 2026-10-30: ERC 0** (no exclusions). Fixed: wires running past their last label or cap (6 SDM config lines,
+6 LPDDR4 decoupling rows, 3 PG pins on pwr_rails), loose stubs (pwr_vcore, adc, the R29 leftovers on hps_ethernet, a
+GND row overhang on pwr_rails); bus links that carried nothing: `{iob6a}`, `{iobank_2aB}`, `{iob6c}`, `{phy}` and the
+Connectors `{jtag}` (sheet pins, root buses, the unnamed buses and entries left inside fpga_bank6cd and hps_ethernet),
+and the `{iob6b}` bus tail on io_headers. Two near-misses caught by netdiff before anything was kept: the SDM config
+wires carry `nconfig`/`msel*`/`nstatus`/`conf_done`/`init_done` labels part-way along (only the part past the label was
+dead), and the `eth_rxd1` label that sat on the old `{phy}` bus is also R270 pin 1's connection (kept).
+**From now on ERC must stay at 0 before every commit** (headless: `KICAD10_SYMBOL_DIR=…/share/kicad/symbols kicad-cli
+sch erc`).
 
 ---
 
