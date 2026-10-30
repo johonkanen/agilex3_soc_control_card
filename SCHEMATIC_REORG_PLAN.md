@@ -15,8 +15,9 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 2 Power symbols and flags | **done** | ERC 234 -> 224; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0 |
 | — PHY1V2PLL | done | FB2/C18/C19 + `PHY1V2PLL` removed from schematic and PCB (open question 15); ERC 223 |
 | 3 Grid, U2, text | **done** | ERC 223 -> 199 (endpoint_off_grid 24 -> 0); netdiff 0 / 0; DRC parity 0 |
-| 4 One name per wire | **done** (pending review) | ERC 199 -> 183, multiple_net_names 18 -> 10 (the rest need step 5/7); 9 renames, 0 connectivity diffs; PCB nets renamed, DRC parity 0 |
-| 5-9 | open | |
+| 4 One name per wire | **done** | ERC 199 -> 183, multiple_net_names 18 -> 10 (the rest need step 5/7); 9 renames, 0 connectivity diffs; PCB nets renamed, DRC parity 0 |
+| 5a ADC dividers | **done** | R5, R42, R46, R51, R53, R54 on the ADC sheet; 0 renamed / 0 connectivity diffs; footprints re-linked, DRC parity 0; ERC 183 |
+| 5b-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -404,6 +405,9 @@ Original list:
 
 **Step 5 – Empty the root sheet** [moves] [net] — biggest readability gain; do it in five sub-commits, each with the full §4.1 procedure:
 - 5a: R5, R42, R46, R51, R53, R54 → `adc` sheet; rail values enter as power symbols, so no new sheet pins are needed.
+  **Done 2026-10-30.** The `ad_ch*` nets keep their names (`/ad_ch0` …: the root `{ad_ch}` bus still names them,
+  since J3 feeds ad_ch4/6/7), so no rename. The footprints were re-linked by editing their `path`/`sheetname`/`sheetfile`
+  in the .kicad_pcb (same symbol UUIDs). R42/R51 had a `C_0402` footprint; now `R_0402` (open question 16).
 - 5b: J3, J5 → `connectors.kicad_sch` (renamed sheet `io_headers` in step 8). Bank sheets connect via bus sheet pins; remove the root bus entries and the 81 root local labels. The 154 `/Connectors/…` names change to whichever sheet's label now names them – expected renames, 0 connectivity diffs. Includes the routed Ethernet MDI pairs (`txrx*`) – check those tracks are still on their (renamed) nets in the PCB.
 - 5c: U1, J1, U42, J10, C253, C254, J2, R47, R48 → new `debug_status` sheet; move D1/D2/R16/R17 from `sdm` there too. Replace globals `pg_led`, `fpga_led`, `hps_uart0_tx/rx`, `eth_led*`, `UART_TX/RX` with sheet pins.
 - 5d: U6 + C10 → `pwr_rails` (ps1); J6, J4 → new `pwr_input` sheet.
@@ -469,4 +473,5 @@ Doing 1–9 should bring ERC from 337 to roughly 220, almost all of the rest bei
 14. *(done: copied into agilex_5_lib with the project footprint.)* **U12 `lib_symbol_mismatch`**: the IS43LQ32256A symbol differs from agilex_5_lib; update from library in step 2 (check pins with netdiff).
 15. *(done 2026-10-30: FB2/C18/C19, the rail and their copper removed.)* **`PHY1V2PLL`**: only FB2, C18, C19 (all DNP, "no PLL rail on the RTL8211F") and its power symbol remain. Delete FB2/C18/C19
     and the rail from schematic and PCB, or keep the DNP footprints?
-
+16. *(done 2026-10-30: swapped to `R_0402_1005Metric`; refill zones in pcbnew.)* **R42, R51 (ADC 3V3 divider, 1k) have the footprint `Capacitor_SMD:C_0402_1005Metric`.** Same body size, slightly
+    different pads; change to `R_0402_1005Metric` (PCB footprint swap, tracks stay), or keep?
