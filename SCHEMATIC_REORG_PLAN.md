@@ -21,7 +21,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 5c debug_status | **done** | new sheet (page 19): U1/J1, U42/J10/C253/C254, J2/R47/R48, D1/D2/R16/R17; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 180 -> 178 |
 | 5d Power input | **done** | J4/J6 on new sheet `pwr_input` (page 20), U6/C10 on ps1; 5V0 sheet pins removed; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 178 |
 | 5e ADC one name | **done** | ADC sheet pins `adc_sdo`, `adc_sclk`, `adc_cs_n`, `adc_mux0..2` replace the `{adc_IO}` bus; 0 renamed / 0 connectivity diffs; ERC 178 -> 157 (multiple_net_names 8 -> 2, net_not_bus_member 3 -> 0) |
-| 5e root drawing, 6-9 | open | |
+| 6a U7 decoupling | **done** | 68 caps (C129-C156 from ps, C170-C221 minus C203-C205 from ps1) on `fpga_power`, now A3; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 157 -> 148 |
+| 5e root drawing, 6b-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -446,6 +447,12 @@ Original list:
 
 **Step 6 – Split the power and HPS sheets** [moves] [net]
 - 6a: C129–C156 (ps) and C170–C221 (ps1) and C102 → `fpga_power` (becomes `soc_power`, change paper to A3). Arrange by rail as §3.5.
+  **Done 2026-10-30.** The rows came over as they were (one row per rail, rail symbol at the left): VCORE x2, 1V1, 1V2,
+  3V3, 1V8. C203-C205 stay on ps1: they are the 1V2 bulk caps in the regulator output row with C167/C169. Removed from
+  `fpga_power`: five GND and one VCORE symbol on open stubs at the right edge (leftovers of deleted caps), -9 ERC.
+  Also fixed: ps symbols carried the right sheet ID; a helper bug (`hps.kicad_sch` ends in `ps.kicad_sch`) had briefly
+  pointed them at the HPS sheet during this step, and the four 5V0 symbols added to ps in 5d had that wrong path —
+  all instance paths now match their sheet (checked for every sheet file).
 - 6b: the eMMC U11 and its passives → new `hps_emmc` sheet (was `hps_sdcard` for the old microSD J8/U40/U41, which are gone), connected by the `{hps_sdmmc}` bus via sheet pins.
 - 6c: Move the PG wired-AND (R249, `pg_all`) to `pwr_input` if you want the whole PG chain on one page (optional).
 - Verify: as step 5. Sheet-local SD nets become `/hps_sdcard/sd_*` – expected renames.
