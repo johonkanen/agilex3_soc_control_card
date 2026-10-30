@@ -361,8 +361,8 @@ GND symbol moved to the new pin ends (left labels now point away from the body).
 inside the frame (KiCad's 1.27 mm text is ~1.0 mm per character; multi-line text with `justify bottom` grows upward
 from its anchor); the root UART note rewritten (ch3 is the PHY reset `eth_rst_n -> phy_rst_n`, not an LED) and moved
 next to J2; the three eth notes at J9 merged into one block; clock notes and the ps1 PG note moved off R25 / U16; the
-ADC note moved off the wires. "check standby connection" (Y2) kept: Y2 is a SiT8924…-18E, pin 1 = OE with an internal
-pull-up, so leaving it open is fine — delete the note once confirmed. Left for later: the leftover `{phy}` bus still
+ADC note moved off the wires. "check standby connection" (Y2) kept: Y2 is a SiT8924…-18E; if the "E" option means pin 1 = OE
+with an internal pull-up (to be checked in the SiTime data sheet), leaving it open is fine and the note can go. Left for later: the leftover `{phy}` bus still
 crosses the J9 note block on the eth sheet (step 5/7).
 
 Original list:
