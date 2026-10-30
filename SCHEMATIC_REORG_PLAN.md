@@ -19,7 +19,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 5a ADC dividers | **done** | R5, R42, R46, R51, R53, R54 on the ADC sheet; 0 renamed / 0 connectivity diffs; footprints re-linked, DRC parity 0; ERC 183 |
 | 5b Headers | **done** | J3, J5, RN1-RN7 on the Connectors sheet; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 183 -> 180 |
 | 5c debug_status | **done** | new sheet (page 19): U1/J1, U42/J10/C253/C254, J2/R47/R48, D1/D2/R16/R17; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 180 -> 178 |
-| 5d-9 | open | |
+| 5d Power input | **done** | J4/J6 on new sheet `pwr_input` (page 20), U6/C10 on ps1; 5V0 sheet pins removed; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 178 |
+| 5e-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -430,6 +431,9 @@ Original list:
   PCB follows whatever the netlist says at each commit; giving these wires one name (bank sheet exports `adc_*`
   directly) fixes it.
 - 5d: U6 + C10 → `pwr_rails` (ps1); J6, J4 → new `pwr_input` sheet.
+  **Done 2026-10-30.** The root 5V0 riser to the `5V0` sheet pins of ps/ps1 is gone: 5V0 is a power rail, so the
+  hierarchical `5V0` labels in ps/ps1 and the two `5V0` global labels in ps are now 5V0 power symbols. `pwr_input`
+  has no sheet pins (only 5V0/GND). The ps1 title names the 3V3_analog LDO.
 - 5e: root now holds only sheet symbols: redraw it as the block diagram of §2, add ref-range table and revision log.
 - Verify each: netdiff (0 diffs), Update PCB (no "Add footprint", only link/path updates and renames), DRC parity 0, unconnected ≤ 14.
 

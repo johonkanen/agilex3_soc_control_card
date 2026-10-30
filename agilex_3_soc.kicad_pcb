@@ -2905,9 +2905,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/aeaf1658-9d06-4224-8e66-2b2820ef804f")
-		(sheetname "/")
-		(sheetfile "agilex_3_soc.kicad_sch")
+		(path "/576e78d7-ce71-4c7c-9fdf-49d4584fed0b/aeaf1658-9d06-4224-8e66-2b2820ef804f")
+		(sheetname "/pwr_input/")
+		(sheetfile "a5e_kicad/pwr_input.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -22358,9 +22358,9 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/58deee2a-4723-4a82-a8b4-0ef2e51cfe43")
-		(sheetname "/")
-		(sheetfile "agilex_3_soc.kicad_sch")
+		(path "/f641c4ca-6983-42f3-9cca-4494b20f9dfc/58deee2a-4723-4a82-a8b4-0ef2e51cfe43")
+		(sheetname "/power supply1/")
+		(sheetfile "a5e_kicad/ps1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -23419,9 +23419,9 @@
 			)
 		)
 		(property ki_fp_filters "SOT?23*")
-		(path "/6ddf962a-a2ee-44f2-a1b0-6405cea346d5")
-		(sheetname "/")
-		(sheetfile "agilex_3_soc.kicad_sch")
+		(path "/f641c4ca-6983-42f3-9cca-4494b20f9dfc/6ddf962a-a2ee-44f2-a1b0-6405cea346d5")
+		(sheetname "/power supply1/")
+		(sheetfile "a5e_kicad/ps1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -29861,9 +29861,9 @@
 			)
 		)
 		(property ki_fp_filters "Connector*:*_2x??_*")
-		(path "/67c8011f-c9b0-405f-889f-e533c7ccb87d")
-		(sheetname "/")
-		(sheetfile "agilex_3_soc.kicad_sch")
+		(path "/576e78d7-ce71-4c7c-9fdf-49d4584fed0b/67c8011f-c9b0-405f-889f-e533c7ccb87d")
+		(sheetname "/pwr_input/")
+		(sheetfile "a5e_kicad/pwr_input.kicad_sch")
 		(units
 			(unit
 				(name "A")
