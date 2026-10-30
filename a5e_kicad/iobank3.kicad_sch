@@ -17525,7 +17525,7 @@
 		)
 		(uuid "634b32eb-c27b-46eb-be96-8f757f2e3cf6")
 	)
-	(label "dq15"
+	(label "dq9"
 		(at 208.28 132.08 0)
 		(effects
 			(font
@@ -17915,7 +17915,7 @@
 		)
 		(uuid "d9101014-8151-41c2-a6b9-3835ee9c02fc")
 	)
-	(label "dq9"
+	(label "dq15"
 		(at 208.28 134.62 0)
 		(effects
 			(font
