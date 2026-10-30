@@ -18,7 +18,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 4 One name per wire | **done** | ERC 199 -> 183, multiple_net_names 18 -> 10 (the rest need step 5/7); 9 renames, 0 connectivity diffs; PCB nets renamed, DRC parity 0 |
 | 5a ADC dividers | **done** | R5, R42, R46, R51, R53, R54 on the ADC sheet; 0 renamed / 0 connectivity diffs; footprints re-linked, DRC parity 0; ERC 183 |
 | 5b Headers | **done** | J3, J5, RN1-RN7 on the Connectors sheet; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 183 -> 180 |
-| 5c-9 | open | |
+| 5c debug_status | **done** | new sheet (page 19): U1/J1, U42/J10/C253/C254, J2/R47/R48, D1/D2/R16/R17; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 180 -> 178 |
+| 5d-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -419,6 +420,15 @@ Original list:
   `/ad subsystem/ad_SDO, ad_CS, ad_SCLK, admux_0, admux_1, admux_2` (the removed junctions had tied the ADC bus branch to
   the `{iob6f}` bus). None of the Ethernet MDI or LPDDR4 nets changed.
 - 5c: U1, J1, U42, J10, C253, C254, J2, R47, R48 → new `debug_status` sheet; move D1/D2/R16/R17 from `sdm` there too. Replace globals `pg_led`, `fpga_led`, `hps_uart0_tx/rx`, `eth_led*`, `UART_TX/RX` with sheet pins.
+  **Done 2026-10-30.** Sheet `debug_status` (`a5e_kicad/debug_status.kicad_sch`, page 19), sheet pins `{jtag}`, `pg_all`,
+  `fpga_uart_tx`, `fpga_uart_rx` (the `UART_TX/RX` globals are gone; the root wires keep the bank labels `iob6b11/iob6b8`).
+  `pg_all_3v3` is a local label now (U42 and D1 are on the same sheet). Still global, for step 7: `hps_uart0_tx/rx`,
+  `eth_rst_n`, `phy_rst_n` (hps/eth sheets) and `fpga_led` (bank 6B). Renames: `jtag_*_3v3`, `hps_uart0_*_3v3`,
+  `pg_all_3v3` -> `/debug_status/…`; `UART_TX/RX` -> `/Connectors/iob6b11`, `/Connectors/iob6b8`.
+  **Unstable names:** the six ADC SPI/mux wires on the root carry two labels each (`ad_SDO` + `iob6f3` …), and KiCad's
+  pick between them changes with unrelated edits (`/Connectors/iob6f3` in 5a and 5c, `/ad subsystem/ad_SDO` in 5b). The
+  PCB follows whatever the netlist says at each commit; giving these wires one name (bank sheet exports `adc_*`
+  directly) fixes it.
 - 5d: U6 + C10 → `pwr_rails` (ps1); J6, J4 → new `pwr_input` sheet.
 - 5e: root now holds only sheet symbols: redraw it as the block diagram of §2, add ref-range table and revision log.
 - Verify each: netdiff (0 diffs), Update PCB (no "Add footprint", only link/path updates and renames), DRC parity 0, unconnected ≤ 14.
