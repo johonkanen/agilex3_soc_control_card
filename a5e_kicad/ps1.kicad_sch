@@ -3865,17 +3865,6 @@
 		)
 		(uuid "4204cdea-a164-491f-af3b-a58e06c35d07")
 	)
-	(hierarchical_label "sda"
-		(shape bidirectional)
-		(at 22.86 17.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "66836442-2d63-42c5-95af-40ca5a9ce075")
-	)
 	(symbol
 		(lib_id "agilex_5_lib:5V0")
 		(at 19.05 24.13 90)
@@ -3953,17 +3942,6 @@
 				)
 			)
 		)
-	)
-	(hierarchical_label "scl"
-		(shape input)
-		(at 22.86 20.32 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "dd2efcb0-c7cc-406c-81bf-4ac418a537f7")
 	)
 	(symbol
 		(lib_id "Device:C")

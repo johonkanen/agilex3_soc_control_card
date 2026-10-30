@@ -2437,16 +2437,6 @@
 	)
 	(bus
 		(pts
-			(xy 30.48 17.78) (xy 81.28 17.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9593b0b9-7099-42e3-abbf-ce607336aebf")
-	)
-	(bus
-		(pts
 			(xy 266.7 27.94) (xy 284.48 27.94)
 		)
 		(stroke
@@ -2485,17 +2475,6 @@
 			(justify left)
 		)
 		(uuid "01975e46-5a5c-4c29-914d-7f1cefe36cfe")
-	)
-	(hierarchical_label "{hps_i2c}"
-		(shape bidirectional)
-		(at 30.48 17.78 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "03dd7ff7-b509-4a17-ad67-b9b65ceb8fda")
 	)
 	(hierarchical_label "{iob6e}"
 		(shape bidirectional)

@@ -23,7 +23,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 5e ADC one name | **done** | ADC sheet pins `adc_sdo`, `adc_sclk`, `adc_cs_n`, `adc_mux0..2` replace the `{adc_IO}` bus; 0 renamed / 0 connectivity diffs; ERC 178 -> 157 (multiple_net_names 8 -> 2, net_not_bus_member 3 -> 0) |
 | 6a U7 decoupling | **done** | 68 caps (C129-C156 from ps, C170-C221 minus C203-C205 from ps1) on `fpga_power`, now A3; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 157 -> 148 |
 | 6b eMMC sheet | **done** | U11 + 27 passives on new sheet `hps_emmc` (page 21), one `{hps_sdmmc}` bus to HPS; 11 renames (`/HPS/sd_*`, `emmc_ds` -> `/hps_emmc/…`), 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 |
-| 5e root drawing, 6c-9 | open | |
+| 7 Globals out, NC flags | **done** | 0 global labels; 118 unused U7 pins NC (labels, stubs, bus entries removed); HyperBus, HPS I2C and pwr_scl/pwr_sda removed (open questions 3, 4); 124 renames (6 to sheet-pin names, 118 to `unconnected-(U7…)`), 0 connectivity diffs; PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 -> 21 |
+| 5e root drawing, 8, 9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -465,6 +466,15 @@ Original list:
 - Replace remaining global labels (`eth_rst_n`, `pg_all`, `sdm_clk25`, `5V0` label in ps) with sheet pins; global label count must be 0.
 - Unused U7 pins: remove the 136 isolated labels and add NC flags; remove the `{hyperbus}` pin and `hb*` labels from bank 3A, `{hps_i2c}` if no I2C header is planned (§6). Nets turn into `unconnected-(U7…)` – expected; check in Update PCB that none of them carries a track (`iob6e*` and `iob6g5` have a few segments today – delete or keep deliberately).
 - Verify: ERC `isolated_pin_label` = 0, netdiff only renames to `unconnected-(…)` and removed single-pin nets.
+**Done 2026-10-30 (ERC 148 -> 21).** 7a: `hps_uart0_tx/rx`, `eth_rst_n`, `phy_rst_n`, `fpga_led` are hierarchical labels with
+sheet pins on HPS, Ethernet, bank 6AB and debug_status (joined on the root by labelled stubs; nets now `/hps_uart0_tx` …);
+`eth_led_g_n` is a local label (both ends on the Ethernet sheet). 7b (answers to open questions 3 and 4: NC everything,
+remove all three leftovers): `{hyperbus}` pin, bus and 14 `hb*` labels (bank 3A) and the "DQ-Pin" notes next to them;
+`{hps_i2c}` (HPS -> Connectors); `pwr_scl/pwr_sda` (bank 6G -> ps1 `sda/scl`); then every pin with only a label got its
+label, stub and bus entry removed and an NC flag (118). Bank 3A notes restacked (they overlapped each other and the
+title block). On the PCB the two I2C vias (already dangling) now sit on `unconnected-(U7B…)` nets: delete them in
+pcbnew. Left for step 9: the 21 open wire stubs, the empty bank buses (`{iob6a}`, `{iobank_2aB}` …) and the unused
+`{phy}`/`{jtag}` buses on the Connectors sheet.
 
 **Step 8 – Rename sheets, files and page order** [net] — **keep the sheet names `IOBANK 3` and `lpddr4 memory`** (LPDDR4 tuning rules and scripts use `/IOBANK 3/…`); rename the others.
 - Rename sheets to the §2 names (Sheet Properties). Rename files only where content changed substantially (`ps` → `pwr_vcore`, `ps1` → `pwr_rails`, `fpga_power` → `soc_power`, `connectors` → `io_headers`, `mem1` → `hps_lpddr4_mem`); the sheet UUID stays, so footprint links are unaffected. Keep the `a5e_kicad/` folder to avoid churn, or move everything into `sheets/` in the same commit.
@@ -499,8 +509,8 @@ Doing 1–9 should bring ERC from 337 to roughly 220, almost all of the rest bei
 
 1. *(closed 2026-10-30: FB1/FB2 exist with the RTL8211FDI.)* **FB1/FB2 (Ethernet AVDDH / AVDDL_PLL ferrite beads):** the note and ETH_PHY_REVIEW.md say they were added, but they exist neither in the schematic nor on the PCB, and `PHY3V3`/`PHY1V2PLL` are shorted to `3V3`/`1V2`. Add them (2× 0402 on the routed board) or drop the note and the PHY rail names?
 2. *(closed: Y4 drives `clk100` through R263.)* **`clk100` → bank 6G AE11:** nothing drives it (the clock sheet's `clk2_N` output is a dangling label). Was a 100 MHz fabric clock planned, or delete it?
-3. **Unused bank pins with labels** (2A, 6A, 6C–6E, 6G): NC them, or do you plan more header pins (then route them to J3/J5 or a new header now)?
-4. **HyperBus labels on bank 3A, `sd_d4..7`, `{hps_i2c}` bus, `pwr_scl/pwr_sda`** (bank 6G → ps1, where nothing uses them): delete all, or is any of it planned (e.g. an I2C header or PMBus)?
+3. *(answered 2026-10-30: NC all, done in step 7.)* **Unused bank pins with labels** (2A, 6A, 6C–6E, 6G): NC them, or do you plan more header pins (then route them to J3/J5 or a new header now)?
+4. *(answered 2026-10-30: all removed in step 7.)* **HyperBus labels on bank 3A, `sd_d4..7`, `{hps_i2c}` bus, `pwr_scl/pwr_sda`** (bank 6G → ps1, where nothing uses them): delete all, or is any of it planned (e.g. an I2C header or PMBus)?
 5. **Rail name `3V3_analog`:** keep (no rename) or `3V3A`? Same for `5V0` vs `5V`.
 6. **Active-low style:** `_n` suffix everywhere (recommended) – OK to rename `~{qspi_CS}`, `~{nconfig}` etc.? (Not the LPDDR4 `~{cs}`/`~{rst}`, which stay.)
 7. *(answered 2026-10-30: keep `IOBANK 3` / `lpddr4 memory`.)* **Sheet-name prefixes in LPDDR4 net names** change in step 8. Fine, or keep the `IOBANK 3` sheet name to avoid touching the tuned nets at all?

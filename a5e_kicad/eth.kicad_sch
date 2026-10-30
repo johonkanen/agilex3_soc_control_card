@@ -9615,7 +9615,7 @@
 		)
 		(uuid "fc296f08-81aa-4259-b7b3-3e595e466a35")
 	)
-	(global_label "eth_rst_n"
+	(hierarchical_label "eth_rst_n"
 		(shape input)
 		(at 35.56 127 180)
 		(effects
@@ -9625,20 +9625,8 @@
 			(justify right)
 		)
 		(uuid "148c8461-22c0-41db-bf12-1cfa1b4b90a8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
-	(global_label "eth_led_g_n"
-		(shape input)
+	(label "eth_led_g_n"
 		(at 231.14 134.62 180)
 		(effects
 			(font
@@ -9647,19 +9635,8 @@
 			(justify right)
 		)
 		(uuid "6674e1f1-276e-4805-8d82-20f3789dddd5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
-	(global_label "phy_rst_n"
+	(hierarchical_label "phy_rst_n"
 		(shape input)
 		(at 116.84 124.46 180)
 		(effects
@@ -9669,20 +9646,8 @@
 			(justify right)
 		)
 		(uuid "669da017-e496-43d3-8dc4-ab62661d200a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 35.56 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
-	(global_label "eth_led_g_n"
-		(shape input)
+	(label "eth_led_g_n"
 		(at 203.2 76.2 180)
 		(effects
 			(font
@@ -9691,17 +9656,6 @@
 			(justify right)
 		)
 		(uuid "7eac9f03-ec8f-4a15-8987-197cf4ad39fb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(hierarchical_label "{hps_eth}"
 		(shape bidirectional)

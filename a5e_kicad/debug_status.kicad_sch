@@ -2580,7 +2580,7 @@
 		)
 		(uuid "f8e01989-2066-4dbb-a581-a16e0a00e355")
 	)
-	(global_label "hps_uart0_rx"
+	(hierarchical_label "hps_uart0_rx"
 		(shape output)
 		(at 21.59 147.32 180)
 		(effects
@@ -2590,19 +2590,8 @@
 			(justify right)
 		)
 		(uuid "00c40ac3-4fac-402b-8173-d0a0a82837cb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.59 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
-	(global_label "eth_rst_n"
+	(hierarchical_label "eth_rst_n"
 		(shape input)
 		(at 21.59 149.86 180)
 		(effects
@@ -2612,17 +2601,6 @@
 			(justify right)
 		)
 		(uuid "2a054150-befc-41b9-a18e-aef290df0ca4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.59 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(hierarchical_label "fpga_uart_tx"
 		(shape input)
@@ -2648,7 +2626,7 @@
 		)
 		(uuid "68dfff1a-6679-416e-a229-6b47d98b8066")
 	)
-	(global_label "phy_rst_n"
+	(hierarchical_label "phy_rst_n"
 		(shape output)
 		(at 68.58 149.86 0)
 		(effects
@@ -2658,17 +2636,6 @@
 			(justify left)
 		)
 		(uuid "da56e380-8faa-493c-9e56-fbb66c39645a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.58 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(label "pg_all_3v3"
 		(at 76.2 152.4 0)
@@ -2680,7 +2647,7 @@
 		)
 		(uuid "2ed62fb4-59f4-4c7f-a6ac-16b8da6c9464")
 	)
-	(global_label "hps_uart0_tx"
+	(hierarchical_label "hps_uart0_tx"
 		(shape input)
 		(at 21.59 144.78 180)
 		(effects
@@ -2690,17 +2657,6 @@
 			(justify right)
 		)
 		(uuid "f22c20f4-4e84-4f7c-9726-cc71a4781a42")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 21.59 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5972,7 +5928,7 @@
 		)
 		(uuid "5d0970c9-79fb-4a66-af20-1b2c89ff39e2")
 	)
-	(global_label "fpga_led"
+	(hierarchical_label "fpga_led"
 		(shape input)
 		(at 181.61 78.74 0)
 		(effects
@@ -5982,17 +5938,6 @@
 			(justify left)
 		)
 		(uuid "2e0e5784-2ea1-455c-9531-f5ef32726019")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.61 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(label "pg_all_3v3"
 		(at 181.61 60.96 0)
