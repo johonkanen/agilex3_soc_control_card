@@ -38,7 +38,7 @@ Copper layers of `agilex_3_soc.kicad_pcb` in stack order, without silkscreen. Pl
 </tr>
 <tr>
 <td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In6_Cu.svg" width="400"><br><b>In6.Cu: VCORE, 3V3, 1V8, 1V2, 1V1 planes</b></td>
-<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/B_Cu.svg" width="400"><br><b>B.Cu: signal + plane, 1V1, 3V3, GND, 1V2, 5V0 and 2 more pours (bottom, mirrored)</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/B_Cu.svg" width="400"><br><b>B.Cu: signal + plane, 1V1, 3V3, GND, 1V2, 5V0 and 2 more pours (bottom, seen from the top)</b></td>
 </tr>
 </table>
 
