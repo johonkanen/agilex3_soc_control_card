@@ -5,7 +5,9 @@
 	(uuid "82bda3be-0616-4530-bf1c-fa7c02f8ed55")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "Ethernet: RTL8211FDI PHY and RJ45")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Connector:RJ45_RB1-125B8G1A"

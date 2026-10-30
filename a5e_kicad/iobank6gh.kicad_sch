@@ -5,7 +5,9 @@
 	(uuid "e7681ee7-17a5-4d67-b0c0-52d0e88c2b76")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "Banks 6G / 6H HVIO")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "FPGA_Altera_Agilex_5E:A5EB013B-B23B"
@@ -14700,7 +14702,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "VCCIO_6G : 1V8"
+	(text "VCCIO_6G : 3V3"
 		(exclude_from_sim no)
 		(at 165.1 22.86 0)
 		(effects

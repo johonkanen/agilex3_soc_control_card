@@ -5,7 +5,9 @@
 	(uuid "aca4bab7-c473-4f77-862d-d2888a3aac17")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "1V8 / 3V3 / 1V2 / 1V1 bucks, power good, decoupling")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:C"
@@ -953,16 +955,6 @@
 			(justify left)
 		)
 		(uuid "97ac1c5d-6eca-4369-92bc-aaea469fdac6")
-	)
-	(text "Check powerup sequence :\n0.78 -> 1.8 -> 3.3||1.1||1.2"
-		(exclude_from_sim no)
-		(at 185.42 17.526 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a8663fb9-4f75-4428-88fe-0a78f2347c8a")
 	)
 	(junction
 		(at 113.03 41.91)
@@ -4053,16 +4045,6 @@
 			(type default)
 		)
 		(uuid "fdcb3ccf-cd05-43ce-ac61-d7b44e377c95")
-	)
-	(label "PG"
-		(at 22.86 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6af33105-0174-4a25-af48-31a2cffe2efb")
 	)
 	(label "pg_all"
 		(at 104.14 119.38 0)

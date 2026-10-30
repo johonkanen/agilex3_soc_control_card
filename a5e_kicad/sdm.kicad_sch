@@ -5,7 +5,9 @@
 	(uuid "9044809a-288b-479e-9c80-0cf22466f947")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "SDM: configuration, QSPI boot flash, status LEDs")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:LED"
@@ -16010,15 +16012,6 @@
 		(uuid "3cc18e49-a094-4802-91b1-35603e5ed9af")
 	)
 	(bus_entry
-		(at 104.14 58.42)
-		(size -2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60a4b8ec-ab8e-4e95-b34b-aa92327a27df")
-	)
-	(bus_entry
 		(at 187.96 35.56)
 		(size 2.54 2.54)
 		(stroke
@@ -16082,15 +16075,6 @@
 		(uuid "8aaff171-13a8-4dfa-bc5a-140ea7ada646")
 	)
 	(bus_entry
-		(at 104.14 60.96)
-		(size -2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "967d9300-0176-4090-9736-94b47e0a915f")
-	)
-	(bus_entry
 		(at 104.14 63.5)
 		(size -2.54 2.54)
 		(stroke
@@ -16125,24 +16109,6 @@
 			(type default)
 		)
 		(uuid "e7a031dc-d462-4fe7-b7b1-191c02aab47a")
-	)
-	(bus_entry
-		(at 104.14 53.34)
-		(size -2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eec312ef-a0b2-49a2-9013-bedbc9f92564")
-	)
-	(bus_entry
-		(at 104.14 55.88)
-		(size -2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f76c6178-3fbd-423f-9f87-fbfff37715cc")
 	)
 	(wire
 		(pts

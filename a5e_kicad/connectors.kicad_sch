@@ -5,7 +5,9 @@
 	(uuid "215a1b36-d8d2-46c0-8d69-b295a2ed90aa")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "FPGA I/O header buses")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "power:+1V1"
@@ -262,17 +264,6 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(text "MIPI Stecker auf das Modul? "
-		(exclude_from_sim no)
-		(at 182.88 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 34 1)
-			)
-		)
-		(uuid "a526658a-a5ac-4245-a211-90602fc81bec")
 	)
 	(junction
 		(at 35.56 134.62)

@@ -5,7 +5,9 @@
 	(uuid "ac6f1ba1-c9ed-4e7d-9cec-9db76502622d")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "HPS I/O and eMMC")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Connector:Micro_SD_Card"
@@ -17685,15 +17687,6 @@
 		(uuid "246b3a93-1a1b-4425-a4ae-06b398224a9b")
 	)
 	(bus_entry
-		(at 30.48 55.88)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25506e3c-3519-442f-bdd1-b319aa4cbf3a")
-	)
-	(bus_entry
 		(at 144.78 113.03)
 		(size 2.54 2.54)
 		(stroke
@@ -17712,33 +17705,6 @@
 		(uuid "3c0bc4e9-266b-4924-a600-3de194676aa7")
 	)
 	(bus_entry
-		(at 30.48 63.5)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44bc91d6-47d8-479b-bad9-91e22e8b7b7f")
-	)
-	(bus_entry
-		(at 30.48 71.12)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "499a23df-9e34-44b2-8b2b-07c903765431")
-	)
-	(bus_entry
-		(at 30.48 58.42)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b6d1b35-b2bf-4449-b23d-c162c2c9b7ea")
-	)
-	(bus_entry
 		(at 154.94 54.61)
 		(size 2.54 2.54)
 		(stroke
@@ -17755,15 +17721,6 @@
 			(type default)
 		)
 		(uuid "50ee83cd-059f-4a91-abf6-a7ba165e4706")
-	)
-	(bus_entry
-		(at 30.48 68.58)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "528f3d2d-abfd-44ec-ab1b-345e8bc5e113")
 	)
 	(bus_entry
 		(at 30.48 69.85)
@@ -17964,15 +17921,6 @@
 		(uuid "ce9e0f13-8028-4b15-80a5-8bf68a59f17a")
 	)
 	(bus_entry
-		(at 30.48 53.34)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6e9d6e0-2db5-44e5-85fd-fe9ad83c00e1")
-	)
-	(bus_entry
 		(at 144.78 140.97)
 		(size 2.54 2.54)
 		(stroke
@@ -18057,16 +18005,6 @@
 			(type default)
 		)
 		(uuid "0fdd54ad-711b-441a-83ff-6821af65f190")
-	)
-	(wire
-		(pts
-			(xy 15.24 125.73) (xy 30.48 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1047247f-ce80-418e-805a-adb00a15aeae")
 	)
 	(wire
 		(pts

@@ -5,7 +5,9 @@
 	(uuid "e7681ee7-17a5-4d67-b0c0-52d0e88c2b76")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "Banks 6E / 6F HVIO")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "FPGA_Altera_Agilex_5E:A5EB013B-B23B"

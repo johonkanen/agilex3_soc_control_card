@@ -5,7 +5,9 @@
 	(uuid "53061bc1-36c1-47ed-9447-d0c9c1077386")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "SoC power pins")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:C"
@@ -15162,12 +15164,6 @@
 		(uuid "0ab8fe9e-7f43-4279-a8a0-213756c5f889")
 	)
 	(junction
-		(at 43.18 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d072ef0-0f29-4ddd-9152-26b7cdb49903")
-	)
-	(junction
 		(at 162.56 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15712,16 +15708,6 @@
 			(type default)
 		)
 		(uuid "0d652d91-a7cb-43a5-80bd-4e9fb60c0db3")
-	)
-	(wire
-		(pts
-			(xy 30.48 119.38) (xy 43.18 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d8da414-673d-43e9-8407-01deb0c45425")
 	)
 	(wire
 		(pts
@@ -17853,17 +17839,6 @@
 			(justify right)
 		)
 		(uuid "465fe92c-5cd7-4014-963f-693aebdaf2ea")
-	)
-	(hierarchical_label "1v8"
-		(shape output)
-		(at 30.48 119.38 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5a0d3e8f-cf02-4420-ba40-81f69189e6ec")
 	)
 	(symbol
 		(lib_id "power:GND")

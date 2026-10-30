@@ -5,7 +5,9 @@
 	(uuid "a195af30-eee6-4d30-a127-ae726f72821b")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "Clocks")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:C"
@@ -1494,7 +1496,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "25 MHz from Y2 also feeds SDM OSC_CLK_1 and 6A PLLREFCLK2 via clk2_P (R246 series)"
+	(text "25 MHz from Y2 also feeds SDM OSC_CLK_1 via clk2_P (R246 series)"
 		(exclude_from_sim no)
 		(at 120.65 51.44 0)
 		(effects
@@ -1516,7 +1518,7 @@
 		)
 		(uuid "596551e5-1f30-4dc4-b6ed-2010d1f76e9c")
 	)
-	(text "LPDDR4 refclock 100MHz Diff 1.1V"
+	(text "clk3: LPDDR4 refclk - 100 MHz LVDS (U9), bank 3A 1.1 V"
 		(exclude_from_sim no)
 		(at 208.28 60.96 0)
 		(effects
@@ -1537,7 +1539,7 @@
 		)
 		(uuid "8c48b01e-44f2-4dab-a920-b28ac898c524")
 	)
-	(text "SDM, FPGA - 100MHz 1.8V SE"
+	(text "clk2: SDM OSC_CLK_1 - 25 MHz 1.8 V SE (Y2 via R246)"
 		(exclude_from_sim no)
 		(at 208.28 53.34 0)
 		(effects
@@ -1548,7 +1550,7 @@
 		)
 		(uuid "ae513797-fadb-4106-a9dd-59a6fc7bff60")
 	)
-	(text "HPS, Phy - 25MHZ 1.8V SE"
+	(text "clk1: HPS OSC_CLK - 25 MHz 1.8 V SE (Y2)"
 		(exclude_from_sim no)
 		(at 208.788 68.834 0)
 		(effects
@@ -1974,16 +1976,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 71.12) (xy 198.12 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b7bfa1e-4a5a-4136-bb71-7d8b9f3e146b")
-	)
-	(wire
-		(pts
 			(xy 180.34 60.96) (xy 198.12 60.96)
 		)
 		(stroke
@@ -2306,17 +2298,6 @@
 			(justify left)
 		)
 		(uuid "aa4c0a8c-c945-4271-ab58-b7d8e4bd9a66")
-	)
-	(hierarchical_label "clk1_N"
-		(shape output)
-		(at 198.12 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e1b7454c-5516-49ee-8e16-6fa11d30b6ec")
 	)
 	(symbol
 		(lib_id "Device:R")

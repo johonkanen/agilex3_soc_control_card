@@ -2,17 +2,47 @@
 
 Plan for making the schematic readable again without breaking the PCB, which is mostly routed. Based on the schematic as of 2026-10-23 (commit af68458 + working copy), KiCad 10.0.7. All numbers below come from `kicad-cli` exports (netlist, ERC JSON, PDF) and from parsing the `.kicad_sch` files directly.
 
+## Status (refreshed 2026-10-30)
+
+Work happens on branch `sch-reorg`; each step is one commit, verified with `tools/sch_reorg/netdiff.py` (§4.2), ERC and
+`pcb drc --schematic-parity`.
+
+| Step | State | Result |
+|---|---|---|
+| 0 Baseline | done | branch `sch-reorg`; exports of the 2026-10-30 board (table below) |
+| 1 Remove noise | **done** | ERC 315 -> 242; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0, DRC unchanged (297 / 174 unconnected) |
+| 2-9 | open | |
+
+**What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
+
+- microSD -> **eMMC** (U11 KIOXIA THGAMVG7T13BAIL, 1.8 V, no level translator): step 6b moves the eMMC, not the SD card.
+- Ethernet PHY KSZ9031 -> **RTL8211FDI** (U10); FB1/FB2 now exist (open question 1 is closed).
+- VCORE buck TDA38812 -> **TPS548A28** (U15); the TDA38812 mode/IOCP table and the R1205/R1201 table were deleted in step 1.
+- `clk100` is now driven: Y4 100 MHz CMOS -> R263 -> AE11 (open question 2 is closed).
+- ADC SPI has 33R series resistors R265-R267 on the ADC sheet.
+- **LPDDR4 is routed and delay-tuned.** The tuning (58 per-net rules in `agilex_3_soc.kicad_dru`, `tools/lpddr4_delay/delay_report.py`,
+  `sim/lpddr4_si/extract_routes.py`, the net classes) keys on the `/IOBANK 3/` net names. **Step 8 keeps the sheet names
+  `IOBANK 3` and `lpddr4 memory`** (open question 7 is answered), so no LPDDR4 net is renamed.
+- The PCB is nearly finished, so every [moves] step must show 0 connectivity diffs and DRC parity 0 before it is committed.
+
 Legend: **[net]** = the step renames nets (shows up as PCB net renames, which is fine but has to be checked), **[cosmetic]** = no electrical change, **[moves]** = symbols change sheet (risk to footprint links, see §4.1).
 
-Baseline to compare every step against:
+Baseline to compare every step against (2026-10-30, before step 1; the 2026-10-23 numbers in brackets):
 
 | Metric | Value |
 |---|---|
 | Sheets | 18 (root + 17 sub-sheets), root A3, all others A4 |
-| Parts (excl. power symbols) | 305 |
-| Nets | 566 (189 `unconnected-(…)`, 54 auto `Net-(…)`, 19 global, 304 sheet-local) |
-| ERC | 337: 136 isolated_pin_label, 60 unconnected_wire_endpoint, 44 similar_label_and_power, 24 endpoint_off_grid, 21 multiple_net_names, 16 label_dangling, 13 wire_dangling, 9 net_not_bus_member, 7 power_pin_not_driven, 4 pin_not_connected, 2 same_local_global_label, 1 hier_label_mismatch |
-| PCB DRC `--schematic-parity` | 0 parity issues, 14 unconnected items, 46 violations |
+| Parts (excl. power symbols) | 346 (305) |
+| Nets | 576 (566), 186 `unconnected-(…)`, 155 `/Connectors/…` |
+| ERC | 315 (337): 120 isolated_pin_label, 52 unconnected_wire_endpoint, 46 similar_label_and_power, 24 endpoint_off_grid, 20 label_dangling, 18 multiple_net_names, 12 wire_dangling, 9 power_pin_not_driven, 5 net_not_bus_member, 4 pin_not_connected, 2 same_local_global_label, 2 lib_symbol_mismatch, 1 hier_label_mismatch |
+| PCB DRC `--schematic-parity` | 0 parity issues, 174 unconnected items, 297 violations (PCB work in progress) |
+
+After step 1: ERC 242 (120 isolated_pin_label, 39 unconnected_wire_endpoint, 24 endpoint_off_grid, 18 label_dangling,
+18 multiple_net_names, 9 power_pin_not_driven, 5 net_not_bus_member, 4 pin_not_connected, 2 same_local_global_label,
+2 lib_symbol_mismatch, 1 wire_dangling).
+
+**ERC JSON caveat:** `kicad-cli sch erc --format json` lists most violations under sheet `/` whatever sheet they are on.
+Find an item by its coordinates in every sheet file, not only the one the report names.
 
 ---
 
@@ -271,7 +301,27 @@ Each step is one commit. "ERC" = expected ERC total after the step (approximate)
 **Step 0 – Baseline** [cosmetic]
 Commit or stash the current PCB work first (the working copy has an uncommitted PCB change). Create branch `sch-reorg`, run §4.2 exports.
 
-**Step 1 – Remove noise** [cosmetic + a few deleted stubs] — ERC ≈ 337 → ~250
+**Step 1 – Remove noise** [cosmetic + a few deleted stubs] — **done 2026-10-30, ERC 315 → 242**
+
+Done: `1v8` hierarchical label + stub + junction (fpga_power, −46 warnings); `clk1_N` label + stub (clock) and its
+sheet pin and NC flag on the root; dangling local label `PG` (ps1); 6 loose bus entries and a loose wire (hps); 4 bus
+entries with an open end (sdm); notes "Remember separate oscillators" (root), "Check powerup sequence" (ps1), "not
+relevant for this power" + the two old TDA38812 tables (ps), "MIPI Stecker…" (connectors), the MIPI lane table
+(iobank2). Corrected: bank 3A swizzle note (it showed an old swizzle; now the routed one, `BYTE_SWIZZLE_CH0=1 0 X X X X 3 2`),
+the LPDDR4 settings note (26.3 / IP 5.1.0 also tested), clock labels (clk1 = HPS 25 MHz, clk2 = SDM 25 MHz via R246,
+clk3 = LPDDR4 100 MHz LVDS; no 6A refclk), VCCIO notes 6B/6C/6G = 3V3 (checked in the netlist: 6A–6H are all on 3V3).
+Title blocks on all 18 sheets: sheet title, `Rev ${REVISION}`, comment 1 `${BOARD}` (project text variables in
+`.kicad_pro`); the Altera block on iobank6cd is gone.
+
+Moved to later steps, because they rename nets or need a decision:
+- root `~{hpscold_rstn}` stub: its wire ends on the SDM sheet pin, so removing it renames the HPS cold-reset net → step 4.
+- the 12 root labels `ad_SDO`/`iob6f3` … (two names on each ADC wire; ERC calls them dangling, but they carry the
+  connection — deleting them disconnected the ADC in a trial) → step 4.
+- `sda`/`scl` in ps1 and `pwr_scl/pwr_sda` in bank 6G (still wired on the root) → step 7, open question 4.
+- Ethernet PHY LED2 leftovers (`phy_led2`, `eth_led1_n`, `eth_led_mode`, a bus entry) → step 4, open question 12.
+- "check standby connection" (clock) kept until someone checks it; overlapping text and the eth "SODIMM P1" note → step 3.
+
+Original list:
 - Delete hierarchical label `1v8` and its stub in `fpga_power` (−45 warnings).
 - Delete dangling stubs: `sda`, `scl`, `PG` (ps1); `clk1_N` (clock); root stub `~{hpscold_rstn}`; dangling root bus entries (12 `wire_dangling`).
 - Delete leftover notes and tables listed in §1.5; fix the wrong VCCIO notes (6B–6H = 3.3 V) and the clock-sheet labels (clk1 = 25 MHz HPS, clk2 = 25 MHz SDM/6A refclk, clk3 = 100 MHz LPDDR4 refclk, 1.1 V diff).
@@ -302,7 +352,7 @@ Commit or stash the current PCB work first (the working copy has an uncommitted 
 
 **Step 6 – Split the power and HPS sheets** [moves] [net]
 - 6a: C129–C156 (ps) and C170–C221 (ps1) and C102 → `fpga_power` (becomes `soc_power`, change paper to A3). Arrange by rail as §3.5.
-- 6b: J8, U11, U40, U41, R241–R243, C240–C248 → new `hps_sdcard` sheet, connected by the `{hps_sdmmc}` bus via sheet pins. While there: delete the `sd_d4..7` labels (or keep if eMMC is planned).
+- 6b: the eMMC U11 and its passives → new `hps_emmc` sheet (was `hps_sdcard` for the old microSD J8/U40/U41, which are gone), connected by the `{hps_sdmmc}` bus via sheet pins.
 - 6c: Move the PG wired-AND (R249, `pg_all`) to `pwr_input` if you want the whole PG chain on one page (optional).
 - Verify: as step 5. Sheet-local SD nets become `/hps_sdcard/sd_*` – expected renames.
 
@@ -311,7 +361,7 @@ Commit or stash the current PCB work first (the working copy has an uncommitted 
 - Unused U7 pins: remove the 136 isolated labels and add NC flags; remove the `{hyperbus}` pin and `hb*` labels from bank 3A, `{hps_i2c}` if no I2C header is planned (§6). Nets turn into `unconnected-(U7…)` – expected; check in Update PCB that none of them carries a track (`iob6e*` and `iob6g5` have a few segments today – delete or keep deliberately).
 - Verify: ERC `isolated_pin_label` = 0, netdiff only renames to `unconnected-(…)` and removed single-pin nets.
 
-**Step 8 – Rename sheets, files and page order** [net]
+**Step 8 – Rename sheets, files and page order** [net] — **keep the sheet names `IOBANK 3` and `lpddr4 memory`** (LPDDR4 tuning rules and scripts use `/IOBANK 3/…`); rename the others.
 - Rename sheets to the §2 names (Sheet Properties). Rename files only where content changed substantially (`ps` → `pwr_vcore`, `ps1` → `pwr_rails`, `fpga_power` → `soc_power`, `connectors` → `io_headers`, `mem1` → `hps_lpddr4_mem`); the sheet UUID stays, so footprint links are unaffected. Keep the `a5e_kicad/` folder to avoid churn, or move everything into `sheets/` in the same commit.
 - Set page numbers 1–21 in §2 order (right-click sheet > Edit Page Number), or reorder via the hierarchy navigator.
 - Verify: netdiff = prefix renames only (≈ all `/IOBANK 3/…` → `/hps_lpddr4_ctrl/…` etc.), 0 diffs. Check `lpddr_dq` net class still covers dq0–dq31 (Board Setup > Net Classes, or DRC on the LPDDR4 rules), LPDDR4 tuning patterns still show the right lengths.
@@ -342,14 +392,19 @@ Doing 1–9 should bring ERC from 337 to roughly 220, almost all of the rest bei
 
 ## 6. Open questions
 
-1. **FB1/FB2 (Ethernet AVDDH / AVDDL_PLL ferrite beads):** the note and ETH_PHY_REVIEW.md say they were added, but they exist neither in the schematic nor on the PCB, and `PHY3V3`/`PHY1V2PLL` are shorted to `3V3`/`1V2`. Add them (2× 0402 on the routed board) or drop the note and the PHY rail names?
-2. **`clk100` → bank 6G AE11:** nothing drives it (the clock sheet's `clk2_N` output is a dangling label). Was a 100 MHz fabric clock planned, or delete it?
+1. *(closed 2026-10-30: FB1/FB2 exist with the RTL8211FDI.)* **FB1/FB2 (Ethernet AVDDH / AVDDL_PLL ferrite beads):** the note and ETH_PHY_REVIEW.md say they were added, but they exist neither in the schematic nor on the PCB, and `PHY3V3`/`PHY1V2PLL` are shorted to `3V3`/`1V2`. Add them (2× 0402 on the routed board) or drop the note and the PHY rail names?
+2. *(closed: Y4 drives `clk100` through R263.)* **`clk100` → bank 6G AE11:** nothing drives it (the clock sheet's `clk2_N` output is a dangling label). Was a 100 MHz fabric clock planned, or delete it?
 3. **Unused bank pins with labels** (2A, 6A, 6C–6E, 6G): NC them, or do you plan more header pins (then route them to J3/J5 or a new header now)?
 4. **HyperBus labels on bank 3A, `sd_d4..7`, `{hps_i2c}` bus, `pwr_scl/pwr_sda`** (bank 6G → ps1, where nothing uses them): delete all, or is any of it planned (e.g. an I2C header or PMBus)?
 5. **Rail name `3V3_analog`:** keep (no rename) or `3V3A`? Same for `5V0` vs `5V`.
 6. **Active-low style:** `_n` suffix everywhere (recommended) – OK to rename `~{qspi_CS}`, `~{nconfig}` etc.? (Not the LPDDR4 `~{cs}`/`~{rst}`, which stay.)
-7. **Sheet-name prefixes in LPDDR4 net names** change in step 8. Fine, or keep the `IOBANK 3` sheet name to avoid touching the tuned nets at all?
+7. *(answered 2026-10-30: keep `IOBANK 3` / `lpddr4 memory`.)* **Sheet-name prefixes in LPDDR4 net names** change in step 8. Fine, or keep the `IOBANK 3` sheet name to avoid touching the tuned nets at all?
 8. **Paper:** do you print/PDF-review at A4? If you only read on screen, A3 for the bank sheets would allow larger text.
 9. **Re-annotation:** confirm "no re-annotation now" (§3.7), or is a new board revision coming where a clean per-sheet numbering is worth it?
 10. **JTAG/UART/LED grouping:** happy with one `debug_status` sheet, or prefer JTAG on `soc_config` and UART/LEDs separately?
 11. The DRU references net classes `lpddr_ca` and `lpddr_diff`, but only `Default` and `lpddr_dq` are defined in the project, so those rules never match. Intended to add the classes (pattern on `ca*`, `cke`, `~{cs}`, `ck_*`, `dqs*`)? Worth fixing before step 8 so a net-class check after renaming means something.
+12. **Ethernet leftovers from the PHY swap:** R38 (1K0) has pin 1 alone on `phy_led2` (pin 2 GND), R29 (4K7) has pin 2
+    unconnected (pin 1 on `PHY_RG`). Delete both from schematic and PCB, or were they meant as straps?
+13. **Bank 6C pins C19 and H16** have neither a net nor an NC flag (ERC `pin_not_connected`): NC flags in step 7?
+14. **U12 `lib_symbol_mismatch`**: the IS43LQ32256A symbol differs from agilex_5_lib; update from library in step 2 (check pins with netdiff).
+

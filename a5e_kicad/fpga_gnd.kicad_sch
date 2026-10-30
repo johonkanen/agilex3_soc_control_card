@@ -5,7 +5,9 @@
 	(uuid "49053dad-e3a9-4169-8664-48552644d41a")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "SoC ground pins")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "FPGA_Altera_Agilex_5E:A5EB013B-B23B"

@@ -5,9 +5,9 @@
 	(uuid "e7681ee7-17a5-4d67-b0c0-52d0e88c2b76")
 	(paper "A4")
 	(title_block
-		(title "DBM_A5E013")
-		(rev "0.1")
-		(company "Altera Germany GmbH")
+		(title "Banks 6C / 6D HVIO")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "FPGA_Altera_Agilex_5E:A5EB013B-B23B"
@@ -14702,7 +14702,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "VCCIO_6C : 2.5V or 3.3V"
+	(text "VCCIO_6C : 3V3"
 		(exclude_from_sim no)
 		(at 162.56 22.86 0)
 		(effects

@@ -1036,7 +1036,10 @@
       "power supply1"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "BOARD": "Agilex 5 A5EB013B SoC control card",
+    "REVISION": "0.1"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0

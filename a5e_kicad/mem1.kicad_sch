@@ -5,7 +5,9 @@
 	(uuid "6468b0ab-7842-4056-94bd-a6c841706375")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "LPDDR4 memory and decoupling")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:C"

@@ -5,7 +5,9 @@
 	(uuid "842a4f9c-eb92-4973-9cab-ffdda8f10141")
 	(paper "A4")
 	(title_block
-		(rev "0.1")
+		(title "Bank 2A I/O")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
 		(symbol "Device:R"
@@ -14954,18 +14956,6 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(text "Pin	Lane	Pin-Index	MIPI	Soft CDR\nDJ65	0	0			D0P		Yes\nDF65	0	1			D0N		Yes\nDD65	0	2			D1P		Yes\nDD62	0	3			D1N		Yes\nDK62	0	4			CLKP		No\nDK62	0	5			CLKN		No\nDJ59	0	6			D2P		No\nDF59	0	7			D2N		No\nDD59	0	8			D3P		No\nDD56	0	9			D3N		No\nDK56	0	10						No\nDJ56	0	11						No\nDP70	1	12			D0P		Yes\nDN68	1	13			D0N		Yes\nDN73	1	14			D1P		Yes\nDN74	1	15			D1N		Yes\nDP68	1	16			CLKP		No\nDN66	1	17			CLKN		No\nDP66	1	18			D2P		No\nDN63	1	19			D2N		No\nDP61	1	20			D3P		No\nDN61	1	21			D3N		No\nDP60	1	22						No\nDN58	1	23						No\n"
-		(exclude_from_sim no)
-		(at 236.22 116.84 0)
-		(effects
-			(font
-				(face "Courier New")
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "eed623da-227e-455a-bb58-eab3447800d8")
 	)
 	(no_connect
 		(at 71.12 93.98)

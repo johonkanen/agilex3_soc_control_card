@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "a5b98d95-6877-4284-904f-d04e32723ae0")
 	(paper "A3")
+	(title_block
+		(title "Top level")
+		(rev "${REVISION}")
+		(comment 1 "${BOARD}")
+	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
@@ -4236,16 +4241,6 @@
 		)
 		(uuid "41234849-d334-4ad9-a1ec-cb7c01be5af0")
 	)
-	(text "Remember separate oscillators for fpga/HPS/LPDDR"
-		(exclude_from_sim no)
-		(at 46.99 19.812 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4cdde706-7eee-4b41-b73b-22db3ea3551d")
-	)
 	(text "1.8V"
 		(exclude_from_sim no)
 		(at 116.84 191.77 0)
@@ -4611,10 +4606,6 @@
 	(no_connect
 		(at 177.8 222.25)
 		(uuid "00abb0c9-1105-4541-b620-9bd020a03afd")
-	)
-	(no_connect
-		(at 96.52 194.31)
-		(uuid "eddaf6f0-4d24-4ad9-a085-3fff55e9e040")
 	)
 	(bus_entry
 		(at 205.74 219.71)
@@ -16550,16 +16541,6 @@
 		(pin "clk1_P" output
 			(at 96.52 191.77 0)
 			(uuid "5dc73538-ab3e-4f13-b26d-142af0ad3c51")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "clk1_N" output
-			(at 96.52 194.31 0)
-			(uuid "15f82d6d-5574-4167-ac82-c2638badbe8d")
 			(effects
 				(font
 					(size 1.27 1.27)
