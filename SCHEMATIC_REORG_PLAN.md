@@ -17,7 +17,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 3 Grid, U2, text | **done** | ERC 223 -> 199 (endpoint_off_grid 24 -> 0); netdiff 0 / 0; DRC parity 0 |
 | 4 One name per wire | **done** | ERC 199 -> 183, multiple_net_names 18 -> 10 (the rest need step 5/7); 9 renames, 0 connectivity diffs; PCB nets renamed, DRC parity 0 |
 | 5a ADC dividers | **done** | R5, R42, R46, R51, R53, R54 on the ADC sheet; 0 renamed / 0 connectivity diffs; footprints re-linked, DRC parity 0; ERC 183 |
-| 5b-9 | open | |
+| 5b Headers | **done** | J3, J5, RN1-RN7 on the Connectors sheet; 15 renames, 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 183 -> 180 |
+| 5c-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -409,6 +410,14 @@ Original list:
   since J3 feeds ad_ch4/6/7), so no rename. The footprints were re-linked by editing their `path`/`sheetname`/`sheetfile`
   in the .kicad_pcb (same symbol UUIDs). R42/R51 had a `C_0402` footprint; now `R_0402` (open question 16).
 - 5b: J3, J5 → `connectors.kicad_sch` (renamed sheet `io_headers` in step 8). Bank sheets connect via bus sheet pins; remove the root bus entries and the 81 root local labels. The 154 `/Connectors/…` names change to whichever sheet's label now names them – expected renames, 0 connectivity diffs. Includes the routed Ethernet MDI pairs (`txrx*`) – check those tracks are still on their (renamed) nets in the PCB.
+  **Done 2026-10-30.** RN1-RN7 (the 10k pull-down packs on the header lines) moved too. The header pins connect by
+  label name to the sheet's hierarchical bus labels (no bus entries needed); new sheet pins `{iob6g}` (J3 pin 32,
+  `iob6g5`) and `{ad_ch}` (J3 -> ADC ch4/6/7, bottom edge). On the root, every bank bus is now one straight line to the
+  Connectors sheet; the bus tree to the old header area and nine junctions left on bus crossings were removed, and
+  the root `{ad_ch}` bus label keeps the `/ad_ch*` names. Renames: `/IOBANK6gh/iob6g0..8` -> `/Connectors/iob6g0..8`
+  (like the other banks); the six ADC SPI/mux nets `/Connectors/iob6f3,6,7,8,9`, `/Connectors/iob6b5` ->
+  `/ad subsystem/ad_SDO, ad_CS, ad_SCLK, admux_0, admux_1, admux_2` (the removed junctions had tied the ADC bus branch to
+  the `{iob6f}` bus). None of the Ethernet MDI or LPDDR4 nets changed.
 - 5c: U1, J1, U42, J10, C253, C254, J2, R47, R48 → new `debug_status` sheet; move D1/D2/R16/R17 from `sdm` there too. Replace globals `pg_led`, `fpga_led`, `hps_uart0_tx/rx`, `eth_led*`, `UART_TX/RX` with sheet pins.
 - 5d: U6 + C10 → `pwr_rails` (ps1); J6, J4 → new `pwr_input` sheet.
 - 5e: root now holds only sheet symbols: redraw it as the block diagram of §2, add ref-range table and revision log.
