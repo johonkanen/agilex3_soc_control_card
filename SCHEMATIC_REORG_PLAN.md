@@ -22,7 +22,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 5d Power input | **done** | J4/J6 on new sheet `pwr_input` (page 20), U6/C10 on ps1; 5V0 sheet pins removed; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 178 |
 | 5e ADC one name | **done** | ADC sheet pins `adc_sdo`, `adc_sclk`, `adc_cs_n`, `adc_mux0..2` replace the `{adc_IO}` bus; 0 renamed / 0 connectivity diffs; ERC 178 -> 157 (multiple_net_names 8 -> 2, net_not_bus_member 3 -> 0) |
 | 6a U7 decoupling | **done** | 68 caps (C129-C156 from ps, C170-C221 minus C203-C205 from ps1) on `fpga_power`, now A3; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 157 -> 148 |
-| 5e root drawing, 6b-9 | open | |
+| 6b eMMC sheet | **done** | U11 + 27 passives on new sheet `hps_emmc` (page 21), one `{hps_sdmmc}` bus to HPS; 11 renames (`/HPS/sd_*`, `emmc_ds` -> `/hps_emmc/…`), 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 |
+| 5e root drawing, 6c-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -454,6 +455,9 @@ Original list:
   pointed them at the HPS sheet during this step, and the four 5V0 symbols added to ps in 5d had that wrong path —
   all instance paths now match their sheet (checked for every sheet file).
 - 6b: the eMMC U11 and its passives → new `hps_emmc` sheet (was `hps_sdcard` for the old microSD J8/U40/U41, which are gone), connected by the `{hps_sdmmc}` bus via sheet pins.
+  **Done 2026-10-30.** Same coordinates as on the HPS sheet. The `hps_sdmmc` bus alias (it listed the unused card-side
+  names `sd_d[7..0]`, `sd_clk`, `sd_cmd`) now lists the U7-side nets: `sd_clk_hps`, `sd_cmd_hps`, `sd_d0..7_hps`,
+  `emmc_ds_hps`, `emmc_rst_n`; those keep their `/HPS/…` names. HPS sheet title is "HPS I/O".
 - 6c: Move the PG wired-AND (R249, `pg_all`) to `pwr_input` if you want the whole PG chain on one page (optional).
 - Verify: as step 5. Sheet-local SD nets become `/hps_sdcard/sd_*` – expected renames.
 

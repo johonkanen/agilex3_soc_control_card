@@ -805,9 +805,18 @@
         "hps_tms"
       ],
       "hps_sdmmc": [
-        "sd_d[7..0]",
-        "sd_clk",
-        "sd_cmd"
+        "sd_clk_hps",
+        "sd_cmd_hps",
+        "sd_d0_hps",
+        "sd_d1_hps",
+        "sd_d2_hps",
+        "sd_d3_hps",
+        "sd_d4_hps",
+        "sd_d5_hps",
+        "sd_d6_hps",
+        "sd_d7_hps",
+        "emmc_ds_hps",
+        "emmc_rst_n"
       ],
       "hps_usb": [
         "usb_clk",

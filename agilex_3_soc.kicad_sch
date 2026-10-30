@@ -6196,6 +6196,16 @@
 				)
 			)
 		)
+		(pin "{hps_sdmmc}" bidirectional
+			(at 109.22 104.14 0)
+			(uuid "9ad36daf-e067-47cd-aca2-dbb3ec13218f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(pin "hps_osc_clk25" input
 			(at 78.74 85.09 180)
 			(uuid "56c02d67-f1ff-402c-bc6e-4ad691e1772f")
@@ -7646,6 +7656,72 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
 					(page "20")
+				)
+			)
+		)
+	)
+	(bus
+		(pts
+			(xy 109.22 104.14) (xy 119.38 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d64a5dce-0b36-4a98-8568-83f19fd0c63f")
+	)
+	(sheet
+		(at 119.38 100.33)
+		(size 25.4 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f67335e8-4801-4c49-9871-958151cd21af")
+		(property "Sheetname" "hps_emmc"
+			(at 119.38 99.6184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "a5e_kicad/hps_emmc.kicad_sch"
+			(at 119.38 111.0746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{hps_sdmmc}" bidirectional
+			(at 119.38 104.14 180)
+			(uuid "f5fe7791-0f23-428a-ba17-c7c0556902f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
+					(page "21")
 				)
 			)
 		)
