@@ -4728,16 +4728,6 @@
 		(uuid "8f0c1dff-ce7b-4049-9cca-b9d7fb2d5c4c")
 	)
 	(label "pg_all"
-		(at 22.86 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c2416c18-0dd9-4b59-bcb7-e3962e6f5cfe")
-	)
-	(label "pg_all"
 		(at 104.14 24.13 0)
 		(effects
 			(font
@@ -4768,7 +4758,7 @@
 		)
 		(uuid "23263beb-cd2d-49e6-b1d1-2f7d7ddc7c9d")
 	)
-	(hierarchical_label "PG"
+	(hierarchical_label "pg_all"
 		(shape output)
 		(at 20.32 134.62 180)
 		(effects
@@ -4790,7 +4780,7 @@
 		)
 		(uuid "66836442-2d63-42c5-95af-40ca5a9ce075")
 	)
-	(hierarchical_label "5V"
+	(hierarchical_label "5V0"
 		(shape input)
 		(at 19.05 24.13 180)
 		(effects

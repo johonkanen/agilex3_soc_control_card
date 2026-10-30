@@ -3380,7 +3380,7 @@
 			)
 		)
 	)
-	(hierarchical_label "5V"
+	(hierarchical_label "5V0"
 		(shape input)
 		(at 43.18 49.53 180)
 		(effects
@@ -3402,7 +3402,7 @@
 		)
 		(uuid "6550ff27-b9bb-47b8-9af3-a069920320ee")
 	)
-	(hierarchical_label "PG-Core"
+	(hierarchical_label "pg_vcore"
 		(shape input)
 		(at 43.18 81.28 180)
 		(effects

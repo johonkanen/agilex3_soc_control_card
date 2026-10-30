@@ -15942,12 +15942,6 @@
 		(uuid "996b559e-9894-447b-bc2a-2eab57bf8d2a")
 	)
 	(junction
-		(at 261.62 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a157fbb6-57d7-4c05-88aa-3da51bbb6f7b")
-	)
-	(junction
 		(at 63.5 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -16577,16 +16571,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 21.59) (xy 269.24 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31d0660b-6497-4150-87b6-540fb1f3c9ab")
-	)
-	(wire
-		(pts
 			(xy 116.84 88.9) (xy 121.92 88.9)
 		)
 		(stroke
@@ -16857,16 +16841,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 67.31) (xy 269.24 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55b8481d-1d85-4a78-9dd3-80f7015a5249")
-	)
-	(wire
-		(pts
 			(xy 58.42 124.46) (xy 63.5 124.46)
 		)
 		(stroke
@@ -17037,16 +17011,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 92.71) (xy 269.24 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "678427b1-28ea-4c18-8578-6783739de332")
-	)
-	(wire
-		(pts
 			(xy 63.5 55.88) (xy 66.04 55.88)
 		)
 		(stroke
@@ -17154,16 +17118,6 @@
 			(type default)
 		)
 		(uuid "750d4fde-f645-48ec-b129-58de6bd07dfa")
-	)
-	(wire
-		(pts
-			(xy 261.62 43.18) (xy 269.24 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "75defc7e-ed13-404b-a3c0-beb1bf7b39ed")
 	)
 	(wire
 		(pts
@@ -18245,46 +18199,6 @@
 		)
 		(uuid "faa3c64b-606e-4e6a-8f14-b8f208f2b063")
 	)
-	(label "vccadc"
-		(at 264.16 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1143a224-0bbe-440d-ac60-8e2a4f35f0fa")
-	)
-	(label "vccio_6b"
-		(at 54.61 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "142e92c5-7214-4c36-ba8c-9d4b04c8b025")
-	)
-	(label "vccplldigsdm"
-		(at 149.86 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "22be18a1-e645-409a-bb2d-bf53dbb45494")
-	)
-	(label "vccio_6x"
-		(at 119.38 27.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "239e69be-07e2-4ffe-8faf-5a71b01663a1")
-	)
 	(label "vcoresense_P"
 		(at 129.54 132.08 0)
 		(effects
@@ -18294,96 +18208,6 @@
 			(justify left bottom)
 		)
 		(uuid "32ce57c3-752c-4630-ad22-068b627a6742")
-	)
-	(label "vccplldigsdm"
-		(at 264.16 43.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "401eaf73-4e2f-48e9-9e90-b88677273772")
-	)
-	(label "vccplldighps"
-		(at 264.16 21.59 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c0057ca-25ec-4c00-89a3-ff6bff39113d")
-	)
-	(label "vccpllhps"
-		(at 264.16 67.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "903ea0ba-832a-49e9-9f84-ebd84bcd02ae")
-	)
-	(label "vccplldighps"
-		(at 149.86 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ada3feba-fab7-4e4a-a627-9cd07f928880")
-	)
-	(label "vccio_6a"
-		(at 55.88 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b9c36264-0191-4d9b-9609-d20e72b5c747")
-	)
-	(label "vccadc"
-		(at 129.54 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "baf4c933-0241-44bc-8e61-b992d27bc99d")
-	)
-	(label "vccio_6c"
-		(at 55.88 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d6104272-83ea-4f6a-8189-28cdc005d897")
-	)
-	(label "vccio_6c"
-		(at 119.38 22.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d6a3da6f-12c4-44f2-9172-be8cb064b695")
-	)
-	(label "vccpllhps"
-		(at 149.86 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "deeb25bb-c2ec-4646-9748-869bb8c0ac82")
 	)
 	(hierarchical_label "vcoresense_P"
 		(shape output)
@@ -24639,91 +24463,6 @@
 		)
 	)
 	(symbol
-		(lib_id "agilex_5_lib:1V8")
-		(at 243.84 67.31 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8da20046-65ec-4293-89f4-f270927bb8d4")
-		(property "Reference" "#PWR0218"
-			(at 247.65 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 240.03 67.3099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 243.84 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 243.84 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 243.84 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8bc1e209-28e3-4bd0-a4e9-0498eaeabc57")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0609")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0218")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 254 77.47 0)
 		(unit 1)
@@ -25135,91 +24874,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
 					(reference "#PWR0229")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "agilex_5_lib:1V8")
-		(at 243.84 92.71 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a5fb7b09-56e7-4439-8c35-c4d6fddf01f5")
-		(property "Reference" "#PWR0219"
-			(at 247.65 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 240.03 92.7099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 243.84 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 243.84 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 243.84 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "40a6f9a1-7e91-44e8-a153-cc594bcf7f7b")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0611")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0219")
 					(unit 1)
 				)
 			)
@@ -26151,9 +25805,8 @@
 		)
 	)
 	(symbol
-		(lib_id "agilex_5_lib:VCORE")
-		(at 243.84 21.59 90)
-		(mirror x)
+		(lib_id "agilex_5_lib:1V8")
+		(at 139.7 116.84 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -26161,9 +25814,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f3360e42-e9b8-44af-8155-33471a05bd82")
-		(property "Reference" "#PWR0216"
-			(at 247.65 21.59 0)
+		(uuid "cafd08ba-2898-459a-ad3e-a1a63532ffbb")
+		(property "Reference" "#PWR1578"
+			(at 139.7 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26173,8 +25826,8 @@
 				)
 			)
 		)
-		(property "Value" "VCORE"
-			(at 240.03 21.5899 90)
+		(property "Value" "1V8"
+			(at 143.51 116.84 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26185,7 +25838,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 243.84 21.59 0)
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26196,7 +25849,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 243.84 21.59 0)
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26206,8 +25859,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+1V1\""
-			(at 243.84 21.59 0)
+		(property "Description" "Power symbol creates a global label with name \"1V8\""
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26218,18 +25871,246 @@
 			)
 		)
 		(pin "1"
-			(uuid "8b6c27dc-2064-4c4b-873a-cd87e08e9ff1")
+			(uuid "7dd51c5d-3bf3-42eb-9377-293b1aa99d01")
 		)
 		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0621")
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR1578")
 					(unit 1)
 				)
 			)
+		)
+	)
+	(symbol
+		(lib_id "agilex_5_lib:VCORE")
+		(at 149.86 104.14 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "99fd5131-489a-4ee4-b792-0175f61e75bc")
+		(property "Reference" "#PWR1579"
+			(at 149.86 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCORE"
+			(at 146.05 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCORE\""
+			(at 149.86 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e428b588-41aa-4bae-a571-4f701838cdda")
+		)
+		(instances
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
-					(reference "#PWR0216")
+					(reference "#PWR1579")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "agilex_5_lib:VCORE")
+		(at 149.86 93.98 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7cac3bea-7648-471b-a992-c80876844674")
+		(property "Reference" "#PWR1580"
+			(at 149.86 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCORE"
+			(at 146.05 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCORE\""
+			(at 149.86 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d319f9df-b413-484a-ab84-8f6d88c30e3c")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR1580")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "agilex_5_lib:1V8")
+		(at 149.86 83.82 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ce8ae56-3b1f-4a60-8a30-99b39dc96bca")
+		(property "Reference" "#PWR1581"
+			(at 149.86 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 146.05 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"1V8\""
+			(at 149.86 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "034ff15d-3857-4856-8a08-3f44eae6becb")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2"
+					(reference "#PWR1581")
 					(unit 1)
 				)
 			)

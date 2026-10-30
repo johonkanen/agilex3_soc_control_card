@@ -15,7 +15,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 2 Power symbols and flags | **done** | ERC 234 -> 224; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0 |
 | — PHY1V2PLL | done | FB2/C18/C19 + `PHY1V2PLL` removed from schematic and PCB (open question 15); ERC 223 |
 | 3 Grid, U2, text | **done** | ERC 223 -> 199 (endpoint_off_grid 24 -> 0); netdiff 0 / 0; DRC parity 0 |
-| 4-9 | open | |
+| 4 One name per wire | **done** (pending review) | ERC 199 -> 183, multiple_net_names 18 -> 10 (the rest need step 5/7); 9 renames, 0 connectivity diffs; PCB nets renamed, DRC parity 0 |
+| 5-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -369,7 +370,34 @@ Original list:
 - Align root U42 cluster and any other off-grid items; fix U2 pin layout in the library, update symbol, re-wire if a pin moved.
 - Verify: `endpoint_off_grid` = 0, netdiff 0 diffs, U2 pins still on `qspi_*` nets.
 
-**Step 4 – One name per wire** [net] — `multiple_net_names` 21 → 0
+**Step 4 – One name per wire** [net] — **done 2026-10-30: `multiple_net_names` 18 → 10, ERC 199 → 183**
+
+Renames (also applied to the PCB nets by name; DRC parity 0):
+
+| old | new |
+|---|---|
+| `/power supply/PG-Core` | `/power supply/pg_vcore` |
+| `pg_all` (global) | `/pg_all` (root local label; ps1 `PG` hierarchical label/pin is now `pg_all`) |
+| `pg_led` | `pg_all_3v3` (still a global label root ↔ SDM until step 5c) |
+| `/~{hpscold_rstn}` | `/SDM/hps_cold_rst_n` (SDM sheet pin and root stub removed) |
+| `sdm_clk25` (global) | `/sdm_clk25` (root local labels) |
+| `Net-(J1-Pin_1..4)` | `/jtag_tdi_3v3`, `/jtag_tck_3v3`, `/jtag_tms_3v3`, `/jtag_tdo_3v3` |
+
+No rename: `5V` hierarchical labels/pins → `5V0` (the net was already `5V0`); the 13 `vcc*` labels in fpga_power
+removed — four of them were the only connection of U7 VCCADC, VCCPLL1_HPS (1V8) and VCCPLLDIG_SDM, VCCPLLDIG1_HPS
+(VCORE) to their rail, so those pins now have rail power symbols (deleting the labels alone dropped them off the
+rail: caught by netdiff). `powergood`, `pg_1v8` and the duplicate local `pg_all` / `sdm_clk25` labels removed.
+
+Not done here, by design:
+- **ADC (`ad_SDO`/`iob6f3` …, 6 wires) and FPGA UART (`UART_TX`/`iob6b11`, 2):** these wires bridge two buses on the
+  root (`{adc_IO}` ↔ `{iob6f}`/`{iob6b}`, global `UART_*` ↔ `{iob6b}`), so each needs a member label of both buses —
+  deleting either one disconnects it. They get one name in step 5 (bank sheets export the ADC/UART signals
+  directly to the `adc` / `debug_status` sheets).
+- **`iob6g4`/`pwr_scl`, `iob6g5`/`pwr_sda`:** step 7 / open question 4.
+- **RGMII PHY-side nets** (`Net-(U10-TXD0)` …): no room for a label (each series resistor sits directly on its U10
+  pin) and the auto names already say which pin; left as they are.
+
+Original list:
 - Remove the duplicate labels and apply §3.1 names: power-good chain → `pg_vcore` (U15 PGOOD), `pg_all` (wired-AND, 1.8 V), `pg_all_3v3` (U42 out, today `powergood`/`pg_led`); `5V` → `5V0`; `hps_cold_rst_n`; `eth_led_link_n` (today `eth_led1_n`/`phy_led2`); ADC nets `adc_cs_n`, `adc_sclk`, `adc_sdo`, `adc_mux0..2` instead of the `iob6f*` aliases; `fpga_uart_tx/rx` instead of `UART_TX/RX` + `iob6b11/8`; drop the `vccio_*/vccadc/vccpll*` labels on rail wires.
 - Name the JTAG header nets (`jtag_tck_3v3` …) and the RGMII nets between series resistors and U10 (`eth_gtx_clk_phy` …).
 - Verify: netdiff = renames only, 0 connectivity diffs; Update PCB shows the same renames and nothing else. Review the rename list once against LPDDR4/Ethernet (nothing from those should appear except the RGMII PHY-side names).

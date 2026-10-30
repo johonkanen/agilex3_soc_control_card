@@ -17513,16 +17513,6 @@
 		)
 		(uuid "15da438d-7b7d-4675-8142-53c377bdf61b")
 	)
-	(label "sdm_clk25"
-		(at 198.12 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1e6e1a79-8886-481c-a541-60d5a2363477")
-	)
 	(label "tdo"
 		(at 198.12 48.26 0)
 		(effects
@@ -17673,7 +17663,7 @@
 		)
 		(uuid "76e1d295-c3ce-43a1-88a3-8d8debd21c2d")
 	)
-	(label "~{hps_cold_rstn}"
+	(label "hps_cold_rst_n"
 		(at 87.63 104.14 0)
 		(effects
 			(font
@@ -17681,7 +17671,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "80691cff-b62b-4b5a-a973-be8f8626a7a8")
+		(uuid "a2922149-caee-49ad-b8a6-60dea1a5451c")
 	)
 	(label "qspi_D3"
 		(at 88.9 62.23 90)
@@ -17893,16 +17883,6 @@
 		)
 		(uuid "da4ac126-e011-434c-b81c-45539b76fcba")
 	)
-	(label "~{hps_cold_rstn}"
-		(at 195.58 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "db90d562-9968-4bb0-8986-e1cdb054d340")
-	)
 	(label "tck"
 		(at 198.12 53.34 0)
 		(effects
@@ -17945,7 +17925,7 @@
 			)
 		)
 	)
-	(global_label "pg_led"
+	(global_label "pg_all_3v3"
 		(shape input)
 		(at 125.73 162.56 0)
 		(effects
@@ -17967,16 +17947,15 @@
 			)
 		)
 	)
-	(hierarchical_label "~{hpscold_rstn}"
-		(shape input)
+	(label "hps_cold_rst_n"
 		(at 193.04 96.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "25048b99-399a-46a0-82d6-da0cc0e71945")
+		(uuid "36cb7586-7ce9-493c-8315-d4137aa3e688")
 	)
 	(hierarchical_label "{jtag}"
 		(shape input)
