@@ -14713,6 +14713,14 @@
 		(uuid "328d10e4-dfe3-44b2-b318-fbdb3b4d5139")
 	)
 	(no_connect
+		(at 96.52 27.94)
+		(uuid "6a287cc1-2a4d-4899-905f-cc8e41432368")
+	)
+	(no_connect
+		(at 96.52 48.26)
+		(uuid "452565fb-abda-4bfe-b4f2-42ac4b7b4a3d")
+	)
+	(no_connect
 		(at 96.52 38.1)
 		(uuid "10d6b576-9a42-4c6a-8da5-b5e3f3a49df0")
 	)
