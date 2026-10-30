@@ -11,7 +11,9 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 |---|---|---|
 | 0 Baseline | done | branch `sch-reorg`; exports of the 2026-10-30 board (table below) |
 | 1 Remove noise | **done** | ERC 315 -> 242; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0, DRC unchanged (297 / 174 unconnected) |
-| 2-9 | open | |
+| — PHY leftovers | done | R38/R29 removed from schematic and PCB (open question 12), NC flags on 6C C19/H16 (13) |
+| 2 Power symbols and flags | **done** | ERC 234 -> 224; netdiff 0 renamed / 0 connectivity diffs; DRC parity 0 |
+| 3-9 | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -329,7 +331,22 @@ Original list:
 - Fix overlapping text (§1.5).
 - Verify: netdiff shows 0 connectivity diffs (deleting unconnected stubs removes no pins). If `pwr_scl/pwr_sda` hierarchical labels go too, `iob6g4/5` only change from one name to the other.
 
-**Step 2 – Power symbols and flags** [cosmetic] — ERC −7
+**Step 2 – Power symbols and flags** [cosmetic] — **done 2026-10-30, ERC 234 → 224**
+
+Done: 11 per-rail symbols in agilex_5_lib (`1V1`, `1V2`, `1V8`, `3V3`, `3V3_analog`, `5V0`, `VCORE`, `PHY1V0`,
+`PHY1V2PLL`, `PHY3V3`, `PHY_RG`; the +1V1 arrow graphic, Value = net name, so no net changes) and all 131 rail instances
+moved to them; the 11 fake GNDs are `power:GND` (turned 180° so the body stays where the arrow was); U12 now uses
+`agilex_5_lib:IS43LQ32256A-062BLI`, a copy of KiCad's Memory_RAM symbol with the project footprint
+(`BGA-200_10x15mm`) — "update from library" would have put the 10x14.5 mm footprint back (open question 14);
+PWR_FLAG pairs for 5V0, 1V8, 3V3, 1V2, 1V1, GND (ps1), VCORE (ps), PHY3V3 (eth); `power` added to the project
+`sym-lib-table`. Not done: redrawing rotated power symbols on the horizontal decoupling rails (do it in step 6a, when
+the decoupling is moved anyway). Left: `power_pin_not_driven` on `PHY1V2PLL` (open question 15).
+
+**Headless ERC:** the AppImage's kicad-cli has no symbol libraries, so set
+`KICAD10_SYMBOL_DIR="/mnt/c/Program Files/KiCad/10.0/share/kicad/symbols"` (the Windows install) when running ERC from
+WSL, otherwise every `power:` symbol shows as `lib_symbol_issues`.
+
+Original list:
 - Add per-rail power symbols to agilex_5_lib and swap with Change Symbols (§3.3); swap the 11 arrow-GNDs for `power:GND`; add `PWR_FLAG`s; add `power` to `sym-lib-table`.
 - Verify: netdiff 0 renamed, 0 diffs. (If a swapped symbol's Value differs by one character, it shows as a rename – that is the check.)
 
@@ -403,8 +420,10 @@ Doing 1–9 should bring ERC from 337 to roughly 220, almost all of the rest bei
 9. **Re-annotation:** confirm "no re-annotation now" (§3.7), or is a new board revision coming where a clean per-sheet numbering is worth it?
 10. **JTAG/UART/LED grouping:** happy with one `debug_status` sheet, or prefer JTAG on `soc_config` and UART/LEDs separately?
 11. The DRU references net classes `lpddr_ca` and `lpddr_diff`, but only `Default` and `lpddr_dq` are defined in the project, so those rules never match. Intended to add the classes (pattern on `ca*`, `cke`, `~{cs}`, `ck_*`, `dqs*`)? Worth fixing before step 8 so a net-class check after renaming means something.
-12. **Ethernet leftovers from the PHY swap:** R38 (1K0) has pin 1 alone on `phy_led2` (pin 2 GND), R29 (4K7) has pin 2
+12. *(done 2026-10-30: removed.)* **Ethernet leftovers from the PHY swap:** R38 (1K0) has pin 1 alone on `phy_led2` (pin 2 GND), R29 (4K7) has pin 2
     unconnected (pin 1 on `PHY_RG`). Delete both from schematic and PCB, or were they meant as straps?
-13. **Bank 6C pins C19 and H16** have neither a net nor an NC flag (ERC `pin_not_connected`): NC flags in step 7?
-14. **U12 `lib_symbol_mismatch`**: the IS43LQ32256A symbol differs from agilex_5_lib; update from library in step 2 (check pins with netdiff).
+13. *(done: NC flags.)* **Bank 6C pins C19 and H16** have neither a net nor an NC flag (ERC `pin_not_connected`): NC flags in step 7?
+14. *(done: copied into agilex_5_lib with the project footprint.)* **U12 `lib_symbol_mismatch`**: the IS43LQ32256A symbol differs from agilex_5_lib; update from library in step 2 (check pins with netdiff).
+15. **`PHY1V2PLL`**: only FB2, C18, C19 (all DNP, "no PLL rail on the RTL8211F") and its power symbol remain. Delete FB2/C18/C19
+    and the rail from schematic and PCB, or keep the DNP footprints?
 

@@ -10,6 +10,284 @@
 		(comment 1 "${BOARD}")
 	)
 	(lib_symbols
+		(symbol "agilex_5_lib:1V1"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1V1"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"1V1\": LPDDR4 VDDQ / bank 3A VCCIO"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "1V1_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1V1_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "agilex_5_lib:1V8"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1V8"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"1V8\": SDM / HPS I/O, LPDDR4 VDD1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "1V8_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1V8_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -305,7 +583,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Memory_RAM:IS43LQ32256A-062BLI"
+		(symbol "agilex_5_lib:IS43LQ32256A-062BLI"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -4142,145 +4420,6 @@
 						)
 					)
 					(number "Y12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:+1V1"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+1V1"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+1V1\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+1V1_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+1V1_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8454,7 +8593,7 @@
 		(uuid "3cbe043f-6773-4815-9ad6-591fa83489fe")
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 81.28 114.3 0)
 		(unit 1)
 		(body_style 1)
@@ -8636,7 +8775,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 154.94 35.56 90)
 		(mirror x)
 		(unit 1)
@@ -9295,7 +9434,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V8")
 		(at 154.94 62.23 90)
 		(mirror x)
 		(unit 1)
@@ -9674,8 +9813,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 152.4 124.46 270)
+		(lib_id "power:GND")
+		(at 152.4 124.46 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10047,8 +10186,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 154.94 43.18 90)
+		(lib_id "power:GND")
+		(at 154.94 43.18 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -10132,7 +10271,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 154.94 22.86 90)
 		(mirror x)
 		(unit 1)
@@ -10315,7 +10454,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V8")
 		(at 76.2 25.4 0)
 		(unit 1)
 		(body_style 1)
@@ -10497,7 +10636,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 116.84 33.02 270)
 		(unit 1)
 		(body_style 1)
@@ -10665,7 +10804,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 116.84 121.92 270)
 		(unit 1)
 		(body_style 1)
@@ -10750,7 +10889,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 154.94 48.26 90)
 		(mirror x)
 		(unit 1)
@@ -10933,7 +11072,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 86.36 114.3 0)
 		(unit 1)
 		(body_style 1)
@@ -11115,8 +11254,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 154.94 30.48 90)
+		(lib_id "power:GND")
+		(at 154.94 30.48 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -11292,7 +11431,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Memory_RAM:IS43LQ32256A-062BLI")
+		(lib_id "agilex_5_lib:IS43LQ32256A-062BLI")
 		(at 81.28 152.4 0)
 		(unit 2)
 		(body_style 1)
@@ -12952,8 +13091,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 154.94 55.88 90)
+		(lib_id "power:GND")
+		(at 154.94 55.88 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13037,7 +13176,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 86.36 25.4 0)
 		(unit 1)
 		(body_style 1)
@@ -13611,8 +13750,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
-		(at 154.94 69.85 90)
+		(lib_id "power:GND")
+		(at 154.94 69.85 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13990,7 +14129,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 116.84 127 270)
 		(unit 1)
 		(body_style 1)
@@ -14075,7 +14214,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Memory_RAM:IS43LQ32256A-062BLI")
+		(lib_id "agilex_5_lib:IS43LQ32256A-062BLI")
 		(at 81.28 63.5 0)
 		(unit 1)
 		(body_style 1)
@@ -15257,7 +15396,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V8")
 		(at 76.2 114.3 0)
 		(unit 1)
 		(body_style 1)
@@ -15341,7 +15480,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+1V1")
+		(lib_id "agilex_5_lib:1V1")
 		(at 81.28 25.4 0)
 		(unit 1)
 		(body_style 1)
