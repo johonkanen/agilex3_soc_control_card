@@ -978,15 +978,15 @@
     ],
     [
       "8aaf6c2b-ae6e-4499-806d-67948f95803c",
-      "SDM"
+      "soc_config"
     ],
     [
       "871a81f2-62c4-47fa-98d5-872580aa51c3",
-      "ad subsystem"
+      "adc"
     ],
     [
       "1bba180f-a717-40d4-b2d6-e5a7b998021f",
-      "HPS"
+      "hps_io"
     ],
     [
       "d035372b-a014-4c13-aa37-0253306826b4",
@@ -994,15 +994,15 @@
     ],
     [
       "75d90890-a51c-4e7c-a03e-f25381d85068",
-      "IOBANK 2"
+      "fpga_bank2a"
     ],
     [
       "03ab2536-81c4-4b58-8998-1457d6fb7a1b",
-      "clock"
+      "clocks"
     ],
     [
       "cf2987d8-8050-440f-9afe-54dd4a6786f5",
-      "Ethernet Phy"
+      "hps_ethernet"
     ],
     [
       "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
@@ -1010,39 +1010,39 @@
     ],
     [
       "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66",
-      "Connectors"
+      "io_headers"
     ],
     [
       "f9220582-8ed5-4e58-b084-fa5be2c4151f",
-      "IOBANK6ab"
+      "fpga_bank6ab"
     ],
     [
       "cefbe413-d289-4fed-be9b-fe48bc098f16",
-      "IOBANK6cd"
+      "fpga_bank6cd"
     ],
     [
       "3662c9ea-dfc7-48dc-ab83-4f2a05e3ee91",
-      "IOBANK6ef"
+      "fpga_bank6ef"
     ],
     [
       "daebef0d-cd15-4e03-815a-780dc10d7764",
-      "IOBANK6gh"
+      "fpga_bank6gh"
     ],
     [
       "0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2",
-      "FPGA power"
+      "soc_power"
     ],
     [
       "7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa",
-      "FPGA gnd"
+      "soc_gnd"
     ],
     [
       "46009ab7-a4ba-489d-b29c-5828bb20621d",
-      "power supply"
+      "pwr_vcore"
     ],
     [
       "f641c4ca-6983-42f3-9cca-4494b20f9dfc",
-      "power supply1"
+      "pwr_rails"
     ]
   ],
   "text_variables": {

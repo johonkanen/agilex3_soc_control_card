@@ -24,7 +24,8 @@ Work happens on branch `sch-reorg`; each step is one commit, verified with `tool
 | 6a U7 decoupling | **done** | 68 caps (C129-C156 from ps, C170-C221 minus C203-C205 from ps1) on `fpga_power`, now A3; 0 renamed / 0 connectivity diffs; DRC parity 0; ERC 157 -> 148 |
 | 6b eMMC sheet | **done** | U11 + 27 passives on new sheet `hps_emmc` (page 21), one `{hps_sdmmc}` bus to HPS; 11 renames (`/HPS/sd_*`, `emmc_ds` -> `/hps_emmc/…`), 0 connectivity diffs; footprints re-linked, PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 |
 | 7 Globals out, NC flags | **done** | 0 global labels; 118 unused U7 pins NC (labels, stubs, bus entries removed); HyperBus, HPS I2C and pwr_scl/pwr_sda removed (open questions 3, 4); 124 renames (6 to sheet-pin names, 118 to `unconnected-(U7…)`), 0 connectivity diffs; PCB nets renamed, DRC parity 0, DRC unchanged; ERC 148 -> 21 |
-| 5e root drawing, 8, 9 | open | |
+| 8 Names, files, pages | **done** | 17 sheets renamed to the §2 names (`IOBANK 3`, `lpddr4 memory` kept), 15 files renamed (git mv; `ad_subsystem.kicad_sch` -> `a5e_kicad/adc.kicad_sch`), pages 1-21 in §2 order, sheet index on the root; 113 renames (0 LPDDR4), 0 connectivity diffs; PCB sheet fields + nets updated, DRC parity 0, DRC unchanged; ERC 21 |
+| 9 ERC to zero | open | |
 
 **What changed on the board since the plan was written (2026-10-23)**, and what it means for the plan:
 
@@ -480,6 +481,16 @@ pcbnew. Left for step 9: the 21 open wire stubs, the empty bank buses (`{iob6a}`
 - Rename sheets to the §2 names (Sheet Properties). Rename files only where content changed substantially (`ps` → `pwr_vcore`, `ps1` → `pwr_rails`, `fpga_power` → `soc_power`, `connectors` → `io_headers`, `mem1` → `hps_lpddr4_mem`); the sheet UUID stays, so footprint links are unaffected. Keep the `a5e_kicad/` folder to avoid churn, or move everything into `sheets/` in the same commit.
 - Set page numbers 1–21 in §2 order (right-click sheet > Edit Page Number), or reorder via the hierarchy navigator.
 - Verify: netdiff = prefix renames only (≈ all `/IOBANK 3/…` → `/hps_lpddr4_ctrl/…` etc.), 0 diffs. Check `lpddr_dq` net class still covers dq0–dq31 (Board Setup > Net Classes, or DRC on the LPDDR4 rules), LPDDR4 tuning patterns still show the right lengths.
+**Done 2026-10-30.** Sheet -> file: pwr_input, pwr_vcore (was ps), pwr_rails (ps1), soc_power (fpga_power), soc_gnd
+(fpga_gnd), soc_config (sdm), clocks (clk), hps_io (hps), IOBANK 3 (iobank3, unchanged), lpddr4 memory (mem1,
+unchanged), hps_emmc, hps_ethernet (eth), debug_status, fpga_bank2a (iobank2), fpga_bank6ab/cd/ef/gh (iobank6xx), adc
+(ad_subsystem, moved into a5e_kicad/), io_headers (connectors). The project file's sheet list is updated (KiCad adds the
+three new sheets on its next save). Net prefixes follow (e.g. `/SDM/…` -> `/soc_config/…`); the bank I/O nets are now
+named after their bank sheet (`/fpga_bank6ef/iob6f3`, was `/Connectors/…`: KiCad picks the alphabetically first sheet
+when two sheets name a bus member), and the eMMC U7-side nets are `/hps_emmc/sd_*_hps`. No `/IOBANK 3/` or
+`/lpddr4 memory/` net changed, so the LPDDR4 DRU rules and scripts are unaffected (DRC identical). Not done: the full
+block-diagram re-layout of the root from §2; the root already reads left to right (config/HPS/clocks, headers, banks,
+power, debug) and moving every sheet symbol would mean re-drawing every root bus for little gain.
 
 **Step 9 – ERC to zero** [cosmetic]
 - Fix or exclude (with a comment) whatever remains. Target: 0 errors, 0 warnings except documented exclusions. From then on ERC must stay clean before every commit.

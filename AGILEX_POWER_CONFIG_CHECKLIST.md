@@ -57,7 +57,7 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 - [x] U6 is `NCP163ASN330T1G` (3.3 V fixed) — was wrongly the 1.5 V `...150T1G` variant.
 - [x] U19 / U8 / U16 `PG` pins (open drain) are wired-AND on `pg_all` with R249 10 k to 1V8 -> hierarchical `PG` -> root `pg_1v8` -> U42 channel 4 (1.8 V -> 3.3 V) -> `powergood` (SODIMM P1 pin 12, push-pull 3.3 V) and `pg_led` -> R16 -> D1. High only when 1V2, 3V3 and 1V1 are all in regulation (which implies VCORE and 1V8 are up).
 
-## 2. Voltage per Agilex 5 supply pin group (from `fpga_power.kicad_sch`)
+## 2. Voltage per Agilex 5 supply pin group (from `soc_power.kicad_sch`)
 
 Rail groups are from table 3 of the Power Management UG. All pins of each group were checked; the count is the number of balls.
 
@@ -163,7 +163,7 @@ That is common practice, but those loads switch on the same regulator. Accept it
 - [ ] While 1V8 is up and 3V3 is not yet up, U1/U42 (SN74AXC4T774) see VCCB = 1.8 V and VCCA = 0 V – the AXC family is designed for this (Ioff, partial-power-down), no issue. The KSZ9031 PHY and the SD card mux likewise have their own supplies sequenced from 1V8/3V3 only.
 - [ ] Reminder: during power-up no input pin may be driven above its bank's VCCIO. The 3.3 V UART header J10 and the JTAG header J1 are behind level shifters that are powered by the same rails, so this holds.
 
-## 4. SDM / configuration pins (from `sdm.kicad_sch`)
+## 4. SDM / configuration pins (from `soc_config.kicad_sch`)
 
 | Pin | Ball | Schematic | Requirement | |
 |---|---|---|---|---|

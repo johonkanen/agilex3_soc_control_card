@@ -70,7 +70,7 @@ Circuit:
 RST_n is disabled by default (EXT_CSD[162] RST_n_FUNCTION = 0). Enable it from software if the HPS should be able to
 reset the eMMC.
 
-Status on this board (2026-10-26): **in the schematic** (`a5e_kicad/hps.kicad_sch`). The microSD subsystem is removed:
+Status on this board (2026-10-26): **in the schematic** (`a5e_kicad/hps_emmc.kicad_sch`). The microSD subsystem is removed:
 J8, U40, U41, C240, C241, C247 and C248 are gone. The eMMC reuses the ref **U11**, and some refs were reused for new
 parts:
 

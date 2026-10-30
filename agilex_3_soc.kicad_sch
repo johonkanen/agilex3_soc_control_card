@@ -5932,7 +5932,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "03ab2536-81c4-4b58-8998-1457d6fb7a1b")
-		(property "Sheetname" "clock"
+		(property "Sheetname" "clocks"
 			(at 78.74 188.5184 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5943,7 +5943,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/clk.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/clocks.kicad_sch"
 			(at 78.74 220.2946 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6012,7 +6012,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "7")
+					(page "8")
 				)
 			)
 		)
@@ -6033,7 +6033,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2")
-		(property "Sheetname" "FPGA power"
+		(property "Sheetname" "soc_power"
 			(at 269.24 53.8984 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6044,7 +6044,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/fpga_power.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/soc_power.kicad_sch"
 			(at 269.24 78.0546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6073,7 +6073,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "15")
+					(page "5")
 				)
 			)
 		)
@@ -6094,7 +6094,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "1bba180f-a717-40d4-b2d6-e5a7b998021f")
-		(property "Sheetname" "HPS"
+		(property "Sheetname" "hps_io"
 			(at 78.74 76.7584 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6105,7 +6105,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/hps.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/hps_io.kicad_sch"
 			(at 78.74 108.5346 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6194,7 +6194,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "4")
+					(page "9")
 				)
 			)
 		)
@@ -6215,7 +6215,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "3662c9ea-dfc7-48dc-ab83-4f2a05e3ee91")
-		(property "Sheetname" "IOBANK6ef"
+		(property "Sheetname" "fpga_bank6ef"
 			(at 200.66 109.7784 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6226,7 +6226,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/iobank6ef.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/fpga_bank6ef.kicad_sch"
 			(at 200.66 128.8546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6265,7 +6265,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "13")
+					(page "18")
 				)
 			)
 		)
@@ -6286,7 +6286,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66")
-		(property "Sheetname" "Connectors"
+		(property "Sheetname" "io_headers"
 			(at 160.02 53.8984 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6297,7 +6297,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/connectors.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/io_headers.kicad_sch"
 			(at 160.02 179.6546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6436,7 +6436,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "10")
+					(page "21")
 				)
 			)
 		)
@@ -6457,7 +6457,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "46009ab7-a4ba-489d-b29c-5828bb20621d")
-		(property "Sheetname" "power supply"
+		(property "Sheetname" "pwr_vcore"
 			(at 269.24 125.0184 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6468,7 +6468,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/ps.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/pwr_vcore.kicad_sch"
 			(at 269.24 144.0946 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6517,7 +6517,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "17")
+					(page "3")
 				)
 			)
 		)
@@ -6578,7 +6578,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "9")
+					(page "11")
 				)
 			)
 		)
@@ -6599,7 +6599,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "75d90890-a51c-4e7c-a03e-f25381d85068")
-		(property "Sheetname" "IOBANK 2"
+		(property "Sheetname" "fpga_bank2a"
 			(at 78.74 155.4984 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6610,7 +6610,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/iobank2.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/fpga_bank2a.kicad_sch"
 			(at 78.74 179.6546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6639,7 +6639,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "6")
+					(page "15")
 				)
 			)
 		)
@@ -6660,7 +6660,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa")
-		(property "Sheetname" "FPGA gnd"
+		(property "Sheetname" "soc_gnd"
 			(at 269.24 84.3784 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6671,7 +6671,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/fpga_gnd.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/soc_gnd.kicad_sch"
 			(at 269.24 113.6146 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6700,7 +6700,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "16")
+					(page "6")
 				)
 			)
 		)
@@ -6721,7 +6721,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "871a81f2-62c4-47fa-98d5-872580aa51c3")
-		(property "Sheetname" "ad subsystem"
+		(property "Sheetname" "adc"
 			(at 16.51 230.4284 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6732,7 +6732,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "ad_subsystem.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/adc.kicad_sch"
 			(at 16.51 278.7146 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6836,7 +6836,7 @@
 		(instances
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "3")
+					(page "20")
 				)
 			)
 		)
@@ -6857,7 +6857,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "8aaf6c2b-ae6e-4499-806d-67948f95803c")
-		(property "Sheetname" "SDM"
+		(property "Sheetname" "soc_config"
 			(at 78.74 46.2784 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6868,7 +6868,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/sdm.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/soc_config.kicad_sch"
 			(at 78.74 70.4346 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6907,7 +6907,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "2")
+					(page "7")
 				)
 			)
 		)
@@ -6928,7 +6928,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "cefbe413-d289-4fed-be9b-fe48bc098f16")
-		(property "Sheetname" "IOBANK6cd"
+		(property "Sheetname" "fpga_bank6cd"
 			(at 200.66 81.8384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6939,7 +6939,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/iobank6cd.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/fpga_bank6cd.kicad_sch"
 			(at 200.66 100.9146 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6978,7 +6978,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "12")
+					(page "17")
 				)
 			)
 		)
@@ -6999,7 +6999,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "cf2987d8-8050-440f-9afe-54dd4a6786f5")
-		(property "Sheetname" "Ethernet Phy"
+		(property "Sheetname" "hps_ethernet"
 			(at 124.46 53.8984 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7010,7 +7010,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/eth.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/hps_ethernet.kicad_sch"
 			(at 124.46 78.0546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7069,7 +7069,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "8")
+					(page "13")
 				)
 			)
 		)
@@ -7150,7 +7150,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "5")
+					(page "10")
 				)
 			)
 		)
@@ -7171,7 +7171,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "daebef0d-cd15-4e03-815a-780dc10d7764")
-		(property "Sheetname" "IOBANK6gh"
+		(property "Sheetname" "fpga_bank6gh"
 			(at 200.66 137.7184 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7182,7 +7182,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/iobank6gh.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/fpga_bank6gh.kicad_sch"
 			(at 200.66 156.7946 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7231,7 +7231,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "14")
+					(page "19")
 				)
 			)
 		)
@@ -7252,7 +7252,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "f641c4ca-6983-42f3-9cca-4494b20f9dfc")
-		(property "Sheetname" "power supply1"
+		(property "Sheetname" "pwr_rails"
 			(at 269.24 149.1484 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7263,7 +7263,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/ps1.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/pwr_rails.kicad_sch"
 			(at 269.24 180.9246 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7302,7 +7302,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "18")
+					(page "4")
 				)
 			)
 		)
@@ -7323,7 +7323,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "f9220582-8ed5-4e58-b084-fa5be2c4151f")
-		(property "Sheetname" "IOBANK6ab"
+		(property "Sheetname" "fpga_bank6ab"
 			(at 200.66 53.8984 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7334,7 +7334,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "a5e_kicad/iobank6ab.kicad_sch"
+		(property "Sheetfile" "a5e_kicad/fpga_bank6ab.kicad_sch"
 			(at 200.66 72.9746 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7383,7 +7383,7 @@
 			)
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "11")
+					(page "16")
 				)
 			)
 		)
@@ -7519,7 +7519,7 @@
 		(instances
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "19")
+					(page "14")
 				)
 			)
 		)
@@ -7625,7 +7625,7 @@
 		(instances
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "20")
+					(page "2")
 				)
 			)
 		)
@@ -7691,7 +7691,7 @@
 		(instances
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0"
-					(page "21")
+					(page "12")
 				)
 			)
 		)
@@ -7915,6 +7915,17 @@
 			(justify left bottom)
 		)
 		(uuid "e4aff45c-424c-4c7f-99bd-dfba607d54bb")
+	)
+	(text "SHEETS\n2  pwr_input - 5 V input connectors J6, J4\n3  pwr_vcore - VCORE buck U15 (TPS548A28)\n4  pwr_rails - 1V8/3V3/1V2/1V1 bucks, 3V3_analog LDO U6, power good\n5  soc_power - U7 power pins and decoupling\n6  soc_gnd - U7 ground pins\n7  soc_config - SDM: MSEL, nCONFIG/nSTATUS, QSPI flash U2\n8  clocks - 25 MHz and 100 MHz oscillators\n9  hps_io - U7 HPS I/O\n10 IOBANK 3 - bank 3A LPDDR4 controller\n11 lpddr4 memory - U12 LPDDR4 and decoupling\n12 hps_emmc - eMMC U11\n13 hps_ethernet - RTL8211FDI PHY U10, RJ45 J9\n14 debug_status - JTAG J1, HPS UART J10, FPGA UART J2, LEDs\n15 fpga_bank2a - bank 2A\n16-19 fpga_bank6ab/cd/ef/gh - HVIO banks 6A-6H\n20 adc - ADS7056, input mux, rail monitor\n21 io_headers - I/O headers J3, J5, pull-downs\n\nIOBANK 3 and lpddr4 memory keep their names: the LPDDR4\nlength rules and scripts match /IOBANK 3/ net names."
+		(exclude_from_sim no)
+		(at 317.5 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "466f7ec7-b965-4c9c-b2d9-899841d4be58")
 	)
 	(sheet_instances
 		(path "/"
