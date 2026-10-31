@@ -116,6 +116,24 @@
 	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && A.Type == 'Track' && (B.Type == 'Pad' || B.Type == 'Via') && A.intersectsCourtyard('U12')")
 	(constraint clearance (min 0.1mm)))
 
+# ---- Ethernet MDI (U10 RTL8211FDI <-> J9 HR911130A), net class eth_mdi -----------------------------
+# 100 ohm differential on F.Cu over In1 GND (JLC08161H-3313, 0.0994 mm prepreg), field-solved with
+# tools/kicad_ibis_simulation zsolve: 0.12 mm / 0.25 mm gap = 100.8 ohm (0.10 / 0.15 = 98 ohm). The Zynq
+# board's 0.2 / 0.2 mm is 78 ohm here (it has 0.421 mm under F.Cu). The gap may open up at the U10 and
+# J9 pins (uncoupled length below). P/N within 1 mm (~6 ps), plenty for 1000BASE-T.
+(rule "eth_mdi_width"
+	(condition "A.hasNetclass('eth_mdi')")
+	(constraint track_width (min 0.11mm) (opt 0.12mm) (max 0.13mm)))
+(rule "eth_mdi_gap"
+	(condition "A.hasNetclass('eth_mdi')")
+	(constraint diff_pair_gap (min 0.2mm) (opt 0.25mm) (max 0.3mm)))
+(rule "eth_mdi_skew"
+	(condition "A.hasNetclass('eth_mdi')")
+	(constraint skew (max 1mm) (within_diff_pairs)))
+(rule "eth_mdi_uncoupled"
+	(condition "A.hasNetclass('eth_mdi')")
+	(constraint diff_pair_uncoupled (max 3mm)))
+
 # ===================================================================================================
 # JLCPCB multilayer capabilities (jlcpcb.com/capabilities/pcb-capabilities, checked 2026-10-13).
 # Board setup constraints carry the rest: clearance/track 0.09, via 0.25/0.15 (annular 0.05, 0.075

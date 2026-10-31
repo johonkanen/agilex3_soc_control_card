@@ -628,6 +628,20 @@
         "tuning_profile": "LPDDR4 SE 0.10mm 55R JLC08161H-3313",
         "via_diameter": 0.3,
         "via_drill": 0.15
+      },
+      {
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.12,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "eth_mdi",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.12,
+        "via_diameter": 0.3,
+        "via_drill": 0.15
       }
     ],
     "meta": {
@@ -651,6 +665,10 @@
       {
         "netclass": "lpddr_diff",
         "pattern": ".*/(dqs[0-3]|ck)_[PN]$"
+      },
+      {
+        "netclass": "eth_mdi",
+        "pattern": ".*/txrx[a-d]_[PN]$"
       }
     ]
   },
