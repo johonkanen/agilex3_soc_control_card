@@ -124,14 +124,6 @@
         [
           "silk_edge_clearance|128541840|83049150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|62327335-3d97-4253-9965-1148a1c73098",
           "J3 socket outline, clipped at the edge"
-        ],
-        [
-          "silk_edge_clearance|200016840|101344150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|b27e1e1a-4108-4fe4-ae67-45f3d4faf404",
-          "intentional"
-        ],
-        [
-          "silk_edge_clearance|200016840|85194150|b1ade6c1-3cc8-4c85-a3a1-98afb636d795|068b748a-5b71-41f5-afc1-fcc91e96f6b4",
-          "intentional"
         ]
       ],
       "meta": {

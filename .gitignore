@@ -23,3 +23,7 @@ sim/lpddr4_si/results/eye_r2133.33_z[slfc]*.png
 sim/refclk_si/work/
 sim/emmc_si/models/
 sim/emmc_si/work/
+
+# Local tooling: Claude Code worktrees and Python caches
+.claude/
+**/__pycache__/
