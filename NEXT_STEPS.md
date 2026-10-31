@@ -82,6 +82,21 @@ main = origin/main at `26cd28a` plus two uncommitted doc notes (this file and `L
     drop only ~10–15 ps (write overshoot +55 mV, still inside limits). **Route DQ/DM/DQS at 0.10 mm everywhere** (one
     width end to end, same as the neck-downs); 0.09 mm (JLC minimum) only for local squeezes. ps/mm unchanged.
 
+## LPDDR4 status (2026-10-31)
+
+Routed and delay-matched: `LPDDR4_DELAY_REPORT.md` meets every limit, the routed-copper IBIS sweep
+(`sim/lpddr4_si/results/routed.md`) passes at 1600 and 2133 MT/s, the pin swizzle is Quartus-checked. Items 1-3 below
+are done. The spacing rules now follow `tools/kicad_ibis_simulation/DELAY_RULES.md` (BGA exemption only when both
+tracks are under the same courtyard, CK included in the 0.3 mm CA/CK-to-data rule), which shows three meanders that the
+router had placed too close (DRC warnings; redo them in pcbnew):
+- ck_P meander vs dq27, In5 around (155.4, 96-99): 0.175 mm, needs 0.3 mm;
+- dqs2_N meander vs dm2, In2 around (155.0, 95-97): 0.114 mm, needs 0.2 mm;
+- ck_N meander vs dq12, In5 around (159.2, 96): 0.291 mm, needs 0.3 mm.
+
+Then "Update all tuning patterns", save, and rerun `delay_report.py --dru` (it now shifts T-net targets by the tuner
+offset: ~{cs} reads 27 ps short in the tuner, so its pattern will shrink by ~27 ps; check dqs1 (+1.0 ps) and dq30
+(+2.9 ps), whose tuner readings differ from KiCad's net delay). dq20 has two tuning patterns.
+
 ## Continue next time, in order
 
 1. Decide 40 Ω vs 50 Ω for the data bytes (see above); if 50 Ω, switch the LPDDR4 profiles/widths and adopt

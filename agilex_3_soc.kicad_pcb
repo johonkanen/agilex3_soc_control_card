@@ -178965,7 +178965,7 @@
 	)
 	(segment
 		(start 159.59184 101.03415)
-		(end 162.40184 98.22415)
+		(end 162.34684 98.27915)
 		(width 0.1)
 		(layer "In5.Cu")
 		(net "/IOBANK 3/dq10")
@@ -179052,12 +179052,28 @@
 		(uuid "c4967a38-8cbd-4ccc-856d-6db1566a88e2")
 	)
 	(segment
-		(start 162.40184 98.22415)
-		(end 162.40184 93.74415)
+		(start 162.34684 98.27915)
+		(end 162.34684 94.35915)
 		(width 0.1)
 		(layer "In5.Cu")
 		(net "/IOBANK 3/dq10")
 		(uuid "d4cb339a-23f1-452d-91e0-15c7aadb672c")
+	)
+	(segment
+		(start 162.34684 94.35915)
+		(end 162.40184 94.30415)
+		(width 0.1)
+		(layer "In5.Cu")
+		(net "/IOBANK 3/dq10")
+		(uuid "6c3968e2-908e-43d4-af07-4f9c366115f9")
+	)
+	(segment
+		(start 162.40184 94.30415)
+		(end 162.40184 93.74415)
+		(width 0.1)
+		(layer "In5.Cu")
+		(net "/IOBANK 3/dq10")
+		(uuid "cc0a85d6-3fd2-4e69-95e3-8228e25f7a48")
 	)
 	(segment
 		(start 159.75284 102.530885)
@@ -179794,7 +179810,7 @@
 	(segment
 		(start 155.26684 94.09415)
 		(end 155.90684 94.73415)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "3a784836-113a-49f0-a2d0-e5b839c95f28")
@@ -179802,7 +179818,7 @@
 	(segment
 		(start 159.12784 104.28016)
 		(end 158.8028 104.6052)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "4804ba1f-977e-4065-b8ce-a8e108bbe0f9")
@@ -179810,7 +179826,7 @@
 	(segment
 		(start 159.12784 97.95515)
 		(end 159.12784 104.28016)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "6c0ef5a6-be89-4120-acd4-0e4ecc62b0c8")
@@ -179818,7 +179834,7 @@
 	(segment
 		(start 155.26684 93.40915)
 		(end 155.26684 94.09415)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "6eb9b1f2-56fb-4d22-8bf6-9b924a4f8671")
@@ -179826,7 +179842,7 @@
 	(segment
 		(start 154.94184 93.08415)
 		(end 155.26684 93.40915)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "b0f3e00b-14a1-493e-bbef-bf43d6082f58")
@@ -179834,18 +179850,10 @@
 	(segment
 		(start 155.90684 94.73415)
 		(end 159.12784 97.95515)
-		(width 0.15)
+		(width 0.1)
 		(layer "B.Cu")
 		(net "/IOBANK 3/~{rst}")
 		(uuid "c7fcb506-a19e-4bf5-81c9-c6bbdb6c03fd")
-	)
-	(segment
-		(start 158.8028 104.6052)
-		(end 158.8028 104.6028)
-		(width 0.17085)
-		(layer "In2.Cu")
-		(net "/IOBANK 3/~{rst}")
-		(uuid "f5709b37-e4da-4956-aad9-9a5011767f7d")
 	)
 	(segment
 		(start 161.355569 96.30405)
@@ -220172,51 +220180,6 @@
 		)
 	)
 	(generated
-		(uuid "5ae47fdc-702e-443f-b2bf-380f5f6cf91c")
-		(type tuning_pattern)
-		(name "Tuning Pattern")
-		(layer "F.Cu")
-		(base_line
-			(pts
-				(xy 145.824898 134.217208) (xy 148.624898 137.017208)
-			)
-		)
-		(corner_radius_percent 80)
-		(end
-			(xy 148.624898 137.017208)
-		)
-		(initial_side "right")
-		(is_time_domain no)
-		(last_diff_pair_gap 0.18)
-		(last_netname "/Connectors/iob6b9")
-		(last_status "too_short")
-		(last_track_width 0.1)
-		(last_tuning_length 47.582211)
-		(max_amplitude 0.46)
-		(min_amplitude 0.07)
-		(min_spacing 1.35)
-		(origin
-			(xy 145.824898 134.217208)
-		)
-		(override_custom_rules no)
-		(rounded yes)
-		(single_sided no)
-		(target_delay 1000000)
-		(target_delay_max 1000000)
-		(target_delay_min 0)
-		(target_length 48)
-		(target_length_max 48.1)
-		(target_length_min 47.9)
-		(target_skew 0)
-		(target_skew_max 0.1)
-		(target_skew_min -0.1)
-		(tuning_mode "single")
-		(members "19e644bc-2cdb-422d-a906-76e99741aa99" "45ab0e22-acad-4c95-8f6a-7129b57b4459"
-			"a2290ed4-e451-4f1a-b14c-50902665178b" "a56efcca-1444-4f03-bf32-742770ba767d"
-			"b6ff2fec-e116-466d-a5c5-3b46d31f2344" "f379afa2-cc03-4ce8-9d8f-08bbaf299478"
-		)
-	)
-	(generated
 		(uuid "5d60e6a5-d588-4074-aadc-8fcbdc6a5fca")
 		(type tuning_pattern)
 		(name "Tuning Pattern")
@@ -220268,53 +220231,6 @@
 			"7ba0c035-2ff7-4619-8c80-2a67b61ab903" "a16155cc-2511-49a9-afb0-9d6d52cfe46a"
 			"a83483a3-dfbe-4ca8-9648-5ab728d36b00" "a91b9a71-2f51-4c36-9847-612c37b0ece1"
 			"d7c03186-e75f-4474-a70c-01bf379cb617" "ea32b685-0926-4e6d-8a88-b24b2ef3fa73"
-		)
-	)
-	(generated
-		(uuid "647e7547-452a-4e86-b88a-f062c8a5946a")
-		(type tuning_pattern)
-		(name "Tuning Pattern")
-		(layer "F.Cu")
-		(base_line
-			(pts
-				(xy 160.323345 88.877645) (xy 159.19184 90.00915) (xy 159.19184 90.273006)
-			)
-		)
-		(corner_radius_percent 80)
-		(end
-			(xy 159.19184 90.273006)
-		)
-		(initial_side "right")
-		(is_time_domain yes)
-		(last_diff_pair_gap 0.18)
-		(last_netname "/IOBANK 3/dq2")
-		(last_status "too_short")
-		(last_track_width 0.1)
-		(last_tuning_length 25.236604)
-		(max_amplitude 1)
-		(min_amplitude 0.07)
-		(min_spacing 0.6)
-		(origin
-			(xy 160.323345 88.877645)
-		)
-		(override_custom_rules no)
-		(rounded yes)
-		(single_sided no)
-		(target_delay 298)
-		(target_delay_max 303)
-		(target_delay_min 293)
-		(target_length 32.786884)
-		(target_length_max 33.606557)
-		(target_length_min 31.967213)
-		(target_skew 0)
-		(target_skew_max 0.1)
-		(target_skew_min -0.1)
-		(tuning_mode "single")
-		(members "1067b1de-f65f-42ea-9b38-7fe9830b70e2" "36a63146-b7c7-4955-884f-f58395863b71"
-			"4018f8dd-57c2-4389-8990-3711cd13b6a1" "4990f989-948f-4dab-8135-04c1ae7d6e21"
-			"656a5d60-cd86-4fa5-8905-aa857fd421bf" "8a094ab2-bcc3-488a-97f2-e4a6757c0e3f"
-			"abdd30a0-29a7-472a-99e3-5f52c71761cc" "ee801572-0901-4d5b-bb16-4a8e8c1ae091"
-			"f11e9888-12f3-49a8-9f32-c200a36fd37b" "fb5c65f7-be27-4c50-88c4-8d4857270025"
 		)
 	)
 	(generated
@@ -220654,55 +220570,6 @@
 			"7b6bb577-c4bc-4efb-8b81-0732190ff8a1" "7ef5b6d5-c473-49a8-a653-2551e350b648"
 			"80fbae17-d417-41fa-b31d-d609b654b1eb" "a37c27e3-d102-4e86-a2f6-33f793b2b866"
 			"adbbb0af-97ed-4e3a-8a42-9c16edb5c1c5" "b3cd6aad-151e-450d-8156-0f13cbc2708e"
-		)
-	)
-	(generated
-		(uuid "9a66a527-babf-4cf8-aa10-bd5d070436ca")
-		(type tuning_pattern)
-		(name "Tuning Pattern")
-		(layer "F.Cu")
-		(base_line
-			(pts
-				(xy 161.11684 88.611686) (xy 161.11684 90.619115)
-			)
-		)
-		(corner_radius_percent 80)
-		(end
-			(xy 161.11684 90.619115)
-		)
-		(initial_side "left")
-		(is_time_domain yes)
-		(last_diff_pair_gap 0.18)
-		(last_netname "/IOBANK 3/dq1")
-		(last_status "too_short")
-		(last_track_width 0.1)
-		(last_tuning_length 29.24879)
-		(max_amplitude 1)
-		(min_amplitude 0.07)
-		(min_spacing 0.6)
-		(origin
-			(xy 161.11684 88.611686)
-		)
-		(override_custom_rules no)
-		(rounded yes)
-		(single_sided no)
-		(target_delay 298)
-		(target_delay_max 303)
-		(target_delay_min 293)
-		(target_length 32.950819)
-		(target_length_max 33.770491)
-		(target_length_min 32.131147)
-		(target_skew 0)
-		(target_skew_max 0.1)
-		(target_skew_min -0.1)
-		(tuning_mode "single")
-		(members "1acce73f-e666-4225-903c-c205cbc8fb36" "26a9b69e-1eff-402f-bea5-5aa40a0773f7"
-			"2dce7ca6-67e0-4349-a225-7df8265afb7c" "3d6b9314-8e87-46b3-a4cc-ae8febc19831"
-			"5421c27e-6a5d-44a4-91eb-45fb732de1e8" "599c26ef-fd3a-4019-8f35-1bca782022d8"
-			"65c02555-ab20-41fc-8313-9baa7d206c2a" "65ea2fd5-612b-436b-9fce-8905667f2df1"
-			"8b784d94-8eea-4a35-88bf-aa17e3cd9b18" "97ef387a-8a5e-42db-ad57-d8fb3494f61e"
-			"a2d1093f-9d1c-4b79-a8fd-792925dd12fc" "c18d29e9-3a5f-469a-ba01-e065b6567992"
-			"eb9df0fe-a6e6-4bcf-8138-51a74a295dad" "fafb2b40-5847-4155-a268-2c9faf3c69a4"
 		)
 	)
 	(generated

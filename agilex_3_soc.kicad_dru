@@ -58,15 +58,18 @@
 	(constraint skew (max 10ps)))
 
 # ---- crosstalk spacing outside the BGAs (warnings) -------------------------------------------------
-# 2h within a group, 3h between groups.  Byte-to-byte (nibble) 3h is not expressible per byte with the
+# 2h within a group, 3h between groups (CA/CK and RESET to DQ/DQS).  The BGA exemption needs BOTH items under
+# the same courtyard: with only A tested, a long segment that merely starts under U7/U12 is exempt along its
+# whole length, and the router used that to place meanders 0.11-0.18 mm from it (DELAY_RULES.md in
+# tools/kicad_ibis_simulation).  Byte-to-byte (nibble) 3h is not expressible per byte with the
 # current net classes: keep 0.3 mm between bytes by hand.
 (rule "lpddr_xtalk_spacing"
 	(severity warning)
-	(condition "A.Type == 'Track' && B.Type == 'Track' && (A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && (B.hasNetclass('lpddr_dq') || B.hasNetclass('lpddr_ca') || B.hasNetclass('lpddr_diff')) && A.NetName != B.NetName && !A.inDiffPair('*') && !(A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12'))")
+	(condition "A.Type == 'Track' && B.Type == 'Track' && (A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && (B.hasNetclass('lpddr_dq') || B.hasNetclass('lpddr_ca') || B.hasNetclass('lpddr_diff')) && A.NetName != B.NetName && !A.inDiffPair('*') && !((A.intersectsCourtyard('U7') && B.intersectsCourtyard('U7')) || (A.intersectsCourtyard('U12') && B.intersectsCourtyard('U12')))")
 	(constraint clearance (min 0.2mm)))
 (rule "lpddr_xtalk_group"
 	(severity warning)
-	(condition "A.Type == 'Track' && B.Type == 'Track' && ((A.hasNetclass('lpddr_ca') && (B.hasNetclass('lpddr_dq') || B.NetName == '/IOBANK 3/dqs0_P' || B.NetName == '/IOBANK 3/dqs0_N' || B.NetName == '/IOBANK 3/dqs1_P' || B.NetName == '/IOBANK 3/dqs1_N' || B.NetName == '/IOBANK 3/dqs2_P' || B.NetName == '/IOBANK 3/dqs2_N' || B.NetName == '/IOBANK 3/dqs3_P' || B.NetName == '/IOBANK 3/dqs3_N')) || A.NetName == '/IOBANK 3/~{rst}') && A.NetName != B.NetName && !(A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12'))")
+	(condition "A.Type == 'Track' && B.Type == 'Track' && (((A.hasNetclass('lpddr_ca') || A.NetName == '/IOBANK 3/ck_P' || A.NetName == '/IOBANK 3/ck_N') && (B.hasNetclass('lpddr_dq') || B.NetName == '/IOBANK 3/dqs0_P' || B.NetName == '/IOBANK 3/dqs0_N' || B.NetName == '/IOBANK 3/dqs1_P' || B.NetName == '/IOBANK 3/dqs1_N' || B.NetName == '/IOBANK 3/dqs2_P' || B.NetName == '/IOBANK 3/dqs2_N' || B.NetName == '/IOBANK 3/dqs3_P' || B.NetName == '/IOBANK 3/dqs3_N')) || A.NetName == '/IOBANK 3/~{rst}') && A.NetName != B.NetName && !((A.intersectsCourtyard('U7') && B.intersectsCourtyard('U7')) || (A.intersectsCourtyard('U12') && B.intersectsCourtyard('U12')))")
 	(constraint clearance (min 0.3mm)))
 
 # ---- LPDDR4 routing layers (LPDDR4_SWIZZLE_PLAN.md "Layer rules") -------------------------------------
@@ -126,6 +129,7 @@
 #   DQS_P/N: opt = the tuned P delay, +-0.5 ps
 # - CA/CKE/CS: opt = CK die->ball + 10 ps (the tuner measures die -> ball on a T), min = CK die->ball,
 #   max = min + band + own branch (DRC checks the whole T); CK: opt = its die->ball
+#   min/opt shifted by the tuner offset (tuner reading - die->ball) where it is >= 2 ps
 #   Rerun the script after re-routing.
 (rule "dly_dm0"
 	(condition "A.NetName == '/IOBANK 3/dm0'")
@@ -243,16 +247,16 @@
 	(constraint length (min 302.0ps) (opt 302.5ps) (max 303.0ps)))
 (rule "dly_dqs1_N"
 	(condition "A.NetName == '/IOBANK 3/dqs1_N'")
-	(constraint length (min 283.6ps) (opt 284.1ps) (max 284.6ps)))
+	(constraint length (min 282.6ps) (opt 283.1ps) (max 283.6ps)))
 (rule "dly_dqs1_P"
 	(condition "A.NetName == '/IOBANK 3/dqs1_P'")
-	(constraint length (min 283.6ps) (opt 284.1ps) (max 284.6ps)))
+	(constraint length (min 282.6ps) (opt 283.1ps) (max 283.6ps)))
 (rule "dly_dqs2_N"
 	(condition "A.NetName == '/IOBANK 3/dqs2_N'")
-	(constraint length (min 265.0ps) (opt 265.5ps) (max 266.0ps)))
+	(constraint length (min 264.8ps) (opt 265.3ps) (max 265.8ps)))
 (rule "dly_dqs2_P"
 	(condition "A.NetName == '/IOBANK 3/dqs2_P'")
-	(constraint length (min 265.0ps) (opt 265.5ps) (max 266.0ps)))
+	(constraint length (min 264.8ps) (opt 265.3ps) (max 265.8ps)))
 (rule "dly_dqs3_N"
 	(condition "A.NetName == '/IOBANK 3/dqs3_N'")
 	(constraint length (min 241.5ps) (opt 242.0ps) (max 242.5ps)))
@@ -288,5 +292,5 @@
 	(constraint length (min 406.5ps) (opt 417.0ps) (max 491.2ps)))
 (rule "dly_cs"
 	(condition "A.NetName == '/IOBANK 3/~{cs}'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 494.5ps)))
+	(constraint length (min 379.1ps) (opt 389.6ps) (max 494.5ps)))
 # ---- END delay_report targets ----

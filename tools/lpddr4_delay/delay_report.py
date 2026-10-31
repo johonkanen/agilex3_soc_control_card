@@ -11,7 +11,11 @@
 2. CA/CKE/CS/CK are T-shaped (U7 -> T-via under U12 -> one ball per channel). KiCad sums the whole net, so the
    two branches (T-via -> ball, computed here from the copper with the same per-layer delays) are taken off:
    die -> ball A = total - branch B, die -> ball B = total - branch A.
-3. Grades every group against the Altera 821801 budgets (ps, FPGA package included) and prints / writes
+3. Reads the tuning patterns' last readings (`last_tuning_length`). On a T the tuner's path can take in part of
+   the other branch, so its reading differs from die -> ball. With --dru, that offset (tuner - die->ball, when
+   >= TUNER_MIN ps) shifts the net's min/opt, so a pattern update lands the real die -> ball on target.
+   Readings are as fresh as the last "Update all tuning patterns": rerun the script after an update.
+4. Grades every group against the Altera 821801 budgets (ps, FPGA package included) and prints / writes
    a markdown report.
 
 Sign conventions: "DQ-DQS" = t(DQ) - t(DQS_P) of the same byte; "CA-CK" = t(CA) - t(CK_P) at the same
@@ -27,6 +31,7 @@ CSCKE = ['cke', '~{cs}']
 LIM = {'dq': (-68, 43), 'ca': (-34, 34), 'cscke': (-85, 85), 'ckdqs': (-340, 170), 'pn': 1.0}
 # design targets inside those limits (what the .kicad_dru group rules check, max - min of the group)
 TGT = {'byte': 10, 'ca': 20, 'cscke': 60}
+TUNER_MIN = 2.0   # ps; a smaller tuner offset on a T-net is left alone (reading noise)
 
 
 def kicad_cli():
@@ -205,6 +210,31 @@ def branches(board, nets):
     return out
 
 
+def tuner_readings(board):
+    """Last reading (ps) of each time-domain single/diff-pair tuning pattern: net -> [ps, ...]. The reading is
+    stored in mm (`last_tuning_length`); the pattern's own length/delay window pairs map it to ps."""
+    txt = open(board).read()
+    out = collections.defaultdict(list)
+    for b in blocks(txt, 'generated'):
+        f = lambda k: (re.search(r'\(%s "?([^"\)\n]*)"?\)' % k, b) or [None, None])[1]
+        if f('type') != 'tuning_pattern' or f('is_time_domain') != 'yes' or f('tuning_mode') not in ('single', 'diff_pair'):
+            continue
+        net = (f('last_netname') or '')
+        if not net.startswith(PFX):
+            continue
+        try:
+            L, l0, l1 = float(f('last_tuning_length')), float(f('target_length_min')), float(f('target_length_max'))
+            d0, d1 = float(f('target_delay_min')), float(f('target_delay_max'))
+        except (TypeError, ValueError):
+            continue
+        ps = d0 + (L - l0) * (d1 - d0) / (l1 - l0) if l1 != l0 else L * float(f('target_delay')) / float(f('target_length'))
+        n = net[len(PFX):]
+        legs = [n] if f('tuning_mode') == 'single' else [n[:-2] + '_P', n[:-2] + '_N']
+        for leg in legs:
+            out[leg].append((ps, f('last_status')))
+    return out
+
+
 CH_OF_BALL = lambda ball: 'A' if re.match(r'[A-K]\d', ball) else 'B'   # U12 rows A-K channel A, L-AB channel B
 
 
@@ -225,6 +255,7 @@ def write_dru(path, targets):
            '#   DQS_P/N: opt = the tuned P delay, +-0.5 ps',
            '# - CA/CKE/CS: opt = CK die->ball + 10 ps (the tuner measures die -> ball on a T), min = CK die->ball,',
            '#   max = min + band + own branch (DRC checks the whole T); CK: opt = its die->ball',
+           '#   min/opt shifted by the tuner offset (tuner reading - die->ball) where it is >= %g ps' % TUNER_MIN,
            '#   Rerun the script after re-routing.']
     for n in sorted(targets, key=order):
         mn, opt, mx = targets[n]
@@ -246,6 +277,8 @@ def main():
     targets = {}   # net -> (min, opt, max) ps for the .kicad_dru; opt is the tuner target
     D = kicad_delays(a.board)
     T = branches(a.board, CA + CSCKE + ['ck_P', 'ck_N'])
+    R = tuner_readings(a.board)
+    shift = {}   # T-net -> tuner offset applied to min/opt
     L = []; bad = []
     p = L.append
     def chk(ok, what):
@@ -348,6 +381,11 @@ def main():
         band = 0.0 if s.startswith('ck_') else TGT['ca'] if s in CA else TGT['cscke']
         tgt = caref + (0.0 if s.startswith('ck_') else TGT['ca'] / 2)
         targets[s] = (caref - 0.5, tgt, caref + band + max(v['A'][2], v['B'][2]) + 0.5)
+        rd = [r for r, st in R.get(s, []) if st == 'tuned']
+        if len(rd) == 1 and abs(rd[0] - max(v['A'][1], v['B'][1])) >= TUNER_MIN:
+            off = rd[0] - max(v['A'][1], v['B'][1])
+            shift[s] = off
+            targets[s] = (targets[s][0] + off, targets[s][1] + off, targets[s][2])
         m = mean(v)
         add = ('**shorten %.1f**' % (m - tgt)) if m > caref + band + 0.5 else '%+.1f' % (tgt - m)
         p('| %s | %.1f | %.1f / %.1f%s | %.1f (%s) | %.1f (%s) | %s | %s | %.1f | %s |' % (
@@ -365,6 +403,28 @@ def main():
             p('| %d | %s | %.1f | %.1f | %+.1f | %s | %+.1f |' % (b, c, ckb[c][1], q, r,
                                                          chk(LIM['ckdqs'][0] <= r <= LIM['ckdqs'][1], 'CK-DQS %d' % b),
                                                          caref - targets['dqs%d_P' % b][1]))
+    p('\n## Tuning patterns: tuner reading vs this report\n')
+    p('The tuner reads a pad-to-pad path; on a T it can take in part of the other branch. Reading = the pattern\'s '
+      'last `last_tuning_length`, as fresh as the last "Update all tuning patterns". Compared with die->ball (T-nets, '
+      'the later ball) or KiCad\'s net delay (others). T-net offsets >= %g ps shift that net\'s min/opt in the '
+      '.kicad_dru (`--dru`).\n' % TUNER_MIN)
+    p('| Net | tuner (ps) | status | delay (ps) | tuner - delay | |')
+    p('|---|---|---|---|---|---|')
+    nrows = 0
+    for n in sorted(R, key=lambda n: (n[:2], n)):
+        for r, st in R[n]:
+            ref = max(ball[n]['A'][1], ball[n]['B'][1]) if ball.get(n) else D.get(n)
+            if ref is None:
+                continue
+            d = r - ref
+            if abs(d) < 0.5 and st == 'tuned':
+                continue
+            nrows += 1
+            p('| %s | %.1f | %s | %.1f | %+.1f | %s |' % (n, r, st, ref, d,
+                ('min/opt shifted %+.1f' % shift[n]) if n in shift else
+                'stale or extra pattern' if st != 'tuned' else 'check after an update'))
+    if not nrows:
+        p('| all | | tuned | | within 0.5 ps | |')
     rst = D.get('~{rst}')
     if rst is not None:
         p('\n~{rst}: %.1f ps total (no matching requirement).' % rst)
