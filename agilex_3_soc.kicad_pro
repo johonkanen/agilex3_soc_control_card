@@ -593,7 +593,7 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.1,
+        "clearance": 0.2,
         "diff_pair_gap": 0.2,
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
@@ -608,7 +608,7 @@
         "via_drill": 0.15
       },
       {
-        "clearance": 0.1,
+        "clearance": 0.2,
         "diff_pair_gap": 0.1,
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
@@ -623,7 +623,7 @@
         "via_drill": 0.15
       },
       {
-        "clearance": 0.1,
+        "clearance": 0.2,
         "diff_pair_gap": 0.2,
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,

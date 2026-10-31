@@ -11,60 +11,61 @@ Per-net delay rules written to the .kicad_dru (block `delay_report targets`), `o
 | Pair | P (ps) | N (ps) | P-N | |
 |---|---|---|---|---|
 | dqs0 | 302.5 | 302.5 | +0.0 | OK |
-| dqs1 | 283.1 | 283.1 | +0.0 | OK |
+| dqs1 | 282.1 | 282.1 | +0.0 | OK |
 | dqs2 | 265.3 | 265.3 | +0.0 | OK |
 | dqs3 | 241.9 | 242.0 | -0.1 | OK |
-| ck | 422.8 | 422.8 | +0.0 | OK |
+| ck | 420.9 | 420.9 | +0.0 | OK |
 
 ## Data bytes (DQ/DM - DQS_P, limit -68 ... +43 ps; design target: group spread <= 10 ps)
 
-Lengthen-only tuning. Each byte gets a window min ... min + 10 ps (the spread target); the **KiCad tuner target** is the middle (`opt` in the .kicad_dru). The min is as low as the slowest net allows (slowest - 10 ps; a net above the DQ-DQS limit is to be shortened and does not count), but not below 242.0 ps (CK at the ball - 170 ps CK-DQS max + 5 ps), so CK-DQS holds. DQS_P/N get opt = the P delay after tuning, +-0.5 ps. "add" / "shorten" is the distance to opt (nets inside the window may stay). KiCad's delays already include the U7 package delay.
+Lengthen-only tuning. Each byte gets a window min ... min + 10 ps (the spread target); the **KiCad tuner target** is the middle (`opt` in the .kicad_dru). The min is as low as the slowest net allows (slowest - 10 ps; a net above the DQ-DQS limit is to be shortened and does not count), but not below 240.1 ps (CK at the ball - 170 ps CK-DQS max + 5 ps), so CK-DQS holds. DQS_P/N get opt = the P delay after tuning, +-0.5 ps. "add" / "shorten" is the distance to opt (nets inside the window may stay). KiCad's delays already include the U7 package delay.
 
 | Byte | DQS_P (ps) | DQ/DM - DQS_P (ps) | Range | Spread | Limit | Target | KiCad tuner target | add (ps) |
 |---|---|---|---|---|---|---|---|---|
-| 0 | 302.5 | dq0 -4.5, dq1 -4.5, dq2 -4.5, dq3 -4.5, dq4 -4.5, dq5 -4.5, dq6 -4.5, dq7 -4.5, dm0 -4.5 | -4.5 ... -4.5 | 4.5 | OK | OK | 298.0 | none |
-| 1 | 283.1 | dq8 +3.3, dq9 +3.3, dq10 +7.8, dq11 +3.2, dq12 +3.3, dq13 +6.0, dq14 +3.3, dq15 +3.3, dm1 +3.3 | +3.2 ... +7.8 | 7.8 | OK | OK | 286.4 | dq10 -4.5, dq13 -2.7 |
-| 2 | 265.3 | dq16 -0.1, dq17 -0.1, dq18 -0.1, dq19 -0.1, dq20 -0.6, dq21 +1.0, dq22 -0.1, dq23 -0.1, dm2 +4.4 | -0.6 ... +4.4 | 5.1 | OK | OK | 265.2 | dq21 -1.1, dm2 -4.5 |
-| 3 | 241.9 | dq24 +2.8, dq25 +5.1, dq26 +0.5, dq27 +5.6, dq28 +5.1, dq29 +5.1, dq30 +2.2, dq31 +5.1, dm3 +5.1 | +0.5 ... +5.6 | 5.6 | OK | OK | 247.0 | dq24 +2.3, dq26 +4.6, dq30 +2.9 |
+| 0 | 302.5 | dq0 -4.5, dq1 -11.6, dq2 -4.5, dq3 -4.5, dq4 -4.5, dq5 -6.1, dq6 -4.5, dq7 -4.5, dm0 -4.5 | -11.6 ... -4.5 | 11.6 | OK | over | 298.0 | dq1 +7.1, dq5 +1.6 |
+| 1 | 282.1 | dq8 +4.3, dq9 +2.3, dq10 +8.8, dq11 +4.2, dq12 +15.9, dq13 +7.0, dq14 +4.3, dq15 -12.4, dm1 +4.3 | -12.4 ... +15.9 | 28.3 | OK | over | 286.4 | dq9 +2.0, dq10 -4.5, dq12 **shorten 11.6**, dq13 -2.7, dq15 +16.7 |
+| 2 | 265.3 | dq16 -0.1, dq17 -0.1, dq18 -0.1, dq19 -0.1, dq20 -0.1, dq21 +1.0, dq22 -0.1, dq23 -0.1, dm2 +4.4 | -0.1 ... +4.4 | 4.5 | OK | OK | 265.2 | dq21 -1.1, dm2 -4.5 |
+| 3 | 241.9 | dq24 +2.8, dq25 +5.1, dq26 -11.9, dq27 +5.1, dq28 -18.4, dq29 +5.1, dq30 +5.1, dq31 +5.1, dm3 +5.1 | -18.4 ... +5.1 | 23.5 | OK | over | 245.1 | dq25 -1.9, dq26 +15.1, dq27 -1.9, dq28 +21.7, dq29 -1.9, dq30 -1.9, dq31 -1.9, dm3 -1.9 |
 
 ## Address/command (die -> U12 ball, T-branch removed)
 
-KiCad shows the whole T (die + trunk + both branches). The length tuner, on a T, measures die -> ball. Lengthen-only tuning to CK (die->ball 407.0 ps): the **KiCad tuner target** (`opt`, die->ball) is CK + 10 ps for CA/CS/CKE and CK itself for CK. The DRC window is CK ... CK + 20 ps (CA) or + 60 ps (CS/CKE), plus the own branch, because DRC checks the whole T. "add" is die->ball to opt (mean of A and B); nets inside the window may stay. T-branches must match within 1 ps (A vs B).
+KiCad shows the whole T (die + trunk + both branches). The length tuner, on a T, measures die -> ball. Lengthen-only tuning to CK (die->ball 405.1 ps): the **KiCad tuner target** (`opt`, die->ball) is CK + 10 ps for CA/CS/CKE and CK itself for CK. The DRC window is CK ... CK + 20 ps (CA) or + 60 ps (CS/CKE), plus the own branch, because DRC checks the whole T. "add" is die->ball to opt (mean of A and B); nets inside the window may stay. T-branches must match within 1 ps (A vs B).
 
 | Net | KiCad total (ps) | branch A / B (ps) | die->ball A | die->ball B | - CK_P (A / B) | Limit | KiCad tuner target | add (ps) |
 |---|---|---|---|---|---|---|---|---|
-| ck_P | 422.8 | 15.8 / 15.8 | 407.0 (J8) | 407.0 (P8) |  |  | 407.0 | +0.0 |
-| ck_N | 422.8 | 15.8 / 15.8 | 407.0 (J9) | 407.0 (P9) |  |  | 407.0 | +0.0 |
-| ca0 | 443.6 | 25.9 / 25.9 | 417.7 (H2) | 417.7 (R2) | +10.7 / +10.7 | OK (-34 ... +34) | 417.0 | -0.7 |
-| ca1 | 439.2 | 22.0 / 22.0 | 417.2 (J2) | 417.2 (P2) | +10.2 / +10.2 | OK (-34 ... +34) | 417.0 | -0.2 |
-| ca2 | 443.7 | 26.5 / 26.5 | 417.2 (H9) | 417.3 (R9) | +10.2 / +10.2 | OK (-34 ... +34) | 417.0 | -0.2 |
-| ca3 | 443.2 | 26.1 / 25.6 | 417.6 (H10) | 417.2 (R10) | +10.6 / +10.1 | OK (-34 ... +34) | 417.0 | -0.4 |
-| ca4 | 443.2 | 25.9 / 25.9 | 417.3 (H11) | 417.3 (R11) | +10.2 / +10.2 | OK (-34 ... +34) | 417.0 | -0.2 |
-| ca5 | 439.1 | 21.8 / 21.8 | 417.3 (J11) | 417.3 (P11) | +10.2 / +10.2 | OK (-34 ... +34) | 417.0 | -0.2 |
-| cke | 440.6 | 23.6 / 23.4 | 417.2 (J4) | 417.0 (P4) | +10.2 / +10.0 | OK (-85 ... +85) | 417.0 | -0.1 |
-| ~{cs} | 471.2 | 26.8 / 26.9 | 444.3 (H4) | 444.4 (R4) | +37.2 / +37.4 | OK (-85 ... +85) | 417.0 | -27.3 |
+| ck_P | 420.9 | 15.8 / 15.8 | 405.1 (J8) | 405.1 (P8) |  |  | 405.1 | +0.0 |
+| ck_N | 420.9 | 15.8 / 15.8 | 405.1 (J9) | 405.1 (P9) |  |  | 405.1 | +0.0 |
+| ca0 | 443.6 | 25.9 / 25.9 | 417.7 (H2) | 417.7 (R2) | +12.6 / +12.6 | OK (-34 ... +34) | 415.1 | -2.6 |
+| ca1 | 439.2 | 22.0 / 22.0 | 417.2 (J2) | 417.2 (P2) | +12.1 / +12.1 | OK (-34 ... +34) | 415.1 | -2.1 |
+| ca2 | 443.7 | 26.5 / 26.5 | 417.2 (H9) | 417.3 (R9) | +12.1 / +12.1 | OK (-34 ... +34) | 415.1 | -2.1 |
+| ca3 | 443.2 | 26.1 / 25.6 | 417.6 (H10) | 417.2 (R10) | +12.5 / +12.0 | OK (-34 ... +34) | 415.1 | -2.3 |
+| ca4 | 443.2 | 25.9 / 25.9 | 417.3 (H11) | 417.3 (R11) | +12.1 / +12.1 | OK (-34 ... +34) | 415.1 | -2.1 |
+| ca5 | 439.1 | 21.8 / 21.8 | 417.3 (J11) | 417.3 (P11) | +12.1 / +12.1 | OK (-34 ... +34) | 415.1 | -2.1 |
+| cke | 440.6 | 23.6 / 23.4 | 417.2 (J4) | 417.0 (P4) | +12.1 / +11.9 | OK (-85 ... +85) | 415.1 | -2.0 |
+| ~{cs} | 443.8 | 26.8 / 26.9 | 416.9 (H4) | 417.0 (R4) | +11.7 / +11.9 | OK (-85 ... +85) | 415.1 | -1.8 |
 
 ## CK - DQS (limit -340 ... +170 ps)
 
-| Byte | channel | CK_P at ball (ps) | DQS_P (ps) | CK - DQS | | after tuning (CK 407.0 - DQS target) |
+| Byte | channel | CK_P at ball (ps) | DQS_P (ps) | CK - DQS | | after tuning (CK 405.1 - DQS target) |
 |---|---|---|---|---|---|---|
-| 0 | A | 407.0 | 302.5 | +104.5 | OK | +104.5 |
-| 1 | A | 407.0 | 283.1 | +123.9 | OK | +123.9 |
-| 2 | B | 407.0 | 265.3 | +141.7 | OK | +141.7 |
-| 3 | B | 407.0 | 241.9 | +165.1 | OK | +165.0 |
+| 0 | A | 405.1 | 302.5 | +102.6 | OK | +102.6 |
+| 1 | A | 405.1 | 282.1 | +123.0 | OK | +122.0 |
+| 2 | B | 405.1 | 265.3 | +139.8 | OK | +139.8 |
+| 3 | B | 405.1 | 241.9 | +163.2 | OK | +163.2 |
 
 ## Tuning patterns: tuner reading vs this report
 
-The tuner reads a pad-to-pad path; on a T it can take in part of the other branch. Reading = the pattern's last `last_tuning_length`, as fresh as the last "Update all tuning patterns". Compared with die->ball (T-nets, the later ball) or KiCad's net delay (others). T-net offsets >= 2 ps shift that net's min/opt in the .kicad_dru (`--dru`).
+The tuner reads a pad-to-pad path; on a T it can take in part of the other branch. Reading = the pattern's last `last_tuning_length`, as fresh as the last "Update all tuning patterns". Compared with die->ball (T-nets, the later ball) or KiCad's net delay (others). T-net offsets >= 1 ps shift that net's min/opt in the .kicad_dru (`--dru`).
 
 | Net | tuner (ps) | status | delay (ps) | tuner - delay | |
 |---|---|---|---|---|---|
 | ca3 | 417.0 | tuned | 417.6 | -0.6 | check after an update |
-| dq20 | 265.2 | tuned | 264.7 | +0.5 | check after an update |
-| dq20 | 265.2 | tuned | 264.7 | +0.5 | check after an update |
-| dq30 | 247.0 | tuned | 244.1 | +2.9 | check after an update |
-| dqs1_N | 284.1 | tuned | 283.1 | +1.0 | check after an update |
-| dqs1_P | 284.1 | tuned | 283.1 | +1.0 | check after an update |
-| ~{cs} | 417.0 | tuned | 444.4 | -27.4 | min/opt shifted -27.4 |
+| ck_N | 407.0 | tuned | 405.1 | +1.9 | target shifted +1.9 |
+| ck_P | 407.0 | tuned | 405.1 | +1.9 | target shifted +1.9 |
+| dq1 | 298.0 | tuned | 290.9 | +7.1 | check after an update |
+| dq15 | 269.7 | too_short | 269.7 | +0.0 | stale or extra pattern |
+| dqs1_N | 283.1 | tuned | 282.1 | +1.0 | target shifted +1.0 |
+| dqs1_P | 283.1 | tuned | 282.1 | +1.0 | target shifted +1.0 |
+| ~{cs} | 389.6 | tuned | 417.0 | -27.4 | target shifted -27.4 |
 
 ~{rst}: 220.3 ps total (no matching requirement).

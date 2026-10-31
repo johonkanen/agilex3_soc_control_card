@@ -57,6 +57,21 @@
 	(condition "A.NetName == '/IOBANK 3/dq24' || A.NetName == '/IOBANK 3/dq25' || A.NetName == '/IOBANK 3/dq26' || A.NetName == '/IOBANK 3/dq27' || A.NetName == '/IOBANK 3/dq28' || A.NetName == '/IOBANK 3/dq29' || A.NetName == '/IOBANK 3/dq30' || A.NetName == '/IOBANK 3/dq31' || A.NetName == '/IOBANK 3/dm3'")
 	(constraint skew (max 10ps)))
 
+# ---- net-class clearance backstop (DELAY_RULES.md) -------------------------------------------------
+# The lpddr_* net classes have clearance 0.2 mm so the router and the tuning-pattern updates keep meanders 0.2 mm from
+# other LPDDR4 tracks (they did not always hold the warning-level rules below). Everything else keeps the old 0.1 mm:
+# copper of other nets (vias, pads, zones), LPDDR4 vias, track pairs under the same BGA, and P to N of a pair.
+# The crosstalk rules after this block still set 0.2 / 0.3 mm (warnings) outside the BGAs.
+(rule "lpddr_nc_other"
+	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && !(A.Type == 'Track' && B.Type == 'Track' && (B.hasNetclass('lpddr_dq') || B.hasNetclass('lpddr_ca') || B.hasNetclass('lpddr_diff')))")
+	(constraint clearance (min 0.1mm)))
+(rule "lpddr_nc_bga"
+	(condition "A.Type == 'Track' && B.Type == 'Track' && (A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && (B.hasNetclass('lpddr_dq') || B.hasNetclass('lpddr_ca') || B.hasNetclass('lpddr_diff')) && ((A.intersectsCourtyard('U7') && B.intersectsCourtyard('U7')) || (A.intersectsCourtyard('U12') && B.intersectsCourtyard('U12')))")
+	(constraint clearance (min 0.1mm)))
+(rule "lpddr_nc_pair"
+	(condition "A.hasNetclass('lpddr_diff') && A.isCoupledDiffPair()")
+	(constraint clearance (min 0.1mm)))
+
 # ---- crosstalk spacing outside the BGAs (warnings) -------------------------------------------------
 # 2h within a group, 3h between groups (CA/CK and RESET to DQ/DQS).  The BGA exemption needs BOTH items under
 # the same courtyard: with only A tested, a long segment that merely starts under U7/U12 is exempt along its
@@ -129,7 +144,8 @@
 #   DQS_P/N: opt = the tuned P delay, +-0.5 ps
 # - CA/CKE/CS: opt = CK die->ball + 10 ps (the tuner measures die -> ball on a T), min = CK die->ball,
 #   max = min + band + own branch (DRC checks the whole T); CK: opt = its die->ball
-#   min/opt shifted by the tuner offset (tuner reading - die->ball) where it is >= 2 ps
+#   min/opt shifted by the tuner offset (tuner reading - die->ball) where it is >= 1 ps
+# - DQS_P/N: opt = target + tuner offset where it is >= 0.5 ps (window widened on that side)
 #   Rerun the script after re-routing.
 (rule "dly_dm0"
 	(condition "A.NetName == '/IOBANK 3/dm0'")
@@ -142,7 +158,7 @@
 	(constraint length (min 260.2ps) (opt 265.2ps) (max 270.2ps)))
 (rule "dly_dm3"
 	(condition "A.NetName == '/IOBANK 3/dm3'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq0"
 	(condition "A.NetName == '/IOBANK 3/dq0'")
 	(constraint length (min 293.0ps) (opt 298.0ps) (max 303.0ps)))
@@ -196,31 +212,31 @@
 	(constraint length (min 260.2ps) (opt 265.2ps) (max 270.2ps)))
 (rule "dly_dq24"
 	(condition "A.NetName == '/IOBANK 3/dq24'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq25"
 	(condition "A.NetName == '/IOBANK 3/dq25'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq26"
 	(condition "A.NetName == '/IOBANK 3/dq26'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq27"
 	(condition "A.NetName == '/IOBANK 3/dq27'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq28"
 	(condition "A.NetName == '/IOBANK 3/dq28'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq29"
 	(condition "A.NetName == '/IOBANK 3/dq29'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq3"
 	(condition "A.NetName == '/IOBANK 3/dq3'")
 	(constraint length (min 293.0ps) (opt 298.0ps) (max 303.0ps)))
 (rule "dly_dq30"
 	(condition "A.NetName == '/IOBANK 3/dq30'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq31"
 	(condition "A.NetName == '/IOBANK 3/dq31'")
-	(constraint length (min 242.0ps) (opt 247.0ps) (max 252.0ps)))
+	(constraint length (min 240.1ps) (opt 245.1ps) (max 250.1ps)))
 (rule "dly_dq4"
 	(condition "A.NetName == '/IOBANK 3/dq4'")
 	(constraint length (min 293.0ps) (opt 298.0ps) (max 303.0ps)))
@@ -247,10 +263,10 @@
 	(constraint length (min 302.0ps) (opt 302.5ps) (max 303.0ps)))
 (rule "dly_dqs1_N"
 	(condition "A.NetName == '/IOBANK 3/dqs1_N'")
-	(constraint length (min 282.6ps) (opt 283.1ps) (max 283.6ps)))
+	(constraint length (min 281.6ps) (opt 283.1ps) (max 283.6ps)))
 (rule "dly_dqs1_P"
 	(condition "A.NetName == '/IOBANK 3/dqs1_P'")
-	(constraint length (min 282.6ps) (opt 283.1ps) (max 283.6ps)))
+	(constraint length (min 281.6ps) (opt 283.1ps) (max 283.6ps)))
 (rule "dly_dqs2_N"
 	(condition "A.NetName == '/IOBANK 3/dqs2_N'")
 	(constraint length (min 264.8ps) (opt 265.3ps) (max 265.8ps)))
@@ -259,38 +275,38 @@
 	(constraint length (min 264.8ps) (opt 265.3ps) (max 265.8ps)))
 (rule "dly_dqs3_N"
 	(condition "A.NetName == '/IOBANK 3/dqs3_N'")
-	(constraint length (min 241.5ps) (opt 242.0ps) (max 242.5ps)))
+	(constraint length (min 241.4ps) (opt 241.9ps) (max 242.4ps)))
 (rule "dly_dqs3_P"
 	(condition "A.NetName == '/IOBANK 3/dqs3_P'")
-	(constraint length (min 241.5ps) (opt 242.0ps) (max 242.5ps)))
+	(constraint length (min 241.4ps) (opt 241.9ps) (max 242.4ps)))
 (rule "dly_ca0"
 	(condition "A.NetName == '/IOBANK 3/ca0'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 453.4ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 451.5ps)))
 (rule "dly_ca1"
 	(condition "A.NetName == '/IOBANK 3/ca1'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 449.5ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 447.6ps)))
 (rule "dly_ca2"
 	(condition "A.NetName == '/IOBANK 3/ca2'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 454.1ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 452.2ps)))
 (rule "dly_ca3"
 	(condition "A.NetName == '/IOBANK 3/ca3'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 453.6ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 451.7ps)))
 (rule "dly_ca4"
 	(condition "A.NetName == '/IOBANK 3/ca4'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 453.4ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 451.5ps)))
 (rule "dly_ca5"
 	(condition "A.NetName == '/IOBANK 3/ca5'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 449.4ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 447.5ps)))
 (rule "dly_ck_N"
 	(condition "A.NetName == '/IOBANK 3/ck_N'")
-	(constraint length (min 406.5ps) (opt 407.0ps) (max 423.3ps)))
+	(constraint length (min 406.5ps) (opt 407.0ps) (max 421.4ps)))
 (rule "dly_ck_P"
 	(condition "A.NetName == '/IOBANK 3/ck_P'")
-	(constraint length (min 406.5ps) (opt 407.0ps) (max 423.3ps)))
+	(constraint length (min 406.5ps) (opt 407.0ps) (max 421.4ps)))
 (rule "dly_cke"
 	(condition "A.NetName == '/IOBANK 3/cke'")
-	(constraint length (min 406.5ps) (opt 417.0ps) (max 491.2ps)))
+	(constraint length (min 404.6ps) (opt 415.1ps) (max 489.3ps)))
 (rule "dly_cs"
 	(condition "A.NetName == '/IOBANK 3/~{cs}'")
-	(constraint length (min 379.1ps) (opt 389.6ps) (max 494.5ps)))
+	(constraint length (min 377.2ps) (opt 387.7ps) (max 492.6ps)))
 # ---- END delay_report targets ----

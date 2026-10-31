@@ -14,6 +14,8 @@
 3. Reads the tuning patterns' last readings (`last_tuning_length`). On a T the tuner's path can take in part of
    the other branch, so its reading differs from die -> ball. With --dru, that offset (tuner - die->ball, when
    >= TUNER_MIN ps) shifts the net's min/opt, so a pattern update lands the real die -> ball on target.
+   DQS pairs (diff-pair length patterns): an offset >= TUNER_MIN_DQS ps moves opt (and the tuner's side of the
+   window) by the offset, so the pair lands on its target instead of losing the offset at every update.
    Readings are as fresh as the last "Update all tuning patterns": rerun the script after an update.
 4. Grades every group against the Altera 821801 budgets (ps, FPGA package included) and prints / writes
    a markdown report.
@@ -31,7 +33,8 @@ CSCKE = ['cke', '~{cs}']
 LIM = {'dq': (-68, 43), 'ca': (-34, 34), 'cscke': (-85, 85), 'ckdqs': (-340, 170), 'pn': 1.0}
 # design targets inside those limits (what the .kicad_dru group rules check, max - min of the group)
 TGT = {'byte': 10, 'ca': 20, 'cscke': 60}
-TUNER_MIN = 2.0   # ps; a smaller tuner offset on a T-net is left alone (reading noise)
+TUNER_MIN = 1.0   # ps; a smaller tuner offset on a T-net is left alone (reading noise)
+TUNER_MIN_DQS = 0.5   # ps; DQS windows are +-0.5 ps, so a smaller offset stays inside them
 
 
 def kicad_cli():
@@ -231,7 +234,7 @@ def tuner_readings(board):
         n = net[len(PFX):]
         legs = [n] if f('tuning_mode') == 'single' else [n[:-2] + '_P', n[:-2] + '_N']
         for leg in legs:
-            out[leg].append((ps, f('last_status')))
+            out[leg].append((ps, f('last_status'), f('tuning_mode')))
     return out
 
 
@@ -256,6 +259,7 @@ def write_dru(path, targets):
            '# - CA/CKE/CS: opt = CK die->ball + 10 ps (the tuner measures die -> ball on a T), min = CK die->ball,',
            '#   max = min + band + own branch (DRC checks the whole T); CK: opt = its die->ball',
            '#   min/opt shifted by the tuner offset (tuner reading - die->ball) where it is >= %g ps' % TUNER_MIN,
+           '# - DQS_P/N: opt = target + tuner offset where it is >= %g ps (window widened on that side)' % TUNER_MIN_DQS,
            '#   Rerun the script after re-routing.']
     for n in sorted(targets, key=order):
         mn, opt, mx = targets[n]
@@ -273,12 +277,15 @@ def main():
     ap.add_argument('--dru', action='store_true',
                     help='write the per-net KiCad tuner targets as delay windows into the board .kicad_dru '
                          '(between the BEGIN/END delay_report markers)')
+    ap.add_argument('--shorten', nargs='+', default=[], metavar='NET',
+                    help='DQ/DM nets that are too long by mistake (e.g. dq12): they do not set their byte\'s window '
+                         'and are listed as "shorten"')
     a = ap.parse_args()
     targets = {}   # net -> (min, opt, max) ps for the .kicad_dru; opt is the tuner target
     D = kicad_delays(a.board)
     T = branches(a.board, CA + CSCKE + ['ck_P', 'ck_N'])
     R = tuner_readings(a.board)
-    shift = {}   # T-net -> tuner offset applied to min/opt
+    shift = {}   # net -> tuner offset applied to its window (T-nets, DQS)
     L = []; bad = []
     p = L.append
     def chk(ok, what):
@@ -335,7 +342,7 @@ def main():
         lo, hi = min(rel.values()), max(rel.values())
         allv = list(rel.values()) + [0.0]
         grp = {n: D[n] for n in nets + ['dqs%d_P' % b, 'dqs%d_N' % b] if n in D}
-        over = {n for n, v in rel.items() if v > LIM['dq'][1]}
+        over = {n for n, v in rel.items() if v > LIM['dq'][1] or n in a.shorten}
         top = max(v for n, v in grp.items() if n not in over)
         # window min ... min + TGT: as low as the slowest (in-limit) net allows, not below the CK-DQS floor
         mn = max(top - TGT['byte'] + 0.5, floor if floor is not None else -1e9)
@@ -346,13 +353,19 @@ def main():
         for n in ('dqs%d_P' % b, 'dqs%d_N' % b):
             if n in grp:
                 targets[n] = (pf - 0.5, pf, pf + 0.5)
+                rd = [r for r, st, md in R.get(n, []) if st == 'tuned' and md == 'diff_pair']
+                if len(rd) == 1 and abs(rd[0] - D[n]) >= TUNER_MIN_DQS:
+                    off = rd[0] - D[n]
+                    shift[n] = off
+                    # tuner aims at pf + off (real delay pf); DRC keeps pf -0.5 on the real side
+                    targets[n] = (min(pf - 0.5, pf + off - 0.5), pf + off, max(pf + 0.5, pf + off + 0.5))
         p('| %d | %.1f | %s | %+.1f ... %+.1f | %.1f | %s | %s | %.1f | %s |' % (
             b, ref, ', '.join('%s %+.1f' % (n, v) for n, v in rel.items()), lo, hi, max(allv) - min(allv),
             chk(LIM['dq'][0] <= lo and hi <= LIM['dq'][1] and not miss, 'byte %d limit' % b),
             'OK' if max(allv) - min(allv) <= TGT['byte'] else 'over', mn + TGT['byte'] / 2,
-            ', '.join(('%s %+.1f' % (n, targets[n][1] - v)) if v <= targets[n][2] else
+            ', '.join(('%s %+.1f' % (n, targets[n][1] - shift.get(n, 0) - v)) if v <= targets[n][2] else
                       '%s **shorten %.1f**' % (n, v - targets[n][1]) for n, v in grp.items()
-                      if abs(targets[n][1] - v) >= 1) or 'none'))
+                      if abs(targets[n][1] - shift.get(n, 0) - v) >= 1) or 'none'))
 
     p('\n## Address/command (die -> U12 ball, T-branch removed)\n')
     p('KiCad shows the whole T (die + trunk + both branches). The length tuner, on a T, measures die -> ball. '
@@ -381,7 +394,7 @@ def main():
         band = 0.0 if s.startswith('ck_') else TGT['ca'] if s in CA else TGT['cscke']
         tgt = caref + (0.0 if s.startswith('ck_') else TGT['ca'] / 2)
         targets[s] = (caref - 0.5, tgt, caref + band + max(v['A'][2], v['B'][2]) + 0.5)
-        rd = [r for r, st in R.get(s, []) if st == 'tuned']
+        rd = [r for r, st, _ in R.get(s, []) if st == 'tuned']
         if len(rd) == 1 and abs(rd[0] - max(v['A'][1], v['B'][1])) >= TUNER_MIN:
             off = rd[0] - max(v['A'][1], v['B'][1])
             shift[s] = off
@@ -412,7 +425,7 @@ def main():
     p('|---|---|---|---|---|---|')
     nrows = 0
     for n in sorted(R, key=lambda n: (n[:2], n)):
-        for r, st in R[n]:
+        for r, st, _ in R[n]:
             ref = max(ball[n]['A'][1], ball[n]['B'][1]) if ball.get(n) else D.get(n)
             if ref is None:
                 continue
@@ -421,7 +434,7 @@ def main():
                 continue
             nrows += 1
             p('| %s | %.1f | %s | %.1f | %+.1f | %s |' % (n, r, st, ref, d,
-                ('min/opt shifted %+.1f' % shift[n]) if n in shift else
+                ('target shifted %+.1f' % shift[n]) if n in shift else
                 'stale or extra pattern' if st != 'tuned' else 'check after an update'))
     if not nrows:
         p('| all | | tuned | | within 0.5 ps | |')
