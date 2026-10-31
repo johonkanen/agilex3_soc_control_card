@@ -185,3 +185,26 @@ them). The board rules were switched to 0.10 mm on 2026-10-28.
 
 Bit labels: the eyes are labelled with the KIBIS PRBS7 itself (x^7+x^6+1, fixed rotation), aligned to the driver
 die waveform; sampling the driver die directly flipped bits on badly mismatched lines and gave false fails.
+
+## Corner models and the routed board after tuning (2026-10-31)
+
+**Corner files.** KiCad's corner keywords (`vcc=MIN/MAX rpin=...`) are right only into the 50 Ω V-t fixture
+(tools/kicad_ibis_simulation CLAUDE.md). `corner_models.py` writes `models/min/` and `models/max/` (the min or max
+column as typ, `ibisfix.corner_as_typ`); `routed_si.py` simulates its min/max corners from them at typ.
+`run_si.py --validate-corners` (`results/validate_drivers_corners.md`) compares both ways, package removed, into
+50/48/60/80 Ω and open against the DC high level from each model's own V-I tables (`ibisfix.dc_high`):
+- Agilex `lvstl11_io_s3r40c_doff`: within 2 mV into every load, keywords and corner files alike (the loads it drives
+  here are 48/60/80 Ω ODT).
+- Winbond `PD40/PD48_ODT80_VOH25` at max with keywords: +3 / +9 mV into 60 / 80 Ω and +1.0 V open (2.05 V); with the
+  corner file 0 mV into every resistive load. Into 50 Ω (the FPGA read termination, its only load here) both are
+  exact, so the earlier min/max results were not affected.
+- "open" for the Winbond drivers is still 110-200 mV under the V-I level at the end of the 3 ns pulse with every
+  method (its pull-up has almost no current near the top, so it has not settled); the board never leaves it open.
+- 50 Ω edges: 20-80 % times within a few ps of the tables except PD48 falling (typ 28 vs 39 ps, max 29 vs 20 ps).
+
+**Routed copper after the delay tuning** (`extract_routes.py` on commit 002f700, 426 netlists, 312 s at `-j 24`;
+one min-corner CS netlist alone 15 s, 0.29 GB): all 952 rows pass the masks and the over/undershoot limits
+(`results/routed.md`). Worst at 1600 MT/s over all corners: DQ read 196 mV / 262 ps, DQ write 455 mV / 416 ps, CA
+212 mV / 314 ps (CS into 60 Ω ODT, typ). Against the run before the retuning (2026-10-30): DQ within 3 mV / 3 ps,
+CA 3-18 mV lower (worst: max corner 284 -> 266 mV; CS and CA now land on CK + 10 ps). `routed_si.py` appends rows as each netlist finishes
+(`--resume` continues a stopped run, `--only REGEX` runs a subset) and keeps only the worst eye per kind in memory.

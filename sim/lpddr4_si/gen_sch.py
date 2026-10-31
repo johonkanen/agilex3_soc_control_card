@@ -43,17 +43,26 @@ class Sch(sch.Sch):
     def via(self, a, b, kind): super().via(a, b, *VIA[kind])
 
 
+VALIDATE_LOADS = (50, 48, 60, 80, 1e6)   # ohm to GND: the 50 ohm V-t fixture, the ODT values on this board, open
+
+
 def build_validate(a):
-    """Each driver model as a RECTDRIVER into the IBIS waveform fixture (50 ohm to GND), to compare the converted
-    model with the [Rising/Falling Waveform] tables (run_si.py --validate strips the package from the subcircuit)."""
+    """Each driver model as a RECTDRIVER into each load of VALIDATE_LOADS to GND: the 50 ohm row is compared with
+    the [Rising/Falling Waveform] tables (run_si.py --validate strips the package from the subcircuit), the others
+    with the DC high level from the model's own V-I tables. --corner min|max adds KiCad's corner keywords (to show
+    where they go wrong); with --models pointing at a corner folder, leave --corner typ."""
     s = Sch(a.models); meta = {}
+    c = a.corner.upper()
+    corner = '' if a.corner == 'typ' else f' vcc={c} rpin={c} lpin={c} cpin={c}'
     s.text('.tran 1p 8n', 25.4, 15.24)
     for tag, lib, pin, model in (('agx_dq', AGX, DQ_PIN, 'lvstl11_io_s3r40c_doff'), ('mem_pd40', MEM, DQ_MEM, 'PD40_ODT80_VOH25'),
                                  ('mem_pd48', MEM, DQ_MEM, 'PD48_ODT80_VOH25')):
-        s.row(f'{tag}: {model} into 50 ohm to GND')
-        meta[tag] = dict(kind='validate', model=model, lib=lib[0],
-                         drv=s.ibis('drv', lib, pin, model, f'{tag}_o', 'ton=3n toff=3n td=1n n=1', 'RECTDRIVER'))
-        s.sym('Device', 'R', 'R', {'1': f'{tag}_o', '2': 'GND'}, '50')
+        for r in VALIDATE_LOADS:
+            t = f'{tag}_r{r:g}'
+            s.row(f'{t}: {model} into {r:g} ohm to GND')
+            meta[t] = dict(kind='validate', model=model, lib=lib[0], load=r,
+                           drv=s.ibis('drv', lib, pin, model, f'{t}_o', 'ton=3n toff=3n td=1n n=1' + corner, 'RECTDRIVER'))
+            s.sym('Device', 'R', 'R', {'1': f'{t}_o', '2': 'GND'}, f'{r:g}')
     return finish(s, meta)
 
 

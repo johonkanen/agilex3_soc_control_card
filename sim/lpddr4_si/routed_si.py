@@ -2,17 +2,25 @@
 buffers of the two ends, every net, both directions, three corners.
 
   $KICAD_APPRUN python3.11 extract_routes.py            # board -> work/routes.json
-  KICAD_APPRUN=.../AppRun python3 routed_si.py [-j 12]  # -> results/routed.csv, results/routed.md, eye_routed_*.png
+  python3 corner_models.py                              # models/min/, models/max/ (corner files)
+  KICAD_APPRUN=.../AppRun python3 routed_si.py [-j 12]  # -> results/routed.csv, eye_routed_*.png
+  python3 routed_report.py                              # -> results/routed.md
+  ... routed_si.py --only 'r1600_min_ca_odt80__cs' -j 1  # one netlist (time it with /usr/bin/time -v first)
+  ... routed_si.py --resume                             # skip the netlists already in results/routed.csv
 
 Per net the graph from the board becomes the netlist: every track / arc piece a lossless line (Z0 and ps/mm by
 layer, all LPDDR4 copper is 0.10 mm), every via an L/C (L by the span between the layers it joins, 0.4 pF incl.
 the stub) with T-branches as routed. Uncoupled: no crosstalk and no meander self-coupling. Buffers, masks and
-limits as run_si.py (README.md).
+limits as run_si.py (README.md). min/max use the corner model files (corner_models.py) simulated at typ: KiCad's own
+vcc=MIN/MAX keywords are right only into the 50 ohm V-t fixture (run_si.py --validate-corners).
+
+Rows are appended to results/routed.csv as each netlist finishes, so a stopped run can be resumed (--resume); only the
+worst eye per point kind is kept in memory for the PNGs.
 
 Points: 1600 MT/s typ/min/max; DQ read with the DRAM's 40 ohm (all corners) and 48 ohm (typ) drive; CA/CS/CKE/CK
 into CA_ODT_80 (typ/min/max) and CA_ODT_60 (typ); 2133 MT/s typ (headroom).
 """
-import argparse, csv, json, os, re, sys
+import argparse, csv, json, os, re, sys, time
 from concurrent.futures import ProcessPoolExecutor
 import numpy as np
 
@@ -29,7 +37,16 @@ NBITS, TAIL = 150, 2e-9
 VDDQ = 1.1
 MASK = {'dq_write': ('rect', 140e-3, 0.22), 'ca': ('rect', 175e-3, 0.30), 'dq_read': ('diamond', 140e-3, 0.42)}
 LIMIT = {'dq_write': (-0.4, 1.5), 'ca': (-0.4, 1.5), 'dq_read': (-0.3, VDDQ + 0.25)}
-CORNERS = {'typ': '', 'min': ' vcc=MIN rpin=MIN lpin=MIN cpin=MIN', 'max': ' vcc=MAX rpin=MAX lpin=MAX cpin=MAX'}
+CORNERS = {'typ': 'models', 'min': 'models/min', 'max': 'models/max'}   # corner files, all simulated at typ
+KEYS = ['point', 'net', 'kind', 'rx', 'where', 'eh_mV', 'ew_mask_ps', 'v_margin_mV', 't_margin_ps', 'vmax_mV',
+        'vmin_mV', 'limits_ok', 'delay_ps', 'error']
+
+
+def corner_lib(lib, corner):
+    """(file, component) of a model in the corner's folder."""
+    path = os.path.join(HERE, CORNERS[corner], os.path.basename(lib[0]))
+    if not os.path.exists(path): sys.exit(f'{path} missing: run corner_models.py')
+    return (path, lib[1])
 
 # 0.10 mm lines (kicad_ibis.zsolve): Z0; ps/mm from the board's tuning profile (the delays the routing is matched to)
 Z = {'F.Cu': 58.6, 'B.Cu': 58.6, 'In2.Cu': 53.8, 'In5.Cu': 53.8}
@@ -71,7 +88,8 @@ def build(group, direction, corner, rate, nets, R, odt=80, pd=40):
     """One netlist: every net of the group, uncoupled. Returns (Netlist, [(net, kind, drv ref, [(rx ref, pin node)])])."""
     ui = 1e-6 / rate
     n = Netlist(f'{group} {direction} {corner} {rate:g}')
-    cs = CORNERS[corner]; prbs = f'f0={rate:g}M n={NBITS}{cs}'
+    prbs = f'f0={rate:g}M n={NBITS}'
+    agx, mem = corner_lib(AGX, corner), corner_lib(MEM, corner)
     meta = []
     for i, net in enumerate(nets):
         r = R[net]; p = f'c{i}'
@@ -79,15 +97,15 @@ def build(group, direction, corner, rate, nets, R, odt=80, pd=40):
         u7 = [k for k in ends if k[0] == 'U7'][0]; u12 = [k for k in ends if k[0] == 'U12']
         channel(n, net, r, p, ends)
         if direction == 'write':             # DQ write, CA: FPGA drives
-            n.ibis(f'd{i}', 'drv', *AGX, u7[1], AGX_TX, [ends[u7]], prbs)
+            n.ibis(f'd{i}', 'drv', *agx, u7[1], AGX_TX, [ends[u7]], prbs)
             rxs = []
             for j, k in enumerate(u12):
                 model = 'ODT_48' if group.startswith('byte') else f'CA_ODT_{odt}'
-                n.ibis(f'r{i}_{j}', 'rx', *MEM, k[1], model, [ends[k]], cs.strip()); rxs.append((f'r{i}_{j}', ends[k]))
+                n.ibis(f'r{i}_{j}', 'rx', *mem, k[1], model, [ends[k]]); rxs.append((f'r{i}_{j}', ends[k]))
             meta.append((net, 'dq_write' if group.startswith('byte') else 'ca', f'd{i}', rxs))
         else:                                # DQ read: DRAM drives, FPGA 50 ohm ODT
-            n.ibis(f'd{i}', 'drv', *MEM, u12[0][1], f'PD{pd}_ODT80_VOH25', [ends[u12[0]]], prbs)
-            n.ibis(f'r{i}_0', 'rx', *AGX, u7[1], AGX_RX, [ends[u7]], cs.strip())
+            n.ibis(f'd{i}', 'drv', *mem, u12[0][1], f'PD{pd}_ODT80_VOH25', [ends[u12[0]]], prbs)
+            n.ibis(f'r{i}_0', 'rx', *agx, u7[1], AGX_RX, [ends[u7]])
             meta.append((net, 'dq_read', f'd{i}', [(f'r{i}_0', ends[u7])]))
     # keep only the analysed vectors: ngspice otherwise stores every node of the route graphs (GBs per run)
     n.directive('.save ' + ' '.join(f'v({v})' for _, _, d, rxs in meta
@@ -150,45 +168,54 @@ def points(R):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('-j', type=int, default=12); a = ap.parse_args()
+    ap = argparse.ArgumentParser()
+    ap.add_argument('-j', type=int, default=12)
+    ap.add_argument('--only', help='regex on "<point>__<net>": run only those netlists (e.g. to time one alone)')
+    ap.add_argument('--resume', action='store_true', help='keep results/routed.csv and skip the netlists in it')
+    a = ap.parse_args()
     spice.check()
     os.makedirs(WORK, exist_ok=True); os.makedirs(RES, exist_ok=True)
     R = json.load(open(os.path.join(WORK, 'routes.json')))
     cache = KibisCache(os.path.join(WORK, 'kibis'))
+    out = os.path.join(RES, 'routed.csv')
+    done = set()
+    if a.resume and os.path.exists(out):
+        done = {(r['point'], r['net']) for r in csv.DictReader(open(out)) if not r.get('error')}
     # one netlist per net: the nets are uncoupled, and in one netlist every net runs at the timestep of the busiest
     # edge of all of them (a whole byte: > 1 h; each net alone: ~15 s)
     built = []
     for tag, group, direction, corner, rate, nets, kw in points(R):
         for net in nets:
+            if (tag, net) in done or (a.only and not re.search(a.only, f'{tag}__{net}')): continue
             n, meta = build(group, direction, corner, rate, [net], R, **kw)
             built.append((tag, re.sub(r'\W', '', net), n, meta, rate))
+    if not built: return print('nothing to run')
     print('KIBIS conversions:', cache.resolve([e for *_, n, _, _ in built for e in n.ib], jobs=6), flush=True)
     jobs = [(tag, n.write(os.path.join(WORK, f'{tag}__{nm}.cir'), cache), meta, rate, True)
             for tag, nm, n, meta, rate in built]
-    print(len(jobs), 'netlists', flush=True)
+    print(len(jobs), 'netlists', f'({len(done)} done before)' if done else '', flush=True)
     import matplotlib; matplotlib.use('Agg')
-    rows = []
+    if not (a.resume and os.path.exists(out)):
+        with open(out, 'w', newline='') as f: csv.DictWriter(f, KEYS).writeheader()
+    worst, nrow, nerr, t0 = {}, 0, 0, time.time()
     with ProcessPoolExecutor(a.j) as ex:
-        for r in ex.map(run_point, jobs, chunksize=4): rows += r; print('.', end='', flush=True)
-    print()
-    errs = [r for r in rows if 'error' in r]
-    if errs: print('ERRORS:', errs)
-    rows = [r for r in rows if 'error' not in r]
-    # worst eye per point kind (die) -> png
-    worst = {}
-    for r in rows:
-        if '_eye' not in r: continue
-        k = (r['point'].split('_')[0], r['kind'])
-        if k not in worst or r['v_margin_mV'] < worst[k]['v_margin_mV']: worst[k] = r
-    for (rate, kind), r in worst.items():
-        ph, tr, lab, m = r['_eye']
+        for k, rows in enumerate(ex.map(run_point, jobs, chunksize=1)):
+            for r in rows:                    # only the worst eye per (rate, kind) stays in memory
+                e = r.pop('_eye', None)
+                if e is None or 'error' in r: continue
+                key = (r['point'].split('_')[0], r['kind'])
+                if key not in worst or r['v_margin_mV'] < worst[key][0]['v_margin_mV']: worst[key] = (r, e)
+            with open(out, 'a', newline='') as f:     # appended as each netlist finishes: a stopped run resumes
+                csv.DictWriter(f, KEYS, extrasaction='ignore').writerows(rows)
+            nrow += len(rows); nerr += sum('error' in r for r in rows)
+            if (k + 1) % 20 == 0 or k + 1 == len(jobs):
+                print(f'{k + 1}/{len(jobs)} netlists, {time.time() - t0:.0f} s', flush=True)
+    if nerr: print('ERRORS:', nerr, 'rows (see the error column of results/routed.csv)')
+    for (rate, kind), (r, (ph, tr, lab, m)) in worst.items():
         ui = 1e-6 / (1600 if rate == 'r1600' else 2133.333)
         eye.save(os.path.join(RES, f'eye_routed_{rate}_{kind}.png'), ph, tr, lab, m, MASK[kind], ui,
                  title=f'worst {kind}: {r["net"]} {r["point"]} (die)')
-    keys = [k for k in rows[0] if k != '_eye']
-    with open(os.path.join(RES, 'routed.csv'), 'w', newline='') as f:
-        wr = csv.DictWriter(f, keys, extrasaction='ignore'); wr.writeheader(); wr.writerows(rows)
-    print(f'{len(rows)} rows -> results/routed.csv')
+    print(f'{nrow} rows -> results/routed.csv')
 
 
 if __name__ == '__main__':
