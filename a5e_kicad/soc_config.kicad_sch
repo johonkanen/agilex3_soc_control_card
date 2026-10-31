@@ -16175,16 +16175,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 93.98) (xy 210.82 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f6895a6-cf9c-4943-96dc-d6ab1c19c863")
-	)
-	(wire
-		(pts
 			(xy 190.5 127) (xy 190.5 137.16)
 		)
 		(stroke
@@ -16625,16 +16615,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 63.5) (xy 210.82 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88fdb0c2-f2c0-43b9-b147-21eddd31a657")
-	)
-	(wire
-		(pts
 			(xy 92.71 113.03) (xy 77.47 113.03)
 		)
 		(stroke
@@ -16672,16 +16652,6 @@
 			(type default)
 		)
 		(uuid "8d958d67-6253-4986-afae-b1f39bee741f")
-	)
-	(wire
-		(pts
-			(xy 182.88 66.04) (xy 210.82 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91e88e46-2ba1-4c23-a01d-865f0441d0c5")
 	)
 	(wire
 		(pts
@@ -16845,16 +16815,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 60.96) (xy 210.82 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abb8221c-d4bd-4699-8b67-0654e99588cc")
-	)
-	(wire
-		(pts
 			(xy 52.07 120.65) (xy 52.07 129.54)
 		)
 		(stroke
@@ -16892,16 +16852,6 @@
 			(type default)
 		)
 		(uuid "b23206e9-1c27-4ea1-b687-fd56e56d3c13")
-	)
-	(wire
-		(pts
-			(xy 182.88 73.66) (xy 210.82 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bbb41202-ca62-44f2-8596-ed435c4cb3d2")
 	)
 	(wire
 		(pts
@@ -16982,16 +16932,6 @@
 			(type default)
 		)
 		(uuid "cf480771-40eb-4873-b005-8cc77687fa74")
-	)
-	(wire
-		(pts
-			(xy 182.88 71.12) (xy 210.82 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf61178a-e3cb-4d3f-b91e-86b3407aa028")
 	)
 	(wire
 		(pts
@@ -17501,7 +17441,7 @@
 		)
 		(uuid "4df24365-b064-43b8-9a14-1139b164cde9")
 	)
-	(label "~{qspi_CS}"
+	(label "~{qspi_CS_sdm}"
 		(at 92.71 125.73 180)
 		(effects
 			(font
@@ -22995,5 +22935,723 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 182.88 60.96) (xy 198.12 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9f21a5-8789-4db5-a984-32054b7a2fac")
+	)
+	(wire
+		(pts
+			(xy 205.74 60.96) (xy 210.82 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87e63710-756a-42e9-bfc8-b01d5d497420")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 201.93 60.96 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "69906d9f-00fa-469b-9f3a-646190787a99")
+		(property "Reference" "R296"
+			(at 201.93 59.182 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 201.93 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 201.93 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 201.93 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 201.93 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e365da00-26d0-4965-a7b7-04c71ba9823f")
+		)
+		(pin "1"
+			(uuid "9fdedfb6-1c0e-4c0f-862a-20e5afdab3bb")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R296")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "qspi_D1_sdm"
+		(at 205.74 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "47c11487-8a6b-417f-a11e-c62a9239f701")
+	)
+	(wire
+		(pts
+			(xy 182.88 63.5) (xy 203.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fcab350-625c-4b69-9f3c-4beca54a2192")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 207.01 63.5 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9a1928b-a307-4a08-af22-69917e820c7d")
+		(property "Reference" "R294"
+			(at 207.01 61.722 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 207.01 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 207.01 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 207.01 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 207.01 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "30be91a0-5c93-446f-8844-915d4d4efee2")
+		)
+		(pin "1"
+			(uuid "8ee07435-ba29-4529-9316-04a10988aede")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R294")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "~{qspi_CS_sdm}"
+		(at 210.82 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48cfe1cb-648d-4527-8e81-06cf63c7f7e9")
+	)
+	(wire
+		(pts
+			(xy 182.88 66.04) (xy 198.12 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc8d3393-c918-4dc0-b5f0-9755ca834d0c")
+	)
+	(wire
+		(pts
+			(xy 205.74 66.04) (xy 210.82 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d906926-9464-4be7-b57c-715610157116")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 201.93 66.04 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a23260a6-ad1c-4841-b069-3aa04a9f91e2")
+		(property "Reference" "R297"
+			(at 201.93 64.262 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 201.93 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 201.93 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 201.93 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 201.93 66.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "de64096f-58b4-40fd-bd4b-8c693c1c3596")
+		)
+		(pin "1"
+			(uuid "7036b3c5-c61a-4a2c-b560-c84ccc2983b3")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R297")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "qspi_D2_sdm"
+		(at 205.74 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "95add9c7-db5a-49cc-8cc8-fb2058afbd05")
+	)
+	(wire
+		(pts
+			(xy 182.88 71.12) (xy 198.12 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5891aab7-512c-43e3-a255-f3cf562cc416")
+	)
+	(wire
+		(pts
+			(xy 205.74 71.12) (xy 210.82 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c7914fa-eeea-4c3f-8544-b4f1c0f7e045")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 201.93 71.12 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c0869d11-31cb-4f71-a3b1-b6766a1537fc")
+		(property "Reference" "R295"
+			(at 201.93 69.342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 201.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 201.93 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 201.93 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 201.93 71.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3e912573-1b4a-42be-90f9-5900c153b101")
+		)
+		(pin "1"
+			(uuid "30509430-9e6a-46da-b585-f7d7d57e2fa4")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R295")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "qspi_D0_sdm"
+		(at 205.74 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e4bbb3d-5895-40b6-bf69-3dcfdcbc387b")
+	)
+	(wire
+		(pts
+			(xy 182.88 73.66) (xy 203.2 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bed8247f-1a19-4fe7-88c4-0849ebbc660f")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 207.01 73.66 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "99dac274-cba4-426a-a17f-bc8bff70b0b3")
+		(property "Reference" "R293"
+			(at 207.01 71.882 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 207.01 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 207.01 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 207.01 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 207.01 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 207.01 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "79933c24-2a77-463c-a463-d6ee9607c74f")
+		)
+		(pin "1"
+			(uuid "503ae121-2a3c-4e18-a516-58704567fd6a")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R293")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "qspi_CLK_sdm"
+		(at 210.82 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a9930330-9084-4a0c-9e9b-417b7ea15af3")
+	)
+	(wire
+		(pts
+			(xy 182.88 93.98) (xy 200.66 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95c71f1e-705f-4710-b97a-88154121588a")
+	)
+	(wire
+		(pts
+			(xy 208.28 93.98) (xy 210.82 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a98f170-943e-4bdd-ba43-10b20b30ce1b")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 204.47 93.98 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6b3d20c6-a2db-44b0-ad90-c7f7cdb20a65")
+		(property "Reference" "R298"
+			(at 204.47 92.202 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22R"
+			(at 204.47 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 204.47 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 204.47 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C155743"
+			(at 204.47 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6e6a60fd-fe0c-4fd7-abb9-f379a297ffc0")
+		)
+		(pin "1"
+			(uuid "88764dfc-cc36-4838-ac45-95c277e92ad5")
+		)
+		(instances
+						(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/8aaf6c2b-ae6e-4499-806d-67948f95803c"
+					(reference "R298")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "qspi_D3_sdm"
+		(at 208.28 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e346957-9b76-4459-b096-3b8b60957b78")
 	)
 )

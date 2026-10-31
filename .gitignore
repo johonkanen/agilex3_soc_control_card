@@ -27,3 +27,4 @@ sim/emmc_si/work/
 # Local tooling: Claude Code worktrees and Python caches
 .claude/
 **/__pycache__/
+sim/qspi_si/work/
