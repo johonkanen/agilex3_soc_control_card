@@ -1,0 +1,1 @@
+agilex_3_soc	agilex_3_soc.kicad_pcb
