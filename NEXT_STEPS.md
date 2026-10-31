@@ -210,6 +210,14 @@ the sync it was 496 and 48.
     with 4 Gb per channel, so the per-die density is ambiguous; 180/90/187.5 is correct for either case. Do NOT use
     130/60/137.5, which is only valid for 4 Gb dies (2 Gb per channel).
   - Swizzle strings are in `LPDDR4_SWIZZLE_PLAN.md`.
+- **EMIF refclk termination: set `PHY_TERM_X_R_T_REFCLK_INPUT_OHM = RT_OFF`** for the LPDDR4 EMIF. The board
+  terminates and biases the AC-coupled LVDS refclk itself (R27/R28 50R to VICM_REFCLK 0.875 V); with the IP default
+  `RT_DIFF` the on-chip 100 Ω (-40 %) in parallel drops VID to 92 mV, under the 100 mV minimum
+  (`sim/refclk_si/README.md`, as-built run 2026-10-31). Checked in Quartus 26.3 (`~/dev/agilex5_emif_test/varA_r2133rtoff`,
+  2133 MT/s): `EMIF_EXTRA="MEM_OPERATING_FREQ_MHZ=1066.667;PHY_TERM_X_R_T_REFCLK_INPUT_OHM=RT_OFF;ANALOG_PARAM_DERIVATION_PARAM_NAME=MEM_VREF_DQ_X_VALUE
+  MEM_VREF_CA_X_CA_VALUE MEM_VREF_CA_X_CA_RANGE PHY_TERM_X_R_T_REFCLK_INPUT_OHM"`: the .ip keeps RT_OFF, the fitter reports input
+  termination Off on B55/A58 (Differential with the default), 0 errors, timing met as before. List the parameter in
+  ANALOG_PARAM_DERIVATION_PARAM_NAME too, or the IP may re-derive it.
 - **Add the Reset Release IP.**
 - **Configuration:** AS x4 normal mode; SDM_IO0 = INIT_DONE, SDM_IO16 = CONF_DONE, SDM_IO10 = HPS_COLD_nRESET,
   SDM_IO15 = AS_nRST.

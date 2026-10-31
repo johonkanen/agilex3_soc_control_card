@@ -30,6 +30,8 @@ AGX = ('agilex5_lpddr4.ibs', 'Agilex5_A5EB013BB23BE6S')          # sim/lpddr4_si
 PERIOD = 10e-9
 TRAN = 80e-9
 LINE_MM, PS_MM, ZLINE = 9.6, 6.1, 50.0                             # B.Cu 0.1 mm, loosely coupled legs
+TERM_AT = 'pin'      # R27/R28 at the U7 pins; --layout built: at the C8/C9 side, as placed on the board
+OUT = 'results'
 VIA = (0.5e-9, 0.4e-12)
 VOS = 1.25
 VID_MIN, VID_MAX, VICM_MIN, VICM_MAX, VABS_MIN, VABS_MAX = 0.100, 0.454, 0.80, 0.95, 0.573, 1.177
@@ -39,7 +41,7 @@ VODS = (0.25, 0.35, 0.45)
 
 
 def build(src, t2080, path):
-    s = sch.Sch(models='../../lpddr4_si/models', project='refclk_si')
+    s = sch.Sch(models=os.path.relpath(os.path.join(HERE, '../lpddr4_si/models'), os.path.dirname(path)), project='refclk_si')
     s.text(f'.tran 1p {TRAN * 1e9:g}n\n.options method=gear maxord=2 reltol=1e-4', 25.4, 15.24)
     s.row('supplies'); s.sym('Simulation_SPICE', 'VDC', 'V', {'1': 'v1v1', '2': 'GND'}, '1.1',
                              {'Sim.Device': 'V', 'Sim.Type': 'DC', 'Sim.Pins': '1=+ 2=-', 'Sim.Params': 'dc=1.1'})
@@ -74,7 +76,7 @@ def build(src, t2080, path):
                 s.r(leg, leg + '_r', 33); s.c(leg + '_r', leg + '_c', 100e-9)
                 s.tl(leg + '_c', leg + '_l', ZLINE, LINE_MM * PS_MM * 1e-12)
                 s.via(leg + '_l', leg + '_pin', *VIA)
-                s.r(leg + '_pin', k + '_vicm', rt)
+                s.r(leg + ('_pin' if TERM_AT == 'pin' else '_c'), k + '_vicm', rt)
                 rx[pin] = s.ibis('rx', AGX, pin, 'tds11_in_e0t100', leg + '_pin')
             s.r('v1v1', k + '_vicm', 1e3); s.r(k + '_vicm', 'GND', 3.9e3)
             s.c(k + '_vicm', 'GND', 1e-6); s.c(k + '_vicm', 'GND', 100e-9)
@@ -123,7 +125,14 @@ def run(job):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--show', help='open one case, e.g. I_400:v250_built_rd60')
+    ap.add_argument('--layout', choices=['plan', 'built'], default='plan',
+                    help='built: the routed board (2026-10-31): 12.9 mm of 0.10 mm B.Cu (58.6 ohm), R27/R28 at C8/C9, '
+                         '13 mm from U7 -> work/built, results/results_built.*')
     a = ap.parse_args()
+    global WORK, LINE_MM, ZLINE, TERM_AT, OUT
+    if a.layout == 'built':
+        WORK, LINE_MM, ZLINE, TERM_AT, OUT = os.path.join(HERE, 'work', 'built'), 12.9, 58.6, 'cap', 'results_built'
+        os.makedirs(WORK, exist_ok=True)
     spice.check(); os.makedirs(WORK, exist_ok=True); os.makedirs(RES, exist_ok=True)
     if a.show: return show(a.show)
     jobs = []
@@ -140,7 +149,7 @@ def main():
     rows = []
     with ProcessPoolExecutor(4) as ex:
         for r in ex.map(run, jobs): rows += r
-    with open(os.path.join(RES, 'results.csv'), 'w', newline='') as f:
+    with open(os.path.join(RES, OUT + '.csv'), 'w', newline='') as f:
         wr = csv.DictWriter(f, list(rows[0])); wr.writeheader(); wr.writerows(rows)
     report(rows)
 
@@ -157,7 +166,7 @@ def report(rows):
                            f"{min(r['vmin_mV'] for r in rs):.0f} / {max(r['vmax_mV'] for r in rs):.0f} | "
                            f"{min(r['t2080_ps'] for r in rs):.0f}-{max(r['t2080_ps'] for r in rs):.0f} | "
                            f"{'ok' if all(r['ok'] for r in rs) else '**FAIL**'} |")
-    open(os.path.join(RES, 'results.md'), 'w').write('\n'.join(out) + '\n')
+    open(os.path.join(RES, OUT + '.md'), 'w').write('\n'.join(out) + '\n')
     print('\n'.join(out))
 
 

@@ -45,3 +45,23 @@ source at the data sheet's maximum VOD) and 1136 mV per leg (41 mV under 1.177 V
 
 Not modelled: the oscillator's real output stage, coupling between the legs, the exact route (the pair is currently
 unrouted on the board; 9.6 mm of B.Cu as in the earlier route), jitter.
+
+## As built (2026-10-31): `--layout built`
+
+The routed board differs from the plan above: P/N are 12.8 / 13.1 mm of 0.10 mm B.Cu (58.6 Ω, field-solved) with one
+via each, and R27/R28 sit next to C8/C9 at the oscillator end, ~13 mm from U7, not at the U7 pins.
+`python3 refclk_si.py --layout built` (`results/results_built.md`) simulates that:
+
+| termination | worst case | VID settled | result |
+|---|---|---|---|
+| R27/R28 + RD OCT (Quartus default `RT_DIFF`) | RD 60 Ω, VOD 250 mV | 92-93 mV | **fails VID >= 100 mV** |
+| **`RT_OFF`**, R27/R28 only | all | 184-446 mV, legs 608-1132 mV | **passes every case** |
+
+The line is ~79 ps long, short against the 150-400 ps edges, so terminating at the source end changes little:
+VID max 446 mV (8 mV under 454 mV) and leg max 1132 mV (45 mV under 1.177 V), VICM 0.87 V. The pair runs inverted
+end to end (U9 OUT -> refclk_N / A58), which only shifts the reference phase by half a period. **`RT_OFF` is still
+required**; the board needs no change.
+
+Quartus check (2026-10-31, 26.3, 2133 MT/s build `varA_r2133rtoff` of `~/dev/agilex5_emif_test`): with
+`PHY_TERM_X_R_T_REFCLK_INPUT_OHM=RT_OFF` (also listed in `ANALOG_PARAM_DERIVATION_PARAM_NAME`) the generated .ip keeps
+RT_OFF and the fitter's input termination on B55/A58 is Off (Differential in the default build); 0 errors, timing met.
