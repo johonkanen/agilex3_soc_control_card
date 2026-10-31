@@ -275,10 +275,10 @@
 	(constraint length (min 264.8ps) (opt 265.3ps) (max 265.8ps)))
 (rule "dly_dqs3_N"
 	(condition "A.NetName == '/IOBANK 3/dqs3_N'")
-	(constraint length (min 241.4ps) (opt 241.9ps) (max 242.4ps)))
+	(constraint length (min 241.3ps) (opt 241.8ps) (max 242.3ps)))
 (rule "dly_dqs3_P"
 	(condition "A.NetName == '/IOBANK 3/dqs3_P'")
-	(constraint length (min 241.4ps) (opt 241.9ps) (max 242.4ps)))
+	(constraint length (min 241.3ps) (opt 241.8ps) (max 242.3ps)))
 (rule "dly_ca0"
 	(condition "A.NetName == '/IOBANK 3/ca0'")
 	(constraint length (min 404.6ps) (opt 415.1ps) (max 451.5ps)))
