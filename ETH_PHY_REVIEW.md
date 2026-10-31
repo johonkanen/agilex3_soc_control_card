@@ -1,5 +1,17 @@
 # Ethernet PHY review – U10 (eth.kicad_sch)
 
+## 2026-10-31: decoupling trimmed to one capacitor per pin
+
+Against the RTL8211F(D)(I)-CG data sheet Rev 1.7 section 9.2 (LDO_OUT: at least 0.1 uF X5R/X7R, bypass caps close to
+AVDD10/DVDD10; the -VD data sheet defines the LDO ready time with 1u + 0.1u + 0.1u) and the Zynq board's U901:
+- PHY1V0: C21 1u (LDO output) + one 100n per pin: C23 pin 21, C22 pin 38, C30 pin 3, C28 pin 8. Removed C27 (second
+  1u), C31 and C32 (second caps on pins 8 and 38).
+- PHY_RG (DVDD_RG, pin 28): C258 1u + C257 100n; C256 removed.
+- PHY3V3 (AVDD33, pins 11 and 40): C24 22u + C25 100n at pin 11 + **C29 100n at pin 40** (C29 moved from PHY1V0;
+  pin 40 had no capacitor). DVDD33 (pin 29, 3V3): C26 100n.
+- C20 (100n on 1V2) removed: no PHY pin uses 1V2 since the KSZ9031 was replaced.
+- RGMII series resistors R251-R262 are 0201 (C155743, 22R 1%).
+
 ## 2026-10-25: U10 changed to Realtek RTL8211FDI-CG
 
 The KSZ9031RNX had only 16 orderable at JLCPCB (the KSZ9131 75, the DP83867 9). It is replaced by the **RTL8211FDI-CG**
