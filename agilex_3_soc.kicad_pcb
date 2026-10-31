@@ -4102,6 +4102,17 @@
 			(uuid "3f45be97-7e21-4bf5-aa48-c9af71fdc3cf")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/agilex_lib.3dshapes/RJ45_Hanrun_HR911130A_Horizontal.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "F.Cu")
@@ -7425,7 +7436,7 @@
 			(uuid "ffb5d980-0e9e-45fb-9e1e-1c41fe79888a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/LFBGA-153_11.5x13mm_Layout14x14_P0.5mm.step"
+		(model "${KIPRJMOD}/agilex_lib.3dshapes/LFBGA-153_11.5x13mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -20754,7 +20765,7 @@
 			(uuid "09d72b68-8729-4844-8484-b2f59067be93")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/Altera_B23B.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/FCPBGA-780_23x23mm_Layout28x28_P0.8mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -22163,6 +22174,17 @@
 			(uuid "6c0e29e4-90af-44b2-bcc9-345c1113a488")
 		)
 		(embedded_fonts no)
+		(model "${KIPRJMOD}/agilex_lib.3dshapes/MX25U25645G_CSP24_6x8mm_P1.0mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -25652,7 +25674,7 @@
 			(uuid "2448d8fd-244f-4c15-b1ee-ef92bf9f2a29")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_BGA.3dshapes/BGA-200_10x14.5mm_Layout12x22_P0.8x0.65mm.step"
+		(model "${KIPRJMOD}/agilex_lib.3dshapes/BGA-200_10x15mm_Layout12x22_P0.8x0.65mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)

@@ -40,4 +40,15 @@
 	(pad "SH" thru_hole circle (at 7.745 3.05) (size 2.5 2.5) (drill 1.63) (layers "*.Cu" "*.Mask") (uuid "9118f62e-970e-52ad-ba18-73220cfab99a"))
 	(pad "" np_thru_hole circle (at -5.715 0.0) (size 3.25 3.25) (drill 3.25) (layers "*.Cu" "*.Mask") (uuid "f87657e7-9fd3-5ebe-b21d-ba5db0899644"))
 	(pad "" np_thru_hole circle (at 5.715 0.0) (size 3.25 3.25) (drill 3.25) (layers "*.Cu" "*.Mask") (uuid "a651dabe-b2d4-5bc1-ac5a-8da6e3bcb167"))
+	(model "${KIPRJMOD}/agilex_lib.3dshapes/RJ45_Hanrun_HR911130A_Horizontal.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

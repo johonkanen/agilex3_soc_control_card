@@ -5757,7 +5757,7 @@
 		(solder_mask_margin 0.05)
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/Altera_B23B.step"
+	(model "${KICAD10_3DMODEL_DIR}/Package_BGA.3dshapes/FCPBGA-780_23x23mm_Layout28x28_P0.8mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

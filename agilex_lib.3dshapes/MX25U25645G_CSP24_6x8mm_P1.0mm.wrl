@@ -1,0 +1,10 @@
+#VRML V2.0 utf8
+# MX25U25645G_CSP24_6x8mm_P1.0mm: simple body for the 3D view, 24-ball TFBGA 6 x 8 mm, 1.2 mm max seated height (QSPI flash)
+# Generated for agilex3_soc_control_card; dimensions in mm from the footprint's fab outline.
+Transform {
+  translation 0.00000 -0.00000 0.28543
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.1 0.1 0.1 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 2.36220 3.14961 0.37402 }
+  }
+}

@@ -1,0 +1,10 @@
+#VRML V2.0 utf8
+# BGA-200_10x15mm_Layout12x22_P0.8x0.65mm: simple body for the 3D view, 200-ball FBGA 10 x 15 mm, 1.0 mm max seated height (LPDDR4)
+# Generated for agilex3_soc_control_card; dimensions in mm from the footprint's fab outline.
+Transform {
+  translation 0.00000 -0.00000 0.24606
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.1 0.1 0.1 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 3.93701 5.90551 0.29528 }
+  }
+}

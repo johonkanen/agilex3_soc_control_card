@@ -1,0 +1,10 @@
+#VRML V2.0 utf8
+# RJ45_Hanrun_HR911130A_Horizontal: simple body for the 3D view, HanRun HR911130A body 16.04 x 21.30 mm, height 13.3 mm (approximate)
+# Generated for agilex3_soc_control_card; dimensions in mm from the footprint's fab outline.
+Transform {
+  translation 0.00000 0.10630 2.61811
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.75 0.75 0.72 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 6.31496 8.38583 5.23622 }
+  }
+}

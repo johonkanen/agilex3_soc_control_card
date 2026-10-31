@@ -1,0 +1,10 @@
+#VRML V2.0 utf8
+# LFBGA-153_11.5x13mm: simple body for the 3D view, 153-ball BGA 11.5 x 13 mm, 1.0 mm seated height (eMMC)
+# Generated for agilex3_soc_control_card; dimensions in mm from the footprint's fab outline.
+Transform {
+  translation 0.00000 -0.00000 0.24606
+  children Shape {
+    appearance Appearance { material Material { diffuseColor 0.1 0.1 0.1 specularColor 0.2 0.2 0.2 shininess 0.3 } }
+    geometry Box { size 4.52756 5.11811 0.29528 }
+  }
+}
