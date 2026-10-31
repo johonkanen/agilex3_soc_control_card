@@ -726,204 +726,46 @@
 			(embedded_fonts no)
 		)
 	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 106.68 69.85 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
+	(text "J6, J4: 5 V supply input (5V0 / GND)"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "aeaf1658-9d06-4224-8e66-2b2820ef804f")
-		(property "Reference" "J4"
-			(at 109.22 71.1201 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(at 63.5 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Value" "Conn_01x03"
-			(at 109.22 68.5801 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 106.68 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 106.68 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C2937625"
-			(at 106.68 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4a30103c-a19b-420b-8174-5765a9dffb7f")
-		)
-		(pin "2"
-			(uuid "926cf679-a192-4ee7-92be-a8071210d9cf")
-		)
-		(pin "3"
-			(uuid "10898bff-ddf9-4821-b422-1e7659238520")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/576e78d7-ce71-4c7c-9fdf-49d4584fed0b"
-					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "3f3b7680-2c65-4714-999b-d7b4f259236a")
 	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
-		(at 77.47 80.01 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "67c8011f-c9b0-405f-889f-e533c7ccb87d")
-		(property "Reference" "J6"
-			(at 76.2 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x03_Odd_Even"
-			(at 76.2 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical"
-			(at 77.47 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 77.47 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22438118"
-			(at 77.47 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "639cefe7-c486-4f5a-8e0f-2384c61317e1")
-		)
-		(pin "2"
-			(uuid "55d78d08-8cc9-4738-a0ec-0f60e41831b7")
-		)
-		(pin "4"
-			(uuid "14d7c474-133f-4395-a6e4-20d6d6975bca")
-		)
-		(pin "6"
-			(uuid "d8a62230-75aa-46db-ac61-ffc61fcf33fe")
-		)
-		(pin "5"
-			(uuid "de073a72-ff4d-4e9c-88b0-42ee81b8e32f")
-		)
-		(pin "3"
-			(uuid "e89c0b55-191f-4815-b186-a905e8117d87")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/576e78d7-ce71-4c7c-9fdf-49d4584fed0b"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
+	(junction
+		(at 82.55 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d6f3239-eef6-4f2b-9d5c-12561d2dfca7")
+	)
+	(junction
+		(at 101.6 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "982ecc0e-f3b1-49cb-a2db-b99917d0bdfa")
+	)
+	(junction
+		(at 82.55 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c15019d1-6445-4169-9b8b-b2f2f78c2648")
+	)
+	(junction
+		(at 68.58 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e724d12c-ff77-47d1-82f5-8826f9819217")
+	)
+	(junction
+		(at 68.58 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f859a08d-9fb2-426d-b6e3-7e52b1342187")
 	)
 	(wire
 		(pts
@@ -1045,35 +887,108 @@
 		)
 		(uuid "f0c42348-b585-483d-a4fc-443fd7fec2dc")
 	)
-	(junction
-		(at 82.55 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d6f3239-eef6-4f2b-9d5c-12561d2dfca7")
-	)
-	(junction
-		(at 101.6 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "982ecc0e-f3b1-49cb-a2db-b99917d0bdfa")
-	)
-	(junction
-		(at 82.55 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c15019d1-6445-4169-9b8b-b2f2f78c2648")
-	)
-	(junction
-		(at 68.58 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e724d12c-ff77-47d1-82f5-8826f9819217")
-	)
-	(junction
-		(at 68.58 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f859a08d-9fb2-426d-b6e3-7e52b1342187")
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 77.47 80.01 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "67c8011f-c9b0-405f-889f-e533c7ccb87d")
+		(property "Reference" "J6"
+			(at 76.2 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x03_Odd_Even"
+			(at 76.2 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical"
+			(at 77.47 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 77.47 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22438118"
+			(at 77.47 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "639cefe7-c486-4f5a-8e0f-2384c61317e1")
+		)
+		(pin "2"
+			(uuid "55d78d08-8cc9-4738-a0ec-0f60e41831b7")
+		)
+		(pin "4"
+			(uuid "14d7c474-133f-4395-a6e4-20d6d6975bca")
+		)
+		(pin "6"
+			(uuid "d8a62230-75aa-46db-ac61-ffc61fcf33fe")
+		)
+		(pin "5"
+			(uuid "de073a72-ff4d-4e9c-88b0-42ee81b8e32f")
+		)
+		(pin "3"
+			(uuid "e89c0b55-191f-4815-b186-a905e8117d87")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/576e78d7-ce71-4c7c-9fdf-49d4584fed0b"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "agilex_5_lib:5V0")
@@ -1148,6 +1063,102 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/576e78d7-ce71-4c7c-9fdf-49d4584fed0b"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 106.68 69.85 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aeaf1658-9d06-4224-8e66-2b2820ef804f")
+		(property "Reference" "J4"
+			(at 109.22 71.1201 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x03"
+			(at 109.22 68.5801 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 106.68 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 106.68 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2937625"
+			(at 106.68 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4a30103c-a19b-420b-8174-5765a9dffb7f")
+		)
+		(pin "2"
+			(uuid "926cf679-a192-4ee7-92be-a8071210d9cf")
+		)
+		(pin "3"
+			(uuid "10898bff-ddf9-4821-b422-1e7659238520")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/576e78d7-ce71-4c7c-9fdf-49d4584fed0b"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -1386,16 +1397,5 @@
 				)
 			)
 		)
-	)
-	(text "J6, J4: 5 V supply input (5V0 / GND)"
-		(exclude_from_sim no)
-		(at 63.5 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3f3b7680-2c65-4714-999b-d7b4f259236a")
 	)
 )

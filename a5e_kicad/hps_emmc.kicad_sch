@@ -2237,6 +2237,16 @@
 		)
 		(uuid "9772e39d-b908-4f67-bdeb-286ea9e08658")
 	)
+	(bus
+		(pts
+			(xy 20.32 19.05) (xy 30.48 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "981fa207-555b-4771-9726-0c984fd8786f")
+	)
 	(wire
 		(pts
 			(xy 88.9 116.84) (xy 91.44 116.84)
@@ -3176,6 +3186,17 @@
 			(justify right bottom)
 		)
 		(uuid "f93c1007-38cb-4d86-9d08-9e5dafed55a9")
+	)
+	(hierarchical_label "{hps_sdmmc}"
+		(shape bidirectional)
+		(at 20.32 19.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "eccd0c2a-fc66-421a-b44f-104e7a84c96c")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7605,26 +7626,5 @@
 				)
 			)
 		)
-	)
-	(bus
-		(pts
-			(xy 20.32 19.05) (xy 30.48 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "981fa207-555b-4771-9726-0c984fd8786f")
-	)
-	(hierarchical_label "{hps_sdmmc}"
-		(shape bidirectional)
-		(at 20.32 19.05 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "eccd0c2a-fc66-421a-b44f-104e7a84c96c")
 	)
 )
