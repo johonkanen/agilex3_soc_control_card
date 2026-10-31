@@ -310,7 +310,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "${REVISION}"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -586,6 +586,21 @@
       },
       {
         "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.12,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "eth_mdi",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.12,
+        "tuning_profile": "",
+        "via_diameter": 0.3,
+        "via_drill": 0.15
+      },
+      {
+        "clearance": 0.2,
         "diff_pair_gap": 0.2,
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
@@ -626,20 +641,6 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
         "tuning_profile": "LPDDR4 SE 0.10mm 55R JLC08161H-3313",
-        "via_diameter": 0.3,
-        "via_drill": 0.15
-      },
-      {
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.12,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "eth_mdi",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.12,
         "via_diameter": 0.3,
         "via_drill": 0.15
       }
@@ -987,12 +988,32 @@
       "agilex_3_soc"
     ],
     [
+      "576e78d7-ce71-4c7c-9fdf-49d4584fed0b",
+      "pwr_input"
+    ],
+    [
+      "46009ab7-a4ba-489d-b29c-5828bb20621d",
+      "pwr_vcore"
+    ],
+    [
+      "f641c4ca-6983-42f3-9cca-4494b20f9dfc",
+      "pwr_rails"
+    ],
+    [
+      "0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2",
+      "soc_power"
+    ],
+    [
+      "7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa",
+      "soc_gnd"
+    ],
+    [
       "8aaf6c2b-ae6e-4499-806d-67948f95803c",
       "soc_config"
     ],
     [
-      "871a81f2-62c4-47fa-98d5-872580aa51c3",
-      "adc"
+      "03ab2536-81c4-4b58-8998-1457d6fb7a1b",
+      "clocks"
     ],
     [
       "1bba180f-a717-40d4-b2d6-e5a7b998021f",
@@ -1003,24 +1024,24 @@
       "IOBANK 3"
     ],
     [
-      "75d90890-a51c-4e7c-a03e-f25381d85068",
-      "fpga_bank2a"
+      "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
+      "lpddr4 memory"
     ],
     [
-      "03ab2536-81c4-4b58-8998-1457d6fb7a1b",
-      "clocks"
+      "f67335e8-4801-4c49-9871-958151cd21af",
+      "hps_emmc"
     ],
     [
       "cf2987d8-8050-440f-9afe-54dd4a6786f5",
       "hps_ethernet"
     ],
     [
-      "6fd71ade-9005-41aa-b74e-e2ee4e3127a7",
-      "lpddr4 memory"
+      "6536674f-1597-4664-b8a4-c2b81282d3db",
+      "debug_status"
     ],
     [
-      "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66",
-      "io_headers"
+      "75d90890-a51c-4e7c-a03e-f25381d85068",
+      "fpga_bank2a"
     ],
     [
       "f9220582-8ed5-4e58-b084-fa5be2c4151f",
@@ -1039,20 +1060,12 @@
       "fpga_bank6gh"
     ],
     [
-      "0b3a6f0f-3d8c-4364-ba00-e1e63c7709f2",
-      "soc_power"
+      "871a81f2-62c4-47fa-98d5-872580aa51c3",
+      "adc"
     ],
     [
-      "7bb42d88-bf35-48aa-a7c0-a9a33c7f84fa",
-      "soc_gnd"
-    ],
-    [
-      "46009ab7-a4ba-489d-b29c-5828bb20621d",
-      "pwr_vcore"
-    ],
-    [
-      "f641c4ca-6983-42f3-9cca-4494b20f9dfc",
-      "pwr_rails"
+      "427bfa17-b0b4-4f1f-99c5-3d89ddedcc66",
+      "io_headers"
     ]
   ],
   "text_variables": {
