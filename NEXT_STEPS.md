@@ -202,7 +202,10 @@ the sync it was 496 and 48.
 - **HPS pin mux:** SD/MMC 8-bit on HPS_IOA_1–12, Ethernet on EMAC2 (HPS_IOB_13–24, MDIO2 on IOB_9/10), UART0 on
   IOA_23/24, I2C1 on IOB_7/8. The full table and the `HPS_IO_Enable` string are in `HPS_PINMUX.md`.
 
-- **EMIF:** LPDDR4 1x32, 1 rank, 4 Gb/channel, 1600 MT/s, refclk 100 MHz.
+- **EMIF:** LPDDR4 1x32, 1 rank, 4 Gb/channel, **2133 MT/s** (`MEM_OPERATING_FREQ_MHZ` 1066.667, the -6S maximum;
+  the IP rejects 2667), refclk 100 MHz. Quartus 26.3 build `~/dev/agilex5_emif_test/varA_r2133` (routed pinout and
+  swizzle): 0 errors, timing met (hold 0.371 ns, minimum pulse width 0.300 ns). The board IBIS simulation passes at
+  2133 (`sim/lpddr4_si/results/routed.md`). Fall back to 1600 MT/s (800 MHz) if calibration fails on the first boards.
   - Refresh timings: tRFCab 180 ns, tRFCpb 90 ns, tXSR 187.5 ns (the IP default). The H9HCNNN8KUMLHR is "8Gb, DDP, 2Ch 1CS"
     with 4 Gb per channel, so the per-die density is ambiguous; 180/90/187.5 is correct for either case. Do NOT use
     130/60/137.5, which is only valid for 4 Gb dies (2 Gb per channel).

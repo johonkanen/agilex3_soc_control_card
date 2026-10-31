@@ -399,7 +399,9 @@ nets, and regenerate `PIN_SWIZZLE_CH0_DQS*` (see the scripts below).
 The test project is in `~/dev/agilex5_emif_test` (not in this repo):
 - Quartus Pro 26.1.1, A5EB013BB23BE6S;
 - `emif_io96b_hps` 5.0.0, LPDDR4 1×32, 1 rank, 4 Gb per channel;
-- 1600 MT/s with a 100 MHz refclk.
+- 1600 MT/s with a 100 MHz refclk; the design rate is now 2133 MT/s (2026-10-31: Quartus 26.3,
+  `CSV=$PWD/src/u7_bank3_pins_routed.csv REFCLK=100.0 TAG=_r2133 EMIF_EXTRA="MEM_OPERATING_FREQ_MHZ=1066.667"
+  scripts/timed_build.sh A` → `varA_r2133/`, 0 errors, timing met).
 
 **Final routed swizzle (current, 2026-10-28, board commit 74dfc71):** the pin table is generated from the schematic
 netlist (`kicad-cli sch export netlist --format kicadxml`, then `scripts/sch_to_csv.py`) as
