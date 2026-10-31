@@ -6387,6 +6387,345 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "agilex_5_lib:HR911130A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -10.16 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "HR911130A"
+				(at -10.16 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "agilex_lib:RJ45_Hanrun_HR911130A_Horizontal"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/d9b1e130e54a44fe9872ced55aa393e4.pdf"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "HanRun RJ45 with 10/100/1000Base-T magnetics, green (11 A / 12 K) and yellow (14 A / 13 K) LEDs. TCT = chip-side centre taps, CHS = 75 R / 1000 p Bob Smith common (LCSC C54408)"
+				(at 0 0 0)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HR911130A_0_1"
+				(rectangle
+					(start -10.16 15.24)
+					(end 10.16 -15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "HR911130A_1_1"
+				(pin passive line
+					(at -12.7 12.7 0)
+					(length 2.54)
+					(name "MDI0+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "MDI0-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 7.62 0)
+					(length 2.54)
+					(name "MDI1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 5.08 0)
+					(length 2.54)
+					(name "MDI1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 2.54 0)
+					(length 2.54)
+					(name "MDI2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "MDI2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "MDI3+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -5.08 0)
+					(length 2.54)
+					(name "MDI3-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "TCT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -12.7 0)
+					(length 2.54)
+					(name "CHS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 12.7 180)
+					(length 2.54)
+					(name "LEDG_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "LEDG_K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(name "LEDY_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "LEDY_K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -2.54 180)
+					(length 2.54)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "SH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "25 MHz +/-50 ppm crystal (RTL8211FDI: +/-50 ppm incl. first-year aging and load caps).\nC251/C252 = 2*(CL - Cstray): 27p for CL=18pF; adjust to the crystal."
 		(exclude_from_sim no)
@@ -6421,7 +6760,7 @@
 		)
 		(uuid "5c2cd329-2382-4619-b16b-f654eb110501")
 	)
-	(text "J9: CT = common PHY-side centre tap (all 4 pairs) -> 100n to GND.\nGND/SH -> GND.\nGreen LED L3(+)/L4 <- PHY LED2 (1000M link/act, active low, 3.3 V)\ndirectly; R268 is also the CFG_LDO1 strap. Yellow L1/L2 unused.\nSODIMM P1 not populated: {phy} bus to P1 is a leftover"
+	(text "J9: HanRun HR911130A (LCSC C54408, as on the Zynq board).\nTCT (1) = PHY-side centre taps, all 4 pairs -> C255 100n to GND.\nCHS (10) and shield -> GND. Green LED 11(+)/12 <- PHY LED2\n(1000M link/act, active low, 3.3 V, R250 330R); R268 is also\nthe CFG_LDO1 strap. Yellow LED 13/14 unused."
 		(exclude_from_sim no)
 		(at 213.36 71.12 0)
 		(effects
@@ -6600,12 +6939,6 @@
 		(uuid "87029c3a-2ac0-4b6c-a714-4dde2bf1f775")
 	)
 	(junction
-		(at 246.38 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8995a88a-ee4c-435d-9402-3d4a4cc1ab61")
-	)
-	(junction
 		(at 190.5 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6740,14 +7073,6 @@
 	(no_connect
 		(at 190.5 78.74)
 		(uuid "02244254-9f23-4ae8-9c0b-120d84bc82c6")
-	)
-	(no_connect
-		(at 241.3 124.46)
-		(uuid "991dbfd6-0ccf-47ff-84d8-4d9b303201a4")
-	)
-	(no_connect
-		(at 238.76 124.46)
-		(uuid "a9511fa9-a133-4c5a-9f35-9f0dfc636b58")
 	)
 	(bus_entry
 		(at 91.44 104.14)
@@ -6997,16 +7322,6 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 99.06) (xy 205.74 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "039e4315-08a5-44ff-9d0e-472971497310")
-	)
-	(wire
-		(pts
 			(xy 160.02 53.34) (xy 162.56 53.34)
 		)
 		(stroke
@@ -7114,16 +7429,6 @@
 			(type default)
 		)
 		(uuid "10cadd9d-755d-4bc3-9935-f0e9e94e93ca")
-	)
-	(wire
-		(pts
-			(xy 200.66 91.44) (xy 200.66 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1409d9d7-2ab7-43fb-8402-2b172a868da2")
 	)
 	(wire
 		(pts
@@ -7237,16 +7542,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 124.46) (xy 246.38 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24d6811f-5762-4385-9eea-a7095a95b5bc")
-	)
-	(wire
-		(pts
 			(xy 154.94 55.88) (xy 154.94 53.34)
 		)
 		(stroke
@@ -7254,16 +7549,6 @@
 			(type default)
 		)
 		(uuid "269400da-7ae2-4649-a602-413886ff5251")
-	)
-	(wire
-		(pts
-			(xy 204.47 114.3) (xy 204.47 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2817f0a4-d407-45f6-a449-92b07c61d605")
 	)
 	(wire
 		(pts
@@ -7307,7 +7592,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 106.68) (xy 204.47 106.68)
+			(xy 190.5 106.68) (xy 190.5 106.68)
 		)
 		(stroke
 			(width 0)
@@ -7317,7 +7602,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 93.98) (xy 207.01 93.98)
+			(xy 190.5 93.98) (xy 190.5 93.98)
 		)
 		(stroke
 			(width 0)
@@ -7397,16 +7682,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 81.28) (xy 241.3 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a819b7b-8e3b-410c-a5b4-d588d753fd17")
-	)
-	(wire
-		(pts
 			(xy 135.89 22.86) (xy 142.24 22.86)
 		)
 		(stroke
@@ -7467,26 +7742,6 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 81.28) (xy 246.38 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3daa87c8-e5b2-42f4-89ff-07fb8dfccddb")
-	)
-	(wire
-		(pts
-			(xy 207.01 93.98) (xy 231.14 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40e75a7f-9c44-42b2-bc36-e4b026a55f4f")
-	)
-	(wire
-		(pts
 			(xy 213.36 35.56) (xy 220.98 35.56)
 		)
 		(stroke
@@ -7537,7 +7792,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 91.44) (xy 200.66 91.44)
+			(xy 190.5 91.44) (xy 190.5 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7577,7 +7832,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 116.84) (xy 207.01 116.84)
+			(xy 190.5 116.84) (xy 190.5 116.84)
 		)
 		(stroke
 			(width 0)
@@ -7627,7 +7882,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 99.06) (xy 205.74 99.06)
+			(xy 190.5 99.06) (xy 190.5 99.06)
 		)
 		(stroke
 			(width 0)
@@ -7827,16 +8082,6 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 106.68) (xy 204.47 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70db53d2-f3d9-4d87-a56d-95fc09c4f151")
-	)
-	(wire
-		(pts
 			(xy 92.71 22.86) (xy 110.49 22.86)
 		)
 		(stroke
@@ -7917,16 +8162,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 101.6) (xy 231.14 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cd247c0-1b1d-4439-a640-f14332c48810")
-	)
-	(wire
-		(pts
 			(xy 50.8 96.52) (xy 88.9 96.52)
 		)
 		(stroke
@@ -7944,16 +8179,6 @@
 			(type default)
 		)
 		(uuid "7ea279e3-05bf-4ae9-af1f-d91c5d8fbae3")
-	)
-	(wire
-		(pts
-			(xy 200.66 88.9) (xy 231.14 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f4026b6-2af8-4d91-8e6c-d477307fa93c")
 	)
 	(wire
 		(pts
@@ -8037,16 +8262,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 78.74) (xy 246.38 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90826fb5-382a-4b7f-a7fe-f3e381b09651")
-	)
-	(wire
-		(pts
 			(xy 121.92 81.28) (xy 124.46 81.28)
 		)
 		(stroke
@@ -8104,16 +8319,6 @@
 			(type default)
 		)
 		(uuid "98ffd15c-558d-42ac-a698-b813c0a790c5")
-	)
-	(wire
-		(pts
-			(xy 231.14 119.38) (xy 220.98 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ac7f887-ef06-4262-bac2-dcc24956ae62")
 	)
 	(wire
 		(pts
@@ -8227,16 +8432,6 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 134.62) (xy 231.14 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a69f19bf-cc10-41f4-af90-470a9a649444")
-	)
-	(wire
-		(pts
 			(xy 154.94 53.34) (xy 157.48 53.34)
 		)
 		(stroke
@@ -8267,7 +8462,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 109.22) (xy 207.01 109.22)
+			(xy 190.5 109.22) (xy 190.5 109.22)
 		)
 		(stroke
 			(width 0)
@@ -8367,7 +8562,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 101.6) (xy 207.01 101.6)
+			(xy 190.5 101.6) (xy 190.5 101.6)
 		)
 		(stroke
 			(width 0)
@@ -8387,26 +8582,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 109.22) (xy 231.14 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3dabb20-608e-4b4e-a139-a9c44390d7a0")
-	)
-	(wire
-		(pts
-			(xy 204.47 111.76) (xy 231.14 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3fa2366-8648-4292-b79f-06ce14442ff8")
-	)
-	(wire
-		(pts
 			(xy 71.12 86.36) (xy 71.12 83.82)
 		)
 		(stroke
@@ -8414,16 +8589,6 @@
 			(type default)
 		)
 		(uuid "b46eaa7a-5ee5-4114-9b7f-43d1b44a7c74")
-	)
-	(wire
-		(pts
-			(xy 207.01 116.84) (xy 231.14 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4c1d8e6-c97a-4cea-ba31-879964b67383")
 	)
 	(bus
 		(pts
@@ -8567,7 +8732,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 114.3) (xy 204.47 114.3)
+			(xy 190.5 114.3) (xy 190.5 114.3)
 		)
 		(stroke
 			(width 0)
@@ -8654,16 +8819,6 @@
 			(type default)
 		)
 		(uuid "d75480e6-65bf-4d92-9019-99c78a0514e2")
-	)
-	(wire
-		(pts
-			(xy 204.47 104.14) (xy 231.14 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc5a4d8f-6196-4ec6-8ec4-98b7426a0ad2")
 	)
 	(wire
 		(pts
@@ -8754,16 +8909,6 @@
 			(type default)
 		)
 		(uuid "e395a899-766a-49d1-99ed-18205da1d2ea")
-	)
-	(wire
-		(pts
-			(xy 243.84 124.46) (xy 243.84 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e45cdb45-00c5-4eeb-8d15-93c4711ebee4")
 	)
 	(wire
 		(pts
@@ -8904,16 +9049,6 @@
 			(type default)
 		)
 		(uuid "fa38d2f7-3063-40ab-93da-f7b6a61c346d")
-	)
-	(wire
-		(pts
-			(xy 205.74 96.52) (xy 231.14 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa9f8710-d046-462a-8dd1-39ca34423c3c")
 	)
 	(wire
 		(pts
@@ -9285,16 +9420,6 @@
 			(justify right)
 		)
 		(uuid "148c8461-22c0-41db-bf12-1cfa1b4b90a8")
-	)
-	(label "eth_led_g_n"
-		(at 231.14 134.62 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6674e1f1-276e-4805-8d82-20f3789dddd5")
 	)
 	(hierarchical_label "phy_rst_n"
 		(shape input)
@@ -11352,83 +11477,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "#PWR078")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 246.38 76.2 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3b851c2e-73bd-443b-90a4-7a0d4e34b4d9")
-		(property "Reference" "#PWR1546"
-			(at 246.38 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 246.38 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\""
-			(at 246.38 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "56e68449-c164-4d94-9069-65a133672094")
-		)
-		(instances
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "#PWR1546")
 					(unit 1)
 				)
 			)
@@ -15700,8 +15748,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:RJ45_RB1-125B8G1A")
-		(at 243.84 101.6 180)
+		(lib_id "agilex_5_lib:HR911130A")
+		(at 243.84 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15711,30 +15759,7 @@
 		(dnp no)
 		(uuid "beb36ca7-4e4b-401e-9ed7-69014781a39b")
 		(property "Reference" "J9"
-			(at 252.73 101.5999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "RJ45_RB1-125B8G1A"
-			(at 252.73 104.1399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_RJ:RJ45_UDE_RB1-125B8G1A"
-			(at 242.57 104.14 0)
-			(hide yes)
+			(at 243.84 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15743,19 +15768,17 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/1901091107_UDE-Corp-RB1-125B8G1A_C363353.pdf"
-			(at 249.936 102.743 0)
-			(hide yes)
+		(property "Value" "HR911130A"
+			(at 243.84 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left top)
 			)
 		)
-		(property "Description" "LAN Transformer Jack, RJ45, 10/100/1000 BaseT"
+		(property "Footprint" "agilex_lib:RJ45_Hanrun_HR911130A_Horizontal"
 			(at 243.84 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -15766,8 +15789,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C363353"
-			(at 242.57 104.14 0)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/d9b1e130e54a44fe9872ced55aa393e4.pdf"
+			(at 243.84 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15777,50 +15800,72 @@
 				)
 			)
 		)
-		(pin "R10"
-			(uuid "c4be3624-aaae-473e-9f62-e8bd5d80914a")
+		(property "Description" "HanRun RJ45 with 10/100/1000Base-T magnetics, green (11 A / 12 K) and yellow (14 A / 13 K) LEDs"
+			(at 243.84 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "L2"
-			(uuid "72e808c8-b0c0-457b-867c-acac719b0076")
+		(property "LCSC" "C54408"
+			(at 243.84 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "L4"
-			(uuid "8be5e070-f89f-4410-bbac-50475a9b161d")
+		(pin "1"
+			(uuid "5645fdeb-5225-4083-a005-9370cf2851d3")
 		)
-		(pin "L1"
-			(uuid "d8a76d48-93ef-464f-9ac6-8461e411457f")
+		(pin "2"
+			(uuid "20d131f6-4570-4a99-8f5d-5739b546bd7a")
 		)
-		(pin "L3"
-			(uuid "e5afcd9b-980a-4732-bbc6-8c7b6fd066ba")
+		(pin "3"
+			(uuid "b01b061a-f919-47f7-b296-6b4226fe2ce6")
 		)
-		(pin "R2"
-			(uuid "5e814fa5-1b42-4b75-89bc-5d7925b71b2f")
+		(pin "4"
+			(uuid "5012e2ca-20b2-4e4c-8fe2-2d43a25ac5e7")
 		)
-		(pin "R6"
-			(uuid "767b672c-e93b-41bf-9dd3-0f3077f5b400")
+		(pin "5"
+			(uuid "1915cab4-5a5a-4a67-af29-7b6e2772ba30")
 		)
-		(pin "R8"
-			(uuid "bad281b8-68c9-4994-8fc3-1b79b0b7af30")
+		(pin "6"
+			(uuid "03248c64-96b5-4e17-9eb9-9a8b6b391c73")
 		)
-		(pin "R1"
-			(uuid "cc9e165a-9dc1-4ddc-a149-c17abf4d1cf6")
+		(pin "7"
+			(uuid "174f54a5-169e-421a-aa57-15c81eeabde8")
 		)
-		(pin "R5"
-			(uuid "68db29a9-970f-43d2-9d11-10793983a4e9")
+		(pin "8"
+			(uuid "46671ed0-b8dd-4489-91a7-21650fa0d85e")
+		)
+		(pin "9"
+			(uuid "532a1efe-bfdc-437c-b040-37122e2126f1")
+		)
+		(pin "10"
+			(uuid "93c15b57-f405-4a9e-a98b-21e486697218")
+		)
+		(pin "11"
+			(uuid "79c21976-9be0-42b8-a600-dbf8240a3bb2")
+		)
+		(pin "12"
+			(uuid "366bd707-2b51-44b3-bf4e-0d54bf34fb11")
+		)
+		(pin "13"
+			(uuid "53cf72a5-93be-473a-b16a-4271fccb17c4")
+		)
+		(pin "14"
+			(uuid "02f52bdb-d18f-4e0f-ba3e-b8e6654f368a")
 		)
 		(pin "SH"
-			(uuid "a19f97c4-9986-48e6-b5db-cefda3b71b66")
-		)
-		(pin "R9"
-			(uuid "8354142a-dc22-4a15-bb04-46830b8a4fd3")
-		)
-		(pin "R3"
-			(uuid "e783dc2e-3c70-429d-bdff-1e8d9ceda240")
-		)
-		(pin "R7"
-			(uuid "c45dc9b0-a533-4bee-b2b8-55dd2607b94d")
-		)
-		(pin "R4"
-			(uuid "8b49c9c5-d172-42e9-aef3-bae0a51f3206")
+			(uuid "0069c662-6f8c-49e8-860d-dcd30be90f99")
 		)
 		(instances
 			(project "agilex_3_soc"
@@ -17420,5 +17465,447 @@
 			(justify left bottom)
 		)
 		(uuid "7d271f41-c214-476a-a95a-ba36d3951fdb")
+	)
+	(wire
+		(pts
+			(xy 231.14 88.9) (xy 223.52 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cc3b07c-3c2e-400b-82d3-d4c842069813")
+	)
+	(label "txrxa_P"
+		(at 223.52 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "036f3ebd-1f81-4b92-b003-89b18e547c41")
+	)
+	(wire
+		(pts
+			(xy 231.14 91.44) (xy 223.52 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9af7f401-e232-415b-93d5-85fec697e624")
+	)
+	(label "txrxa_N"
+		(at 223.52 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f561cbb0-e923-4796-a048-ec6468e71940")
+	)
+	(wire
+		(pts
+			(xy 231.14 93.98) (xy 223.52 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e04677b-9217-4c53-befc-f04abff24256")
+	)
+	(label "txrxb_P"
+		(at 223.52 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7f86a354-4ce3-47cb-94d0-f1a0e1860a0e")
+	)
+	(wire
+		(pts
+			(xy 231.14 96.52) (xy 223.52 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3523aeb2-2e15-42dd-8be5-c1f490ad2359")
+	)
+	(label "txrxb_N"
+		(at 223.52 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f7349791-97ac-404c-835a-9bf654a13656")
+	)
+	(wire
+		(pts
+			(xy 231.14 99.06) (xy 223.52 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d35f291d-81d2-4271-a346-d54692e548d4")
+	)
+	(label "txrxc_P"
+		(at 223.52 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c0e0a334-c3f2-4972-9335-46894513bfdf")
+	)
+	(wire
+		(pts
+			(xy 231.14 101.6) (xy 223.52 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41828ea6-a847-4ffd-9b3e-4a7fdf7a2a48")
+	)
+	(label "txrxc_N"
+		(at 223.52 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d3c73f92-2d39-4d43-b2f0-f8d02cf6169e")
+	)
+	(wire
+		(pts
+			(xy 231.14 104.14) (xy 223.52 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfd01102-a254-484c-a992-c80406346793")
+	)
+	(label "txrxd_P"
+		(at 223.52 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c804df5b-2083-49aa-817b-64f4b8bc65b5")
+	)
+	(wire
+		(pts
+			(xy 231.14 106.68) (xy 223.52 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a9630a4-7251-4b1b-8e04-6d1d9e15697e")
+	)
+	(label "txrxd_N"
+		(at 223.52 106.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "774b90ff-444b-46f3-b2b9-8980d868d111")
+	)
+	(wire
+		(pts
+			(xy 231.14 111.76) (xy 223.52 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfedad13-6cc2-4240-8340-a41949d43508")
+	)
+	(label "eth_ct"
+		(at 223.52 111.76 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9c141a26-3a18-488f-b4f1-10dbe0cff945")
+	)
+	(wire
+		(pts
+			(xy 256.54 88.9) (xy 264.16 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08f7e2ea-7e90-48ce-8dde-06f0ef883643")
+	)
+	(label "eth_led_a"
+		(at 264.16 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "778edfac-82d0-4bc6-8dc7-e7049870a62a")
+	)
+	(wire
+		(pts
+			(xy 256.54 91.44) (xy 264.16 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "220a4ae4-3a38-4e18-9684-862ee52a462f")
+	)
+	(label "eth_led_g_n"
+		(at 264.16 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "883110b8-5bb8-490c-b862-2f324cfa4fdf")
+	)
+	(no_connect
+		(at 256.54 96.52)
+		(uuid "a9caf072-5532-43d7-b4f3-76a330805454")
+	)
+	(no_connect
+		(at 256.54 99.06)
+		(uuid "241fee9f-d8b7-411e-a1c4-74c57fc41a7d")
+	)
+	(wire
+		(pts
+			(xy 231.14 114.3) (xy 228.6 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2536c862-357c-4fcc-8695-c9eac203a7d3")
+	)
+	(wire
+		(pts
+			(xy 228.6 114.3) (xy 228.6 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42745993-4880-4261-a12f-a0950314c89b")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 228.6 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6d270864-365e-452d-a756-56681b1b4bf5")
+		(property "Reference" "#PWR1586"
+			(at 228.6 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 228.6 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e7602be-a64b-4920-b7ea-6582c9738b43")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1586")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 104.14) (xy 259.08 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b83873dd-b465-49b1-ad5b-39def0f06d23")
+	)
+	(wire
+		(pts
+			(xy 259.08 104.14) (xy 259.08 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ff89ccf-207c-4745-a762-e02ad72835c0")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.08 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c2bb0b7-2562-42b7-8055-514da6aab114")
+		(property "Reference" "#PWR1587"
+			(at 259.08 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 259.08 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\""
+			(at 259.08 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "41d6f0f2-fbe0-41b5-8ae4-2f3f6b33efd4")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
+					(reference "#PWR1587")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "eth_ct"
+		(at 220.98 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecb60e5b-ef41-4a6e-883e-26ac0ced815c")
+	)
+	(label "eth_led_a"
+		(at 246.38 129.54 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1a22867-f4f9-44d7-bef6-833621f1d0ed")
 	)
 )

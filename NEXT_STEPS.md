@@ -176,7 +176,7 @@ the sync it was 496 and 48.
    - C1, C2 and C4 have no value (and no LCSC number);
    - the Y3 crystal load caps (C251/C252 27p) vs the crystal;
    - Y2 SiT8924BA-73 is not stocked at JLC (alternative SiT8924BA-78-18E, C17247134);
-   - J9 RJ45 is not stocked at JLC;
+   - J9 is now the HanRun HR911130A (C54408, stocked at JLC; the Zynq board's jack and PHY layout, 2026-10-31): RGMII/MDIO and PHY-local routing to redo;
    - R25/R42/R51 use C_0402 footprints;
    - VCCPT 1V8 also feeds the board's 1.8 V loads (noted as a caution in the checklist).
 5. **Later:** the eMMC instead of microSD (`SHARED_PARTS.md`), the schematic reorganisation (`SCHEMATIC_REORG_PLAN.md`),
