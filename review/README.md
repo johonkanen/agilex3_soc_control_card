@@ -32,7 +32,8 @@ Each stream writes one report here (`review/<stream>.md`); findings are verified
 
 ## Tools
 
-- KiCad 10 (unpacked AppImage): `K=/tmp/claude-1000/-home-jari-dev-agilex3-soc-control-card/ebf62329-8855-466a-8ab6-60dd64346a87/scratchpad/kicad/squashfs-root/AppRun`;
+- KiCad 10 (unpacked AppImage): `K=<squashfs-root>/AppRun` (the first run used one unpacked in a session scratch folder;
+  unpack a KiCad 10 AppImage with `--appimage-extract` if it is gone);
   `$K kicad-cli ...`, `$K python3.11` (has `pcbnew`). Headless ERC / DRC parity needs
   `KICAD10_SYMBOL_DIR="/mnt/c/Program Files/KiCad/10.0/share/kicad/symbols"`. Copy the whole project
   (`agilex_3_soc.*`, `*.kicad_sch`, `a5e_kicad/`, `agilex_5_lib/`, `agilex_lib.pretty/`, `agilex_lib.3dshapes/`,
@@ -49,3 +50,16 @@ Each stream writes one report here (`review/<stream>.md`); findings are verified
 | A2 | Rest of the schematic: power tree, every other IC, connectors | `a2_schematic.md` |
 | B | Footprints, BOM, assembly | `b_assembly.md` |
 | C | Fabrication, layout, SI | `c_layout.md` |
+
+## Status and how to rerun (2026-11-01)
+
+First run on commit `0aa9192`; reports committed here: `a1_agilex.md` (0 BLOCKER / 2 SHOULD / 11 INFO),
+`a2_schematic.md` (0 / 7 / 11), `b_assembly.md` (1 / 7 / 11), `c_layout.md` (0 / 6 / 13). Since then U16/U18 became
+AP61203 (A2-07, part) and the converters, eMMC, flash and LPDDR4 were bought ahead. **Next:** a verification pass in
+which separate agents try to disprove each BLOCKER/SHOULD finding from the raw evidence, then the fixes.
+
+To rerun a stream on a later commit:
+1. commit, then `K=<squashfs-root>/AppRun python3 -I review/make_inputs.py` (rewrites `review/inputs/`);
+2. start one agent per stream (Opus) with the prompt in `review/prompts/<stream>.md`, all in parallel; stream C must not
+   run SI simulations (RAM and time);
+3. each writes `review/<stream>.md`; earlier reports are in git history.
