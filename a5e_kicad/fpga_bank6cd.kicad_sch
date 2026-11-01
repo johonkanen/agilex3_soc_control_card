@@ -14844,10 +14844,6 @@
 		(at 96.52 111.76)
 		(uuid "f17391b8-a41a-45b0-ae27-a792fc395e1f")
 	)
-	(no_connect
-		(at 96.52 106.68)
-		(uuid "f574e999-c23f-42b5-878b-061fb096594d")
-	)
 	(bus_entry
 		(at 66.04 86.36)
 		(size 2.54 2.54)
@@ -14856,6 +14852,15 @@
 			(type default)
 		)
 		(uuid "4036364c-db15-4923-bb4c-f8c402ff56b4")
+	)
+	(bus_entry
+		(at 66.04 104.14)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "488f1d59-17bb-4c0f-b618-d1af0f64b462")
 	)
 	(bus_entry
 		(at 66.04 93.98)
@@ -14963,6 +14968,16 @@
 		)
 		(uuid "6a46ebce-56cc-4b7c-b57b-42fb773c3f8c")
 	)
+	(wire
+		(pts
+			(xy 68.58 106.68) (xy 96.52 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7279af2b-d426-4922-a1bd-a6c32fe35267")
+	)
 	(bus
 		(pts
 			(xy 66.04 91.44) (xy 66.04 93.98)
@@ -15042,6 +15057,16 @@
 			(justify left bottom)
 		)
 		(uuid "40851952-6bfe-4f31-827d-82a85ab572f6")
+	)
+	(label "iob6d9"
+		(at 86.36 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "55748067-e7e0-4326-a8c3-20dbb1d7070e")
 	)
 	(label "iob6d1"
 		(at 86.36 88.9 0)
