@@ -61764,7 +61764,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "0770044c-7c7c-401f-8c16-8d6b6c7f33ee")
@@ -61788,7 +61788,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "2.3V-5.5V input voltage, 0.6V-3.6V adjustable output voltage, 2A output current, Low IQ Synchronous Buck Converter, Power Good Indicator, Pulse Frequency Modulation, SOT-563"
+		(property "Description" "2.3V-5.5V input voltage, 0.6V-3.6V adjustable output voltage, 2A output current, Low IQ Synchronous Buck Converter, Power Good Indicator, Forced PWM, SOT-563"
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -61800,7 +61800,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -72171,7 +72171,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "6d0e31c1-85c6-4ba1-876d-28ead5c8959d")
@@ -72195,7 +72195,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "2.3V-5.5V input voltage, 0.6V-3.6V adjustable output voltage, 2A output current, Low IQ Synchronous Buck Converter, Power Good Indicator, Pulse Frequency Modulation, SOT-563"
+		(property "Description" "2.3V-5.5V input voltage, 0.6V-3.6V adjustable output voltage, 2A output current, Low IQ Synchronous Buck Converter, Power Good Indicator, Forced PWM, SOT-563"
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -72207,7 +72207,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
