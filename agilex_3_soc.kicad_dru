@@ -133,6 +133,11 @@
 (rule "eth_mdi_uncoupled"
 	(condition "A.hasNetclass('eth_mdi')")
 	(constraint diff_pair_uncoupled (max 3mm)))
+# The net class clearance (0.2 mm) is wider than the gap between the 0.4 mm pitch QFN-40 pads, so at U10
+# the MDI pads, and the tracks leaving them, drop to the board default 0.1 mm.
+(rule "eth_mdi_u10_pins"
+	(condition "(A.hasNetclass('eth_mdi') || B.hasNetclass('eth_mdi')) && A.intersectsCourtyard('U10') && B.intersectsCourtyard('U10')")
+	(constraint clearance (min 0.1mm)))
 
 # ===================================================================================================
 # JLCPCB multilayer capabilities (jlcpcb.com/capabilities/pcb-capabilities, checked 2026-10-13).
