@@ -4742,7 +4742,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "GRM32ER71A476KE15L	 47uF 2mR"
+		(property "Value" "47uF 16V X6S GRM32EC81C476KE15L"
 			(at 115.57 181.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4786,7 +4786,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C84494"
+		(property "LCSC" "C162512"
 			(at 116.5352 181.61 0)
 			(hide yes)
 			(show_name no)

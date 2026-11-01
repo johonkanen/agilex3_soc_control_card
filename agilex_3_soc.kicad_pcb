@@ -45572,7 +45572,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "GRM32ER71A476KE15L	 47uF 2mR"
+		(property "Value" "47uF 16V X6S GRM32EC81C476KE15L"
 			(at 0 -2.3 90)
 			(layer "B.Fab")
 			(uuid "14268bf4-a5a0-467b-99a4-cc2a959c6891")
@@ -45608,7 +45608,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C84494"
+		(property "LCSC" "C162512"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")

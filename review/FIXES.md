@@ -151,7 +151,11 @@ deferred: not on this pass. Checked after the edits:
 - [ ] **B-06:** set up U7 through JLC Global Sourcing or consignment:
   - put the full Altera ordering code (speed, temperature, power suffix) in `MPN`;
   - ball A1 is at the footprint's pin-1 corner (CPL 0).
-- [ ] Recheck stock for all lines for 5 boards (B-11).
+- [x] Recheck stock for all lines for 5 boards (B-11), done 2026-11-01:
+  - C124 (47 µF 1210, C84494) was oversold at −540; changed to GRM32EC81C476KE15L **C162512** (16 V X6S, 48k in
+    stock).
+  - Still short at JLC, all sourced by the user: U5 ADS7056 (−30), U8/U19 AP61202 (0), U16/U18 AP61203 (0). Set
+    them up as consigned parts.
 - [ ] Order settings:
   - JLC08161H-3313 stack-up, ENIG;
   - impedance control for the MDI only (0.12/0.25 mm);

@@ -36,3 +36,6 @@ docs/datasheets/
 # Pre-order review: frozen inputs and agent scratch (reports in review/*.md are kept)
 review/inputs/
 review/work/
+
+# JLC order outputs (tools/jlc/fab_outputs.sh): regenerate from the board
+fab/
