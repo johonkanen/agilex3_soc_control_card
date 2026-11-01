@@ -9,6 +9,7 @@
 # Download them locally from the links in docs/README.md.
 docs/*.pdf
 docs/*.xlsx
+docs/*.csv
 agilex_pinout_files/
 
 # Vendor IBIS models (Altera, Winbond, SK hynix): copyrighted, keep local. See sim/lpddr4_si/README.md.
@@ -28,3 +29,6 @@ sim/emmc_si/work/
 .claude/
 **/__pycache__/
 sim/qspi_si/work/
+
+# Datasheets downloaded by tools/datasheets/fetch_datasheets.py (copyrighted)
+docs/datasheets/
