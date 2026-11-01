@@ -49,7 +49,7 @@ The LPDDR4, eMMC and QSPI flash are parts shared with the Agilex 3 card and the 
 <td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In1_Cu.svg" width="400"><br><b>In1.Cu: GND plane</b></td>
 </tr>
 <tr>
-<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In2_Cu.svg" width="400"><br><b>In2.Cu: signal</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In2_Cu.svg" width="400"><br><b>In2.Cu: signal, PHY3V3 pour</b></td>
 <td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In3_Cu.svg" width="400"><br><b>In3.Cu: 1V2, 1V8 planes</b></td>
 </tr>
 <tr>
@@ -57,8 +57,8 @@ The LPDDR4, eMMC and QSPI flash are parts shared with the Agilex 3 card and the 
 <td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In5_Cu.svg" width="400"><br><b>In5.Cu: signal</b></td>
 </tr>
 <tr>
-<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In6_Cu.svg" width="400"><br><b>In6.Cu: VCORE, 3V3, 1V8, 1V2, 1V1 planes</b></td>
-<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/B_Cu.svg" width="400"><br><b>B.Cu: signal + plane, 1V1, 3V3, GND, 1V2, 5V0 and 2 more pours (bottom, seen from the top)</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/In6_Cu.svg" width="400"><br><b>In6.Cu: 3V3, 1V8, VCORE, GND, 1V2 and 1 more planes</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/johonkanen/agilex3_soc_control_card/renders/agilex_3_soc/B_Cu.svg" width="400"><br><b>B.Cu: signal + plane, 1V1, 3V3, GND, 1V2, VCORE and 4 more pours (bottom, seen from the top)</b></td>
 </tr>
 </table>
 
