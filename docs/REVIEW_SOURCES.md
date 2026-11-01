@@ -10,8 +10,8 @@ the build machine. Vendor documents are copyrighted and git-ignored; this file a
 | Altera documents for U7 (pin connection guidelines, power management, configuration, device data sheet, HPS booting) | `docs/*.pdf` | manual download, links in `docs/README.md` | present, all open (46-269 pages) |
 | A5EB013B pinout | `agilex_pinout_files/a5eb013b.xlsx`, `.pdf`; CSV per sheet `a5eb013b.<sheet>.csv` | manual download (`docs/README.md`); CSV with `tools/datasheets/xlsx2csv.py` | present; `Pin_List_B23B.csv` has 795 balls |
 | B23B ball coordinates and land pattern | `docs/agilex5_b23b_ball_coordinates_land_pattern.xlsx` + `.csv` per sheet | manual download; CSV with `xlsx2csv.py` | present |
-| Agilex 5 PCB design guidelines (821801), cited by `agilex_3_soc.kicad_dru` | `docs/821801_agilex5_pcb_design_guidelines.pdf` | manual download from <https://docs.altera.com/r/docs/821801/current>; the site serves a JavaScript page to scripts | **missing** |
-| Datasheets of every other part | `docs/datasheets/` (index `DATASHEETS.md`) | `python3 -I tools/datasheets/fetch_datasheets.py` (JLCPCB library copy by LCSC number, plus manufacturer links) | 73 of 78 part groups fetched; the rest are U7 (Altera documents above), the DNP resistors and the gaps below |
+| Agilex 5 PCB design guidelines (821801), cited by `agilex_3_soc.kicad_dru` | `docs/821801_agilex5_pcb_design_guidelines.pdf` | manual download from <https://docs.altera.com/r/docs/821801/current>; the site serves a JavaScript page to scripts | present (2026.06.12, 136 pages; the download also carries 821802) |
+| Datasheets of every other part | `docs/datasheets/` (index `DATASHEETS.md`) | `python3 -I tools/datasheets/fetch_datasheets.py` (JLCPCB library copy by LCSC number, plus manufacturer links) | 76 of 78 part groups have a local file; the rest are U7 (Altera documents above) and the DNP resistors; J3 has no part number (below) |
 | JLCPCB PCB capabilities | <https://jlcpcb.com/capabilities/pcb-capabilities> | plain HTTP, readable text | ok |
 | JLCPCB stack-up JLC08161H-3313 | board setup (`agilex_3_soc.kicad_pcb`), notes in `agilex_3_soc.kicad_dru`, `sim/lpddr4_si/README.md` | – (<https://jlcpcb.com/impedance> needs JavaScript) | in the repo |
 | Vendor IBIS models (Agilex, SK hynix, Winbond) | `sim/lpddr4_si/models/` (+ `min/`, `max/`) | manual, see `sim/lpddr4_si/README.md` | present |
@@ -21,9 +21,7 @@ the build machine. Vendor documents are copyrighted and git-ignored; this file a
 
 | Item | Problem | What to do |
 |---|---|---|
-| 821801 PCB design guidelines | not downloaded; needed for the PDN, LPDDR4 layout and return-path checks | download the PDF to `docs/821801_agilex5_pcb_design_guidelines.pdf` |
-| D1, D2 Würth 150060RS75000 LED | JLC has no PDF on file; we-online.com answers 403 to scripts | download from <https://www.we-online.com/catalog/datasheet/150060RS75000.pdf> to `docs/datasheets/C3030991_150060RS75000.pdf` (only pinout/polarity is needed) |
-| Y3 25 MHz crystal | **no LCSC number or MPN on the footprint**, so no datasheet and no JLC placement | pick the part (load capacitance must match C251/C252 = 27 pF) and add LCSC/MPN; a BOM finding in itself |
+| D1, D2 Würth 150060RS75000 LED | JLC has no PDF on file; we-online.com answers 403 to scripts | downloaded by hand to `docs/datasheets/C3030991_150060RS75000.pdf` (the fetcher keeps it as cached); redo by hand on a new machine |
 | J3 2x19 1.27 mm socket | no LCSC number or MPN (bottom-side socket) | add the part, or mark it as hand-soldered / not assembled by JLC |
 | J9 HR911130A, Y4 oscillator, L2-L5 inductors | JLC copies are scanned images (no text layer) | readable as images; J9's is 2 pages: check the PHY-side pinout and LED polarity against it |
 | TI parts (TPS548A28, SN74AXC4T774, ADS7056) | JLC copies are the Chinese editions | the English TI originals are fetched as `*_ti.pdf` |
