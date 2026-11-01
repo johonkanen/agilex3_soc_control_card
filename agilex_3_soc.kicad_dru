@@ -120,7 +120,10 @@
 # 100 ohm differential on F.Cu over In1 GND (JLC08161H-3313, 0.0994 mm prepreg), field-solved with
 # tools/kicad_ibis_simulation zsolve: 0.12 mm / 0.25 mm gap = 100.8 ohm (0.10 / 0.15 = 98 ohm). The Zynq
 # board's 0.2 / 0.2 mm is 78 ohm here (it has 0.421 mm under F.Cu). The gap may open up at the U10 and
-# J9 pins (uncoupled length below). P/N within 1 mm (~6 ps), plenty for 1000BASE-T.
+# J9 pins (uncoupled length below). P/N within 1.27 mm (50 mil, ~8 ps), the usual PHY layout-guide figure.
+# Uncoupled up to 7 mm: each pair has one J9 pin in each staggered row and txrxb (pins 7/4) straddles
+# txrxc (5/6), so ~6 mm of split is forced by the MagJack pinout; at 1000BASE-T (energy < ~100 MHz) that
+# is negligible.
 (rule "eth_mdi_width"
 	(condition "A.hasNetclass('eth_mdi')")
 	(constraint track_width (min 0.11mm) (opt 0.12mm) (max 0.13mm)))
@@ -129,10 +132,10 @@
 	(constraint diff_pair_gap (min 0.2mm) (opt 0.25mm) (max 0.3mm)))
 (rule "eth_mdi_skew"
 	(condition "A.hasNetclass('eth_mdi')")
-	(constraint skew (max 1mm) (within_diff_pairs)))
+	(constraint skew (max 1.27mm) (within_diff_pairs)))
 (rule "eth_mdi_uncoupled"
 	(condition "A.hasNetclass('eth_mdi')")
-	(constraint diff_pair_uncoupled (max 3mm)))
+	(constraint diff_pair_uncoupled (max 7mm)))
 # The net class clearance (0.2 mm) is wider than the gap between the 0.4 mm pitch QFN-40 pads, so at U10
 # the MDI pads, and the tracks leaving them, drop to the board default 0.1 mm.
 (rule "eth_mdi_u10_pins"
