@@ -32,3 +32,7 @@ sim/qspi_si/work/
 
 # Datasheets downloaded by tools/datasheets/fetch_datasheets.py (copyrighted)
 docs/datasheets/
+
+# Pre-order review: frozen inputs and agent scratch (reports in review/*.md are kept)
+review/inputs/
+review/work/

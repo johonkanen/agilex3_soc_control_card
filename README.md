@@ -29,8 +29,21 @@ The LPDDR4, eMMC and QSPI flash are parts shared with the Agilex 3 card and the 
     (typ/min/max corners) and 2133 MT/s (typ).
   - Quartus (`LPDDR4_SWIZZLE_PLAN.md`): the routed pinout and swizzle fit, and a 2133 MT/s build (the -6S
     maximum) meets timing. 2133 MT/s is the design rate.
-- Still open: Ethernet PHY routing after the MagJack change, eMMC and HPS peripheral routing, zone refill
-  (`NEXT_STEPS.md`).
+- **Board fully routed (2026-11-01).** eMMC, QSPI, Ethernet (RGMII, MDI pairs to the MagJack, PHY power and GND
+  pours) and the HPS peripherals are routed, all zones are refilled, and the plane outlines are tidied.
+  - DRC: 0 errors, 0 unconnected items, 0 schematic-parity issues. The only warning left is J3's intentional
+    footprint mismatch (smaller pads and holes than the library); J3's two board-edge items are excluded.
+  - ERC: 0 errors, 0 warnings.
+  - Ethernet rules in `agilex_3_soc.kicad_dru`: 0.1 mm clearance at the U10 QFN pins, MDI P/N skew 1.27 mm,
+    uncoupled length 7 mm (the HR911130A pinout forces the pairs apart at the jack).
+  - QSPI series resistors placed at U7 and simulated (`sim/qspi_si`); eMMC needs no length matching at HS200/HS400.
+- **Pre-order review in progress.** Before the JLCPCB order, independent review streams check the frozen design;
+  rules, scope and reports are in `review/README.md`.
+  - A1, Agilex 5 U7 connectivity (every ball, configuration, HPS pin mux, full-pin Quartus fit): running.
+  - A2 (power tree, other ICs, connectors), B (footprints, BOM, assembly) and C (fabrication, layout, SI): to follow.
+  - Sources for the review: `docs/REVIEW_SOURCES.md`. Datasheets for every part: `docs/DATASHEETS.md`, downloaded
+    with `tools/datasheets/fetch_datasheets.py` (git-ignored, copyrighted).
+  - Open BOM item: J3 (2x19 1.27 mm socket) has no part number yet.
 
 ## Copper layers
 
