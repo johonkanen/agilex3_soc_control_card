@@ -16555,7 +16555,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "4.7k"
 			(at 111.76 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16599,7 +16599,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C473048"
+		(property "LCSC" "C270346"
 			(at 109.22 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -16795,7 +16795,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "fe3331ac-ebea-4122-932d-d84892b718b1")
 		(property "Reference" "C259"
 			(at 119.38 129.54 0)

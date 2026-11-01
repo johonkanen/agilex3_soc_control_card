@@ -2219,12 +2219,6 @@
 		(uuid "cec282f2-2ca6-405e-b96e-7104d32b57bd")
 	)
 	(junction
-		(at 57.15 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d57fc91c-b9aa-4f37-8f57-9f37dfb50db9")
-	)
-	(junction
 		(at 133.35 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3398,13 +3392,13 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 31.75) (xy 57.15 24.13)
+			(xy 57.15 31.75) (xy 57.15 29.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b182a4fc-a093-4a1d-bd37-c6714ae67208")
+		(uuid "3f53f8fe-d500-464c-a0e5-725635780d34")
 	)
 	(wire
 		(pts
@@ -3959,6 +3953,83 @@
 		(uuid "4204cdea-a164-491f-af3b-a58e06c35d07")
 	)
 	(symbol
+		(lib_id "agilex_5_lib:1V8")
+		(at 57.15 29.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9352321d-1997-4720-89d2-8fb9e08981e2")
+		(property "Reference" "#PWR01588"
+			(at 57.15 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V8"
+			(at 57.15 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 57.15 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 57.15 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V1\""
+			(at 57.15 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "412ccfcb-5738-45bf-950a-7a8179dfaeaa")
+		)
+		(instances
+			(project "agilex_3_soc"
+				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/f641c4ca-6983-42f3-9cca-4494b20f9dfc"
+					(reference "#PWR01588")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "agilex_5_lib:3V3")
 		(at 223.52 38.1 0)
 		(unit 1)
@@ -4316,7 +4387,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "200k"
+		(property "Value" "200k 0.1%"
 			(at 128.016 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4360,7 +4431,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25764"
+		(property "LCSC" "C728556"
 			(at 127 94.488 90)
 			(hide yes)
 			(show_name no)
@@ -4682,7 +4753,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "200k"
+		(property "Value" "200k 0.1%"
 			(at 130.556 63.5 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4726,7 +4797,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25764"
+		(property "LCSC" "C728556"
 			(at 129.54 62.738 90)
 			(hide yes)
 			(show_name no)
@@ -4774,7 +4845,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "200k"
+		(property "Value" "200k 0.1%"
 			(at 128.016 127 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4818,7 +4889,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25764"
+		(property "LCSC" "C728556"
 			(at 127 126.238 90)
 			(hide yes)
 			(show_name no)
@@ -5578,6 +5649,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 92.71 17.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "51bb1b28-5ec4-4ccd-9dec-a7cde8114627")
 		)
@@ -6021,6 +6103,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 92.71 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "ddbdf1d5-3e91-4b82-be69-d96e2faffcaf")
 		)
@@ -6418,7 +6511,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "44.2k"
+		(property "Value" "44.2k 0.1%"
 			(at 107.95 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6462,7 +6555,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25895"
+		(property "LCSC" "C705633"
 			(at 106.172 99.06 90)
 			(hide yes)
 			(show_name no)
@@ -6695,7 +6788,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "240k"
+		(property "Value" "240k 0.1%"
 			(at 107.95 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6739,7 +6832,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C64043"
+		(property "LCSC" "C852659"
 			(at 106.172 130.81 90)
 			(hide yes)
 			(show_name no)
@@ -7120,6 +7213,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 92.71 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "c78d6fe1-619c-48a4-9bfc-f03a1690aa4e")
 		)
@@ -7466,6 +7570,17 @@
 			)
 		)
 		(property "LCSC" "C603656"
+			(at 129.54 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "270"
 			(at 129.54 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8346,6 +8461,17 @@
 			)
 		)
 		(property "LCSC" "C5244557"
+			(at 92.71 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "90"
 			(at 92.71 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10403,7 +10529,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100k 0.1%"
 			(at 110.49 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10447,7 +10573,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25741"
+		(property "LCSC" "C852472"
 			(at 108.712 67.31 90)
 			(hide yes)
 			(show_name no)

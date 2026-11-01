@@ -4545,6 +4545,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 83.82 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05b14c34-c771-41ce-ab69-1fdf3b6379a1")
 		)
@@ -4799,6 +4810,17 @@
 			)
 		)
 		(property "LCSC" "C25725"
+			(at 83.82 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "90"
 			(at 83.82 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -5073,6 +5095,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 55.88 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1e11ac8e-4e71-44c9-ae29-262b9b6e4f8c")
 		)
@@ -5249,6 +5282,17 @@
 			)
 		)
 		(property "LCSC" "C25725"
+			(at 83.82 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "90"
 			(at 83.82 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -5448,6 +5492,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "270"
+			(at 198.12 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6b836635-1f2b-4cad-a088-52868efad4df")
 		)
@@ -5542,6 +5597,39 @@
 			)
 		)
 		(property "Datasheet" ""
+			(at 133.35 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C27985219"
+			(at 133.35 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "270"
+			(at 133.35 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "HC-PM127-4.3H-2x19PZ"
 			(at 133.35 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -5839,6 +5927,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 55.88 86.36 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a1bf70dc-3ef9-4b95-8db4-4ae4c4af4d7e")
 		)
@@ -6103,6 +6202,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "90"
+			(at 55.88 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "06ce91a6-651a-439b-92c7-9b13a0b63932")
 		)
@@ -6279,6 +6389,17 @@
 			)
 		)
 		(property "LCSC" "C25725"
+			(at 55.88 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "90"
 			(at 55.88 68.58 90)
 			(hide yes)
 			(show_name no)

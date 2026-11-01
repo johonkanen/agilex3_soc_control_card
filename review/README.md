@@ -55,8 +55,9 @@ Each stream writes one report here (`review/<stream>.md`); findings are verified
 
 First run on commit `0aa9192`; reports committed here: `a1_agilex.md` (0 BLOCKER / 2 SHOULD / 11 INFO),
 `a2_schematic.md` (0 / 7 / 11), `b_assembly.md` (1 / 7 / 11), `c_layout.md` (0 / 6 / 13). Since then U16/U18 became
-AP61203 (A2-07, part) and the converters, eMMC, flash and LPDDR4 were bought ahead. **Next:** a verification pass in
-which separate agents try to disprove each BLOCKER/SHOULD finding from the raw evidence, then the fixes.
+AP61203 (A2-07, part) and the converters, eMMC, flash and LPDDR4 were bought ahead. The verification pass
+(`v1_power.md`, `v2_assembly.md`, `v3_layout.md`) is done; the confirmed fixes are tracked as a checklist in
+**`FIXES.md`**.
 
 To rerun a stream on a later commit:
 1. commit, then `K=<squashfs-root>/AppRun python3 -I review/make_inputs.py` (rewrites `review/inputs/`);

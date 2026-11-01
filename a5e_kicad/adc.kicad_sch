@@ -5696,6 +5696,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "270"
+			(at 181.61 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "4c61bc83-5d13-491f-b1e4-9b3e864416c8")
 		)

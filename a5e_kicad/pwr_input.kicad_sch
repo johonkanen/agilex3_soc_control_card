@@ -963,6 +963,17 @@
 				)
 			)
 		)
+		(property "JLC Rotation Offset" "270"
+			(at 77.47 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "639cefe7-c486-4f5a-8e0f-2384c61317e1")
 		)
@@ -1136,6 +1147,17 @@
 			)
 		)
 		(property "LCSC" "C2937625"
+			(at 106.68 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "270"
 			(at 106.68 69.85 0)
 			(hide yes)
 			(show_name no)

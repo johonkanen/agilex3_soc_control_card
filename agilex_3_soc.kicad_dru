@@ -15,8 +15,7 @@
 #   minimum) only for local squeezes. h ~ 0.1 mm on F.Cu/In2/In5, so 2h = 0.2 mm and 3h = 0.3 mm.
 #   Route LPDDR4 on In2 (over In1 GND) first, In5 only inside one In6 pour, edge escapes on F.Cu; not on
 #   In3/In6 (see LPDDR4_SWIZZLE_PLAN.md).
-# JLCPCB minimum trace/space is 0.09 mm; the 0.075 mm clearance used between the 0.4 mm U7 pads is below
-# that - see the note at the end.
+# JLCPCB minimum trace/space is 0.09 mm, which the U7 fan-out now meets too (lpddr_bga_clearance below).
 # ===================================================================================================
 
 # ---- DQ/DM/CA and DQS/CK pairs: 0.10 mm on every layer, pairs with a 0.10 mm gap ------------------
@@ -104,14 +103,13 @@
 	(constraint track_width (min 0.09mm) (opt 0.1mm) (max 0.11mm))
 	(constraint diff_pair_gap (min 0.1mm) (opt 0.2mm) (max 5mm)))
 
-# Clearance between LPDDR tracks and the U7 pads / via-in-pad vias: the 0.4 mm pads on 0.65 mm pitch
-# leave 0.25 mm, i.e. 0.1 mm trace + 2 x 0.075 mm.  This matches the 0.075 mm pad overrides already on
-# the footprint and the board minimum clearance, but it is BELOW JLCPCB's 0.09 mm capability.  To be
-# within spec, reduce the U7 pads to 0.35 mm (0.3 mm channel -> 0.1 mm trace + 2 x 0.1 mm) and raise
-# this rule and the board minimum to 0.09 mm.
+# Clearance between LPDDR tracks and the U7 pads / via-in-pad vias: JLCPCB's multilayer minimum, 0.09 mm
+# ("BGA pad to trace clearance >= 0.1 mm (min. 0.09 mm for multilayer boards)"). The U7 pads are 0.27-0.355 mm
+# round, so a centred 0.1 mm track in a 0.65 mm-pitch channel keeps >= 0.0975 mm; the last off-centre segments
+# (dq0, dq2, dq4, dq16, review C-04) were re-centred on 2026-11-01 and the rule raised from 0.075 mm.
 (rule "lpddr_bga_clearance"
 	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && A.Type == 'Track' && (B.Type == 'Pad' || B.Type == 'Via') && A.intersectsCourtyard('U7')")
-	(constraint clearance (min 0.075mm)))
+	(constraint clearance (min 0.09mm)))
 (rule "lpddr_bga_clearance_u12"
 	(condition "(A.hasNetclass('lpddr_dq') || A.hasNetclass('lpddr_ca') || A.hasNetclass('lpddr_diff')) && A.Type == 'Track' && (B.Type == 'Pad' || B.Type == 'Via') && A.intersectsCourtyard('U12')")
 	(constraint clearance (min 0.1mm)))
@@ -154,6 +152,17 @@
 # 0.2 mm about 200 existing track/via spots would fail. Confirm with the JLCPCB DFM check on the
 # Gerbers before raising it.
 # ===================================================================================================
+# JLC "Inner layer via hole to copper clearance 0.2mm" (review C-05): zones keep 0.2 mm from every
+# drill; tracks stay at the 0.175 mm board setting (see above). Before the NPTH and PTH rules below,
+# which take precedence for their holes because they come later.
+(rule "jlc_inner_hole_to_zone"
+	(condition "A.Type == 'Zone' || B.Type == 'Zone'")
+	(constraint hole_clearance (min 0.2mm)))
+# JLC "NPTH to Track 0.2mm"; 0.3 mm leaves room for the ±0.075 mm hole position tolerance at the
+# H1/H2 heatsink holes, whose rule areas cover only F.Cu/B.Cu (review C-03).
+(rule "jlc_npth_clear"
+	(condition "A.Pad_Type == 'NPTH, mechanical' || B.Pad_Type == 'NPTH, mechanical'")
+	(constraint hole_clearance (min 0.3mm)))
 (rule "jlc_pth_annular"
 	(condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
 	(constraint annular_width (min 0.15mm)))

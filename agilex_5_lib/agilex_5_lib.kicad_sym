@@ -2147,7 +2147,7 @@
 					)
 				)
 			)
-			(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, NC pin1 (always enabled)"
+			(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, pin 1 OE (tied to VDD: always enabled)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2185,10 +2185,10 @@
 				)
 			)
 			(symbol "SIT8924BA-73-18N-25.000000_1_1"
-				(pin no_connect line
+				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "NC"
+					(name "OE"
 						(effects
 							(font
 								(size 1.27 1.27)

@@ -1348,7 +1348,7 @@
 					)
 				)
 			)
-			(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, NC pin1 (always enabled)"
+			(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, pin 1 OE (tied to VDD: always enabled)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1386,10 +1386,10 @@
 				)
 			)
 			(symbol "SIT8924BA-73-18N-25.000000_1_1"
-				(pin no_connect line
+				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "NC"
+					(name "OE"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1931,6 +1931,22 @@
 	(no_connect
 		(at 83.82 59.69)
 		(uuid "a3dd061a-c7b3-4ac5-89f0-c51474a10da8")
+	)
+	(junction
+		(at 100.33 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec45c957-6602-4311-bb20-bb0b0c011126")
+	)
+	(wire
+		(pts
+			(xy 100.33 109.22) (xy 100.33 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2bf0664-ada7-4feb-9942-bac6dee38cef")
 	)
 	(wire
 		(pts
@@ -4174,7 +4190,7 @@
 				)
 			)
 		)
-		(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, NC pin1 (always enabled)"
+		(property "Description" "25MHz 1.8V LVCMOS XO, SiTime MEMS, pin 1 OE (tied to VDD: always enabled)"
 			(at 107.95 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -4817,6 +4833,17 @@
 			)
 		)
 		(property "LCSC" "C2002827"
+			(at 95.25 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC Rotation Offset" "90"
 			(at 95.25 57.15 0)
 			(hide yes)
 			(show_name no)
