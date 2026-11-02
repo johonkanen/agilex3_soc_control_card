@@ -153,8 +153,7 @@ deferred: not on this pass. Checked after the edits:
     In5 `fpga_led` track. C272 goes near the U7 1V1 caps C218–C221 (x ≈ 156, y ≈ 110).
 - [x] **U1 bypass (new, 2026-11-02):** U1 (JTAG SN74AXC4T774) had no supply caps; the nearest were 7 mm away.
   - [x] Schematic: C273 100 nF on 1V8 (VCCB, pin 15) and C274 100 nF on 3V3 (VCCA, pin 16), C1525, in `debug_status`.
-  - [x] Board: placed (by hand, 2026-11-02) at U1 pins 15/16 (U1 at 180.49, 127.70, top side). U42 already has C253/C254, on
-    the top side above its pins.
+  - [x] Board: C273 on B.Cu under U1 pin 15, C274 on F.Cu next to U1 (2026-11-02). U42 already has C253/C254.
 - [x] **3V3 B.Cu pour to the PHY (2026-11-02):** new zone `3v3_phy` (priority 0, below every other B.Cu pour)
   along the 0.3 mm 3V3 track: a strip under U7's bottom via row (y 106–107.3), then a block x 164–172, y 94.6–100.3
   around U9, with a stub to the PHY 3V3 via at (174.47, 97.58). Keeps clear of the RGMII TX resistors. DRC unchanged.

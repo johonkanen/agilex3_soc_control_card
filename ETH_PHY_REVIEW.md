@@ -26,7 +26,7 @@ Rev 1.4.
     unpowered PHY. The INTB pull-up R30 is now on PHY_RG too.
   - CFG_EXT = 0: R271 down on LED0. CFG_LDO = 10: R35 down on LED1, R268 up to 3V3 on LED2. That gives the internal
     1.8 V I/O LDO; the default 01 would be 2.5 V.
-  - R29, R34, R37 and R38 are DNP: they are left over from the KSZ9031, and R34/R37 pull the wrong way.
+  - R29, R34, R37 and R38 (left over from the KSZ9031; R34/R37 pulled RXD2/RXD1 the wrong way) were deleted on 2026-11-02.
   - The pins were placed where the KSZ pins of the same function were, so the RGMII series resistors, MDI wiring,
     crystal and RSET (ex-ISET) stay as they were. The netlist was checked pin by pin.
 - **3V3 rise time:** must be >= 0.5 ms (data sheet table 53). U8's soft-start is 0.5 ms typical, which the data sheet

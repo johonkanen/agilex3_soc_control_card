@@ -6926,12 +6926,6 @@
 		(uuid "7a8c57e4-2c36-457a-a492-9b1a25589c4a")
 	)
 	(junction
-		(at 66.04 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d2d08bd-d6ea-4a1f-aff5-199cfa841b78")
-	)
-	(junction
 		(at 190.5 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7014,12 +7008,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e82c9c73-7978-49f4-8a2b-1874ecb72b8a")
-	)
-	(junction
-		(at 60.96 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ef24f732-4bbe-48ea-94c2-8b7db1e7ee32")
 	)
 	(junction
 		(at 135.89 35.56)
@@ -7270,16 +7258,6 @@
 			(type default)
 		)
 		(uuid "0013e84d-6a19-4cb2-8a76-66c718cd9ae5")
-	)
-	(wire
-		(pts
-			(xy 60.96 93.98) (xy 60.96 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0249cc3a-1ecf-45d0-b7f7-e4dc5f8b2640")
 	)
 	(wire
 		(pts
@@ -8143,16 +8121,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 83.82) (xy 60.96 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a010a2c-927a-45cc-a07d-1cb926840f68")
-	)
-	(wire
-		(pts
 			(xy 190.5 22.86) (xy 205.74 22.86)
 		)
 		(stroke
@@ -8373,7 +8341,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 101.6) (xy 88.9 101.6)
+			(xy 76.2 101.6) (xy 88.9 101.6)
 		)
 		(stroke
 			(width 0)
@@ -8403,7 +8371,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 104.14) (xy 88.9 104.14)
+			(xy 76.2 104.14) (xy 88.9 104.14)
 		)
 		(stroke
 			(width 0)
@@ -8620,16 +8588,6 @@
 			(type default)
 		)
 		(uuid "c7d850dd-46ec-4a76-891b-9c425ec13328")
-	)
-	(wire
-		(pts
-			(xy 66.04 93.98) (xy 66.04 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca4c609a-e924-4627-ae92-6c7ecd2f4fe2")
 	)
 	(wire
 		(pts
@@ -8850,16 +8808,6 @@
 			(type default)
 		)
 		(uuid "f6247662-f9e3-4bef-b09e-cf970dcefcf7")
-	)
-	(wire
-		(pts
-			(xy 66.04 83.82) (xy 66.04 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8050584-bfde-4930-85e6-bdb73ad94cb9")
 	)
 	(wire
 		(pts
@@ -9533,104 +9481,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "#PWR076")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 60.96 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "06d6c2b5-4c6b-4fa5-8efe-fcac47af7af0")
-		(property "Reference" "R34"
-			(at 60.96 86.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4K7"
-			(at 60.96 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 59.182 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 60.96 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C270346"
-			(at 59.182 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c6744a9e-5c91-483b-978a-fe751da6b58b")
-		)
-		(pin "1"
-			(uuid "41c7604d-151a-458c-b805-9a9200542193")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "R1509")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -16430,104 +16280,6 @@
 			(project "agilex_3_soc"
 				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
 					(reference "R31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 66.04 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "e8895609-4c71-4ea5-a6bc-8350e4bb3634")
-		(property "Reference" "R37"
-			(at 66.04 86.36 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4K7"
-			(at 66.04 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 64.262 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 66.04 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C270346"
-			(at 64.262 90.17 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ab39cfc0-84c6-4706-8dc3-b05f38b53c3e")
-		)
-		(pin "1"
-			(uuid "5b565ee2-7131-4d95-bd85-f72d165cb36d")
-		)
-		(instances
-			(project "DBM_A5E013"
-				(path "/267d02d2-570f-41a1-8015-b378cedbc665/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "R1510")
-					(unit 1)
-				)
-			)
-			(project "agilex_3_soc"
-				(path "/a5b98d95-6877-4284-904f-d04e32723ae0/cf2987d8-8050-440f-9afe-54dd4a6786f5"
-					(reference "R37")
 					(unit 1)
 				)
 			)
