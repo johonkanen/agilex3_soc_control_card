@@ -19,7 +19,7 @@ deferred: not on this pass. Checked after the edits:
   - ADS7046IRUGR C543003: 12-bit, 15-clock frame (FPGA logic changes);
   - source the ADS7056 yourself and consign it.
 - [x] **A2-01 5V0 protection on this revision?** Not now: new parts deferred (2026-11-01).
-- [x] **A1-01 PLL/ADC filters on this revision?** Not now: new parts deferred (2026-11-01).
+- [x] **A1-01 PLL/ADC filters on this revision?** No, omitted on purpose (decided 2026-11-02). See section 3.
 - [ ] **Optional items:** U8 → AP61203 (A2-07); 4 × 10 µF under U7 (C-06); 1V1 stitching caps (C-02). Not decided; the last two are new parts.
 
 ## 1. Value, field and rule changes (no copper)
@@ -138,10 +138,26 @@ deferred: not on this pass. Checked after the edits:
   - local VCORE → `vcoresense_P`;
   - GND → `vcoresense_N`.
 - [ ] **A2-01** (if yes in section 0): 5V0 input protection, e.g. AO3401A P-FET (C15127) + SMF5.0A TVS, or an eFuse.
-- [ ] **A1-01** (if yes in section 0): 4 PLL/ADC filter nodes per 821801 Figs 120–123:
-  - each node: BLM18KG260TN1D bead (C88981) + 2 × 47 µF 0603 (C140782), plus 1 µF 0201 per ball;
-  - the PLL/ADC balls must be split off the shared 1V8/VCORE planes.
-- [ ] **C-06 optional:** 4 × 10 µF 0402 (C15525) on the B.Cu VCORE copper at y ≈ 124.5.
+- [x] **A1-01: omitted (decided 2026-11-02).** The PLL/ADC balls stay on the shared 1V8 and VCORE planes. Splitting them
+  off under U7 would compromise the planes more than the beads would filter. What a fix would have needed (for a later revision):
+  - three beads minimum (821801 §10.4): one for VCCPLL1/2_HPS + VCCPLL_SDM + VCCADC (the guide allows combining these),
+    one for VCCPLLDIG1/2_HPS (Fig 120), one for VCCPLLDIG_SDM (Fig 121);
+  - MPZ0603S121HT000 0201 (C695597) is enough: Quartus estimates ≈23 mA on the 1V8 group, ≈8 mA and ≈1 mA on the
+    VCORE ones, so the drop stays under 0.5 % of the supply. 2 × 47 µF 0603 after each bead;
+  - Trenz AXC3000, AXE5000 and AXE5 Falcon (same A5EE013BB23B as U7) all fit these filters.
+  - Bring-up: if PLL jitter or ADC noise shows up, look here first.
+- [x] **C-06 optional:** 4 × 10 µF 0402 (C15525) on the B.Cu VCORE copper at y ≈ 124.5.
+  - [x] Schematic: C268–C271 (VCORE) and C272 (1V1, for VCCIO_PIO_3A) in `soc_power`, 2026-11-02.
+  - [x] Board: placed (by hand, 2026-11-02). Free B.Cu VCORE copper is at x 154.8–158.2, y 123.6–127.9 (left of L1, above C130).
+    Each GND pad needs its own via; avoid In2 `vcoresense_P/N` (x 157.69/157.94), In3 1V2 (x 154.50) and the
+    In5 `fpga_led` track. C272 goes near the U7 1V1 caps C218–C221 (x ≈ 156, y ≈ 110).
+- [x] **U1 bypass (new, 2026-11-02):** U1 (JTAG SN74AXC4T774) had no supply caps; the nearest were 7 mm away.
+  - [x] Schematic: C273 100 nF on 1V8 (VCCB, pin 15) and C274 100 nF on 3V3 (VCCA, pin 16), C1525, in `debug_status`.
+  - [x] Board: placed (by hand, 2026-11-02) at U1 pins 15/16 (U1 at 180.49, 127.70, top side). U42 already has C253/C254, on
+    the top side above its pins.
+- [x] **3V3 B.Cu pour to the PHY (2026-11-02):** new zone `3v3_phy` (priority 0, below every other B.Cu pour)
+  along the 0.3 mm 3V3 track: a strip under U7's bottom via row (y 106–107.3), then a block x 164–172, y 94.6–100.3
+  around U9, with a stub to the PHY 3V3 via at (174.47, 97.58). Keeps clear of the RGMII TX resistors. DRC unchanged.
 - [ ] **C-02 optional:** 1V1–GND 0201 caps and 1V1 vias under the U7 top rows.
 
 ## 4. Before ordering
