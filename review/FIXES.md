@@ -20,7 +20,7 @@ deferred: not on this pass. Checked after the edits:
   - source the ADS7056 yourself and consign it.
 - [x] **A2-01 5V0 protection on this revision?** Not now: new parts deferred (2026-11-01).
 - [x] **A1-01 PLL/ADC filters on this revision?** No, omitted on purpose (decided 2026-11-02). See section 3.
-- [ ] **Optional items:** U8 → AP61203 (A2-07); 4 × 10 µF under U7 (C-06); 1V1 stitching caps (C-02). Not decided; the last two are new parts.
+- [ ] **Optional items:** U8 → AP61203 (A2-07) not decided; 4 × 10 µF under U7 (C-06) done 2026-11-02; 1V1 stitching caps (C-02) not done.
 
 ## 1. Value, field and rule changes (no copper)
 
@@ -129,7 +129,18 @@ deferred: not on this pass. Checked after the edits:
   *Check:* minimum track-to-pad gap at U7 ≥ 0.09 mm. Done: dq0, dq2, dq4 and dq16 were rerouted locally and now
   clear by 0.100–0.123 mm. No LPDDR4 F.Cu gap under U7 is below 0.09 mm. Length changes: dq0 +0.28 mm, dq16
   +0.12 mm, dq2 +0.04 mm, dq4 0. The delay report passes.
-- [ ] **JLC online DFM check:** run it for the via-drill-to-track spots (C-05, 444 spots).
+- [x] **C-05 via drill to copper, 2026-11-02:** brought to the Ti60 card's values (that board, built by JLC, keeps
+  0.200 mm everywhere).
+  - New rule `jlc_via_hole_to_copper`: 0.2 mm from every via hole. The board-setup floor stays 0.175 mm because KiCad
+    does not let rules go below it.
+  - Exceptions, last in the .kicad_dru: `bga_fanout_via_hole` (tracks/pads in the U7, U12, U11 courtyards: on the
+    0.65 mm grid 0.2 mm is the geometric maximum, and the LPDDR4 meanders run at 0.175 mm) and `dense_fanout_via_hole`
+    (the eMMC series-resistor array R280–R290 and the /pg_all via at U8 pad 5).
+  - Copper: about 110 tracks nudged by up to 0.03 mm, a few vias moved, small reroutes of iob6b10, iob6h18, iob6h19,
+    /pg_all (In2), dq0, U15-MODE. Measured: no via hole under 0.2 mm outside those areas. Delay report passes (dq0
+    -5.2 -> -4.9 ps).
+  - Note: `kicad-cli pcb drc` reports at most 199 violations per type, so large counts are truncated.
+- [ ] **JLC online DFM check:** still worth reading for the fan-out exceptions above.
 
 ## 3. New parts that need board space (deferred, 2026-11-01)
 
@@ -161,7 +172,7 @@ deferred: not on this pass. Checked after the edits:
 
 ## 4. Before ordering
 
-- [ ] ERC clean, DRC clean (`kicad-cli`, with `KICAD10_SYMBOL_DIR` set), and a netlist diff that shows only the intended changes.
+- [x] ERC clean, DRC clean (`kicad-cli`, with `KICAD10_SYMBOL_DIR` set), and a netlist diff that shows only the intended changes. Done at f31b320 (2026-11-02): ERC 0, DRC only the 3 known J3 warnings, parity 0.
 - [ ] Rerun the affected review streams (`review/README.md`, "how to rerun"), at least B for the BOM/CPL.
 - [ ] **B-06:** set up U7 through JLC Global Sourcing or consignment:
   - put the full Altera ordering code (speed, temperature, power suffix) in `MPN`;

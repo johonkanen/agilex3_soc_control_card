@@ -140,6 +140,15 @@
 	(condition "(A.hasNetclass('eth_mdi') || B.hasNetclass('eth_mdi')) && A.intersectsCourtyard('U10') && B.intersectsCourtyard('U10')")
 	(constraint clearance (min 0.1mm)))
 
+# JLC "Via hole to Track 0.2mm" / "Inner layer via hole to copper clearance 0.2mm": every via hole keeps 0.2 mm to
+# other-net copper, as on the Ti60 card JLC built. The board-setup minimum stays at 0.175 mm only so the fan-out
+# exceptions at the end of this file can relax it (KiCad does not let rules go below the board minimum). The
+# zone, NPTH and PTH rules below come later and take precedence for their cases.
+(rule "jlc_via_hole_to_copper"
+	(condition "A.Type == 'Via' || B.Type == 'Via'")
+	(constraint hole_clearance (min 0.2mm)))
+
+
 # ===================================================================================================
 # JLCPCB multilayer capabilities (jlcpcb.com/capabilities/pcb-capabilities, checked 2026-10-13).
 # Board setup constraints carry the rest: clearance/track 0.09, via 0.25/0.15 (annular 0.05, 0.075
@@ -345,3 +354,17 @@
 	(condition "A.NetName == '/IOBANK 3/~{cs}'")
 	(constraint length (min 377.2ps) (opt 387.7ps) (max 492.6ps)))
 # ---- END delay_report targets ----
+
+# BGA fan-out under U7, U12 (0.65 mm ball grid) and U11 (eMMC, 0.5 mm): a 0.1 mm track centred between two ball vias
+# has at most 0.2 mm drill-to-track, and the escape routing and LPDDR4 length-tuning meanders there run at 0.175 mm
+# (0.1 mm copper gap). Re-routing the fan-outs is not worth the risk; JLC relaxes spacing in BGA fan-outs. Outside
+# these courtyards jlc_via_hole_to_copper (0.2 mm) applies, as on the Ti60 card JLC built.
+(rule "bga_fanout_via_hole"
+	(condition "(A.Type == 'Track' || A.Type == 'Pad') && B.Type == 'Via' && (A.intersectsCourtyard('U7') || A.intersectsCourtyard('U12') || A.intersectsCourtyard('U11'))")
+	(constraint hole_clearance (min 0.175mm)))
+# Two other dense spots that cannot reach 0.2 mm without re-placing parts: the eMMC series-resistor array (0201 parts
+# with via-in-pad in 0.6 mm columns; emmc_rst_n, sd_d4 and sd_d5_hps thread between the via columns) and the /pg_all
+# via next to U8 pad 5 (SOT-563, 0.5 mm pitch), boxed in by L2, the U8 SW track and the F.Cu IOB6 bundle.
+(rule "dense_fanout_via_hole"
+	(condition "((A.Type == 'Track' || A.Type == 'Pad') && B.Type == 'Via' && (A.intersectsCourtyard('R280') || A.intersectsCourtyard('R282') || A.intersectsCourtyard('R283') || A.intersectsCourtyard('R286') || A.intersectsCourtyard('R287') || A.intersectsCourtyard('R288') || A.intersectsCourtyard('R290') || A.intersectsCourtyard('U8'))) || (A.Type == 'Via' && B.memberOfFootprint('U8')) || (B.Type == 'Via' && A.memberOfFootprint('U8'))")
+	(constraint hole_clearance (min 0.175mm)))
