@@ -5320,7 +5320,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SN74LV4051APWR"
+		(property "Value" "TMUX1308PWR"
 			(at 92.0181 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5343,7 +5343,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lv4051a.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmux1308.pdf"
 			(at 91.948 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5365,7 +5365,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C7793"
+		(property "LCSC" "C970231"
 			(at 87.63 67.31 0)
 			(hide yes)
 			(show_name no)
