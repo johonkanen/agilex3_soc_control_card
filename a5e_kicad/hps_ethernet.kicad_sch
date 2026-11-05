@@ -15009,7 +15009,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM15PX121SN1D"
+		(property "Value" "BLM15PX121SZ1D"
 			(at 144.78 20.32 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15052,7 +15052,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C88970"
+		(property "LCSC" "C701266"
 			(at 144.78 22.86 0)
 			(hide yes)
 			(show_name no)

@@ -9420,7 +9420,7 @@
 				)
 			)
 		)
-		(property "Value" "BLM15PX121SN1D"
+		(property "Value" "BLM15PX121SZ1D"
 			(at 0 1.17 90)
 			(layer "F.Fab")
 			(uuid "228864a5-a42c-4dfb-80ee-d7a085ead342")
@@ -9453,7 +9453,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C88970"
+		(property "LCSC" "C701266"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
