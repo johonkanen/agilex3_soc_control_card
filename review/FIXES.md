@@ -145,9 +145,11 @@ deferred: not on this pass. Checked after the edits:
 ## 3. New parts that need board space (deferred, 2026-11-01)
 
 - [ ] **A2-03 (UART half):** 4.7k pull-up to 3V3 (C25900) on `hps_uart0_rx_3v3`. The JTAG half was refuted: U1 has 71k internal pull-downs.
-- [ ] **A2-06:** two 10 Ω 0402 resistors (C25077):
-  - local VCORE → `vcoresense_P`;
-  - GND → `vcoresense_N`.
+- [x] **A2-06, done 2026-11-04:** two 10 Ω 0402 resistors (C25077, basic), `pwr_vcore` sheet, top side:
+  - R299: VCORE → `vcoresense_P`, at (162.03, 135.95) next to R2. VCORE comes from the via at (156.79, 136.03) by a
+    0.15 mm F.Cu track along y 136.4 (between the PGND vias at x 158.85).
+  - R300: `vcoresense_N` → GND, at (166.40, 135.70) next to R1, to the GND via at (165.70, 137.16).
+  - With the sense lines intact VCORE shifts by about 0.6 mV; if a sense ball opens, U15 regulates at the local point.
 - [ ] **A2-01** (if yes in section 0): 5V0 input protection, e.g. AO3401A P-FET (C15127) + SMF5.0A TVS, or an eFuse.
 - [x] **A1-01: omitted (decided 2026-11-02).** The PLL/ADC balls stay on the shared 1V8 and VCORE planes. Splitting them
   off under U7 would compromise the planes more than the beads would filter. What a fix would have needed (for a later revision):
