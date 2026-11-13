@@ -5595,7 +5595,7 @@
 				)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 92.71 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5638,7 +5638,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 92.71 17.78 0)
 			(hide yes)
 			(show_name no)
@@ -6049,7 +6049,7 @@
 				)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 92.71 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6092,7 +6092,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 92.71 81.28 0)
 			(hide yes)
 			(show_name no)

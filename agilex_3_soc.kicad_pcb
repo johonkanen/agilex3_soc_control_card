@@ -38170,7 +38170,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "8a7c3172-d276-4edc-892a-b3a4c9e86660")
@@ -38206,7 +38206,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -67191,7 +67191,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "AP61202Z6"
+		(property "Value" "AP61203Z6"
 			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "1e17272d-a593-40a5-942d-557e47aa010f")
@@ -67227,7 +67227,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C5188956"
+		(property "LCSC" "C5244557"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")

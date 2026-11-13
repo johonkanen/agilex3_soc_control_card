@@ -20,10 +20,10 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
 |---|---|---|---|---|
 | `5V0` / `5V` | J6 (2x3 header), also J4.3 | 5.0 V in | – | all regulators, U6 |
 | `VCORE` | U15 TPS548A28RWWR buck (C5219375; was TDA38812, same land pattern), remote sense via `vcoresense_P/N` (VCCLSENSE BN46 / GNDSENSE BN44), FB divider R2 2.55k / R1 10k -> 0.6 V x (1 + 2.55/10) = **0.753 V** | 0.75 V | EN = `core_en`, divider R291 24.3k / R292 10k from 5V0 -> on at VIN 4.2 V | all Group 1 pins (see §2) |
-| `1V8` | U18 AP61202Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 10k to the U15 VCC LDO `tda_vcc` 3.0 V; was 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
-| `3V3` / `3v3` | U8 AP61202Z6, R85 200k / R83 44.2k -> 3.32 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
-| `1V2` | U19 AP61202Z6, R88 200k / R86 200k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
-| `1V1` | U16 AP61202Z6, R91 200k / R89 240k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
+| `1V8` | U18 AP61203Z6 buck, R82 200k / R80 100k (R81 DNP) -> 1.80 V | 1.8 V | EN = `PG-Core` (U15 PGOOD, open-drain, R58 10k to the U15 VCC LDO `tda_vcc` 3.0 V; was 5.6k to 5V0) | Group 2A pins, VCCIO_HVIO_6A, Y2 (SiT8924 1.8 V), QSPI flash U2, all SDM/JTAG pull-ups, U1/U42 B-side, PHY 1.8 V |
+| `3V3` / `3v3` | U8 AP61203Z6, R85 200k / R83 44.2k -> 3.32 V | 3.3 V | EN = U18 PG (open-drain, R65 47k to 5V) | VCCIO_HVIO_6B..6H, U9 100 MHz LVDS osc, U1/U42 A-side, headers |
+| `1V2` | U19 AP61203Z6, R88 200k / R86 200k -> 1.20 V | 1.2 V | EN = U18 PG | VCCRCORE, VCCIO_PIO_SDM, VCCIO_PIO_2A_T/B |
+| `1V1` | U16 AP61203Z6, R91 200k / R89 240k -> 1.10 V | 1.1 V | EN = U18 PG | VCCIO_PIO_3A_T/B (LPDDR4), refclk bias divider |
 | `3V3_analog` | U6 NCP163 LDO from 5V0 | 3.3 V intended | EN tied to 5V0 | ADC subsystem |
 
 - [x] VCORE set point 0.753 V matches the -6S core voltage; remote sense goes to the device sense pins.
@@ -37,7 +37,7 @@ Legend: `[x]` verified correct in the schematic, `[ ]` open item / needs your de
   | 1.1 V | 0.43 A | FPGA side only; add the LPDDR4 VDD2/VDDQ current |
   | 3.3 V | < 0.01 A | before I/O loads |
 
-  The 2 A AP61202 rails have plenty of headroom.
+  The 2 A AP61203 rails have plenty of headroom (all four are AP61203, forced PWM, since 2026-11-13; the AP61202 mentions below are from before the swap and the two parts differ only in light-load mode).
 - [x] **(2026-10-29) VCORE stage: U15 is now a TI TPS548A28RWWR (data sheet SNVSBB1D).** The TDA38812 is not available at JLC. The TPS548A28 has the same VQFN-HR-21 3 × 4 mm land pattern (pads compared one for one, the footprint `agilex_lib:TDA38812` is kept) and the same pin functions: CS -> TRIP, SS/VREF -> SS/REFIN, RGND -> VSNS–. The symbol is `agilex_5_lib:TPS548A28`.
   - **Rating:** 15 A part, 6–7 A worst-case load. VIN 5 V is inside 3.0–16 V (internal VCC LDO).
   - **MODE:** R57 60.4k to AGND = FCCM, 1 MHz (table 7-1). R56 stays DNP.

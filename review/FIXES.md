@@ -20,7 +20,7 @@ deferred: not on this pass. Checked after the edits:
   - source the ADS7056 yourself and consign it.
 - [x] **A2-01 5V0 protection on this revision?** Not now: new parts deferred (2026-11-01).
 - [x] **A1-01 PLL/ADC filters on this revision?** No, omitted on purpose (decided 2026-11-02). See section 3.
-- [ ] **Optional items:** U8 → AP61203 (A2-07) not decided; 4 × 10 µF under U7 (C-06) done 2026-11-02; 1V1 stitching caps (C-02) not done.
+- [ ] **Optional items:** U8 and U19 → AP61203 (A2-07) done 2026-11-13; 4 × 10 µF under U7 (C-06) done 2026-11-02; 1V1 stitching caps (C-02) not done.
 
 ## 1. Value, field and rule changes (no copper)
 
@@ -67,7 +67,8 @@ deferred: not on this pass. Checked after the edits:
   - [x] 1V1: R91 200k (C728556) and R89 240k (C852659, 2,951 in stock). This rail was marginal, 2 mV over.
 
   The values read "200k 0.1%" and so on, so these stay separate BOM lines from the 1 % 200k parts on 1V2.
-  - [ ] Optional: U8 (3V3) → AP61203Z6-7 C5244557 (forced PWM), like U16/U18.
+  - [x] U8 (3V3) and U19 (1V2) → AP61203Z6-7 C5244557 (forced PWM), like U16/U18 (2026-11-13). All four small bucks
+    are now AP61203; value and LCSC fields only, same footprint and pinout.
 
   *Check:* the BOM shows 0.1 % parts with LCSC numbers in stock; the worst-case table in `v1_power.md` passes.
 - [x] **C-06, U7 decoupling values (existing 0201 pads):** assigned by the nearest U7 ball's function.
@@ -182,7 +183,7 @@ deferred: not on this pass. Checked after the edits:
 - [x] Recheck stock for all lines for 5 boards (B-11), done 2026-11-01:
   - C124 (47 µF 1210, C84494) was oversold at −540; changed to GRM32EC81C476KE15L **C162512** (16 V X6S, 48k in
     stock).
-  - Still short at JLC, all sourced by the user: U5 ADS7056 (−30), U8/U19 AP61202 (0), U16/U18 AP61203 (0). Set
+  - Still short at JLC, all sourced by the user: U5 ADS7056 (−30), U8/U16/U18/U19 AP61203 (0; four per board since 2026-11-13). Set
     them up as consigned parts.
 - [ ] Order settings:
   - JLC08161H-3313 stack-up, ENIG;
