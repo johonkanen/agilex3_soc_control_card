@@ -29,7 +29,9 @@ Checked against the SK hynix data sheet (H9HCNNN8KUMLHR Series Rev 1.1, from LCS
   x16). Enter 4 Gb where the IP asks for density per channel or per die.
 
 The cheaper -NMO (C51891855) is **not** in the data sheet's ordering table, which lists only -NLE, -NME, -NLI and
--NMI, so it is not used. Single-rank was chosen on purpose: it was not confirmed whether the Agilex 5 EMIF supports
+-NMI, so what the suffix means is not verified. **2026-11-13: U12 is the -NMO anyway**, because four are already in
+stock at JLC for the two-board build (the user's decision). Everything in this section was checked for the -NME;
+if the EMIF does not calibrate at bring-up, fit a -NME (C2912103, same footprint). Single-rank was chosen on purpose: it was not confirmed whether the Agilex 5 EMIF supports
 dual-rank LPDDR4.
 
 Status on this board:

@@ -183,6 +183,9 @@ deferred: not on this pass. Checked after the edits:
 - [x] Recheck stock for all lines for 5 boards (B-11), done 2026-11-01:
   - C124 (47 µF 1210, C84494) was oversold at −540; changed to GRM32EC81C476KE15L **C162512** (16 V X6S, 48k in
     stock).
+  - 2026-11-13, two-board build: D1/D2 150060RS75000 (C3030991, oversold) → KT-0603R **C2286** (JLC basic, red,
+    VF 1.8–2.4 V, same 0603 footprint and 680 Ω resistor). U12 → H9HCNNN8KUMLHR-NMO **C51891855** (four in the
+    user's JLC stock; suffix not in the data sheet's ordering table, see `SHARED_PARTS.md`).
   - Still short at JLC, all sourced by the user: U5 ADS7056 (−30), U8/U16/U18/U19 AP61203 (0; four per board since 2026-11-13). Set
     them up as consigned parts.
 - [ ] Order settings:

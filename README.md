@@ -5,7 +5,7 @@ uses an SoC instead of just an FPGA. The target is a Linux-capable control board
 
 Main features:
 - Agilex 5 E-Series SoC A5EB013B (quad-core HPS), B23B 795-ball package, -6S speed grade
-- 1 GB LPDDR4 (SK hynix H9HCNNN8KUMLHR-NME, 2 channels x16 = x32), 2133 MT/s on the HPS EMIF
+- 1 GB LPDDR4 (SK hynix H9HCNNN8KUMLHR-NMO (fitted from stock; checked against the -NME data sheet), 2 channels x16 = x32), 2133 MT/s on the HPS EMIF
 - 16 GB eMMC (KIOXIA THGAMVG7T13BAIL, 8-bit, HPS SD/MMC)
 - 128 Mbit QSPI configuration flash (ISSI IS25WP128-RHLE)
 - 1 Gb Ethernet (Realtek RTL8211FDI RGMII PHY, HanRun HR911130A MagJack)

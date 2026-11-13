@@ -11356,7 +11356,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "H9HCNNN8KUMLHR-NME"
+		(property "Value" "H9HCNNN8KUMLHR-NMO"
 			(at 83.4233 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11378,7 +11378,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2912103.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C51891855.pdf"
 			(at 78.74 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -11400,7 +11400,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2912103"
+		(property "LCSC" "C51891855"
 			(at 82.55 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -14139,7 +14139,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "H9HCNNN8KUMLHR-NME"
+		(property "Value" "H9HCNNN8KUMLHR-NMO"
 			(at 83.4233 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14161,7 +14161,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C2912103.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C51891855.pdf"
 			(at 78.74 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -14183,7 +14183,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2912103"
+		(property "LCSC" "C51891855"
 			(at 82.55 111.76 0)
 			(hide yes)
 			(show_name no)
