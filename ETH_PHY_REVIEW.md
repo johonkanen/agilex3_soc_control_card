@@ -41,14 +41,22 @@ Rev 1.4.
 - **I/O levels:** RGMII, MDC, MDIO and INTB are in the 1.8 V domain, so they connect directly to the HPS.
 - **MDIO pull-up:** R36 is now 1K5, as the data sheet asks.
 - **PHYRSTB is a 3.3 V input** (VIH 2.0 V). U42 channel 3 (1.8 -> 3.3 V) now drives it:
-  - HPS GPIO1_IO18 `eth_rst_n` -> U42 B3/A3 -> `phy_rst_n`.
+  - HPS GPIO1_IO1 (AC75) `eth_rst_n` -> U42 B3/A3 -> `phy_rst_n`.
   - R247 still holds `eth_rst_n` low until software releases it.
   - Hold low >= 10 ms, then wait >= 50 ms before MDIO access.
 - **LED:** LED2 (1000M link/act, active low, 3.3 V) drives the J9 green LED directly. It previously went through
   U42 ch3.
 - **RSET:** R41 is now 2K49 1 %. That is the usual reference value; check it against Realtek's reference schematic,
   because the data sheet text doesn't give it.
-- **Linux:** `realtek.c`, `phy-mode = "rgmii-id"`, `reset-gpios` = GPIO1_IO18 (active low), PHY address 1.
+- **Linux:** `realtek.c`, `phy-mode = "rgmii-id"`, `reset-gpios` = GPIO1_IO1 (active low), PHY address 1.
+- **RGMII delays (2026-11-05):** the RTL8211F has a fixed 2 ns delay per direction, switched on or off.
+  - RX: the RXDLY strap is high (R39), so the PHY delays RX_CLK by 2 ns from reset.
+  - TX: the TXDLY strap is low (R270), so by default nothing delays TX_CLK. With `phy-mode = "rgmii-id"`, Linux's
+    `realtek.c` turns on both PHY delays over MDIO whatever the straps say. Leave the HPS TX clock delay
+    (Quartus, HPS_IOB_13 / EMAC2_TX_CLK) at 0. The alternative is the HPS delay with `phy-mode = "rgmii-rxid"`;
+    never both, because 4 ns breaks 1000 Mb/s.
+  - Board skew is negligible: TX data 2–12 mm (about 15–80 ps) behind TX_CLK, RX within ±3.7 mm (about ±25 ps),
+    against roughly ±1 ns of margin at 125 MHz DDR. No length tuning or Quartus trim is needed.
 - **Pin-compatible fallback:** Motorcomm YT8531C-CA (C22472312). It needs only CFG_LDO1 pulled up with an external
   DVDD_RGMII, plus an inductor on pin 30.
 
@@ -81,7 +89,7 @@ Reviewed 2026-09-19 against the KSZ9031RNX datasheet (DS00002117) and the Agilex
 
 ## Software / PCB notes
 
-- RGMII delay: the PHY adds 1.2 ns on RX_CLK by default (pad-skew MMD 2 reg 8, up to 2.58 ns) and nothing on the TX side, so the GTX_CLK delay must come from the HPS (IO output delay chain on HPS_IOA_13) or `phy-mode = "rgmii-id"` with the Micrel driver's pad-skew settings. Do not add trace-length delay.
-- Linux: CONFIG_MICREL_PHY, PHY at address 0, `reset-gpios` = GPIO1_IO18, `interrupts` = GPIO1_IO4.
+- *(KSZ9031, superseded: see "RGMII delays" in the RTL8211F section above.)* RGMII delay: the PHY adds 1.2 ns on RX_CLK by default (pad-skew MMD 2 reg 8, up to 2.58 ns) and nothing on the TX side, so the GTX_CLK delay must come from the HPS (IO output delay chain on HPS_IOA_13) or `phy-mode = "rgmii-id"` with the Micrel driver's pad-skew settings. Do not add trace-length delay.
+- *(KSZ9031, superseded: now `realtek.c`, PHY address 1.)* Linux: CONFIG_MICREL_PHY, PHY at address 0, `reset-gpios` = GPIO1_IO18, `interrupts` = GPIO1_IO4.
 - Y3 is on B.Cu while U10 and C251/C252 are on F.Cu (XI/XO through vias) and it lies under the J9 through-hole area – consider moving it to F.Cu next to pins 45/46.
 - 22u 0402 6.3 V caps lose roughly half their capacitance at 3.3 V bias – acceptable, just be aware.
