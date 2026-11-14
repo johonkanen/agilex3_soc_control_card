@@ -152,7 +152,19 @@ deferred: not on this pass. Checked after the edits:
   - R300: `vcoresense_N` → GND, at (166.40, 135.70) next to R1, to the GND via at (165.70, 137.16).
   - With the sense lines intact VCORE shifts by about 0.6 mV; if a sense ball opens, U15 regulates at the local point.
 - [ ] **A2-01** (if yes in section 0): 5V0 input protection, e.g. AO3401A P-FET (C15127) + SMF5.0A TVS, or an eFuse.
-- [x] **A1-01: omitted (decided 2026-11-02).** The PLL/ADC balls stay on the shared 1V8 and VCORE planes. Splitting them
+- [x] **A1-01: fitted 2026-11-13** (supersedes the 2026-11-02 decision to omit; the notes below it are kept for history).
+  - Nets (sheet `soc_power`): `VCCPLL_1V8` = BF52, BF57, CG52, CL46 behind FB2; `VCCPLLDIG_HPS` = BB52, BB54 behind FB3;
+    `VCCPLLDIG_SDM` = CL49 behind FB4. Beads MPZ0603S121HT000 0201 (C695597), one 4.7 µF 0201 each (C275–C277, C5969171).
+    The ball capacitors C102 (22 µF, CL46), C193 (1 µF, CG52) and C136 (1 µF, BB54) are now on the filtered nets.
+  - Board: 0.15 mm In4 tracks from the ball vias through the channels between the via columns, out to the south; all at
+    y ≥ 110.8 mm (LPDDR4 copper ends at y 108.1), and only `fpga_led` crosses them on In5. Filter cells on F.Cu at
+    x 154.9–159.4, y 125.3–126.5, vias in the pads. FB2 is fed by a 12.9 mm In4 1V8 track from the ball via at
+    (161.99, 118.53), because In3 has no 1V8 copper south of U7.
+  - Six 0.1 mm In4 1V8 link tracks (CG52 chain to (161.99, 118.53)) were removed to free the channels; connectivity is
+    complete without them.
+  - Limits: only 0201 capacitors fit; `VCCPLLDIG_SDM` has just its 4.7 µF, about 10 mm from the ball.
+  - Checks: ERC 0; DRC only the J3 library warning, 0 unconnected, 0 parity issues.
+- [x] **A1-01 (old entry): omitted (decided 2026-11-02).** The PLL/ADC balls stay on the shared 1V8 and VCORE planes. Splitting them
   off under U7 would compromise the planes more than the beads would filter. What a fix would have needed (for a later revision):
   - three beads minimum (821801 §10.4): one for VCCPLL1/2_HPS + VCCPLL_SDM + VCCADC (the guide allows combining these),
     one for VCCPLLDIG1/2_HPS (Fig 120), one for VCCPLLDIG_SDM (Fig 121);

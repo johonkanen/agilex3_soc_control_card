@@ -219,7 +219,7 @@ That is common practice, but those loads switch on the same regulator. Accept it
 8. `[x]` **(2026-10-24)** MSEL = 011 (AS normal): R45 now to 1V8; R4 has its own GND.
 9. `[x]` **(2026-10-24)** R264 10 k pull-up from `~{hpscold_rstn}` to 1V8 added.
 10. `[x]` **(2026-10-24)** R9 (INIT_DONE) and R10 (CONF_DONE) are DNP.
-11. `[ ]` **(2026-10-24)** Recommended, not fitted yet; a note is on the `fpga_power` sheet and on the PCB (Cmts.User): ferrite + capacitor isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM (1V8), and on VCCPLLDIG1/2_HPS and VCCPLLDIG_SDM (VCORE).
+11. `[x]` **(2026-11-13) Fitted: FB2–FB4, see `review/FIXES.md` A1-01.** Old text: recommended, not fitted yet; a note is on the `fpga_power` sheet and on the PCB (Cmts.User): ferrite + capacitor isolation filters on VCCPLL1/2_HPS, VCCADC and VCCPLL_SDM (1V8), and on VCCPLLDIG1/2_HPS and VCCPLLDIG_SDM (VCORE).
 12. `[x]` **(2026-10-24)** `clk100` (U7 AE11) is now driven by Y4 (§7).
 13. `[ ]` **(2026-10-24)** Buck inductors L2–L5 (3V3, 1V8, 1V2, 1V1 regulators) have no value yet; size them from the AP61202 data sheet.
 
