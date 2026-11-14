@@ -198,6 +198,8 @@ deferred: not on this pass. Checked after the edits:
   - 2026-11-13, two-board build: D1/D2 150060RS75000 (C3030991, oversold) → KT-0603R **C2286** (JLC basic, red,
     VF 1.8–2.4 V, same 0603 footprint and 680 Ω resistor). U12 → H9HCNNN8KUMLHR-NMO **C51891855** (four in the
     user's JLC stock; suffix not in the data sheet's ordering table, see `SHARED_PARTS.md`).
+  - 2026-11-14: C242/C244 (eMMC, 4.7 µF 0402) CL05A475MP5NRNC C23733 (10 V, oversold) → CL05A475MO5NUNC **C318563**
+    (16 V, same series).
   - Still short at JLC, all sourced by the user: U5 ADS7056 (−30), U8/U16/U18/U19 AP61203 (0; four per board since 2026-11-13). Set
     them up as consigned parts.
 - [ ] Order settings:

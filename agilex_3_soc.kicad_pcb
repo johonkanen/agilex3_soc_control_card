@@ -65603,7 +65603,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C23733"
+		(property "LCSC" "C318563"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(uuid "31be892b-5674-42ce-ba29-960827e13daa")
@@ -72648,7 +72648,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C23733"
+		(property "LCSC" "C318563"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(uuid "9b4f0351-525d-4b50-9365-7045e3dd6aae")
