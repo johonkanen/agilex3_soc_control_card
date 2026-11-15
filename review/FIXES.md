@@ -164,6 +164,12 @@ deferred: not on this pass. Checked after the edits:
     complete without them.
   - Limits: only 0201 capacitors fit; `VCCPLLDIG_SDM` has just its 4.7 µF, about 10 mm from the ball.
   - Checks: ERC 0; DRC only the J3 library warning, 0 unconnected, 0 parity issues.
+  - **Reworked 2026-11-15 (replaces the board and limits notes above):** the filter parts were moved by hand to B.Cu
+    east of the balls (FB3/C276 at x 162.6–163.4, y 112.0; FB4/C277 at y 115.6; FB2/C275 at x 164.0, y 119.5–120.3)
+    and all filtered-net routing is on In5, the signal layer, so In4 carries no PLL tracks and the GND plane is whole
+    again. In5: `VCCPLLDIG_HPS` along y 111.22; `VCCPLL_1V8` along y 111.99, down the channel at x 158.62 to CL46,
+    then y 117.38 to the CG52 branch; `VCCPLLDIG_SDM` along y 115.87. Four of the six In4 1V8 link tracks are back
+    (the two at CG52 cannot return, CG52 is on the filtered net). DRC as before.
 - [x] **A1-01 (old entry): omitted (decided 2026-11-02).** The PLL/ADC balls stay on the shared 1V8 and VCORE planes. Splitting them
   off under U7 would compromise the planes more than the beads would filter. What a fix would have needed (for a later revision):
   - three beads minimum (821801 §10.4): one for VCCPLL1/2_HPS + VCCPLL_SDM + VCCADC (the guide allows combining these),
