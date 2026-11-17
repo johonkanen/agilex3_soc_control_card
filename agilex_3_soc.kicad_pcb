@@ -63354,6 +63354,167 @@
 			)
 		)
 	)
+	(footprint "Resistor_SMD:R_0402_1005Metric"
+		(layer "B.Cu")
+		(uuid "be786667-73aa-4cc3-b1b6-a23932b96fcf")
+		(at 175.95 124.35 180)
+		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
+		(tags "resistor")
+		(property "Reference" "R301"
+			(at -2.32 -0.4 180)
+			(layer "B.SilkS")
+			(uuid "4d13ff42-375a-4687-bb56-ff44b9843959")
+			(effects
+				(font
+					(size 1 0.75)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "4K7"
+			(at 0 -1.17 180)
+			(layer "B.Fab")
+			(uuid "80793169-6ea7-48b3-8442-69bdb3023234")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 180)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "31757303-714a-4412-94f3-560495c1a333")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 180)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e591a3ab-8a7d-455e-8e0d-b06df31e3394")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C25900"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2b01a53d-da7a-4204-9523-0f83f5dc844f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property ki_fp_filters "R_*")
+		(path "/6536674f-1597-4664-b8a4-c2b81282d3db/6d40ef27-b408-4d02-bb6e-7e7820a058ea")
+		(sheetname "/debug_status/")
+		(sheetfile "a5e_kicad/debug_status.kicad_sch")
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.153641 0.38)
+			(end 0.153641 0.38)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "6f22a005-1536-4737-8701-3f6549b609d4")
+		)
+		(fp_line
+			(start -0.153641 -0.38)
+			(end 0.153641 -0.38)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "95f30655-6623-4f52-921e-c283329dcb7e")
+		)
+		(fp_rect
+			(start -0.93 0.47)
+			(end 0.93 -0.47)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "96797945-7f3d-430f-9af2-48d23a94a7c5")
+		)
+		(fp_rect
+			(start -0.525 0.27)
+			(end 0.525 -0.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "ac70a7a4-544c-4d3a-ac8a-5d4623bd7c71")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 180)
+			(layer "B.Fab")
+			(uuid "0fe4e778-6994-438c-86eb-43de7fcb4c23")
+			(effects
+				(font
+					(size 0.26 0.26)
+					(thickness 0.04)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.51 0 180)
+			(size 0.54 0.64)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(net "3V3")
+			(pintype "passive")
+			(uuid "c0305302-1292-4d88-a00f-fb62c3f184cb")
+		)
+		(pad "2" smd roundrect
+			(at 0.51 0 180)
+			(size 0.54 0.64)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(net "/debug_status/hps_uart0_rx_3v3")
+			(pintype "passive")
+			(uuid "a02d2a09-4453-4077-896d-2e4066d556a5")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Fiducial:Fiducial_1mm_Mask2mm"
 		(layer "B.Cu")
 		(uuid "bfecac52-eda6-41b6-ad7e-92f81715b249")
@@ -148819,6 +148980,14 @@
 		(uuid "db0973b6-2c80-42d5-ba97-507a6d7d380b")
 	)
 	(segment
+		(start 176.46 124.35)
+		(end 176.46 124.102)
+		(width 0.15)
+		(layer "B.Cu")
+		(net "3V3")
+		(uuid "dce5ebc2-2273-4d89-bd21-8c040f7dc606")
+	)
+	(segment
 		(start 154.71684 107.13415)
 		(end 163.81684 107.13415)
 		(width 0.3)
@@ -158177,12 +158346,28 @@
 		(uuid "79b1d552-d127-43ab-82bc-deb2aa46b98c")
 	)
 	(segment
+		(start 174.967 123.877)
+		(end 174.967 122.734)
+		(width 0.15)
+		(layer "B.Cu")
+		(net "/debug_status/hps_uart0_rx_3v3")
+		(uuid "8ae148e7-f3e5-44da-9859-8ac954130196")
+	)
+	(segment
 		(start 177.99184 121.034149)
 		(end 178.64184 121.70915)
 		(width 0.1)
 		(layer "B.Cu")
 		(net "/debug_status/hps_uart0_rx_3v3")
 		(uuid "bba9618e-cfb5-4e7d-a7c2-df415f3b17c0")
+	)
+	(segment
+		(start 175.44 124.35)
+		(end 174.967 123.877)
+		(width 0.15)
+		(layer "B.Cu")
+		(net "/debug_status/hps_uart0_rx_3v3")
+		(uuid "e79f0de9-88da-49e1-9487-975ca7ada8a3")
 	)
 	(segment
 		(start 174.96684 122.73415)

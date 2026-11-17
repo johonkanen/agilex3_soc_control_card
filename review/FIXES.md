@@ -145,7 +145,8 @@ deferred: not on this pass. Checked after the edits:
 
 ## 3. New parts that need board space (deferred, 2026-11-01)
 
-- [ ] **A2-03 (UART half):** 4.7k pull-up to 3V3 (C25900) on `hps_uart0_rx_3v3`. The JTAG half was refuted: U1 has 71k internal pull-downs.
+- [x] **A2-03 (UART half), done 2026-11-17:** R301 4.7k pull-up to 3V3 (C25900) on `hps_uart0_rx_3v3`, on B.Cu at
+  (175.95, 124.35) just south of U42 pins 2 and 4; idle level 3.3 × 71/(71 + 4.7) = 3.10 V. The JTAG half was refuted: U1 has 71k internal pull-downs.
 - [x] **A2-06, done 2026-11-04:** two 10 Ω 0402 resistors (C25077, basic), `pwr_vcore` sheet, top side:
   - R299: VCORE → `vcoresense_P`, at (162.03, 135.95) next to R2. VCORE comes from the via at (156.79, 136.03) by a
     0.15 mm F.Cu track along y 136.4 (between the PGND vias at x 158.85).
